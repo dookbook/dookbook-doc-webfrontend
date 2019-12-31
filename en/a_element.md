@@ -138,8 +138,6 @@ link.addEventListener('click', function(ev) {
 document.body.appendChild(link);
 ```
 
-You can see this in action at [jsfiddle.net/codepo8/V6ufG/2/](https://jsfiddle.net/codepo8/V6ufG/2/).
-
 ## Accessibility Concerns
 
 ### `onclick` events
