@@ -1,9 +1,9 @@
 TOPICS: BigInt
 
-# JavaScript BigInt Object
+# JavaScript `BigInt` Object
 
 `BigInt`是一种内置对象，它提供了一种方法来表示大于`253 - 1`的整数。
-这原本是[[JavaScript]]中可以用[Number](/zh-hans/webfrontend/Number)表示的最大数字。`BigInt`可以表示任意大的整数。
+这原本是[[JavaScript]]中可以用[`Number`](/zh-hans/webfrontend/Number)表示的最大数字。`BigInt`可以表示任意大的整数。
 
 ## 描述
 
@@ -25,10 +25,10 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 // ↪ 9007199254740991n
 ```
 
-它在某些方面类似于[Number](/zh-hans/webfrontend/Number) ，但是也有几个关键的不同点：
-不能用于[Math](/zh-hans/webfrontend/Math)对象中的方法；
-不能和任何[Number](/zh-hans/webfrontend/Number)实例混合运算，两者必须转换成同一种类型。
-在两种类型来回转换时要小心，因为`BigInt`变量在转换成[Number](/zh-hans/webfrontend/Number)变量时可能会丢失精度。
+它在某些方面类似于 [`Number`](/zh-hans/webfrontend/Number) ，但是也有几个关键的不同点：
+不能用于 [`Math`](/zh-hans/webfrontend/Math) 对象中的方法；
+不能和任何 [`Number`](/zh-hans/webfrontend/Number) 实例混合运算，两者必须转换成同一种类型。
+在两种类型来回转换时要小心，因为 `BigInt` 变量在转换成 [`Number`](/zh-hans/webfrontend/Number) 变量时可能会丢失精度。
 
 ### 类型信息
 
@@ -93,7 +93,7 @@ const rounded = 5n / 2n;
 
 ### 比较
 
-`BigInt`和[Number](/zh-hans/webfrontend/Number) 不是严格相等的，但是宽松相等的。
+`BigInt` 和 [`Number`](/zh-hans/webfrontend/Number) 不是严格相等的，但是宽松相等的。
 
 ```JavaScript
 0n === 0
@@ -103,7 +103,7 @@ const rounded = 5n / 2n;
 // ↪ true
 ```
 
-[Number](/zh-hans/webfrontend/Number)和`BigInt`可以进行比较。
+[`Number`](/zh-hans/webfrontend/Number) 和 `BigInt` 可以进行比较。
 
 ```JavaScript
 1n < 2
@@ -144,10 +144,10 @@ o === o // true
 
 ### 条件
 
-`BigInt`在需要转换成[Boolean](/zh-hans/webfrontend/Boolean)的时表现跟[Number](/zh-hans/webfrontend/Number)
- 类似：如通过[Boolean](/zh-hans/webfrontend/Boolean) 函数转换；
- 用于[logical operators](/zh-hans/webfrontend/Logical_Operator) `||`, `&&`, 和`!`的操作数；
- 或者用于在像[if语句](/zh-hans/webfrontend/if_else_statement)这样的条件语句中。
+`BigInt` 在需要转换成 [`Boolean`](/zh-hans/webfrontend/Boolean) 的时表现跟 [`Number`](/zh-hans/webfrontend/Number)
+ 类似：如通过 [`Boolean`](/zh-hans/webfrontend/Boolean) 函数转换；
+ 用于 [`logical operators`](/zh-hans/webfrontend/Logical_Operator)  `||`, `&&`, 和 `!` 的操作数；
+ 或者用于在像 [`if statement`](/zh-hans/webfrontend/if_else_statement)  这样的条件语句中。
 
 ```JavaScript
 if (0n) {
@@ -194,16 +194,16 @@ Boolean(12n)
 
 | 方法 | 说明 |
 | :-- | :-- |
-|**`BigInt.toLocaleString()`** | 返回此数字的 language-sensitive 形式的字符串。覆盖 [Object.toLocaleString()](/zh-hans/webfrontend/Object.toLocaleString) 方法。|
-|**`BigInt.toString()`** | 返回以指定基数(base)表示指定数字的字符串。覆盖 [Object.toString()](/zh-hans/webfrontend/Object.toString) 方法。|
-|**`BigInt.valueOf()`** | 返回指定对象的基元值。覆盖 [Object.valueOf()](/zh-hans/webfrontend/Object.valueOf) 方法。|
+|**`BigInt.toLocaleString()`**|返回此数字的 language-sensitive 形式的字符串。覆盖 [`Object.toLocaleString()`](/zh-hans/webfrontend/Object.toLocaleString) 方法。|
+|**`BigInt.toString()`**|返回以指定基数(base)表示指定数字的字符串。覆盖 [`Object.toString()`](/zh-hans/webfrontend/Object.toString) 方法。|
+|**`BigInt.valueOf()`**|返回指定对象的基元值。 覆盖 [`Object.valueOf()`](/zh-hans/webfrontend/Object.valueOf) 方法。|
 
 ## 使用建议
 
 ### 转化
 
-由于在[Number](/zh-hans/webfrontend/Number)与`BigInt`之间进行转换会损失精度，
-因而建议仅在值可能大于\\(2^{53}\\) 时使用`BigInt`类型，并且不在两种类型之间进行相互转换。
+由于在 [`Number`](/zh-hans/webfrontend/Number) 与 `BigInt` 之间进行转换会损失精度，
+因而建议仅在值可能大于2^53^ 时使用 `BigInt` 类型，并且不在两种类型之间进行相互转换。
 
 ### 密码学
 
@@ -212,7 +212,7 @@ Boolean(12n)
 ### 在 JSON 中使用
 
 对任何`BigInt`值使用[`JSON.stringify()`](/zh-hans/glossary/JSON) 都会引发`TypeError`，
-因为默认情况下`BigInt`值不会在[JSON](/zh-hans/glossary/JSON)中序列化。但是，如果需要，可以实现`toJSON`方法：
+因为默认情况下`BigInt`值不会在[[JSON]]中序列化。但是，如果需要，可以实现`toJSON`方法：
 
 ```JavaScript
 BigInt.prototype.toJSON = function() { return this.toString(); }
