@@ -1,7 +1,7 @@
 TOPICS: Array
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# JavaScript Array Object
+# JavaScript `Array` Object
 
 The JavaScript `Array` class is a global object that is used in the construction of arrays;
 which are high-level, list-like objects.
@@ -146,7 +146,7 @@ new Array(arrayLength)
 ### Accessing array elements
 
 JavaScript arrays are zero-indexed: the first element of an array is at index `0`,
-and the last element is at the index equal to the value ofthe array's [length](/en/webfrontend/Array.length)
+and the last element is at the index equal to the value ofthe array's [`length`](/en/webfrontend/Array.length)
  property minus `1`. Using an invalid index number returns `undefined`.
 
 ```JavaScript
@@ -202,14 +202,14 @@ console.log(promise['var']);
 
 ### Relationship between length and numerical properties
 
-A JavaScript array's [length](/en/webfrontend/Array.length) property and numerical properties are connected.
-Several of the built-in array methods (e.g., [join()](/en/webfrontend/Array.prototype.join),
-[slice()](/en/webfrontend/Array.prototype.slice),
-[indexOf()](/en/webfrontend/Array.prototype.indexOf), etc.)
-take into account the value of an array's [length](/en/webfrontend/Array.length) property
-when they're called. Other methods (e.g., [push()](/en/webfrontend/Array.prototype.push),
-[splice()](/en/webfrontend/Array.prototype.splice), etc.)
- also result in updates to an array's [length](/en/webfrontend/Array.length) property.
+A JavaScript array's [`length`](/en/webfrontend/Array.length) property and numerical properties are connected.
+Several of the built-in array methods (e.g., [`join()`](/en/webfrontend/Array.join),
+[slice()](/en/webfrontend/Array.slice),
+[`indexOf()`](/en/webfrontend/Array.indexOf), etc.)
+take into account the value of an array's [`length`](/en/webfrontend/Array.length) property
+when they're called. Other methods (e.g., [`push()`](/en/webfrontend/Array.push),
+[`splice()`](/en/webfrontend/Array.splice), etc.)
+ also result in updates to an array's [`length`](/en/webfrontend/Array.length) property.
 
 ```JavaScript
 var fruits = [];
@@ -220,7 +220,7 @@ console.log(fruits.length); // 3
 
 When setting a property on a JavaScript array when the property is a valid array index
 and that index is outside the current bounds of the array,
-the engine will update the array's [length](/en/webfrontend/Array.length) property accordingly:
+the engine will update the array's [`length`](/en/webfrontend/Array.length) property accordingly:
 
 ```JavaScript
 fruits[5] = 'mango';
@@ -229,7 +229,7 @@ console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
 console.log(fruits.length); // 6
 ```
 
-Increasing the [length](/en/webfrontend/Array.length).
+Increasing the [`length`](/en/webfrontend/Array.length).
 
 ```JavaScript
 fruits.length = 10;
@@ -237,7 +237,7 @@ console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length); // 10
 ```
 
-Decreasing the [length](/en/webfrontend/Array.length) property does, however, delete elements.
+Decreasing the [`length`](/en/webfrontend/Array.length) property does, however, delete elements.
 
 ```JavaScript
 fruits.length = 2;
@@ -245,15 +245,15 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length); // 2
 ```
 
-This is explained further on the [Array.length](/en/webfrontend/Array.length) page.
+This is explained further on the [`Array.length`](/en/webfrontend/Array.length) page.
 
 ### Creating an array using the result of a match
 
 The result of a match between a regular expression and a string can create a JavaScript array.
 This array has properties and elements which provide information about the match.
-Such an array is returned by [RegExp.exec](/en/webfrontend/RegExp.prototype.exec),
-[String.match](/en/webfrontend/String.prototype.match),
-and [String.replace](/en/webfrontend/String.prototype.replace).
+Such an array is returned by [`RegExp.exec`](/en/webfrontend/RegExp.exec),
+[`String.match`](/en/webfrontend/String.match),
+and [`String.replace`](/en/webfrontend/String.replace).
 To help explain these properties and elements,
 look at the following example and then refer to the table below:
 
@@ -279,9 +279,9 @@ The properties and elements returned from this match are as follows:
 
 | properties | Description |
 | :-- | :-- |
-|**`Array.length`**| The `Array` constructor's [length](/en/webfrontend/Array.length) property whose value is `1`.|
+|**`Array.length`**| The `Array` constructor's `length` property whose value is `1`.|
 |**[`get Array[@@species]`](/en/webfrontend/get_Array[@@species])**|The constructor function that is used to create derived objects.|
-|**[`Array.prototype`](/en/webfrontend/Array.prototype)**| Array prototype object can add attributes to all array objects.|
+|**`Array.prototype`**| Array prototype object can add attributes to all array objects.|
 
 ## Static methods
 
@@ -293,16 +293,9 @@ The properties and elements returned from this match are as follows:
 
 ## Array instances
 
-`Array` instances inherit from [Array.prototype](/en/webfrontend/Array.prototype).
-As with all constructors,
-you can change the constructor's prototype object to make changes to all Array instances.
-For example, you can add new methods and properties to extend all Array objects.
-This is used for polyfilling, for example.
+`Array` instances inherit from `Array.prototype`.
 
-However, adding non-standard methods to the array object can cause issues later,
-either with your own code, or when adding features to JavaScript.
-
-Little known fact: `Array.prototype` itself is an Array:
+`Array.prototype` itself is an Array:
 
 ```JavaScript
 Array.isArray(Array.prototype); // true
@@ -313,7 +306,7 @@ Array.isArray(Array.prototype); // true
 | properties | Description |
 | :-- | :-- |
 |**`Array.prototype.constructor`**| Specifies the function that creates an object's prototype.|
-|**[`Array.prototype.length`](/en/webfrontend/Array.prototype.length)**| Reflects the number of elements in an array.|
+|**[`Array.prototype.length`](/en/webfrontend/Array.length)**| Reflects the number of elements in an array.|
 |**`Array.prototype[@@unscopables]`**| A symbol containing property names to exclude from a with binding scope.|
 
 ### Instance methods
@@ -322,34 +315,34 @@ Array.isArray(Array.prototype); // true
 
 | methods | Description |
 | :-- | :-- |
-|**[`Array.prototype.copyWithin()`](/en/webfrontend/Array.prototype.copyWithin)**| Copies a sequence of array elements within the array.|
-|**[`Array.prototype.fill()`](/en/webfrontend/Array.prototype.fill)**| Fills all the elements of an array from a start index to an end index with a static value.|
-|**[`Array.prototype.pop()`](/en/webfrontend/Array.prototype.pop)**| Removes the last element from an array and returns that element.|
-|**[`Array.prototype.push()`](/en/webfrontend/Array.prototype.push)**| Adds one or more elements to the end of an array and returns the new length of the array.|
-|**[`Array.prototype.reverse()`](/en/webfrontend/Array.prototype.reverse)**| Reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first.|
-|**[`Array.prototype.shift()`](/en/webfrontend/Array.prototype.shift)**| Removes the first element from an array and returns that element.|
-|**[`Array.prototype.sort()`](/en/webfrontend/Array.prototype.sort)**| Sorts the elements of an array in place and returns the array.|
-|**[`Array.prototype.splice()`](/en/webfrontend/Array.prototype.splice)**| Adds and/or removes elements from an array.|
-|**[`Array.prototype.unshift()`](/en/webfrontend/Array.prototype.unshift)**| Adds one or more elements to the front of an array and returns the new length of the array.|
+|**[`Array.copyWithin()`](/en/webfrontend/Array.copyWithin)**| Copies a sequence of array elements within the array.|
+|**[`Array.fill()`](/en/webfrontend/Array.fill)**| Fills all the elements of an array from a start index to an end index with a static value.|
+|**[`Array.pop()`](/en/webfrontend/Array.pop)**| Removes the last element from an array and returns that element.|
+|**[`Array.push()`](/en/webfrontend/Array.push)**| Adds one or more elements to the end of an array and returns the new length of the array.|
+|**[`Array.reverse()`](/en/webfrontend/Array.reverse)**| Reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first.|
+|**[`Array.shift()`](/en/webfrontend/Array.shift)**| Removes the first element from an array and returns that element.|
+|**[`Array.sort()`](/en/webfrontend/Array.sort)**| Sorts the elements of an array in place and returns the array.|
+|**[`Array.splice()`](/en/webfrontend/Array.splice)**| Adds and/or removes elements from an array.|
+|**[`Array.unshift()`](/en/webfrontend/Array.unshift)**| Adds one or more elements to the front of an array and returns the new length of the array.|
 
 **(2) Accessor methods**,
 These methods do not modify the array and return some representation of the array.
 
 | methods | Description |
 | :-- | :-- |
-|**[`Array.prototype.concat()`](/en/webfrontend/Array.prototype.concat)**| Returns a new array that is this array joined with other array(s) and/or value(s).|
-|**[`Array.prototype.includes()`](/en/webfrontend/Array.prototype.includes)**|Determines whether an array contains a certain element, returning true or false as appropriate.*(This is an experimental API that should not be used in production code)*|
-|**[`Array.prototype.indexOf()`](/en/webfrontend/Array.prototype.indexOf)**|Returns the first (least) index of an element within the array equal to the specified value, or `-1` if none is found.|
-|**[`Array.prototype.join()`](/en/webfrontend/Array.prototype.join)**| Joins all elements of an array into a string.|
-|**[`Array.prototype.lastIndexOf()`](/en/webfrontend/Array.prototype.lastIndexOf)**| Returns the last (greatest) index of an element within the array equal to the specified value, or `-1` if none is found.|
-|**[`Array.prototype.slice()`](/en/webfrontend/Array.prototype.slice)**| Extracts a section of an array and returns a new array.|
-|**[`Array.prototype.toSource()`](/en/webfrontend/Array.prototype.toSource)**| Returns an array literal representing the specified array; you can use this value to create a new array. Overrides the [`Object.prototype.toSource()`](/en/webfrontend/Object.prototype.toSource) method.*(This API has not been standardized)*|
-|**[`Array.prototype.toString()`](/en/webfrontend/Array.prototype.toString)**| Returns a string representing the array and its elements. Overrides the [`Object.prototype.toString()`](/en/webfrontend/Object.prototype.toString) method.|
-|**[`Array.prototype.toLocaleString()`](/en/webfrontend/Array.prototype.toLocaleString)**| Returns a localized string representing the array and its elements. Overrides the [`Object.prototype.toLocaleString()`](/en/webfrontend/Object.prototype.toLocaleString) method.|
+|**[`Array.concat()`](/en/webfrontend/Array.concat)**| Returns a new array that is this array joined with other array(s) and/or value(s).|
+|**[`Array.includes()`](/en/webfrontend/Array.includes)**|Determines whether an array contains a certain element, returning true or false as appropriate.*(This is an experimental API that should not be used in production code)*|
+|**[`Array.indexOf()`](/en/webfrontend/Array.indexOf)**|Returns the first (least) index of an element within the array equal to the specified value, or `-1` if none is found.|
+|**[`Array.join()`](/en/webfrontend/Array.join)**| Joins all elements of an array into a string.|
+|**[`Array.lastIndexOf()`](/en/webfrontend/Array.lastIndexOf)**| Returns the last (greatest) index of an element within the array equal to the specified value, or `-1` if none is found.|
+|**[`Array.slice()`](/en/webfrontend/Array.slice)**| Extracts a section of an array and returns a new array.|
+|**[`Array.toSource()`](/en/webfrontend/Array.toSource)**| Returns an array literal representing the specified array; you can use this value to create a new array. Overrides the [`Object.toSource()`](/en/webfrontend/Object.toSource) method.*(This API has not been standardized)*|
+|**[`Array.toString()`](/en/webfrontend/Array.toString)**| Returns a string representing the array and its elements. Overrides the [`Object.toString()`](/en/webfrontend/Object.toString) method.|
+|**[`Array.toLocaleString()`](/en/webfrontend/Array.toLocaleString)**| Returns a localized string representing the array and its elements. Overrides the [`Object.toLocaleString()`](/en/webfrontend/Object.toLocaleString) method.|
 
 **(3) Iteration methods**,
 Several methods take as arguments functions to be called back while processing the array.
- When these methods are called, the [length](/en/webfrontend/Array.length) of the array is sampled,
+ When these methods are called, the [`length`](/en/webfrontend/Array.length) of the array is sampled,
  and any element added beyond this length from within the callback is not visited.
  Other changes to the array (setting the value of or deleting an element) may affect the results of
  the operation if the method visits the changed element afterwards.
@@ -359,19 +352,19 @@ Several methods take as arguments functions to be called back while processing t
 
 | methods | Description |
 | :-- | :-- |
-|**[`Array.prototype.forEach()`](/en/webfrontend/Array.prototype.forEach)**|Calls a function for each element in the array.|
-|**[`Array.prototype.entries()`](/en/webfrontend/Array.prototype.entries)**|Returns a new Array Iterator object that contains the key/value pairs for each index in the array.|
-|**[`Array.prototype.every()`](/en/webfrontend/Array.prototype.every)**| Returns `true` if every element in this array satisfies the provided testing function.|
-|**[`Array.prototype.filter()`](/en/webfrontend/Array.prototype.filter)**| Creates a new array with all of the elements of this array for which the provided filtering function returns `true`.|
-|**[`Array.prototype.find()`](/en/webfrontend/Array.prototype.find)**| Returns the found value in the array, if an element in the array satisfies the provided testing function or `undefined` if not found.|
-|**[`Array.prototype.findIndex()`](/en/webfrontend/Array.prototype.findIndex)**|Returns the found index in the array, if an element in the array satisfies the provided testing function or `-1` if not found.|
-|**[`Array.prototype.keys()`](/en/webfrontend/Array.prototype.keys)**| Returns a new Array Iterator that contains the keys for each index in the array.|
-|**[`Array.prototype.map()`](/en/webfrontend/Array.prototype.map)**| Creates a new array with the results of calling a provided function on every element in this array.|
-|**[`Array.prototype.reduce()`](/en/webfrontend/Array.prototype.reduce)**| Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.|
-|**[`Array.prototype.reduceRight()`](/en/webfrontend/Array.prototype.reduceRight)**| Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.|
-|**[`Array.prototype.some()`](/en/webfrontend/Array.prototype.some)**| Returns true if at least one element in this array satisfies the provided testing function.|
-|**[`Array.prototype.values()`](/en/webfrontend/Array.prototype.values)**| Returns a new Array Iterator object that contains the values for each index in the array.|
-|**[`Array.prototype[@@iterator]()`](/en/webfrontend/Array.prototype[@@iterator])**| Returns a new Array Iterator object that contains the values for each index in the array.|
+|**[`Array.forEach()`](/en/webfrontend/Array.forEach)**|Calls a function for each element in the array.|
+|**[`Array.entries()`](/en/webfrontend/Array.entries)**|Returns a new Array Iterator object that contains the key/value pairs for each index in the array.|
+|**[`Array.every()`](/en/webfrontend/Array.every)**| Returns `true` if every element in this array satisfies the provided testing function.|
+|**[`Array.filter()`](/en/webfrontend/Array.filter)**| Creates a new array with all of the elements of this array for which the provided filtering function returns `true`.|
+|**[`Array.find()`](/en/webfrontend/Array.find)**| Returns the found value in the array, if an element in the array satisfies the provided testing function or `undefined` if not found.|
+|**[`Array.findIndex()`](/en/webfrontend/Array.findIndex)**|Returns the found index in the array, if an element in the array satisfies the provided testing function or `-1` if not found.|
+|**[`Array.keys()`](/en/webfrontend/Array.keys)**| Returns a new Array Iterator that contains the keys for each index in the array.|
+|**[`Array.map()`](/en/webfrontend/Array.map)**| Creates a new array with the results of calling a provided function on every element in this array.|
+|**[`Array.reduce()`](/en/webfrontend/Array.reduce)**| Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.|
+|**[`Array.reduceRight()`](/en/webfrontend/Array.reduceRight)**| Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.|
+|**[`Array.some()`](/en/webfrontend/Array.some)**| Returns true if at least one element in this array satisfies the provided testing function.|
+|**[`Array.values()`](/en/webfrontend/Array.values)**| Returns a new Array Iterator object that contains the values for each index in the array.|
+|**[`Array[@@iterator]()`](/en/webfrontend/Array[@@iterator])**| Returns a new Array Iterator object that contains the values for each index in the array.|
 
 ## Examples
 

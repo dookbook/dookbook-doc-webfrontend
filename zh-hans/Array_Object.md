@@ -1,7 +1,7 @@
 TOPICS: Array
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# JavaScript Array Object
+# JavaScript `Array` Object
 
 JavaScript的 `Array` 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。
 
@@ -135,7 +135,7 @@ new Array(arrayLength)
 
 ### 访问数组元素
 
-JavaScript 数组的索引是从`0`开始的，第一个元素的索引为0，最后一个元素的索引等于该数组的 [length](/zh-hans/webfrontend/Array.length) 减`1`。
+JavaScript 数组的索引是从`0`开始的，第一个元素的索引为0，最后一个元素的索引等于该数组的 [`length`](/zh-hans/webfrontend/Array.length) 减`1`。
 如果指定的索引是一个无效值，JavaScript 数组并不会报错，而是会返回 `undefined`。
 
 ```JavaScript
@@ -182,10 +182,10 @@ console.log(promise['var']);
 
 ### length 和数字下标之间的关系
 
-JavaScript 数组的 [length](/zh-hans/webfrontend/Array.length) 属性和其数字下标之间有着紧密的联系。
-数组内置的几个方法（例如 [`join()`](/zh-hans/webfrontend/Array.prototype.join)、
-[`slice()`](/zh-hans/webfrontend/Array.prototype.slice) 等）
-还会改变 [length](/zh-hans/webfrontend/Array.length) 的值。
+JavaScript 数组的 [`length`](/zh-hans/webfrontend/Array.length) 属性和其数字下标之间有着紧密的联系。
+数组内置的几个方法（例如 [`join()`](/zh-hans/webfrontend/Array.join)、
+[`slice()`](/zh-hans/webfrontend/Array.slice) 等）
+还会改变 [`length`](/zh-hans/webfrontend/Array.length) 的值。
 
 ```JavaScript
 var fruits = [];
@@ -194,7 +194,7 @@ fruits.push('banana', 'apple', 'peach');
 console.log(fruits.length); // 3
 ```
 
-使用一个合法的下标为数组元素赋值，并且该下标超出了当前数组的大小的时候，解释器会同时修改 [length](/zh-hans/webfrontend/Array.length) 的值：
+使用一个合法的下标为数组元素赋值，并且该下标超出了当前数组的大小的时候，解释器会同时修改 [`length`](/zh-hans/webfrontend/Array.length) 的值：
 
 ```JavaScript
 fruits[5] = 'mango';
@@ -203,7 +203,7 @@ console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
 console.log(fruits.length); // 6
 ```
 
-也可以显式地给 [length](/zh-hans/webfrontend/Array.length) 赋一个更大的值：
+也可以显式地给 [`length`](/zh-hans/webfrontend/Array.length) 赋一个更大的值：
 
 ```JavaScript
 fruits.length = 10;
@@ -211,7 +211,7 @@ console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length); // 10
 ```
 
-而为 [length](/zh-hans/webfrontend/Array.length) 赋一个更小的值则会删掉一部分元素：
+而为 [`length`](/zh-hans/webfrontend/Array.length) 赋一个更小的值则会删掉一部分元素：
 
 ```JavaScript
 fruits.length = 2;
@@ -219,14 +219,14 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length); // 2
 ```
 
-这一节的内容在 [Array.length](/zh-hans/webfrontend/Array.length) 中有更详细的介绍。
+这一节的内容在 [`Array.length`](/zh-hans/webfrontend/Array.length) 中有更详细的介绍。
 
 ### 正则匹配结果所返回的数组
 
 使用正则表达式匹配字符串可以得到一个数组。这个数组中包含本次匹配的相关信息和匹配结果。
-[RegExp.exec](/zh-hans/webfrontend/RegExp.prototype.exec)、
-[String.match](/zh-hans/webfrontend/String.prototype.match)、
-[String.replace](/zh-hans/webfrontend/String.prototype.replace) 都会返回这样的数组。看下面的例子和例子下面的表格：
+[`RegExp.exec`](/zh-hans/webfrontend/RegExp.exec)、
+[`String.match`](/zh-hans/webfrontend/String.match)、
+[`String.replace`](/zh-hans/webfrontend/String.replace) 都会返回这样的数组。看下面的例子和例子下面的表格：
 
 ```JavaScript
 // 匹配1个 d 后面紧跟着至少1个 b，再后面又跟着1个 d 的子串，
@@ -246,14 +246,14 @@ myArray = myRe.exec("cdbBdbsbz");
 |`[0]`|只读元素，本次匹配到的子串|`dbBd`|
 |`[1], ...[n]`|只读元素，正则表达式中所指定的分组所匹配到的子串，其数量由正则中的分组数量决定，无最大上限|`[1]: bB [2]: d`|
 
-## 属性
+## 静态属性
 
 | 属性 | 说明 |
 | :-- | :-- |
-|**`Array.length`**| `Array` 构造函数的 [length](/zh-hans/webfrontend/Array.length) 属性，其值为`1`（注意该属性为静态属性，不是数组实例的 `length` 属性）。|
+|**`Array.length`**| `Array` 构造函数的 `length` 属性，其值为`1`（注意该属性为静态属性，不是数组实例的 `length` 属性）。|
 |**[`get Array[@@species]`](/zh-hans/webfrontend/get_Array[@@species])**|  返回 `Array` 构造函数。|
 
-## 方法
+## 静态方法
 
 | 方法 | 说明 |
 | :-- | :-- |
@@ -263,9 +263,9 @@ myArray = myRe.exec("cdbBdbsbz");
 
 ## 数组实例
 
-所有数组实例都会从 [Array.prototype](/zh-hans/webfrontend/Array.prototype) 继承属性和方法。修改 `Array` 的原型会影响到所有的数组实例。如果将非标准的方法添加到数组对象可能会导致很多其他问题。
+所有数组实例都会从 `Array.prototype` 继承属性和方法。
 
-[Array.prototype](/zh-hans/webfrontend/Array.prototype)本身就是一个`Array`：
+`Array.prototype`本身就是一个`Array`：
 
 ```JavaScript
 Array.isArray(Array.prototype); // true
@@ -276,7 +276,7 @@ Array.isArray(Array.prototype); // true
 | 属性 | 说明 |
 | :-- | :-- |
 |**`Array.prototype.constructor`**| 所有的数组实例都继承了这个属性，它的值就是 `Array`，表明了所有的数组都是由 `Array` 构造出来的。|
-|**[`Array.prototype.length`](/zh-hans/webfrontend/Array.prototype.length)**| 上面说了，因为 [Array.prototype](/zh-hans/webfrontend/Array.prototype) 也是个数组，所以它也有 `length` 属性，这个值为 `0`，因为它是个空数组。|
+|**[`Array.prototype.length`](/zh-hans/webfrontend/Array.length)**| 上面说了，因为 `Array.prototype` 也是个数组，所以它也有 `length` 属性，这个值为 `0`，因为它是个空数组。|
 |**`Array.prototype[@@unscopables]`**| 通过数组的原型对象可以为所有数组对象添加属性。|
 
 ### 实例方法
@@ -285,47 +285,47 @@ Array.isArray(Array.prototype); // true
 
 | 方法 | 说明 |
 | :-- | :-- |
-|**[`Array.prototype.copyWithin()`](/zh-hans/webfrontend/Array.prototype.copyWithin)**| 在数组内部，将一段元素序列拷贝到另一段元素序列上，覆盖原有的值。*(这是一个实验性的API,请尽量不要在生产环境中使用它)*|
-|**[`Array.prototype.fill()`](/zh-hans/webfrontend/Array.prototype.fill)**| 将数组中指定区间的所有元素的值，都替换成某个固定的值。*(这是一个实验性的API,请尽量不要在生产环境中使用它)*
-|**[`Array.prototype.pop()`](/zh-hans/webfrontend/Array.prototype.pop)**| 删除数组的最后一个元素，并返回这个元素。|
-|**[`Array.prototype.push()`](/zh-hans/webfrontend/Array.prototype.push)**| 在数组的末尾增加一个或多个元素，并返回数组的新长度。|
-|**[`Array.prototype.reverse()`](/zh-hans/webfrontend/Array.prototype.reverse)**| 颠倒数组中元素的排列顺序，即原先的第一个变为最后一个，原先的最后一个变为第一个。|
-|**[`Array.prototype.shift()`](/zh-hans/webfrontend/Array.prototype.shift)**|删除数组的第一个元素，并返回这个元素。|
-|**[`Array.prototype.sort()`](/zh-hans/webfrontend/Array.prototype.sort)**| 对数组元素进行排序，并返回当前数组。|
-|**[`Array.prototype.splice()`](/zh-hans/webfrontend/Array.prototype.splice)**| 在任意的位置给数组添加或删除任意个元素。|
-|**[`Array.prototype.unshift()`](/zh-hans/webfrontend/Array.prototype.unshift)**| 在数组的开头增加一个或多个元素，并返回数组的新长度。|
+|**[`Array.copyWithin()`](/zh-hans/webfrontend/Array.copyWithin)**| 在数组内部，将一段元素序列拷贝到另一段元素序列上，覆盖原有的值。*(这是一个实验性的API,请尽量不要在生产环境中使用它)*|
+|**[`Array.fill()`](/zh-hans/webfrontend/Array.fill)**| 将数组中指定区间的所有元素的值，都替换成某个固定的值。*(这是一个实验性的API,请尽量不要在生产环境中使用它)*
+|**[`Array.pop()`](/zh-hans/webfrontend/Array.pop)**| 删除数组的最后一个元素，并返回这个元素。|
+|**[`Array.push()`](/zh-hans/webfrontend/Array.push)**| 在数组的末尾增加一个或多个元素，并返回数组的新长度。|
+|**[`Array.reverse()`](/zh-hans/webfrontend/Array.reverse)**| 颠倒数组中元素的排列顺序，即原先的第一个变为最后一个，原先的最后一个变为第一个。|
+|**[`Array.shift()`](/zh-hans/webfrontend/Array.shift)**|删除数组的第一个元素，并返回这个元素。|
+|**[`Array.sort()`](/zh-hans/webfrontend/Array.sort)**| 对数组元素进行排序，并返回当前数组。|
+|**[`Array.splice()`](/zh-hans/webfrontend/Array.splice)**| 在任意的位置给数组添加或删除任意个元素。|
+|**[`Array.unshift()`](/zh-hans/webfrontend/Array.unshift)**| 在数组的开头增加一个或多个元素，并返回数组的新长度。|
 
 **(二) 访问方法**, 下面的这些方法绝对不会改变调用它们的对象的值，只会返回一个新的数组或者返回一个其它的期望值。
 
 | 方法 | 说明 |
 | :-- | :-- |
-|**[`Array.prototype.concat()`](/zh-hans/webfrontend/Array.prototype.concat)**| 返回一个由当前数组和其它若干个数组或者若干个非数组值组合而成的新数组。|
-|**[`Array.prototype.includes()`](/zh-hans/webfrontend/Array.prototype.includes)**|  判断当前数组是否包含某指定的值，如果是返回 `true`，否则返回 `false`。*(这是一个实验性的API,请尽量不要在生产环境中使用它)*|
-|**[`Array.prototype.indexOf()`](/zh-hans/webfrontend/Array.prototype.indexOf)**| 返回数组中第一个与指定值相等的元素的索引，如果找不到这样的元素，则返回 `-1`。|
-|**[`Array.prototype.join()`](/zh-hans/webfrontend/Array.prototype.join)**|连接所有数组元素组成一个字符串。|
-|**[`Array.prototype.lastIndexOf()`](/zh-hans/webfrontend/Array.prototype.lastIndexOf)**|  返回数组中最后一个（从右边数第一个）与指定值相等的元素的索引，如果找不到这样的元素，则返回 `-1`。|
-|**[`Array.prototype.slice()`](/zh-hans/webfrontend/Array.prototype.slice)**| 抽取当前数组中的一段元素组合成一个新数组。|
-|**[`Array.prototype.toSource()`](/zh-hans/webfrontend/Array.prototype.toSource)**|  返回一个表示当前数组字面量的字符串。遮蔽了原型链上的 [`Object.prototype.toSource()`](/zh-hans/webfrontend/Object.prototype.toSource)方法。*(这个API尚未标准化)*|
-|**[`Array.prototype.toString()`](/zh-hans/webfrontend/Array.prototype.toString)**|  返回一个由所有数组元素组合而成的字符串。遮蔽了原型链上的 [`Object.prototype.toString()`](/zh-hans/webfrontend/Object.prototype.toString) 方法。|
-|**[`Array.prototype.toLocaleString()`](/zh-hans/webfrontend/Array.prototype.toLocaleString)**|  返回一个由所有数组元素组合而成的本地化后的字符串。遮蔽了原型链上的 [`Object.prototype.toLocaleString()`](/zh-hans/webfrontend/Object.prototype.toLocaleString) 方法。|
+|**[`Array.concat()`](/zh-hans/webfrontend/Array.concat)**| 返回一个由当前数组和其它若干个数组或者若干个非数组值组合而成的新数组。|
+|**[`Array.includes()`](/zh-hans/webfrontend/Array.includes)**|  判断当前数组是否包含某指定的值，如果是返回 `true`，否则返回 `false`。*(这是一个实验性的API,请尽量不要在生产环境中使用它)*|
+|**[`Array.indexOf()`](/zh-hans/webfrontend/Array.indexOf)**| 返回数组中第一个与指定值相等的元素的索引，如果找不到这样的元素，则返回 `-1`。|
+|**[`Array.join()`](/zh-hans/webfrontend/Array.join)**|连接所有数组元素组成一个字符串。|
+|**[`Array.lastIndexOf()`](/zh-hans/webfrontend/Array.lastIndexOf)**|  返回数组中最后一个（从右边数第一个）与指定值相等的元素的索引，如果找不到这样的元素，则返回 `-1`。|
+|**[`Array.slice()`](/zh-hans/webfrontend/Array.slice)**| 抽取当前数组中的一段元素组合成一个新数组。|
+|**[`Array.toSource()`](/zh-hans/webfrontend/Array.toSource)**|  返回一个表示当前数组字面量的字符串。遮蔽了原型链上的 [`Object.toSource()`](/zh-hans/webfrontend/Object.toSource)方法。*(这个API尚未标准化)*|
+|**[`Array.toString()`](/zh-hans/webfrontend/Array.toString)**|  返回一个由所有数组元素组合而成的字符串。遮蔽了原型链上的 [`Object.toString()`](/zh-hans/webfrontend/Object.toString) 方法。|
+|**[`Array.toLocaleString()`](/zh-hans/webfrontend/Array.toLocaleString)**|  返回一个由所有数组元素组合而成的本地化后的字符串。遮蔽了原型链上的 [`Object.toLocaleString()`](/zh-hans/webfrontend/Object.toLocaleString) 方法。|
 
-**(三) 迭代方法**, 在下面的众多遍历方法中，有很多方法都需要指定一个回调函数作为参数。在每一个数组元素都分别执行完回调函数之前，数组的[length](/zh-hans/webfrontend/Array.length)属性会被缓存在某个地方，所以，如果你在回调函数中为当前数组添加了新的元素，那么那些新添加的元素是不会被遍历到的。此外，如果在回调函数中对当前数组进行了其它修改，比如改变某个元素的值或者删掉某个元素，那么随后的遍历操作可能会受到未预期的影响。总之，不要尝试在遍历过程中对原数组进行任何修改，虽然规范对这样的操作进行了详细的定义，但为了可读性和可维护性，请不要这样做。
+**(三) 迭代方法**, 在下面的众多遍历方法中，有很多方法都需要指定一个回调函数作为参数。在每一个数组元素都分别执行完回调函数之前，数组的[`length`](/zh-hans/webfrontend/Array.length)属性会被缓存在某个地方，所以，如果你在回调函数中为当前数组添加了新的元素，那么那些新添加的元素是不会被遍历到的。此外，如果在回调函数中对当前数组进行了其它修改，比如改变某个元素的值或者删掉某个元素，那么随后的遍历操作可能会受到未预期的影响。总之，不要尝试在遍历过程中对原数组进行任何修改，虽然规范对这样的操作进行了详细的定义，但为了可读性和可维护性，请不要这样做。
 
 | 方法 | 说明 |
 | :-- | :-- |
-|**[`Array.prototype.forEach()`](/zh-hans/webfrontend/Array.prototype.forEach)**|  为数组中的每个元素执行一次回调函数。|
-|**[`Array.prototype.entries()`](/zh-hans/webfrontend/Array.prototype.entries)**|  返回一个数组迭代器对象，该迭代器会包含所有数组元素的键值对。|
-|**[`Array.prototype.every()`](/zh-hans/webfrontend/Array.prototype.every)**|  如果数组中的每个元素都满足测试函数，则返回 `true`，否则返回 `false`。|
-|**[`Array.prototype.some()`](/zh-hans/webfrontend/Array.prototype.some)**| 如果数组中至少有一个元素满足测试函数，则返回 `true`，否则返回 `false`。|
-|**[`Array.prototype.filter()`](/zh-hans/webfrontend/Array.prototype.filter)**| 将所有在过滤函数中返回 `true` 的数组元素放进一个新数组中并返回。|
-|**[`Array.prototype.find()`](/zh-hans/webfrontend/Array.prototype.find)**| 找到第一个满足测试函数的元素并返回那个元素的值，如果找不到，则返回 `undefined`。|
-|**[`Array.prototype.findIndex()`](/zh-hans/webfrontend/Array.prototype.findIndex)**| 找到第一个满足测试函数的元素并返回那个元素的索引，如果找不到，则返回 `-1`。|
-|**[`Array.prototype.keys()`](/zh-hans/webfrontend/Array.prototype.keys)**|  返回一个数组迭代器对象，该迭代器会包含所有数组元素的键。|
-|**[`Array.prototype.map()`](/zh-hans/webfrontend/Array.prototype.map)**|返回一个由回调函数的返回值组成的新数组。|
-|**[`Array.prototype.reduce()`](/zh-hans/webfrontend/Array.prototype.reduce)**| 从左到右为每个数组元素执行一次回调函数，并把上次回调函数的返回值放在一个暂存器中传给下次回调函数，并返回最后一次回调函数的返回值。|
-|**[`Array.prototype.reduceRight()`](/zh-hans/webfrontend/Array.prototype.reduceRight)**|  从右到左为每个数组元素执行一次回调函数，并把上次回调函数的返回值放在一个暂存器中传给下次回调函数，并返回最后一次回调函数的返回值。|
-|**[`Array.prototype.values()`](/zh-hans/webfrontend/Array.prototype.values)**| 返回一个数组迭代器对象，该迭代器会包含所有数组元素的值。|
-|**[`Array.prototype[@@iterator]()`](/zh-hans/webfrontend/Array.prototype[@@iterator])**| 和上面的 `values()` 方法是同一个函数。|
+|**[`Array.forEach()`](/zh-hans/webfrontend/Array.forEach)**|  为数组中的每个元素执行一次回调函数。|
+|**[`Array.entries()`](/zh-hans/webfrontend/Array.entries)**|  返回一个数组迭代器对象，该迭代器会包含所有数组元素的键值对。|
+|**[`Array.every()`](/zh-hans/webfrontend/Array.every)**|  如果数组中的每个元素都满足测试函数，则返回 `true`，否则返回 `false`。|
+|**[`Array.some()`](/zh-hans/webfrontend/Array.some)**| 如果数组中至少有一个元素满足测试函数，则返回 `true`，否则返回 `false`。|
+|**[`Array.filter()`](/zh-hans/webfrontend/Array.filter)**| 将所有在过滤函数中返回 `true` 的数组元素放进一个新数组中并返回。|
+|**[`Array.find()`](/zh-hans/webfrontend/Array.find)**| 找到第一个满足测试函数的元素并返回那个元素的值，如果找不到，则返回 `undefined`。|
+|**[`Array.findIndex()`](/zh-hans/webfrontend/Array.findIndex)**| 找到第一个满足测试函数的元素并返回那个元素的索引，如果找不到，则返回 `-1`。|
+|**[`Array.keys()`](/zh-hans/webfrontend/Array.keys)**|  返回一个数组迭代器对象，该迭代器会包含所有数组元素的键。|
+|**[`Array.map()`](/zh-hans/webfrontend/Array.map)**|返回一个由回调函数的返回值组成的新数组。|
+|**[`Array.reduce()`](/zh-hans/webfrontend/Array.reduce)**| 从左到右为每个数组元素执行一次回调函数，并把上次回调函数的返回值放在一个暂存器中传给下次回调函数，并返回最后一次回调函数的返回值。|
+|**[`Array.reduceRight()`](/zh-hans/webfrontend/Array.reduceRight)**|  从右到左为每个数组元素执行一次回调函数，并把上次回调函数的返回值放在一个暂存器中传给下次回调函数，并返回最后一次回调函数的返回值。|
+|**[`Array.values()`](/zh-hans/webfrontend/Array.values)**| 返回一个数组迭代器对象，该迭代器会包含所有数组元素的值。|
+|**[`Array[@@iterator]()`](/zh-hans/webfrontend/Array[@@iterator])**| 和上面的 `values()` 方法是同一个函数。|
 
 ## 示例
 

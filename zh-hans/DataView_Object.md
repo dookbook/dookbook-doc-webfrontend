@@ -1,7 +1,7 @@
 TOPICS: DataView
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# JavaScript DataView Object
+# JavaScript `DataView` Object
 
 `DataView` 视图是一个可以从 二进制 [`ArrayBuffer`](/zh-hans/webfrontend/ArrayBuffer) 对象中读写多种数值类型的底层接口，
 使用它时，不用考虑不同平台的 [[字节序]] 问题。
@@ -99,15 +99,15 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## 属性
 
-所有 `DataView` 实例都继承自 [`DataView.prototype`](/zh-hans/webfrontend/DataView.prototype)，
+所有 `DataView` 实例都继承自 `DataView.prototype`，
 并且允许向 `DataView` 对象中添加额外属性。
 
 | 属性| 说明 |
 | :-- | :-- |
 |**DataView.prototype.constructor**|指定用来生成原型的构造函数.初始化值是标准内置`DataView`构造器。|
-|**[`DataView.prototype.buffer`](/zh-hans/webfrontend/DataView.prototype.buffer)** *(只读)*|被视图引入的 [`ArrayBuffer`](zh-hansn/webfrontend/ArrayBuffer)，创建实例的时候已固化因此是只读的。|
-|**[`DataView.prototype.byteLength`](/zh-hans/webfrontend/DataView.prototype.byteLength)** *(只读)*|从 [`ArrayBuffer`](zh-hansn/webfrontend/ArrayBuffer) 中读取的字节长度，创建实例的时候已固化因此是只读的。|
-|**[`DataView.prototype.byteOffset`](/zh-hans/webfrontend/DataView.prototype.byteOffset)** *(只读)*|从 [`ArrayBuffer`](zh-hansn/webfrontend/ArrayBuffer) 读取时的偏移字节长度，创建实例的时候已固化因此是只读的。|
+|**[`DataView.buffer`](/zh-hans/webfrontend/DataView.buffer)** *(只读)*|被视图引入的 [`ArrayBuffer`](zh-hansn/webfrontend/ArrayBuffer)，创建实例的时候已固化因此是只读的。|
+|**[`DataView.byteLength`](/zh-hans/webfrontend/DataView.byteLength)** *(只读)*|从 [`ArrayBuffer`](zh-hansn/webfrontend/ArrayBuffer) 中读取的字节长度，创建实例的时候已固化因此是只读的。|
+|**[`DataView.byteOffset`](/zh-hans/webfrontend/DataView.byteOffset)** *(只读)*|从 [`ArrayBuffer`](zh-hansn/webfrontend/ArrayBuffer) 读取时的偏移字节长度，创建实例的时候已固化因此是只读的。|
 
 ## 方法
 
@@ -115,31 +115,31 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 | 方法 | 说明 |
 | :-- | :-- |
-|**[`DataView.prototype.getInt8()`](/zh-hans/webfrontend/DataView.prototype.getInt8)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个8-bit数(一个字节)。|
-|**[`DataView.prototype.getUint8()`](/zh-hans/webfrontend/DataView.prototype.getUint8)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个8-bit数(无符号字节)。|
-|**[`DataView.prototype.getInt16()`](/zh-hans/webfrontend/DataView.prototype.getInt16)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个16-bit数(短整型)。|
-|**[`DataView.prototype.getUint16()`](/zh-hans/webfrontend/DataView.prototype.getUint16)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个16-bit数(无符号短整型)。|
-|**[`DataView.prototype.getInt32()`](/zh-hans/webfrontend/DataView.prototype.getInt32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个32-bit数(长整型)。|
-|**[`DataView.prototype.getUint32()`](/zh-hans/webfrontend/DataView.prototype.getUint32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个32-bit数(无符号长整型)。|
-|**[`DataView.prototype.getFloat32()`](/zh-hans/webfrontend/DataView.prototype.getFloat32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个32-bit数(浮点型)。|
-|**[`DataView.prototype.getFloat64()`](/zh-hans/webfrontend/DataView.prototype.getFloat64)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个64-bit数(双精度浮点型)。|
-|**[`DataView.prototype.getBigInt64()`](/zh-hans/webfrontend/DataView.prototype.getBigInt64)**|从`DateView`其实位置以byte为计数的指定偏移量(`byteOffset`)处获取一个64-bit数(长 长)|
-|**[`DataView.prototype.getBigUint64()`](/zh-hans/webfrontend/DataView.prototype.getBigUint64)**|从`DateView`其实位置以byte为计数的指定偏移量(`byteOffset`)处获取一个无符号64-bit数（无符号 长 长）。|
+|**[`DataView.getInt8()`](/zh-hans/webfrontend/DataView.getInt8)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个8-bit数(一个字节)。|
+|**[`DataView.getUint8()`](/zh-hans/webfrontend/DataView.getUint8)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个8-bit数(无符号字节)。|
+|**[`DataView.getInt16()`](/zh-hans/webfrontend/DataView.getInt16)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个16-bit数(短整型)。|
+|**[`DataView.getUint16()`](/zh-hans/webfrontend/DataView.getUint16)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个16-bit数(无符号短整型)。|
+|**[`DataView.getInt32()`](/zh-hans/webfrontend/DataView.getInt32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个32-bit数(长整型)。|
+|**[`DataView.getUint32()`](/zh-hans/webfrontend/DataView.getUint32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个32-bit数(无符号长整型)。|
+|**[`DataView.getFloat32()`](/zh-hans/webfrontend/DataView.getFloat32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个32-bit数(浮点型)。|
+|**[`DataView.getFloat64()`](/zh-hans/webfrontend/DataView.getFloat64)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处获取一个64-bit数(双精度浮点型)。|
+|**[`DataView.getBigInt64()`](/zh-hans/webfrontend/DataView.getBigInt64)**|从`DateView`其实位置以byte为计数的指定偏移量(`byteOffset`)处获取一个64-bit数(长 长)|
+|**[`DataView.getBigUint64()`](/zh-hans/webfrontend/DataView.getBigUint64)**|从`DateView`其实位置以byte为计数的指定偏移量(`byteOffset`)处获取一个无符号64-bit数（无符号 长 长）。|
 
 ### 写
 
 | 方法 | 说明 |
 | :-- | :-- |
-|**[`DataView.prototype.setInt8()`](/zh-hans/webfrontend/DataView.prototype.setInt8)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个8-bit数(一个字节)。|
-|**[`DataView.prototype.setUint8()`](/zh-hans/webfrontend/DataView.prototype.setUint8)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个8-bit数(无符号字节)。|
-|**[`DataView.prototype.setInt16()`](/zh-hans/webfrontend/DataView.prototype.setInt16)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个16-bit数(短整型)。|
-|**[`DataView.prototype.setUint16()`](/zh-hans/webfrontend/DataView.prototype.setUint16)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个16-bit数(无符号短整型)。|
-|**[`DataView.prototype.setInt32()`](/zh-hans/webfrontend/DataView.prototype.setInt32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个32-bit数(长整型)。|
-|**[`DataView.prototype.setUint32()`](/zh-hans/webfrontend/DataView.prototype.setUint32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个32-bit数(无符号长整型)。|
-|**[`DataView.prototype.setFloat32()`](/zh-hans/webfrontend/DataView.prototype.setFloat32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个32-bit数(浮点型)。|
-|**[`DataView.prototype.setFloat64()`](/zh-hans/webfrontend/DataView.prototype.setFloat64)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个64-bit数(双精度浮点型)。|
-|**[`DataView.prototype.setBigInt64()`](/zh-hans/webfrontend/DataView.prototype.setBigInt64)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个64-bit数(长 长)。|
-|**[`DataView.prototype.setBigUint64()`](/zh-hans/webfrontend/DataView.prototype.setBigUint64)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个无符号64-bit数(无符号 长 长)。|
+|**[`DataView.setInt8()`](/zh-hans/webfrontend/DataView..setInt8)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个8-bit数(一个字节)。|
+|**[`DataView.setUint8()`](/zh-hans/webfrontend/DataView.setUint8)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个8-bit数(无符号字节)。|
+|**[`DataView.setInt16()`](/zh-hans/webfrontend/DataView.setInt16)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个16-bit数(短整型)。|
+|**[`DataView.setUint16()`](/zh-hans/webfrontend/DataView.setUint16)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个16-bit数(无符号短整型)。|
+|**[`DataView.setInt32()`](/zh-hans/webfrontend/DataView.setInt32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个32-bit数(长整型)。|
+|**[`DataView.setUint32()`](/zh-hans/webfrontend/DataView.setUint32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个32-bit数(无符号长整型)。|
+|**[`DataView.setFloat32()`](/zh-hans/webfrontend/DataView.setFloat32)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个32-bit数(浮点型)。|
+|**[`DataView.setFloat64()`](/zh-hans/webfrontend/DataView.setFloat64)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个64-bit数(双精度浮点型)。|
+|**[`DataView.setBigInt64()`](/zh-hans/webfrontend/DataView.setBigInt64)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个64-bit数(长 长)。|
+|**[`DataView.setBigUint64()`](/zh-hans/webfrontend/DataView.setBigUint64)**|从`DataView`起始位置以byte为计数的指定偏移量(`byteOffset`)处储存一个无符号64-bit数(无符号 长 长)。|
 
 ## 示例
 

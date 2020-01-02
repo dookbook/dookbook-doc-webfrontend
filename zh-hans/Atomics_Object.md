@@ -1,12 +1,12 @@
 TOPICS: Atomics
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# JavaScript Atomics Object
+# JavaScript `Atomics` Object
 
-`Atomics` 对象提供了一组静态方法用来对 [SharedArrayBuffer](/zh-hans/webfrontend/SharedArrayBuffer) 对象进行原子操作。
+`Atomics` 对象提供了一组静态方法用来对 [`SharedArrayBuffer`](/zh-hans/webfrontend/SharedArrayBuffer) 对象进行原子操作。
 
-这些原子操作属于 Atomics 模块。与一般的全局对象不同，Atomics 不是构造函数，因此不能使用 [new](/zh-hans/webfrontend/new_operator) 操作符调用，
-也不能将其当作函数直接调用。Atomics 的所有属性和方法都是静态的（与 [Math](/zh-hans/webfrontend/Math) 对象一样）。
+这些原子操作属于 `Atomics` 模块。与一般的全局对象不同，`Atomics` 不是构造函数，因此不能使用 [`new`](/zh-hans/webfrontend/new_operator) 操作符调用，
+也不能将其当作函数直接调用。Atomics 的所有属性和方法都是静态的（与 [`Math`](/zh-hans/webfrontend/Math) 对象一样）。
 
 ## 属性
 

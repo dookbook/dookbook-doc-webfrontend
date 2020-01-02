@@ -1,7 +1,7 @@
 TOPICS: DataView
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# JavaScript DataView Object
+# JavaScript `DataView` Object
 
 The `DataView` view provides a low-level interface for reading and writing multiple number types in
 a binary [`ArrayBuffer`](/en/webfrontend/ArrayBuffer), without having to care about the platform's [[endianness]].
@@ -54,7 +54,7 @@ and other details of representing numbers in binary form.
 ### Endianness
 
 Multi-byte number formats are represented in memory differently depending on machine architecture —
-see [[Endianness]] for an explanation. `DataView`accessors provide explicit control of how data
+see [[Endianness]] for an explanation. `DataView` accessors provide explicit control of how data
 is accessed, regardless of the executing computer's endianness.
 
 ```JavaScript
@@ -110,15 +110,15 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## Properties
 
-All `DataView` instances inherit from [`DataView.prototype`](/en/webfrontend/DataView.prototype) and
+All `DataView` instances inherit from `DataView.prototype` and
 allows the addition of properties to all DataView objects.
 
 | Properties| Description |
 | :-- | :-- |
 |**`DataView.prototype.constructor`**|Specifies the function that creates an object's prototype. The initial value is the standard built-in DataView constructor.|
-|**[`DataView.prototype.buffer`](/en/webfrontend/DataView.prototype.buffer)** *(Read only)*|The [`ArrayBuffer`](/en/webfrontend/ArrayBuffer) referenced by this view. Fixed at construction time and thus read only.|
-|**[`DataView.prototype.byteLength`](/en/webfrontend/DataView.prototype.byteLength)** *(Read only)*|The length (in bytes) of this view from the start of its [`ArrayBuffer`](/en/webfrontend/ArrayBuffer). Fixed at construction time and thus read only.|
-|**[`DataView.prototype.byteOffset`](/en/webfrontend/DataView.prototype.byteOffset)** *(Read only)*|The offset (in bytes) of this view from the start of its [`ArrayBuffer`](/en/webfrontend/ArrayBuffer). Fixed at construction time and thus read only.|
+|**[`DataView.buffer`](/en/webfrontend/DataView.buffer)** *(Read only)*|The [`ArrayBuffer`](/en/webfrontend/ArrayBuffer) referenced by this view. Fixed at construction time and thus read only.|
+|**[`DataView.byteLength`](/en/webfrontend/DataView.byteLength)** *(Read only)*|The length (in bytes) of this view from the start of its [`ArrayBuffer`](/en/webfrontend/ArrayBuffer). Fixed at construction time and thus read only.|
+|**[`DataView.byteOffset`](/en/webfrontend/DataView.byteOffset)** *(Read only)*|The offset (in bytes) of this view from the start of its [`ArrayBuffer`](/en/webfrontend/ArrayBuffer). Fixed at construction time and thus read only.|
 
 ## Methods
 
@@ -126,31 +126,31 @@ allows the addition of properties to all DataView objects.
 
 | Methods | Description |
 | :-- | :-- |
-|**[`DataView.prototype.getInt8()`](/en/webfrontend/DataView.prototype.getInt8)**|Gets a signed 8-bit integer (byte) at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.getUint8()`](/en/webfrontend/DataView.prototype.getUint8)**|Gets an unsigned 8-bit integer (unsigned byte) at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.getInt16()`](/en/webfrontend/DataView.prototype.getInt16)**|Gets a signed 16-bit integer (short) at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.getUint16()`](/en/webfrontend/DataView.prototype.getUint16)**|Gets an unsigned 16-bit integer (unsigned short) at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.getInt32()`](/en/webfrontend/DataView.prototype.getInt32)**|Gets a signed 32-bit integer (long) at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.getUint32()`](/en/webfrontend/DataView.prototype.getUint32)**|Gets an unsigned 32-bit integer (unsigned long) at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.getFloat32()`](/en/webfrontend/DataView.prototype.getFloat32)**|Gets a signed 32-bit float (float) at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.getFloat64()`](/en/webfrontend/DataView.prototype.getFloat64)**|Gets a signed 64-bit float (double) at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.getBigInt64()`](/en/webfrontend/DataView.prototype.getBigInt64)**|Gets a signed 64-bit integer (long long) at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.getBigUint64()`](/en/webfrontend/DataView.prototype.getBigUint64)**|Gets an unsigned 64-bit integer (unsigned long long) at the specified byte offset from the start of the view.|
+|**[`DataView.getInt8()`](/en/webfrontend/DataView.getInt8)**|Gets a signed 8-bit integer (byte) at the specified byte offset from the start of the view.|
+|**[`DataView.getUint8()`](/en/webfrontend/DataView.getUint8)**|Gets an unsigned 8-bit integer (unsigned byte) at the specified byte offset from the start of the view.|
+|**[`DataView.getInt16()`](/en/webfrontend/DataView.getInt16)**|Gets a signed 16-bit integer (short) at the specified byte offset from the start of the view.|
+|**[`DataView.getUint16()`](/en/webfrontend/DataView.getUint16)**|Gets an unsigned 16-bit integer (unsigned short) at the specified byte offset from the start of the view.|
+|**[`DataView.getInt32()`](/en/webfrontend/DataView.getInt32)**|Gets a signed 32-bit integer (long) at the specified byte offset from the start of the view.|
+|**[`DataView.getUint32()`](/en/webfrontend/DataView.getUint32)**|Gets an unsigned 32-bit integer (unsigned long) at the specified byte offset from the start of the view.|
+|**[`DataView.getFloat32()`](/en/webfrontend/DataView.getFloat32)**|Gets a signed 32-bit float (float) at the specified byte offset from the start of the view.|
+|**[`DataView.getFloat64()`](/en/webfrontend/DataView.getFloat64)**|Gets a signed 64-bit float (double) at the specified byte offset from the start of the view.|
+|**[`DataView.getBigInt64()`](/en/webfrontend/DataView.getBigInt64)**|Gets a signed 64-bit integer (long long) at the specified byte offset from the start of the view.|
+|**[`DataView.getBigUint64()`](/en/webfrontend/DataView.getBigUint64)**|Gets an unsigned 64-bit integer (unsigned long long) at the specified byte offset from the start of the view.|
 
 ### Write
 
 | Methods | Description |
 | :-- | :-- |
-|**[`DataView.prototype.setInt8()`](/en/webfrontend/DataView.prototype.setInt8)**|Stores a signed 8-bit integer (byte) value at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.setUint8()`](/en/webfrontend/DataView.prototype.setUint8)**|Stores an unsigned 8-bit integer (unsigned byte) value at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.setInt16()`](/en/webfrontend/DataView.prototype.setInt16)**|Stores a signed 16-bit integer (short) value at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.setUint16()`](/en/webfrontend/DataView.prototype.setUint16)**|Stores an unsigned 16-bit integer (unsigned short) value at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.setInt32()`](/en/webfrontend/DataView.prototype.setInt32)**|Stores a signed 32-bit integer (long) value at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.setUint32()`](/en/webfrontend/DataView.prototype.setUint32)**|Stores an unsigned 32-bit integer (unsigned long) value at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.setFloat32()`](/en/webfrontend/DataView.prototype.setFloat32)**|Stores a signed 32-bit float (float) value at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.setFloat64()`](/en/webfrontend/DataView.prototype.setFloat64)**|Stores a signed 64-bit float (double) value at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.setBigInt64()`](/en/webfrontend/DataView.prototype.setBigInt64)**|Stores a signed 64-bit integer (long long) value at the specified byte offset from the start of the view.|
-|**[`DataView.prototype.setBigUint64()`](/en/webfrontend/DataView.prototype.setBigUint64)**|Stores an unsigned 64-bit integer (unsigned long long) value at the specified byte offset from the start of the view.|
+|**[`DataView.setInt8()`](/en/webfrontend/DataView.setInt8)**|Stores a signed 8-bit integer (byte) value at the specified byte offset from the start of the view.|
+|**[`DataView.setUint8()`](/en/webfrontend/DataView.setUint8)**|Stores an unsigned 8-bit integer (unsigned byte) value at the specified byte offset from the start of the view.|
+|**[`DataView.setInt16()`](/en/webfrontend/DataView.setInt16)**|Stores a signed 16-bit integer (short) value at the specified byte offset from the start of the view.|
+|**[`DataView.setUint16()`](/en/webfrontend/DataView.setUint16)**|Stores an unsigned 16-bit integer (unsigned short) value at the specified byte offset from the start of the view.|
+|**[`DataView.setInt32()`](/en/webfrontend/DataView.setInt32)**|Stores a signed 32-bit integer (long) value at the specified byte offset from the start of the view.|
+|**[`DataView.setUint32()`](/en/webfrontend/DataView.setUint32)**|Stores an unsigned 32-bit integer (unsigned long) value at the specified byte offset from the start of the view.|
+|**[`DataView.setFloat32()`](/en/webfrontend/DataView.setFloat32)**|Stores a signed 32-bit float (float) value at the specified byte offset from the start of the view.|
+|**[`DataView.setFloat64()`](/en/webfrontend/DataView.setFloat64)**|Stores a signed 64-bit float (double) value at the specified byte offset from the start of the view.|
+|**[`DataView.setBigInt64()`](/en/webfrontend/DataView.setBigInt64)**|Stores a signed 64-bit integer (long long) value at the specified byte offset from the start of the view.|
+|**[`DataView.setBigUint64()`](/en/webfrontend/DataView.setBigUint64)**|Stores an unsigned 64-bit integer (unsigned long long) value at the specified byte offset from the start of the view.|
 
 ## Example
 

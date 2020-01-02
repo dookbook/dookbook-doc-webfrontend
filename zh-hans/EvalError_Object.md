@@ -1,7 +1,7 @@
 TOPICS: EvalError
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# JavaScript EvalError Object
+# JavaScript `EvalError` Object
 
 `EvalError` 代表了一个关于 `eval` 函数的错误。此异常不再会被JavaScript抛出，但是`EvalError`对象仍然保持兼容性。
 
@@ -23,7 +23,7 @@ new EvalError([message[, fileName[, lineNumber]]])
 
 | 属性 | 说明 |
 | :-- | :-- |
-|**[`EvalError.prototype`](/zh-hans/webfrontend/EvalError.prototype)**|允许向`EvalError`对象中添加自定义属性。|
+|**`EvalError.prototype`**|允许向`EvalError`对象中添加自定义属性。|
 
 ## 方法
 
@@ -35,13 +35,13 @@ new EvalError([message[, fileName[, lineNumber]]])
 
 | 属性 | 说明 |
 | :-- | :-- |
-|**[`EvalError.prototype.constructor`](/zh-hans/webfrontend/EvalError.prototype)**|指定创建实例原型的函数。|
-|**[`EvalError.prototype.message`](/zh-hans/webfrontend/EvalError.prototype)**|错误信息。 从 ECMA-262 开始 [`EvalError`](/zh-hans/webfrontend/EvalError) 提供 `message` （继承自[`Error.prototype.message`](/zh-hans/webfrontend/Error.prototype.message)）属性, 详见 [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey)。|
-|**[`EvalError.prototype.name`](/zh-hans/webfrontend/EvalError.prototype)**|错误名称。继承自 [`Error`](/zh-hans/webfronted/EvalError)。|
-|**[`EvalError.prototype.fileName`](/zh-hans/webfrontend/EvalError.prototype)**|引发错误的文件路径。 继承自 [`Error`](/zh-hans/webfronted/EvalError)。|
-|**[`EvalError.prototype.lineNumber`](/zh-hans/webfrontend/EvalError.prototype)**|引发错误所在行。继承自 [`Error`](/zh-hans/webfronted/EvalError)。|
-|**[`EvalError.prototype.columnNumber`](/zh-hans/webfrontend/EvalError.prototype)**|引发错误所在的列。 继承自 [`Error`](/zh-hans/webfronted/EvalError)。|
-|**[`EvalError.prototype.stack`](/zh-hans/webfrontend/EvalError.prototype)**|堆栈。继承自 [`Error`](/zh-hans/webfronted/EvalError)。|
+|**`EvalError.prototype.constructor`**|指定创建实例原型的函数。|
+|**[`EvalError.message`](/zh-hans/webfrontend/EvalError.message)**|错误信息。 从 ECMA-262 开始 [`EvalError`](/zh-hans/webfrontend/EvalError) 提供 `message` （继承自[`Error.message`](/zh-hans/webfrontend/Error..message)）属性, 详见 [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey)。|
+|**[`EvalError.name`](/zh-hans/webfrontend/EvalError.name)**|错误名称。继承自 [`Error`](/zh-hans/webfronted/Error)。|
+|**[`EvalError.fileName`](/zh-hans/webfrontend/EvalError.fileName)**|引发错误的文件路径。 继承自 [`Error`](/zh-hans/webfronted/Error)。|
+|**[`EvalError.lineNumber`](/zh-hans/webfrontend/EvalError.lineNumber)**|引发错误所在行。继承自 [`Error`](/zh-hans/webfronted/Error)。|
+|**[`EvalError.columnNumber`](/zh-hans/webfrontend/EvalError.columnNumber)**|引发错误所在的列。 继承自 [`Error`](/zh-hans/webfronted/Error)。|
+|**[`EvalError.stack`](/zh-hans/webfrontend/EvalError.stack)**|堆栈。继承自 [`Error`](/zh-hans/webfronted/Error)。|
 
 ### 实例方法
 

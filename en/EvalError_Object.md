@@ -1,7 +1,7 @@
 TOPICS: EvalError
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# JavaScript EvalError Object
+# JavaScript `EvalError` Object
 
 The `EvalError` object indicates an error regarding the global [`eval()`](/en/webfrontend/eval) function.
 This exception is not thrown by JavaScript anymore, however the `EvalError` object remains for compatibility.
@@ -16,7 +16,7 @@ new EvalError([message[, fileName[, lineNumber]]])
 
 | Parameters | Description |
 | :-- | :-- |
-|**`message`***(Optional)*|Human-readable description of the [`Error`](/en/webfronted/EvalError).|
+|**`message`***(Optional)*|Human-readable description of the [`Error`](/en/webfronted/Error).|
 |**`fileName`***(Optional)*| The name of the file containing the code that caused the exception.*(This API has not been standardized.)*|
 |**`lineNumber`***(Optional)*| The line number of the code that caused the exception.*(This API has not been standardized.)*|
 
@@ -24,7 +24,7 @@ new EvalError([message[, fileName[, lineNumber]]])
 
 | Properties | Description |
 | :-- | :-- |
-|**[`EvalError.prototype`](/en/webfrontend/EvalError.prototype)**|Allows the addition of properties to an `EvalError` object.|
+|**`EvalError.prototype`**|Allows the addition of properties to an `EvalError` object.|
 
 ## Methods
 
@@ -37,13 +37,13 @@ it does inherit some methods through the prototype chain.
 
 | Properties | Description |
 | :-- | :-- |
-|**[`EvalError.prototype.constructor`](/en/webfrontend/EvalError.prototype)**|Specifies the function that created an instance's prototype.|
-|**[`EvalError.prototype.message`](/en/webfrontend/EvalError.prototype)**|Error message. Although ECMA-262 specifies that [`EvalError`](ens/webfrontend/EvalError) should provide its own `message` property, in [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits [`Error.prototype.message`](/en/webfrontend/Error.prototype.message).|
-|**[`EvalError.prototype.name`](/en/webfrontend/EvalError.prototype)**|Error name. Inherited from Error`](/en/webfronted/EvalError).|
-|**[`EvalError.prototype.fileName`](/en/webfrontend/EvalError.prototype)**|Path to file that raised this Error. Inherited from [`Error`](/en/webfronted/EvalError).|
-|**[`EvalError.prototype.lineNumber`](/en/webfrontend/EvalError.prototype)**|Line number in file that raised this Error. Inherited from [`Error`](/en/webfronted/EvalError).|
-|**[`EvalError.prototype.columnNumber`](/en/webfrontend/EvalError.prototype)**|Column number in line that raised this Error. Inherited from [`Error`](/en/webfronted/EvalError).|
-|**[`EvalError.prototype.stack`](/en/webfrontend/EvalError.prototype)**|Stack trace. Inherited from [`Error`](/en/webfronted/EvalError).|
+|**`EvalError.prototype.constructor`**|Specifies the function that created an instance's prototype.|
+|**[`EvalError.message`](/en/webfrontend/EvalError.message)**|Error message. Although ECMA-262 specifies that [`EvalError`](ens/webfrontend/EvalError) should provide its own `message` property, in [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey), it inherits [`Error.message`](/en/webfrontend/Error.message).|
+|**[`EvalError.name`](/en/webfrontend/EvalError.name)**|Error name. Inherited from [`Error`](/en/webfronted/Error).|
+|**[`EvalError.fileName`](/en/webfrontend/EvalError.fileName)**|Path to file that raised this Error. Inherited from [`Error`](/en/webfronted/Error).|
+|**[`EvalError.lineNumber`](/en/webfrontend/EvalError.lineNumber)**|Line number in file that raised this Error. Inherited from [`Error`](/en/webfronted/Error).|
+|**[`EvalError.columnNumber`](/en/webfrontend/EvalError.columnNumber)**|Column number in line that raised this Error. Inherited from [`Error`](/en/webfronted/Error).|
+|**[`EvalError.stack`](/en/webfrontend/EvalError.stack)**|Stack trace. Inherited from [`Error`](/en/webfronted/Error).|
 
 ### Instances Methods
 
