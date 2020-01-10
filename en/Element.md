@@ -1,11 +1,47 @@
 TOPICS: Element
+        Element.accessKey
+        Element.attributes
+        ParentNode.childElementCount
+        ParentNode.children
+        Element.classList
+        Element.className
+        Element.clientHeight
+        Element.clientLeft
+        Element.clientTop
+        Element.clientWidth
+        Element.firstElementChild
+        Element.id
+        element.innerHTML
+        Element.lastElementChild
+        Element.localName
+        Element.name
+        Element.namespaceURI
+        element.nextElementSibling
+        element.outerHTML
+        Element.part
+        Element.prefix
+        Element.previousElementSibling
+        Element.scrollHeight
+        Element.scrollLeft
+        Element.scrollTop
+        Element.scrollWidth
+        Element.shadowRoot
+        Element.slot
+        Element.tagName
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # JavaScript Element Object: `element`
 
-## 属性
+**`Element`** is the most general base class from which all element objects (i.e. objects that
+represent elements) in a [`Document`](/en/webfrontend/Document) inherit. It only has methods and
+properties common to all kinds of elements. More specific classes inherit from `Element`. For example,
+the `HTMLElement` interface is the base interface for HTML elements, while the `SVGElement`
+interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.
 
-### `Element.accessKey`
+Languages outside the realm of the Web platform, like XML through the `XMLElement` interface, also
+implement `Element`.
+
+## `Element.accessKey`
 
 The **`Element.accessKey`** property sets the keystroke which a user can press to jump to a given element.
 
@@ -14,7 +50,7 @@ The **`Element.accessKey`** property sets the keystroke which a user can press t
     present key bindings in browsers. To work around this, browsers implement accesskey behavior if
     the keys are pressed with other "qualifying" keys (such as !!!Alt!!! + accesskey).
 
-### `Element.attributes`
+## `Element.attributes`
 
 The **`Element.attributes`** property returns a live collection of all attribute nodes registered
 to the specified node. It is a `NamedNodeMap`, not an `Array`, so it has no `Array` methods and the
@@ -81,7 +117,7 @@ The following example runs through the attribute nodes for the element in the do
 </html>
 ```
 
-### `ParentNode.childElementCount`
+## `ParentNode.childElementCount`
 
 The **`ParentNode.childElementCount`** read-only property returns an unsigned long representing the
 number of child elements of the given element.
@@ -113,7 +149,7 @@ if (foo.childElementCount > 0) {
 }
 ```
 
-### `ParentNode.children`
+## `ParentNode.children`
 
 The `ParentNode` property **`children`** is a read-only property that returns a live `HTMLCollection`
 which contains all of the child `elements` of the node upon which it was called.
@@ -166,7 +202,7 @@ Polyfill
 })(window.Node || window.Element);
 ```
 
-### `Element.classList`
+## `Element.classList`
 
 The **`Element.classList`** is a read-only property that returns a live `DOMTokenList` collection
 of the `class` attributes of the element. This can then be used to manipulate the class list.
@@ -224,7 +260,7 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");
 ```
 
-### `Element.className`
+## `Element.className`
 
 The **`className`** property of the `Element` interface gets and sets the value of the `class`
 attribute of the specified element.
@@ -267,7 +303,7 @@ elm.setAttribute('class', elm.getAttribute('class'))
 !!! warn ""
     The `class` is an **HTML Attribute**, while the `className` is a **DOM Property**.
 
-### `Element.clientHeight`
+## `Element.clientHeight`
 
 The **`Element.clientHeight`** read-only property is zero for elements with no CSS or inline layout
 boxes; otherwise, it's the inner height of an element in pixels. It includes padding but excludes
@@ -291,7 +327,7 @@ Example
 
 ![Dimensions-client](/media/webfrontend__Dimensions-client.png)
 
-### `Element.clientLeft`
+## `Element.clientLeft`
 
 The width of the left border of an element in pixels. It includes the width of the vertical
 scrollbar if the text direction of the element is right–to–left and if there is an overflow
@@ -313,7 +349,7 @@ Syntax
 var left = element.clientLeft;
 ```
 
-### `Element.clientTop`
+## `Element.clientTop`
 
 The width of the top border of an element in pixels. It is a read-only, integer property of element.
 
@@ -336,7 +372,7 @@ Syntax
 var top = element.clientTop;
 ```
 
-### `Element.clientWidth`
+## `Element.clientWidth`
 
 The **`Element.clientWidth`** property is zero for inline elements and elements with no CSS;
 otherwise, it's the inner width of an element in pixels. It includes padding but excludes borders,
@@ -358,7 +394,7 @@ Example
 
 ![Dimensions-client](/media/webfrontend__Dimensions-client.png)
 
-### `Element.firstElementChild`
+## `Element.firstElementChild`
 
 The **`ParentNode.firstElementChild`** read-only property returns the object's first child `Element`,
 or `null` if there are no child elements.
@@ -392,7 +428,7 @@ console.log(foo.firstElementChild.textContent);
 </script>
 ```
 
-### `Element.id`
+## `Element.id`
 
 The **`id`** property of the `Element` interface represents the element's identifier, reflecting the
 `id` global attribute.
@@ -414,7 +450,7 @@ element.id = idStr; // Set the id
 
 - `idStr` is the identifier of the element.
 
-### `element.innerHTML`
+## `element.innerHTML`
 
 The `Element` property **`innerHTML`** gets or sets the HTML or XML markup contained within the element.
 
@@ -612,7 +648,7 @@ The following CSS styles our example content.
 }
 ```
 
-### `Element.lastElementChild`
+## `Element.lastElementChild`
 
 The **`ParentNode.lastElementChild`** read-only property returns the object's last child `Element`
 or `null` if there are no child elements.
@@ -646,7 +682,7 @@ console.log(foo.lastElementChild.textContent);
 </script>
 ```
 
-### `Element.localName`
+## `Element.localName`
 
 The **`Element.localName`** read-only property returns the local part of the qualified name of an element.
 
@@ -716,7 +752,7 @@ documents. For example, in the qualified name `ecomm:partners`, `partners` is th
     is lower case for both HTML elements in HTML DOMs and XHTML elements in XML DOMs. The `tagName`
     property continues to return in the upper case for HTML elements in HTML DOMs.
 
-### `Element.name`
+## `Element.name`
 
 **`name`** gets or sets the `name` property of an element in the DOM. It only applies to the
 following elements: `<a>`, `<applet>`, `<button>`, `<form>`, `<frame>`, `<iframe>`, `<img>`,
@@ -765,7 +801,7 @@ Notes
 In Internet Explorer (IE), the `name` property of DOM objects created using `document.createElement()`
 can't be set or modified.
 
-### `Element.namespaceURI`
+## `Element.namespaceURI`
 
 The **`Element.namespaceURI`** read-only property returns the namespace URI of the element, or
 `null` if the element is not in a namespace.
@@ -782,13 +818,13 @@ namespace = element.namespaceURI
 Example
 
 In this snippet, an element is being examined for its `localName` and its `namespaceURI`. If the
-`namespaceURI` returns the XUL namespace and the `localName` returns "browser", then the node is
-understood to be a XUL `<browser/>`.
+`namespaceURI` returns the XML namespace and the `localName` returns "browser", then the node is
+understood to be a XML `<browser/>`.
 
 ```javascript
 if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
-  // this is a XUL browser
+    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.XML") {
+  // this is a XML browser
 }
 ```
 
@@ -807,7 +843,7 @@ The DOM does not handle or enforce namespace validation per se. It is up to the 
 do any validation necessary. Also note that the namespace prefix, once it is associated with a
 particular element, cannot be changed.
 
-### `element.nextElementSibling`
+## `element.nextElementSibling`
 
 The **`NonDocumentTypeChildNode.nextElementSibling`** read-only property returns the element
 immediately following the specified one in its parent's children list, or `null` if the specified
@@ -843,7 +879,7 @@ DIV
 SCRIPT
 ```
 
-### `element.outerHTML`
+## `element.outerHTML`
 
 The **`outerHTML`** attribute of the `Element` DOM interface gets the serialized HTML fragment
 describing the element including its descendants. It can also be set to replace the element with
@@ -926,7 +962,7 @@ p.outerHTML = "<div>This div replaced a paragraph.</div>";
 console.log(p.nodeName); // still "P";
 ```
 
-### `Element.part`
+## `Element.part`
 
 The **`part`** property of the `Element` interface represents the part identifier(s) of the element
 (i.e. set using the `part` attribute), returned as a `DOMTokenList`. These can be used to style
@@ -966,7 +1002,7 @@ tabs.forEach((tab) => {
 })
 ```
 
-### `Element.prefix`
+## `Element.prefix`
 
 The **`Element.prefix`** read-only property returns the namespace prefix of the specified element,
 or `null` if no prefix is specified.
@@ -993,7 +1029,7 @@ Notes
 This will only work when a namespace-aware parser is used, i.e. when a document is served with an
 XML MIME type. This will not work for HTML documents.
 
-### `Element.previousElementSibling`
+## `Element.previousElementSibling`
 
 The **`NonDocumentTypeChildNode.previousElementSibling`** read-only property returns the `Element`
 immediately prior to the specified one in its parent's children list, or `null` if the specified
@@ -1036,7 +1072,7 @@ Siblings of div-03
    4. DIV
 ```
 
-### `Element.scrollHeight`
+## `Element.scrollHeight`
 
 The **`Element.scrollHeight`** read-only property is a measurement of the height of an element's
 content, including content not visible on the screen due to overflow.
@@ -1164,7 +1200,7 @@ onload = function () {
 }
 ```
 
-### `Element.scrollLeft`
+## `Element.scrollLeft`
 
 he **`Element.scrollLeft`** property gets or sets the number of pixels that an element's content is
 scrolled from its left edge.
@@ -1234,7 +1270,7 @@ button.onclick = function () {
 };
 ```
 
-### `Element.scrollTop`
+## `Element.scrollTop`
 
 The **`Element.scrollTop`** property gets or sets the number of pixels that an element's content
 is scrolled vertically.
@@ -1271,7 +1307,7 @@ the maximum value.
 
 ![scrollTop](/media/webfrontend__scrollTop.png)
 
-### `Element.scrollWidth`
+## `Element.scrollWidth`
 
 The **`Element.scrollWidth`** read-only property is a measurement of the width of an element's content,
 including content not visible on the screen due to overflow.
@@ -1363,7 +1399,7 @@ Example
 </html>
 ```
 
-### `Element.shadowRoot`
+## `Element.shadowRoot`
 
 The **`Element.shadowRoot`** read-only property represents the shadow root hosted by the element.
 Use `Element.attachShadow()` to add a shadow root to an existing element.
@@ -1423,7 +1459,7 @@ function updateStyle(elem) {
 }
 ```
 
-### `Element.slot`
+## `Element.slot`
 
 The **`slot`** property of the `Element` interface returns the name of the shadow DOM slot the
 element is inserted in.
@@ -1464,7 +1500,7 @@ let slottedSpan = document.querySelector('my-paragraph span')
 console.log(slottedSpan.slot); // logs 'my-text'
 ```
 
-### `Element.tagName`
+## `Element.tagName`
 
 The **`tagName`** read-only property of the `Element` interface returns the tag name of the element
 on which it's called. For example, if the element is an `<img>`, its `tagName` property is `"IMG"`

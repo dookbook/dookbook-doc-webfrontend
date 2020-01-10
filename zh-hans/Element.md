@@ -1,4 +1,33 @@
 TOPICS: Element
+        Element.accessKey
+        Element.attributes
+        ParentNode.childElementCount
+        ParentNode.children
+        Element.classList
+        Element.className
+        Element.clientHeight
+        Element.clientLeft
+        Element.clientTop
+        Element.clientWidth
+        Element.firstElementChild
+        Element.id
+        element.innerHTML
+        Element.lastElementChild
+        Element.localName
+        Element.name
+        Element.namespaceURI
+        element.nextElementSibling
+        element.outerHTML
+        Element.part
+        Element.prefix
+        Element.previousElementSibling
+        Element.scrollHeight
+        Element.scrollLeft
+        Element.scrollTop
+        Element.scrollWidth
+        Element.shadowRoot
+        Element.slot
+        Element.tagName
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # JavaScript Element 对象: `element`
@@ -7,11 +36,9 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 元素所普遍具有的方法和属性。一些接口继承自 `Element` 并且增加了一些额外功能的接口描述了具体的行为。例如， `HTMLElement` 接口是所有 HTML 元素的基本接口，而 `SVGElement`
 接口是所有 SVG 元素的基础。大多数功能是在这个类的更深层级（hierarchy）的接口中被进一步制定的。
 
-在 Web 平台的领域以外的语言，比如 XUL，通过 `XULElement` 接口，同样也实现了 `Element` 接口。
+在 Web 平台的领域以外的语言，比如 XML，通过 `XMLElement` 接口，同样也实现了 `Element` 接口。
 
-## 属性
-
-### `Element.accessKey`
+## `Element.accessKey`
 
 元素的 **`Element.accessKey`** 属性设置了这样一个按键——用户通过敲击这个键把焦点跳转到这个元素上。
 
@@ -19,7 +46,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
     `Element.accessKey` 属性很少使用，因为它很容易与现代浏览器自带的快捷键冲突。为了解决这个问题，浏览器约定`accessKey`键与特定按键一起按
     （比如 !!!Alt!!! + !!!accessKey!!!）来生效快捷键行为。
 
-### `Element.attributes`
+## `Element.attributes`
 
 **`Element.attributes`** 属性返回该元素所有属性节点的一个实时集合。该集合是一个 `NamedNodeMap` 对象，不是一个数组，所以它没有 数组 的方法，其包含的 属性
 节点的索引顺序随浏览器不同而不同。更确切地说，`attributes` 是字符串形式的名/值对，每一对名/值对对应一个属性节点。
@@ -86,7 +113,7 @@ var atts = para.attributes;`
 </html>
 ```
 
-### `ParentNode.childElementCount`
+## `ParentNode.childElementCount`
 
 **`ParentNode.childElementCount`** 只读属性返回一个无符号长整型数字，表示给定元素的子元素数。
 
@@ -163,7 +190,7 @@ if (foo.childElementCount > 0) {
 </body>
 ```
 
-### `ParentNode.children`
+## `ParentNode.children`
 
 **`ParentNode.children`** 是一个只读属性，返回 一个`Node`的子`elements` ，是一个动态更新的 `HTMLCollection`。
 
@@ -193,7 +220,7 @@ if (parg.childElementCount)
  };
 ```
 
-### `Element.classList`
+## `Element.classList`
 
 **`Element.classList`** 是一个只读属性，返回一个元素的类属性的实时 `DOMTokenList` 集合。
 
@@ -245,7 +272,7 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");
 ```
 
-### `Element.className`
+## `Element.className`
 
 **`className`** 获取或设置指定元素的class属性的值。
 
@@ -273,7 +300,7 @@ if (elm.className == "fixed") {
 !!! warn ""
     使用名称`className`而不是`class`作为属性名,是因为"class" 在JavaScript中是个保留字.
 
-### `Element.clientHeight`
+## `Element.clientHeight`
 
 这个属性是只读属性，对于没有定义`CSS`或者内联布局盒子的元素为`0`，否则，它是元素内部的高度(单位像素)，包含内边距，但不包括水平滚动条、边框和外边距。
 
@@ -296,7 +323,7 @@ var h = element.clientHeight;
 
 ![Dimensions-client](/media/webfrontend__Dimensions-client.png)
 
-### `Element.clientLeft`
+## `Element.clientLeft`
 
 表示一个元素的左边框的宽度，以像素表示。如果元素的文本方向是从右向左（RTL, right-to-left），并且由于内容溢出导致左边出现了一个垂直滚动条，则该属性包括滚动条的宽度。
 `clientLeft` 不包括左外边距和左内边距。`clientLeft` 是只读的。
@@ -307,7 +334,7 @@ var h = element.clientHeight;
 var left = element.clientLeft;
 ```
 
-### `Element.clientTop`
+## `Element.clientTop`
 
 一个元素顶部边框的宽度（以像素表示）。不包括顶部外边距或内边距。`clientTop` 是只读的。
 
@@ -317,7 +344,7 @@ var left = element.clientLeft;
 var top = element.clientTop;
 ```
 
-### `Element.clientWidth`
+## `Element.clientWidth`
 
 只读属性
 
@@ -337,7 +364,7 @@ var intElemClientWidth = element.clientWidth;
 
 ![Dimensions-client](/media/webfrontend__Dimensions-client.png)
 
-### `Element.firstElementChild`
+## `Element.firstElementChild`
 
 **`ParentNode.firstElementChild`** 只读属性，返回对象的第一个子 元素, 如果没有子元素，则为`null`。
 
@@ -366,7 +393,7 @@ console.log(foo.firstElementChild.textContent);
 </script>
 ```
 
-### `Element.id`
+## `Element.id`
 
 **`Element`** 接口的 `id` 属性表示元素的标识符，与全局属性 `id` 对应。
 
@@ -386,7 +413,7 @@ element.id = idStr; // Set the id
 
 - `idStr`，元素的 ID 属性值。
 
-### `element.innerHTML`
+## `element.innerHTML`
 
 **`Element.innerHTML`** 属性设置或获取HTML语法表示的元素的后代。
 
@@ -558,7 +585,7 @@ HTML
 }
 ```
 
-### `Element.lastElementChild`
+## `Element.lastElementChild`
 
 只读属性 **`ParentNode.lastElementChild`** 返回对象的最后一个子元素，如果没有子元素，则返回 `null`
 
@@ -588,7 +615,7 @@ console.log(foo.lastElementChild.textContent);
 </script>
 ```
 
-### `Element.localName`
+## `Element.localName`
 
 **`Element.localName`** 只读属性，返回本地名称的.
 
@@ -648,7 +675,7 @@ name = element.localName
     在 Gecko 1.9.2 之前, 此属性返回HTML DOM的HTML元素本地名称的大写版本 (而不是XML DOM的HTML元素). 在最后一个版本,
     符合HTML5规范下, 当HTML DOM的HTML或XML DOMs的XHTML的小写元素时此属性返回内部DOM storage。`tagName` 属性仍然返回HTML DOM的HTML元素本地名称的大写版本.
 
-### `Element.name`
+## `Element.name`
 
 **`name`** 获取或设置一个 DOM 对象的 `name` 属性；它只能应用于下列元素：`<a>`, `<applet>`, `<button>`, `<form>`, `<frame>`,
 `<iframe>`, `<img>`, `<input>`, `<map>`, `<meta>`, `<object>`, `<param>`, `<select>`, and `<textarea>`.
@@ -691,7 +718,7 @@ var controlCollection = HTMLFormElement.elements.elementName;
 !!! info "备注"
     在 IE6 中，使用 `document.createElement()` 方法创建的 DOM 对象的 `name` 属性不能被更改。
 
-### `Element.namespaceURI`
+## `Element.namespaceURI`
 
 **`Element.namespaceURI`** 是一个只读属性，它返回元素的命名空间，若该元素不在命名空间中则返回null .
 
@@ -706,13 +733,13 @@ namespace = element.namespaceURI
 
 例子
 
-在这段代码中，我们检查了元素的`localName和namespaceURI`。如果 `namespaceURI` 返回 `XUL` 命名空间，
-`localName` 返回`"browser"`，于是这个节点被理解为是一个`XUL` `<browser/>`。
+在这段代码中，我们检查了元素的`localName和namespaceURI`。如果 `namespaceURI` 返回 `XML` 命名空间，
+`localName` 返回`"browser"`，于是这个节点被理解为是一个`XML` `<browser/>`。
 
 ```javascript
 if (element.localName == "browser" &&
-    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
-  // this is a XUL browser
+    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.XML") {
+  // this is a XML browser
 }
 ```
 
@@ -723,7 +750,7 @@ if (element.localName == "browser" &&
     您可以使用DOM Level 2方法指定的`namespaceURI`创建一个元素 `document.createElementNS`。
     DOM本身不处理或执行名称空间验证。 它由DOM应用程序完成，以执行任何必要的验证。注意，名称空间前缀一旦与某个特定元素相关联，就不能更改。
 
-### `element.nextElementSibling`
+## `element.nextElementSibling`
 
 `nextElementSibling` 返回当前元素在其父元素的子元素节点中的后一个元素节点,如果该元素已经是最后一个元素节点,则返回`null`,该属性是只读的.
 
@@ -761,7 +788,7 @@ Siblings of div-01
    4. OL
 ```
 
-### `element.outerHTML`
+## `element.outerHTML`
 
 `element`  DOM接口的`outerHTML`属性获取描述元素（包括其后代）的序列化HTML片段。它也可以设置为用从给定字符串解析的节点替换元素。
 
@@ -851,7 +878,7 @@ console.log(p.nodeName);
 // 仍然为: "P";
 ```
 
-### `Element.part`
+## `Element.part`
 
 元素接口的 **`part`** 属性代表元素的部分标识符（即使用`part`属性设置），以`DOMTokenList`的形式返回。 这些可以通过`::part`伪元素用于设置阴影DOM的样式。
 
@@ -887,7 +914,7 @@ tabs.forEach((tab) => {
 })
 ```
 
-### `Element.prefix`
+## `Element.prefix`
 
 `Element.prefix` 只读属性返回指定元素的命名空间前缀，如果未指定前缀，则返回`null`。
 
@@ -910,7 +937,7 @@ string = element.prefix
 
 仅当使用支持名称空间的解析器时，即使用XML MIME类型提供文档时，这才起作用。 这不适用于HTML文档。
 
-### `Element.previousElementSibling`
+## `Element.previousElementSibling`
 
 **`previousElementSibling`** 返回当前元素在其父元素的子元素节点中的前一个元素节点,如果该元素已经是第一个元素节点,则返回`null`,该属性是只读的.
 
@@ -951,7 +978,7 @@ Siblings of div-03
    4. DIV
 ```
 
-### `Element.scrollHeight`
+## `Element.scrollHeight`
 
 **`Element.scrollHeight`** 这个只读属性是一个元素内容高度的度量，包括由于溢出导致的视图中不可见内容。
 
@@ -1069,7 +1096,7 @@ onload = function () {
 }
 ```
 
-### `Element.scrollLeft`
+## `Element.scrollLeft`
 
 **`Element.scrollLeft`** 属性可以读取或设置元素滚动条到元素左边的距离。
 
@@ -1128,7 +1155,7 @@ element.scrollLeft = 10;
 </html>
 ```
 
-### `Element.scrollTop`
+## `Element.scrollTop`
 
 **`Element.scrollTop`** 属性可以获取或设置一个元素的内容垂直滚动的像素数。
 
@@ -1158,7 +1185,7 @@ element.scrollTop = intValue;
 
 ![scrollTop](/media/webfrontend__scrollTop.png)
 
-### `Element.scrollWidth`
+## `Element.scrollWidth`
 
 **`Element.scrollWidth`** 这个只读属性是元素内容宽度的一种度量，包括由于`overflow`溢出而在屏幕上不可见的内容。
 `scrollWidth`值等于元素在不使用水平滚动条的情况下适合视口中的所有内容所需的最小宽度。 宽度的测量方式与`clientWidth`相同：它包含元素的内边距，但不包括边框，外边距或垂直滚动条
@@ -1245,7 +1272,7 @@ var xScrollWidth = element.scrollWidth;
 </html>
 ```
 
-### `Element.shadowRoot`
+## `Element.shadowRoot`
 
 **`Element.shadowRoot`** 是只读属性，表示元素挂载的shadow root。可以使用 `Element.attachShadow()`) 给一个已存在的元素添加shadow root。
 
@@ -1296,7 +1323,7 @@ function updateStyle(elem) {
 }
 ```
 
-### `Element.slot`
+## `Element.slot`
 
 `Element`接口的 **`slot`** 属性会返回已插入元素所在的Shadow DOM `slot`的名称。
 
@@ -1328,7 +1355,7 @@ let slottedSpan = document.querySelector('my-paragraph span')
 console.log(slottedSpan.slot); // logs 'my-text'
 ```
 
-### `Element.tagName`
+## `Element.tagName`
 
 返回当前元素的标签名
 
@@ -1339,7 +1366,7 @@ elementName = element.tagName
 elementName 是一个字符串,包含了element元素的标签名.
 ```
 
-在XML (或者其他基于XML的语言,比如XHTML,xul)文档中,`tagName`的值会保留原始的大小写. 在HTML文档中, `tagName`会返回其大写形式. 对于元素节点来说,`tagName`属性的值和`nodeName`属性的值是相同的.
+在XML (或者其他基于XML的语言,比如XHTML,XML)文档中,`tagName`的值会保留原始的大小写. 在HTML文档中, `tagName`会返回其大写形式. 对于元素节点来说,`tagName`属性的值和`nodeName`属性的值是相同的.
 
 例子
 

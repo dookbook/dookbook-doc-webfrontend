@@ -1,4 +1,34 @@
 TOPICS: document
+        document.body
+        document.characterSet
+        document.compatMode
+        document.contentType
+        document.currentScript
+        document.defaultView
+        document.designMode
+        document.dir
+        document.doctype
+        document.documentElement
+        document.documentURI
+        Document.domain
+        document.embeds
+        Document.forms
+        document.mozFullScreenEnabled
+        Document.head
+        Document.hidden
+        document.images
+        document.implementation
+        document.lastModified
+        Document.links
+        Document.location
+        Document.plugins
+        document.readyState
+        document.referrer
+        Document.scripts
+        Document.scrollingElement
+        Document.title
+        document.URL
+        Document.visibilityState
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # JavaScript document 对象: `document`
@@ -9,9 +39,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 `Document` 接口描述了任何类型的文档的通用属性与方法。根据不同的文档类型（例如HTML、XML、SVG，...），还能使用更多 API：使用 `"text/html"` 作为内容类型
 （content type）的 HTML 文档，还实现了 `HTMLDocument` 接口，而 XML 和 SVG 文档则（额外）实现了 `XMLDocument` 接口。
 
-## 属性
-
-### `document.body`
+## `document.body`
 
 返回当前文档中的`<body>`元素或者`<frameset>`元素.
 
@@ -39,7 +67,7 @@ alert(document.body.id); // "newBodyElement"
 
 该属性是可写的,且为该属性赋的值必须是一个[`<body>`](/zh-hans/webfrontend/<body>)元素.
 
-### `document.characterSet`
+## `document.characterSet`
 
 **`Document.characterSet`** 只读属性返回当前文档的字符编码。该字符编码是用于渲染此文档的字符集，可能与该页面指定的编码不同。（用户可以重写编码方式。）
 
@@ -59,7 +87,7 @@ var string = document.characterSet
 //返回当前文档的字符集,比如"ISO-8859-1" 或者 "UTF-8"
 ```
 
-### `document.compatMode`
+## `document.compatMode`
 
 表明当前文档的渲染模式是混杂模式还是"标准模式".
 
@@ -82,7 +110,7 @@ if (document.compatMode == "BackCompat") {
 
 还有另外一种渲染模式, Gecko的"准标准模式", 该模式和标准规范模式的区别仅为表格单元内的图片布局方式不同. 且该模式的类型字符串仍为: "CSS1Compat".
 
-### `document.contentType`
+## `document.contentType`
 
 返回当前文档的Content-Type(MIME)类型.
 
@@ -96,7 +124,7 @@ contentType = document.contentType;
 
 该属性的返回值是浏览器检测到的,不一定是直接读取HTTP响应头中的或者`HTML`中`meta`标签指定的值.
 
-### `document.currentScript`
+## `document.currentScript`
 
 返回其所包含的脚本中正在被执行的 [`<script>`](/zh-hans/webfrontend/<script>) 元素.
 
@@ -121,7 +149,7 @@ if (document.currentScript.async) {
 值得注意的是,如果当前正在执行的代码是处在某个回调函数或者事件处理函数中的,那么 `currentScript` 属性不会指向包含那个函数的
 [`<script>`](/zh-hans/webfrontend/<script>) 元素,而是会返回 `null`.
 
-### `document.defaultView`
+## `document.defaultView`
 
 在浏览器中，该属性返回当前 `document` 对象所关联的 `window` 对象，如果没有，会返回 `null`。
 
@@ -133,7 +161,7 @@ var win = document.defaultView;
 
 该属性只读.
 
-### `document.designMode`
+## `document.designMode`
 
 **`document.designMode`** 控制整个文档是否可编辑。有效值为 `"on"` 和 `"off"` 。根据规范，该属性默认为 `"off"` 。Firefox 遵循此标准。
 早期版本的 Chrome 和 IE默认为 `"inherit"` 。从 Chrome 43 开始，默认值为 `"off"` ，并且不再支持  `"inherit"`。在 IE6 到 IE10 中，该值为大写。
@@ -153,7 +181,7 @@ document.designMode = "on" || "off";
 iframeNode.contentDocument.designMode = "on";
 ```
 
-### `document.dir`
+## `document.dir`
 
 **`Document.dir`** 的本质是`DOMString`，代表了文档的文字朝向，是从左到右(默认)还是从右到左。
 
@@ -169,7 +197,7 @@ dirStr = document.dir;
 document.dir = dirStr;
 ```
 
-### `document.doctype`
+## `document.doctype`
 
 返回当前文档关联的文档类型定义(DTD). 返回的对象实现了 `DocumentType` 接口。使用 `DOMImplementation.createDocumentType()` 方法可以创建一个`DocumentType`类型的对象。
 
@@ -194,7 +222,7 @@ console.log(
 );
 ```
 
-### `document.documentElement`
+## `document.documentElement`
 
 **`Document.documentElement`** 是一个会返回文档对象（`document`）的根元素的只读属性（如HTML文档的 `<html>` 元素）。
 
@@ -223,7 +251,7 @@ HTML 文档通常包含一个子节点 `<html>`，但在它前面可能还有个
 
 所以，应当使用 `document.documentElement` 来获取根元素, 而不是 `document.firstChild`。
 
-### `document.documentURI`
+## `document.documentURI`
 
 `Document` 接口的属性 `documentURI` 以字符串的形式返回文档的位置（location）。
 
@@ -237,7 +265,7 @@ var string = document.documentURI;
 
 HTML 文档有一个 `document.URL` 属性返回同样的值。但是不像 URL，`documentURI` 适用于所有类型的文档。
 
-### `Document.domain`
+## `Document.domain`
 
 获取/设置当前文档的原始域部分, 用于 同源策略.
 
@@ -272,7 +300,7 @@ Mozilla 会区分 `document.domain` 属性 **从没有被设定过值** 和 **�
 这两种条件下，一个文档才可以去访问另一个文档。如果不是因为这个特殊的策略，每一个站点都会成为他的子域的XSS攻击的对象（例如，`https://bugzilla.mozilla.org` 可以被来自
 `https://bug*.bugzilla.mozilla.org` 站点的bug附件攻击）。
 
-### `document.embeds`
+## `document.embeds`
 
 `Document` 接口的只读属性 `embeds` 返回当前文档内的 [`<embed>`](/zh-hans/webfrontend/<embed>) **HTML**
 [`<object>`](/zh-hans/webfrontend/<object>) 元素列表
@@ -285,7 +313,7 @@ nodeList = document.embeds
 
 一个 `HTMLCollection` 类型的值
 
-### `Document.forms`
+## `Document.forms`
 
 `forms` 返回当前文档中的 [`<form>`](/zh-hans/webfrontend/<form>) 元素的一个集合(一个 HTMLCollection)。
 
@@ -331,7 +359,7 @@ var selectForm = document.forms[index];
 var selectFormElement = document.forms[index].elements[index];
 ```
 
-### `document.mozFullScreenEnabled`
+## `document.mozFullScreenEnabled`
 
 返回一个布尔值,表明浏览器是否支持全屏模式. 全屏模式只在那些不包含窗口化的插件的页面中可用.对于一个[`<iframe>`](/zh-hans/webfrontend/<iframe>)元素中的页面,则它必需拥有mozallowfullscreen属性.
 
@@ -355,7 +383,7 @@ function requestFullScreen() {
 }
 ```
 
-### `Document.head`
+## `Document.head`
 
 返回当前文档中的 [`<head>`](/zh-hans/webfrontend/<head>) 元素。如果有多个 [`<head>`](/zh-hans/webfrontend/<head>) 元素，则返回第一个。
 
@@ -374,7 +402,7 @@ alert( document.head === document.querySelector("head") ); // true
 
 `document.head` 是个只读属性，为该属性赋值只会静默失败，如果在严格模式中，则会抛出`TypeError`异常。
 
-### `Document.hidden`
+## `Document.hidden`
 
 `Document.hidden` （只读属性）返回布尔值，表示页面是（`true`）否（`false`）隐藏。
 
@@ -393,7 +421,7 @@ document.addEventListener("visibilitychange", function() {
 });
 ```
 
-### `document.images`
+## `document.images`
 
 `Document` 接口的只读属性`images`返回当前文档中所有 `image` 元素的集合.
 
@@ -426,7 +454,7 @@ for(var i = 0; i < ilist.length; i++) {
 }
 ```
 
-### `document.implementation`
+## `document.implementation`
 
 返回一个和当前文档相关联的`DOMImplementation`对象。
 
@@ -450,7 +478,7 @@ alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
 
 W3C的DOM1级建议值规定了一种检测浏览器对某个DOM模型是否支持的方法——`hasFeature`方法。如果它可用的话，那么`DOMImplementation`接口的其他方法就可以为操作文档以外的内容提供一些服务了。例如，`DOMImplementation`接口包含一个`createDocumentType`方法，它可以为实例管理的文档创建对应的DTD文档定义。
 
-### `document.lastModified`
+## `document.lastModified`
 
 返回一个字符串,其中包含了当前文档的最后修改日期和时间.
 
@@ -469,7 +497,7 @@ dump(document.lastModified);
 
 需要注意的是,作为一个字符串,`lastModified` 不能很容易的被用于与该文档的修改日期做比较.
 
-### `Document.links`
+## `Document.links`
 
 `links` 属性返回一个文档中所有具有 href 属性值的 [`<area>`](/zh-hans/webfrontend/<area>) 元素与
 [`<a>`](/zh-hans/webfrontend/<a>) 元素的集合。
@@ -496,7 +524,7 @@ for(var i = 0; i < links.length; i++) {
 }
 ```
 
-### `Document.location`
+## `Document.location`
 
 `Document.location` 是一个只读属性，返回一个 `Location` 对象，包含有文档的 URL 相关的信息，并提供了改变该 URL 和加载其他 URL 的方法。
 
@@ -522,7 +550,7 @@ dump(document.location);
 // "http://www.example.com/juicybits.html" to the console
 ```
 
-### `Document.plugins`
+## `Document.plugins`
 
 `Document`接口的插件只读属性返回一个`HTMLCollection` 对象，该对象包含一个或多个`HTMLEmbedElements`表示当前文档中的`<embed>` 元素。
 
@@ -539,7 +567,7 @@ embedArrayObj = document.plugins
 
 一个 `HTMLCollection`, 如果文档中没有嵌入则为`null`。
 
-### `document.readyState`
+## `document.readyState`
 
 一个 `document` 的 **`Document.readyState`** 属性描述了文档的加载状态。
 
@@ -606,7 +634,7 @@ document.onreadystatechange = function () {
 }
 ```
 
-### `document.referrer`
+## `document.referrer`
 
 **`Document.referrer`** 返回 跳转或打开到当前页面 的页面的 URI。
 
@@ -622,7 +650,7 @@ var referrer = document.referrer;
 
 在`<iframe>`内，`Document.referrer`最初将设置为与父窗口的`Window.location`的`href`相同的值。
 
-### `Document.scripts`
+## `Document.scripts`
 
 返回一个`HTMLCollection`对象,包含了当前文档中所有`<script>`元素的集合.
 
@@ -646,7 +674,7 @@ if (scripts.length) {
 }
 ```
 
-### `Document.scrollingElement`
+## `Document.scrollingElement`
 
 `scrollingElement` （ `Document` 的只读属性）返回滚动文档的 `Element` 对象的引用。 在标准模式下, 这是文档的根元素, `document.documentElement`.
 
@@ -665,7 +693,7 @@ var scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
 ```
 
-### `Document.title`
+## `Document.title`
 
 获取或设置文档的标题。
 
@@ -706,13 +734,13 @@ alert(document.title); // 显示 "Goodbye World!"
 
 备注
 
-在 Gecko 中，该属性适应于 HTML、SVG、XUL 和其他文档。
+在 Gecko 中，该属性适应于 HTML、SVG、XML 和其他文档。
 
-对于 HTML 文档来说，`document.title` 的初始值是 `<title>` 元素的文本内容。对于 XUL 来说，它是 `window` 或其他顶级 XUL 元素的 `title` 属性的值。
+对于 HTML 文档来说，`document.title` 的初始值是 `<title>` 元素的文本内容。对于 XML 来说，它是 `window` 或其他顶级 XML 元素的 `title` 属性的值。
 
-在 XUL 里，在文档完全加载之前访问 `document.title`，会有未定义行为（`document.title` 可能返回一个空字符串，并且设置 `document.title` 也无效）。
+在 XML 里，在文档完全加载之前访问 `document.title`，会有未定义行为（`document.title` 可能返回一个空字符串，并且设置 `document.title` 也无效）。
 
-### `document.URL`
+## `document.URL`
 
 返回当前文档的URL地址
 
@@ -729,7 +757,7 @@ string = document.URL
 
 `document.documentURI` 也返回与该属性相同的值,不过它在非HTML文档中也可以使用.
 
-### `Document.visibilityState`
+## `Document.visibilityState`
 
 **`Document.visibilityState`** （只读属性）, 返回`document`的可见性, 即当前可见元素的上下文环境. 由此可以知道当前文档(即为页面)是在背后, 或是不可见的隐藏的标签页，或者(正在)预渲染.可用的值如下：
 

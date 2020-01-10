@@ -1,11 +1,50 @@
 TOPICS: document
+        document.body
+        document.characterSet
+        document.compatMode
+        document.contentType
+        document.currentScript
+        document.defaultView
+        document.designMode
+        document.dir
+        document.doctype
+        document.documentElement
+        document.documentURI
+        Document.domain
+        document.embeds
+        Document.forms
+        document.mozFullScreenEnabled
+        Document.head
+        Document.hidden
+        document.images
+        document.implementation
+        document.lastModified
+        Document.links
+        Document.location
+        Document.plugins
+        document.readyState
+        document.referrer
+        Document.scripts
+        Document.scrollingElement
+        Document.title
+        document.URL
+        Document.visibilityState
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # JavaScript document Object: `document`
 
-## 属性
+The **`Document`** interface represents any web page loaded in the browser and serves as an entry
+point into the web page's content, which is the DOM tree. The DOM tree includes elements such as
+[`<body>`](/en/webfrontend/<body>) and [`<table>`](/en/webfrontend/<table>), among many others. It
+provides functionality globally to the document, like how to obtain the page's URL and create new
+elements in the document.
 
-### `document.body`
+The `Document` interface describes the common properties and methods for any kind of document.
+Depending on the document's type (e.g. HTML, XML, SVG, …), a larger API is available: HTML documents,
+served with the `"text/html"` content type, also implement the `HTMLDocument` interface, whereas XML
+and SVG documents implement the `XMLDocument` interface.
+
+## `document.body`
 
 The **`Document.body`** property represents the `<body>` or `<frameset>` node of the current
 document, or `null` if no such element exists.
@@ -39,7 +78,7 @@ outermost `<frameset>` element.
 Though `body` is settable, setting a new body on a document will effectively remove all the current
 children of the existing `<body>` element.
 
-### `document.characterSet`
+## `document.characterSet`
 
 The **`Document.characterSet`** read-only property returns the character encoding of the document
 that it's currently rendered with. (A character encoding is a set of characters and how to interpret
@@ -72,7 +111,7 @@ Examples
 <!-- displays document's character encoding in the dev console, such as "ISO-8859-1" or "UTF-8" -->
 ```
 
-### `document.compatMode`
+## `document.compatMode`
 
 The **`Document.compatMode`** property indicates whether the document is rendered in Quirks mode
 or Standards mode.
@@ -101,7 +140,7 @@ if (document.compatMode == "BackCompat") {
 }
 ```
 
-### `document.contentType`
+## `document.contentType`
 
 The **`Document.contentType`** read-only property returns the MIME type that the document is being
 rendered as. This may come from HTTP headers or other sources of MIME information, and might be
@@ -120,7 +159,7 @@ Value
 
 `contentType` is a read-only property.
 
-### `document.currentScript`
+## `document.currentScript`
 
 The **`Document.currentScript`** property returns the `<script>` element whose script is currently
 being processed and isn't a JavaScript module. (For modules use `import.meta` instead.)
@@ -147,7 +186,7 @@ if (document.currentScript.async) {
 }
 ```
 
-### `document.defaultView`
+## `document.defaultView`
 
 In browsers, **`document.defaultView`** returns the `window` object associated with a document,
 or `null` if none is available.
@@ -160,7 +199,7 @@ var win = document.defaultView;
 
 This property is read-only.
 
-### `document.designMode`
+## `document.designMode`
 
 **`document.designMode`** controls whether the entire document is editable. Valid values are
 `"on"` and `"off"`. According to the specification, this property is meant to default to `"off"`.
@@ -183,7 +222,7 @@ Make an `<iframe>`'s document editable:
 iframeNode.contentDocument.designMode = "on";
 ```
 
-### `document.dir`
+## `document.dir`
 
 The **`Document.dir`** property is a DOMString representing the directionality of the text of the
 document, whether left to right (default) or right to left. Possible values are `'rtl'`, right to
@@ -196,7 +235,7 @@ dirStr = document.dir;
 document.dir = dirStr;
 ```
 
-### `document.doctype`
+## `document.doctype`
 
 Returns the Document Type Declaration (DTD) associated with current document. The returned object
 implements the `DocumentType` interface. Use `DOMImplementation.createDocumentType()` to create a `DocumentType`.
@@ -222,7 +261,7 @@ console.log(
 );
 ```
 
-### `document.documentElement`
+## `document.documentElement`
 
 **`Document.documentElement`** returns the [`Element`](/en/webfrontend/Element) that is the root
 element of the `document` (for example, the [`<html>`](/en/webfrontend/<html>) element for HTML documents).
@@ -251,7 +290,7 @@ for (var i = 0; i < firstTier.length; i++) {
     For any non-empty XML document, `document.documentElement` will always be whatever element is
     the root element of the document.
 
-### `document.documentURI`
+## `document.documentURI`
 
 The **`documentURI`** property of the `Document` interface returns the document location as a string.
 
@@ -266,7 +305,7 @@ var string = document.documentURI;
 !!! warn "Notes"
     Documents also have a `document.URL` property which returns the same value.
 
-### `Document.domain`
+## `Document.domain`
 
 The **`domain`** property of the `Document` interface gets/sets the domain portion of the origin of
 the current document, as used by the same origin policy.
@@ -315,7 +354,7 @@ if (document.domain == badDomain) {
 }
 ```
 
-### `document.embeds`
+## `document.embeds`
 
 The **`embeds`** read-only property of the `Document` interface returns a list of the embedded
 [`<object>`](/en/webfrontend/<object>) elements within the current document.
@@ -330,7 +369,7 @@ Value
 
 An `HTMLCollection`.
 
-### `Document.forms`
+## `Document.forms`
 
 The **`forms`** read-only property of the Document interface returns an HTMLCollection listing all
 the [`<form>`](/en/webfrontend/<form>) elements contained in the document.
@@ -407,7 +446,7 @@ Named form accessSection
 </html>
 ```
 
-### `document.mozFullScreenEnabled`
+## `document.mozFullScreenEnabled`
 
 The read-only **`fullscreenEnabled`** property on the `Document` interface indicates whether or not
 full-screen mode is available. Full-screen mode is available only for a page that has no windowed
@@ -444,7 +483,7 @@ function requestFullScreen() {
 }
 ```
 
-### `Document.head`
+## `Document.head`
 
 The **`head`** read-only property of the `Document` interface returns the [`<head>`](/en/webfrontend/<head>)
 element of the current document.
@@ -481,7 +520,7 @@ Notes
 `document.head` is read-only. Trying to assign a value to this property will fail silently or,
 in Strict Mode, throws a `TypeError` .
 
-### `Document.hidden`
+## `Document.hidden`
 
 The **`Document.hidden`** read-only property returns a Boolean value indicating if the page is
 considered hidden or not.
@@ -501,7 +540,7 @@ document.addEventListener("visibilitychange", function() {
 });
 ```
 
-### `document.images`
+## `document.images`
 
 The **`images`** read-only property of the `Document` interface returns a collection of the images
 in the current HTML document.
@@ -542,7 +581,7 @@ for(var i = 0; i < ilist.length; i++) {
 }
 ```
 
-### `document.implementation`
+## `document.implementation`
 
 The **`Document.implementation`** property returns a `DOMImplementation` object associated with
 the current document.
@@ -575,7 +614,7 @@ methods provide services for controlling things outside of a single document. Fo
 `DOMImplementation` interface includes a `createDocumentType` method with which DTDs can be
 created for one or more documents managed by the implementation.
 
-### `document.lastModified`
+## `document.lastModified`
 
 The **`lastModified`** property of the `Document` interface returns a string containing the date
 and time on which the current document was last modified.
@@ -640,7 +679,7 @@ if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
 }
 ```
 
-### `Document.links`
+## `Document.links`
 
 The **`links`** read-only property of the `Document` interface returns a collection of all [`<area>`](/en/webfrontend/<area>)
 elements and [`<a>`](/en/webfrontend/<a>) elements in a document with a value for the href attribute.
@@ -667,7 +706,7 @@ for(var i = 0; i < links.length; i++) {
 }
 ```
 
-### `Document.location`
+## `Document.location`
 
 The **`Document.location`** read-only property returns a `Location` object, which contains
 information about the URL of the document and provides methods for changing that URL and loading
@@ -696,7 +735,7 @@ console.log(document.location);
 // "http://www.example.com/juicybits.html" to the console
 ```
 
-### `Document.plugins`
+## `Document.plugins`
 
 The **`plugins`** read-only property of the Document interface returns an HTMLCollection object
 containing one or more HTMLEmbedElements representing the [`<embed>`](/en/webfrontend/<embed>)
@@ -715,7 +754,7 @@ Value
 
 An `HTMLCollection`, or `null` if there are no embeds in the document.
 
-### `document.readyState`
+## `document.readyState`
 
 The **`Document.readyState`** property describes the loading state of the `document`.
 
@@ -795,7 +834,7 @@ document.addEventListener('readystatechange', event => {
 });
 ```
 
-### `document.referrer`
+## `document.referrer`
 
 The **`Document.referrer`** property returns the URI of the page that linked to this page.
 
@@ -814,7 +853,7 @@ document object model (DOM) access to the referring page.
 Inside an [`<iframe>`](/en/webfrontend/<iframe>), the `Document.referrer` will initially be set to
 the same value as the `href` of the parent window's `Window.location`.
 
-### `Document.scripts`
+## `Document.scripts`
 
 The **`scripts`** property of the `Document` interface returns a list of the
 [`<script>`](/en/webfrontend/<script>) elements in the document. The returned object is an `HTMLCollection`.
@@ -841,7 +880,7 @@ if (scripts.length) {
 }
 ```
 
-### `Document.scrollingElement`
+## `Document.scrollingElement`
 
 The **`scrollingElement`** read-only property of the `Document` interface returns a reference to the
 `Element` that scrolls the document. In standards mode, this is the root
@@ -863,7 +902,7 @@ var scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
 ```
 
-### `Document.title`
+## `Document.title`
 
 The **`document.title`** property gets or sets the current title of the document.
 
@@ -907,16 +946,16 @@ Example
 
 Notes
 
-This property applies to HTML, SVG, XUL, and other documents in Gecko.
+This property applies to HTML, SVG, XML, and other documents in Gecko.
 
 For HTML documents the initial value of `document.title` is the text content of the `<title>`
-element. For XUL it's the value of the `title` attribute of the `<xul:window>` or other
-top-level XUL element.
+element. For XML it's the value of the `title` attribute of the `<XML:window>` or other
+top-level XML element.
 
-In XUL, accessing `document.title` before the document is fully loaded has undefined behavior:
+In XML, accessing `document.title` before the document is fully loaded has undefined behavior:
 `document.title` may return an empty string and setting `document.title` may have no effect.
 
-### `document.URL`
+## `document.URL`
 
 The **`URL`** read-only property of the `Document` interface returns the document location as a string.
 
@@ -939,7 +978,7 @@ document.getElementById("url").textContent = document.URL;
 </p>
 ```
 
-### `Document.visibilityState`
+## `Document.visibilityState`
 
 The **`Document.visibilityState`** read-only property returns the visibility of the `document`,
 that is in which context this element is now visible. It is useful to know if the document is in
