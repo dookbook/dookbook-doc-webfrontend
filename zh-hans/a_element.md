@@ -1,4 +1,10 @@
 TOPICS: <a>
+        <a> href attribute
+        <a> target attribute
+        <a> rel attribute
+        <a> download attribute
+        <a> type attribute
+        <a> hreflang attribute
 
 # HTML 锚元素：`<a>`
 
@@ -25,10 +31,10 @@ TOPICS: <a>
 | **`target`** | 该属性指定在**何处显示**链接的资源。取值为标签页(tab)、窗口(window)、或[`<iframe>`](/en/webfrontend/<iframe>)等浏览上下文的名称或关键词。以下关键字具有特殊的意义：*`_self`* (*默认*)，*`_blank`*，*`_parent`*，*`_top`*。 |
 | **`rel`** | 该属性指定了目标对象到链接对象的**关系**。该值是*空格分隔*的列表类型值。 |
 | **`download`** | 此属性指示浏览器**下载**URL而不是导航到它，因此将提示用户将其保存为本地文件。如果属性有一个值，那么此值将在下载保存过程中作为预填充的文件名（如果用户需要，仍然可以更改文件名）。此属性对允许的值没有限制，但是 *`/`* 和 *`\`*会被转换为 *下划线* (*`_`*)。大多数文件系统限制了文件名中的标点符号，因此浏览器将相应地调整建议的文件名。 |
-| *`hreflang`* | 该属性用于指定**链接文档的人类语言**。其仅提供建议，并没有内置的功能。允许的值取决于*[BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt)* |
-| *`ping`* | 包含一个以空格分隔的url列表，当跟随超链接时，将由浏览器(在后台)发送带有正文 PING 的 POST 请求。通常用于跟踪 |
+| `type` | 该属性指定目标URL链接的**媒体类型** (**[[MIME]]类型**)。其仅提供建议，并没有内置的功能。|
+| `hreflang` | 该属性用于指定**链接文档的人类语言**。其仅提供建议，并没有内置的功能。允许的值取决于*[BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt)* |
+| `ping` | 包含一个以空格分隔的URL列表，当跟随超链接时，将由浏览器(在后台)发送带有正文 PING 的 POST 请求。通常用于跟踪 |
 | `referrerpolicy` | 表明在获取URL时发送哪个提交者（referrer）:<br><br>`"no-referrer"` 表示 `Referer:` 头将不会被发送。<br>`"no-referrer-when-downgrade"` 表示当从使用HTTPS的页面导航到不使用 TLS(HTTPS)的来源 时不会发送 `Referer:` 头。如果没有指定策略，这将是用户代理的默认行为。<br>`"origin"` 表示 referrer将会是页面的来源，大致为这样的组合：主机和端口（不包含具体的路径和参数的信息）。<br>`"origin-when-cross-origin"` 表示导航到其它源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer的路径。<br>`'strict-origin-when-cross-origin'`<br>`"unsafe-url"` 表示 referrer将会包含源和路径（domain + path）（但是不包含密码或用户名的片段）。这种情况是不安全的，因为它可能会将安全的URLs数据泄露给不安全的源。 |
-| *`type`* | 该属性指定在一个[[MIME]]类型链接目标的形式的**媒体类型**。其仅提供建议，并没有内置的功能。|
 
 ### `target`属性
 
