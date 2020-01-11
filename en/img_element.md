@@ -65,8 +65,6 @@ for additional information.
 There are many other attributes that can be specified to achieve various purposes, for example:
 
 - Referrer/CORS control for security purposes; see `crossorigin` and `referrerpolicy`.
-- Responsive image hints using `sizes` and `srcset` (See Also the [`<picture>`](/en/webfrontend/<picture>)
-element, and our Responsive images tutorial).
 
 ## Basic Usage
 
@@ -181,7 +179,7 @@ referenced in the `src` attribute is counted as a `1x` candidate in user agents 
 <img src="dookbook-logo-tail.svg" alt="Dookbook Logo" srcset="dookbook-logo-tail.svg 2x">
 ```
 
-## Using the `srcset` and `sizes` attributes
+## Responsive Image Hints Using `sizes` and `srcset` Attributes
 
 The `src` attribute is ignored in user agents that support `srcset` when *`w`* descriptors are
 included. When the (`max-width: 600px`) media condition matches, the `200px` wide image will be loaded
@@ -193,6 +191,8 @@ included. When the (`max-width: 600px`) media condition matches, the `200px` wid
      srcset="logo-200.png 200w,logo-400.png 400w"
      sizes="(max-width: 600px) 200px, 50vw">
 ```
+
+See the [`<picture>`](/en/webfrontend/<picture>) element.
 
 ## Styling With CSS
 

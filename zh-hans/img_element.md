@@ -108,7 +108,7 @@ HTML 标准并没有给出必须支持的图像格式的列表，因此每个用
 <img src="dookbook-logo-tail.svg" alt="Dookbook Logo" srcset="dookbook-logo-tail.svg 2x">
 ```
 
-## 使用 `srcset` 和 `sizes` 属性
+## 响应式图像提示（使用 `srcset` 和 `sizes` 属性）
 
 在支持 `srcset` 的用户代理中，当使用 *`w`* 描述符时，`src` 属性会被忽略。当匹配了媒体条件 (`min-width: 600px`) 时，图像将宽 `200px`，否则宽 `50vw`（视图宽度的50%）。
 
