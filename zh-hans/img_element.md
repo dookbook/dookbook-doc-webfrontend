@@ -148,7 +148,7 @@ HTML 标准并没有给出必须支持的图像格式的列表，因此每个用
 这样做可能会使某些屏幕阅读器两次宣布该描述，从而造成混乱的体验。
 
 `title`属性也不应用作图像的`alt`描述的辅助字幕信息。如果图像需要字幕，请结合使用 *[`<figure>`](/zh-hans/webfrontend/<figure>)* 和
-*[`figcaption`](/zh-hans/webfrontend/<figcaption>)* 元素。
+*[`<figcaption>`](/zh-hans/webfrontend/<figcaption>)* 元素。
 
 ## 与 CSS 的交互
 
