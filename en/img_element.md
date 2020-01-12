@@ -230,7 +230,7 @@ Doing so may cause some screen readers to announce the description twice, creati
 
 The `title` attribute should also not be used as supplemental captioning information to
 accompany an image's `alt` description. If an image needs a caption, use a combination of the
-*[`<figure>`](/en/webfrontend/<figure>)* and *[`figcaption`](/en/webfrontend/<figcaption>)* elements.
+*[`<figure>`](/en/webfrontend/<figure>)* and *[`<figcaption>`](/en/webfrontend/<figcaption>)* elements.
 
 ## Styling With CSS
 
