@@ -10,6 +10,8 @@ the *Boldface* element, and most browsers still draw the text in boldface. Howev
 boldface text, or the [`<strong>`](/en/webfrontend/<strong>) element to indicate that text is of
 special importance.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
 | **Content Categories** | *Flow Content*, *Phrasing Content*, *Palpable Content*. |
