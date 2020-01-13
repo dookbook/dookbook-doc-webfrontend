@@ -1,4 +1,5 @@
 TOPICS: <a>
+        HTMLAnchorElement
         <a> href attribute
         <a> target attribute
         <a> rel attribute
@@ -8,18 +9,18 @@ TOPICS: <a>
 
 # HTML 锚元素：`<a>`
 
-**HTML `<a>` 元素**（或称**锚元素**）可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的**超链接**。
+**HTML `<a>` 元素**（或称**锚元素**）可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他URL的**超链接**。
 
 ## 技术摘要
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 流内容、文字内容、交互内容、可触摸内容。
-| **允许的内容** | 可见的内容，包含流内容（不包括交互式内容）或文字内容。|
+| **内容分类** | *流式内容*、*短语内容*、*交互内容*、*可触摸内容*。|
+| **允许的内容** | 可见的，包含*流式内容*（不包括*交互内容*）或*短语内容*。|
 | **标签省略** | 不允许，开始标签和结束标签都不能省略。|
-| **允许的父元素** | 接受短语内容的任何元素或接受流内容的任何元素，但始终不接受 `<a>` 元素（根据对称的逻辑原理，如果 `<a>` 标记作为父元素，不能具有交互内容，则相同的 `<a>` 内容不能具有 `<a>` 标记作为其父元素）。|
+| **允许的父元素** | *流式内容*或*短语内容*的元素，`<a>`元素除外。|
 | **Permitted ARIA roles** | `button`, `checkbox`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `switch`, `tab`, `treeitem` |
-| **DOM 接口** | `HTMLAnchorElement` |
+| **DOM 接口** | **`HTMLAnchorElement`** |
 
 ## 属性
 
@@ -34,7 +35,7 @@ TOPICS: <a>
 | `type` | 该属性指定目标URL链接的**媒体类型** (**[[MIME]]类型**)。其仅提供建议，并没有内置的功能。|
 | `hreflang` | 该属性用于指定**链接文档的人类语言**。其仅提供建议，并没有内置的功能。允许的值取决于*[BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt)* |
 | `ping` | 包含一个以空格分隔的URL列表，当跟随超链接时，将由浏览器(在后台)发送带有正文 PING 的 POST 请求。通常用于跟踪 |
-| `referrerpolicy` | 表明在获取URL时发送哪个提交者（referrer）:<br><br>`"no-referrer"` 表示 `Referer:` 头将不会被发送。<br>`"no-referrer-when-downgrade"` 表示当从使用HTTPS的页面导航到不使用 TLS(HTTPS)的来源 时不会发送 `Referer:` 头。如果没有指定策略，这将是用户代理的默认行为。<br>`"origin"` 表示 referrer将会是页面的来源，大致为这样的组合：主机和端口（不包含具体的路径和参数的信息）。<br>`"origin-when-cross-origin"` 表示导航到其它源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer的路径。<br>`'strict-origin-when-cross-origin'`<br>`"unsafe-url"` 表示 referrer将会包含源和路径（domain + path）（但是不包含密码或用户名的片段）。这种情况是不安全的，因为它可能会将安全的URLs数据泄露给不安全的源。 |
+| `referrerpolicy` | 表明在获取URL时发送哪个提交者（referrer）:<br><br>`"no-referrer"` 表示 `Referer:` 头将不会被发送。<br>`"no-referrer-when-downgrade"` 表示当从使用HTTPS的页面导航到不使用 TLS(HTTPS)的来源 时不会发送 `Referer:` 头。如果没有指定策略，这将是用户代理的默认行为。<br>`"origin"` 表示 referrer将会是页面的来源，大致为这样的组合：主机和端口（不包含具体的路径和参数的信息）。<br>`"origin-when-cross-origin"` 表示导航到其它源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer的路径。<br>`'strict-origin-when-cross-origin'`<br>`"unsafe-url"` 表示 referrer将会包含源和路径（domain + path）（但是不包含密码或用户名的片段）。这种情况是不安全的，因为它可能会将安全的URL数据泄露给不安全的源。 |
 
 ### `target`属性
 
