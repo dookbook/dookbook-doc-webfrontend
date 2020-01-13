@@ -198,7 +198,7 @@ See the [`<picture>`](/en/webfrontend/<picture>) element.
 
 ## Accessibility Concerns
 
-### Authoring meaningful alternate descriptions
+### Authoring meaningful alternate descriptions (`alt` attribute)
 
 An **`alt`** attribute's value should clearly and concisely describe the image's content. It should not
 describe the presence of the image itself, or the file name of the image. If the `alt` attribute is
