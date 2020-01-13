@@ -1,19 +1,19 @@
-TOPICS: ChildNode.remove
+TOPICS: Node.remove
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ChildNode.remove()`
+# `Node.remove()`
 
-The **`ChildNode.remove()`** method removes the object from the tree it belongs to.
+**`Node.remove()`** 方法，把对象从它所属的 DOM 树中删除。
 
-## Syntax
+## 语法
 
 ```javascript
 node.remove();
 ```
 
-## Examples
+## 示例
 
-### Using `remove()`
+### 使用 `remove()`
 
 ```html
 <div id="div-01">Here is div-01</div>
@@ -23,12 +23,13 @@ node.remove();
 
 ```javascript
 var el = document.getElementById('div-02');
-el.remove(); // Removes the div with the 'div-02' id
+el.remove();
+// id 为 'div-02' 的 div 被删掉了
 ```
 
-### `ChildNode.remove()` is unscopable
+### `Node.remove()` 是不可见的
 
-The `remove()` method is not scoped into the with statement.
+在 `with` 语句中，`remove()` 方法是不可见的。
 
 ```javascript
 with(node) {
@@ -39,12 +40,12 @@ with(node) {
 
 ## Polyfill
 
-You can polyfill the `remove()` method in Internet Explorer 9 and higher with the following code:
+您可以使用以下代码在Internet Explorer 9和更高版本中填充`remove()`方法：
 
 ```javascript
-// from:https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/remove()/remove().md
+//https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/remove()/remove().md
 (function (arr) {
-  arr.forEach(function (item) {
+   arr.forEach(function (item) {
     if (item.hasOwnProperty('remove')) {
       return;
     }
@@ -53,9 +54,6 @@ You can polyfill the `remove()` method in Internet Explorer 9 and higher with th
       enumerable: true,
       writable: true,
       value: function remove() {
-        if (this.parentNode === null) {
-          return;
-        }
         this.parentNode.removeChild(this);
       }
     });

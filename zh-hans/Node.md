@@ -1,14 +1,14 @@
-TOPICS: ParentNode.prepend
+TOPICS: Node.prepend
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ParentNode.prepend()`
+# `Node.prepend()`
 
 **`ParentNode.prepend`** 方法可以在父节点的第一个子节点之前插入一系列Node对象或者`DOMString`对象。`DOMString`会被当作`Text`节点对待（也就是说插入的不是HTML代码）。
 
 ## 语法
 
 ```javascript
-ParentNode.prepend((Node or DOMString)... nodes);
+Node.prepend((Node or DOMString)... nodes);
 ```
 
 | 参数 | 说明 |
@@ -55,7 +55,7 @@ parent.prepend("Some text", p);
 console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
 ```
 
-### `ParentNode.prepend()` 无法作用域
+### `Node.prepend()` 无法作用域
 
 `prepend()`不能在`with`语句内使用
 

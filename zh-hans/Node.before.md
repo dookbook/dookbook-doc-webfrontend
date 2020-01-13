@@ -1,16 +1,16 @@
-TOPICS: ChildNode.before
+TOPICS: Node.before
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ChildNode.before()`
+# `Node.before()`
 
-**`ChildNode.before`** 方法可以在`ChildNode`这个节点的父节点中插入一些列的 `Node` 或者 `DOMString` 对象，位置就是在`ChildNode`节点的前面
+**`Node.before`** 方法可以在`ChildNode`这个节点的父节点中插入一些列的 `Node` 或者 `DOMString` 对象，位置就是在`ChildNode`节点的前面
 `DOMString` 对象其实和 `Text`节点一样的方式来完成插入的。
 
 语法
 
 ```javascript
 [Throws, Unscopable]
-void ChildNode.before((Node or DOMString)... nodes);
+void Node.before((Node or DOMString)... nodes);
 ```
 
 | 参数 | 说明 |
@@ -64,7 +64,7 @@ console.log(parent.outerHTML);
 // "<div><span></span>Text<p></p></div>"
 ```
 
-### `ChildNode.before()` 不可使用区域
+### `Node.before()` 不可使用区域
 
 `before()` 不能配合`with`声明使用
 

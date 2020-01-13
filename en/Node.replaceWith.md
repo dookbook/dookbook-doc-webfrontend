@@ -1,16 +1,16 @@
-TOPICS: ChildNode.replaceWith
+TOPICS: Node.replaceWith
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ChildNode.replaceWith()`
+# `Node.replaceWith()`
 
-The **`ChildNode.replaceWith()`** method replaces this `ChildNode` in the children list of its parent
+The **`Node.replaceWith()`** method replaces this `ChildNode` in the children list of its parent
 with a set of `Node` or `DOMString` objects. `DOMString` objects are inserted as equivalent `Text` nodes.
 
 ## Syntax
 
 ```javascript
 [Throws, Unscopable]
-void ChildNode.replaceWith((Node or DOMString)... nodes);
+void Node.replaceWith((Node or DOMString)... nodes);
 ```
 
 | parameter | Description |
@@ -37,7 +37,7 @@ console.log(parent.outerHTML);
 // "<div><span></span></div>"
 ```
 
-### `ChildNode.replaceWith()` is unscopable
+### `Node.replaceWith()` is unscopable
 
 The `replaceWith()` method is not scoped into the `with` statement.
 

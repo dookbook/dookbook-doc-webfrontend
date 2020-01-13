@@ -1,25 +1,25 @@
-TOPICS: ParentNode.append
+TOPICS: Node.append
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ParentNode.append()`
+# `Node.append()`
 
-The **`ParentNode.append()`** method inserts a set of `Node` objects or `DOMString` objects after
+The **`Node.append()`** method inserts a set of `Node` objects or `DOMString` objects after
 the last child of the `ParentNode`. `DOMString` objects are inserted as equivalent Text nodes.
 
 Differences from `Node.appendChild()`:
 
-- `ParentNode.append()` allows you to also append `DOMString` objects, whereas `Node.appendChild()`
+- `Node.append()` allows you to also append `DOMString` objects, whereas `Node.appendChild()`
 only accepts `Node` objects.
-- `ParentNode.append()` has no return value, whereas `Node.appendChild()` returns the appended
+- `Node.append()` has no return value, whereas `Node.appendChild()` returns the appended
 `Node` object.
-- `ParentNode.append()` can append several nodes and strings, whereas `Node.appendChild()` can only
+- `Node.append()` can append several nodes and strings, whereas `Node.appendChild()` can only
 append one node.
 
 ## Syntax
 
 ```javascript
 // [Throws, Unscopable]
-ParentNode.append(...nodesOrDOMStrings) // returns undefined
+Node.append(...nodesOrDOMStrings) // returns undefined
 ```
 
 | parameter | Description |
@@ -61,7 +61,7 @@ parent.append("Some text", p)
 console.log(parent.childNodes) // NodeList [ #text "Some text", <p> ]
 ```
 
-### `ParentNode.append()` is unscopable
+### `Node.append()` is unscopable
 
 The `append()` method is not scoped into the with statement. See `Symbol.unscopables` for more information.
 

@@ -1,15 +1,15 @@
-TOPICS: ParentNode.prepend
+TOPICS: Node.prepend
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ParentNode.prepend()`
+# `Node.prepend()`
 
-The **`ParentNode.prepend()`** method inserts a set of `Node` objects or `DOMString` objects before
+The **`Node.prepend()`** method inserts a set of `Node` objects or `DOMString` objects before
 the first child of the `ParentNode`. `DOMString` objects are inserted as equivalent `Text` nodes.
 
 ## Syntax
 
 ```javascript
-ParentNode.prepend(...nodesToPrepend);
+Node.prepend(...nodesToPrepend);
 ```
 
 | parameter | Description |
@@ -56,7 +56,7 @@ parent.prepend("Some text", p);
 console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
 ```
 
-### `ParentNode.prepend()` is unscopable
+### `Node.prepend()` is unscopable
 
 The `prepend()` method is not scoped into the with statement.
 

@@ -1,7 +1,7 @@
-TOPICS: ChildNode.replaceWith
+TOPICS: Node.replaceWith
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ChildNode.replaceWith()`
+# `Node.replaceWith()`
 
 **`ChildNode.replaceWith()`** 的方法用一套 `Node` 对象或者 `DOMString` 对象，替换了该节点父节点下的子节点。`DOMString` 对象被当做等效的
 `Text` 节点插入。
@@ -10,7 +10,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 ```javascript
 [Throws, Unscopable]
-void ChildNode.replaceWith((Node or DOMString)... nodes);
+void Node.replaceWith((Node or DOMString)... nodes);
 ```
 
 | 参数 | 说明 |
@@ -37,7 +37,7 @@ console.log(parent.outerHTML);
 // "<div><span></span></div>"
 ```
 
-### `ChildNode.replaceWith()` 无法确定范围
+### `Node.replaceWith()` 无法确定范围
 
 `replaceWith()` 的方法并没有作用于`with`语句.
 
