@@ -27,12 +27,12 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| **`src`** | (**required**) The image URL. This attribute is mandatory for the `<img>` element. On browsers supporting `srcset`, `src` is treated like a candidate image with a pixel density descriptor `1x` unless an image with this pixel density descriptor is already defined in `srcset`, or unless `srcset` contains `'w'` descriptors. |
+| **`src`** | (**required**) The image URL. This attribute is mandatory for the `<img>` element. On browsers supporting `srcset`, `src` is treated like a candidate image with a pixel density descriptor `1x` unless an image with this pixel density descriptor is already defined in `srcset`, or unless `srcset` contains `w` descriptors. |
 | **`alt`** | This attribute defines an **alternative text description** of the image, which isn't mandatory but is incredibly useful for accessibility — screen readers read this description out to their users so they know what the image shows, and it is also displayed on the page if the image can't be loaded for some reason. |
 | **`width`** | The intrinsic **width** of the image *in pixels*. |
 | **`height`** | The intrinsic **height** of the image *in pixels*. |
 | **`srcset`** | A list of one or more strings *separated by commas* indicating **a set of possible image sources** for the user agent to use. |
-| **`sizes`** | A list of one or more strings separated by commas indicating a set of source sizes. Each source size consists of:<br>1、a media condition. This must be omitted for the last item.<br>2、a source size value.<br><br>Source size values specify the intended display size of the image. User agents use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`'w'`) descriptors. The selected source size affects the intrinsic size of the image (the image’s display size if no CSS styling is applied). If the `srcset` attribute is absent, or contains no values with a width (`w`) descriptor, then the `sizes` attribute has no effect. |
+| **`sizes`** | A list of one or more strings *separated by commas* indicating **a set of source sizes**. Each source size consists of:<br>1、a media condition. This must be omitted for the last item.<br>2、a source size value.<br><br>Source size values specify the intended display size of the image. User agents use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the intrinsic size of the image (the image’s display size if no CSS styling is applied). If the `srcset` attribute is absent, or contains no values with a width (`w`) descriptor, then the `sizes` attribute has no effect. |
 | `crossorigin` |This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. CORS-enabled images can be reused in the [`<canvas>`](/en/webfrontend/<canvas>) element without being "tainted." The allowed values are:
 
 ### Anonymous
@@ -101,19 +101,11 @@ text to improve accessibility.
 The HTML standard doesn't give a list of image formats that must be supported, so each user agent
 supports a different set of formats.
 
-### Firefox
-
-The image formats supported by Firefox are:
-
-- JPEG
-- GIF, including animated GIFs
-- PNG
-- APNG
-- SVG
-- BMP
-- BMP ICO
-- PNG ICO
-- WebP
+| UA | Supported Image Formats |
+| :-- | :-- |
+| [Chrome](/en/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
+| [Safari](/en/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), ~~WebP~~, [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
+| Firefox | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
 
 ## Image Loading Errors
 
@@ -181,6 +173,16 @@ referenced in the `src` attribute is counted as a `1x` candidate in user agents 
 
 ## Responsive Image Hints Using `sizes` and `srcset` Attributes
 
+Value of **`sizes`** attribute is a list of one or more strings *separated by commas* indicating
+**a set of source sizes**. Each source size consists of
+
+1. a **media condition**. This must be omitted for the last item.
+2. a **source size value**. Source size values specify the intended display size of the image.
+   User agents use the current source size to select one of the sources supplied by the `srcset`
+   attribute, when those sources are described using *width descriptors* (*`w`*) . The selected
+   source size affects the intrinsic size of the image (the image’s display size if no CSS styling
+   is applied).
+
 The `src` attribute is ignored in user agents that support `srcset` when *`w`* descriptors are
 included. When the (`max-width: 600px`) media condition matches, the `200px` wide image will be loaded
 (it is the one that matches `200px` most closely), otherwise the other image will be loaded.
@@ -193,6 +195,42 @@ included. When the (`max-width: 600px`) media condition matches, the `200px` wid
 ```
 
 See the [`<picture>`](/en/webfrontend/<picture>) element.
+
+## Accessibility Concerns
+
+### Authoring meaningful alternate descriptions
+
+An **`alt`** attribute's value should clearly and concisely describe the image's content. It should not
+describe the presence of the image itself, or the file name of the image. If the `alt` attribute is
+purposefully left off because the image has no textual equivalent, consider alternate methods for
+presenting the content the image is trying to communicate.
+
+Don't
+
+```html
+<img alt="An image" src="logo.jpg">
+```
+
+Do
+
+```html
+<img alt="A Logo" src="logo.jpg">
+```
+
+When an `alt` attribute is not present on an image, some screen readers may announce the image's
+*file name* instead. This can be a confusing experience if the file name
+isn't representative of the image's contents.
+
+### The `title` attribute
+
+The **[`title`](/en/webfrontend/title_attribute)** attribute is not an acceptable substitute for an
+*`alt`* attribute. Additionally,
+avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image.
+Doing so may cause some screen readers to announce the description twice, creating a confusing experience.
+
+The `title` attribute should also not be used as supplemental captioning information to
+accompany an image's `alt` description. If an image needs a caption, use a combination of the
+*[`<figure>`](/en/webfrontend/<figure>)* and *[`<figcaption>`](/en/webfrontend/<figcaption>)* elements.
 
 ## Styling With CSS
 
@@ -212,43 +250,6 @@ You can use the `object-position` property to position the image within the elem
 and the `object-fit` property to adjust the sizing of the image within the box (for example,
 whether the image should fit the box or fill it even if clipping is required).
 
-Depending on its type, an image may have an intrinsic width and height. For some image types, however,
+Depending on its *type*, an image may have an intrinsic *width* and *height*. For some image types, however,
 intrinsic dimensions are not necessary. SVG images, for instance, may have no intrinsic dimensions if
 their root [`<svg>`](/en/webfrontend/<svg>) element doesn't have a `width` or `height` set on it.
-
-## Accessibility Concerns
-
-### Authoring meaningful alternate descriptions
-
-An **`alt`** attribute's value should clearly and concisely describe the image's content. It should not
-describe the presence of the image itself, or the file name of the image. If the `alt` attribute is
-purposefully left off because the image has no textual equivalent, consider alternate methods for
-presenting the content the image is trying to communicate.
-
-Don't
-
-```html
-<img alt="image" src="penguin.jpg">
-```
-
-Do
-
-```html
-<img alt="A Rockhopper Penguin standing on a beach." src="penguin.jpg">
-```
-
-When an `alt` attribute is not present on an image, some screen readers may announce the image's
-file name instead. This can be a confusing experience if the file name
-isn't representative of the image's contents.
-
-## The `title` attribute
-
-The **`title`** attribute is not an acceptable substitute for an `alt` attribute. Additionally,
-avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image.
-Doing so may cause some screen readers to announce the description twice, creating a confusing experience.
-
-The `title` attribute should also not be used as supplemental captioning information to
-accompany an image's `alt` description. If an image needs a caption, use a combination of the
-`figure` and `figcaption` elements.
-
-- Using the HTML title attribute – updated | The Paciello Group

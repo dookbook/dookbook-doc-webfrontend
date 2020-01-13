@@ -31,8 +31,8 @@ TOPICS: <img>
 | **`alt`** | 这个属性定义了描述图像的**替换文本**。如果图像地址是错误的，或该图像格式不支持，或者如果图像还没有被下载，用户将看到这个显示。|
 | **`width`** | 图像的**宽度** (单位是*像素*)。|
 | **`height`** | 图像的**高度** (单位是*像素*)。|
-| **`srcset`** | 以*逗号分隔*的一个或多个字符串列表表明**一系列用户代理可能使用**的图像。|
-| **`sizes`** | 表示资源大小的以逗号隔开的一个或多个字符串。每一个资源大小包括：<br>1. 一个媒体条件。最后一项一定是被忽略的。<br>2. 一个资源尺寸的值。<br><br>资源尺寸的值被用来指定图像的预期尺寸。当`srcset`使用 `'w'` 描述符时，用户代理使用当前图像大小来选择`srcset`中合适的一个图像URL。 被选中的尺寸影响图像的显示大小（如果没有CSS样式被应用的话）。如果没有设置`srcset`属性，或者没值，那么sizes属性也将不起作用。 |
+| **`srcset`** | 以*逗号分隔*的字符串来指定**用户代理（即浏览器）可能使用的图像备选项**。|
+| **`sizes`** | 以*逗号分隔*的字符串来表示**资源大小**。如果没有设置`srcset`属性，或者没值，那么`sizes`属性也将不起作用。|
 | `longdesc` | 指向图像描述信息页面的URL，是对 **`alt`** 文本的补充。 |
 | `crossorigin` | 这个枚举属性表明是否必须使用 CORS 完成相关图像的抓取。启用CORS的图像 在 [`<canvas>`](/zh-hans/webfrontend/<canvas>) 元素中可以重复使用而不会被污染。允许的值有：<br><br>`anonymous`<br>执行一个跨域的请求（比如，有 `Origin:` HTTP header）。但是没有发送证书（比如，没有 cookie，没有 X.509 证书，没有 HTTP 基本的授权认证）。如果服务器没有给源站证书（没有设置 Access-Control-Allow-Origin: HTTP头），图像会被污染而且它的使用会被限制。<br><br>`use-credentials`<br>一个有证书的跨域请求（比如，有 `Origin:` HTTP header）被发送 （比如，a cookie, a certificate, and HTTP Basic authenticationis performed）。如果服务器没有给源站发送证书（通过 Access-Control-Allow-Credentials: HTTP header），图像将会被污染，且它的使用会受限制。当用户并未显式使用本属性时，默认不使用 CORS 发起请求(例如，不会向服务器发送 HTTP 头部信息)，用以防止其在[`<canvas>`](/zh-hans/webfrontend/<canvas>)中的使用。如果无效，默认当做 **anonymous** 关键字生效。更多信息，请查看 CORS 属性设置 。 |
 | `ismap` | 这个布尔属性表示图像是否是服务器端map的一部分。如果是， 那么点击的精准坐标将会被发送到服务器。<br>**Note:**<br>使用说明：只有在 `<img>` 元素是一个拥有有效 `href` 属性的 [`<a>`](/zh-hans/webfrontend/<a>) 元素的后代元素的情况下，这个属性才会被允许使用。 |
@@ -62,17 +62,11 @@ TOPICS: <img>
 
 HTML 标准并没有给出必须支持的图像格式的列表，因此每个用户代理支持一组不同的格式。
 
-### Firefox
-
-- [JPEG](http://en.wikipedia.org/wiki/JPEG)
-- [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format)，包括动态的GIFs
-- [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics)
-- [SVG](https://wiki.developer.mozilla.org/en-US/docs/SVG)
-- [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
-- [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
-- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
-- WebP
+| 浏览器 | 支持的图像格式 |
+| :-- | :-- |
+| [Chrome](/zh-hans/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
+| [Safari](/zh-hans/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), ~~WebP~~, [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
+| Firefox | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
 
 ## 图像链接
 
@@ -92,7 +86,7 @@ HTML 标准并没有给出必须支持的图像格式的列表，因此每个用
 
 ## 使用 `srcset` 属性
 
-**`srcset`**属性值以*逗号分隔*的一个或多个字符串列表表明**一系列用户代理可能使用**的图像。每一个字符串由以下组成：
+**`srcset`**属性值是以*逗号分隔*的字符串来指定**用户代理（即浏览器）可能使用的图像备选项**。每一个字符串由以下组成：
 
 1. 一个图像的URL。
 2. 可选的，空格后跟以下的其一：
@@ -110,6 +104,12 @@ HTML 标准并没有给出必须支持的图像格式的列表，因此每个用
 
 ## 响应式图像提示（使用 `srcset` 和 `sizes` 属性）
 
+**`srcset`**属性值以*逗号分隔*的字符串来表示**资源大小**。每一个资源大小包括：
+
+1. 一个**媒体条件**。最后一项一定是被忽略的。
+2. 一个**资源尺寸的值**。资源尺寸的值被用来指定图像的预期尺寸。当`srcset`使用 *`w`* 描述符
+   时，用户代理即浏览器使用当前图像大小来选择`srcset`中合适的图像URL。被选中的尺寸影响图像的显示大小（如果没有CSS样式被应用的话）。
+
 在支持 `srcset` 的用户代理中，当使用 *`w`* 描述符时，`src` 属性会被忽略。当匹配了媒体条件 (`min-width: 600px`) 时，图像将宽 `200px`，否则宽 `50vw`（视图宽度的50%）。
 
 ```html
@@ -118,6 +118,37 @@ HTML 标准并没有给出必须支持的图像格式的列表，因此每个用
      srcset="logo-200.png 200w,logo-400.png 400w"
      sizes="(min-width: 600px) 200px, 50vw">
 ```
+
+可参考[`<picture>`](/zh-hans/webfrontend/<picture>)元素。
+
+## 无障碍建议
+
+### 有意义的替代说明
+
+**`alt`**属性的值应清楚简洁地描述图像的内容。它不应描述图像本身的存在或图像的文件名。如果由于图像没有文本等价而故意关闭了`alt`属性，请考虑使用其他方法来呈现图像试图传达的内容。
+
+不要这样：
+
+```html
+<img alt="一张图片" src="logo.jpg">
+```
+
+要这样：
+
+```html
+<img alt="Logo" src="logo.jpg">
+```
+
+当图像上没有`alt`属性时，某些屏幕阅读器可能会声明图像的*文件名*。如果文件名不代表图像内容，这可能会造成混乱。
+
+### `title`属性
+
+**[`title`](/zh-hans/webfrontend/title_attribute**属性不能替代 *`alt`*属性。另外，
+避免在同一张图片上声明的`title`属性中复制`alt`属性的值。
+这样做可能会使某些屏幕阅读器两次宣布该描述，从而造成混乱的体验。
+
+`title`属性也不应用作图像的`alt`描述的辅助字幕信息。如果图像需要字幕，请结合使用 *[`<figure>`](/zh-hans/webfrontend/<figure>)* 和
+*[`<figcaption>`](/zh-hans/webfrontend/<figcaption>)* 元素。
 
 ## 与 CSS 的交互
 
