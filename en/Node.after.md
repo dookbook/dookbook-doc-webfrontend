@@ -1,9 +1,9 @@
-TOPICS: ChildNode.after
+TOPICS: Node.after
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ChildNode.after()`
+# `Node.after()`
 
-The **`ChildNode.after()`** method inserts a set of `Node` or `DOMString` objects in the children
+The **`Node.after()`** method inserts a set of `Node` or `DOMString` objects in the children
 list of this `ChildNode`'s parent, just after this `ChildNode`. `DOMString` objects are inserted
 as equivalent `Text` nodes.
 
@@ -11,7 +11,7 @@ as equivalent `Text` nodes.
 
 ```javascript
 [Throws, Unscopable]
-void ChildNode.after((Node or DOMString)... nodes);
+void Node.after((Node or DOMString)... nodes);
 ```
 
 | parameter | Description |
@@ -65,7 +65,7 @@ console.log(parent.outerHTML);
 // "<div><p></p><span></span>Text</div>"
 ```
 
-### `ChildNode.after()` is unscopable
+### `Node.after()` is unscopable
 
 The `after()` method is not scoped into the with statement. See `Symbol.unscopables` for more information.
 

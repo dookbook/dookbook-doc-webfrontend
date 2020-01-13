@@ -1,9 +1,9 @@
-TOPICS: ChildNode.before
+TOPICS: Node.before
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ChildNode.before()`
+# `Node.before()`
 
-The **`ChildNode.before()`** method inserts a set of `Node` or `DOMString` objects in the children
+The **`Node.before()`** method inserts a set of `Node` or `DOMString` objects in the children
 list of this `ChildNode`'s parent, just before this `ChildNode`. `DOMString` objects are inserted as
 equivalent `Text` nodes.
 
@@ -11,7 +11,7 @@ equivalent `Text` nodes.
 
 ```javascript
 [Throws, Unscopable]
-void ChildNode.before((Node or DOMString)... nodes);
+void Node.before((Node or DOMString)... nodes);
 ```
 
 | parameter | Description |
@@ -65,7 +65,7 @@ console.log(parent.outerHTML);
 // "<div><span></span>Text<p></p></div>"
 ```
 
-### `ChildNode.before()` is unscopable
+### `Node.before()` is unscopable
 
 The `before()` method is not scoped into the with statement. See `Symbol.unscopables` for more information.
 
