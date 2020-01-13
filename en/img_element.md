@@ -14,12 +14,12 @@ The **HTML `<img>` element** embeds an **image** into the document. It is a *rep
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, embedded content, palpable content. If the element has a `usemap` attribute, it also is a part of the interactive content category.|
+| **Content categories** | *Flow Content*, phrasing content, embedded content, palpable content. If the element has a `usemap` attribute, it also is a part of the interactive content category.|
 | **Permitted content** | None, it is an empty element.|
 | **Tag omission** | Must have a start tag and must not have an end tag.|
 | **Permitted parents** | Any element that accepts embedded content.|
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLImageElement` |
+| **DOM interface** | **`HTMLImageElement`** |
 
 ## Attributes
 
