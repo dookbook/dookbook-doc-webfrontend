@@ -1,4 +1,5 @@
 TOPICS: <img>
+        HTMLImageElement
         <img> src attribute
         <img> alt attribute
         <img> width attribute
@@ -14,12 +15,12 @@ The **HTML `<img>` element** embeds an **image** into the document. It is a *rep
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | *Flow Content*, phrasing content, embedded content, palpable content. If the element has a `usemap` attribute, it also is a part of the interactive content category.|
-| **Permitted content** | None, it is an empty element.|
-| **Tag omission** | Must have a start tag and must not have an end tag.|
-| **Permitted parents** | Any element that accepts embedded content.|
+| **Content Categories** | *Flow Content*, *Phrasing Content*, *Embedded Content*, *Palpable Content*. If the element has a `usemap` attribute, it also is a part of the interactive content category.|
+| **Permitted Content** | None, it is an **empty element**.|
+| **Tag Omission** | Must have a start tag and must not have an end tag.|
+| **Permitted parents** | Any element that accepts *embedded content*.|
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | **`HTMLImageElement`** |
+| **DOM Interface** | **`HTMLImageElement`** |
 
 ## Attributes
 
