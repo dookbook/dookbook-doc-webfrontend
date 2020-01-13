@@ -1,19 +1,22 @@
 TOPICS: <i>
 
-# `<i>`
+# HTML Element: `<i>`
 
 The **HTML `<i>` element** represents a range of text that is set off from the normal text for some
-reason. Some examples include technical terms, foreign language phrases, or fictional character thoughts.
-It is typically displayed in italic type.
+reason. Some examples include *technical terms*, *foreign language phrases*, or
+*fictional character thoughts*.
+It is typically displayed in *italic* type.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, palpable content.|
-| **Permitted content** | Phrasing content.|
+| **Content categories** | *Flow content*, *phrasing content*, *palpable content*.|
+| **Permitted content** | *Phrasing content*.|
 | **Tag omission** | None, both the starting and ending tag are mandatory.|
-| **Permitted parents** | Any element that accepts phrasing content.|
+| **Permitted parents** | Any element that accepts *phrasing content*.|
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
+| **DOM Interface** | **`HTMLElement`** |
 
 ## Attributes
 
@@ -36,7 +39,7 @@ italic styling; use the CSS `font-style` property for that purpose.
     - Use [`<mark>`](/en/webfrontend/<mark>) to indicate relevance.
     - Use [`<cite>`](/en/webfrontend/<cite>) to mark the name of a work, such as a book, play, or song.
     - Use [`<dfn>`](/en/webfrontend/<dfn>) to mark the defining instance of a term.
-- It is a good idea to use the **class** attribute to identify why the element is being used,
+- It is a good idea to use the *`class`* attribute to identify why the element is being used,
 so that if the presentation needs to change at a later date, it can be done selectively with style sheets.
 
 ## Example
