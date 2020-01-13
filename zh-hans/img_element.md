@@ -1,4 +1,5 @@
 TOPICS: <img>
+        HTMLImageElement
         <img> src attribute
         <img> alt attribute
         <img> width attribute
@@ -15,11 +16,11 @@ TOPICS: <img>
 
 |  |  |
 | :-- | :-- |
-| **内容类别** | 流式内容，段落内容，嵌入式内容，可触摸内容。如果元素有 `usemap` 属性，它也是交互内容的一部分。|
-| **允许的内容** | 没有，它是一个 空元素. |
-| **标签省略** | 必须有一个开始标签，不允许有结束标签. |
-| **允许的父元素** | 接受嵌入式内容的任意元素. |
-| **DOM 接口** | `HTMLImageElement` |
+| **内容类别** | *流式内容*，*短语内容*，*嵌入内容*，*可触摸内容*。如果元素有`usemap`属性，它也是交互内容的一部分。|
+| **允许的内容** | 没有，它是一个**空元素**。|
+| **标签省略** | 必须有一个开始标签，不允许有结束标签。|
+| **允许的父元素** | *嵌入内容*的任意元素。|
+| **DOM 接口** | **`HTMLImageElement`** |
 
 ## 属性
 
@@ -64,9 +65,9 @@ HTML 标准并没有给出必须支持的图像格式的列表，因此每个用
 
 | 浏览器 | 支持的图像格式 |
 | :-- | :-- |
-| [Chrome](/zh-hans/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
-| [Safari](/zh-hans/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), ~~WebP~~, [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
-| Firefox | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
+| [Chrome](/zh-hans/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), BMP, ICO, [[WebP]], [[SVG]], APNG |
+| [Safari](/zh-hans/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), BMP, ICO, ~~WebP~~, [[SVG]], APNG |
+| Firefox | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), BMP, ICO, [[WebP]], [[SVG]], APNG |
 
 ## 图像链接
 

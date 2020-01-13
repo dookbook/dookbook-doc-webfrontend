@@ -1,4 +1,5 @@
 TOPICS: <img>
+        HTMLImageElement
         <img> src attribute
         <img> alt attribute
         <img> width attribute
@@ -14,12 +15,12 @@ The **HTML `<img>` element** embeds an **image** into the document. It is a *rep
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, embedded content, palpable content. If the element has a `usemap` attribute, it also is a part of the interactive content category.|
-| **Permitted content** | None, it is an empty element.|
-| **Tag omission** | Must have a start tag and must not have an end tag.|
-| **Permitted parents** | Any element that accepts embedded content.|
+| **Content Categories** | *Flow Content*, *Phrasing Content*, *Embedded Content*, *Palpable Content*. If the element has a `usemap` attribute, it also is a part of the interactive content category.|
+| **Permitted Content** | None, it is an **empty element**.|
+| **Tag Omission** | Must have a start tag and must not have an end tag.|
+| **Permitted parents** | Any element that accepts *embedded content*.|
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLImageElement` |
+| **DOM Interface** | **`HTMLImageElement`** |
 
 ## Attributes
 
@@ -103,9 +104,9 @@ supports a different set of formats.
 
 | UA | Supported Image Formats |
 | :-- | :-- |
-| [Chrome](/en/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
-| [Safari](/en/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), ~~WebP~~, [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
-| Firefox | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
+| [Chrome](/en/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], APNG |
+| [Safari](/en/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), ~~WebP~~, [[SVG]], APNG |
+| Firefox | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], APNG|
 
 ## Image Loading Errors
 

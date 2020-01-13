@@ -1,4 +1,5 @@
 TOPICS: <a>
+        HTMLAnchorElement
         <a> href attribute
         <a> target attribute
         <a> rel attribute
@@ -16,12 +17,12 @@ other URL.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, interactive content, palpable content. |
-| **Permitted content** | Transparent, containing either flow content (excluding interactive content) or phrasing content.
+| **Content Categories** | *Flow Content*, *Phrasing Content*, *Interactive Content*, *Palpable Content*. |
+| **Permitted content** | Transparent, containing either *flow content* (excluding *interactive content*) or *phrasing content*.
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content, or any element that accepts flow content, but always excluding `<a>` elements (according to the logical principle of symmetry, if `<a>` tag, as a parent, can not have interactive content, then the same `<a>` content can not have `<a>` tag as its parent).|
+| **Permitted parents** | Any element that accepts *phrasing content*, or any element that accepts *flow content*, but always excluding `<a>` elements (according to the logical principle of symmetry, if `<a>` tag, as a parent, can not have interactive content, then the same `<a>` content can not have `<a>` tag as its parent).|
 | **Permitted ARIA roles** | [`button`](https://w3c.github.io/aria/#button), [`checkbox`](https://w3c.github.io/aria/#checkbox), [`menuitem`](https://w3c.github.io/aria/#menuitem), [`menuitemcheckbox`](https://w3c.github.io/aria/#menuitemcheckbox), [`menuitemradio`](https://w3c.github.io/aria/#menuitemradio), [`option`](https://w3c.github.io/aria/#option), [`radio`](https://w3c.github.io/aria/#radio), [`switch`](https://w3c.github.io/aria/#switch), [`tab`](https://w3c.github.io/aria/#tab), [`treeitem`](https://w3c.github.io/aria/#treeitem) |
-| **DOM interface** | `HTMLAnchorElement` |
+| **DOM interface** | **`HTMLAnchorElement`** |
 
 ## Attributes
 
