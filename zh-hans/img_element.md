@@ -64,9 +64,9 @@ HTML 标准并没有给出必须支持的图像格式的列表，因此每个用
 
 | 浏览器 | 支持的图像格式 |
 | :-- | :-- |
-| [Chrome](/zh-hans/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
-| [Safari](/zh-hans/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), ~~WebP~~, [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
-| Firefox | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
+| [Chrome](/zh-hans/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), BMP, ICO, [[WebP]], [[SVG]], APNG |
+| [Safari](/zh-hans/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), BMP, ICO, ~~WebP~~, [[SVG]], APNG |
+| Firefox | [[PNG]], [[JPEG]], [[GIF]] (包括动态的GIF), BMP, ICO, [[WebP]], [[SVG]], APNG |
 
 ## 图像链接
 

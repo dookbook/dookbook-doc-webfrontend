@@ -103,9 +103,9 @@ supports a different set of formats.
 
 | UA | Supported Image Formats |
 | :-- | :-- |
-| [Chrome](/en/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
-| [Safari](/en/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), ~~WebP~~, [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
-| Firefox | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], [APNG](https://wiki.developer.mozilla.org/en-US/docs/Animated_PNG_graphics) |
+| [Chrome](/en/glossary/Google_Chrome) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], APNG |
+| [Safari](/en/glossary/Apple_Safari) | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), ~~WebP~~, [[SVG]], APNG |
+| Firefox | [[PNG]], [[JPEG]], [[GIF]] (including animated GIFs), [BMP](http://en.wikipedia.org/wiki/BMP_file_format), [ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29), [[WebP]], [[SVG]], APNG|
 
 ## Image Loading Errors
 
