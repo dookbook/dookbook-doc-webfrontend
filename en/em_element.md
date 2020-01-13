@@ -1,5 +1,4 @@
 TOPICS: <em>
-        HTMLElement
 
 # HTML Emphasis Element: `<em>`
 
