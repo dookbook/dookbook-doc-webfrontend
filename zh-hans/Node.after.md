@@ -1,7 +1,7 @@
-TOPICS: ChildNode.after
+TOPICS: Node.after
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# `ChildNode.after()`
+# `Node.after()`
 
 在其父节点的子节点列表中插入一些 `Node` 或 `DOMString` 对象。插入位置为该节点之后。`DOMString` 对象会被以 `Text` 的形式插入。
 
@@ -9,7 +9,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 ```javascript
 [Throws, Unscopable]
-void ChildNode.after((Node or DOMString)... nodes);
+void Node.after((Node or DOMString)... nodes);
 ```
 
 | 参数 | 说明 |
@@ -63,7 +63,7 @@ console.log(parent.outerHTML);
 // "<div><p></p><span></span>Text</div>"
 ```
 
-### `ChildNode.after()` 会被 `with` 环境排除
+### `Node.after()` 会被 `with` 环境排除
 
 `after()` 方法不在 `with` 环境的范围内，可以查看 `Symbol.unscopables` 来了解更多信息。
 
