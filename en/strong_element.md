@@ -6,9 +6,11 @@ TOPICS: <strong>
 The **HTML Strong Importance Element** (**`<strong>`**) indicates that its contents have **strong importance**,
 **seriousness**, or **urgency**. Browsers typically render the contents in *bold* type.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
-| **Content Categories** | *Flow Content*, *Phrasing Content*, palpable content. |
+| **Content Categories** | *Flow Content*, *Phrasing Content*, *Palpable Content*. |
 | **Permitted content** | *Phrasing Content*. |
 | **Tag omission** | None, must have both a start tag and an end tag. |
 | **Permitted parents** | Any element that accepts *phrasing content*, or any element that accepts *flow content*.|
