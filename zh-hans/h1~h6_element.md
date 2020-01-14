@@ -5,31 +5,33 @@ TOPICS: <h1>
         <h5>
         <h6>
 
-# HTML 标题元素： `<h1>`~`<h6>`
+# HTML 标题元素： `<h1>` ~ `<h6>`
 
-**HTML`<h1>`~`<h6>`元素** 代表节标题的六个级别。 `<h1>`是最高的部分级别，而`<h6>`是最低的部分级别。
+**HTML 标题元素** (**`<h1>`** ~ **`<h6>`**) 代表节标题的六个级别。 `<h1>`是最高的部分级别，而`<h6>`是最低的部分级别。
+
+## 技术摘要
 
 |  |  |
 | :-- | :-- |
-| **内容类别** | `流内容`，`标题内容`，`可触知的内容`。 |
-| **允许的内容** | `短语内容`。 |
-| **标签遗漏** | 没有，开始标签和结束标签都是必需的。 |
-| **允许的父元素** | 接受`流内容`的任何元素； 不要将`<h1>`~`<h6>`元素用作[`<hgroup>`](/zh-hans/webfrontend/<hgroup>)元素的子元素-现在已弃用。|
+| **内容类别** | *流式内容*，*标题内容*，*可触摸的内容* |
+| **允许的内容** | *短语内容* |
+| **标签省略** | 无，开始标签和结束标签都是必需的。 |
+| **允许的父元素** | 接受*流式内容*的任何元素；不要将`<h1>`~`<h6>`元素用作[`<hgroup>`](/zh-hans/webfrontend/<hgroup>)元素的子元素 - 现在已弃用。|
 | **允许的ARIA角色** | `tab`, `presentation` |
-| **DOM 接口** | `HTMLHeadingElement` |
+| **DOM 接口** | **`HTMLHeadingElement`** |
 
 ## 属性
 
 这些元素仅包含[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)。
 
-!!! warn "Don't try this at home"
-    `align`属性已过时； 不要使用它。
+!!! warn "过时废弃"
+    `align`属性已过时废弃，不要使用它。
 
 ## 使用说明
 
-- 标题信息可以由用户代理使用，例如，自动为文档构建目录。
-- 避免使用标题来调整文本大小。 而是使用[[CSS]] `font-size`属性。 标题使用大小来指示其相对重要性，但是[[CSS]]是通用调整大小的首选。
-- 避免跳过标题级别：始终从 `<h1>` 开始，然后再使用 `<h2>`，依此类推。
+- 标题信息可以由用户代理使用。例如，自动为文档构建目录。
+- 避免使用标题来调整文本大小。 而是使用[[CSS]] *`font-size`*属性。标题使用大小来指示其相对重要性，但是[[CSS]]是通用调整大小的首选。
+- 避免跳过标题级别：始终从`<h1>`开始，然后再使用`<h2>`，依此类推。
 - 您应该考虑避免在页面上多次使用`<h1>`。
 
 ## 示例
@@ -67,11 +69,11 @@ TOPICS: <h1>
 <p>参考文字。。。</p>
 ```
 
-## 访问性问题
+## 无障碍建议
 
 ### 导航
 
-屏幕阅读软件用户的常用导航技术是从标题跳到标题，以快速确定页面的内容。 因此，重要的是不要跳过一个或多个标题级别。 这样做可能会造成混乱，因为这样导航的人可能会想知道丢失的标题在哪里。
+屏幕阅读软件用户的常用导航技术是从标题跳到标题，以快速确定页面的内容。因此，重要的是不要跳过一个或多个标题级别。这样做可能会造成混乱，因为这样导航的人可能会想知道丢失的标题在哪里。
 
 错误用法
 
@@ -91,7 +93,7 @@ TOPICS: <h1>
 
 ### 嵌套
 
-标题可以嵌套为小节，以反映页面内容的组织。 大多数屏幕阅读器还可以生成页面上所有标题的有序列表，这可以帮助人们快速确定内容的层次结构：
+标题可以嵌套为小节，以反映页面内容的组织。大多数屏幕阅读器还可以生成页面上所有标题的有序列表，这可以帮助人们快速确定内容的层次结构：
 
 1. `h1`甲虫
    1. `h2`词源
@@ -113,13 +115,13 @@ TOPICS: <h1>
 
 嵌套标题时，关闭子节时标题级别可能会“跳过”。
 
-- [标题•页面结构•WAI Web无障碍教程](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- MDN了解WCAG，准则1.3的说明
-    - [了解成功标准1.3.1 | W3C了解WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- MDN了解WCAG，准则2.4解释
-    - [了解成功标准2.4.1 | W3C了解WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
-    - [了解成功标准2.4.6 | W3C了解WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
-    - [了解成功标准2.4.10 | W3C了解WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
+- [标题 • 页面结构 • WAI无障碍教程](https://www.w3.org/WAI/tutorials/page-structure/headings/)
+- WCAG 1.3解释
+    - [1.3.1 | W3C WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- WCAG 2.4解释
+    - [2.4.1 | W3C WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+    - [2.4.6 | W3C WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
+    - [2.4.10 | W3C WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
 
 ### 标签部分内容
 
@@ -127,7 +129,7 @@ TOPICS: <h1>
 
 可以使用`aria-labelledby`和`id`属性的组合来标记节内容，该标签简明地描述了节的目的。 对于在同一页面上有多个sectioning元素的情况，此技术很有用。
 
-**示例**:
+示例如下:
 
 ```html
 <header>
@@ -151,4 +153,4 @@ TOPICS: <h1>
 如果未提供标签，则使用屏幕阅读软件的人员可能必须调查每个导航元素的内容以确定其目的。
 
 - [使用`aria-labelledby`属性](https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
-- [标签区域•页面结构•W3C WAI Web可访问性教程](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+- [标签区域 • 页面结构 • W3C WAI 无障碍教程](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)

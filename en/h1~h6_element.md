@@ -5,33 +5,35 @@ TOPICS: <h1>
         <h5>
         <h6>
 
-# HTML Heading Element: `<h1>`~`<h6>`
+# HTML Heading Element: `<h1>` ~ `<h6>`
 
-The **HTML `<h1>`–`<h6>` elements** represent six levels of section headings. `<h1>` is the highest
-section level and `<h6>` is the lowest.
+The **HTML Heading elements** (**`<h1>`** ~ **`<h6>`**) represent six levels of section headings.
+`<h1>` is the highest section level and `<h6>` is the lowest.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, heading content, palpable content. |
-| **Permitted content** | Phrasing content. |
+| **Content Categories** | *Flow content*, *heading content*, *palpable content*. |
+| **Permitted Content** | *Phrasing content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content; don't use a heading element as a child of the [`<hgroup>`](/en/webfrontend/<hgroup>) element — it is now deprecated.|
+| **Permitted parents** | Any element that accepts *flow content*; don't use a heading element as a child of the [`<hgroup>`](/en/webfrontend/<hgroup>) element — it is now deprecated.|
 | **Permitted ARIA roles** | `tab`, `presentation` |
-| **DOM interface** | `HTMLHeadingElement` |
+| **DOM Interface** | **`HTMLHeadingElement`** |
 
 ## Attributes
 
 These elements only include the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
-!!! warn "Don't try this at home"
+!!! warn "Obsolete"
     The `align` attribute is obsolete; don't use it.
 
 ## Usage Notes
 
 - Heading information may be used by user agents, for example, to construct a table of contents for
 a document automatically.
-- Avoid using heading TOPICS to resize text. Instead, use the CSS font-size property. Headings
-use size to indicate their relative importance, but CSS is preferred for general-purpose resizing.
+- Avoid using heading TOPICS to resize text. Instead, use the [[CSS]] *`font-size`* property. Headings
+use size to indicate their relative importance, but [[CSS]] is preferred for general-purpose resizing.
 - Avoid skipping heading levels: always start from `<h1>`, next use `<h2>` and so on.
 - You should consider avoiding using `<h1>` more than once on a page. See Defining sections
 for more information.
@@ -139,7 +141,7 @@ Sectioning content can be labeled using a combination of the `aria-labelledby` a
 attributes, with the label concisely describing the purpose of the section. This technique is
 useful for situations where there is more than one sectioning element on the same page.
 
-**Example**:
+For example:
 
 ```html
 <header>

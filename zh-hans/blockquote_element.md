@@ -1,21 +1,22 @@
 TOPICS: <blockquote>
+        <blockquote> cite attribute
 
-# HTML 块级引用元素: `<blockquote>`
+# HTML块级引用元素: `<blockquote>`
 
-**HTML `<blockquote>` 元素**（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（注 中说明了如何更改）。
-若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上，若要以文本的形式告知读者引文的出处时，
-可以通过[`<cite>`](/zh-hans/webfrontend/<cite>) 元素。
+**HTML `<blockquote>` 元素**（或者 **HTML块级引用元素**），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进。
+若引文来源于网络，则可以将原内容的出处URL地址设置到 *`cite`*属性上，若要以文本的形式告知读者引文的出处时，
+可以通过 *[`<cite>`](/zh-hans/webfrontend/<cite>)* 元素。
 
-## 元数据
+## 技术摘要
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | `流式内容`, sectioning root, palpable content.|
-| **Permitted content** | Flow content. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content.|
-| **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLQuoteElement` |
+| **内容分类** | *流式内容*, *章节根节点*, *可触摸内容*.|
+| **允许的内容** | *流式内容* |
+| **标签省略** | 无，开始和结束标签都是必需的 |
+| **允许的父元素** | 任意可包含*流式内容*的元素 |
+| **允许的ARIA角色** | 任意 |
+| **DOM 接口** | **`HTMLQuoteElement`** |
 
 ## 属性
 
@@ -23,19 +24,17 @@ TOPICS: <blockquote>
 
 | 属性 | 描述 |
 | :-- | :-- |
-| `cite` | 是一个标注引用的信息的来源文档或者相关信息的URL。通常用来描述能够解释引文的上下文或者引用的信息。 |
+| **`cite`** | 是一个标注引用的信息的来源文档或者相关信息的URL。通常用来描述能够解释引文的上下文或者引用的信息。|
 
 ## 使用备注
 
-若要修改被引用内容的缩进距离，可以使用 CSS `margin-left` 和/或 `margin-right` 属性，或使用 `margin` 缩写属性。
+若要修改被引用内容的缩进距离，可以使用 CSS **`margin-left`** 和/或 **`margin-right`** 属性，或使用 **`margin`** 缩写属性。
 
-若想使用在行内引用较短的内容而非创建一个单独的引用块，可使用 [`<q>`](/zh-hans/webfrontend/<q>)（Quotation）元素。
-
-如果想要使用短引用（行间引用），可以使用 [`<q>`](/zh-hans/webfrontend/<q>) 标签。
+若想使用在行内引用较短的内容而非创建一个单独的引用块，可使用 **[`<q>`](/zh-hans/webfrontend/<q>)**元素。
 
 ## 示例
 
-下面的这个例子演示了使用 `<blockquote>` 元素引用一段来自 [RFC 1149](https://tools.ietf.org/html/rfc1149) 的内容，以禽类作为载体的IP 数据包传输标准。
+下面的这个例子演示了使用`<blockquote>`元素引用一段来自[RFC 1149](https://tools.ietf.org/html/rfc1149) (信鸽IP通讯传输标准)的内容。
 
 ```html
 <blockquote cite="https://tools.ietf.org/html/rfc1149">
