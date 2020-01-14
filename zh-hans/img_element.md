@@ -1,5 +1,4 @@
 TOPICS: <img>
-        HTMLImageElement
         <img> src attribute
         <img> alt attribute
         <img> width attribute
@@ -17,7 +16,7 @@ TOPICS: <img>
 |  |  |
 | :-- | :-- |
 | **内容类别** | *流式内容*，*短语内容*，*嵌入内容*，*可触摸内容*。如果元素有`usemap`属性，它也是交互内容的一部分。|
-| **允许的内容** | 没有，它是一个**空元素**。|
+| **允许的内容** | 无，它是一个**空元素**。|
 | **标签省略** | 必须有一个开始标签，不允许有结束标签。|
 | **允许的父元素** | *嵌入内容*的任意元素。|
 | **DOM 接口** | **`HTMLImageElement`** |

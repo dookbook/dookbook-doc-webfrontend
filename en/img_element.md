@@ -1,5 +1,4 @@
 TOPICS: <img>
-        HTMLImageElement
         <img> src attribute
         <img> alt attribute
         <img> width attribute
@@ -33,7 +32,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_attrib
 | **`width`** | The intrinsic **width** of the image *in pixels*. |
 | **`height`** | The intrinsic **height** of the image *in pixels*. |
 | **`srcset`** | A list of one or more strings *separated by commas* indicating **a set of possible image sources** for the user agent to use. |
-| **`sizes`** | A list of one or more strings *separated by commas* indicating **a set of source sizes**. Each source size consists of:<br>1、a media condition. This must be omitted for the last item.<br>2、a source size value.<br><br>Source size values specify the intended display size of the image. User agents use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the intrinsic size of the image (the image’s display size if no CSS styling is applied). If the `srcset` attribute is absent, or contains no values with a width (`w`) descriptor, then the `sizes` attribute has no effect. |
+| **`sizes`** | A list of one or more strings *separated by commas* indicating **a set of source sizes**. If the `srcset` attribute is absent, or contains no values with a width (`w`) descriptor, then the `sizes` attribute has no effect. |
 | `crossorigin` |This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. CORS-enabled images can be reused in the [`<canvas>`](/en/webfrontend/<canvas>) element without being "tainted." The allowed values are:
 
 ### Anonymous
