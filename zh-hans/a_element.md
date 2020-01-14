@@ -6,6 +6,7 @@ TOPICS: <a>
         <a> download attribute
         <a> type attribute
         <a> hreflang attribute
+        <a> ping attribute
 
 # HTML 锚元素：`<a>`
 
