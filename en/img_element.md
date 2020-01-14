@@ -1,11 +1,11 @@
 TOPICS: <img>
-        HTMLImageElement
         <img> src attribute
         <img> alt attribute
         <img> width attribute
         <img> height attribute
         <img> srcset attribute
         <img> sizes attribute
+        <img> usemap attribute
 
 # HTML Image Element: `<img>`
 
@@ -15,7 +15,7 @@ The **HTML `<img>` element** embeds an **image** into the document. It is a *rep
 
 |  |  |
 | :-- | :-- |
-| **Content Categories** | *Flow Content*, *Phrasing Content*, *Embedded Content*, *Palpable Content*. If the element has a `usemap` attribute, it also is a part of the interactive content category.|
+| **Content Categories** | *Flow Content*, *Phrasing Content*, *Embedded Content*, *Palpable Content*. If the element has a *[`usemap`](/en/webfrontend/<map>)* attribute, it also is a part of the *interactive content* category.|
 | **Permitted Content** | None, it is an **empty element**.|
 | **Tag Omission** | Must have a start tag and must not have an end tag.|
 | **Permitted parents** | Any element that accepts *embedded content*.|
@@ -33,7 +33,8 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_attrib
 | **`width`** | The intrinsic **width** of the image *in pixels*. |
 | **`height`** | The intrinsic **height** of the image *in pixels*. |
 | **`srcset`** | A list of one or more strings *separated by commas* indicating **a set of possible image sources** for the user agent to use. |
-| **`sizes`** | A list of one or more strings *separated by commas* indicating **a set of source sizes**. Each source size consists of:<br>1、a media condition. This must be omitted for the last item.<br>2、a source size value.<br><br>Source size values specify the intended display size of the image. User agents use the current source size to select one of the sources supplied by the `srcset` attribute, when those sources are described using width (`w`) descriptors. The selected source size affects the intrinsic size of the image (the image’s display size if no CSS styling is applied). If the `srcset` attribute is absent, or contains no values with a width (`w`) descriptor, then the `sizes` attribute has no effect. |
+| **`sizes`** | A list of one or more strings *separated by commas* indicating **a set of source sizes**. If the `srcset` attribute is absent, or contains no values with a width (`w`) descriptor, then the `sizes` attribute has no effect. |
+| **`usemap`** | The partial URL (starting with `'#'`) of an **image map** associated with the element.<br>Note: **You cannot use this attribute if the `<img>` element is a descendant of an [`<a>`](/en/webfrontend/<a>) or [`<button>`](/en/webfrontend/<button>) element.** See [`<map>` and `<area>`](/en/webfrontend/<map>) elements. |
 | `crossorigin` |This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. CORS-enabled images can be reused in the [`<canvas>`](/en/webfrontend/<canvas>) element without being "tainted." The allowed values are:
 
 ### Anonymous
@@ -61,7 +62,6 @@ for additional information.
 | `intrinsicsize` | This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and `naturalWidth`/`naturalHeight` on images would return the values specified in this attribute. Explainer, examples
 | `ismap` | This Boolean attribute indicates that the image is part of a server-side map. If so, the precise coordinates of a click are sent to the server.<br>**Note:** This attribute is allowed only if the `<img>` element is a descendant of an [`<a>`](/en/webfrontend/<a>) element with a valid `href` attribute.
 | `referrerpolicy` | A string indicating which referrer to use when fetching the resource:<br>1、`no-referrer`: The `Referer` header will not be sent.<br>2、`no-referrer-when-downgrade`: No Referer header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior if no policy is otherwise specified.<br>3、`origin`: The Referer header will include the page of origin's scheme, the host, and the port.<br>4、`origin-when-cross-origin`: Navigating to other origins will limit the included referral data to the scheme, the host and the port, while navigating from the same origin will include the referrer's full path.<br>5、`unsafe-url`: The Referer header will include the origin and the path, but not the fragment, password, or username. This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
-| `usemap` | The partial URL (starting with `'#'`) of an image map associated with the element.<br>**Note:** You cannot use this attribute if the `<img>` element is a descendant of an [`<a>`](/en/webfrontend/<a>) or [`<button>`](/en/webfrontend/<button>) element. |
 
 There are many other attributes that can be specified to achieve various purposes, for example:
 

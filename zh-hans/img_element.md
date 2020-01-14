@@ -1,5 +1,4 @@
 TOPICS: <img>
-        HTMLImageElement
         <img> src attribute
         <img> alt attribute
         <img> width attribute
@@ -7,6 +6,7 @@ TOPICS: <img>
         <img> srcset attribute
         <img> sizes attribute
         <img> longdesc attribute
+        <img> usemap attribute
 
 # HTML 图像元素：`<img>`
 
@@ -16,8 +16,8 @@ TOPICS: <img>
 
 |  |  |
 | :-- | :-- |
-| **内容类别** | *流式内容*，*短语内容*，*嵌入内容*，*可触摸内容*。如果元素有`usemap`属性，它也是交互内容的一部分。|
-| **允许的内容** | 没有，它是一个**空元素**。|
+| **内容类别** | *流式内容*，*短语内容*，*嵌入内容*，*可触摸内容*。如果元素有 *[`usemap`](/zh-hans/webfrontend/<map>)*属性，它也是*交互内容*的一部分。|
+| **允许的内容** | 无，它是一个**空元素**。|
 | **标签省略** | 必须有一个开始标签，不允许有结束标签。|
 | **允许的父元素** | *嵌入内容*的任意元素。|
 | **DOM 接口** | **`HTMLImageElement`** |
@@ -34,10 +34,10 @@ TOPICS: <img>
 | **`height`** | 图像的**高度** (单位是*像素*)。|
 | **`srcset`** | 以*逗号分隔*的字符串来指定**用户代理（即浏览器）可能使用的图像备选项**。|
 | **`sizes`** | 以*逗号分隔*的字符串来表示**资源大小**。如果没有设置`srcset`属性，或者没值，那么`sizes`属性也将不起作用。|
+| **`usemap`** | 与元素相关联的**图像映射**的URL（以`#`开始）。<br>使用说明：**如果 `<img>`元素是[`<a>`](/zh-hans/webfrontend/<a>)或[`<button>`](/zh-hans/webfrontend/<button>)元素的后代元素则不能使用这个属性。** 参考[`<map>`和`<area>`](/zh-hans/webfrontend/<map>)元素。|
 | `longdesc` | 指向图像描述信息页面的URL，是对 **`alt`** 文本的补充。 |
 | `crossorigin` | 这个枚举属性表明是否必须使用 CORS 完成相关图像的抓取。启用CORS的图像 在 [`<canvas>`](/zh-hans/webfrontend/<canvas>) 元素中可以重复使用而不会被污染。允许的值有：<br><br>`anonymous`<br>执行一个跨域的请求（比如，有 `Origin:` HTTP header）。但是没有发送证书（比如，没有 cookie，没有 X.509 证书，没有 HTTP 基本的授权认证）。如果服务器没有给源站证书（没有设置 Access-Control-Allow-Origin: HTTP头），图像会被污染而且它的使用会被限制。<br><br>`use-credentials`<br>一个有证书的跨域请求（比如，有 `Origin:` HTTP header）被发送 （比如，a cookie, a certificate, and HTTP Basic authenticationis performed）。如果服务器没有给源站发送证书（通过 Access-Control-Allow-Credentials: HTTP header），图像将会被污染，且它的使用会受限制。当用户并未显式使用本属性时，默认不使用 CORS 发起请求(例如，不会向服务器发送 HTTP 头部信息)，用以防止其在[`<canvas>`](/zh-hans/webfrontend/<canvas>)中的使用。如果无效，默认当做 **anonymous** 关键字生效。更多信息，请查看 CORS 属性设置 。 |
 | `ismap` | 这个布尔属性表示图像是否是服务器端map的一部分。如果是， 那么点击的精准坐标将会被发送到服务器。<br>**Note:**<br>使用说明：只有在 `<img>` 元素是一个拥有有效 `href` 属性的 [`<a>`](/zh-hans/webfrontend/<a>) 元素的后代元素的情况下，这个属性才会被允许使用。 |
-| `usemap` | 与元素相关联的的 image map 的部分 URL（以 '`#`' 开始的部分）。<br>Note:<br>使用说明： 如果 `<img>` 元素是 [`<a>`](/zh-hans/webfrontend/<a>) 或 [`<button>`](/zh-hans/webfrontend/<button>) 元素的后代元素则不能使用这个属性。 |
 
 ## 基础用法
 

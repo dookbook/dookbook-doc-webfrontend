@@ -6,6 +6,7 @@ TOPICS: <a>
         <a> download attribute
         <a> type attribute
         <a> hreflang attribute
+        <a> ping attribute
 
 # HTML Anchor Element: `<a>`
 
@@ -36,7 +37,7 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 | **`download`** | This attribute instructs browsers to **download** a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want). There are no restrictions on allowed values, though *`/`* and *`\`* are converted to *underscores* (*`_`*). Most file systems limit some punctuation in file names, and browsers will adjust the suggested name accordingly. |
 | `type` | Specifies the **media type** in the form of a *[[MIME]] type* for the linked URL. *It is purely advisory, with no built-in functionality.* |
 | `hreflang` | This attribute indicates the **human language of the linked resource**. It is purely advisory, with no built-in functionality. Allowed values are determined by *[BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt)*. |
-| `ping` | Contains a space-separated list of URLs to which, when the hyperlink is followed, `POST` requests with the body PING will be sent by the browser (in the background). Typically used for tracking. |
+| `ping` | Contains a *space-separated list* of URLs to which, when the hyperlink is **followed**, `POST` requests with the body PING will be sent by the browser (in the background). Typically used for **tracking**. |
 | `referrerpolicy` | Indicates which referrer to send when fetching the URL:<br>`"no-referrer"` means the `Referer:` header will not be sent.<br>`"no-referrer-when-downgrade"` means no `Referer:` header will be sent when navigating to an origin without HTTPS. This is the default behavior.<br>`"origin"` means the referrer will be the origin of the page, not including information after the domain.<br>`"origin-when-cross-origin"` meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.<br>`'strict-origin-when-cross-origin'`<br>`"unsafe-url"` means the referrer will include the origin and path, but not the fragment, password, or username. This is unsafe because it can leak data from secure URLs to insecure ones. |
 
 ### `target` Attribute
