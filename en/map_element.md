@@ -80,10 +80,14 @@ in HTML5, the values are numbers of *CSS pixels*.
 ## Example for Image Map
 
 ```html
-<map name="example-map">
-  <area shape="circle" coords="75,75,75" href="/left/" alt="left region">
-  <area shape="circle" coords="275,75,75" href="/right/" alt="right region">
-  <area shape="circle" coords="275,75,20">
+<img src="url" alt="replacement text" title="hint text" usemap="#map-id">
+<map id="map-id">
+  <area shape="rect"
+        coords="leftTop-x,leftTop-y,rightBottom-x,rightBottom-y"
+        alt="replacement text 1" title="hint text 1" href="url-1">
+  <area shape="circle"
+        coords="center-x,center-y,radius"
+        alt="replacement text 2" title="hint text 2" href="url-2">
+  <area shape="circle" coords="center-x2,center-y2,radius2">
 </map>
-<img usemap="#example-map" src="https://dookbook.info/example-map.png" alt="350x150 pic">
 ```
