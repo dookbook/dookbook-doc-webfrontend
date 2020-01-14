@@ -34,11 +34,11 @@ mark passages that you find of interest.
 to the user's current activity. This might be used, for example, to indicate the
 words that matched a search operation.
 - Don't use `<mark>` for syntax highlighting purposes; instead, use the
-[`<span>`](/en/webfrontend/<span>) element with appropriate CSS applied to it.
+*[`<span>`](/en/webfrontend/<span>)* element with appropriate [[CSS]] applied to it.
 
-!!! warn "Don't try this at home"
+!!! warn "**`<mark>`** vs. **`<strong>`**"
     Don't confuse `<mark>` with the [`<strong>`](/en/webfrontend/<strong>) element; `<mark>` is used
-    to denote content which has a degree of relevance, while [`<strong>`](/en/webfrontend/<strong>)
+    to denote content which has a degree of relevance, while *[`<strong>`](/en/webfrontend/<strong>)*
     indicates spans of text of importance.
 
 ## Examples
@@ -81,8 +81,8 @@ applies the custom class "match" to each match.
 ## Accessibility Concerns
 
 The presence of the `mark` element is not announced by most screen reading technology in its default
-configuration. It can be made to be announced by using the CSS `content` property, along with
-the `::before` and `::after` pseudo-elements.
+configuration. It can be made to be announced by using the [[CSS]] **`content`** property, along with
+the **`::before`** and **`::after`** pseudo-elements.
 
 ```css
 mark::before,

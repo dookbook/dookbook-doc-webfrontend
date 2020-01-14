@@ -26,10 +26,11 @@ TOPICS: <mark>
 - 当用于*引用元素*（*[`<q>`](/zh-hans/webfrontend/<q>)*）或*块级引用元素*（*[`<blockquote>`](/zh-hans/webfrontend/<blockquote>)*）时，
 通常表示具有特殊意义但未在原始源材料中标记的文本，或者即使经过特殊检查也需要特别检查的材料 原始作者认为这不是特别重要。 可以将其想象为在书中使用荧光笔标记您感兴趣的段落。
 - 否则，`<mark>`指示文档内容的一部分，该部分很可能与用户的当前活动有关。 例如，这可用于指示与搜索操作匹配的单词。
-- 不要将`<mark>`用于语法突出显示；而是使用[`<span>`](/zh-hans/webfrontend/<span>)元素上应用适当的CSS。
+- 不要将`<mark>`用于语法突出显示；而是使用 *[`<span>`](/zh-hans/webfrontend/<span>)* 元素上应用适当的[[CSS]]。
 
-!!! warn "Don't try this at home"
-    不要将`<mark>`与[`<strong>`](/zh-hans/webfrontend/<strong>)元素混淆；`<mark>`用于表示具有一定程度相关性的内容，而[`<strong>`](/zh-hans/webfrontend/<strong>)则表示重要文本的范围。
+!!! warn "**`<mark>`** vs. **`<strong>`**"
+    不要将`<mark>`与[`<strong>`](/zh-hans/webfrontend/<strong>)元素混淆；`<mark>`用于表示具有一定程度相关性的内容，
+    而 *[`<strong>`](/zh-hans/webfrontend/<strong>)* 则表示重要文本的范围。
 
 ## 示例
 
@@ -66,9 +67,9 @@ Hoth.</p>
 
 为了帮助将对搜索结果使用`<mark>`与其他可能的用法区分开，此示例将自定义类“ match”应用于每个匹配项。
 
-## 可达性问题
+## 无障碍建议
 
-大多数屏幕阅读技术均未在默认配置中宣布`mark`元素的存在。 可以通过使用CSS的`content`属性以及`:: before`和`:: after`伪元素来宣布。
+大多数屏幕阅读技术均未在默认配置中宣布`mark`元素的存在。可以通过使用[[CSS]]的 **`content`**属性以及 **`:: before`** 和 **`:: after`**伪元素来宣布。
 
 ```css
 mark::before,
