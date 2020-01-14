@@ -1,19 +1,21 @@
 TOPICS: <mark>
 
-# `<mark>`
+# HTML Mark Text Element: `<mark>`
 
-The **HTML Mark Text element (`<mark>`)** represents text which is marked or highlighted for
-reference or notation purposes, due to the marked passage's relevance or
+The **HTML mark text element** (**`<mark>`**) represents text which is **marked** or **highlighted**
+for reference or **notation purposes**, due to the marked passage's relevance or
 importance in the enclosing context.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, palpable content.|
-| **Permitted content** | Phrasing content.|
+| **Content Categories** | *Flow content*, *phrasing content*, *palpable content*.|
+| **Permitted content** | *Phrasing content*.|
 | **Tag omission** | None, both the starting and ending tag are mandatory.|
-| **Permitted parents** | Any element that accepts phrasing content.|
+| **Permitted parents** | Any element that accepts *phrasing content*.|
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
+| **DOM Interface** | **`HTMLElement`** |
 
 ## Attributes
 
@@ -23,7 +25,7 @@ This element only includes the [global attributes](/en/webfrontend/HTML_Global_A
 
 Typical use cases for `<mark>` include:
 
-- When used in a quotation ([`<q>`](/en/webfrontend/<q>)) or block quote ([`<blockquote>`](/en/webfrontend/<blockquote>)),
+- When used in a *quotation* (*[`<q>`](/en/webfrontend/<q>)*) or *block quote* (*[`<blockquote>`](/en/webfrontend/<blockquote>)*),
 it generally indicates text which is of special interest but is not marked in the original source material,
 or material which needs special scrutiny even though the original author didn't think it was of
 particular importance. Think of this like using a highlighter pen in a book to
