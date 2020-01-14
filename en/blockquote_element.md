@@ -1,23 +1,24 @@
 TOPICS: <blockquote>
+        <blockquote> cite attribute
 
 # HTML Block Quotation Element: `<blockquote>`
 
 The **HTML `<blockquote>` Element** (or HTML **Block Quotation Element**) indicates that the enclosed
 text is an extended quotation. Usually, this is rendered visually by indentation
-(see Notes for how to change it). A URL for the source of the quotation may be given using the cite
+(see Notes for how to change it). A URL for the source of the quotation may be given using the *`cite`*
 attribute, while a text representation of the source can be given using the
-[`<cite>`](/en/webfrontend/<cite>) element.
+*[`<cite>`](/en/webfrontend/<cite>)* element.
 
-## Meta
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | `Flow content`, sectioning root, palpable content.|
-| **Permitted content** | Flow content. |
+| **Content Categories** | *Flow content*, *sectioning root*, *palpable content*.|
+| **Permitted Content** | *Flow content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content.|
+| **Permitted parents** | Any element that accepts *flow content*.|
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLQuoteElement` |
+| **DOM Interface** | **`HTMLQuoteElement`** |
 
 ## Attributes
 
@@ -25,16 +26,16 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 | Attribute | Description |
 | :-- | :-- |
-| `cite` | A URL that designates a source document or message for the information quoted. This attribute is
+| **`cite`** | A URL that designates a source document or message for the information quoted. This attribute is
 intended to point to information explaining the context or the reference for the quote.
 
 ## Usage Notes
 
-To change the indentation applied to the quoted text, use the CSS `margin-left` and/or
-`margin-right` properties, or the `margin` shorthand property.
+To change the indentation applied to the quoted text, use the CSS **`margin-left`** and/or
+**`margin-right`** properties, or the **`margin`** shorthand property.
 
 To include shorter quotes inline rather than in a separate block, use the
-[`<q>`](/en/webfrontend/<q>) (Quotation) element.
+**[`<q>`](/en/webfrontend/<q>)** (Quotation) element.
 
 ## Example
 
