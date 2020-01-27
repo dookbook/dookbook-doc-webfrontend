@@ -11,7 +11,7 @@ TOPICS: HTML Global Attributes
 
 | 属性 | 描述 | 状态 |
 | :--- | :--- | :--- |
-| [`accesskey`]((/zh-hans/webfrontend/accesskey_attribute)) | 提供了为当前元素生成**键盘快捷键**的*提示*。这个属性由空格分隔的字符列表组成。浏览器应该使用在计算机键盘布局上存在的**第一个**。 | 可用 |
+| [`accesskey`](/zh-hans/webfrontend/accesskey_attribute) | 提供了为当前元素生成**键盘快捷键**的*提示*。这个属性由空格分隔的字符列表组成。浏览器应该使用在计算机键盘布局上存在的**第一个**。 | 可用 |
 | [`autocapitalize`](/zh-hans/webfrontend/autocapitalize_attribute) | 控制文本输入在用户输入/编辑时是否自动以及如何**自动大写**。 它可以具有以下值：<br> &nbsp;- `off` 或 `none`，没有应用自动大写（所有字母都默认为小写字母）<br> &nbsp;- `on` or `sentences`， 每个**句子**的第一个字母默认为*大写字母*;所有其他字母都默认为*小写字母* <br> &nbsp;- `words`，每个**单词**的第一个字母默认为*大写字母*;所有其他字母都默认为*小写字母* <br> &nbsp;- `characters`，所有的**字母**都应该默认为*大写* | 可用 |
 | [`class`](/zh-hans/webfrontend/class_attribute) | 一个以**空格分隔**的元素的类名（classes）列表，它允许CSS和JavaScript通过[类选择器 (class selectors)](/zh-hans/webfrontend/CSS_Class_Selector) 或DOM方法`document.getElementsByClassName()`来*选择*和*访问*特定的元素。 | 可用 |
 | [`contenteditable`](/zh-hans/webfrontend/contenteditable_attribute) | 一个*枚举属性*（*enumerated attribute*），表示元素是否**可被用户编辑**。 如果可以，浏览器会调整元素的部件（widget）以允许编辑。<br> &nbsp;- `true` 或者*空字符串*，表明元素是**可被编辑的** <br> &nbsp;- `false`，表明元素**不能被编辑** | 可用 |
