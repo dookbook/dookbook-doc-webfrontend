@@ -2,7 +2,7 @@ TOPICS: <address>
 
 # `<address>`
 
-**HTML `<address>` 元素** 的内容,表示某一个人或某个组织（等等）的**联系信息**。
+**HTML `<address>` 元素** 包括的内容,表示某一个人或某个组织（等等）的**联系信息**。
 
 `<address>`元素以任何形式提供的联系信息,适用于上下文的背景信息,可以是必要的任何一种联系方式，
 比如*真实地址*、*[[URL]]*、*电子邮箱*、*电话号码*、*社交媒体账号*、*地理坐标*等等。此元素应该包含联系信息对应的个人、团体或组织的名称。
@@ -12,9 +12,9 @@ TOPICS: <address>
 |  |  |
 | :-- | :-- |
 | **内容分类** | Flow content, palpable content. |
-| **允许的内容** | Flow content, 但是不能嵌套`<address>`元素, 不能是头部内容 ([`<hgroup>`](/zh-hans/webfrontend/<hgroup>), [`<h1>`](/zh-hans/webfrontend/<h1>), [`<h2>`](/zh-hans/webfrontend/<h2>), [`<h3>`](/zh-hans/webfrontend/<h3>), [`<h4>`](/zh-hans/webfrontend/<h4>), [`<h5>`](/zh-hans/webfrontend/<h5>), [`<h6>`]((/zh-hans/webfrontend/<h6>))), 不能是区块内容 ([`<article>`](/zh-hans/webfrontend/<article>), [`<aside>`](/zh-hans/webfrontend/<aside>), [`<section>`](/zh-hans/webfrontend/<section>), [`<nav>`](/zh-hans/webfrontend/<nav>)), 不能是[`<header>`](/zh-hans/webfrontend/<header>) 或 [`<footer>`](/zh-hans/webfrontend/<footer>)元素. |
+| **允许的内容** | 流式内容, 不能嵌套`<address>`元素, 不能是头部内容 ([`<hgroup>`](/zh-hans/webfrontend/<hgroup>), [`<h1>`](/zh-hans/webfrontend/<h1>), [`<h2>`](/zh-hans/webfrontend/<h2>), [`<h3>`](/zh-hans/webfrontend/<h3>), [`<h4>`](/zh-hans/webfrontend/<h4>), [`<h5>`](/zh-hans/webfrontend/<h5>), [`<h6>`]((/zh-hans/webfrontend/<h6>))), 不能是区块内容 ([`<article>`](/zh-hans/webfrontend/<article>), [`<aside>`](/zh-hans/webfrontend/<aside>), [`<section>`](/zh-hans/webfrontend/<section>), [`<nav>`](/zh-hans/webfrontend/<nav>)), 不能是[`<header>`](/zh-hans/webfrontend/<header>) 或 [`<footer>`](/zh-hans/webfrontend/<footer>)元素. |
 | **标签省略** | 不允许，开始标签和结束标签都不能省略。|
-| **允许的父元素** | 任何接受流内容的元素， 总是排除 `<address>` 元素 (根据对称性的逻辑原理，如果`<address>`标签作为父级`<address>`元素，则不能具有嵌套元素，如相同的`<address>`内容可以没有`<address>`标记作为其父对象）。|
+| **允许的父元素** | 任何接受流式内容的元素， 除了排除 `<address>` 元素 (根据对称性的逻辑原理，如果`<address>`标签作为父级`<address>`元素，则不能具有嵌套元素，如相同的`<address>`内容可以没有`<address>`标记作为其父对象）。|
 | **允许的 ARIA 角色** | 无 |
 | **DOM 接口** | `HTMLElement` |
 
