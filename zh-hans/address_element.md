@@ -25,7 +25,7 @@ TOPICS: <address>
 ## 用法说明节
 
 - 当表示一个和联系信息无关的任意的地址时，请改用 [`<p>`](/zh-hans/webfrontend/<p>) 元素而不是 `<address>` 元素。
-- 这个元素不能包含除联系信息之外的任何信息，比如出8版日期（这应当被包含在 [`<time>`](/zh-hans/webfrontend/<time>) 元素之中）。
+- 这个元素不能包含除联系信息之外的任何信息，比如出版日期（这应当被包含在 [`<time>`](/zh-hans/webfrontend/<time>) 元素之中）。
 - 通常，`<address>` 元素可以放在 [`<footer>`](/zh-hans/webfrontend/<footer>) 元素之中（如果存在的话）。
 
 ## 示例
