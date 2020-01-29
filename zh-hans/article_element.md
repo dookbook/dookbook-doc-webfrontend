@@ -8,12 +8,12 @@ TOPICS: <article>
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 流内容，分段内容，可触知的内容。 |
-| **允许的内容** | 流内容。 |
+| **内容分类** | 流式内容，分段内容，可触知的内容。 |
+| **允许的内容** | 流式内容。 |
 | **标记省略** | 不允许，开始标签和结束标签都不能省略。|
-| **允许的父元素** | 所有接受流量内容的元素。注意`<article>`元素不能成为[`<address>`](/zh-hans/webfrontend/<address>)元素的子元素。|
+| **允许的父元素** | 所有接受流式内容的元素。注意`<article>`元素不能成为[`<address>`](/zh-hans/webfrontend/<address>)元素的子元素。|
 | **允许的 ARIA 角色** | `application`, `document`, `feed`, `main`, `presentation`, `region` |
-| **DOM 实例** | `HTMLElement` |
+| **DOM 实例** | **`HTMLElement`** |
 
 ## 属性
 
