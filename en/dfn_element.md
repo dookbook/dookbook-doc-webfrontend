@@ -1,69 +1,56 @@
 TOPICS: <dfn>
 
-# `<dfn>`
+# HTML Definition Element: `<dfn>`
 
-The **HTML Definition element (`<dfn>`)** is used to indicate the term being defined within the
-context of a definition phrase or sentence. The [`<p>`](/en/webfrontend/<p>) element, the [`<dt>`](/en/webfrontend/<dt>)
-[`<dd>`](/en/webfrontend/<dd>) pairing, or the [`<section>`](/en/webfrontend/<section>)
-element which is the nearest ancestor of the `<dfn>` is considered to be the definition of the term.
+The **HTML Definition element** (**`<dfn>`**) is used to indicate the **term** being defined within the
+context of a **definition** phrase or sentence.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, palpable content.|
-| **Permitted content** | Phrasing content, but no `<dfn>` element must be a descendant. |
+| **Content categories** | *Flow content*, *phrasing content*, *palpable content*.|
+| **Permitted content** | *Phrasing content*, but no `<dfn>` element must be a descendant. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 
 This element's attributes include the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
-In HTML5, the `title` attribute has special meaning, as noted below.
-
 ## Usage Notes
 
-There are some not-entirely-obvious aspects to using the `<dfn>` element. We examine those here.
-
-### Specifying the term being defined
+### Specifying the Term being Defined
 
 The term being defined is identified following these rules:
 
-- If the `<dfn>` element has a title attribute, the value of the title attribute is considered to be
-the term being defined. The element must still have text within it, but that text may be an
-abbreviation (perhaps using [`<abbr>`](/en/webfrontend/<abbr>)) or another form of the term.
-- If the `<dfn>` contains a single child element and does not have any text content of its own,
-and the child element is an [`<abbr>`](/en/webfrontend/<abbr>) element with a title attribute
-itself, then the exact value of the [`<abbr>`](/en/webfrontend/<abbr>) element's title is the
+- If the `<dfn>` element has a **`title`** attribute, the value of the `title` attribute is considered
+to be the term being defined. The element must still have text within it, but that text may be an
+abbreviation (perhaps using *[`<abbr>`](/en/webfrontend/<abbr>)*) or another form of the term.
+- If the `<dfn>` contains **a single child element** and does not have any text content of its own,
+and the child element is an **[`<abbr>`](/en/webfrontend/<abbr>)** element with a `title` attribute
+itself, then the exact value of the [`<abbr>`](/en/webfrontend/<abbr>) element's `title` is the
 term being defined.
 - Otherwise, the text content of the `<dfn>` element is the term being defined.
-This is shown in the first example below.
 
-!!! warn "Don't try this at home"
+!!! warn "`<dfn>` element has a `title` attribute"
     If the `<dfn>` element has a `title` attribute, it must contain the term being
     defined and no other text.
 
 ### Links to `<dfn>` elements
 
-If you include an `id` attribute on the `<dfn>` element, you can then link to it using
-[`<a>`](/en/webfrontend/<a>) elements. Such links should be uses of the term, with the
+If you include an **`id`** attribute on the `<dfn>` element, you can then link to it using
+*[`<a>`](/en/webfrontend/<a>)* elements. Such links should be uses of the term, with the
 intent being that the reader can quickly navigate to the term's definition if they're not
 already aware of it, by clicking on the term's link.
 
-This is shown in the example under Links to definitions below.
+### Definition of the Term
 
-- The `<dfn>` element marks the term being defined; the definition of the term should be given by
-the surrounding [`<p>`](/en/webfrontend/<p>), [`<section>`](/en/webfrontend/<section>)
-or definition list group (usually a [`<dt>`](/en/webfrontend/<dt>),
-[`<dd>`](/en/webfrontend/<dd>) pair).
-
-- The exact value of the term being defined is determined by the following rules:
-  1. If the `<dfn>` element has a title attribute, then the term is the value of that attribute.
-  2. Else, if it contains only an [`<abbr>`](/en/webfrontend/<abbr>) element with a `title` attribute
-then the term is the value of that attribute. This is demonstrated in
-Using abbreviations and definitions together below.
-  3. Otherwise, the text content of the `<dfn>` element is the term being defined.
+The [`<p>`](/en/webfrontend/<p>) element, the [`<dt>`](/en/webfrontend/<dt>)
+[`<dd>`](/en/webfrontend/<dd>) pairing, or the [`<section>`](/en/webfrontend/<section>)
+element which is the nearest ancestor of the `<dfn>` is considered to be the definition of the term.
 
 ## Examples
 
@@ -80,7 +67,7 @@ term being defined within the context of a definition phrase or
 sentence.</p>
 ```
 
-Since the `<dfn>` element has no title, the text contents of the `<dfn>` element itself are used
+Since the `<dfn>` element has no `title`, the text contents of the `<dfn>` element itself are used
 as the term being defined.
 
 ### Links to definitions
@@ -111,14 +98,14 @@ agere divinius? </p>
 this project.</p>
 ```
 
-Here we see the definition — now with an `id` attribute, `"definition-dfn"`, which can be
+Here we see the definition — now with an *`id`* attribute, `"definition-dfn"`, which can be
 used as the target of a link. Later on, a link is created using [`<a>`](/en/webfrontend/<a>)
 with the `href` attribute set to `"#definition-dfn"` to set up the link back to the definition.
 
 ### Using abbreviations and definitions together
 
 In some cases, you may wish to use an abbreviation for a term when defining it. This can be done by
-using the `<dfn>` and [`<abbr>`](/en/webfrontend/<abbr>) elements in tandem, like this:
+using the `<dfn>` and *[`<abbr>`](/en/webfrontend/<abbr>)* elements in tandem, like this:
 
 ```html
 <p>The <dfn><abbr title="Hubble Space Telescope">HST</abbr></dfn>
