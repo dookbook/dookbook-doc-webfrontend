@@ -1,65 +1,60 @@
 TOPICS: <abbr>
 
-# `<abbr>`
+# HTML Abbreviation Element: `<abbr>`
 
-The **HTML Abbreviation element (`<abbr>`)** represents an abbreviation or acronym; the optional
-title attribute can provide an expansion or description for the abbreviation. If present, title must
-contain this full description and nothing else.
+The **HTML abbreviation element** (**`<abbr>`**) represents an **abbreviation** or **acronym**.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, palpable content |
-| **Permitted content** | Phrasing content |
+| **Content categories** | *Flow content*, *phrasing content*, *palpable content* |
+| **Permitted content** | *Phrasing content* |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content |
+| **Permitted parents** | Any element that accepts *phrasing content* |
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 
 This element only supports the [global attributes](/en/webfrontend/HTML_Global_Attributes).
-The `title` attribute has a specific semantic
+
+The optional **`title`** attribute has a specific semantic
 meaning when used with the `<abbr>` element; it must contain a full human-readable description or
-expansion of the abbreviation. This text is often presented by browsers as a tooltip when the mouse
+expansion of the abbreviation and nothing else.
+This text is often presented by browsers as a **tooltip** when the mouse
 cursor is hovered over the element.
 
-Each `<abbr>` element you use is independent from all others; providing a `title` for one does not
-automatically attach the same expansion text to others with the same content text.
+!!! warn "Usage Notes"
+    Each `<abbr>` element you use is independent from all others; providing a `title` for one does not
+    automatically attach the same expansion text to others with the same content text.
 
-## Usage Notes
+## Typical Use Cases
 
-### Typical use cases
-
-It's certainly not required that all abbreviations be marked up using `<abbr>`. There are, though,
+It's certainly not required that all abbreviations be marked up using *`<abbr>`*. There are, though,
 a few cases where it's helpful to do so:
 
 - When an abbreviation is used and you want to provide an expansion or definition outside the flow
 of the document's content, use `<abbr>` with an appropriate `title`.
 - To define an abbreviation which may be unfamiliar to the reader, present the term using `<abbr>`
-and either a title attribute or inline text providing the definition.
+and either a `title` attribute or inline text providing the definition.
 - When an abbreviation's presence in the text needs to be semantically noted, the `<abbr>` element
 is useful. This can be used, in turn, for styling or scripting purposes.
-- You can use `<abbr>` in concert with [`<dfn>`](/en/webfrontend/<dfn>) to establish definitions
+- You can use `<abbr>` in concert with *[`<dfn>`](/en/webfrontend/<dfn>)* to establish definitions
 for terms which are abbreviations or acronyms. See the example Defining an abbreviation below.
 
-### Grammar considerations
+## Grammar considerations
 
-In languages with [grammatical number](https://en.wikipedia.org/wiki/grammatical%20number)
+In languages with **[grammatical number](https://en.wikipedia.org/wiki/grammatical%20number)**
 (that is, languages where the number of items affects
-the grammar of a sentence), use the same grammatical number in your `title` attribute as inside your
+the grammar of a sentence), use the same grammatical number in your *`title`* attribute as inside your
 `<abbr>` element. This is especially important in languages with more than two numbers, such as Arabic,
 but is also relevant in English.
 
-## Default styling
+## Default Styling
 
 The purpose of this element is purely for the convenience of the author and all browsers display it
-inline (`display: inline`) by default, though its default styling varies from one browser to another:
-
-- Some browsers, like Internet Explorer, do not style it differently than a [`<span>`](/en/webfrontend/<span>)
-element.
-- Opera, Firefox, and some others add a dotted underline to the content of the element.
-- A few browsers not only add a dotted underline, but also put it in small caps; to avoid this styling,
-adding something like `font-variant: none` in the CSS takes care of this case.
+inline (`display: inline`) by default.
 
 ## Examples
 
@@ -72,7 +67,7 @@ without any attributes, as seen in this example.
 <p>Using <abbr>HTML</abbr> is fun and easy!</p>
 ```
 
-### Styling abbreviations
+### Styling Abbreviations
 
 You can use CSS to set a custom style to be used for abbreviations, as seen in this simple example.
 
@@ -92,7 +87,7 @@ abbr {
 
 ### Providing an expansion
 
-Adding a `title` attribute lets you provide an expansion or
+Adding a *`title`* attribute lets you provide an expansion or
 definition for the abbreviation or acronym.
 
 ```html
@@ -115,8 +110,6 @@ of a web page.</p>
 in detail how a technology or API is intended to function and how it is
 accessed.</p>
 ```
-
-See more in-depth examples in the How to mark abbreviations and make them understandable article.
 
 ## Accessibility Concerns
 
