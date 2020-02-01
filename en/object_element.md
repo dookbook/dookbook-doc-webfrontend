@@ -1,9 +1,10 @@
 TOPICS: <object>
 
-# `<object>`
+# HTML Embed Object Element: `<object>`
 
-The **HTML `<object>` element** represents an external resource, which can be treated as an image,
-a nested browsing context, or a resource to be handled by a plugin.
+The **HTML embed object element** (**`<object>`**) represents an external resource,
+which can be treated as an *image* (use *`<img>`* instead),
+a *nested browsing context*, or *a resource to be handled by a plugin*.
 
 |  |  |
 | :-- | :-- |

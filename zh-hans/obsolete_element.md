@@ -52,7 +52,7 @@ TOPICS: <acronym>
 | `<frame>` | **`<frame>`是HTML元素**，它定义了一个特定区域，另一个HTML文档可以在里面展示。帧应该在`<frameset>`中使用. |
 | `<frameset>` | **`<frameset>`** 是一个用于包含`<frame>`的HTML元素。 |
 | **`<image>`** | HTML 图片元素。曾经是一个试验性的元素，用来显示图片。它从未被实现过，请使用标准的 **[`<img>`](/zh-hans/webfrontend/<img>)** 元素。 |
-| `<isindex>` | **`<isindex>`元素** 的作用是使浏览器显示一个对话框，提示用户输入单行文本。在W3C的规范中建议，`<isindex>`元素最好被放置在 [`<head>`](/zh-hans/webfrontend/<head>) 标签块内，但是对于浏览器来说，`<isindex>`标签在页面任何位置都没有关系。. |
+| `<isindex>` | **`<isindex>`元素** 的作用是使浏览器显示一个对话框，提示用户输入单行文本。在W3C的规范中建议，`<isindex>`元素最好被放置在 [`<head>`](/zh-hans/webfrontend/<head>) 标签块内，但是对于浏览器来说，`<isindex>`标签在页面任何位置都没有关系。 |
 | `<keygen>` | **HTML`<keygen>`元素** 是为了方便生成密钥材料和提交作为 HTML form 的一部分的公钥.这种机制被用于设计基于 Web 的证书管理系统。按照预想，`<keygen>` 元素将用于 HTML 表单与其他的所需信息一起构造一个证书请求，该处理的结果将是一个带有签名的证书。 |
 | `<listing>` | **HTML列表元素 (`<listing>`)** 渲染了开始和结束标签之间的文本，而不会解释 HTML，并使用等宽字体。HTML2 标准建议，当一行不超过 132 个字符时，不应该将其拆开。 |
 | `<marquee>` | **HTML选框元素（`<marquee>`）** 用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。 |
