@@ -30,14 +30,14 @@ TOPICS: <acronym>
         <tt>
         <xmp>
 
-# 过时的和弃用的元素
+# 过时和弃用的 HTML 元素
 
 !!! error ""
     警告：下面这些旧的 HTML 元素已被弃用，且不应再被使用。千万不要在新的项目中使用它们，并且要尽快替换旧项目中的残余。在此列出，仅供参考。
 
 | 元素 | 描述 |
 | :--- | :--- |
-| `<acronym>` | **HTML缩写元素 (`<acronym>`)** 允许作者明确地声明一个字符序列,它们构成一个单词的首字母缩写或简略语。 |
+| **`<acronym>`** | HTML 缩写元素。定义**首字母缩写**或**简略语**。HTML 5 请使用 **[`<abbr>`](/zh-hans/webfrontend/<abbr>)** 代替。|
 | `<applet>` | **HTML中的Applet元素(`<applet>`)** 标志着包含了Java的applet。 |
 | `<basefont>` | **HTML标签`<basefont></basefont>`** 用来设置文档的默认字体大小。使用`<font>`可以相对于默认字体大小进行变化。 |
 | `<bgsound>` | **`<bgsound></bgsound>`** 是IE浏览器中设置网页背景音乐的元素。 |

@@ -30,7 +30,7 @@ TOPICS: <acronym>
         <tt>
         <xmp>
 
-# Obsolete and deprecated elements
+# Obsolete and Deprecated HTML Elements
 
 !!! error ""
     Warning: These are old HTML elements which are deprecated and should not be used. You should never
@@ -39,7 +39,7 @@ TOPICS: <acronym>
 
 | Element | Description |
 | :------ | :---------- |
-| `<acronym>` | The HTML Acronym Element (`<acronym>`) allows authors to clearly indicate a sequence of characters that compose an acronym or abbreviation for a word. |
+| **`<acronym>`** | HTML Acronym Element. Indicate a sequence of characters that compose an **acronym** or **abbreviation** for a word. In HTML 5, use **[`<abbr>`](/en/webfrontend/<abbr>)** instead. |
 | `<applet>` | The obsolete **HTML Applet Element (`<applet>`)** embeds a Java applet into the document; this element has been deprecated in favor of [`<object>`](/en/webfrontend/<object>). |
 | `<basefont>` | The obsolete HTML Base Font element (`<basefont>`) sets a default font face, size, and color for the other elements which are descended from its parent element. |
 | `<bgsound>` | The Internet Explorer only HTML Background Sound element (`<bgsound>`) sets up a sound file to play in the background while the page is used; use [`<audio>`](/en/webfrontend/<audio>) instead. |
