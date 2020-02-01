@@ -39,8 +39,8 @@ TOPICS: <acronym>
 
 | Element | Description |
 | :------ | :---------- |
-| **`<acronym>`** | HTML Acronym Element. Indicate a sequence of characters that compose an **acronym** or **abbreviation** for a word. In HTML 5, use **[`<abbr>`](/en/webfrontend/<abbr>)** instead. |
-| `<applet>` | The obsolete **HTML Applet Element (`<applet>`)** embeds a Java applet into the document; this element has been deprecated in favor of [`<object>`](/en/webfrontend/<object>). |
+| **`<acronym>`** | HTML acronym element. Indicate a sequence of characters that compose an **acronym** or **abbreviation** for a word. In HTML 5, use **[`<abbr>`](/en/webfrontend/<abbr>)** instead. |
+| **`<applet>`** | HTML Applet element. Embeds a **Java applet** into the document; this element has been deprecated in favor of **[`<object>`](/en/webfrontend/<object>)**. |
 | `<basefont>` | The obsolete HTML Base Font element (`<basefont>`) sets a default font face, size, and color for the other elements which are descended from its parent element. |
 | `<bgsound>` | The Internet Explorer only HTML Background Sound element (`<bgsound>`) sets up a sound file to play in the background while the page is used; use [`<audio>`](/en/webfrontend/<audio>) instead. |
 | `<big>` | The obsolete **HTML Big Element (`<big>`)** renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example).|
@@ -53,7 +53,7 @@ TOPICS: <acronym>
 | `<font>` | The **HTML Font Element (`<font>`)** defines the font size, color and face for its content. |
 | `<frame>` | `<frame>` is an HTML element which defines a particular area in which another HTML document can be displayed. A frame should be used within a `<frameset>`. |
 | `<frameset>` | The **HTML `<frameset>` element** is used to contain `<frame>` elements. |
-| `<image>` | The obsolete **HTML Image element (`<image>`)** is an obsolete remnant of an ancient version of HTML lost in the mists of time; use the standard [`<img>`](/en/webfrontend/<img>) element instead. |
+| **`<image>`** | HTML image element. An obsolete remnant of an ancient version of HTML lost in the mists of time; use the standard **[`<img>`](/en/webfrontend/<img>)** element instead. |
 | `<isindex>` | `<isindex>` is an obsolete HTML element that puts a text field in a page for querying the document. |
 | `<keygen>` | The HTML `<keygen>` element exists to facilitate generation of key material, and submission of the public key as part of an HTML form. This mechanism is designed for use with Web-based certificate management systems. It is expected that the `<keygen>` element will be used in an HTML form along with other information needed to construct a certificate request, and that the result of the process will be a signed certificate. |
 | `<listing>` | The HTML Listing Element (`<listing>`) renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML 2 standard recommended that lines shouldn't be broken when not greater than 132 characters. |
