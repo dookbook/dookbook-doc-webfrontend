@@ -1,19 +1,21 @@
 TOPICS: <aside>
 
-# `<aside>`
+# HTML Sidebar Element: `<aside>`
 
-The HTML `<aside>` element represents a portion of a document whose content is only indirectly
+The **HTML `<aside>` element** represents a portion of a document whose content is only indirectly
 related to the document's main content. Asides are frequently presented as **sidebars** or
 **call-out boxes**.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
-| **Content categories** | `Flow content`, `sectioning content`, `palpable content`. |
-| **Permitted content** | `Flow content`. |
+| **Content categories** | *Flow content*, *sectioning content*, *palpable content*. |
+| **Permitted content** | *Flow content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content. Note that an `<aside>` element must not be a descendant of an [`<address>`](/en/webfrontend/<address>) element. |
+| **Permitted parents** | Any element that accepts *flow content*. Note that an `<aside>` element must not be a descendant of an [`<address>`](/en/webfrontend/<address>) element. |
 | **Permitted ARIA roles** | [`feed`](https://w3c.github.io/aria/#feed), [`note`](https://w3c.github.io/aria/#note), [`presentation`](https://w3c.github.io/aria/#presentation), [`region`](https://w3c.github.io/aria/#region), [`search`](https://w3c.github.io/aria/#search)|
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 
