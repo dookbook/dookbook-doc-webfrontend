@@ -38,7 +38,7 @@ TOPICS: <acronym>
 | 元素 | 描述 |
 | :--- | :--- |
 | **`<acronym>`** | HTML 缩写元素。定义**首字母缩写**或**简略语**。HTML 5 请使用 **[`<abbr>`](/zh-hans/webfrontend/<abbr>)** 代替。|
-| `<applet>` | **HTML中的Applet元素(`<applet>`)** 标志着包含了Java的applet。 |
+| **`<applet>`** | HTML Applet 元素。标记文档中内嵌 **[[Java]] applet**。 HTML 5 请使用 **[`<object>`](/zh-hans/webfrontend<object>)** 代替。|
 | `<basefont>` | **HTML标签`<basefont></basefont>`** 用来设置文档的默认字体大小。使用`<font>`可以相对于默认字体大小进行变化。 |
 | `<bgsound>` | **`<bgsound></bgsound>`** 是IE浏览器中设置网页背景音乐的元素。 |
 | `<big>` | **HTML大元素 (`<big>`)** 会使字体加大一号（例如从小号(small)到中号(medium)，从大号(large)到加大(x-large)），最大不超过浏览器的最大字体。|
@@ -51,7 +51,7 @@ TOPICS: <acronym>
 | `<font>` | **HTML字形元素（`<font>`）** 定义了该内容的字体大小、顏色与表现。. |
 | `<frame>` | **`<frame>`是HTML元素**，它定义了一个特定区域，另一个HTML文档可以在里面展示。帧应该在`<frameset>`中使用. |
 | `<frameset>` | **`<frameset>`** 是一个用于包含`<frame>`的HTML元素。 |
-| `<image>` | **HTML`<image>`元素** 曾经是一个试验性的元素，用来显示图片。它从未被实现过，请使用标准的[`<img>`](/zh-hans/webfrontend/<img>)元素。 |
+| **`<image>`** | HTML 图片元素。曾经是一个试验性的元素，用来显示图片。它从未被实现过，请使用标准的 **[`<img>`](/zh-hans/webfrontend/<img>)** 元素。 |
 | `<isindex>` | **`<isindex>`元素** 的作用是使浏览器显示一个对话框，提示用户输入单行文本。在W3C的规范中建议，`<isindex>`元素最好被放置在 [`<head>`](/zh-hans/webfrontend/<head>) 标签块内，但是对于浏览器来说，`<isindex>`标签在页面任何位置都没有关系。. |
 | `<keygen>` | **HTML`<keygen>`元素** 是为了方便生成密钥材料和提交作为 HTML form 的一部分的公钥.这种机制被用于设计基于 Web 的证书管理系统。按照预想，`<keygen>` 元素将用于 HTML 表单与其他的所需信息一起构造一个证书请求，该处理的结果将是一个带有签名的证书。 |
 | `<listing>` | **HTML列表元素 (`<listing>`)** 渲染了开始和结束标签之间的文本，而不会解释 HTML，并使用等宽字体。HTML2 标准建议，当一行不超过 132 个字符时，不应该将其拆开。 |
