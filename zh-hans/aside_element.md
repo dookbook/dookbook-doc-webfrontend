@@ -7,12 +7,12 @@ TOPICS: <aside>
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | `流式元素`, `章节元素`, `可触摸内容`. |
-| **允许的内容** | `流式元素`. |
+| **内容分类** | 流式内容, 章节元素, 可触摸内容。 |
+| **允许的内容** | 流式内容. |
 | **标签省略** | 不允许，开始标签和结束标签都不能省略。|
-| **允许的父元素** | 所有元素接受流式元素。注意 `<aside>` 不能是[`<address>`](/zh-hans/webfrontend/<address>) 元素的后代 |
+| **允许的父元素** | 所有元素接受流式内容。注意： `<aside>` 不能是[`<address>`](/zh-hans/webfrontend/<address>) 元素的后代。 |
 | **允许的 ARIA 角色** | `feed`, `note`, `presentation`, `region`, `search` |
-| **DOM 接口** | `HTMLElement` |
+| **DOM 接口** | **`HTMLElement`** |
 
 ## 属性
 
