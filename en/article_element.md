@@ -1,6 +1,6 @@
 TOPICS: <article>
 
-# `<article>`
+# HTML Self-Contained Composition Element: `<article>`
 
 The **HTML `<article>` element** represents a **self-contained composition** in a *document*, *page*,
 *application*, or *site*, which is intended to be **independently distributable or reusable**
@@ -10,14 +10,16 @@ A given document can have multiple articles in it; for example, on a blog that s
 each article one after another as the reader scrolls, each post would be contained
 in an `<article>` element, possibly with one or more [`<section>`](/en/webfrontend/<section>) s within.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, sectioning content, palpable content. |
-| **Permitted content** | Flow content. |
+| **Content categories** | *Flow content*, *sectioning content*, *palpable content*. |
+| **Permitted content** | *Flow content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory.
-| **Permitted parents** | Any element that accepts flow content. Note that an `<article>` element must not be a descendant of an [`<address>`](/en/webfrontend/<address>) element.
+| **Permitted parents** | Any element that accepts flow content. Note that an `<article>` element must not be a descendant of an *[`<address>`](/en/webfrontend/<address>)* element.
 | **Permitted ARIA roles** | [`application`](https://w3c.github.io/aria/#application), [`document`](https://w3c.github.io/aria/#document), [`feed`](https://w3c.github.io/aria/#feed), [`main`](https://w3c.github.io/aria/#main), [`presentation`](https://w3c.github.io/aria/#presentation), [`region`](https://w3c.github.io/aria/#region)
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 
@@ -35,11 +37,11 @@ elements nested in the `<article>` representing the blog post.
 [`<address>`](/en/webfrontend/<address>) element) element,
 but it doesn't apply to nested `<article>` elements.
 - The publication date and time of an `<article>` element can be described using the datetime
-attribute of a [`<time>`](/en/webfrontend/<time>) element) element. **Note that the pubdate attribute
+attribute of a *[`<time>`](/en/webfrontend/<time>)* element) element. **Note that the `pubdate` attribute
 of [`<time>`](/en/webfrontend/<time>) element)
 is no longer a part of the W3C HTML5 standard**.
 
-## ExamplesSection
+## Examples
 
 ```html
 <article class="film_review">
