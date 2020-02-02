@@ -1,22 +1,27 @@
 TOPICS: <del>
+        <del> cite attribute
+        <del> datetime attribute
 
-# `<del>`
+# HTML Deleted Element: `<del>`
 
-The **HTML `<del>` element** represents a range of text that has been deleted from a document.
-This can be used when rendering "track changes" or source code diff information, for example.
-The [`<ins>`](/en/webfrontend/<ins>) element can be used for the opposite purpose:
+The **HTML `<del>` element** represents a range of text that has been **deleted** from a document.
+This can be used when rendering "*track changes*" or source code diff information, for example.
+The *[`<ins>`](/en/webfrontend/<ins>)* element can be used for the opposite purpose:
 to indicate text that has been added to the document.
 
-This element is often (but need not be) rendered by applying a strike-through style to the text.
+This element is often (but need not be) rendered by applying a
+*strike-through* style (*`text-decoration: line-through`* in CSS) to the text.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Phrasing content or flow content. |
+| **Content categories** | *Phrasing content* or *flow content*. |
 | **Permitted content**| Transparent. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles**| Any |
-| **DOM interface** | `HTMLModElement` |
+| **DOM interface** | **`HTMLModElement`** |
 
 ## Attributes
 
@@ -24,8 +29,8 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 | Attribute | Description |
 | :-- | :-- |
-| `cite` | A URI for a resource that explains the change (for example, meeting minutes).
-| `datetime` | This attribute indicates the time and date of the change and must be a valid datestring with an optional time. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp. For the format of the string without a time, see Format of a valid date string in Date and time formats used in HTML. The format of the string if it includes both date and time is covered in Format of a valid local date and time string in Date and time formats used in HTML.
+| **`cite`** | A URI for a resource that **explains the change** (for example, meeting minutes).
+| **`datetime`** | This attribute indicates **the time and date of the change** and must be a valid date string with an optional time. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp.
 
 ## Examples
 
@@ -38,8 +43,8 @@ here is the rest of the paragraph.</p>
 ## Accessibility Concerns
 
 The presence of the del element is not announced by most screen reading technology in its default
-configuration. It can be made to be announced by using the CSS `content` property, along
-with the `::before` and `::after` pseudo-elements.
+configuration. It can be made to be announced by using the CSS **`content`** property, along
+with the **`::before`** and **`::after`** pseudo-elements.
 
 ```css
 del::before,
