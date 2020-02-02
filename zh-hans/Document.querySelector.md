@@ -71,7 +71,7 @@ var el = document.querySelector(".myclass");
 
 选择器也可以非常强大，如以下示例所示.
 
-这里, 一个class属性为"user-panel main"的div元素`<div>`(`<div class="user-panel main">`)内包含一个name属性为
+这里, 一个`class`属性为"user-panel main"的div元素`<div>`(`<div class="user-panel main">`)内包含一个`name`属性为
 "login"的input元素`<input>` (`<input name="login"/>`) ，如何选择，如下所示:
 
 ```javascript
