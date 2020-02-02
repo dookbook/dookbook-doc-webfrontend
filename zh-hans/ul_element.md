@@ -36,7 +36,7 @@ TOPICS: <ul>
 
 ## 示例
 
-### 简单的例子
+### 简单的无序列表
 
 ```html
 <ul>
@@ -46,24 +46,24 @@ TOPICS: <ul>
 </ul>
 ```
 
-### 嵌套列表
+### 嵌套的无序列表
 
 ```html
 <ul>
   <li>first item</li>
-  <li>second item      <!-- Look, the closing </li> tag is not placed here! -->
+  <li>second item      <!-- 注意，此处没有关闭 </li> -->
     <ul>
       <li>second item first subitem</li>
-      <li>second item second subitem      <!-- Same for the second nested unordered list! -->
+      <li>second item second subitem      <!-- 第二个无序列表嵌套 -->
         <ul>
           <li>second item second subitem first sub-subitem</li>
           <li>second item second subitem second sub-subitem</li>
           <li>second item second subitem third sub-subitem</li>
         </ul>
-      </li>           <!-- Closing </li> tag for the li that contains the third unordered list -->
+      </li>           <!-- 关闭第三层无序列表 -->
       <li>second item third subitem</li>
     </ul>
-  </li>               <!-- Here is the closing </li> tag -->
+  </li>               <!-- 关闭第二层无序列表 -->
   <li>third item</li>
 </ul>
 ```
@@ -73,13 +73,13 @@ TOPICS: <ul>
 ```html
 <ul>
   <li>first item</li>
-  <li>second item      <!-- Look, the closing </li> tag is not placed here! -->
+  <li>second item      <!-- 此处未关闭 </li> -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  </li>                <!-- Here is the closing </li> tag -->
+  </li>                <!-- 此处才关闭 </li> -->
   <li>third item</li>
 </ul>
 ```

@@ -38,7 +38,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 ## Examples
 
-### Simple example
+### Simple Unordered List
 
 ```html
 <ul>
@@ -48,7 +48,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 </ul>
 ```
 
-### Nesting list
+### Nesting Unordered List
 
 ```html
 <ul>
