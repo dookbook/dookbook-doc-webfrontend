@@ -23,8 +23,8 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| ~~`compact`~~ | (**Deprecated**) This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.
-| ~~`type`~~ | (**Deprecated**) Used to set the bullet style for the list. The values: *`circle`*, *`disc`*, *`square`*, *`triangle`* (defined in WebTV interface). |
+| ~~`compact`~~ | (**Deprecated**. CSS property **`line-height`** should be used instead, default value is `80%`.) This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.
+| ~~`type`~~ | (**Deprecated**. CSS property **`list-style-type`** should be used instead.) Used to set the bullet style for the list. The values: *`circle`*, *`disc`*, *`square`*, *`triangle`* (defined in WebTV interface). |
 
 ## HTML List Item Element: `<li>`
 
