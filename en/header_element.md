@@ -1,25 +1,27 @@
 TOPICS: <header>
 
-# HTML `<header>` Element
+# HTML Introductory Content Element: `<header>`
 
 The HTML `<header>` element represents **introductory content**, typically a group of *introductory*
 or *navigational* aids. It may contain some heading elements but also a logo,
 a search form, an author name, and other elements.
 
+## Technical Summary
+
 |||
 | :-- | :--|
-| **Content categories** | Flow content, palpable content.|
-| **Permitted content** | Flow content, but with no `<header>` or [`<footer>`](/en/webfrontend/<footer>) descendant.|
+| **Content categories** | *Flow content*, *palpable content*.|
+| **Permitted content** | *Flow content*, but with no ~~`<header>`~~ or ~~[`<footer>`](/en/webfrontend/<footer>)~~ descendant.|
 | **Tag omission** | None, both the starting and ending tag are mandatory.|
-| **Permitted parents** | Any element that accepts flow content. Note that a `<header>` element must not be a descendant of an [`<address>`](/en/webfrontend/<address>), [`<footer>`](/en/webfrontend/<footer>) or another `<header>` element.|
+| **Permitted parents** | Any element that accepts *flow content*. Note that a `<header>` element must not be a descendant of an *[`<address>`](/en/webfrontend/<address>)*, *[`<footer>`](/en/webfrontend/<footer>)* or another *`<header>`* element.|
 | **Permitted ARIA roles** | `group`, `presentation`|
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Usage Notes
 
-The `<header>` element is not sectioning content and therefore does not introduce a new section in
+The `<header>` element is not *sectioning content* and therefore does not introduce a new section in
 the outline. That said, a `<header>` element is intended to usually contain the surrounding
-section's heading (an `h1`–`h6` element), but this is **not** required.
+section's heading (an `<h1>`–`<h6>` element), but this is **not** required.
 
 ### Historical Usage
 

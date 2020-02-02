@@ -4,16 +4,18 @@ TOPICS: <nav>
 
 The **HTML `<nav>` element** represents a section of a page whose purpose is to provide **navigation**
 links, either within the current document or to other documents. Common examples of navigation
-sections are menus, tables of contents, and indexes.
+sections are *menus*, *tables of contents*, and *indexes*.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | `Flow content`, `sectioning content`, palpable content. |
-| **Permitted content** | `Flow content`. |
+| **Content categories** | *Flow content*, *sectioning content*, *palpable content*. |
+| **Permitted content** | *Flow content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory.|
-| **Permitted parents** | Any element that accepts `flow content`.
+| **Permitted parents** | Any element that accepts *flow content*.
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 

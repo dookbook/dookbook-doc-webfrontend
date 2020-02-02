@@ -1,6 +1,6 @@
 TOPICS: <address>
 
-# `<address>`
+# HTML Contact Element: `<address>`
 
 The **HTML `<address>` element** indicates that the enclosed HTML provides **contact information** for
 a person or people, or for an organization.
@@ -13,16 +13,16 @@ person, people, or organization to which the contact information refers.
 
 `<address>` can be used in a variety of contexts, such as providing a business's contact information
 in the page header, or indicating the author of an article by including an `<address>`
-element within the [`<article>`](/en/webfrontend/<article>).
+element within the *[`<article>`](/en/webfrontend/<article>)*.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, palpable content. |
-| **Permitted content** | Flow content, but with no nested `<address>` element, no heading content ([`<hgroup>`](/en/webfrontend/<hgroup>), [`<h1>`](/en/webfrontend/<h1>), [`<h2>`](/en/webfrontend/<h2>), [`<h3>`](/en/webfrontend/<h3>), [`<h4>`](/en/webfrontend/<h4>), [`<h5>`](/en/webfrontend/<h5>), [`<h6>`](/en/webfrontend/<h6>)), no sectioning content ([`<article>`](/en/webfrontend/<article>), [`<aside>`](/en/webfrontend/<aside>), [`<section>`](/en/webfrontend/<section>), [`<nav>`](/en/webfrontend/<nav>)), and no [`<header>`](/en/webfrontend/<header>) or [`<footer>`](/en/webfrontend/<footer>) element. |
+| **Content categories** | *Flow content*, *palpable content*. |
+| **Permitted content** | *Flow content*, but with no nested `<address>` element, no heading content ([`<hgroup>`](/en/webfrontend/<hgroup>), [`<h1>`](/en/webfrontend/<h1>), [`<h2>`](/en/webfrontend/<h2>), [`<h3>`](/en/webfrontend/<h3>), [`<h4>`](/en/webfrontend/<h4>), [`<h5>`](/en/webfrontend/<h5>), [`<h6>`](/en/webfrontend/<h6>)), no sectioning content ([`<article>`](/en/webfrontend/<article>), [`<aside>`](/en/webfrontend/<aside>), [`<section>`](/en/webfrontend/<section>), [`<nav>`](/en/webfrontend/<nav>)), and no [`<header>`](/en/webfrontend/<header>) or [`<footer>`](/en/webfrontend/<footer>) element. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content, but always excluding `<address>` elements (according to the logical principle of symmetry, if `<address>` tag, as a parent, can not have nested `<address>` element, then the same `<address>` content can not have `<address>` tag as its parent). |
+| **Permitted parents** | Any element that accepts *flow content*, but always excluding `<address>` elements (according to the logical principle of symmetry, if `<address>` tag, as a parent, can not have nested `<address>` element, then the same `<address>` content can not have `<address>` tag as its parent). |
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 

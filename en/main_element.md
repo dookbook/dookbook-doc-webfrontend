@@ -3,24 +3,24 @@ SYNONYM: skipnav = Skip Navigation
 
 # HTML Dominant Content Element: `<main>`
 
-The HTML `<main>` element represents the **dominant content** of the [`<body>`](/en/webfrontend/<body>/)
+The HTML `<main>` element represents the **dominant content** of the *[`<body>`](/en/webfrontend/<body>/)*
 of a document. The main content area consists of content that is directly related to or expands upon
-the central TOPICS of a document, or the central functionality of an application.
+the *central TOPICS of a document*, or the *central functionality of an application*.
 
 A document mustn't have more than one `<main>` element that doesn't have the `hidden` attribute specified.
 
-## `<main>` Meta
+## Technical Summary
 
 | | |
 | :-- | :-- |
-| **Content categories** | `Flow content`, palpable content.|
-| **Permitted content** | `Flow content`. |
-| **Tag omission** | None; both the starting and ending TOPICS are mandatory.|
-| **Permitted parents** | Where `flow content` is expected, but only if it is a hierarchically correct `<main>` element.|
+| **Content categories** | *Flow content*, *palpable content*.|
+| **Permitted content** | *Flow content*. |
+| **Tag omission** | None; both the starting and ending tags are mandatory.|
+| **Permitted parents** | Where *flow content* is expected, but only if it is a hierarchically correct `<main>` element.|
 | **Permitted ARIA roles** | The `main` role is applied to `<main>` by default, and the `presentation` role is permitted as well.|
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
-## `<main>` Attributes
+## Attributes
 
 This element only includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
@@ -61,7 +61,9 @@ the main function of the page.
   </article>
 </main>
 
-<!-- other content -->
+<!-- other content: sidebars, navigation links, 
+copyright information,
+site logos, and search forms -->
 ```
 
 ## Accessibility Concerns
