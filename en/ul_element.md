@@ -1,18 +1,21 @@
 TOPICS: <ul>
         <li>
 
-# `<ul>`
+# HTML Unordered List Element: `<ul>`, `<li>`
 
-The **HTML `<ul>` element** represents an unordered list of items, typically rendered as a bulleted list.
+The **HTML `<ul>` element** represents an **unordered list** of items, typically rendered as a
+bulleted list.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, and if the `<ul>` element's children include at least one `<li>` element, Palpable content.
-| **Permitted content** | zero or more `<li>` elements, which in turn often contain nested [`<ol>`](/en/webfrontend/<ol>) or `<ul>` elements.
+| **Content categories** | *Flow content*, and if the `<ul>` element's children include at least one `<li>` element, *Palpable content*.
+| **Permitted content** | zero or more **`<li>`** elements, which in turn often contain nested *[`<ol>`](/en/webfrontend/<ol>)* or *`<ul>`* elements.
 | **Tag omission** | None, both the starting and ending tag are mandatory.
-| **Permitted parents** | Any element that accepts flow content.
+| **Permitted parents** | Any element that accepts *flow content*.
 | **Permitted ARIA roles** | `directory`, `group`, `listbox`, `menu`, `menubar`, `radiogroup`, `tablist`, `toolbar`, `tree`, `presentation` |
-| **DOM interface** | `HTMLUListElement` |
+| **DOM interface** | **`HTMLUListElement`** |
 
 ## Attributes
 
@@ -20,32 +23,8 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| `compact` | This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.<br>**Usage note:** Do not use this attribute, as it has been deprecated: the `<ul>` element should be styled using CSS. To give a similar effect as the `compact` attribute, the CSS property `line-height` can be used with a value of 80%.
-| `type` | Used to set the bullet style for the list. The values defined under HTML3.2 and the transitional version of HTML 4.0/4.01 are:<br>1. `circle`,<br>2. `disc`,<br>3. and `square`
-
-A fourth bullet type has been defined in the WebTV interface, but not all browsers support it: `triangle`.
-
-If not present and if no CSS `list-style-type` property does apply to the element,
-the user agent decide to use a kind of bullets depending on the nesting level of the list.
-
-!!! warn "Don't try this at home"
-    Usage note: Do not use this attribute, as it has been deprecated; use the CSS
-    `list-style-type` property instead.
-
-## Usage Notes
-
-- The `<ul>` element is for grouping a collection of items that do not have a numerical ordering,
-and their order in the list is meaningless. Typically, unordered-list items are displayed with a
-bullet, which can be of several forms, like a dot, a circle or a squared. The bullet style is
-not defined in the HTML description of the page, but in its associated CSS,
-using the list-style-type property.
-- There is no limitation to the depth and alternation of nested lists defined with the [`<ol>`](/en/webfrontend/<ol>)
-and `<ul>` elements.
-- The [`<ol>`](/en/webfrontend/<ol>) and `<ul>` elements both represent a list of items.
-They differ in that, with the [`<ol>`](/en/webfrontend/<ol>) element, the order is meaningful.
-As a rule of thumb to determine which one to use,
-try changing the order of the list items; if the meaning is changed,
-the [`<ol>`](/en/webfrontend/<ol>) element should be used, otherwise you can use `<ul>`.
+| ~~`compact`~~ | (**Deprecated**) This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.
+| ~~`type`~~ | (**Deprecated**) Used to set the bullet style for the list. The values: *`circle`*, *`disc`*, *`square`*, *`triangle`* (defined in WebTV interface). |
 
 ## `<li>`
 
