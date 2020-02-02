@@ -1,28 +1,26 @@
 TOPICS: <s>
 
-# `<s>`
+# HTML Strikethrough Element: `<s>`
 
-The **HTML `<s>` element** renders text with a strikethrough, or a line through it. Use the `<s>`
-element to represent things that are no longer relevant or no longer accurate. However, `<s>` is not
-appropriate when indicating document edits; for that, use the
-[`<del>`](/en/webfrontend/<del>) and [`<ins>`](/en/webfrontend/<ins>) elements, as appropriate.
+The **HTML `<s>` element** renders **text with a strikethrough**, or a line through it. Use the `<s>`
+element to represent things that are **no longer relevant or no longer accurate**.
+However, `<s>` is not appropriate when indicating document edits; for that, use the
+*[`<del>`](/en/webfrontend/<del>)* and *[`<ins>`](/en/webfrontend/<ins>)* elements, as appropriate.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Phrasing content or flow content. |
-| **Permitted content** | Phrasing content. |
+| **Content categories** | *Phrasing content* or *flow content*. |
+| **Permitted content** | *Phrasing content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 
 This element only includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
-
-!!! warn "Don't try this at home"
-    **Implementation note**: Up to Gecko 1.9.2 inclusive, Firefox implements the `HTMLSpanElement`
-    interface for this element.
 
 ## Example
 
@@ -34,9 +32,9 @@ This element only includes the [global attributes](/en/webfrontend/HTML_Global_A
 
 ## Accessibility Concerns
 
-The presence of the s element is not announced by most screen reading technology in its default
-configuration. It can be made to be announced by using the CSS `content` property, along with
-the `::before` and `::after` pseudo-elements.
+The presence of the `<s>` element is not announced by most screen reading technology in its default
+configuration. It can be made to be announced by using the CSS **`content`** property, along with
+the **`::before`** and **`::after`** pseudo-elements.
 
 ```css
 s::before,
