@@ -16,7 +16,7 @@ special importance.
 | :-- | :-- |
 | **Content Categories** | *Flow Content*, *Phrasing Content*, *Palpable Content*. |
 | **Permitted content** | *Phrasing content*. |
-| **ag omission** | None, both the starting and ending tag are mandatory.|
+| **Tag omission** | None, both the starting and ending tag are mandatory.|
 | **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | Any |
 | **DOM interface** | **`HTMLElement`** |
