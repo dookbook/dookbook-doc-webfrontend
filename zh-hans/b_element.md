@@ -27,8 +27,7 @@ TOPICS: <b>
 - 不要将`<b>`元素与[`<strong>`](/zh-hans/webfrontend/<strong>)、[`<em>`](/zh-hans/webfrontend/<em>)或
 [`<mark>`](/zh-hans/webfrontend/<mark>)元素混淆。[`<strong>`](/zh-hans/webfrontend/<strong>)元素表示某些重要性的文本
 [`<em>`](/zh-hans/webfrontend/<em>)强调文本，而[`<mark>`](/zh-hans/webfrontend/<mark>)元素表示某些相关性的文本。 `<b>`元素不传达这样的特殊语义信息；仅在没有其他合适的元素时使用它。
-- 类似的，也不要用`<b>`元素来标记标题。如果需要表示标题，请使用[`<h1>`](/zh-hans/webfrontend/<h1>)到[`<h6>`](/zh-hans/webfrontend/<h6>)
-- 标签。此外，可以通过样式表来改变这些元素的的默认样式，结果就是它们并不一定都是粗体。
+- 类似的，也不要用`<b>`元素来标记标题。如果需要表示标题，请使用[`<h1>`](/zh-hans/webfrontend/<h1>)到[`<h6>`](/zh-hans/webfrontend/<h6>)标签。此外，可以通过样式表来改变这些元素的的默认样式，结果就是它们并不一定都是粗体。
 - 通过在`<b>`元素上添加`class`属性来表示额外的语义信息是一个很好的方式（例如 `<b class="lead">` 来表示段落中的第一句）。这可
 在样式需要变动的情况下更轻松地处理不同应用场合的`<b>`元素，无须改动HTML。
 - 以前`<b>`元素就是让文本变成粗体。但从HTML4开始，不赞成标签表示带样式信息，于是`<b>`元素的含义发生了变化。

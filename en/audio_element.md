@@ -4,8 +4,7 @@ TOPICS: <audio>
 
 The **HTML `<audio>` element** is used to embed sound content in documents. It may contain one or
 more audio sources, represented using the `src` attribute or the [`<source>`](/en/webfrontend/<source>)
-element: the browser will choose the most suitable one. It can also be the destination for streamed
-media, using a `MediaStream`.
+element: the browser will choose the most suitable one.
 
 The above example shows simple usage of the `<audio>` element. In a similar manner
 to the [`<img>`](/en/webfrontend/<img>) element, we include a path to the media we want to embed
@@ -15,92 +14,57 @@ we want it to autoplay and loop, whether we want to show the browser's default a
 The content inside the opening and closing `<audio></audio>` TOPICS is shown as a
 fallback in browsers that don't support the element.
 
-Browsers don't all support the same audio formats; you can provide multiple sources inside
-nested [`<source>`](/en/webfrontend/<source>) elements, and the browser will then use the first one
-it understands:
+You can also use Gecko's more powerful audio API feature to directly generate and control audio
+streams in JavaScript code. See [Introducing the audio API extension](https://wiki.developer.mozilla.org/en-US/docs/Introducing_the_Audio_API_Extension)
+for details.
 
-```html
-<audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg">
-  <source src="myAudio.ogg" type="audio/ogg">
-  <p>Your browser doesn't support HTML5 audio. Here is
-     a <a href="myAudio.mp4">link to the audio</a> instead.</p>
-</audio>
-```
+## Technical Summary
 
-Other Usage Notes:
-
-- If you don't specify the `controls` attribute, the audio player won't include the browser's
-default `controls`; you can create your own custom `controls`
-using JavaScript and the `HTMLMediaElement` API.
-- To allow precise control over your audio content, `HTMLMediaElement`s fire many different `events`.
-- You can also use the Web Audio API to directly generate and
-manipulate audio streams from JavaScript code.
-- `<audio>` elements can't have subtitles/captions associated with them in the same way that
-[`<video>`](/en/webfrontend/<video>) elements can. See WebVTT and Audio
-by Ian Devlin for some useful information and workarounds.
-
-A good general source of information on using HTML `<audio>` is
-the Video and audio content beginner's tutorial.
+|  |  |
+| :-- | :-- |
+| **Content Categories** | Flow Content,Phrasing Content,embedded content. If you have control properties:nteractive content,palpable content. |
+| **Permitted content** | If the element contains an `src` attribute: zero or more [`<track>`](/zh-hans/webfrontend/<track>) elements, which cannot immediately follow the transparent content of the `<audio>` or [`<video>`](/zh-hans/webfrontend/<video>) media element. For example: zero or more [`<source>`](/zh-hans/webfrontend/<source>) elements, followed by zero or more `<track>` elements, cannot be followed by transparent content of `<audio>` or [`<video>`](/zh-hans/webfrontend/<video>) media elements. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts embedded content.|
+| **Permitted ARIA roles** | `application` |
+| **DOM interface** | **`HTMLAudioElement`** |
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en/webfrontend/HTML_Global_Attributes).
-
 | Attribute | Description |
 | :-- | :-- |
-| `autoplay` | A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.<br>**Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant<br>experience for users, so should be avoided when possible. If you must offer autoplay functionality,<br>you should make it opt-in (requiring a user to specifically enable it). However, this can be useful<br>when creating media elements whose source will be set at a later time, under user control.
-| `controls` | If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
-| `crossorigin` | This enumerated attribute indicates whether to use CORS to fetch the related image. CORS-enabled resources can be reused in the `<canvas>` element without being tainted. The allowed values are:
-| `anonymous` | Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be tainted, and its usage restricted.
-| `use-credentials` |Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be tainted and its usage restricted.<br>When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in [`<canvas>`](/en/webfrontend/<canvas>) elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See CORS settings attributes for additional information. |
-| `currentTime` | Reading `currentTime` returns a double-precision floating-point value indicating the current playback position, in seconds, of the audio. If the audio's metadata isn't available yet—thereby preventing you from knowing the media's start time or duration—`currentTime` instead indicates, and can be used to change, the time at which playback will begin. Otherwise, setting `currentTime` sets the current playback position to the given time and seeks the media to that position if the media is currently loaded.<br>If the audio is being streamed, it's possible that the user agent may not be able to obtain some parts of the resource if that data has expired from the media buffer. Other audio may have a media timeline that doesn't start at 0 seconds, so setting `currentTime` to a time before that would fail. For example, if the audio's media timeline starts at 12 hours, setting `currentTime` to 3600 would be an attempt to set the current playback position well before the beginning of the media, and would fail. The `getStartDate()` method can be used to determine the beginning point of the media timeline's reference frame. |
-| `disableRemotePlayback` | A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc). See this proposed specification for more information.<br>**Note:** In Safari, you can use `x-webkit-airplay="deny"` as a fallback.
-| `duration` | A double-precision floating-point value which indicates the duration (total length) of the audio in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is `NaN`. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from WebRTC, and so forth), this value is `+Infinity`.
-| `loop` | A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.
+| `autoplay` | A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.<br>**Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant<br>experience for users, so should be avoided when possible. If you must offer autoplay functionality,<br>you should make it opt-in (requiring a user to specifically enable it). However, this can be useful<br>when creating media elements whose source will be set at a later time, under user control. |
+| `buffered` | You can use this property to get the time period information of the buffered resource. This property contains a `TimeRanges` object.|
+| `controls` | If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback. |
+| `loop` | Boolean property: If specified, the loop audio. |
+| `mozCurrentSampleOffset` |A value representing the offset from the beginning of the audio during audio playback. |
 | `muted` | A Boolean attribute that indicates whether the audio will be initially silenced. Its default value is `false`. |
-| `preload` | This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:<br>`none`: Indicates that the audio should not be preloaded.<br>`metadata`: Indicates that only audio metadata (e.g. length) is fetched.<br>`auto`: Indicates that the whole audio file can be downloaded, even if the user is not expected to use it.<br>empty string: A synonym of the `auto` value.<br><br>The default value is different for each browser. The spec advises it to be set to `metadata`<br>**Notes:** The autoplay attribute has precedence over preload. If autoplay is specified, the browser<br>would obviously need to start downloading the audio for playback.<br>The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
-| `src` | The URL of the audio to embed. This is subject to HTTP access controls. This is optional; you may instead use the [`<source>`](/en/webfrontend/<source>) element within the audio block to specify the audio to embed.
-
-## Events
-
-| Event Name | Fired When |
-| :-- | :-- |
-| `audioprocess` | The input buffer of a `ScriptProcessorNode` is ready to be processed.
-| `canplay` | The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
-| `canplaythrough` | The browser estimates it can play the media up to its end without stopping for content buffering.
-| `complete` | The rendering of an `OfflineAudioContext` is terminated.
-| `durationchange` | The `duration` attribute has been updated.
-| `emptied` | The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the `load()` method is called to reload it.
-| `ended` | Playback has stopped because the end of the media was reached.
-| `loadeddata` | The first frame of the media has finished loading.
-| `loadedmetadata` | The metadata has been loaded.
-| `pause` | Playback has been paused.
-| `play` | Playback has begun.
-| `playing` | Playback is ready to start after having been paused or delayed due to lack of data.
-| `ratechange` | The playback rate has changed.
-| `seeked` | A seek operation completed.
-| `seeking` | A seek operation began.
-| `stalled` | The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
-| `suspend` | Media data loading has been suspended.
-| `timeupdate` | The time indicated by the `currentTime` attribute has been updated.
-| `volumechange` | The volume has changed.
-| `waiting` | Playback has stopped because of a temporary lack of data
+| `played` |A `TimeRanges` object that represents all the audio clips that have been played. |
+| `preload` | This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience. It may have one of the following values:<br>`none`: Indicates that the user may not play the audio, or the server wants to save bandwidth; in other words, the audio will not be cached;<br>`metadata`: Signals that even if the user may not play the audio, they will get their metadata (such as audio length) and still have the necessary content.<br>`auto`: Indicates that the whole audio file can be downloaded, even if the user is not expected to use it.<br>empty string: A synonym of the `auto` value.<br>The default value is different for each browser. The spec advises it to be set to `metadata`<br>**Notes:** The autoplay attribute has precedence over preload. If autoplay is specified, the browser<br>would obviously need to start downloading the audio for playback.<br>The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.|
+| `crossorigin` | This enumerated attribute indicates whether to use CORS to fetch the related image. CORS-enabled resources can be reused in the `<canvas>` element without being tainted. |
+| `currentTime` | Reading `currentTime` returns a double-precision floating-point value indicating the current playback position, in seconds, of the audio. If the audio's metadata isn't available yet—thereby preventing you from knowing the media's start time or duration—`currentTime` instead indicates, and can be used to change, the time at which playback will begin. Otherwise, setting `currentTime` sets the current playback position to the given time and seeks the media to that position if the media is currently loaded.<br>If the audio is being streamed, it's possible that the user agent may not be able to obtain some parts of the resource if that data has expired from the media buffer. Other audio may have a media timeline that doesn't start at 0 seconds, so setting `currentTime` to a time before that would fail. For example, if the audio's media timeline starts at 12 hours, setting `currentTime` to 3600 would be an attempt to set the current playback position well before the beginning of the media, and would fail. The `getStartDate()` method can be used to determine the beginning point of the media timeline's reference frame. |
+| `disableRemotePlayback` | A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc). See this proposed specification for more information.<br>**Note:** In Safari, you can use `x-webkit-airplay="deny"` as a fallback. |
+| `duration` | A double-precision floating-point value which indicates the duration (total length) of the audio in seconds, on the media's timeline. If no media is present on the element, or the media is not valid, the returned value is `NaN`. If the media has no known end (such as for live streams of unknown duration, web radio, media incoming from WebRTC, and so forth), this value is `+Infinity`.|
+| `src` | The URL of the audio to embed. This is subject to HTTP access controls. This is optional; you may instead use the [`<source>`](/en/webfrontend/<source>) element within the audio block to specify the audio to embed.|
+| `volume` |Audio playback volume. Values are from 0.0 (silent) to 1.0 (loudest). The time offset is currently specified as a `float` type value, representing the number of seconds to offset.|
 
 ## Usage Notes
 
 Browsers don't all support the same audio formats; you can provide multiple sources inside
 nested [`<source>`](/en/webfrontend/<source>) elements, and the browser will then use the
-first one it understands:
-
-We offer a substantive and thorough guide to media file types and the audio codecs that can be used
-within them. Also available is a guide to the codecs supported for video.
+first one it understands.
 
 Other Usage Notes:
 
+- The `autoplay` attribute takes precedence over `preload`. If the user wants to play the video automatically,
+then obviously
+the browser needs to download the video. Setting both the `autoplay` and `preload` properties is
+allowed in the specification.The autoplay attribute takes precedence over preload. If the user wants
+to play the video automatically, then obviously the browser needs to download the video. Setting
+both the autoplay and preload properties is allowed in the specification.
 - If you don't specify the `controls` attribute, the audio player won't include the browser's
 default controls.
-You can, however, create your own custom controls using JavaScript and the `HTMLMediaElement` API.
+You can, however,create your own custom controls using JavaScript and the `HTMLMediaElement` API.
 - To allow precise control over your audio content, `HTMLMediaElements` fire many different events.
 This also provides a way to monitor the audio's fetching process so you can watch for errors or
 detect when enough is available to begin to play or manipulate it.
@@ -110,8 +74,33 @@ code rather than streaming pre-existing audio files.
 [`<video>`](/en/webfrontend/<video>) elements can. See [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio)
 by Ian Devlin for some useful information and workarounds.
 
-A good general source of information on using HTML
-`<audio>` is the Video and audio content beginner's tutorial.
+**Note:**  In the HTML 5 specification, the definition of the time offset value has not yet been completed
+ and may change.
+
+## Events
+
+| Event Name | Fired When |
+| :-- | :-- |
+| `audioprocess` | The input buffer of a `ScriptProcessorNode` is ready to be processed. |
+| `canplay` | The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content. |
+| `canplaythrough` | The browser estimates it can play the media up to its end without stopping for content buffering.|
+| `complete` | The rendering of an `OfflineAudioContext` is terminated.|
+| `durationchange` | The `duration` attribute has been updated.|
+| `emptied` | The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the `load()` method is called to reload it.|
+| `ended` | Playback has stopped because the end of the media was reached.|
+| `loadeddata` | The first frame of the media has finished loading.|
+| `loadedmetadata` | The metadata has been loaded.|
+| `pause` | Playback has been paused.|
+| `play` | Playback has begun. |
+| `playing` | Playback is ready to start after having been paused or delayed due to lack of data. |
+| `ratechange` | The playback rate has changed.|
+| `seeked` | A seek operation completed.|
+| `seeking` | A seek operation began.|
+| `stalled` | The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.|
+| `suspend` | Media data loading has been suspended.|
+| `timeupdate` | The time indicated by the `currentTime` attribute has been updated.|
+| `volumechange` | The volume has changed.|
+| `waiting` | Playback has stopped because of a temporary lack of data.|
 
 ### Styling with CSS
 
@@ -185,6 +174,19 @@ You can also use `addEventListener()` to listen for the
 ## Examples
 
 ### Basic Usage
+
+```html
+<!-- Simple audio playback -->
+<audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
+  Your browser does not support the <code>audio</code> element.
+</audio>
+
+<!-- Audio playback with captions -->
+<audio src="foo.ogg">
+  <track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+  <track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
+</audio>
+```
 
 The following example shows simple usage of the `<audio>` element to play an OGG file. It will
 autoplay due to the `autoplay` attribute, and also includes fallback content.
@@ -278,16 +280,5 @@ for viewers who use a browser in which the `<audio>` element is not supported:
 - [Web Video Text Tracks Format (WebVTT)](https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
 - [MDN Understanding WCAG, Guideline 1.2 explanations](https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.2_%E2%80%94_Providing_text_alternatives_for_time-based_media)
-- [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
+- [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.orgTR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
-
-## Technical Summary
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | Flow content, phrasing content, embedded content. If it has a controls attribute: interactive content and palpable content.|
-| **Permitted content** | If the element has a `src` attribute: zero or more [`<track>`](/en/webfrontend/<track>) elements followed by transparent content that contains no `<audio>` or [`<video>`](/en/webfrontend/<video>) media elements.<br>Else: zero or more [`<source>`](/en/webfrontend/<source>) elements followed by zero or more [`<track>`](/en/webfrontend/<track>) elements followed by transparent content that contains no `<audio>` or [`<video>`](/en/webfrontend/<video>) media elements.|
-| **Tag omission** | None, both the starting and ending tag are mandatory.|
-| **Permitted parents** | Any element that accepts embedded content.|
-| **Permitted ARIA roles** | [`application`](https://w3c.github.io/aria/#application) |
-| **DOM interface** | `HTMLAudioElement`|
