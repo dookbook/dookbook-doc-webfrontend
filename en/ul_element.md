@@ -1,7 +1,7 @@
 TOPICS: <ul>
         <li>
 
-# HTML Unordered List Element: `<ul>`
+# HTML Unordered List Element: `<ul>`, `<li>`
 
 The **HTML `<ul>` element** represents an **unordered list** of items, typically rendered as a
 bulleted list.
