@@ -13,7 +13,7 @@ TOPICS: <base>
 | **标签省略** | 该标签不能有结束标签。|
 | **允许的父元素** | 任何不带有任何其他 `<base>` 元素的[`<head>`](/zh-hans/webfrontend/<head>) 元素
 | **允许的 ARIA 角色** | 无 |
-| **DOM 接口** | **HTMLBaseElement** |
+| **DOM 接口** | **`HTMLBaseElement`** |
 
 ## 属性
 
@@ -30,9 +30,11 @@ TOPICS: <base>
 
 如果指定了多个 `<base>` 元素，只会使用第一个 `href` 和 `target` 值, 其余都会被忽略。
 
-**提示：** 请把`<base>`标签排在`<head>`元素中第一个元素的位置，这样`head`区域中其他元素就可以使用 `<base>` 元素中的信息了。
+!!! warn "提示"
+    请把`<base>`标签排在`<head>`元素中第一个元素的位置，这样`head`区域中其他元素就可以使用 `<base>` 元素中的信息了。
 
-**注释:** 如果使用了`<base>`标签，则必须具备`href`属性或者`target`属性或者两个属性都具备。
+!!! warn "注释"
+    如果使用了`<base>`标签，则必须具备`href`属性或者`target`属性或者两个属性都具备。
 
 ### 锚元素
 
@@ -40,11 +42,15 @@ TOPICS: <base>
 
 例如，以下给定基本URL：
 
-`<base href="http://www.example.com/">`
+```html
+<base href="http://www.example.com/">
+```
 
 以及这个锚点:
 
-`<a href="#anchor">Anker</a>`
+```html
+<a href="#anchor">Anker</a>
+```
 
 该链接指向:
 
