@@ -60,13 +60,15 @@ Before
 After
 
 ```html
-<section>
-  <h1>Heading 1</h1>
-  <p>Bunch of awesome content</p>
-</section>
+<article>
+  <section>
+    <h1>Heading 1</h1>
+    <p>Bunch of awesome content</p>
+  </section>
 
-<section>
-  <h2>Heading 2</h2>
-  <img src="bird.jpg" alt="bird">
-</section>
+  <section>
+    <h2>Heading 2</h2>
+    <img src="bird.jpg" alt="bird">
+  </section>
+</article>
 ```
