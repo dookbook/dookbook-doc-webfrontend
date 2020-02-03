@@ -20,7 +20,7 @@ TOPICS: <a>
 | **允许的内容** | 可见的，包含*流式内容*（不包括*交互内容*）或*短语内容*。|
 | **标签省略** | 不允许，开始标签和结束标签都不能省略。|
 | **允许的父元素** | *流式内容*或*短语内容*的元素，`<a>`元素除外。|
-| **Permitted ARIA roles** | `button`, `checkbox`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `switch`, `tab`, `treeitem` |
+| **允许的 ARIA 角色** | `button`, `checkbox`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `option`, `radio`, `switch`, `tab`, `treeitem` |
 | **DOM 接口** | **`HTMLAnchorElement`** |
 
 ## 属性
@@ -29,7 +29,7 @@ TOPICS: <a>
 
 | 属性 | 描述 |
 | :-- | :-- |
-| **`href`** | 包含**超链接**指向的URL或URL片段(fragment)。URL不限于基于HTTP的文档 (*`http:`*)，也可以使用浏览器支持的任何协议。例如，*[`file:`](https://en.wikipedia.org/wiki/File_URI_scheme)*、*`ftp:`*、*`tel:`*和 *`mailto:`*。|
+| **`href`** | 包含**超链接**指向的URL或URL片段(fragment)。URL不限于基于HTTP的文档 (*`http:`*)，也可以使用浏览器支持的任何协议。例如，*[`file:`](https://en.wikipedia.org/wiki/File_URI_scheme)*、*`ftp:`*、*`tel:`* 和 *`mailto:`*。|
 | **`target`** | 该属性指定在**何处显示**链接的资源。取值为标签页(tab)、窗口(window)、或[`<iframe>`](/en/webfrontend/<iframe>)等浏览上下文的名称或关键词。以下关键字具有特殊的意义：*`_self`* (*默认*)，*`_blank`*，*`_parent`*，*`_top`*。 |
 | **`rel`** | 该属性指定了目标对象到链接对象的**关系**。该值是*空格分隔*的列表类型值。 |
 | **`download`** | 此属性指示浏览器**下载**URL而不是导航到它，因此将提示用户将其保存为本地文件。如果属性有一个值，那么此值将在下载保存过程中作为预填充的文件名（如果用户需要，仍然可以更改文件名）。此属性对允许的值没有限制，但是 *`/`* 和 *`\`*会被转换为 *下划线* (*`_`*)。大多数文件系统限制了文件名中的标点符号，因此浏览器将相应地调整建议的文件名。 |

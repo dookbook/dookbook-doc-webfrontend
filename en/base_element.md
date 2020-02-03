@@ -32,6 +32,13 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 If multiple `<base>` elements are specified, only the first href and first target value are used;
 all others are ignored.
 
+!!! warn "Tip"
+    Please place the `<base>` tag in the first element of the `<head>` element, so that other elements
+in the head area can use the information in the `<base>` element.
+
+!!! warn "Note"
+    If you use the `<base>` tag, you must have the `href` attribute or the `target` attribute or both.
+
 ### Anchor elements
 
 Anchor TOPICS within a page, e.g. `<a href="#anchor">anchor</a>`, are resolved by using the base URL
