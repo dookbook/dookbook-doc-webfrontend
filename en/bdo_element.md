@@ -2,19 +2,19 @@ TOPICS: <bdo>
 
 # `<bdo>`
 
-The **`<bdo>`**  (HTML Bidirectional Text Override element)overrides the current directionality of
-text, so that the text within is rendered in a different direction.
+The **`<bdo>`** element (HTML bidirectional overlay element) is used to cover the current text orientation,
+which causes the characters to line up in a given direction.
 
 !!! warn "Note"
     The text's characters are drawn from the starting point in the given direction; the individual
-characters' orientation is not affected (so characters don't get drawn backward, for example).
+    characters' orientation is not affected (so characters don't get drawn backward, for example).
 
 |  |  |
 | :-- | :-- |
 | **Content categories** | Flow content, phrasing content, palpable content. |
 | **Permitted content** | Phrasing content. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content.
+| **Permitted parents** | Any element that accepts phrasing content. |
 | **Permitted ARIA roles** | Any |
 | **DOM interface** | **`HTMLElement`** Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the `HTMLSpanElement` interface for this element. |
 
