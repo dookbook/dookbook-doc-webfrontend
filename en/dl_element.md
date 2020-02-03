@@ -9,71 +9,57 @@ terms (specified using the `<dt>` element) and descriptions (provided by `<dd>` 
 Common uses for this element are to implement a *glossary* or to display
 *metadata* (a list of key-value pairs).
 
-## `<dl>` Meta
+## `<dl>` Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, and if the `<dl>` element's children include one name-value group, palpable content.
-| **Permitted content** | Either: Zero or more groups each consisting of one or more `<dt>` elements followed by one or more `<dd>` elements, optionally intermixed with [`<script>`](/en/webfrontend/<script>) and [`<template>`](/en/webfrontend/<template>) elements.<br>Or: One or more [`<div>`](/en/webfrontend/<div>) elements, optionally intermixed with [`<script>`](/en/webfrontend/<script>) and [`<template>`](/en/webfrontend/<template>) elements.
+| **Content categories** | *Flow content*, and if the `<dl>` element's children include one name-value group, *palpable content*.
+| **Permitted content** | Either: Zero or more groups each consisting of one or more **`<dt>`** elements followed by one or more **`<dd>`** elements, optionally intermixed with **[`<script>`](/en/webfrontend/<script>)** and **[`<template>`](/en/webfrontend/<template>)** elements.<br><br>Or: One or more **[`<div>`](/en/webfrontend/<div>)** elements, optionally intermixed with **[`<script>`](/en/webfrontend/<script>)** and **[`<template>`](/en/webfrontend/<template>)** elements.
 | **Tag omission** | None, both the starting and ending tag are mandatory.
 | **Permitted parents** | Any element that accepts flow content.
 | **Permitted ARIA roles** | `group`, `presentation` |
-| **DOM interface** | `HTMLDListElement` |
+| **DOM interface** | **`HTMLDListElement`** |
 
 ## `<dl>` Attributes
 
 This element only includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
-## `<dt>`
+## HTML Term Element: `<dt>`
 
 The **HTML `<dt>` element** specifies a **term** in a description or definition list, and as such must
-be used inside a `<dl>` element. It is usually followed by a `<dd>` element; however, multiple `<dt>`
+be used inside a *`<dl>`* element. It is usually followed by a *`<dd>`* element; however, multiple `<dt>`
 elements in a row indicate several terms that are all defined by the immediate next `<dd>` element.
 
 The subsequent `<dd>` (**Description Details**) element provides the definition or other related text
 associated with the term specified using `<dt>`.
 
+### `<dt>` Technical Summary
+
 |  |  |
 | :-- | :-- |
 | **Content categories** | None. |
-| **Permitted content** | Flow content, but with no [`<header>`](/en/webfrontend/<header>), [`<footer>`](/en/webfrontend/<footer>), sectioning content or heading content descendants. |
+| **Permitted content** | *Flow content*, but with no *[`<header>`](/en/webfrontend/<header>)*, *[`<footer>`](/en/webfrontend/<footer>)*, sectioning content or heading content descendants. |
 | **Tag omission** | Must have a start tag. The end tag may be omitted if this element is immediately followed by another `<dt>` element or a `<dd>`, or if there is no more content in the parent element. |
 | **Permitted parents** | Before a `<dt>` or a `<dd>` element, inside a `<dl>` or (in `WHATWG` HTML) a [`<div>`](/en/webfrontend/<div>) that is inside a `<dl>`. |
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLDListElement` |
+| **DOM interface** | **`HTMLDListElement`** |
 
-## Notes
-
-Do not use this element (nor [`<ul>`](/en/webfrontend/<ul>) elements) to merely create indentation on
-a page. Although it works, this is a bad practice and obscures the meaning of description lists.
-
-To change the indentation of a description term, use the CSS `margin` property.
-
-## Accessibility Concerns
-
-Each screen reader announces `<dl>` content differently. Some screen readers, such as VoiceOver on
-iOS, will not announce that `<dl>` content is a list. Because of this, make sure each list item's
-content is written in such a way that it communicates
-its relationship to the other list items in the list grouping.
-
-- [CodePen - HTML Buddies: dt & dd](https://s.codepen.io/aardrian/debug/NzGaKP)
-
-## `<dd>`
+## HTML Details Element: `<dd>`
 
 The **HTML `<dd>` element** provides the **details** about or the **definition** of the preceding term
 (`<dt>`) in a description list (`<dl>`).
 
-### `<dd>` Meta
+### `<dd>` Technical Summary
 
 |  |  |
 | :-- | :-- |
 | **Content categories** | None. |
-| **Permitted content** | Flow content. |
+| **Permitted content** | *Flow content*. |
 | **Tag omission** | The start tag is required. The end tag may be omitted if the `<dd>` element is immediately followed by another `<dd>` element or a `<dt>` element, or if there is no more content in the parent element. |
-| **Permitted parents** | `<dl>` or (in WHATWG HTML) a [`<div>`](/en/webfrontend/<div>) that is inside a `<dl>`. |
-| **Previous sibling** | `<dt>` or another `<dd>` element.|
+| **Permitted parents** | **`<dl>`** or (in *[[WHATWG]]* HTML) a **[`<div>`](/en/webfrontend/<div>)** that is inside a `<dl>`. |
+| **Previous sibling** | **`<dt>`** or another **`<dd>`** element.|
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ### `<dd>` Attributes
 
@@ -94,6 +80,7 @@ The **HTML `<dd>` element** provides the **details** about or the **definition**
     Mozilla Corporation and hundreds of
     volunteers.
   </dd>
+
   <!-- Other terms and descriptions -->
 </dl>
 ```
@@ -170,7 +157,7 @@ dt::after {
 
 ### Wrapping name-value groups in `<div>` elements
 
-WHATWG HTML allows wrapping each name-value group in a `<dl>` element in a
+[[WHATWG]] HTML allows wrapping each name-value group in a `<dl>` element in a
 [`<div>`](/en/webfrontend/<div>) element.
 This can be useful when using microdata, or when [global attributes](/en/webfrontend/HTML_Global_Attributes)
 apply to a whole group, or for styling purposes.

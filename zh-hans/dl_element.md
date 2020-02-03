@@ -8,49 +8,49 @@ TOPICS: <dl>
 
 在 HTML5 之前， `<dl>` 被大家以**定义列表**所熟知。
 
-## `<dl>` 元数据
+## `<dl>` 技术摘要
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 流内容，如果元素`<dl>`的子元素包括一对名称/值对，则可显示内容。|
-| **允许的内容** | 零个或多个`<dt>`元素，每个元素后接一个或多个`<dd>`元素。|
+| **内容分类** | *流式内容*，如果元素`<dl>`的子元素包括一对名称/值，则为 *可触知内容*。|
+| **允许的内容** | 零个或多个 **`<dt>`** 元素，每个元素后接一个或多个 **`<dd>`** 元素。也可以是 **[`<script>`](/zh-hans/webfrontend/<script>)** 和 **[`<template>`](/zh-hans/webfrontend/<template>)** 混合。<br><br>或：一个或多个 **[`<div>`](/zh-hans/webfrontend/<div>)** 元素和 **[`<script>`](/zh-hans/webfrontend/<script>)** 和 **[`<template>`](/zh-hans/webfrontend/<template>)** 的混合。 |
 | **标签省略** | 不允许，开始标签和结束标签都不能省略。|
-| **允许的父元素** | 接受流内容的任何元素。 |
-| **DOM 接口** | `HTMLDListElement` |
+| **允许的父元素** | 接受 *流式内容* 的任何元素。 |
+| **DOM 接口** | **`HTMLDListElement`** |
 
 ## `<dl>` 属性
 
 该元素包含[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)。
 
-## `<dt>`
+## HTML 术语定义元素 `<dt>`
 
-**HTML `<dt>` 元素** （或 HTML **术语定义元素**）用于在一个定义列表中声明一个**术语**。该元素仅能作为 `<dl>` 的子元素出现。通常在该元素后面会跟着
-`<dd>` 元素， 然而多个连续出现的 `<dt>` 元素都将由出现在它们后面的第一个 `<dd>` 元素定义。
+**HTML 术语定义元素**（**`<dt>`**）用于在一个定义列表中声明一个**术语**。该元素仅能作为 *`<dl>`* 的子元素出现。通常在该元素后面会跟着
+*`<dd>`* 元素，然而多个连续出现的 `<dt>` 元素都将由出现在它们后面的第一个 `<dd>` 元素定义。
 
-### `<dt>` 元数据
+### `<dt>` 技术摘要
 
 |  |  |
 | :-- | :-- |
 | **内容分类** | 没有 |
-| **允许的内容** | 流内容，但是不能包含 [`<header>`](/zh-hans/webfrontend/<header>) 元素、[`<footer>`](/zh-hans/webfrontend/<footer>) 元素或者其他章节、标题内容。|
+| **允许的内容** | *流式内容*，但是不能包含 *[`<header>`](/zh-hans/webfrontend/<header>)* 元素、*[`<footer>`](/zh-hans/webfrontend/<footer>)* 元素或者其他区块内容或者标题内容。|
 | **标签省略** | 必须有开标签。如果该元素后面紧跟着另一个 `<dd>` 元素，或者父元素中没有更多内容，则可以省略闭标签。|
 | **允许的父元素** | 该元素需要出现在 `<dt>` 元素或者 `<dd>` 元素之前，并且在 `<dl>` 元素中。|
-| **DOM 接口** | `HTMLElement` |
+| **DOM 接口** | **`HTMLDListElement`** |
 
-## `<dd>`
+## HTML 术语描述元素 `<dd>`
 
-**HTML `<dd>` 元素**（HTML **描述元素**）用来指明一个描述列表  (`<dl>`) 元素中一个术语的**描述**。这个元素只能作为描述列表元素的子元素出现，并且必须跟着一个
-`<dt>` 元素。
+**HTML 术语描述元素**（**`<dd>`**）用来指明一个描述列表  (`<dl>`) 元素中一个术语的**描述**。这个元素只能作为描述列表元素的子元素出现，并且必须跟着一个 `<dt>` 元素。
 
-### `<dd>` 元数据
+### `<dd>` 技术摘要
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 没有 |
-| **允许的内容** | 流内容 |
+| **内容分类** | 无 |
+| **允许的内容** | *流式内容* |
 | **标签省略** | 必须有开标签。如果该元素后面紧跟着另一个 `<dd>` 元素，或者父元素中没有更多内容，则可以省略闭标签。|
-| **允许的父元素** | 该元素需要出现在 `<dt>` 元素和 `<dd>` 元素之后，并且在一个 `<dl>` 元素里。|
-| **DOM 接口** | `HTMLElement` |
+| **允许的父元素** | **`<dl>`** 元素，或（在 *[[WHATWG]]* HTML 规范里）在 `<dl>` 里的 **[`<div>`](/zh-hans/webfrontend/<div>)** 元素。|
+| **允许的兄弟元素** | **`<dt>`** 元素，或另一个 **`<dd>`** 元素。|
+| **DOM 接口** | **`HTMLElement`** |
 
 ### `<dd>` 属性
 
@@ -60,12 +60,107 @@ TOPICS: <dl>
 
 ## 示例
 
+### 单一术语及描述
+
 ```html
 <dl>
   <dt>Firefox</dt>
   <dd>A free, open source, cross-platform, graphical web browser
       developed by the Mozilla Corporation and hundreds of volunteers.
   </dd>
-  <!-- other terms and definitions -->
+
+  <!-- 其他术语及描述 -->
+</dl>
+```
+
+### 多个术语，单一描述
+
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dt>Mozilla Firefox</dt>
+  <dt>Fx</dt>
+  <dd>
+    A free, open source, cross-platform,
+    graphical web browser developed by the
+    Mozilla Corporation and hundreds of
+    volunteers.
+  </dd>
+
+  <!-- 其他术语及描述 -->
+</dl>
+```
+
+### 单一术语，多个描述
+
+```html
+<dl>
+  <dt>Firefox</dt>
+  <dd>
+    A free, open source, cross-platform,
+    graphical web browser developed by the
+    Mozilla Corporation and hundreds of
+    volunteers.
+  </dd>
+  <dd>
+    The Red Panda also known as the Lesser
+    Panda, Wah, Bear Cat or Firefox, is a
+    mostly herbivorous mammal, slightly larger
+    than a domestic cat (60 cm long).
+  </dd>
+
+  <!-- 其他术语及描述 -->
+</dl>
+```
+
+### 多术语，多描述
+
+可以将上述示例综合使用。
+
+### 元数据
+
+定义列表可以用来显示一组键值对的元数据。
+
+```html
+<dl>
+  <dt>姓名</dt>
+  <dd>ABC</dd>
+  <dt>出生</dt>
+  <dd>1952</dd>
+  <dt>出生地</dt>
+  <dd>中国</dd>
+  <dt>颜色</dt>
+  <dd>绿色</dd>
+</dl>
+```
+
+提示：可以用CSS定义键值对的分隔符，就像：
+
+```css
+dt::after {
+  content: ": ";
+}
+```
+
+### 将键值对打包成组
+
+```html
+<dl>
+  <div>
+    <dt>姓名</dt>
+    <dd>ABC</dd>
+  </div>
+  <div>
+    <dt>出生</dt>
+    <dd>1952</dd>
+  </div>
+  <div>
+    <dt>出生地</dt>
+    <dd>中国</dd>
+  </div>
+  <div>
+    <dt>颜色</dt>
+    <dd>绿色</dd>
+  </div>
 </dl>
 ```
