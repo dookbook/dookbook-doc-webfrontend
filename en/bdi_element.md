@@ -4,22 +4,9 @@ TOPICS: <bdi>
 
 The **HTML Bidirectional Isolate element (`<bdi>`)**  tells the browser's bidirectional algorithm to
 treat the text it contains in isolation from its surrounding text. This tag is useful when you don't
- know from which direction to embed text, such as text from a database (especially the text direction
- of the database); for example, when posting user reviews or other content that you don't have full
- control over.
-
-Bidirectional text is text that may contain both sequences of characters that are arranged
-left-to-right (LTR) and sequences of characters that are arranged right-to-left (RTL), such as an
-Arabic quotation embedded in an English string. Browsers implement the
-[Unicode Bidirectional Algorithm](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)
-to handle this. In this algorithm, characters are given an
-implicit directionality: for example, Latin characters are treated as LTR while Arabic characters
-are treated as RTL. Some other characters (such as spaces and some punctuation) are treated as
-neutral and are assigned directionality based on that of their surrounding characters.
-
-Usually, the bidirectional algorithm will do the right thing without the author having to provide
-any special markup but, occasionally, the algorithm needs help.
-That's where `<bdi>` comes in.
+know from which direction to embed text, such as text from a database (especially the text direction
+of the database); for example, when posting user reviews or other content that you don't have full
+control over.
 
 |  |  |
 | :-- | :-- |
@@ -46,31 +33,9 @@ directionality of the surrounding text.
 - The directionality of text embedded in `<bdi>` is not influenced by the directionality
 of the surrounding text.
 
-For example, consider some text like:
-
-```html
-EMBEDDED-TEXT - 1st place
-```
-
-If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then   `- 1` will be
-treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
-
-```html
-1 - EMBEDDED-TEXTst place
-```
-
-If you know the directionality of `EMBEDDED-TEXT` in advance, you can fix this problem by wrapping
-`EMBEDDED-TEXT` in a [`<span>`](/en/webfrontend/<span>) with the `dir` attribute set to the known directionality.
-But if you don't know the directionality - for example, because `EMBEDDED-TEXT` is being read from a
-database or entered by the user - you should use `<bdi>` to prevent the
-directionality of `EMBEDDED-TEXT` from affecting its surroundings.
-
-Though the same visual effect can be achieved using the CSS rule `unicode-bidi: isolate` on a
-[`<span>`](/en/webfrontend/<span>) or another text-formatting element, HTML authors should not
-use this approach because it is not semantic and browsers are allowed to ignore CSS styling.
-
-Embedding the characters in `<span dir="auto">` has the same effect as using `<bdi>`,
-but its semantics are less clear.
+Although the `<span>` and `<bdi>` elements can achieve the same visual effects on CSS rules, the author
+does not recommend this method in HTML because it does not conform to semantics and allows browsers
+to ignore CSS styles.
 
 ## Examples
 
