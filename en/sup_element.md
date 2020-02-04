@@ -1,10 +1,12 @@
 TOPICS: <sup>
 
-# `<sup>`
+# HTML Superscript Element: `<sup>`
 
-The **HTML Superscript element (`<sup>`)** specifies inline text which is to be displayed as superscript
+The **HTML Superscript element** (**`<sup>`**) specifies inline text which is to be displayed as **superscript**
 for solely typographical reasons. Superscripts are usually rendered with
 a raised baseline using smaller text.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
@@ -21,23 +23,23 @@ This element only includes the [global attributes](/en/webfrontend/HTML_Global_A
 
 ## Usage Notes
 
-The `<sup>` element should only be used for typographical reasons—that is, to change the position of
-the text to comply with typographical conventions or standards, rather than
-solely for presentation or appearance purposes.
+The `<sup>` element should only be used for **typographical reasons** — that is,
+to change the position of the text to comply with typographical conventions or standards,
+rather than solely for presentation or appearance purposes.
 
-For example, to style the wordmark] of a business or product which uses a raised baseline should
-be done using CSS (most likely `vertical-align`) rather than `<sup>`. This would be done using,
-for example, `vertical-align: super` or, to shift the baseline up 50%, `vertical-align: 50%`.
+For example, to style the wordmark of a business or product which uses a raised baseline should
+be done using [[CSS]] (most likely **`vertical-align`**) rather than `<sup>`. This would be done using,
+for example, *`vertical-align: super`* or, to shift the baseline up `50%`, `vertical-align: 50%`.
 
 Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
-- Displaying exponents, such as "x^3^." It may be worth considering the use of MathML] for
-these, especially in more complex cases. See Exponents] under Examples] below.
-- Displaying superior lettering], which is used in some languages when rendering certain abbreviations.
-For example, in French, the word "mademoiselle" can be abbreviated "M^lle^"); this is an
-acceptable use case. See Superior lettering] for examples.
-- Representing ordinal numbers, such as "4^th^"
-instead of "fourth." See Ordinal numbers] for examples.
+- Displaying *exponents*, such as "x^^3^^." It may be worth considering the use of *MathML* for
+these, especially in more complex cases. See Exponents under Examples below.
+- Displaying *superior lettering*, which is used in some languages when rendering certain abbreviations.
+For example, in French, the word "mademoiselle" can be abbreviated "M^^lle^^"); this is an
+acceptable use case. See Superior lettering for examples.
+- Representing *ordinal numbers*, such as "4^^th^^"
+instead of "fourth." See Ordinal numbers for examples.
 
 ## Examples
 
