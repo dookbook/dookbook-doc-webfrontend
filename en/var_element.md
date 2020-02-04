@@ -40,7 +40,7 @@ an appropriate semantic element among the following:
 
 ## Default Style
 
-Most browsers apply font-style to "*italic*" when rendering `<var>`.
+Most browsers apply font-style to *`italic`* when rendering `<var>`.
 
 ```css
 var {
