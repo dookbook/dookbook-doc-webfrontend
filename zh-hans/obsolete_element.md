@@ -62,7 +62,7 @@ TOPICS: <acronym>
 | `<nobr>` | **HTML`<nobr>`元素** 阻止文本自动拆分成新行，所以它展示为长的一行，可能还需要滚动。这个标签不是标准的 HTML，并且不应该使用。反之应该使用 CSS 属性 |
 | `<noembed>` | **`<noembed>`** 元素是个废除的和不标准的方式，用于向不支持 [`<embed>`](/zh-hans/webfrontend/<embed>) ，或者不支持作者希望的 嵌入式内容 的浏览器提供替代（或者“后备”）内容。这个元素在 HTML 4.01 起废除，以支持后备 |
 | `<noframes>` | **`<noframes>`** 是个 HTML 元素，用于支持不支持 `<frame>` 元素的浏览器，或者这样配置的浏览器。 |
-| `<plaintext>` | **HTML纯文本元素 (`<plaintext>`)** 将起始标签后面的任何东西渲染为纯文本，不会解释为 HTML。它没有闭合标签，因为任何后面的东西都会看做纯文本。 |
+| **`<plaintext>`** | HTML 纯文本元素。将从标签开始以后的所有文本渲染为**纯文本**，不会解释为 HTML。它没有闭合标签，因为任何后面的东西都会看做纯文本。可使用 **[`<pre>`](/zh-hans/webfrontend/<pre>)** 替代。|
 | `<shadow>` | **HTML `<shadow>` 元素** — Web 组件技术套件的废弃部分 — 目的是用作 Shadow DOM insertion point。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。在正常的 HTML 没有任何用处。 |
 | `<spacer>` | **`<spacer>`** 是过时的 HTML 元素，它可以向页面插入间隔。它由 Netscape 设计，用于实现单像素布局图像的相同效果，Web 设计师用它来向页面添加空白，而不需要实际使用图片。 但是，`<spacer>` 不再受任何主流浏览器支持，并且相同效果可以简单由 CSS 实现。 |
 | **`<strike>`** | HTML 删除线元素。如果是标记删除文本，推荐使用 **[`<del>`](/zh-hans/webfrontend/<del>)** 代替；如果是在文本上放置删除线的样式，推荐使用CSS属性 **`text-decoration: line-through`** 代替；如果是标记不再准确或不再相关的文本，推荐使用 **[`<s>`](/zh-hans/webfrontend/<s>)** 代替。 |
