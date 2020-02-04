@@ -4,7 +4,7 @@ TOPICS: <code>
 
 The **HTML `<code>` element** displays its contents styled in a fashion intended to indicate that
 the text is a **short fragment of computer code**. By default, the content text is displayed using the
-user agent's default *monospace* font.
+user agent's default *`monospace`* font.
 
 ## Technical Summary
 
@@ -36,4 +36,4 @@ To represent multiple lines of code, wrap the `<code>` element within a **[`<pre
 element. The `<code>` element by itself only represents a *single phrase of code* or *line of code*.
 
 A [[CSS]] rule can be defined for the code selector to override the browser's default font face.
-Preferences set by the user might take precedence over the specified CSS.
+Preferences set by the user might take precedence over the specified [[CSS]].
