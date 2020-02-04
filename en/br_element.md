@@ -5,11 +5,23 @@ TOPICS: <br>
 The **HTML `<br>` element** produces a line break in text (carriage-return). It is useful for
 writing a poem or an address, where the division of lines is significant.
 
-As you can see from the above example, a `<br>` element is included at each point where we want the
+ A `<br>` element is included at each point where we want the
 text to break. The text after the `<br>` begins again at the start of the next line of the text block.
 
-Note: Do not use `<br>` to create margins between paragraphs; wrap them in [`<p>`](/en/webfrontend/<p>)
-elements and use the CSS] `margin` property to control their size.
+!!! warn “Note"
+    Do not use `<br>` to create margins between paragraphs; wrap them in [`<p>`](/en/webfrontend/<p>)
+    elements and use the CSS `margin` property to control their size.
+
+## Technical Summary
+
+|  |  |
+| :-- | :-- |
+| **Content categories** | *Flow content*, *phrasing content*.|
+| **Permitted content** | None, it is an empty element.|
+| **Tag omission** | Must have a start tag, and must not have an end tag. In XHTML documents, write this element as `<br />`. |
+| **Permitted parents** | Any element that accepts *phrasing content*.|
+| **Permitted ARIA roles** | Any |
+| **DOM interface** | **`HTMLBRElement`** |
 
 ## Attributes
 
@@ -17,9 +29,9 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 ### Deprecated attributes
 
-`clear`
-
-Indicates where to begin the next line after the break.
+| Attribute Value | Description |
+| :-- | :-- |
+|`clear`|Indicates where to begin the next line after the break.|
 
 ## Styling with CSS
 
@@ -52,17 +64,3 @@ Creating separate paragraphs of text using `<br>` is not only bad practice, it i
 people who navigate with the aid of screen reading technology. Screen readers may announce the
 presence of the element, but not any content contained within `<br>`s. This can be a confusing and
 frustrating experience for the person using the screen reader.
-
-Use [`<p>`](/en/webfrontend/<p>) elements, and use CSS properties like `margin`
-to control their spacing.
-
-## Technical Summary
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | Flow content, phrasing content.|
-| **Permitted content** | None, it is an empty element.|
-| **Tag omission** | Must have a start tag, and must not have an end tag. In XHTML documents, write this element as `<br />`. |
-| **Permitted parents** | Any element that accepts phrasing content.|
-| **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLBRElement` |
