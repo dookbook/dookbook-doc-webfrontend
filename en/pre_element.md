@@ -1,19 +1,21 @@
 TOPICS: <pre>
 
-# `<pre>`
+# HTML Preformatted Element: `<pre>`
 
-The **HTML `<pre>` element** represents preformatted text which is to be presented exactly as
-written in the HTML file. The text is typically rendered using a non-proportional ("monospace")
-font. Whitespace inside this element is displayed as written.
+The **HTML `<pre>` element** represents **preformatted text** which is to be presented exactly as
+written in the HTML file. The text is typically rendered using a non-proportional ("*monospace*")
+font. *Whitespace* (eg,. `Space` and `Tab`) inside this element is displayed as written.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, palpable content. |
-| **Permitted content** | Phrasing content. |
+| **Content categories** | *Flow content*, *palpable content*. |
+| **Permitted content** | *Phrasing content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content. |
+| **Permitted parents** | Any element that accepts *flow content*. |
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLPreElement` |
+| **DOM interface** | **`HTMLPreElement`** |
 
 ## Attributes
 
@@ -21,9 +23,9 @@ This element only includes the [global attributes](/en/webfrontend/HTML_Global_A
 
 | Attribute | Description |
 | :-- | :-- |
-| `wrap` | Is a hint indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS `white-space` instead. |
+| ~~`wrap`~~ | A hint indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS **`white-space`** instead. |
 
-## Example
+## Simple Example
 
 ```html
 <p>Using CSS to change the font color is easy.</p>
@@ -32,6 +34,23 @@ body {
   color: red;
 }
 </pre>
+```
+
+## HTML Code in `<pre>`
+
+```html
+<pre>
+&lt;html&gt;  <!-- Note the use of symbol entities to escape -->
+</pre>
+```
+
+If you wish to use the `<pre>` tag to define **computer source code**, use it in conjunction with
+the **[`<code>`](/en/webfrontend/<code>)** element to get more precise semantics.
+
+```html
+<pre><code>
+&lt;html&gt;  <!-- Note the use of symbol entities to escape -->
+</code></pre>
 ```
 
 ## Accessibility Concerns
