@@ -10,10 +10,10 @@ HTML `<body>`元素表示文档的*内容*。一个文档里**只能含有一个
 
 |  |  |
 | :--- | :--- |
-| **内容分类** | Sectioning root |
-| **允许的内容** | Flow content |
+| **内容分类** | *章节根节点* |
+| **允许的内容** | *流式内容* |
 | **允许的父元素** | 它必须是[`<html>`](/zh-hans/webfrontend/<html>/)元素的直接子元素 |
-| **DOM 接口** | `HTMLBodyElement`<br>`<body>`元素接口`HTMLBodyElement`.<br>你可以通过`document.body`属性访问`<body>`元素。|
+| **DOM 接口** | **`HTMLBodyElement`** <br>`<body>`元素接口为`HTMLBodyElement`.<br>你可以通过`document.body`属性访问`<body>`元素。|
 
 ## `<body>` 属性
 
