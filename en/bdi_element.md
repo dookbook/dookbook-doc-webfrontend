@@ -3,8 +3,10 @@ TOPICS: <bdi>
 # `<bdi>`
 
 The **HTML Bidirectional Isolate element (`<bdi>`)**  tells the browser's bidirectional algorithm to
-treat the text it contains in isolation from its surrounding text. It's particularly useful when a
-website dynamically inserts some text and doesn't know the directionality of the text being inserted.
+treat the text it contains in isolation from its surrounding text. This tag is useful when you don't
+know from which direction to embed text, such as text from a database (especially the text direction
+of the database); for example, when posting user reviews or other content that you don't have full
+control over.
 
 Bidirectional text is text that may contain both sequences of characters that are arranged
 left-to-right (LTR) and sequences of characters that are arranged right-to-left (RTL), such as an
@@ -19,57 +21,34 @@ Usually, the bidirectional algorithm will do the right thing without the author 
 any special markup but, occasionally, the algorithm needs help.
 That's where `<bdi>` comes in.
 
-The `<bdi>` element is used to wrap a span of text and instructs the bidirectional algorithm to
-treat this text in isolation from its surroundings. This works in two ways:
-
-- The directionality of text embedded in `<bdi>` does not influence the
-directionality of the surrounding text.
-- The directionality of text embedded in `<bdi>` is not influenced by the directionality
-of the surrounding text.
-
-For example, consider some text like:
-
-```html
-EMBEDDED-TEXT - 1st place
-```
-
-If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then   `- 1` will be
-treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
-
-```html
-1 - EMBEDDED-TEXTst place
-```
-
-If you know the directionality of `EMBEDDED-TEXT` in advance, you can fix this problem by wrapping
-`EMBEDDED-TEXT` in a [`<span>`](/en/webfrontend/<span>) with the dir attribute set to the known directionality.
-But if you don't know the directionality - for example, because `EMBEDDED-TEXT` is being read from a
-database or entered by the user - you should use `<bdi>` to prevent the
-directionality of `EMBEDDED-TEXT` from affecting its surroundings.
-
-Though the same visual effect can be achieved using the CSS rule `unicode-bidi: isolate` on a
-[`<span>`](/en/webfrontend/<span>) or another text-formatting element, HTML authors should not
-use this approach because it is not semantic and browsers are allowed to ignore CSS styling.
-
-Embedding the characters in `<span dir="auto">` has the same effect as using `<bdi>`,
-but its semantics are less clear.
-
 |  |  |
 | :-- | :-- |
 | **Content categories** | Flow content, phrasing content, palpable content. |
 | **Permitted content** | Phrasing content. |
 | **Tag omission** | None, both the starting and ending tag are mandatory.
 | **Permitted parents** | Any element that accepts phrasing content].
-| **Permitted ARIA roles** | Any
-| **DOM interface** | `HTMLElement` |
+| **Permitted ARIA roles** | Any |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en/webfrontend/HTML_Global_Attributes),
-except that the
-`dir` attribute behaves differently than normal: it defaults to auto, meaning its value is
-never inherited from the parent element. This means that unless you specify a value of either
-`"rtl"` or `"ltr"` for `dir`, the user agent will determine the correct directionality
-to use based on the contents of the `<bdi>`.
+| Attribute Value | Description |
+| :-- | :-- |
+| `dir` | Like all other HTML elements, this element supports the [global attributes](/en/webfrontend/HTML_Global_Attributes),except that the`dir` attribute behaves differently than normal: it defaults to auto, meaning its value is never inherited from the parent element. This means that unless you specify a value of either `"rtl"` or `"ltr"` for `dir`, the user agent will determine the correct directionality to use based on the contents of the `<bdi>`. |
+
+## 使用说明
+
+The `<bdi>` element is used to wrap a span of text and instructs the bidirectional algorithm to
+treat this text in isolation from its surroundings. This works are two advantages:
+
+- The directionality of text embedded in `<bdi>` does not influence the
+directionality of the surrounding text.
+- The directionality of text embedded in `<bdi>` is not influenced by the directionality
+of the surrounding text.
+
+Although the `<span>` and `<bdi>` elements can achieve the same visual effects on CSS rules, the author
+does not recommend this method in HTML because it does not conform to semantics and allows browsers
+to ignore CSS styles.
 
 ## Examples
 
@@ -110,4 +89,10 @@ so the example output is properly ordered:
  <li><bdi class="name">اَلأَعْشَى</bdi> - 1st place</li>
  <li><bdi class="name">Jerry Cruncher</bdi> - 2nd place</li>
 </ul>
+```
+
+### Other examples
+
+```html
+<p dir="ltr">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>
 ```
