@@ -1,23 +1,26 @@
 TOPICS: <kbd>
 
-# `<kbd>`
+# HTML Keyboard Input Element: `<kbd>`
 
-The **HTML Keyboard Input element (`<kbd>`)** represents a span of inline text denoting textual user
-input from a keyboard, voice input, or any other text entry device. By convention, the user agent
+The **HTML Keyboard Input element** (**`<kbd>`**) represents a span of inline text denoting textual user
+**input from a keyboard**, **voice input**, or any other **text entry device**.
+By convention, the user agent
 defaults to rendering the contents of a `<kbd>` element using its default monospace font, although
 this is not mandated by the HTML standard.
 
-`<kbd>` may be nested in various combinations with the [`<samp>`](/en/webfrontend/<samp>)
+`<kbd>` may be nested in various combinations with the *[`<samp>`](/en/webfrontend/<samp>)*
 (Sample Output) element to represent various forms of input or input based on visual cues.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, palpable content. |
-| **Permitted content** | Phrasing content. |
+| **Content categories** | *Flow content*, *phrasing content*, *palpable content*. |
+| **Permitted content** | *Phrasing content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 
@@ -29,9 +32,9 @@ Other elements can be used in tandem with `<kbd>` to represent more specific sce
 
 - Nesting a `<kbd>` element within another `<kbd>` element represents an actual key or other unit of
 input as a portion of a larger input. See Representing keystrokes within an input below.
-- Nesting a `<kbd>` element inside a [`<samp>`](/en/webfrontend/<samp>) element represents input
+- Nesting a `<kbd>` element inside a *[`<samp>`](/en/webfrontend/<samp>)* element represents input
 that has been echoed back to the user by the system. See Echoed input, below, for an example.
-- Nesting a [`<samp>`](/en/webfrontend/<samp>) element inside a `<kbd>` element, on the other hand,
+- Nesting a *[`<samp>`](/en/webfrontend/<samp>)* element inside a `<kbd>` element, on the other hand,
 represents input which is based on text presented by the system, such as the names of menus and menu
 items, or the names of buttons displayed on the screen. See the example under Representing onscreen
 input options below.
@@ -67,7 +70,7 @@ First, let's look at what this looks like as just plain HTML.
 This wraps the entire key sequence in an outer `<kbd>` element, then each individual key within its
 own, in order to denote the components of the sequence.
 
-### With Cstom Styles
+### With Custom Styles
 
 We can make more sense of this by adding some CSS:
 
