@@ -23,10 +23,10 @@ That's where `<bdi>` comes in.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, palpable content. |
-| **Permitted content** | Phrasing content. |
+| **Content categories** | *Flow content*, *phrasing content*, *palpable content*. |
+| **Permitted content** | *Phrasing content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory.
-| **Permitted parents** | Any element that accepts phrasing content].
+| **Permitted parents** | Any element that accepts phrasing content.
 | **Permitted ARIA roles** | Any |
 | **DOM interface** | **`HTMLElement`** |
 
