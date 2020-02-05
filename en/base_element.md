@@ -9,10 +9,10 @@ The base URL of a document can be queried from a script using document.baseURI.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Metadata content. |
+| **Content categories** | *Metadata content*. |
 | **Permitted content** | None, it is an empty element. |
 | **Tag omission** | There must be no closing tag. |
-| **Permitted parents** | Any [`<head>`](/en/webfrontend/<head>) that doesn't contain any other `<base>` element |
+| **Permitted parents** | Any [`<head>`](/en/webfrontend/<head>) that doesn't contain any other `<base>` element. |
 | **Permitted ARIA roles** | None |
 | **DOM interface** | `HTMLBaseElement` |
 
