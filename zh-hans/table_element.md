@@ -31,7 +31,7 @@ TOPICS: <table>
 
 表格标签支持[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)。
 
-### 不带标题单元格的简单表格
+## 不带标题单元格的简单表格
 
 ```html
 <!-- 示例：简单表格 -->
