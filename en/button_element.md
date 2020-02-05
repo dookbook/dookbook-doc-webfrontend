@@ -9,12 +9,12 @@ but you can change the appearance of the button using CSS.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, Interactive content, listed, labelable, and submittable form-associated element, palpable content. |
-| **Permitted content** | Phrasing content but there must be no Interactive content |
+| **Content categories** | *Flow content*, *phrasing content*, *Interactive content*, listed, labelable, and submittable form-associated element, *palpable content*. |
+| **Permitted content** | *Phrasing content* but there must be no Interactive content |
 | **Tag omission** | None, both the starting and ending tag are mandatory.|
-| **Permitted parents** | Any element that accepts phrasing content. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | `checkbox`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab` |
-| **DOM interface** | `HTMLButtonElement` |
+| **DOM interface** | **`HTMLButtonElement`** |
 
 ## Attributes
 
