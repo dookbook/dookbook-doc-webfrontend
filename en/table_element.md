@@ -8,118 +8,128 @@ TOPICS: <table>
         <caption>
         <colgroup>
         <col>
+        <col> span attribute
 
-# `<table>`
+# HTML Table Element: `<table>`
 
-The **HTML `<table>` element** represents tabular data — that is, information presented in a
-two-dimensional table comprised of rows and columns of cells containing data.
+The **HTML `<table>` element** represents **tabular data** — that is, information presented in a
+**two-dimensional table** comprised of *rows* and *columns* of *cells* containing data.
+
+The **`<tr>`** element defines **a row of cells** in a table. The row's cells can then be
+established using a mix of
+**`<td>`** (**data cell**, a cell of a table that contains data) and **`<th>`**
+(**header cell**, a cell as header of a group of table cells) elements.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content
-| **Permitted content** | In this order:<br>an optional `<caption>` element,<br>zero or more `<colgroup>` elements,<br>an optional `<thead>` element,<br>either one of the following:<br>zero or more `<tbody>` elements<br>one or more `<tr>` elements<br>an optional `<tfoot>` element<br>
-| **Tag omission** |None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content
+| **Content categories** | *Flow content* |
+| **Permitted content** | In this order:<br>1. an optional **`<caption>`** element,<br>2. zero or more **`<colgroup>`** elements,<br>3. an optional **`<thead>`** element,<br>4. either one of the following: 4.1) zero or more **`<tbody>`** elements, 4.2) one or more `<tr>` elements, 4.3) an optional **`<tfoot>`** element<br>
+| **Tag omission** | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts *flow content*
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLTableElement` |
+| **DOM interface** | **`HTMLTableElement`** |
 
 ## Attributes
 
 This element includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
-## `<thead>`
-
-The **HTML `<thead>` element** defines a set of rows defining the head of the columns of the table.
-
-## `<tbody>`
-
-The **HTML Table Body element (`<tbody>`)** encapsulates a set of table rows (`<tr>` elements),
-indicating that they comprise the body of the table (`<table>`).
-
-## `<tfoot>`
-
-The HTML `<tfoot>` element defines a set of rows summarizing the columns of the table.
-
-## `<th>`
-
-The **HTML `<th>` element** defines a cell as header of a group of table cells. The exact nature of
-this group is defined by the `scope` and `headers` attributes.
-
-## `<tr>`
-
-The **HTML `<tr>` element** defines a row of cells in a table. The row's cells can then be
-established using a mix of `<td>` (data cell) and `<th>` (header cell) elements.
-
-### `<td>`
-
-The **HTML `<td>` element** defines a cell of a table that contains data.
-It participates in the table model.
-
-## `<caption>`
-
-The **HTML Table Caption element (`<caption>`)** specifies the caption (or title) of a table,
-and if used is always the first child of a `<table>`. Its styling and physical position relative to
-the table may be changed using the CSS `caption-side` and `text-align` properties.
-
-## `<colgroup>`
-
-The **HTML `<colgroup>` element** defines a group of columns within a table.
-
-### `<col>`
-
-The **HTML `<col>` element** defines a column within a table and is used for defining common
-semantics on all common cells. It is generally found within a `<colgroup>` element.
-
-## Examples
-
-### Simple Table
+## Simple Table without Header
 
 ```html
+<!-- Example: Simple table -->
 <table>
   <tr>
-    <td>John</td>
-    <td>Doe</td>
+    <td>Data: Row 1, Col 1</td>
+    <td>Data: Row 1, Col 2</td>
   </tr>
   <tr>
-    <td>Jane</td>
-    <td>Doe</td>
+    <td>Data: Row 2, Col 1</td>
+    <td>Data: Row 2, Col 2</td>
   </tr>
 </table>
 ```
 
-### More Examples
+## Simple Table with Header
 
 ```html
-<p>Simple table with header</p>
+<!-- Example: Simple table with header -->
 <table>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
+    <th>Header: Col 1</th>
+    <th>Header: Col 2</th>
+  </tr>
+
+  <tr>
+    <td>Data: Row 1, Col 1</td>
+    <td>Data: Row 1, Col 2</td>
   </tr>
   <tr>
-    <td>John</td>
-    <td>Doe</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Doe</td>
+    <td>Data: Row 2, Col 1</td>
+    <td>Data: Row 2, Col 2</td>
   </tr>
 </table>
+```
 
-<p>Table with thead, tfoot, and tbody</p>
+The **`<th>`** defines **a cell as header of a group of table cells**.
+The exact nature of this group is defined by the **`scope`** and **`headers`** attributes.
+
+## Table with Caption
+
+```html
+<!-- Example: Table with Caption (or Title) -->
 <table>
+  <caption>Table Caption (or Title)</caption>
+
+  <tr>
+    <th>Header: Col 1</th>
+    <th>Header: Col 2</th>
+  </tr>
+  <tr>
+    <td>Data: Row 1, Col 1</td>
+    <td>Data: Row 1, Col 2</td>
+  </tr>
+  <tr>
+    <td>Data: Row 2, Col 1</td>
+    <td>Data: Row 2, Col 2</td>
+  </tr>
+</table>
+```
+
+The **HTML Table Caption element** (**`<caption>`**) specifies **the caption (or title) of a table**,
+and if used is always the **first** child of a `<table>`.
+Its styling and physical position relative to
+the table may be changed using the [[CSS]] **`caption-side`** and **`text-align`** properties.
+
+## Table with `<thead>`, `<tfoot>` and `<tbody>`
+
+The **`<thead>`** element defines a set of rows defining **the head of the columns** of the table.
+
+The **`<tbody>`** encapsulates a set of table rows (*`<tr>`* elements),
+indicating that they comprise the body of the table (`<table>`).
+
+The **`<tfoot>`** element defines a set of rows summarizing the columns of the table.
+
+```html
+<!-- Example: Table with thead, tfoot, and tbody -->
+<table>
+  <caption>Table Caption (or Title)</caption>
+
   <thead>
     <tr>
       <th>Header content 1</th>
       <th>Header content 2</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>Body content 1</td>
       <td>Body content 2</td>
     </tr>
   </tbody>
+
   <tfoot>
     <tr>
       <td>Footer content 1</td>
@@ -127,35 +137,22 @@ semantics on all common cells. It is generally found within a `<colgroup>` eleme
     </tr>
   </tfoot>
 </table>
+```
 
-<p>Table with colgroup</p>
-<table>
-  <colgroup span="4"></colgroup>
-  <tr>
-    <th>Countries</th>
-    <th>Capitals</th>
-    <th>Population</th>
-    <th>Language</th>
-  </tr>
-  <tr>
-    <td>USA</td>
-    <td>Washington, D.C.</td>
-    <td>309 million</td>
-    <td>English</td>
-  </tr>
-  <tr>
-    <td>Sweden</td>
-    <td>Stockholm</td>
-    <td>9 million</td>
-    <td>Swedish</td>
-  </tr>
-</table>
+## Table with Column Group
 
-<p>Table with colgroup and col</p>
+The **HTML Column Group element** (**`<colgroup>`**) defines **a group of columns** within a table.
+
+The **`<col>`** element defines a column within a table and is used for defining common
+semantics on all common cells. It is generally found within a *`<colgroup>`* element.
+
+```html
+<!-- Example: Table with Column Group -->
 <table>
+  <caption>Table Caption (or Title)</caption>
   <colgroup>
-    <col style="background-color: #0f0;">
-    <col span="2">
+    <col class="column1">
+    <col class="columns2plus3" span="2">
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -166,14 +163,6 @@ semantics on all common cells. It is generally found within a `<colgroup>` eleme
     <td>Green</td>
     <td>Yellow</td>
     <td>Orange</td>
-  </tr>
-</table>
-
-<p>Simple table with caption</p>
-<table>
-  <caption>Awesome caption</caption>
-  <tr>
-    <td>Awesome data</td>
   </tr>
 </table>
 ```

@@ -8,133 +8,149 @@ TOPICS: <table>
         <caption>
         <colgroup>
         <col>
+        <col> span attribute
 
-# `<table>`
+# HTML 表格元素 `<table>`
 
-**HTML**的 **`<table>`** 元素表示表格数据 — 即通过二维数据表表示的信息。
+**HTML 表格元素** (**`<table>`**) 元素表示**表格数据** — 即通过*行*和*列*的*单元格*组成的**二维表格**表示的信息。
 
-!!! warn "Don't try this at home"
-    小贴士：在 CSS 创建之前， HTML `<table>` 元素常常被用于布局页面。 这种用法在 HTML 4之后不被推荐使用，并且 `<table>`元素 不应该 被用于此目的。
+**`<tr>`** 元素定义表格中的**行**。是由一个或多个 **`<td>`** （**数据单元格**）和 **`<th>`** （**标题单元格**）元素组成。
+
+## 技术摘要
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 流动内容 |
-| **允许的内容** | 按照这个顺序：<br>一个可选的 `<caption>` 元素<br>零个或多个的 `<colgroup>` 元素<br>一个可选的 `<thead>` 元素<br>一个可选的 `<tfoot>` 元素（tfoot元素出现在tbody或tr元素前后都可以。在HTML4中，它只能出现在这些元素之前）<br>零个或多个 `<tbody>` 元素<br>一个或多个 `<tr>` 元素 |
+| **内容分类** | *流式内容* |
+| **允许的内容** | 按照这个顺序：<br>1. 一个可选的 **`<caption>`** 元素<br>2. 零个或多个的 **`<colgroup>`** 元素<br>3. 一个可选的 **`<thead>`** 元素<br>4. 以下任选其一：4.1) 零个或多个 **<tbody>** 元素，4.2) 一个或多个 **`<tr>`** 元素，4.3) 一个可选的 **`<tfoot>`** 元素 |
 | **标签省略** | 不允许，开始标签和结束标签都不能省略。 |
-| **允许的父元素** | 任何支持流内容的元素 |
+| **允许的父元素** | 任何支持 *流式内容* 的元素 |
 | **允许的ARIA 角色** | Any |
-| **DOM 接口** | `HTMLTableElement` |
+| **DOM 接口** | **`HTMLTableElement`** |
 
 ## 属性
 
 表格标签支持[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)。
 
-## `<thead>`
-
-**HTML**的 **`<thead>`** 元素定义了一组定义表格的列头的行。
-
-## `<tbody>`
-
-**HTML `<tbody>` 元素**封装了一组表行`<tr>`元素，表示它们包含表的主体`<table>`。
-
-## `<tfoot>`
-
-**HTML 元素`<tfoot>`**  定义了一组表格中各列的汇总行。
-
-## `<th>`
-
-**HTML `<th>` 元素** 定义表格内的表头单元格。这部分特征是由 `scope` and `headers` 属性准确定义的。
-
-## `<tr>`
-
-**HTML `<tr>` 元素** 定义表格中的行。 Those can be a mix of `<td>` and `<th>` elements.
-
-### `<td>`
-
-**HTML `<td>` 元素** 定义表格中的列
-
-## `<caption>`
-
-**HTML `<caption>` 元素** (or HTML 表格标题元素) 展示一个表格的标题， 它常常作为 `<table>` 的第一个子元素出现，同时显示在表格内容的最前面，但是，它同样可以被CSS样式化，所以，它同样可以出现在任何一个一个相对于表格的做任意位置。
-
-## `<colgroup>`
-
-**HTML** 中的表格列组（Column Group **`<colgroup>`**） 标签用来定义表中的一组列表。
-
-### `<col>`
-
-**HTML `<col>` 元素** 定义表格中的列，并用于定义所有公共单元格上的公共语义。它通常位于`<colgroup>`元素内。
-
-## 示例
-
-### 简单的表格
+## 不带标题单元格的简单表格
 
 ```html
+<!-- 示例：简单表格 -->
 <table>
   <tr>
-    <td>John</td>
-    <td>Doe</td>
+    <td>数据单元格 第1行，第1列</td>
+    <td>数据单元格 第1行，第2列</td>
   </tr>
   <tr>
-    <td>Jane</td>
-    <td>Doe</td>
+    <td>数据单元格 第2行，第1列</td>
+    <td>数据单元格 第2行，第2列</td>
   </tr>
 </table>
 ```
 
-### 更多例子
+## 带标题单元格的简单表格
 
 ```html
-<p>Table with thead, tfoot, and tbody</p>
+<!-- 示例：带标题单元格的简单表格 -->
 <table>
+  <tr>
+    <th>标题单元格 第1列</th>
+    <th>标题单元格 第2列</th>
+  </tr>
+
+  <tr>
+    <td>数据单元格 第1行，第1列</td>
+    <td>数据单元格 第1行，第2列</td>
+  </tr>
+  <tr>
+    <td>数据单元格 第2行，第1列</td>
+    <td>数据单元格 第2行，第2列</td>
+  </tr>
+</table>
+```
+
+**`<th>`** 定义表格内的**表头单元格**。这部分特征是由 **`scope`** and **`headers`** 属性准确定义的。
+
+## 带标题的表格
+
+```html
+<!-- 示例：带标题的表格 -->
+<table>
+  <caption>表格标题</caption>
+
+  <tr>
+    <th>标题单元格 第1列</th>
+    <th>标题单元格 第2列</th>
+  </tr>
+  <tr>
+    <td>数据单元格 第1行，第1列</td>
+    <td>数据单元格 第1行，第2列</td>
+  </tr>
+  <tr>
+    <td>数据单元格 第2行，第1列</td>
+    <td>数据单元格 第2行，第2列</td>
+  </tr>
+</table>
+```
+
+**HTML 表格标题元素** (**`<caption>`**) 展示一个表格的标题， 它常常作为 `<table>` 的**第一个**子元素出现，同时显示在表格内容的最前面。
+但是，它的样式可以由 [[CSS]] **`caption-side`** 和 **`text-align`** 的属性自定义。
+
+## 带 `<thead>`, `<tfoot>` 和 `<tbody>` 的表格
+
+**`<thead>`** 元素封装了一组标题单元格（包含 *`<th>`* 的 *`<tr>`*）的表格行。
+
+**`<tbody>`** 元素封装了一组数据单元格（包含 *`<td>`* 的 *`<tr>`*）的表格行。
+
+**`<tfoot>`** 元素封装了一组表格中各列的汇总单元格（也是包含 *`<td>`* 的 *`<tr>`*）的表格行。
+
+```html
+<!-- 示例：带 `<thead>`, `<tfoot>` 和 `<tbody>` 的表格 -->
+<table>
+  <caption>表格标题</caption>
+
   <thead>
     <tr>
-      <th>Header content 1</th>
-      <th>Header content 2</th>
+      <th>标题单元格 第1列</th>
+      <th>标题单元格 第2列</th>
     </tr>
   </thead>
-  <tfoot>
-    <tr>
-      <td>Footer content 1</td>
-      <td>Footer content 2</td>
-    </tr>
-  </tfoot>
+
   <tbody>
     <tr>
-      <td>Body content 1</td>
-      <td>Body content 2</td>
+      <td>数据单元格 第1行，第1列</td>
+      <td>数据单元格 第1行，第2列</td>
+    </tr>
+    <tr>
+      <td>数据单元格 第2行，第1列</td>
+      <td>数据单元格 第2行，第2列</td>
     </tr>
   </tbody>
-</table>
 
-<p>Table with colgroup</p>
-<table>
-  <colgroup span="4" class="columns"></colgroup>
-  <tr>
-    <th>Countries</th>
-    <th>Capitals</th>
-    <th>Population</th>
-    <th>Language</th>
-  </tr>
-  <tr>
-    <td>USA</td>
-    <td>Washington D.C.</td>
-    <td>309 million</td>
-    <td>English</td>
-  </tr>
-  <tr>
-    <td>Sweden</td>
-    <td>Stockholm</td>
-    <td>9 million</td>
-    <td>Swedish</td>
-  </tr>
+  <tfoot>
+    <tr>
+      <td>汇总单元格 第3行，第1列</td>
+      <td>汇总单元格 第3行，第2列</td>
+    </tr>
+  </tfoot>
 </table>
+```
 
-<p>Table with colgroup and col</p>
+## 带列组的表格
+
+**HTML 表格列组元素**（**`<colgroup>`**）用于对表格中的列进行组合，以便对其进行格式化。
+
+如果想对 `<colgroup>` 中的某列定义不同的属性，请在 `<colgroup>` 元素内使用 *`<col>`* 元素。**`<col>`** 元素用于为表格中的一列或多列设置属性值。
+`<col>` 的 **`span`** 属性定义了应该横跨的列数。
+
+为 `<col>` 添加 **`class`** 属性，就可以使用 [[CSS]] 来定义对应列的样式了。
+
+```html
+<!-- 示例：带列组的表格 -->
 <table>
+  <caption>表格标题</caption>
   <colgroup>
-    <col class="column1">
-    <col class="columns2plus3" span="2">
+    <col class="column1">  <!-- 标记第一列 -->
+    <col class="columns2plus3" span="2">  <!-- 标记后两列 -->
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -145,14 +161,6 @@ TOPICS: <table>
     <td>Green</td>
     <td>Yellow</td>
     <td>Orange</td>
-  </tr>
-</table>
-
-<p>Simple table with caption</p>
-<table>
-  <caption>Awesome caption</caption>
-  <tr>
-    <td>Awesome data</td>
   </tr>
 </table>
 ```
