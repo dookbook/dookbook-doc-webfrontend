@@ -46,7 +46,7 @@ TOPICS: <acronym>
 | `<center>` | **HTML中央元素 (`<center>`)** 是个块级元素，可以包含段落，以及其它块级和内联元素。这个元素的整个内容在它的上级元素中水平居中(通常是 [`<body>`](/zh-hans/webfrontend/<body>))。 |
 | `<command>` | **`command`元素**用来表示一个用户可以调用的命令. |
 | `<content>` | **HTML `<content>` 元素**— Web 组件 的技术套件的废弃部分 — 用于 Shadow DOM 内部作为 insertion point，并且不可用于任何正常的 HTML，现在已被 [`<slot>`](/zh-hans/webfrontend/<slot>) 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。 |
-| `<dir>` | 已废弃的**HTML目录元素（`<dir>`）** 被作为一个文件和/或文件夹的目录的容器，可能还有 用户代理 应用的样式与图标. |
+| ~~`<dir>`~~ | HTML目录元素。被作为一个文件和/或文件夹的**目录的容器**，可能还有用户代理设置的样式与图标。请使用 **[`<ul>`](/zh-hans/webfrontend/<ul>)** 代替。 |
 | `<element>` | **`<element>`元素** 被定义在最新的 HTML DOM 元素中。`</element>`. |
 | `<font>` | **HTML字形元素（`<font>`）** 定义了该内容的字体大小、顏色与表现。. |
 | `<frame>` | **`<frame>`是HTML元素**，它定义了一个特定区域，另一个HTML文档可以在里面展示。帧应该在`<frameset>`中使用. |
