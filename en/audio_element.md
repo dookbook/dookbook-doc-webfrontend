@@ -22,7 +22,7 @@ for details.
 
 |  |  |
 | :-- | :-- |
-| **Content Categories** | Flow Content,Phrasing Content,embedded content. If you have control properties:nteractive content,palpable content. |
+| **Content Categories** | *Flow Content*,*Phrasing Content*,*embedded content*. If you have control properties:*nteractive content*,*palpable content*. |
 | **Permitted content** | If the element contains an `src` attribute: zero or more [`<track>`](/zh-hans/webfrontend/<track>) elements, which cannot immediately follow the transparent content of the `<audio>` or [`<video>`](/zh-hans/webfrontend/<video>) media element. For example: zero or more [`<source>`](/zh-hans/webfrontend/<source>) elements, followed by zero or more `<track>` elements, cannot be followed by transparent content of `<audio>` or [`<video>`](/zh-hans/webfrontend/<video>) media elements. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
 | **Permitted parents** | Any element that accepts embedded content.|

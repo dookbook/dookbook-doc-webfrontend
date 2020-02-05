@@ -11,12 +11,12 @@ TOPICS: accesskey attribute
 
 |  | Windows | Linux | Mac |
 | :-- | :-- | :-- | :-- |
-| **Firefox** | !!!Alt!!! + !!!Shift!!! + !!!key!!! | !!!Alt!!! + !!!Shift!!! + !!!key!!! | On Firefox 57 or newer: !!!Control!!! + !!!Option!!! + !!!key!!! or !!!Control!!! + !!!Alt!!! + !!!key!!!<br>On Firefox 14 or newer: !!!Control!!! + !!!Alt!!! + !!!key!!!<br>On Firefox 13 or older: !!!Control!!! + !!!key!!!
+| **Firefox** | !!!Alt!!! + !!!Shift!!! + !!!key!!! | !!!Alt!!! + !!!Shift!!! + !!!key!!! | On Firefox 57 or newer: !!!Control!!! + !!!Option!!! + !!!key!!! or !!!Control!!! + !!!Alt!!! + !!!key!!!<br>On Firefox 14 or newer: !!!Control!!! + !!!Alt!!! + !!!key!!!<br>On Firefox 13 or older: !!!Control!!! + !!!key!!! |
 | **Edge** | !!!Alt!!! + !!!key!!! | N/A | N/A |
 | **Internet Explorer** | !!!Alt!!! + !!!key!!! | N/A | N/A |
 | **Google Chrome** | !!!Alt!!! + !!!Shift!!! + !!!key!!! | !!!Alt!!! + !!!Shift!!! + !!!key!!! | !!!Control!!! + !!!Alt!!! + !!!key!!!
-| **Safari** | !!!Alt!!! + !!!key!!! | N/A | !!!Control!!! + !!!Alt!!! + !!!key!!!
-| **Opera 15+** | !!!Alt!!! + !!!key!!! | !!!Alt!!! + !!!key!!! | !!!Control!!! + !!!Alt!!! + !!!key!!!
+| **Safari** | !!!Alt!!! + !!!key!!! | N/A | !!!Control!!! + !!!Alt!!! + !!!key!!! |
+| **Opera 15+** | !!!Alt!!! + !!!key!!! | !!!Alt!!! + !!!key!!! | !!!Control!!! + !!!Alt!!! + !!!key!!! |
 | **Opera 12** | !!!Shift!!! + !!!Esc!!! opens a contents list which are accessible by accesskey, then, can choose an item by pressing key | <- | <- |
 
 要注意 Firefox 可以通过用户偏好，自定义所需的修饰键。

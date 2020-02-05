@@ -2,16 +2,17 @@ TOPICS: <button>
 
 # `<button>`
 
-**HTML`<button>`元素** 表示可单击的按钮，可以在表单中或需要简单，标准按钮功能的文档中的任何位置使用。 默认情况下，HTML按钮通常以类似于用户代理运行所在的主机平台的样式来显示，但是您可以使用CSS更改按钮的外观。
+**HTML`<button>`元素** 表示可单击的按钮，可以用在表单或文档其它需要使用简单标准按钮的地方。 默认情况下，HTML按钮的显示样式接近于`user agent`所在的宿主系统平台（用户
+操作系统）的按钮，但你可以使用CSS来改变按钮的样貌。
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 流内容，短语内容，交互式内容，列出的，可标记的和可提交的与表单相关的元素，可触知的内容. |
-| **允许的内容** | 短语内容，但不得包含交互内容 |
-| **标签遗漏** | 无，开始标签和结束标签都是必需的. |
-| **允许的父元素** | 任何接受短语内容的元素. |
-| **允许的 ARIA 角色** | `checkbox`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab` |
-| **DOM 接口** | `HTMLButtonElement` |
+| **内容分类** | *流式内容*，*短语内容*，*交互式内容*，列出的，可标记的和可提交的与表单相关的元素，*可触知的内容*。 |
+| **允许的内容** | *短语内容*，但不得包含*交互内容*。 |
+| **标签遗漏** | 无，开始标签和结束标签都是必需的。 |
+| **允许的父元素** | 任何接受*短语内容*的元素。 |
+| **允许的ARIA角色** | `checkbox`, `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab` |
+| **DOM 接口** | **`HTMLButtonElement`** |
 
 ## 属性
 
@@ -24,7 +25,7 @@ TOPICS: <button>
 | `disabled` | 此布尔值属性指示用户无法与按钮进行交互。 如果未指定此属性，则按钮从包含元素（例如，[`<fieldset>`](/zh-hans/webfrontend/<fieldset>)）继承其设置。 如果没有包含设置了**disabled**属性的包含元素，则将启用按钮。<br>与其他浏览器不同，Firefox默认情况下将在整个页面加载期间保持动态[`<disable>`](/zh-hans/webfrontend/<disable>)状态的禁用状态 。 使用`autocomplete`属性来控制此功能。|
 | `form` | 与按钮关联的表单元素（其表单所有者）。 该属性的值必须是同一文档中[`<form>`](/zh-hans/webfrontend/<form>)元素的id属性。 如果未指定该属性，则`<button>`元素将与祖先的[`<form>`](/zh-hans/webfrontend/<form>)元素（如果存在）相关联。 这个属性使您可以将`<button>`元素与文档中任何地方的[`<form>`](/zh-hans/webfrontend/<form>)元素相关联，而不仅仅是作为[`<form>`](/zh-hans/webfrontend/<form>)元素的后代。|
 | `formaction` | 处理按钮提交的信息的程序的URI。 如果指定，它将覆盖按钮表单所有者的`action`属性。|
-| `formenctype` | 如果按钮是一个提交按钮，则此属性指定用于将表单提交到服务器的内容类型。 可能的值为：<br>`application/x-www-form-urlencoded`：如果未指定属性，则为默认值。<br>`multipart/form-data`：如果您使用的是<< type属性设置为file的input元素。<br>`text/plain` <br>如果指定了此属性，它将覆盖按钮表单所有者的enctype属性。|
+| `formenctype` | 如果按钮是一个提交按钮，则此属性指定用于将表单提交到服务器的内容类型。 可能的值为：<br>`application/x-www-form-urlencoded`：如果未指定属性，则为默认值。<br>`multipart/form-data`：如果您使用的是`type`属性设置为`file`的`input`元素。<br>`text/plain` <br>如果指定了此属性，它将覆盖按钮表单所有者的enctype属性。|
 | `formmethod` | 如果按钮是一个提交按钮，则此属性指定浏览器用来提交表单的HTTP方法。 可能的值为：<br>`post`：来自表单的数据包含在表单主体中，并发送到服务器。<br>`get`：来自表单的数据附加到表单属性URI， 加上“？” 作为分隔符，结果URI被发送到服务器。 当表单没有副作用且仅包含ASCII字符时，请使用此方法。<br>如果指定，则此属性将覆盖按钮表单所有者的`method`属性。|
 | `formnovalidate` | 如果按钮是一个提交按钮，则此布尔属性指定在提交表单时不对其进行验证。 如果指定了此属性，它将覆盖按钮的表单所有者的`novalidate`属性。|
 | `formtarget` | 如果按钮是“提交”按钮，则此属性是名称或关键字，指示在提交表单后在何处显示收到的响应。 这是浏览上下文（例如，选项卡，窗口或嵌入式框架）的名称或关键字。 如果指定了此属性，它将覆盖按钮的表单所有者的target属性。 以下关键字具有特殊含义：<br>`_self`：将响应加载到与当前响应相同的浏览上下文中。 如果未指定属性，则此值为默认值。<br>`_blank`：将响应加载到新的未命名浏览上下文中。<br>`_parent`：将响应加载到当前浏览器的父浏览上下文中。 如果没有父级，则此选项的行为与_self相同。<br>`_top`：将响应加载到顶级浏览上下文（即，当前上下文的祖先的浏览上下文， 并且没有父母）。 如果没有父母，该选项的行为与_self相同。|
