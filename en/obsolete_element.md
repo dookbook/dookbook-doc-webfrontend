@@ -48,7 +48,7 @@ TOPICS: <acronym>
 | `<center>` | The obsolete **HTML Center Element (`<center>`)** is a block-level element that displays its block-level or inline contents centered horizontally within its containing element. |
 | `<command>` | The **HTML Command element (`<command>`)** represents a command which the user can invoke. Commands are often used as part of a context menu or toolbar. |
 | `<content>` | The **HTML `<content>` element**—an obsolete part of the Web Components suite of technologies—was used inside of Shadow DOM as an insertion point, and wasn't meant to be used in ordinary HTML. |
-| `<dir>` | The obsolete **HTML Directory element (`<dir>`)** is used as a container for a directory of files and/or folders, potentially with styles and icons applied by the user agent. |
+| ~~`<dir>`~~ | HTML directory element. Used as a **container for a directory** of files and/or folders, potentially with styles and icons applied by the user agent. Use **[`<ul>`](/en/webfrontend/<ul>)** instead. |
 | `<element>` | The obsolete **HTML `<element>` element** was part of the Web Components specification; it was intended to be used to define new custom DOM elements. |
 | `<font>` | The **HTML Font Element (`<font>`)** defines the font size, color and face for its content. |
 | `<frame>` | `<frame>` is an HTML element which defines a particular area in which another HTML document can be displayed. A frame should be used within a `<frameset>`. |
