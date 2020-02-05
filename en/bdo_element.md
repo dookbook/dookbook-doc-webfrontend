@@ -11,10 +11,10 @@ which causes the characters to line up in a given direction.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, palpable content. |
-| **Permitted content** | Phrasing content. |
+| **Content categories** | *Flow content*, *phrasing content*, *palpable content*. |
+| **Permitted content** | *Phrasing content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | Any |
 | **DOM interface** | **`HTMLElement`** Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the `HTMLSpanElement` interface for this element. |
 
@@ -24,7 +24,7 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 | Attribute | Description |
 | :-- | :-- |
-| `dir` | The direction in which text should be rendered in this element's contents. Possible values are:<br>`ltr`: Indicates that the text should go in a left-to-right direction.<br>`rtl`: Indicates that the text should go in a right-to-left direction.
+| `dir` | The direction in which text should be rendered in this element's contents. Possible values are:<br>`ltr`: Indicates that the text should go in a left-to-right direction.<br>`rtl`: Indicates that the text should go in a right-to-left direction. |
 
 ## Examples
 
