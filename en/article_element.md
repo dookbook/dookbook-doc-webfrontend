@@ -16,9 +16,9 @@ in an `<article>` element, possibly with one or more [`<section>`](/en/webfronte
 | :-- | :-- |
 | **Content categories** | *Flow content*, *sectioning content*, *palpable content*. |
 | **Permitted content** | *Flow content*. |
-| **Tag omission** | None, both the starting and ending tag are mandatory.
-| **Permitted parents** | Any element that accepts flow content. Note that an `<article>` element must not be a descendant of an *[`<address>`](/en/webfrontend/<address>)* element.
-| **Permitted ARIA roles** | [`application`](https://w3c.github.io/aria/#application), [`document`](https://w3c.github.io/aria/#document), [`feed`](https://w3c.github.io/aria/#feed), [`main`](https://w3c.github.io/aria/#main), [`presentation`](https://w3c.github.io/aria/#presentation), [`region`](https://w3c.github.io/aria/#region)
+| **Tag omission** | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts flow content. Note that an `<article>` element must not be a descendant of an *[`<address>`](/en/webfrontend/<address>)* element. |
+| **Permitted ARIA roles** | [`application`](https://w3c.github.io/aria/#application), [`document`](https://w3c.github.io/aria/#document), [`feed`](https://w3c.github.io/aria/#feed), [`main`](https://w3c.github.io/aria/#main), [`presentation`](https://w3c.github.io/aria/#presentation), [`region`](https://w3c.github.io/aria/#region) |
 | **DOM interface** | **`HTMLElement`** |
 
 ## Attributes

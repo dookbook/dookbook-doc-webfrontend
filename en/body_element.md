@@ -11,12 +11,12 @@ one** `<body>` element in a document.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Sectioning root. |
-| **Permitted content** | Flow content. |
+| **Content categories** | *Sectioning root*. |
+| **Permitted content** | *Flow content*. |
 | **Tag omission** | The start tag may be omitted if the first thing inside it is not a space character, comment, [`<script>`](/en/webfrontend/<script>) element or [`<style>`](/en/webfrontend/<style>) element. The end tag may be omitted if the `<body>` element has contents or has a start tag, and is not immediately followed by a comment.|
 | **Permitted parents** | It must be the second element of an [`<html>`](/en/webfrontend/<html>/) element. |
-| **Permitted ARIA roles** | None
-| **DOM interface** | `HTMLBodyElement` <br>The `<body>` element exposes the `HTMLBodyElement` interface.<br>You can access the `<body>` element through the `document.body` property.
+| **Permitted ARIA roles** | None |
+| **DOM interface** | **`HTMLBodyElement`** <br>The `<body>` element exposes the **`HTMLBodyElement`** interface.<br>You can access the `<body>` element through the `document.body` property. |
 
 ## `<body>` Attributes
 
