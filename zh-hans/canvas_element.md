@@ -6,6 +6,8 @@ TOPICS: <canvas>
 
 更多关于`<canvas>`元素内容，参见[canvas元素讨论页面](https://wiki.developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
 
+## 技术摘要
+
 |  |  |
 | :-- | :-- |
 | **内容分类**  | *流式内容*, *短语内容*, *嵌入内容*, *可触知内容*.|
