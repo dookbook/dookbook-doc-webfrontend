@@ -7,12 +7,12 @@ or the WebGL API to draw graphics and animations.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, embedded content, palpable content.|
-| **Permitted content** | Transparent but with no interactive content descendants except for [`<a>`](/en/webfrontend/<a>) elements, [`<button>`](/en/webfrontend/<button>) elements, [`<input>`](/en/webfrontend/<input>) elements whose type attribute is checkbox, radio, or button.|
-| **Tag omission**| None, both the starting and ending tag are mandatory.|
-| **Permitted parents** | Any element that accepts phrasing content. |
+| **Content categories** | *Flow content*, *phrasing content*, *embedded content*, *palpable content*.|
+| **Permitted content** | Transparent but with no interactive content descendants except for [`<a>`](/en/webfrontend/<a>) elements, [`<button>`](/en/webfrontend/<button>) elements, [`<input>`](/en/webfrontend/<input>) elements whose type attribute is checkbox, radio, or button. |
+| **Tag omission**| None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLCanvasElement` |
+| **DOM interface** | **`HTMLCanvasElement`** |
 
 ## Attributes
 
@@ -20,9 +20,9 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 | Attribute | Description |
 | :-- | :-- |
-| `height` | The height of the coordinate space in CSS pixels. Defaults to 150.
-| `moz-opaque` | Lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized `canvas.getContext('2d', { alpha: false })` instead.
-| `width` | The width of the coordinate space in CSS pixels. Defaults to 300.
+| `height` | The height of the coordinate space in CSS pixels. Defaults to 150. |
+| `moz-opaque` | Lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized `canvas.getContext('2d', { alpha: false })` instead. |
+| `width` | The width of the coordinate space in CSS pixels. Defaults to 300. |
 
 ## Usage Notes
 
