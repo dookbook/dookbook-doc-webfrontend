@@ -1,21 +1,25 @@
 TOPICS: <menu>
+        <menu> label attribute
 
-# `<menu>`
+# HTML 菜单元素 `<menu>`
 
-!!! warn "Don't try this at home"
-    这是一项“实验技术”
-    在生产环境中使用此功能之前，请仔细检查浏览器兼容性表。
+!!! warn "实验技术"
+    `<menu` 元素目前还是一项 **实验技术**。
+    在生产环境中使用此功能之前，请仔细检查浏览器兼容性。
+    目前，主流浏览器并不支持 `<menu>` 标签。
 
-**HTML元素`<menu>`** 代表用户可以执行或激活的一组命令。这包括可能出现在屏幕顶部的列表菜单，以及上下文菜单，例如单击按钮后可能出现在按钮下方的上下文菜单。
+**HTML 菜单元素** (**`<menu>`**) 代表用户可以执行或激活的**一组命令**。这包括可能出现在屏幕顶部的*列表菜单*，以及*上下文菜单*（例如，单击按钮后可能出现在按钮下方的上下文菜单）。
+
+## 技术摘要
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 流内容。此外，如果处于列表菜单状态，则可触摸的内容。(列表菜单为默认状态，除非父元素在上下文菜单状态下为`<menu>`。） |
-| **允许的内容** | 如果该元素处于列表菜单状态：流内容，或者零次或多次出现[`<li>`](/zh-hans/webfrontend/<li>)，[`<script>`](/zh-hans/webfrontend/<script>)和[`<template>`](/zh-hans/webfrontend/<template>)。<br>如果该元素在上下文中 菜单状态：`<menu>`（仅上下文菜单状态），[`<hr>`](/zh-hans/webfrontend/<hr>)，[`<script>`](/zh-hans/webfrontend/<script>)和[`<template>`](/zh-hans/webfrontend/<template>)以任何顺序出现零次或多次。 |
+| **内容分类** | *流式内容*。此外，如果处于*列表菜单*状态，则为*可触知内容*。(*列表菜单*为默认状态） |
+| **允许的内容** | 如果该元素处于*列表菜单*状态：*流式内容*，或者零次或多次出现 [`<li>`](/zh-hans/webfrontend/<li>)，[`<script>`](/zh-hans/webfrontend/<script>)和[`<template>`](/zh-hans/webfrontend/<template>)。<br>如果该元素在*上下文菜单*状态：`<menu>`（仅*上下文菜单*状态），[`<hr>`](/zh-hans/webfrontend/<hr>)，[`<script>`](/zh-hans/webfrontend/<script>) 和 [`<template>`](/zh-hans/webfrontend/<template>)以任何顺序出现零次或多次。 |
 | **标签遗漏**| 无，开始标签和结束标签都是必需的. |
-| **允许的父元素** | 任何接受流程内容的元素. |
+| **允许的父元素** | 任何接受 *流式内容* 的元素. |
 | **允许的 ARIA 角色** | 没有 |
-| **DOM 接口** | `HTMLMenuElement` |
+| **DOM 接口** | **`HTMLMenuElement`** |
 
 ## 属性
 
@@ -23,38 +27,33 @@ TOPICS: <menu>
 
 | 属性 | 描述 |
 | :-- | :-- |
-| `label` | 显示给用户的菜单名称。 在嵌套菜单中使用，以提供一个标签，通过该标签可以访问子菜单。 仅在上下文菜单状态下，当父元素为`<menu>`时才必须指定。|
-| `type` | 此属性指示要声明的菜单的类型，并且可以是两个值之一。<br> `context`：指示弹出菜单状态，该状态表示通过另一个元素激活的一组命令。这可能是由[`<button>`](/zh-hans/webfrontend/<button>)元素的菜单属性引用的按钮菜单，也可能是具有`contextmenu`属性的元素的上下文菜单。 如果缺少属性，并且父元素也是`<menu>`元素，则此值为默认值。<br>`toolbar`：指示工具栏状态，代表由一系列用于用户交互的命令组成的工具栏。这可能是[`<li>`](/zh-hans/webfrontend/<li>)元素的无序列表的形式，或者，如果该元素没有[`<li>`](/zh-hans/webfrontend/<li>)子元素，则流内容描述可用的命令。 如果缺少属性，则此值为默认值。|
+| **`label`** | 指定**菜单名称**。 在嵌套菜单中使用，以提供一个标签，通过该标签可以访问子菜单。仅当父元素为在*上下文菜单*状态下的 `<menu>` 时才必须指定该属性。|
+| ~~`type`~~ | （**废弃**）指定**菜单类型**，值为二者之一。<br><br>**`context`** **上下文菜单**。即*弹出菜单*状态，该状态表示**通过另一个元素激活的一组命令**。如果没指定该属性，并且父元素也是 `<menu>` 元素，则此值为默认值。<br><br>**`toolbar`**：**工具栏**或**列表菜单**。由一系列用于**用户交互的命令组成的工具栏**。如果没指定该属性，则此值为默认值。|
+
+!!! error ""
+    菜单按钮尚未在任何已知的浏览器中实现。`<menu>`元素上的`type`属性现在已过时。
 
 ## 使用说明
 
-`<menu>`和[`<ul>`](/zh-hans/webfrontend/<ul>)元素均表示无序的项目列表。关键区别在于，[`<ul>`](/zh-hans/webfrontend/<ul>)主要包含要显示的项目，而`<menu>`是用于交互项目的对象。
-
-HTML菜单可用于创建上下文菜单（通常通过右键单击另一个元素来激活）或工具栏。
-
-上下文菜单由一个`<menu>`元素组成，该元素包含菜单中每个可选选项的`<menuitem>`元素，菜单内子菜单的`<menu>`元素以及分隔符行的[`<hr>`](/zh-hans/webfrontend/<hr>)
-元素。 将菜单内容分为几部分。 然后，将上下文菜单附加到通过使用关联元素的`contextmenu`属性激活的元素上，或者对于附加到[`<button>`](/zh-hans/webfrontend/<button>)元素的按钮激活菜单，使用菜单属性。
-
-工具栏菜单由一个`<menu>`元素组成，其内容用以下两种方式之一描述：作为由[`<li>`](/zh-hans/webfrontend/<li>)元素表示的项目的无序列表（每个代表用户可以使用的命
-令或选项），或者 （如果没有[`<li>`](/zh-hans/webfrontend/<li>)元素），则流内容描述可用的命令和选项。
-
-此元素在HTML4中已弃用，但在HTML5.1和HTML生活标准中已重新引入。 本文档介绍了当前的Firefox实现。 根据HTML5.1，类型“列表”可能会更改为“工具栏”。
-
-## 示例
-
-### 上下文菜单
+`<menu>` 和 **[`<ul>`](/zh-hans/webfrontend/<ul>)** 元素均表示无序的项目列表。关键区别在于，[`<ul>`](/zh-hans/webfrontend/<ul>)主要包含要显示的项目，而`<menu>`是用于*交互项目*的对象。
 
 !!! error ""
-    不再推荐此功能。 尽管某些浏览器可能仍支持它，但是它可能已经从相关的Web标准中删除，正在被删除或仅出于兼容性目的而保留。避免使用它，并尽可能更新现有代码；
-    请参阅此页面底部的兼容性表以指导您做出决定。 请注意，此功能可能随时停止起作用。
+    [`<menuitem>`](/zh-hans/webfrontend/<menuitem>) 元素已过时。
 
-### 不推荐使用
+此元素在 HTML 4 中*已弃用*，但在 HTML 5.1 和 HTML 实时标准中已重新引入。
 
-不再推荐此功能。 尽管某些浏览器可能仍支持它，但是它可能已经从相关的Web标准中删除，正在被删除或仅出于兼容性目的而保留。 避免使用它，并尽可能更新现有代码； 请参阅此页面底部的兼容性表以指导您做出决定。
-请注意，此功能可能随时停止起作用。
+## 上下文菜单
+
+!!! error "请注意，此功能可能随时停止起作用。"
+    **不再推荐**此功能。尽管某些浏览器可能仍支持它，但是它可能已经从相关的Web标准中**删除**，正在**被弃用**或仅出于兼容性目的而保留。避免使用它，并尽可能更新现有代码。
+
+上下文菜单由一个 `<menu>` 元素组成，该元素包含多个选项，每个可选选项使用 *[`<menuitem>`](/zh-hans/webfrontend/<menuitem>)* 元素 （**废弃**）。
+可以用 *[`<hr>`](/zh-hans/webfrontend/<hr>)* 元素，将菜单内容分隔为几部分。
+
+然后，将上下文菜单关联到带 `contextmenu` 属性的元素上。
 
 ```html
-<!-- A <div> element with a context menu -->
+<!-- 关联 <div> 元素 -->
 <div contextmenu="popup-menu">
   Right-click to see the adjusted context menu
 </div>
@@ -75,19 +74,13 @@ div {
 }
 ```
 
-### 菜单按钮
+## 菜单按钮
 
-!!! error ""
-    菜单按钮尚未在任何已知的浏览器中实现。`<menu>`元素上的type属性现在已过时。
-
-!!! error ""
-    `<menuitem>`元素已过时。
+上下文菜单也可以关联到带 *`menu`* 属性的 *[`<button>`](/zh-hans/webfrontend/<button>)* 元素。
 
 ```html
-<!-- A button, which displays a menu when clicked. -->
-<button type="menu" menu="popup-menu">
-  Dropdown
-</button>
+<!-- 关联按钮元素 <button> -->
+<button type="menu" menu="popup-menu">Dropdown</button>
 
 <menu type="context" id="popup-menu">
   <menuitem>Action</menuitem>
@@ -97,10 +90,15 @@ div {
 </menu>
 ```
 
-### 工具列
+## 工具栏菜单
 
 !!! error ""
     工具栏菜单尚未在任何已知的浏览器中实现。
+
+工具栏菜单由一个`<menu>`元素组成，其内容用以下两种方式之一描述：
+
+- *[`<li>`](/zh-hans/webfrontend/<li>)* 元素组成的无序列表的形式。每个列表项目代表用户可以使用的命令或选项。
+- 如果该元素没有 [`<li>`](/zh-hans/webfrontend/<li>) 子元素，则流式内容描述可用的命令和选项。
 
 ```html
 <!-- A context menu for a simple editor,
