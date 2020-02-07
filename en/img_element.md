@@ -16,7 +16,7 @@ The **HTML `<img>` element** embeds an **image** into the document. It is a *rep
 |  |  |
 | :-- | :-- |
 | **Content Categories** | *Flow Content*, *Phrasing Content*, *Embedded Content*, *Palpable Content*. If the element has a *[`usemap`](/en/webfrontend/<map>)* attribute, it also is a part of the *interactive content* category.|
-| **Permitted Content** | None, it is an **empty element**.|
+| **Permitted Content** | None, it is an **[empty element](/en/webfrontend/empty_element)**.|
 | **Tag Omission** | Must have a start tag and must not have an end tag.|
 | **Permitted parents** | Any element that accepts *embedded content*.|
 | **Permitted ARIA roles** | Any |

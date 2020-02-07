@@ -24,7 +24,7 @@ The empty elements in HTML are as follows:
 - [`<hr>`](/en/webfrontend/<hr>)
 - [`<img>`](/en/webfrontend/<img>)
 - [`<input>`](/en/webfrontend/<input>)
-- [`<keygen>`](/en/webfrontend/<keygen>)(HTML 5.2 Draft removed)
+- ~~[`<keygen>`](/en/webfrontend/<keygen>)~~ (HTML 5.2 Draft removed)
 - [`<link>`](/en/webfrontend/<link>)
 - [`<meta>`](/en/webfrontend/<meta>)
 - [`<param>`](/en/webfrontend/<param>)
