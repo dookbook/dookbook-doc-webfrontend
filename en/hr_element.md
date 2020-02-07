@@ -14,7 +14,7 @@ presentational terms, so if you wish to draw a horizontal line, you should do so
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*. |
-| **Permitted content** | None, it is an **[[empty element]]**. |
+| **Permitted content** | None, it is an **[empty element](/en/webfrontend/empty_element)**. |
 | **Tag omission** | It must have start tag, but must not have an end tag. |
 | **Permitted parents** | Any element that accepts *flow content*.|
 | **Permitted ARIA roles** | `presentation` |
