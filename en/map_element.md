@@ -35,7 +35,7 @@ with a **hypertext link**. This element is used only within a *`<map>`* element.
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *phrasing content*.|
-| **Permitted content** | None, it is an **empty element**.|
+| **Permitted content** | None, it is an **[empty element](/en/webfrontend/empty_element)**.|
 | **Tag omission** | Must have a start tag and must not have an end tag.|
 | **Permitted parents** | Any element that accepts *phrasing content*. The `<area>` element must have an ancestor `<map>`, but it need not be a direct parent. |
 | **Permitted ARIA roles** | None |
@@ -53,8 +53,8 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| **`href`** | The **hyperlink target for the area**. Its value is a valid [[URL]]. In HTML4, either this attribute or the *`nohref`* attribute must be present in the element. In HTML5, this attribute may be omitted; if so, the area element does not represent a hyperlink. |
-| **`alt`** | A **text string alternative** to display on browsers that do not display images. The text should be phrased so that it presents the user with the same kind of choice as the image would offer when displayed without the alternative text. In HTML4, this attribute is required, but may be the empty string (`""`). In HTML5, this attribute is required only if the *`href`* attribute is used. |
+| **`href`** | The **hyperlink target for the area**. Its value is a valid [[URL]]. In HTML 4, either this attribute or the *`nohref`* attribute must be present in the element. In HTML 5, this attribute may be omitted; if so, the area element does not represent a hyperlink. |
+| **`alt`** | A **text string alternative** to display on browsers that do not display images. The text should be phrased so that it presents the user with the same kind of choice as the image would offer when displayed without the alternative text. In HTML 4, this attribute is required, but may be the empty string (`""`). In HTML 5, this attribute is required only if the *`href`* attribute is used. |
 | **`shape`** | The **shape of the associated hot spot**. |
 | **`coords`** | A set of values specifying the **coordinates of the hot-spot region**. The number and meaning of the values depend upon the value specified for the *`shape`* attribute. |
 | `target` | This attribute specifies **where to display the linked resource**. See *[`<a>`](/en/webfrontend/<a>)* for a full description of the `target` attribute. |
