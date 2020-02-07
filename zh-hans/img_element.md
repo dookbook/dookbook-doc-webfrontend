@@ -17,7 +17,7 @@ TOPICS: <img>
 |  |  |
 | :-- | :-- |
 | **内容类别** | *流式内容*，*短语内容*，*嵌入内容*，*可触摸内容*。如果元素有 *[`usemap`](/zh-hans/webfrontend/<map>)*属性，它也是*交互内容*的一部分。|
-| **允许的内容** | 无，它是一个 **[空元素](/zh-hans/glossary/empty_element)**。|
+| **允许的内容** | 无，它是一个 **[空元素](/zh-hans/webfrontend/empty_element)**。|
 | **标签省略** | 必须有一个开始标签，不允许有结束标签。|
 | **允许的父元素** | *嵌入内容*的任意元素。|
 | **DOM 接口** | **`HTMLImageElement`** |
