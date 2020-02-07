@@ -20,7 +20,7 @@ TOPIC: Empty Element
 - [`<hr>`](/zh-hans/webfrontend/<hr>)
 - [`<img>`](/zh-hans/webfrontend/<img>)
 - [`<input>`](/zh-hans/webfrontend/<input>)
-- [`<keygen>`](/zh-hans/webfrontend/<keygen>)(HTML 5.2草案已移除)
+- ~~[`<keygen>`](/zh-hans/webfrontend/<keygen>)~~ (HTML 5.2草案已移除)
 - [`<link>`](/zh-hans/webfrontend/<link>)
 - [`<meta>`](/zh-hans/webfrontend/<meta>)
 - [`<param>`](/zh-hans/webfrontend/<param>)
