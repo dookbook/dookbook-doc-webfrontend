@@ -35,7 +35,7 @@ with a **hypertext link**. This element is used only within a *`<map>`* element.
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *phrasing content*.|
-| **Permitted content** | None, it is an **[[empty element]]**.|
+| **Permitted content** | None, it is an **[empty element](/en/webfrontend/empty_element)**.|
 | **Tag omission** | Must have a start tag and must not have an end tag.|
 | **Permitted parents** | Any element that accepts *phrasing content*. The `<area>` element must have an ancestor `<map>`, but it need not be a direct parent. |
 | **Permitted ARIA roles** | None |
