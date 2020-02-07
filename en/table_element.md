@@ -25,9 +25,9 @@ established using a mix of
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content* |
-| **Permitted content** | In this order:<br>1. an optional **`<caption>`** element,<br>2. zero or more **`<colgroup>`** elements,<br>3. an optional **`<thead>`** element,<br>4. either one of the following: 4.1) zero or more **`<tbody>`** elements, 4.2) one or more `<tr>` elements, 4.3) an optional **`<tfoot>`** element<br>
+| **Permitted content** | In this order:<br>1. an optional **`<caption>`** element,<br>2. zero or more **`<colgroup>`** elements,<br>3. an optional **`<thead>`** element,<br>4. either one of the following: 4.1) zero or more **`<tbody>`** elements, 4.2) one or more `<tr>` elements, 4.3) an optional **`<tfoot>`** element<br>. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts *flow content*
+| **Permitted parents** | Any element that accepts *flow content*. |
 | **Permitted ARIA roles** | Any |
 | **DOM interface** | **`HTMLTableElement`** |
 
@@ -35,7 +35,21 @@ established using a mix of
 
 This element includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
-## Simple Table without Header
+| Attributes | Description |
+| :-- | :-- |
+|border|Specifies whether the table cell has a border.|
+|align|**HTML 4.01 is obsolete.** Specifies the alignment of the table relative to surrounding elements.|
+|bgcolor|**HTML 4.01 is obsolete.** Specifies the background color of the table|
+|cellpadding|**HTML5 is not supported.** Specifies the space between the cell edge and its content.|
+|cellspacing|**HTML5 is not supported.** Specifies the space between cells.。|
+|frame|**HTML5 is not supported.** Specifies which part of the outer border is visible.|
+|rules|**Not supported in HTML5.** Specifies which part of the inner border is visible.|
+|summary|**Not supported in HTML5.** Summary of required forms.|
+|width|**Not supported in HTML5.** Specify the width of the table.|
+
+## Example
+
+### Simple Table without Header
 
 ```html
 <!-- Example: Simple table -->
@@ -51,7 +65,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 </table>
 ```
 
-## Simple Table with Header
+### Simple Table with Header
 
 ```html
 <!-- Example: Simple table with header -->
@@ -75,7 +89,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 The **`<th>`** defines **a cell as header of a group of table cells**.
 The exact nature of this group is defined by the **`scope`** and **`headers`** attributes.
 
-## Table with Caption
+### Table with Caption
 
 ```html
 <!-- Example: Table with Caption (or Title) -->
@@ -139,7 +153,7 @@ The **`<tfoot>`** element defines a set of rows summarizing the columns of the t
 </table>
 ```
 
-## Table with Column Group
+### Table with Column Group
 
 The **HTML Column Group element** (**`<colgroup>`**) defines **a group of columns** within a table.
 
@@ -217,11 +231,11 @@ Providing a declaration of `scope="col"` on a `<th>` element will help describe 
 the top of a column. Providing a declaration of `scope="row"` on a `<td>` element will help describe
 that the cell is the first in a row.
 
-- MDN Tables for visually impaired users
-- Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials
-- Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials
-- H63: Using the scope attribute to associate header cells and data cells in data tables | W3C
-Techniques for WCAG 2.0
+- [MDN Tables for visually impaired users](https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
+- [Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
+- [Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
+- [H63: Using the scope attribute to associate header cells and data cells in data tables | W3C
+Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
 
 ### Complicated tables
 
