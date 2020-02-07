@@ -1,19 +1,26 @@
 TOPICS: <form>
         <input>
+        <form> action attribute
+        <form> method attribute
+        <input> type attribute
 
-# `<form>`
+# HTML 表单元素 `<form>`
 
-**HTML `<form>` 元素** 表示了文档中的一个区域，这个区域包含有交互控制元件，用来向web服务器提交信息。
+**HTML 表单元素** (**`<form>`**) 标记了文档中一个包含**交互控制元件**，用来**向Web服务器提交表单信息**的区域。
 
-可以用 `:valid` 和`:invalid` CSS 伪类 来给一个元素指定样式。
+**`<input>`** 元素用于为基于Web的表单创建交互式控件，以便接受来自用户的数据；根据设备和用户代理的不同，可以使用多种类型的输入数据和控件。
+
+可以用 *`:valid`* 和 *`:invalid`* CSS 伪类 来给表单内的元素指定样式。
+
+## 技术摘要
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 流内容，可触知的内容 |
-| **可包含内容** | 流量内容, 但是不包括 `<form>` 元素 |
+| **内容分类** | *流式内容*，*可触知内容* |
+| **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素 |
 | **标签省略** | 不允许，开始标签和结束标签都不能省略。|
-| **允许的父元素** | 任何接受流量内容的元素 |
-| **DOM接口** | `HTMLFormElement` |
+| **允许的父元素** | 任何接受 *流式内容* 的元素 |
+| **DOM 接口** | **`HTMLFormElement`** |
 
 ## 属性
 
@@ -21,25 +28,26 @@ TOPICS: <form>
 
 | 属性 | 描述 |
 | :-- | :-- |
+| **`action`** | 指定处理这个表单信息的程序所在的URL。这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formaction`** 属性重载（覆盖）。 |
+| **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:<br><br>**`post`**: HTTP POST 方法; 表单数据会包含在表单体内然后发送给服务器。<br>**`get`**: HTTP GET 方法; 表单数据会附加在 `action` 属性的 URI 中，并以 `?` 作为分隔符, 然后将组装的 URI 再发送给服务器。这样做会使数据暴露在URI里面且仅包含ASCII字符。不推荐。<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
 | `accept-charset` | 一个空格分隔或逗号分隔的列表，这个列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串“UNKNOWN”。这个字符串指的是，和包含这个form元素的文档相同的编码。在之前版本的HTML中，不同的字符编码可以用空格或逗号分隔。在HTML5中，只有空格可以允许作为分隔符。 |
-| `action` | 一个处理这个form信息的程序所在的URL。这个值可以被 [`<button>`](/zh-hans/webfrontend/<button>) 或者 `<input>` 元素中的 formaction 属性重载（覆盖）。 |
 | `autocapitalize` | 这是一个被 iOS Safari Mobile 使用的非标准属性。当用户在一些form的文本后代控件中，输入/编辑一些文本值时，这个属性控制了这些文本值的首字母是否大写或者使用其他的大写样式。<br>如果 `autocapitalize` 属性在某个单独的form后代控件被指定的话，那么这个单独的设定会覆盖原来form范围内的 `autocapitalize` 设定. 这个非不推荐的值从 iOS 5 及其之后可用. 默认值为 `sentences`. 可以选择的值如下:<br><br>`none`: 完全禁用自动首字母大写.<br>`sentences`: 自动对每句话首字母大写.<br>`words`: 自动对每个单词首字母大写.<br>`characters`: 自动大写所有的字母. |
 | `autocomplete` | 用于指示 input 元素是否能够拥有一个默认值，这个默认值是由浏览器自动补全的。这个设定可以被属于这个form的子元素的 autocomplete 属性重载（覆盖）。 可能的值有:<br><br>`off`: 在每一个用到的输入域里，用户必须显式的输入一个值，或者document 以它自己的方式提供自动补全；浏览器不会自动补全输入。<br>`on`: 浏览器能够根据用户之前在form里输入的值自动补全。<br>**注意:**<br>如果你在一个表单里把 `autocomplete` 设置成 off 是因为 `document` 提供了它独有的自动补全，那么你也应该把这个表单里每一个 `input` 元素的 `autocomplete` 设成 off 来让 `document` 能够自动补全. 想要了解详细信息, 参见 Google Chrome notes. |
 | `enctype` | 当 `method` 属性值为 `post` 时, enctype 是将form的内容提交给服务器的 MIME 类型 。可能的取值有:<br><br>`application/x-www-form-urlencoded`: 未指定属性时的默认值。<br>`multipart/form-data`: 这个值用于一个 `type` 属性设置为 "file" 的 `<input>` 元素。<br>`text/plain (HTML5)`<br>这个值可以被 [`<button>`](/zh-hans/webfrontend/<button>) 或者 `<input>` 元素中的 formenctype 属性重载（覆盖）。 |
-| `method` | 浏览器使用这种 HTTP 方式来提交 form. 可能的值有:<br><br>`post`: 指的是 HTTP POST 方法 ; 表单数据会包含在表单体内然后发送给服务器.<br>`get`: 指的是 HTTP GET 方法; 表单数据会附加在 action 属性的URI中，并以 '?' 作为分隔符, 然后这样得到的 URI 再发送给服务器. 当这样做（数据暴露在URI里面）没什么副作用，或者表单仅包含ASCII字符时，再使用这种方法吧。这个值可以被 [`<button>`](/zh-hans/webfrontend/<button>) 或者 `<input>` 元素中的 formmethod 属性重载（覆盖）。 |
 | `name` | 这个form的名字。在HTML4中，这个用法不被推荐(作为替代，应该使用id). HTML5中，一个文档中的多个form当中，name必须唯一而不仅仅是一个空字符串。 |
 | `novalidate` | 这个布尔类型的属性指示了，当提交时form是否没有被验证。 如果这个属性没有指定 (因此这个 form 是验证通过的)，这个默认设置可以被属于这个form的 [`<button>`](/zh-hans/webfrontend/<button>) 或者`<input>` 元素中的 formnovalidate 属性重载（覆盖）。 |
 | `target` | 一个名字或者说关键字，用来指示在提交表单之后，在哪里显示收到的回复. 在 HTML 4 里, 这是一个用于 frame 的名字/关键字. 在 HTML5 里, 这是一个用于browsing context 浏览器上下文  的名字/关键字 (举例来说, 标签页tab, 窗口window, or 或者行内 frame). 如下的关键字含有特别的含义:<br><br>`_self`: 在当前HTML4或HTML5文档页面重新加载返回值。这个是默认值。译注：也就是说如果这个文档在一个frame中的话，self是在当前frame（document）中重新加载的，而不是整个页面（window）。<br>`_blank`: 以新的HTML4或HTML5文档窗口加载返回值。<br>`_parent`: 在父级的frame中以HTML4或HTML5文档形式加载返回值，如果没有父级的frame，行为和_self一致。<br>`_top`: 如果是HTML 4文档: 清空当前文档，加载返回内容；HTML5: 在当前文档的最高级内加载返回值，如果没有父级，和_self的行为一致。iframename: 返回值在指定frame中加载。<br>HTML5: 这个值可以被 [`<button>`](/zh-hans/webfrontend/<button>) 或者 `<input>` 元素中的 formtarget 属性重载（覆盖）。 |
 
-## `<input>`
+## `<input>` 的类型
 
-**HTML的`<input>`元素**用于为基于Web的表单创建交互式控件，以便接受来自用户的数据； 根据设备和用户代理的不同，可以使用多种类型的输入数据和控件。
-
-### 形式`<input>`类型
-
-`<input>`的工作方式根据其`type`属性的值而有很大不同，因此不同的类型将在其各自的参考页中进行介绍。 如果未指定此属性，则采用的默认类型为`text`。
+`<input>`的工作方式根据其 **`type`** 属性的值而有很大不同。默认类型为 *`text`*。
 
 可用的类型如下：
+
+| `type` | 描述 |
+| :-- | :-- |
+| **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。|
+| **`submit`** | **提交表单的按钮**。|
 
 - `button`: 没有默认行为的按钮。
 - `checkbox`: 一个复选框，允许选择/取消选择单个值。
@@ -61,9 +69,7 @@ TOPICS: <form>
 - `range`: 用于输入其精确值不重要的数字的控件。
 - `reset`: 将表单内容重置为默认值的按钮。
 - `search`: 用于输入搜索字符串的单行文本字段。换行符会自动从输入值中删除。
-- `submit`: 提交表单的按钮。
 - `tel`: 输入电话号码的控件。
-- `text`: 单行文本字段。 换行符会自动从输入值中删除。
 - `time`: 用于输入没有时区的时间值的控件。
 - `url`: 输入URL的字段。
 - `week`: 用于输入日期的控件，该日期由周年号和无时区的周号组成。
@@ -298,7 +304,7 @@ TL;DR:为节省时间，这是关键点：如果可以避免，请勿使用`plac
 通过将[`<label>`](/zh-hans/webfrontend/<label>)和`<input>`配对， 如果您使用明文`label`您的输入，则不会发生。 将激活区域的提示部分用于输入对于有电机控制条件的人很有帮助。作为Web开发人员，重要的是，
 我们切勿以为人们会知道我们所知道的一切。 实际上，使用网络以及通过扩展您的网站而来的人们的多样性保证了您网站的某些访问者的思维过程和/或情况会有所不同，从而导致他们对您的表格的理解与您的理解大相径庭，显示标签。
 
-### 技术摘要
+### `<input>` 技术摘要
 
 |  |  |
 | :-- | :-- |
