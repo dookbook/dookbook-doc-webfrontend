@@ -1,52 +1,59 @@
 TOPICS: <form>
         <input>
+        <form> action attribute
+        <form> method attribute
+        <input> type attribute
 
-# `<form>`
+# HTML Form Element: `<form>`
 
-The **HTML `<form>` element** represents a document section that contains interactive controls for
-submitting information to a web server.
+The **HTML `<form>` element** represents a document section that contains **interactive controls** for
+**submitting information** to a web server.
 
-It is possible to use the `:valid` and `:invalid` CSS pseudo-classes to style a `<form>`
-element based on whether or not the individual `elements` within the form are valid.
+The **`<input>`** element is used to **create interactive controls for web-based forms** in order
+to accept data from the user; a wide variety of types of input data and control widgets are available,
+depending on the device and user agent.
+
+It is possible to use the *`:valid`* and *`:invalid`* CSS pseudo-classes to style a `<form>`
+element based on whether or not the individual elements within the form are valid.
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, palpable content |
-| **Permitted content** | Flow content, but not containing `<form>` elements|
+| **Content categories** | *Flow content*, *palpable content* |
+| **Permitted content** | *Flow content*, but not containing `<form>` elements. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content |
+| **Permitted parents** | Any element that accepts *flow content*. |
 | **Permitted ARIA roles** | `group`, `presentation` |
-| **DOM interface** | `HTMLFormElement` |
+| **DOM interface** | **`HTMLFormElement`** |
 
-**Attributes**:
+## Attributes
 
 This element includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
 | Attribute | Description |
 | :-- | :-- |
+| **`action`** | **The URI of a program that processes the form information**. This value can be overridden by a **`formaction`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
+| **`method`** | The **[[HTTP]] method** that the browser uses to submit the form. Possible values are:<br><br>**`post`**: Corresponds to the HTTP [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data are included in the body of the form and sent to the server.<br>**`get`**: Corresponds to the HTTP [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data are appended to the action attribute URI with a '?' as separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.<br>**`dialog`**: Use when the form is inside a *[`<dialog>`](/en/webfrontend/<dialog>)* element to close the dialog when submitted.<br><br>This value can be overridden by a **`formmethod`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
 | `accept-charset` | A space- or comma-delimited list of character encodings that the server accepts. The browser uses them in the order in which they are listed. The default value, the reserved string `"UNKNOWN"`, indicates the same encoding as that of the document containing the form element. <br>In previous versions of HTML, the different character encodings could be delimited by spaces or commas. In HTML5, only spaces are allowed as delimiters.
-| `action` | The URI of a program that processes the form information. This value can be overridden by a formaction attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element.
 | `autocapitalize` | This is a nonstandard attribute used by iOS Safari Mobile which controls whether and how the text value for textual form control descendants should be automatically capitalized as it is entered/edited by the user. If the `autocapitalize` attribute is specified on an individual form control descendant, it trumps the form-wide `autocapitalize` setting. The non-deprecated values are available in iOS 5 and later. The default value is `sentences`. Possible values are:<br>`none`: Completely disables automatic capitalization<br>`sentences`: Automatically capitalize the first letter of sentences.<br>`words`: Automatically capitalize the first letter of words.<br>`characters`: Automatically capitalize all characters.
 | `autocomplete` |Indicates whether input elements can by default have their values automatically completed by the browser. This setting can be overridden by an `autocomplete` attribute on an element belonging to the form. Possible values are:<br>`off`: The user must explicitly enter a value into each field for every use, or the document provides its own auto-completion method; the browser does not automatically complete entries.<br>`on`: The browser can automatically complete values based on values that the user has previously entered in the form.<br><br>For most modern browsers (including Firefox 38+, Google Chrome 34+, IE 11+) setting the autocomplete attribute will not prevent a browser's password manager from asking the user if they want to store login fields (username and password), if the user permits the storage the browser will autofill the login the next time the user visits the page. See The autocomplete attribute and login fields.<br>**Note:** If you set `autocomplete` to `off` in a form because the document provides its own auto-completion, then you should also set `autocomplete` to `off` for each of the form's `input` elements that the document can auto-complete. For details, see the note regarding Google Chrome in the Browser Compatibility chart.
 | `enctype` | When the value of the `method` attribute is `post`, enctype is the [MIME type](https://en.wikipedia.org/wiki/Mime_type) of content that is used to submit the form to the server. Possible values are:<br>`application/x-www-form-urlencoded`: The default value if the attribute is not specified.<br>`multipart/form-data`: The value used for an `<input>` element with the `type` attribute set to "file".<br>`text/plain`: (HTML5) This value can be overridden by a formenctype attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element.
-| `method` | The HTTP method that the browser uses to submit the form. Possible values are:<br>`post`: Corresponds to the HTTP [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data are included in the body of the form and sent to the server.<br>`get`: Corresponds to the HTTP [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data are appended to the action attribute URI with a '?' as separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.<br>`dialog`: Use when the form is inside a [`<dialog>`](/en/webfrontend/<dialog>) element to close the dialog when submitted.<br><br>This value can be overridden by a `formmethod` attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element.
 | `name` | The name of the form. In HTML 4, its use is deprecated (id should be used instead). It must be unique among the forms in a document and not just an empty string in HTML 5.
 | `novalidate` | This Boolean attribute indicates that the form is not to be validated when submitted. If this attribute is not specified (and therefore the form is validated), this default setting can be overridden by a `formnovalidate` attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element belonging to the form.
 | `target` | A name or keyword indicating where to display the response that is received after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a browsing context (for example, tab, window, or inline frame). The following keywords have special meanings:<br>`_self`:  Load the response into the same HTML 4 frame (or HTML5 browsing context) as the current one. This value is the default if the attribute is not specified.<br>`_blank`: Load the response into a new unnamed HTML 4 window or HTML5 browsing context.<br>`_parent`: Load the response into the HTML 4 frameset parent of the current frame, or HTML5 parent browsing context of the current one. If there is no parent, this option behaves the same way as _self.<br>`_top`: HTML 4: Load the response into the full original window, and cancel all other frames. HTML5: Load the response into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as _self.<br>`iframename`: The response is displayed in a named [`<iframe>`](/en/webfrontend/<iframe>).<br><br>HTML5: This value can be overridden by a formtarget attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element.
 
-## `<input>`
+## Form `<input>` types
 
-The **HTML `<input>` element** is used to create interactive controls for web-based forms in order
-to accept data from the user; a wide variety of types of input data and control widgets are available,
-depending on the device and user agent.
-
-### Form `<input>` types
-
-How an `<input>` works varies considerably depending on the value of its `type` attribute,
-hence the different types are covered in their own separate reference pages.
-If this attribute is not specified, the default type adopted is `text`.
+How an `<input>` works varies considerably depending on the value of its **`type`** attribute.
+If this attribute is not specified, the default type adopted is *`text`*.
 
 The available types are as follows:
+
+| `type` | Description |
+| :-- | :-- |
+| **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. |
+| **`submit`** | **A button that submits the form**. |
 
 - `button`: A push button with no default behavior.
 - `checkbox`: A check box allowing single values to be selected/deselected.
@@ -76,15 +83,13 @@ and **width** attributes to define the size of the image in pixels.
 - `reset`: A button that resets the contents of the form to default values.
 - `search`: A single-line text field for entering search strings.
 Line-breaks are automatically removed from the input value.
-- `submit`: A button that submits the form.
 - `tel`: A control for entering a telephone number.
-- `text`: A single-line text field. Line-breaks are automatically removed from the input value.
 - `time`: A control for entering a time value with no time zone.
 - `url`: A field for entering a URL.
 - `week`: A control for entering a date consisting of a week-year number and a
 week number with no time zone.
 
-### Attributes
+### `<input>` Attributes
 
 The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number
 of combinations of input types and attributes. Since every `<input>` element, regardless of type,
@@ -416,7 +421,7 @@ that some of your site's visitors will have some variation in thought processes 
 that leads them to interpret your forms very differently from you without
 clear and properly-presented labels.
 
-### Technical Summary
+### `<input>` Technical Summary
 
 |  |  |
 | :-- | :-- |
