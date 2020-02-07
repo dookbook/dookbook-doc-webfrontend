@@ -13,7 +13,7 @@ text to break. The text after the `<br>` begins again at the start of the next l
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *phrasing content*.|
-| **Permitted content** | None, it is an empty element.|
+| **Permitted content** | None, it is an **[[empty element]]**.|
 | **Tag omission** | Must have a start tag, and **must not** have an end tag. |
 | **Permitted parents** | Any element that accepts *phrasing content*.|
 | **Permitted ARIA roles** | Any |
