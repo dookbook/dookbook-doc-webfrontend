@@ -37,19 +37,15 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attributes | Description |
 | :-- | :-- |
-|border|Specifies whether the table cell has a border.|
-|align|**HTML 4.01 is obsolete.** Specifies the alignment of the table relative to surrounding elements.|
-|bgcolor|**HTML 4.01 is obsolete.** Specifies the background color of the table|
-|cellpadding|**HTML5 is not supported.** Specifies the space between the cell edge and its content.|
-|cellspacing|**HTML5 is not supported.** Specifies the space between cells.。|
-|frame|**HTML5 is not supported.** Specifies which part of the outer border is visible.|
-|rules|**Not supported in HTML5.** Specifies which part of the inner border is visible.|
-|summary|**Not supported in HTML5.** Summary of required forms.|
-|width|**Not supported in HTML5.** Specify the width of the table.|
+|`border`|Specifies whether the table cell has a border.|
+|~~`align`~~|**obsolete** ；HTML 4.01 is obsolete.Specifies the alignment of the table relative to surrounding elements.|
+|~~`bgcolor`~~|**obsolete** ；HTML 4.01 is obsolete.Specifies the background color of the table|
+|`cellpadding`|**HTML5 is not supported.** Specifies the space between the cell edge and its content.|
+|`cellspacing`|**HTML5 is not supported.** Specifies the space between cells.。|
+|`frame`|**HTML5 is not supported.** Specifies which part of the outer border is visible.|
+|`rules`|**Not supported in HTML5.** Specifies which part of the inner border is visible.|
 
-## Example
-
-### Simple Table without Header
+## Simple Table without Header
 
 ```html
 <!-- Example: Simple table -->
@@ -65,7 +61,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 </table>
 ```
 
-### Simple Table with Header
+## Simple Table with Header
 
 ```html
 <!-- Example: Simple table with header -->
@@ -153,7 +149,7 @@ The **`<tfoot>`** element defines a set of rows summarizing the columns of the t
 </table>
 ```
 
-### Table with Column Group
+## Table with Column Group
 
 The **HTML Column Group element** (**`<colgroup>`**) defines **a group of columns** within a table.
 
