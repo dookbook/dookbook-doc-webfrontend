@@ -7,11 +7,6 @@ TOPICS: <details>
 The **HTML Details Element** (**`<details>`**) creates a *disclosure widget* in which information is
 visible only when the widget is toggled into an "*open*" state.
 
-The `<datalist>` tag is used to provide "autocomplete" features for `<input>` elements. The user can
-see a drop-down list. The options in it are predefined and will be used as the user's input data.
-
-Use the `list` attribute of the `<input>` element to bind the `<datalist>` element.
-
 The **HTML Disclosure Summary element** (**`<summary>`**) element
 specifies a **summary**, **caption**, **label**,
 or **legend** for a *`<details>`* element's disclosure box.
