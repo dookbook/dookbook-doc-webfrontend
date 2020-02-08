@@ -9,6 +9,8 @@ TOPICS: <table>
         <colgroup>
         <col>
         <col> span attribute
+        <table> align attribute
+        <table> bgcolor attribute
 
 # HTML 表格元素 `<table>`
 
@@ -33,15 +35,15 @@ TOPICS: <table>
 
 | 属性 | 描述 |
 | :-- | :-- |
-|`border`|规定表格单元是否拥有边框。|
-|~~`align`~~|**已废弃**;HTML 4.01 已废弃。规定表格相对周围元素的对齐方式。|
-|~~`bgcolor`~~|**已废弃**;HTML 4.01 已废弃。规定表格的背景颜色。|
-|`cellpadding`|**HTML5不支持。** 规定单元边沿与其内容之间的空白。|
-|`cellspacing`|**HTML5不支持。** 规定单元格之间的空白。|
-|`frame`|**HTML5不支持。** 规定外侧边框的哪个部分是可见的。|
-|`rules`|**HTML5 不支持。** 规定内侧边框的哪个部分是可见的。|
+| `border` | 规定表格单元是否拥有边框。|
+| ~~`align`~~ | (**已废弃**，请使用 [[CSS]] 代替) 规定表格相对周围元素的**对齐方式**。|
+| ~~`bgcolor`~~ | (**已废弃**，请使用 [[CSS]] 代替) 规定表格的**背景颜色**。|
+| ~~`cellpadding`~~ | (**不支持**，请使用 [[CSS]] 代替) 规定单元边沿与其内容之间的**空白**。|
+| ~~`cellspacing`~~ | (**不支持**，请使用 [[CSS]] 代替) 规定单元格之间的**空白**。|
+| ~~`frame`~~ | (**不支持**，请使用 [[CSS]] 代替) 规定**外侧边框**的哪个部分是可见的。|
+| ~~`rules`~~ | (**不支持**，请使用 [[CSS]] 代替) 规定**内侧边框**的哪个部分是可见的。|
 
-## 不带标题单元格的简单表格
+## 示例：不带标题单元格的表格
 
 ```html
 <!-- 示例：简单表格 -->
@@ -57,10 +59,10 @@ TOPICS: <table>
 </table>
 ```
 
-## 带标题单元格的简单表格
+## 示例：带标题单元格的表格
 
 ```html
-<!-- 示例：带标题单元格的简单表格 -->
+<!-- 示例：带标题单元格的表格 -->
 <table>
   <tr>
     <th>标题单元格 第1列</th>
@@ -80,7 +82,11 @@ TOPICS: <table>
 
 **`<th>`** 定义表格内的**表头单元格**。这部分特征是由 **`scope`** and **`headers`** 属性准确定义的。
 
-## 带标题的表格
+## 示例：带标题的表格
+
+通过提供 **`<caption>`**，清晰简洁地描述表格目的，它可以帮助人们决定是否需要阅读表格的其余内容或跳过表格的其余内容。
+
+**无障碍建议**：当视力不好的条件下，这可以帮助人们借助辅助技术（例如屏幕阅读器）进行导航。
 
 ```html
 <!-- 示例：带标题的表格 -->
@@ -105,7 +111,7 @@ TOPICS: <table>
 **HTML 表格标题元素** (**`<caption>`**) 展示一个表格的标题， 它常常作为 `<table>` 的**第一个**子元素出现，同时显示在表格内容的最前面。
 但是，它的样式可以由 [[CSS]] **`caption-side`** 和 **`text-align`** 的属性自定义。
 
-## 空单元格
+## 示例：空单元格
 
 本例演示如何使用 "`&nbsp`;" 处理没有内容的单元格。
 
@@ -125,7 +131,7 @@ TOPICS: <table>
 </body>
 ```
 
-## 带 `<thead>`, `<tfoot>` 和 `<tbody>` 的表格
+## 示例：带 `<thead>`, `<tfoot>` 和 `<tbody>` 的表格
 
 **`<thead>`** 元素封装了一组标题单元格（包含 *`<th>`* 的 *`<tr>`*）的表格行。
 
@@ -165,7 +171,7 @@ TOPICS: <table>
 </table>
 ```
 
-## 带列组的表格
+## 示例：带列组的表格
 
 **HTML 表格列组元素**（**`<colgroup>`**）用于对表格中的列进行组合，以便对其进行格式化。
 
@@ -196,12 +202,6 @@ TOPICS: <table>
 ```
 
 ## 无障碍关注
-
-### 标题
-
-通过提供`<caption>`其值,清晰简洁地描述表格目的，它可以帮助人们决定是否需要阅读表格的其余内容或跳过表格的其余内容。
-
-这可以帮助人们借助辅助技术（例如屏幕阅读器），当视力不好的条件下为人们认知问题的进行导航。
 
 ### 确定行和列的范围
 
@@ -252,4 +252,3 @@ Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
 - [MDN Tables for visually impaired users](https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
-- [Creating a bar chart from a HTML table](http://www.coding-dude.com/wp/html5/bar-chart-html/)
