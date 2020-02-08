@@ -7,6 +7,11 @@ TOPICS: <details>
 The **HTML Details Element** (**`<details>`**) creates a *disclosure widget* in which information is
 visible only when the widget is toggled into an "*open*" state.
 
+The `<datalist>` tag is used to provide "autocomplete" features for `<input>` elements. The user can
+see a drop-down list. The options in it are predefined and will be used as the user's input data.
+
+Use the `list` attribute of the `<input>` element to bind the `<datalist>` element.
+
 The **HTML Disclosure Summary element** (**`<summary>`**) element
 specifies a **summary**, **caption**, **label**,
 or **legend** for a *`<details>`* element's disclosure box.
@@ -26,7 +31,7 @@ or **legend** for a *`<details>`* element's disclosure box.
 
 |  |  |
 | :-- | :-- |
-| **Permitted content** | *Phrasing content* or one element of *Heading content* |
+| **Permitted content** | *Phrasing content* or one element of *Heading content* .|
 | **Tag omission** | None, both the start tag and the end tag are mandatory. |
 | **Permitted parents** | The *`<details>`* element. |
 | **Permitted ARIA roles** | `button` |
@@ -38,7 +43,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| **`open`** | This *Boolean* attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently **visible**. The default, *`false`*, means the details are not visible.
+| **`open`** | This *Boolean* attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently **visible**. The default, *`false`*, means the details are not visible. |
 
 ## Usage Notes
 
