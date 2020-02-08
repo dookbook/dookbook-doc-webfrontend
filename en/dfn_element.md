@@ -22,10 +22,6 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 ## Usage Notes
 
-!!! warn "Prompt"
-    We are not opposed to the use of the `<dfn>` tag, but if you are using this tag just to achieve
-    some visual effect, we recommend that you use CSS, which may achieve a richer effect.
-
 ### Specifying the Term being Defined
 
 The term being defined is identified following these rules:
@@ -36,7 +32,8 @@ abbreviation (perhaps using *[`<abbr>`](/en/webfrontend/<abbr>)*) or another for
 - If the `<dfn>` contains **a single child element** and does not have any text content of its own,
 and the child element is an **[`<abbr>`](/en/webfrontend/<abbr>)** element with a `title` attribute
 itself, then the exact value of the [`<abbr>`](/en/webfrontend/<abbr>) element's `title` is the
-term being defined.Otherwise, the text content of the `<dfn>` element is the term being defined.
+term being defined.
+- Otherwise, the text content of the `<dfn>` element is the term being defined.
 
 !!! warn "`<dfn>` element has a `title` attribute"
     If the `<dfn>` element has a `title` attribute, it must contain the term being
