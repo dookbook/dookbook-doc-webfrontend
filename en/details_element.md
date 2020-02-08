@@ -40,12 +40,12 @@ See Customizing the disclosure widget for further details.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, sectioning root, interactive content, palpable content. |
-| **Permitted content** | One `<summary>` element followed by flow content. |
+| **Content categories** | *Flow content*, *sectioning root*, *interactive content*, *palpable conten*t. |
+| **Permitted content** | One `<summary>` element followed by *flow content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content. |
+| **Permitted parents** | Any element that accepts *flow content*. |
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLDetailsElement` |
+| **DOM interface** | **`HTMLDetailsElement`** |
 
 ## Attributes
 
@@ -53,7 +53,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| `open` | This Boolean attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently visible. The default, `false`, means the details are not visible.
+| `open` | This Boolean attribute indicates whether or not the details — that is, the contents of the `<details>` element — are currently visible. The default, `false`, means the details are not visible. |
 
 ## Events
 
@@ -83,11 +83,11 @@ state of the parent `<details>` element open and closed.
 
 |  |  |
 | :-- | :-- |
-| **Permitted content** | Phrasing content or one element of Heading content |
+| **Permitted content** | *Phrasing content* or one element of *Heading content*. |
 | **Tag omission** | None, both the start tag and the end tag are mandatory. |
 | **Permitted parents** | The `<details>` element. |
 | **Permitted ARIA roles** | `button` |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Usage Notes
 
