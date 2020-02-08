@@ -5,7 +5,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 # `invalid` Event
 
 The **`oninvalid`** property of the `GlobalEventHandlers` mixin is an `EventHandler` that processes
-`invalid` events.
+**`invalid`** events.
 
 The `invalid` event fires when a submittable element has been checked and doesn't satisfy its
 constraints. The validity of submittable elements is checked before submitting their owner form, or

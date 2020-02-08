@@ -5,7 +5,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 # `error` Event
 
 The **`onerror`** property of the `GlobalEventHandlers` mixin is an `EventHandler` that processes
-`error` events.
+**`error`** events.
 
 Error events are fired at various targets for different kinds of errors:
 

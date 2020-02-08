@@ -4,7 +4,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # `cuechange` 事件
 
-**`oncuechange`** 属性属于`GlobalEventHandlers`，是一个处理`cuechange`事件的`EventHandler`。
+**`oncuechange`** 属性属于`GlobalEventHandlers`，是一个处理 **`cuechange`** 事件的`EventHandler`。
 当`TextTrack`更改了当前显示的提示时，`cuechange` 事件将会触发。
 
 ## 语法

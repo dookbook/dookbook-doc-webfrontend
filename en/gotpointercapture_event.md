@@ -5,7 +5,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 # `gotpointercapture` Event
 
 The **`ongotpointercapture`** property of the `GlobalEventHandlers` mixin is an `EventHandler` that
-processes `gotpointercapture` events.
+processes **`gotpointercapture`** events.
 
 ## Syntax
 

@@ -4,7 +4,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # `fullscreenchange` 事件
 
-**`Document.onfullscreenchange`** 属性是 `fullscreenchange` 事件的处理器，这个事件在当前文档进入或者退出全屏的时候触发。
+**`Document.onfullscreenchange`** 属性是 **`fullscreenchange`** 事件的处理器，这个事件在当前文档进入或者退出全屏的时候触发。
 
 ## 语法
 

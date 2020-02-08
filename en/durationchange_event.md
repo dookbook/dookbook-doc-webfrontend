@@ -5,7 +5,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 # `durationchange` Event
 
 The **`ondurationchange`** property of the `GlobalEventHandlers` mixin is the `EventHandler` for
-processing `durationchange` events.
+processing **`durationchange`** events.
 
 The `durationchange` event is fired when the `duration` attribute has been updated.
 

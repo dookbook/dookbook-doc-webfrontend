@@ -5,7 +5,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 # `contextmenu` Event
 
 The **`oncontextmenu`** property of the `GlobalEventHandlers` mixin is an `EventHandler` that
-processes `contextmenu` events.
+processes **`contextmenu`** events.
 
 The `contextmenu` event typically fires when the right mouse button is clicked on the window. Unless
 the default behavior is prevented, the browser context menu will activate.

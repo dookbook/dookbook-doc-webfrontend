@@ -4,7 +4,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # `invalid` 事件
 
-`GlobalEventHandlers` 混合的 **`oninvalid`** 属性 是 `EventHandler` 处理 `invalid` 事件。
+`GlobalEventHandlers` 混合的 **`oninvalid`** 属性 是 `EventHandler` 处理 **`invalid`** 事件。
 
 `invalid` 事件被触发当一个从属元素被勾选 `checked` 并且与之前的选中方式不同。 有效的从属元素在表单之前被选中, 或者在 `checkValidity()` 方法之后它自己的表单被调用。
 

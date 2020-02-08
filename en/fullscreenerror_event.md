@@ -4,7 +4,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # `fullscreenerror` Event
 
-The **`Document.onfullscreenerror`** property is an event handler for the `fullscreenerror` event
+The **`Document.onfullscreenerror`** property is an event handler for the **`fullscreenerror`** event
 that is sent to the  document when it fails to transition into full-screen mode after a prior call
 to `Element.requestFullscreen()`.
 

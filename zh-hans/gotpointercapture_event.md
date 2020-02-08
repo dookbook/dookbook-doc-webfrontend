@@ -4,7 +4,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # `gotpointercapture` 事件
 
-**`ongotpointercapture`** 事件是`GlobalEventHandlers`的属性,这个事件返回`gotpointercapture`类型的事件操作。
+**`ongotpointercapture`** 事件是`GlobalEventHandlers`的属性,这个事件返回 **`gotpointercapture`** 类型的事件操作。
 
 ## 语法
 

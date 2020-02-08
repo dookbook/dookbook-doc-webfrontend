@@ -4,7 +4,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # `cancel` 事件
 
-`GlobalEventHandlers` 的 **`oncancel`** 属性是一个`EventHandler`，它是用来处理发送给`<dialog>`元素的`cancel` 事件的。
+`GlobalEventHandlers` 的 **`oncancel`** 属性是一个`EventHandler`，它是用来处理发送给`<dialog>`元素的 **`cancel`** 事件的。
 
 当用户需要离开一个`<dialog>`元素的时候就会触发 `cancel` 事件. 这个事件处理器会防止事件向上传递,因此任何父处理器都不会接受到该事件。
 

@@ -5,7 +5,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 # `fullscreenchange` Event
 
 The `Document` interface's **`onfullscreenchange`** property is an event handler for the
-`fullscreenchange` event that is fired immediately before a document transitions into or out of
+**`fullscreenchange`** event that is fired immediately before a document transitions into or out of
 full-screen mode.
 
 ## Syntax

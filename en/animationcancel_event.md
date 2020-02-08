@@ -5,7 +5,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 # `animationcancel` Event
 
 The **`onanimationcancel`** property of the `GlobalEventHandlers` mixin is the `EventHandler` for
-processing `animationcancel` events.
+processing **`animationcancel`** events.
 
 An `animationcancel` event is sent when a CSS animation unexpectedly aborts, that is, any time it
 stops running without sending an `animationend` event. This can happen, for example, when the
@@ -62,7 +62,7 @@ intended to begin as soon as the page loads, rather than based on an event.
 }
 ```
 
-The animation's keyframes are described next, plotting a course from the top-left corner of the
+The animation's `keyframes` are described next, plotting a course from the top-left corner of the
 content box to the bottom-right corner.
 
 ```css
