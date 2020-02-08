@@ -9,6 +9,8 @@ TOPICS: <table>
         <colgroup>
         <col>
         <col> span attribute
+        <table> align attribute
+        <table> bgcolor attribute
 
 # HTML Table Element: `<table>`
 
@@ -37,13 +39,13 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attributes | Description |
 | :-- | :-- |
-|`border`|Specifies whether the table cell has a border.|
-|~~`align`~~|**obsolete** ；HTML 4.01 is obsolete.Specifies the alignment of the table relative to surrounding elements.|
-|~~`bgcolor`~~|**obsolete** ；HTML 4.01 is obsolete.Specifies the background color of the table|
-|`cellpadding`|**HTML5 is not supported.** Specifies the space between the cell edge and its content.|
-|`cellspacing`|**HTML5 is not supported.** Specifies the space between cells.。|
-|`frame`|**HTML5 is not supported.** Specifies which part of the outer border is visible.|
-|`rules`|**Not supported in HTML5.** Specifies which part of the inner border is visible.|
+| `border` |Specifies whether the table cell has a border.|
+| ~~`align`~~ | (**Obsolete**, use [[CSS]] instead) Specifies the **alignment** of the table relative to surrounding elements.|
+| ~~`bgcolor`~~ | (**Obsolete**, use [[CSS]] instead) Specifies the **background color** of the table. |
+| ~~`cellpadding`~~ | (**Not supported**, use [[CSS]] instead) Specifies the **space** between the cell edge and its content. |
+| ~~`cellspacing`~~ | (**Not supported**, use [[CSS]] instead) Specifies the **space** between cells.。|
+| ~~`frame`~~ | (**Not supported**, use [[CSS]] instead) Specifies which part of the **outer border** is visible.|
+| ~~`rules`~~ | (**Not supported**, use [[CSS]] instead) Specifies which part of the **inner border** is visible.|
 
 ## Simple Table without Header
 
@@ -87,6 +89,13 @@ The exact nature of this group is defined by the **`scope`** and **`headers`** a
 
 ### Table with Caption
 
+By supplying a **`<caption>`** element whose value clearly and concisely describes the table's purpose,
+it helps the people decide if they need to read the rest of the table content or skip over it.
+
+**Accessibility Concerns**: This helps people navigating with the aid of assistive technology
+such as a screen reader, people
+experiencing low vision conditions, and people with cognitive concerns.
+
 ```html
 <!-- Example: Table with Caption (or Title) -->
 <table>
@@ -111,6 +120,8 @@ The **HTML Table Caption element** (**`<caption>`**) specifies **the caption (or
 and if used is always the **first** child of a `<table>`.
 Its styling and physical position relative to
 the table may be changed using the [[CSS]] **`caption-side`** and **`text-align`** properties.
+
+More WAI tutorials, please refer to [Caption & Summary • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/).
 
 ## Table with `<thead>`, `<tfoot>` and `<tbody>`
 
@@ -179,17 +190,6 @@ semantics on all common cells. It is generally found within a *`<colgroup>`* ele
 
 ## Accessibility Concerns
 
-### Captions
-
-By supplying a `<caption>` element whose value clearly and concisely describes the table's purpose,
-it helps the people decide if they need to read the rest of the table content or skip over it.
-
-This helps people navigating with the aid of assistive technology such as a screen reader, people
-experiencing low vision conditions, and people with cognitive concerns.
-
-- [MDN Adding a caption to your table with `<caption>`](https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#Adding_a_caption_to_your_table_with_%3Ccaption%3E)
-- [Caption & Summary • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
-
 ### Scoping rows and columns
 
 The `scope` attribute on header elements is redundant in simple contexts, because scope is inferred.
@@ -230,8 +230,7 @@ that the cell is the first in a row.
 - [MDN Tables for visually impaired users](https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
 - [Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
-- [H63: Using the scope attribute to associate header cells and data cells in data tables | W3C
-Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
+- [H63: Using the scope attribute to associate header cells and data cells in data tables | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
 
 ### Complicated tables
 
@@ -251,4 +250,3 @@ attributes to programmatically associate each table cell with the header(s) the 
 - [MDN Tables for visually impaired users](https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
-- [Creating a bar chart from a HTML table](http://www.coding-dude.com/wp/html5/bar-chart-html/)
