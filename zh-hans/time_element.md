@@ -1,49 +1,53 @@
 TOPICS: <time>
 
-# `<time>`
+# HTML 时间元素 `<time>`
 
- HTML time 标签(`<time>`) 用来表示24小时制时间或者[公历日期](http://en.wikipedia.org/wiki/Gregorian_calendar)，若表示日期则也可包含时间和时区。
+**HTML 时间元素** (**`<time>`**) 用来表示24小时制时间或者 [公历日期](http://en.wikipedia.org/wiki/Gregorian_calendar)，若表示日期则也可包含时间和时区。
 
-此元素意在以机器可读的格式表示日期和时间。 有安排日程表功能的应用可以利用这一点。
-
-!!! warn "Don't try this at home"
-    用法提示： 如果给定的日期不是正常日期或者在公历中最早的日期之前，请不要使用此元素。
-
-!!! warn "Don't try this at home"
-    状态提示： 该元素仍在设计和讨论中([http://blog.whatwg.org/weekly-time-data](http://blog.whatwg.org/weekly-time-data))
+## 技术摘要
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 流量内容，措辞内容 |
-| **可包含内容** | 短语内容， 但不能包含子 `time` 元素。 |
-| **标签可省略** | 起止标签均不能省略。 |
-| **允许的父元素** | 任何接受措辞内容的元素。 |
-| **标准文档** | HTML5, section 4.6.10 |
+| **内容分类** | *流式内容*，*短语内容*，*可触知内容*。 |
+| **允许的内容** | 短语内容， 但不能包含子 `<time>` 元素。 |
+| **标签省略** | 不允许，起止标签均不能省略。 |
+| **允许的父元素** | 任何接受 *短语内容* 的元素。 |
+| **DOM 接口** | **`HTMLTimeElement`** |
 
 ## 属性
 
-像所有其他元素一样，此元素拥有可以使用[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)。
+此元素支持[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)。
 
 | 属性 | 描述 |
 | :-- | :-- |
-| `datetime` | 该属性表示此元素的时间和日期，并且属性值必须是一个[有效的日期格式，并可包含时间](http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time)。如果此值不能被解析为日期，元素不会有一个关联的时间戳. |
+| **`datetime`** | 该属性表示此元素的**时间和日期**，并且属性值必须是一个[有效的日期格式](http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time)。|
 
-## 示例
+## 使用须知
+
+此元素意在以**机器可读**的格式表示日期和时间，可方便搜索引擎给出更好的搜索结果或者方便一些特定功能的应用，比如提醒功能。有安排日程表功能的应用可以利用这一点。
+
+如果给定的日期不是正常日期或者在公历中最早的日期之前，请不要使用此元素。
+
+如果 **`datetime`** 属性值未指定，该元素**不允许包含任何子元素**，并且日期的值即为该元素的文本内容。
+
+## 有效的时间格式
+
+| `datetime` 属性值 | 描述 |
+| :-- | :-- |
+| `2020`<br>`0001` | 有效的**年份**字符串。|
+| `2020-01` | 有效的**年月**字符串。|
+| `2020-01-01` | 有效的**日期**字符串。|
+| `01-01` | 有效的**不带年份的日期**字符串。|
+| `2020-W47` | 有效的**星期**字符串。|
+| `18:00`<br>`18:00:00`<br>`18:00:00.929` | 有效的**时间** 字符串。|
+| `2020-01-01T18:00:00.929`<br>`2020-01-01 18:00:00.929` | 有效的**本地日期和时间**字符串。|
+| `2020-01-01T18:00:00.929Z`<br>`2020-01-01T18:00:00.929-0400`<br>`2020-01-01T18:00:00.929-04:00`<br>`2020-01-01 18:00:00.929Z`<br>`2020-01-01 18:00:00.929-0400`<br>`2020-01-01 18:00:00.929-04:00` | 有效的 **国际日期和时间**字符串。（带时区）|
+| `PT4H18M3S` | 有效的**时间段**字符串。|
+
+## 简单示例
 
 ```html
 <p>The concert starts at <time>20:00</time>.</p>
-```
 
-### `pubdate` 示例
-
-```html
-<article>
-  <p>This article was created on <time pubdate>2011-01-28</time>.</p>
-</article>
-```
-
-### `datetime` 示例
-
-```html
-<p>The concert took place on <time datetime="2001-05-15 19:00">May 15</time>.</p>
+<p>The concert took place on <time datetime="2020-01-01 19:00">May 15</time>.</p>
 ```
