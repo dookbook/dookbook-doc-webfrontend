@@ -25,25 +25,14 @@ atomic segment of the base text.
 
 ## Technical Summary
 
-| - | `<ruby>` | `<rp>` | `<rt>` |
-| :-- | :-- | :-- | :-- |
-| **Content categories** | *Flow content*, *phrasing content*, *palpable content*. | None. | None. |
-| **Permitted content** | *Phrasing content*.| Text | *Phrasing content*. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. | The end tag can be omitted if the element is immediately followed by an `<rt>` or another `<rp>` element, or if there is no more content in the parent element. | The end tag may be omitted if the `<rt>` element is immediately followed by an `<rt>` or `<rp>` element, or if there is no more content in the parent element. |
-| **Permitted parents** | Any element that accepts *phrasing content*.| A *`<ruby>`* element. `<rp>` must be positioned immediately before or after an *`<rt>`* element. | A *`<ruby>`* element. |
-| **Permitted ARIA roles** | Any | Any | Any |
-| **DOM interface** | **`HTMLElement`** | **`HTMLElement`** | **`HTMLElement`** |
-
-## `<rb>` Technical Summary
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | None. |
-| **Permitted content** | As a child of a *`<ruby>`* element.|
-| **Tag omission** | The end tag can be omitted if the element is immediately followed by an `<rt>`, `<rtc>`, or `<rp>` element or another `<rb>` element, or if there is no more content in the parent element. |
-| **Permitted parents** | A *`<ruby>`* element. |
-| **Permitted ARIA roles** | Any |
-| **DOM interface** | **`HTMLElement`** |
+| - | `<ruby>` | `<rp>` | `<rt>` | `<rb>` |
+| :-- | :-- | :-- | :-- | :-- |
+| **Content categories** | *Flow content*, *phrasing content*, *palpable content*. | None. | None. | None. |
+| **Permitted content** | *Phrasing content*.| Text | *Phrasing content*. | As a child of a *`<ruby>`* element.|
+| **Tag omission** | None, both the starting and ending tag are mandatory. | The end tag can be omitted if the element is immediately followed by an `<rt>` or `<rp>` element, or if there is no more content in the parent element. | The end tag may be omitted if the element is immediately followed by an `<rt>` or `<rp>` element, or if there is no more content in the parent element. | The end tag can be omitted if the element is immediately followed by an `<rt>`, `<rtc>`, or `<rp>` or `<rb>` element, or if there is no more content in the parent element.|
+| **Permitted parents** | Any element that accepts *phrasing content*.| A *`<ruby>`* element. `<rp>` must be positioned immediately before or after an *`<rt>`* element. | A *`<ruby>`* element. | A *`<ruby>`* element. |
+| **Permitted ARIA roles** | Any | Any | Any | Any |
+| **DOM interface** | **`HTMLElement`** | **`HTMLElement`** | **`HTMLElement`** | **`HTMLElement`** |
 
 ## Attributes
 
