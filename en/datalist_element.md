@@ -8,13 +8,13 @@ that represent the values available for other controls.
 The `<datalist>` tag is used to provide "autocomplete" features for `<input>` elements. The user can
 see a drop-down list. The options in it are predefined and will be used as the user's input data.
 
-Use the list attribute of the `<input>` element to bind the `<datalist>` element.
+Use the `list` attribute of the `<input>` element to bind the `<datalist>` element.
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *phrasing content*. |
 | **Permitted content** | Either *phrasing content* or zero or more [`<option>`](/en/webfrontend/<option>) elements. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | None |
 | **DOM interface** | **`HTMLDataListElement`** |
 
