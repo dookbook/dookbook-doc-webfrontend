@@ -4,86 +4,80 @@ TOPICS: <ruby>
         <rb>
         <rtc>
 
-# `<ruby>`
+# HTML Ruby Annotation Element: `<ruby>`/`<rp>`/`<rt>`/`<rb>`
 
-The **HTML `<ruby>` element** represents a ruby annotation. Ruby annotations are for showing
-pronunciation of East Asian characters.
+The **HTML `<ruby>` element** represents a **ruby annotation**. Ruby annotations are for showing
+pronunciation of *East Asian* characters.
+
+The **HTML Ruby Fallback Parenthesis element** (**`<rp>`**) is used to provide **fall-back**
+parentheses for
+browsers that do not support display of ruby annotations using the *`<ruby>`* element. One `<rp>`
+element should enclose each of the opening and closing parentheses that wrap the `<rt>` element
+that contains the annotation's text.
+
+The **HTML Ruby Text element** (**`<rt>`**) specifies the **ruby text component** of a ruby annotation,
+which is used to provide *pronunciation*, *translation*, or *transliteration* information for East Asian
+typography. It must always be contained within a *`<ruby>`* element.
+
+The **HTML Ruby Base element** (**`<rb>`**) is used to **delimit the base text** component of a `<ruby>`
+annotation, i.e. the text that is being annotated. One `<rb>` element should wrap each separate
+atomic segment of the base text.
+
+## Technical Summary
+
+| - | `<ruby>` | `<rp>` | `<rt>` |
+| :-- | :-- | :-- | :-- |
+| **Content categories** | *Flow content*, *phrasing content*, *palpable content*. | None. | None. |
+| **Permitted content** | *Phrasing content*.| Text | *Phrasing content*. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. | The end tag can be omitted if the element is immediately followed by an `<rt>` or another `<rp>` element, or if there is no more content in the parent element. | The end tag may be omitted if the `<rt>` element is immediately followed by an `<rt>` or `<rp>` element, or if there is no more content in the parent element. |
+| **Permitted parents** | Any element that accepts *phrasing content*.| A *`<ruby>`* element. `<rp>` must be positioned immediately before or after an *`<rt>`* element. | A *`<ruby>`* element. |
+| **Permitted ARIA roles** | Any | Any | Any |
+| **DOM interface** | **`HTMLElement`** | **`HTMLElement`** | **`HTMLElement`** |
+
+## `<rb>` Technical Summary
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, palpable content.|
-| **Permitted content** | Phrasing content.|
-| **Tag omission** | None, both the starting and ending tag are mandatory.|
-| **Permitted parents** | Any element that accepts phrasing content.|
+| **Content categories** | None. |
+| **Permitted content** | As a child of a *`<ruby>`* element.|
+| **Tag omission** | The end tag can be omitted if the element is immediately followed by an `<rt>`, `<rtc>`, or `<rp>` element or another `<rb>` element, or if there is no more content in the parent element. |
+| **Permitted parents** | A *`<ruby>`* element. |
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 
 This element only includes the [global attributes](/en/webfrontend/HTML_Global_Attributes)
 
-## `<rp>`
-
-The **HTML Ruby Fallback Parenthesis (`<rp>)` element** is used to provide fall-back parentheses for
-browsers that do not support display of ruby annotations using the `<ruby>` element. One `<rp>`
-element should enclose each of the opening and closing parentheses that wrap the `<rt>` element
-that contains the annotation's text.
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | None. |
-| **Permitted content** | Text |
-| **Tag omission** | The end tag can be omitted if the element is immediately followed by an `<rt>` or another `<rp>` element, or if there is no more content in the parent element. |
-| **Permitted parents** | A `<ruby>` element. `<rp>` must be positioned immediately before or after an `<rt>` element. |
-| **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
-
-Usage Notes
+## Basic Usage Notes
 
 Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese
-furigana or Taiwanese bopomofo characters. The `<rp>` element is used in the case of lack of `<ruby>`
+furigana or Taiwanese bopomofo characters. The *`<rp>`* element is used in the case of lack of `<ruby>`
 element support; the `<rp>` content provides what should be displayed in order to indicate the
 presence of a ruby annotation, usually parentheses.
 
-## `<rt>`
+```html
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
 
-The **HTML Ruby Text (`<rt>`) element** specifies the ruby text component of a ruby annotation,
-which is used to provide pronunciation, translation, or transliteration information for East Asian
-typography. The `<rt>` element must always be contained within a `<ruby>` element.
+## `<rb>` Usage Notes
 
-|  |  |
-| :-- | :-- |
-| **Content categories** | None. |
-| **Permitted content** | Phrasing content.|
-| **Tag omission** | The end tag may be omitted if the `<rt>` element is immediately followed by an `<rt>` or `<rp>` element, or if there is no more content in the parent element|
-| **Permitted parents** | A `<ruby>` element.|
-| **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
-
-## `<rb>`
-
-The **HTML Ruby Base (`<rb>`) element** is used to delimit the base text component of a  `<ruby>`
-annotation, i.e. the text that is being annotated. One `<rb>` element should wrap each separate
-atomic segment of the base text.
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | None. |
-| **Permitted content** | As a child of a `<ruby>` element.|
-| **Tag omission** | The end tag can be omitted if the element is immediately followed by an `<rt>`, `<rtc>`, or `<rp>` element or another `<rb>` element, or if there is no more content in the parent element. |
-| **Permitted parents** | A `<ruby>` element. |
-| **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLElement` |
-
-Usage Notes
-
-- Ruby annotations are for showing pronunciation of East Asian characters, like using Japanese
-furigana or Taiwanese bopomofo characters. The `<rb>` element is used to separate out each segment
+- The *`<rb>`* element is used to separate out each segment
 of the ruby base text.
 - Even thought `<rb>` is not an empty element, it is common to just include the opening tag of each
 element in the source code, so that the ruby markup is less complex and easier to read. The browser
 can then fill in the full element in the rendered version.
 - You need to include one `<rt>` element for each base segment/`<rb>` element that you want to annotate.
+
+```html
+<ruby>
+  <rb>漢<rb>字
+  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
+</ruby>
+```
 
 ## `<rtc>`
 
@@ -101,36 +95,14 @@ or `<rt>` element opening tag or by its parent closing tag. |
 | **Permitted ARIA roles** | Any |
 | **DOM interface** | `HTMLElement` |
 
-## Example
-
-### `<rp>`、`<rt>` Example
-
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
-```
-
-### `<rb>` Example
-
-```html
-<ruby>
-  <rb>漢<rb>字
-  <rp>(</rp><rt>kan<rt>ji<rp>)</rp>
-</ruby>
-```
-
-### `<rbc>` Example
-
 ```html
 <div class="info">
   <ruby>
-    <rbc>
+    <rtc>
       <rb>旧</rb><rt>jiù</rt>
       <rb>金</rb><rt>jīn</rt>
       <rb>山</rb><rt>shān</rt>
-    </rbc>
+    </rtc>
     <rtc>San Francisco</rtc>
   </ruby>
 </div>
