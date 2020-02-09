@@ -14,9 +14,9 @@ section of a document as being written in a different language (using the `lang`
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *palpable content*.|
-| **Permitted content** | *Flow content*. <br><br>Or (in *[[WHATWG]]* HTML): If the parent is a **[`<dl>`](/en/webfrontend/<dl>)** element: one or more **[`<dt>`](/en/webfrontend/<dt>)** elements followed by one or more **[`<dd>`](/en/webfrontend/<dd>)** elements, optionally intermixed with *[`<script>`](/en/webfrontend/<script>)* and *[`<template>`](/en/webfrontend/<template>)* elements. |
+| **Permitted content** | *Flow content*. <br>Or (in *[[WHATWG]]* HTML): If the parent is a **[`<dl>`](/en/webfrontend/<dl>)** element: one or more **[`<dt>`](/en/webfrontend/<dt>)** elements followed by one or more **[`<dd>`](/en/webfrontend/<dd>)** elements, optionally intermixed with *[`<script>`](/en/webfrontend/<script>)* and *[`<template>`](/en/webfrontend/<template>)* elements. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts *flow content*.<br><br>Or (in *[[WHATWG]]* HTML): **[`<dl>`](/en/webfrontend/<dl>)** element. |
+| **Permitted parents** | Any element that accepts *flow content*.<br>Or (in *[[WHATWG]]* HTML): **[`<dl>`](/en/webfrontend/<dl>)** element. |
 | **Permitted ARIA roles** | Any |
 | **DOM interface** | **`HTMLDivElement`** |
 
