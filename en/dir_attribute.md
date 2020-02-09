@@ -3,6 +3,12 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # HTML Global Attribute: `dir`
 
+!!! warn "Note“
+    The ~~ `<dir>` ~~ element has been deprecated in HTML 4.01. But in HTML5, the dir attribute can
+    be used on any HTML element (it will validate any HTML element. But it is not necessarily useful).
+    In HTML 4.01, the dir element cannot be used: `<base>`, `<br>`, `<frame>`, `<frameset>`, `<hr>`,
+    `<iframe>`, `<param>`, and `<script>`.
+
 The **`dir`** [global attribute](/en/webfrontend/HTML_Global_Attributes) is an enumerated attribute
 that indicates the directionality of the element's text.
 
