@@ -6,7 +6,7 @@ TOPICS: <form>
         <input> name attribute
         <input> value attribute
 
-# HTML 表单元素 `<form>`/<`input`>
+# HTML 表单 `<form>`/`<input>`
 
 **HTML 表单元素** (**`<form>`**) 标记了文档中一个包含**交互控制元件**，用来**向Web服务器提交表单信息**的区域。
 

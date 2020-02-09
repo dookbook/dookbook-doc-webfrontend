@@ -6,7 +6,7 @@ TOPICS: <form>
         <input> name attribute
         <input> value attribute
 
-# HTML Form Element: `<form>`
+# HTML Form: `<form>`/`<input>`
 
 The **HTML `<form>` element** represents a document section that contains **interactive controls** for
 **submitting information** to a web server.
