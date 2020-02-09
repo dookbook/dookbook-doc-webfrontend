@@ -13,7 +13,7 @@ HTML `<datalist>` 元素包含了一组[`<option>`](/zh-hans/webfrontend/<option
 | **内容范畴** | *流式内容*，*段落内容*。|
 | **允许内容** | 要么 *段落内容* 要么0个或多个 [`<option>`](/zh-hans/webfrontend/<option>)元素。 |
 | **遗漏标签** | 不允许，开始标签和结束标签都不能省略。|
-| **允许父级元素** | 任何接受段落内容的元素. |
+| **允许父级元素** | 任何接受*段落内容*的元素。 |
 | **允许的ARIA角色** | None |
 | **DOM接口** | **`HTMLDataListElement`** |
 
