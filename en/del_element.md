@@ -17,7 +17,7 @@ This element is often (but need not be) rendered by applying a
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Phrasing content* or *flow content*. |
-| **Permitted content**| Transparent. |
+| **Permitted content**| *Transparent*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
 | **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles**| Any |
@@ -29,8 +29,8 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 | Attribute | Description |
 | :-- | :-- |
-| **`cite`** | A URI for a resource that **explains the change** (for example, meeting minutes).
-| **`datetime`** | This attribute indicates **the time and date of the change** and must be a valid date string with an optional time. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp.
+| **`cite`** | A URI for a resource that **explains the change** (for example, meeting minutes). |
+| **`datetime`** | This attribute indicates **the time and date of the change** and must be a valid date string with an optional time. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp. |
 
 ## Examples
 
