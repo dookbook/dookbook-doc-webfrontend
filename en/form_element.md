@@ -3,6 +3,8 @@ TOPICS: <form>
         <form> action attribute
         <form> method attribute
         <input> type attribute
+        <input> name attribute
+        <input> value attribute
 
 # HTML Form Element: `<form>`
 
@@ -18,16 +20,16 @@ element based on whether or not the individual elements within the form are vali
 
 ## Technical Summary
 
-|  |  |
-| :-- | :-- |
-| **Content categories** | *Flow content*, *palpable content* |
-| **Permitted content** | *Flow content*, but not containing `<form>` elements. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts *flow content*. |
-| **Permitted ARIA roles** | `group`, `presentation` |
-| **DOM interface** | **`HTMLFormElement`** |
+| - | `<form>` | `<input>` |
+| :-- | :-- | :-- |
+| **Content categories** | *Flow content*, *palpable content*. | *Flow content*, *listed*, *submittable*, *resettable*, *form-associated* element, *phrasing content*. If the *`type`* is not *`hidden`*, then *labelable* element, *palpable content*. |
+| **Permitted content** | *Flow content*, but not containing `<form>` elements. | None, it is an **[empty element](/en/webfrontend/Empty_Element)**. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. | Must have a start tag and must not have an end tag. |
+| **Permitted parents** | Any element that accepts *flow content*. | Any element that accepts *phrasing content*. |
+| **Permitted ARIA roles** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None |
+| **DOM interface** | **`HTMLFormElement`** | **`HTMLInputElement`** |
 
-## Attributes
+## `<form>` Attributes
 
 This element includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
@@ -43,7 +45,34 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | `novalidate` | This Boolean attribute indicates that the form is not to be validated when submitted. If this attribute is not specified (and therefore the form is validated), this default setting can be overridden by a `formnovalidate` attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element belonging to the form.
 | `target` | A name or keyword indicating where to display the response that is received after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a browsing context (for example, tab, window, or inline frame). The following keywords have special meanings:<br>`_self`:  Load the response into the same HTML 4 frame (or HTML5 browsing context) as the current one. This value is the default if the attribute is not specified.<br>`_blank`: Load the response into a new unnamed HTML 4 window or HTML5 browsing context.<br>`_parent`: Load the response into the HTML 4 frameset parent of the current frame, or HTML5 parent browsing context of the current one. If there is no parent, this option behaves the same way as _self.<br>`_top`: HTML 4: Load the response into the full original window, and cancel all other frames. HTML5: Load the response into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as _self.<br>`iframename`: The response is displayed in a named [`<iframe>`](/en/webfrontend/<iframe>).<br><br>HTML5: This value can be overridden by a formtarget attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element.
 
-## Form `<input>` types
+## `<input>` Attributes
+
+The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number
+of combinations of input types and attributes. Since every `<input>` element, regardless of type,
+is based on the *`HTMLInputElement`* interface, they technically all share the exact same set of
+attributes. However, in reality, many attributes only function on specific input types, and some
+input types support very few of these attributes. In addition,
+some input types handle certain attributes in special ways.
+
+### `<input>` Common Attributes
+
+This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attributes),and as follows:
+
+| Attribute | Description |
+| :-- | :-- |
+| **`type`** | A string indicating which **input type** the `<input>` element represents. |
+| **`name`** | The **input's name**, to identify the input in the data submitted with the form's data. |
+| **`value`** | The **input's current value**. |
+| `autocomplete` | A string indicating the type of autocomplete functionality, if any, to allow on the input
+| `autofocus` | A Boolean which, if present, makes the input take focus when the form is presented
+| `disabled` | A Boolean attribute which is present if the input should be disabled
+| `form` | The id of the `<form>` of which the input is a member; if absent, the input is a member of the nearest containing form, or is not a member of a form at all
+| `list` | The id of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
+| `readonly` | A Boolean attribute which, if true, indicates that the input cannot be edited
+| `required` | A Boolean which, if true, indicates that the input must have a value before the form can be submitted
+| `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the Tab key
+
+## Form `<input>` Types
 
 How an `<input>` works varies considerably depending on the value of its **`type`** attribute.
 If this attribute is not specified, the default type adopted is *`text`*.
@@ -54,6 +83,26 @@ The available types are as follows:
 | :-- | :-- |
 | **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. |
 | **`submit`** | **A button that submits the form**. |
+
+## Example: Simple Form
+
+```html
+<!-- Simple form which will send a GET request -->
+<form action="" method="post">
+  <input type="text" name="username">
+  <input type="submit" value="Save">
+</form>
+```
+
+## Example: Form with Label
+
+```html
+<form action="" method="post">
+  <label for="username">Name:</label>
+  <input id="username" type="text" name="username">
+  <input type="submit" value="Save">
+</form>
+```
 
 - `button`: A push button with no default behavior.
 - `checkbox`: A check box allowing single values to be selected/deselected.
@@ -89,40 +138,7 @@ Line-breaks are automatically removed from the input value.
 - `week`: A control for entering a date consisting of a week-year number and a
 week number with no time zone.
 
-### `<input>` Attributes
-
-The `<input>` element is one of the most powerful and complex in all of HTML due to the sheer number
-of combinations of input types and attributes. Since every `<input>` element, regardless of type,
-is based on the HTMLInputElement interface, they technically all share the exact same set of
-attributes. However, in reality, many attributes only function on specific input types, and some
-input types support very few of these attributes. In addition,
-some input types handle certain attributes in special ways.
-
-Here, you'll find information about the individual attributes which are common to all
-`<input>` element types, as well as a few non-standard attributes that may be worth knowing about.
-
-**Attributes common to all input types**:
-
-This section lists the attributes which are used by all form `<input>` types. Attributes that are
-unique to particular input types—or attributes which are common to all input types but have special
-behaviors when used on a given input type—are instead documented on those types' pages.
-
-!!! warn "Don't try this at home"
-    Note: This includes the global HTML attributes.
-
-| Attribute | Description |
-| :-- | :-- |
-| `autocomplete` | A string indicating the type of autocomplete functionality, if any, to allow on the input
-| `autofocus` | A Boolean which, if present, makes the input take focus when the form is presented
-| `disabled` | A Boolean attribute which is present if the input should be disabled
-| `form` | The id of the `<form>` of which the input is a member; if absent, the input is a member of the nearest containing form, or is not a member of a form at all
-| `list` | The id of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
-| `name` | The input's name, to identify the input in the data submitted with the form's data
-| `readonly` | A Boolean attribute which, if true, indicates that the input cannot be edited
-| `required` | A Boolean which, if true, indicates that the input must have a value before the form can be submitted
-| `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the Tab key
-| `type` | A string indicating which input type the `<input>` element represents
-| `value` | The input's current value
+### `<input>` Attributes2
 
 **`autocomplete`**
 
@@ -283,14 +299,6 @@ of `<kbd>Shift</kbd>` + `<kbd>Tab</kbd>`, which reverses the tabbing order.
 If `tabindex` is omitted or is not a valid integer, the user agent follows
 platform conventions to determine what to do.
 
-**`type`**
-
-A string specifying the type of control to render. For example, to create a checkbox, a value of
-`checkbox` is used. If omitted (or an unknown value is specified), the input type `text` is used,
-creating a plaintext input field.
-
-Permitted values are listed in Form `<input>` types.
-
 **`value`**
 
 The input control's value. When specified in the HTML, this is the initial value, and from then on
@@ -421,33 +429,9 @@ that some of your site's visitors will have some variation in thought processes 
 that leads them to interpret your forms very differently from you without
 clear and properly-presented labels.
 
-### `<input>` Technical Summary
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | Flow content, listed, submittable, resettable, form-associated element, phrasing content. If the type is not hidden, then labelable element, palpable content.
-| **Permitted content** | None, it is an empty element.
-| **Tag omission** | Must have a start tag and must not have an end tag.
-| **Permitted parents** | Any element that accepts phrasing content.<br>**Permitted ARIA roles** <br>`type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None |
-| **DOM interface** | `HTMLInputElement`
-
 ## Examples
 
 ```html
-<!-- Simple form which will send a GET request -->
-<form action="" method="get">
-  <label for="GET-name">Name:</label>
-  <input id="GET-name" type="text" name="name">
-  <input type="submit" value="Save">
-</form>
-
-<!-- Simple form which will send a POST request -->
-<form action="" method="post">
-  <label for="POST-name">Name:</label>
-  <input id="POST-name" type="text" name="name">
-  <input type="submit" value="Save">
-</form>
-
 <!-- Form with fieldset, legend, and label -->
 <form action="" method="post">
   <fieldset>
