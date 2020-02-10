@@ -101,7 +101,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 ## Example: Simple Form
 
 ```html
-<!-- Simple form which will send a GET request -->
+<!-- Simple form which will send a POST request -->
 <form action="" method="post">
   <input type="text" name="username">
   <input type="submit" value="Save">
