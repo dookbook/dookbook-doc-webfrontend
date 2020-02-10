@@ -17,7 +17,7 @@ TOPICS: <fieldset>
 | 属性 | 描述 |
 | :-- | :-- |
 | `disabled` | 如果设置了此布尔属性，则所有属于`<fieldset>`后代的表单控件都将被禁用，这意味着它们不可编辑，但与表单控件上的`disabled`属性一起将与[`<form>`](/zh-hans/webfrontend/<form>)一起提交。 他们不会收到任何浏览事件，例如鼠标单击或与焦点相关的事件。<br> 默认情况下，浏览器将此类控件显示为灰色。请注意，不会禁用`<legend>`元素内的[`<form>`](/zh-hans/webfrontend/<form>)元素。|
-| `form` | 此属性接受`<fieldset>`元素成为[`<form>`](/zh-hans/webfrontend/<form>)元素id属性的其一部分的值，即使它不在表单中。 |
+| `form` | 此属性接受`<fieldset>`元素成为[`<form>`](/zh-hans/webfrontend/<form>)元素`id`属性的其一部分的值，即使它不在表单中。 |
 | `name` | 与组关联的名称。 |
 
 !!! warn "Don't try this at home"
