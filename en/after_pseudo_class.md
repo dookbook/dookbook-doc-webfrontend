@@ -1,7 +1,8 @@
-TOPICS: ::after (:after)
+TOPICS: ::after
+        :after
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# CSS Attribute: `::after` (`:after`)
+# CSS Pseudo-Class: `::after` (`:after`)
 
 In CSS, **`::after`** creates a pseudo-element that is the last child of the selected element. It is
 often used to add cosmetic content to an element with the `content` property. It is inline by default.

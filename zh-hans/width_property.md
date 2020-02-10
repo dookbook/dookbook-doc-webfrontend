@@ -1,4 +1,4 @@
-TOPICS: width
+TOPICS: width property
 AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
          Jingli Chang; jingli.chang01@gmail.com; github:changjingli
          Safeer Rana; Prinz_Rana@mozilla.net; mdn:Prinz_Rana

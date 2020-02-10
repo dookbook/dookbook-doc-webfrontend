@@ -1,7 +1,7 @@
-TOPICS: z-index
+TOPICS: z-index property
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# CSS Attribute: `z-index`
+# CSS Property: `z-index`
 
 The **`z-index`** CSS property sets the `z-order` of a positioned element and its descendants or `flex`
 items. Overlapping elements with a larger `z-index` cover those with a smaller one.

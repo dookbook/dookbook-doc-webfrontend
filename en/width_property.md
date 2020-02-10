@@ -1,7 +1,7 @@
-TOPICS: width
+TOPICS: width property
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# CSS Attribute: `width`
+# CSS Property: `width`
 
 The **`width`** CSS property sets an element's width. By default, it sets the width of the content area,
 but if `box-sizing` is set to `border-box`, it sets the width of the border area.

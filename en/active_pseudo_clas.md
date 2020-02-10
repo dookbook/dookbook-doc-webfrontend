@@ -1,7 +1,7 @@
 TOPICS: :active
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# CSS Attribute: `:active`
+# CSS Pseudo-Class: `:active`
 
 The **`:active`** CSS pseudo-class represents an element (such as a button) that is being activated
 by the user. When using a mouse, "activation" typically starts when the user presses down the

@@ -1,4 +1,5 @@
-TOPICS: ::after (:after)
+TOPICS: ::after
+        :after
 AUTHORS: Florian Scholz; fscholz@mozilla.net; mdn:fscholz
          xgqfrms; xgqfrms@github.com; github:xgqfrms
          水货; shuihuo@mozilla.net; mdn:shuihuo
@@ -7,7 +8,7 @@ AUTHORS: Florian Scholz; fscholz@mozilla.net; mdn:fscholz
          Teoli; teoli@mozilla.net; mdn:teoli
          紫云飞; ziyunfei@mozilla.net; mdn:ziyunfei
 
-# CSS 属性: `::after` (`:after`)
+# CSS 伪类: `::after` (`:after`)
 
 CSS伪元素 **`::after`** 用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合`content`属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。
 

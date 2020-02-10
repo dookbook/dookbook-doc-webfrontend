@@ -1,4 +1,4 @@
-TOPICS: z-index
+TOPICS: z-index property
 AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
          Cici Hu; Huooo@mozilla.net; mdn:Huooo
          Student Main; studentmain@github.com; github:studentmain
