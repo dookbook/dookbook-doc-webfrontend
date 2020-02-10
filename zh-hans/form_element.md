@@ -5,25 +5,30 @@ TOPICS: <form>
         <input> type attribute
         <input> name attribute
         <input> value attribute
+        <label>
+        <label> for attribute
+        <label> form attribute
 
-# HTML 表单 `<form>`/`<input>`
+# HTML 表单 `<form>`/`<input>`/`<label>`
 
 **HTML 表单元素** (**`<form>`**) 标记了文档中一个包含**交互控制元件**，用来**向Web服务器提交表单信息**的区域。
 
 **`<input>`** 元素用于为基于Web的表单创建交互式控件，以便接受来自用户的数据；根据设备和用户代理的不同，可以使用多种类型的输入数据和控件。
 
+**`<label>`** 元素表示用户界面中某个项目(*`<input>`* 元素)的标题。
+
 可以用 *`:valid`* 和 *`:invalid`* CSS 伪类 来给表单内的元素指定样式。
 
 ## 技术摘要
 
-| - | `<form>` | `<input>` |
-| :-- | :-- | :-- |
-| **内容分类** | *流式内容*，*可触知内容*。| *流式内容*，*列表型*，*可提交*，*可重置*，*与表单相关*的元素，*短语内容*。如果 *`type`* 属性不是 *`hidden`* 的，则为*可标记*元素，*可触知内容*。|
-| **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素。 | 无，这是一个 **[空元素](/zh-hans/webfrontend/Empty_Element)**。 |
-| **标签省略** | 不允许，开始标签和结束标签都不能省略。| 必须具有开始标签，不得具有结束标签。|
-| **允许的父元素** | 任何接受 *流式内容* 的元素。 | 任何接受 *短语内容* 的元素。 |
-| **允许的 ARIA 角色** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None |
-| **DOM 接口** | **`HTMLFormElement`** | **`HTMLInputElement`** |
+| - | `<form>` | `<input>` | `<label>` |
+| :-- | :-- | :-- | :-- |
+| **内容分类** | *流式内容*，*可触知内容*。| *流式内容*，*列表型*，*可提交*，*可重置*，*表单相关元素*，*短语内容*。如果 *`type`* 属性不是 *`hidden`* 的，则为*可标记*元素，*可触知内容*。| *流式内容*，*短语内容*，*交互内容*，*表单相关元素*，*可触知内容*。|
+| **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素。 | 无，这是一个 **[空元素](/zh-hans/webfrontend/Empty_Element)**。 | *短语内容*，但不包括 `<label>` 元素。除带标签的控件外，不允许带其他 `<label>` 的元素。|
+| **标签省略** | 不允许，开始标签和结束标签都不能省略。| 必须具有开始标签，不得具有结束标签。| 不允许，开始标签和结束标签都是必需的。|
+| **允许的父元素** | 任何接受 *流式内容* 的元素。 | 任何接受 *短语内容* 的元素。 | 任何接受 *短语内容* 的元素。|
+| **允许的 ARIA 角色** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None | 无 |
+| **DOM 接口** | **`HTMLFormElement`** | **`HTMLInputElement`** | **`HTMLLabelElement`** |
 
 ## `<form>` 属性
 
@@ -32,7 +37,7 @@ TOPICS: <form>
 | 属性 | 描述 |
 | :-- | :-- |
 | **`action`** | 指定处理这个表单信息的程序所在的URL。这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formaction`** 属性重载（覆盖）。 |
-| **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:<br><br>**`post`**: HTTP POST 方法; 表单数据会包含在表单体内然后发送给服务器。<br>**`get`**: (默认值) HTTP GET 方法; 表单数据会附加在 `action` 属性的 URI 中，并以 `?` 作为分隔符, 然后将组装的 URI 再发送给服务器。这样做会使数据暴露在URI里面且仅包含ASCII字符。不推荐。<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
+| **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:<br><br>**`post`**: HTTP POST 方法; 表单数据会包含在表单体内然后发送给服务器。<br>**`get`**: (默认值) HTTP GET 方法; 表单数据会附加在 `action` 属性的 URI 中，并以 `?` 作为分隔符, 然后将组装的 URI 再发送给服务器。这样做会使数据暴露在 URI 里面且仅包含 ASCII 字符。不推荐。<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
 | `accept-charset` | 一个空格分隔或逗号分隔的列表，这个列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串“UNKNOWN”。这个字符串指的是，和包含这个form元素的文档相同的编码。在之前版本的HTML中，不同的字符编码可以用空格或逗号分隔。在HTML5中，只有空格可以允许作为分隔符。 |
 | `autocapitalize` | 这是一个被 iOS Safari Mobile 使用的非标准属性。当用户在一些form的文本后代控件中，输入/编辑一些文本值时，这个属性控制了这些文本值的首字母是否大写或者使用其他的大写样式。<br>如果 `autocapitalize` 属性在某个单独的form后代控件被指定的话，那么这个单独的设定会覆盖原来form范围内的 `autocapitalize` 设定. 这个非不推荐的值从 iOS 5 及其之后可用. 默认值为 `sentences`. 可以选择的值如下:<br><br>`none`: 完全禁用自动首字母大写.<br>`sentences`: 自动对每句话首字母大写.<br>`words`: 自动对每个单词首字母大写.<br>`characters`: 自动大写所有的字母. |
 | `autocomplete` | 用于指示 input 元素是否能够拥有一个默认值，这个默认值是由浏览器自动补全的。这个设定可以被属于这个form的子元素的 autocomplete 属性重载（覆盖）。 可能的值有:<br><br>`off`: 在每一个用到的输入域里，用户必须显式的输入一个值，或者document 以它自己的方式提供自动补全；浏览器不会自动补全输入。<br>`on`: 浏览器能够根据用户之前在form里输入的值自动补全。<br>**注意:**<br>如果你在一个表单里把 `autocomplete` 设置成 off 是因为 `document` 提供了它独有的自动补全，那么你也应该把这个表单里每一个 `input` 元素的 `autocomplete` 设成 off 来让 `document` 能够自动补全. 想要了解详细信息, 参见 Google Chrome notes. |
@@ -76,6 +81,15 @@ TOPICS: <form>
 | **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。|
 | **`submit`** | **提交表单的按钮**。|
 
+## `<label>` 属性
+
+此元素包括[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
+
+| 属性 | 描述 |
+| :-- | :-- |
+| **`for`** | 与关联元素（可标签化的元素，比如 *`<input>`*）的 **`id`** 属性相同。如果目标绑定元素不可标签化，则 `for` 属性无效。<br> **注意:** 一个`<label>`元素可以同时具有`for`属性和包含的控制元素， 只要 `for` 属性指向所包含的控制元素。|
+| **`form`** | 所关联的 **[`<form>`](/zh-hans/webfrontend/<form>)** 元素。如果指定，则属性的值是同一文档中[`<form>`](/zh-hans/webfrontend/<form>)元素的 **`id`**。 这使您可以将此元素放置在文档中的任何位置，而不仅仅是 `<form>` 元素的后代。|
+
 ## 示例：简单表单 (POST请求)
 
 ```html
@@ -86,15 +100,103 @@ TOPICS: <form>
 </form>
 ```
 
-## 示例：带标签标注的表单
+## `<label>` 使用须知
+
+- `<label>` 文本不仅在视觉上与其对应输入的文本相关联；它也以编程方式与之关联。这意味着，例如当用户专注于表单输入时，屏幕阅读器将读出标签，从而使辅助技术用户更容易理解应输入哪些数据。
+- 您可以单击关联的 `<label>` 来聚焦/激活输入以及输入本身。 这种增加的点击区域为尝试激活输入的任何人（包括使用触摸屏设备的用户）提供了优势。
+
+其他用法说明：
+
+- `<label>` 正在标记的表单控件称为 `<label>` 元素的标签控件。一个 `<input>` 可以与多个 `<label>` 关联。
+- `<label>` 本身并不直接与表单关联。它们仅通过与之关联的控件与表单间接关联。
+- 当单击或点击 `<label>` 并将其与表单控件关联时，也会为关联的控件引发单击事件。
+
+### 关联标签的表单输入
+
+要将 `<label>` 与一个 [`<input>`](/zh-hans/webfrontend/<input>) 元素相关联，
+您需要给该[`<input>`](/zh-hans/webfrontend/<input>)一个 **`id`** 属性。
+然后，`<label>` 元素需要一个 **`for`** 属性，其值与 `<input>` 的 `id` 相同。
+
+如果还有其他元素也与 `id` 值匹配，则仅匹配**第一个**，其余忽略。
 
 ```html
+<!-- 示例： 关联标签的表单输入 -->
 <form action="" method="post">
   <label for="username">用户名:</label>
   <input id="username" type="text" name="username">
   <input type="submit" value="保存">
 </form>
 ```
+
+### 嵌入到 `<label>` 中的输入框
+
+另外，您可以将 [`<input>`](/zh-hans/webfrontend/<input>) 直接**嵌套**在 `<label>` 中。
+在这种情况下，因为关联是隐式的，所以不需要 `for` 和 `id` 属性：
+
+```html
+<!-- 示例： 嵌入到 `<label>` 中的输入框 -->
+<label>用户名: <input type="text" name="username"></label>
+```
+
+## `<label>` 无障碍建议
+
+### `<label>` 中的互动内容
+
+请勿在 `<label>` 内放置诸如*锚点* (*[`<a>`](/zh-hans/webfrontend/<a>)*)
+或*按钮* (*[`<button>`](/zh-hans/webfrontend/<button>)*)之类的交互式元素。
+这样做使人们很难激活与 `<label>` 相关联的表单 `<input>`。
+
+错误
+
+```html
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
+  我同意 <a href="terms-and-conditions.html">《服务条款》</a>
+</label>
+```
+
+正确
+
+```html
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
+  我同意《服务条款》
+</label>
+<p>
+  <a href="terms-and-conditions.html">阅读《服务条款》</a>
+</p>
+```
+
+### `<label>` 中的标题
+
+将标题元素放置在 `<label>` 中会干扰多种辅助技术，因为标题通常用作导航辅助。如果 `<label>` 的文本需要在视觉上进行调整，请使用应用于 `<label>` 元素的CSS。
+
+如果表单或表单的一部分需要标题，请使用放置在 *[`<fieldset>`](/zh-hans/webfrontend/<fieldset>)* 中的 *[`<legend>`](/zh-hans/webfrontend/<legend>)* 元素。
+
+错误
+
+```html
+<label for="your-name">
+  <h3>你的名字</h3>
+  <input id="your-name" name="your-name" type="text">
+</label>
+```
+
+正确
+
+```html
+<label class="large-label" for="your-name">
+  你的名字
+  <input id="your-name" name="your-name" type="text">
+</label>
+```
+
+### `<label>` 关联按钮
+
+具有 **`type="button"`** 声明和有效的 `value` 属性的 *[`<input>`](/zh-hans/webfrontend/<input>)* 元素不需要与之关联的 `<label>`。
+这样做实际上可能会干扰辅助技术解析按钮输入的方式。同样的情况适用于 **[`<button>`](/zh-hans/webfrontend/<button>)** 元素。
+
+***
 
 - `button`: 没有默认行为的按钮。
 - `checkbox`: 一个复选框，允许选择/取消选择单个值。

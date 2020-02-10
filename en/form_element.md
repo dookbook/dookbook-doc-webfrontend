@@ -5,8 +5,11 @@ TOPICS: <form>
         <input> type attribute
         <input> name attribute
         <input> value attribute
+        <label>
+        <label> for attribute
+        <label> form attribute
 
-# HTML Form: `<form>`/`<input>`
+# HTML Form: `<form>`/`<input>`/`<label>`
 
 The **HTML `<form>` element** represents a document section that contains **interactive controls** for
 **submitting information** to a web server.
@@ -15,19 +18,21 @@ The **`<input>`** element is used to **create interactive controls for web-based
 to accept data from the user; a wide variety of types of input data and control widgets are available,
 depending on the device and user agent.
 
+The **`<label>`** element represents **a caption for an item** (*`<input>`* element) in a user interface.
+
 It is possible to use the *`:valid`* and *`:invalid`* CSS pseudo-classes to style a `<form>`
 element based on whether or not the individual elements within the form are valid.
 
 ## Technical Summary
 
-| - | `<form>` | `<input>` |
-| :-- | :-- | :-- |
-| **Content categories** | *Flow content*, *palpable content*. | *Flow content*, *listed*, *submittable*, *resettable*, *form-associated* element, *phrasing content*. If the *`type`* is not *`hidden`*, then *labelable* element, *palpable content*. |
-| **Permitted content** | *Flow content*, but not containing `<form>` elements. | None, it is an **[empty element](/en/webfrontend/Empty_Element)**. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. | Must have a start tag and must not have an end tag. |
-| **Permitted parents** | Any element that accepts *flow content*. | Any element that accepts *phrasing content*. |
-| **Permitted ARIA roles** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None |
-| **DOM interface** | **`HTMLFormElement`** | **`HTMLInputElement`** |
+| - | `<form>` | `<input>` | `<label>` |
+| :-- | :-- | :-- | :-- |
+| **Content categories** | *Flow content*, *palpable content*. | *Flow content*, *listed*, *submittable*, *resettable*, *form-associated element*, *phrasing content*. If the *`type`* is not *`hidden`*, then *labelable* element, *palpable content*. | *Flow content*, *phrasing content*, *interactive content*, *form-associated element*, *palpable content*. |
+| **Permitted content** | *Flow content*, but not containing `<form>` elements. | None, it is an **[empty element](/en/webfrontend/Empty_Element)**. | *Phrasing content*, but no descendant `<label>` elements. No labelable elements other than the labeled control are allowed. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. | Must have a start tag and must not have an end tag. | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts *flow content*. | Any element that accepts *phrasing content*. | Any element that accepts *phrasing content*. |
+| **Permitted ARIA roles** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None | None |
+| **DOM interface** | **`HTMLFormElement`** | **`HTMLInputElement`** | **`HTMLLabelElement`** |
 
 ## `<form>` Attributes
 
@@ -84,6 +89,15 @@ The available types are as follows:
 | **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. |
 | **`submit`** | **A button that submits the form**. |
 
+## `<label>` Attributes
+
+This element includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
+
+| Attribute | Description |
+| :-- | :-- |
+| **`for`** | The **`id`** of a labelable form-related element in the same document as the `<label>` element. If it is not labelable then the `for` attribute has no effect.<br>**Note:** A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element. |
+| **`form`** | The [`<form>`](/en/webfrontend/<form>) element with which the label is associated (its form owner). If specified, the value of the attribute is the id of a [`<form>`](/en/webfrontend/<form>)  element in the same document. This lets you place label elements anywhere within a document, not just as descendants of their form elements. |
+
 ## Example: Simple Form
 
 ```html
@@ -94,15 +108,124 @@ The available types are as follows:
 </form>
 ```
 
-## Example: Form with Label
+## `<label>` Usage Notes
+
+Associating a `<label>` with an [`<input>`](/en/webfrontend/<input>) element offers some major advantages:
+
+- The `<label>` text is not only visually associated with its corresponding text input;
+it is programmatically associated with it too. This means that, for example, a screen reader will
+read out the label when the user is focused on the form input, making it easier for an assistive
+technology user to understand what data should be entered.
+- You can click the associated label to focus/activate the input, as well as the input itself.
+This increased hit area provides an advantage to anyone trying to activate the input, including
+those using a touch-screen device.
+
+Other Usage Notes:
+
+- The form control that the `<label>` is labeling is called the labeled control of the `<label>` element.
+One `<input>` can be associated with multiple labels.
+- Labels are not themselves directly associated with forms. They are only indirectly associated
+with forms through the controls with which they're associated.
+- When a `<label>` is clicked or tapped and it is associated with a form control, the resulting
+click event is also raised for the associated control.
+
+### Input with Associated Label
+
+To associate the `<label>` with an [`<input>`](/en/webfrontend/<input>) element, you need to give the
+[`<input>`](/en/webfrontend/<input>) an **`id`** attribute.
+The `<label>` then needs a **`for`** attribute whose
+value is the same as the `<input>`'s `id`.
+
+The **first** element in the document with an `id` matching the value of the `for` attribute is the
+labeled control for this `<label>` element, if it is a labelable element.
+If there are other elements which also match the `id` value, later in the document, they are not considered.
 
 ```html
+<!-- Example: Input with Associated Label -->
 <form action="" method="post">
   <label for="username">Name:</label>
   <input id="username" type="text" name="username">
   <input type="submit" value="Save">
 </form>
 ```
+
+### Input Nested in Label
+
+Alternatively, you can **nest** the [`<input>`](/en/webfrontend/<input>) directly inside the `<label>`,
+in which case the `for` and `id` attributes are not needed because the association is implicit:
+
+```html
+<!-- Example: Input Nested in Label -->
+<label>Name:
+  <input type="text" name="username">
+</label>
+```
+
+## `<label>` Accessibility Concerns
+
+### Interactive Content in `<label>`
+
+**Don't** place interactive elements such as *anchors* (*[`<a>`](/en/webfrontend/<a>)*)
+or *buttons* (*[`<button`](/en/webfrontend/<button>)*) inside a `<label>`.
+Doing so makes it difficult for people to activate the form `<input>` associated with the `<label>`.
+
+Don't
+
+```html
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
+  I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a>
+</label>
+```
+
+Do
+
+```html
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
+  I agree to the Terms and Conditions
+</label>
+<p>
+  <a href="terms-and-conditions.html">Read our Terms and Conditions</a>
+</p>
+```
+
+### Headings in `<label>`
+
+Placing heading elements within a `<label>` interferes with many kinds of assistive technology,
+because headings are commonly used as a navigation aid. If the `<label>`'s text needs to be
+adjusted visually, use CSS classes applied to the `<label>` element instead.
+
+If a form, or a section of a form needs a title, use the *[`<legend>`](/en/webfrontend/<legend>)*
+element placed within a *[`<fieldset>`](/en/webfrontend/<fieldset>)*.
+
+Don't
+
+```html
+<label for="your-name">
+  <h3>Your name</h3>
+  <input id="your-name" name="your-name" type="text">
+</label>
+```
+
+Do
+
+```html
+<label class="large-label" for="your-name">
+  Your name
+  <input id="your-name" name="your-name" type="text">
+</label>
+```
+
+### Buttons Associated `<label>`
+
+An *[`<input>`](/en/webfrontend/<input>)* element with a **`type="button"`** declaration
+and a valid `value` attribute does not need a `<label>` associated with it.
+Doing so may actually interfere with how assistive
+technology parses the button input.
+The same applies for the **[`<button>`](/en/webfrontend/<button>)** element.
+
+***
 
 - `button`: A push button with no default behavior.
 - `checkbox`: A check box allowing single values to be selected/deselected.
