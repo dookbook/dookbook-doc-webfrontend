@@ -6,7 +6,7 @@ TOPICS: <fieldset>
 The **HTML `<fieldset>` element** is used to group several controls as well as
 labels ([`<label>`](/en/webfrontend/<label>)) within a web form.
 
-As the example above shows, the `<fieldset>` element provides a grouping for a part of an HTML form,
+The `<fieldset>` element provides a grouping for a part of an HTML form,
 with a nested `<legend>` element providing a caption for the `<fieldset>`. It takes few
 attributes, the most notable of which are form, which can contain the id of a [`<form>`](/en/webfrontend/<form>)
 on the same page, allowing you to make the `<fieldset>` part of that [`<form>`](/en/webfrontend/<form>)
@@ -19,7 +19,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| `disabled` | If this Boolean attribute is set, all form controls that are descendants of the `<fieldset>`, are disabled, meaning they are not editable but will be submitted along with [`<form>`](/en/webfrontend/<form>) in comparison with disabled attribute on form controls. They won't receive any browsing events, like mouse clicks or focus-related events. By default browsers display such controls grayed out. Note that form elements inside the `<legend>` element won't be disabled.
+| `disabled` | If this Boolean attribute is set, all form controls that are descendants of the `<fieldset>`, are disabled, meaning they are not editable but will be submitted along with [`<form>`](/en/webfrontend/<form>) in comparison with disabled attribute on form controls. They won't receive any browsing events, like mouse clicks or focus-related events. By default browsers display such controls grayed out. Note that form elements inside the `<legend>` element won't be disabled. |
 | `form` | This attribute takes the value of the id attribute of a [`<form>`](/en/webfrontend/<form>) element you want the `<fieldset>` to be part of, even if it is not inside the form.
 | `name` | The name associated with the group. |
 
@@ -60,11 +60,11 @@ The **HTML `<legend>` element** represents a caption for the content of its pare
 |  |  |
 | :-- | :-- |
 | **Content categories** | None. |
-| **Permitted content** | Phrasing content. |
+| **Permitted content** | *Phrasing content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | A `<fieldset>` whose first child is this `<legend>` element |
+| **Permitted parents** | A `<fieldset>` whose first child is this `<legend>` element. |
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLLegendElement` |
+| **DOM interface** | **`HTMLLegendElement`** |
 
 ## Example
 
@@ -108,9 +108,9 @@ are disabled due to being inside a disabled `<fieldset>`.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, sectioning root, listed, form-associated element, palpable content.|
-| **Permitted content** | An optional `<legend>` element, followed by flow content. |
+| **Content categories** | *Flow content*, *sectioning root*, *listed, form-associated element*, *palpable content*.|
+| **Permitted content** | An optional `<legend>` element, followed by *flow content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts flow content. |
+| **Permitted parents** | Any element that accepts *flow content*. |
 | **Permitted ARIA roles** | `group`, `presentation` |
-| **DOM interface** | `HTMLFieldSetElement` |
+| **DOM interface** | **`HTMLFieldSetElement`** |
