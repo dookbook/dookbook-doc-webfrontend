@@ -4,12 +4,7 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 # HTML 全局属性: `dir`
 
 !!! warn "注意“
-    在 HTML 4.01 中，~~`<dir>`~~元素已废弃。 但在 HTML5 中,`dir`属性可用于任何的HTML元素(它会验证任何HTML元素。但不一定是有用)。在 HTML 4.01
-    中, `<dir>` 元素不能用于: [`<base>`](/zh-hans/webfrontend/<base>),[`<br>`](/zh-hans/webfrontend/<br>),
-     [`<frame>`](/zh-hans/webfrontend/<acronym>),
-     [`<frameset>](/zh-hans/webfrontend/<acronym>),
-     [`<hr>`](/zh-hans/webfrontend/<hr>),[`<iframe>`](/zh-hans/webfrontend/<iframe>),
-     [`<param>`](/zh-hans/webfrontend/<param>)和[`<script>`](/zh-hans/webfrontend/<script>)。
+    在 HTML 4.01 中，~~`<dir>`~~元素已废弃。 但在 HTML5 中,`dir`属性可用于任何的HTML元素(它会验证任何HTML元素。但不一定是有用)。
 
 [全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)**`dir`**是一个指示元素中文本方向的枚举属性。它的取值如下：
 
