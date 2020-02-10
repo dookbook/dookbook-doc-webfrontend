@@ -1,8 +1,7 @@
 TOPICS: ::after
-        :after
 AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# CSS Pseudo-Class: `::after` (`:after`)
+# CSS Pseudo-Element: `::after` (`:after`)
 
 In CSS, **`::after`** creates a pseudo-element that is the last child of the selected element. It is
 often used to add cosmetic content to an element with the `content` property. It is inline by default.
@@ -22,14 +21,8 @@ a::after {
 ## Syntax
 
 ```css
-element:after  { style properties }  /* CSS2 语法 */
-
-element::after { style properties }  /* CSS3 语法 */
+element::after { style properties }
 ```
-
-!!! warn "Note"
-    CSS3 introduced the `::after` notation (with two colons) to distinguish pseudo-classes
-    from pseudo-elements. Browsers also accept `:after`, introduced in CSS2.
 
 ## Simple usage
 

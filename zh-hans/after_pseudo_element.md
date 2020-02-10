@@ -1,5 +1,4 @@
 TOPICS: ::after
-        :after
 AUTHORS: Florian Scholz; fscholz@mozilla.net; mdn:fscholz
          xgqfrms; xgqfrms@github.com; github:xgqfrms
          水货; shuihuo@mozilla.net; mdn:shuihuo
@@ -8,7 +7,7 @@ AUTHORS: Florian Scholz; fscholz@mozilla.net; mdn:fscholz
          Teoli; teoli@mozilla.net; mdn:teoli
          紫云飞; ziyunfei@mozilla.net; mdn:ziyunfei
 
-# CSS 伪类: `::after` (`:after`)
+# CSS 伪元素: `::after`
 
 CSS伪元素 **`::after`** 用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合`content`属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。
 
@@ -20,18 +19,13 @@ a::after {
 ```
 
 !!! warn "注意"
-    `::before`和`::after`生成的伪元素包含在元素的格式框中，因此不适用于[`<img>`](/zh-hans/webfrontend/<img>)之类的替换元素或[`<br>`](/zh-hans/webfrontend/<br>)元素。。
+    `::before`和`::after`生成的伪元素包含在元素的格式框中，因此不适用于[`<img>`](/zh-hans/webfrontend/<img>)之类的替换元素或[`<br>`](/zh-hans/webfrontend/<br>)元素。
 
 ## 语法
 
 ```css
-element:after  { style properties }  /* CSS2 语法 */
-
-element::after { style properties }  /* CSS3 语法 */
+element::after { style properties }
 ```
-
-!!! warn "注意"
-     `::after`表示法是在CSS3中引入的，`::`符号是用来区分伪类和伪元素的。支持CSS3的浏览器同时也都支持CSS2中引入的表示法`:after`。
 
 ## 简单用法
 
