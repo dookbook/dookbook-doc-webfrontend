@@ -5,6 +5,13 @@ TOPICS: <form>
         <input> type attribute
         <input> name attribute
         <input> value attribute
+        <input> required attribute
+        <input> maxlength attribute
+        <input> minlength attribute
+        <input> autofocus attribute
+        <input> disabled attribute
+        <input> readonly attribute
+        <input> form attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -59,16 +66,25 @@ TOPICS: <form>
 | 属性 | 描述 |
 | :-- | :-- |
 | **`type`** | **输入类型**。|
-| **`name`** | 提交输入的**变量名**。|
+| **`name`** | 提交输入的**变量名**。如果未指定或为空，则输入字段的值不会与表单一起提交。|
 | **`value`** | 输入的**当前值**。|
+| **`required`** | *布尔*值，指示输入字段的值是**必需的**。如果指定该属性，则元素可应用 **`:required`** 伪类；否则可应用 **`:optional`** 伪类。不可用于 `type` 为 *`submit`*，*`color`*，*`hidden`*，*`range`*，*`image`*，*`reset`*，*`button`* 的输入框。|
+| **`autofocus`** | *布尔*值，指示在呈现表单时使该输入控件自动聚焦。在触发 *`DOMContentLoaded`* 事件之前，具有此属性的元素可以获得焦点。不可用于 `type="hidden"` 的输入框。|
+| **`disabled`** | *布尔*值，指示**禁用输入**。该输入不会收到 `click` 事件，并且禁用的输入不会与表单一起提交。|
+| **`readonly`** | *布尔*值，表示**无法编辑**输入。仅文本控件可以设置为只读，因为对于其他控件（例如复选框和按钮），在只读(`readonly`)和禁用(`disabled`)之间没有区别，因此`readonly`属性不适用。|
+| **`form`** | **所属 `<form>` 的 `id`**。如果不存在，则输入是包含*最近*的表单的成员，或者根本不是表单的成员。|
 | `autocomplete` | 一个字符串，指示要允许输入的自动完成功能的类型（如果有）|
-| `autofocus` | 一个布尔值，如果存在，则在呈现表单时使输入成为焦点 |
-| `disabled` | 如果应禁用输入，则存在一个布尔属性 |
-| `form` | 输入是其成员的`<form>`的ID； 如果不存在，则输入是包含最近的表单的成员，或者根本不是表单的成员 |
 | `list` | [`<datalist>`](/zh-hans/webfrontend/<datalist>)元素的ID，该元素提供输入建议值的列表 |
-| `readonly` | 布尔值属性，如果为true，则表示无法编辑输入 |
-| `required` | 一个布尔值，如果为true，则表示输入内容必须具有值才能提交表单 |
 | `tabindex` | 一个数字值，向用户代理提供有关用户按Tab键时控件获得焦点的顺序的指导 |
+
+!!! warn "**`autofocus`** 属性用法注意事项"
+    文档中最多**只能有一个**元素具有 `autofocus` 属性。警告：自动聚焦表单控件会使使用屏幕阅读技术的视障人士感到困惑。分配自动对焦后，屏幕阅读器会将用户“自动传送”到表单控件，而不会事先警告他们。
+
+!!! warn "`readonly` 和 `required` 属性不可同时使用"
+    注意：指定了 `readonly` 属性的 `<input>` 不允许使用 `required` 属性。
+
+!!! info "`disabled` vs `readonly`"
+    `disabled` 和 `readonly` 之间的区别在于，`readonly` 控件仍然可以起作用，而 `disabled` 的控件通常在启用前通常不充当控件。
 
 ## `<input>` 的类型 `type`
 
@@ -80,24 +96,39 @@ TOPICS: <form>
 | :-- | :-- |
 | **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。|
 | **`submit`** | **提交表单的按钮**。|
+| **`password`** | *单行文本*字段，其值被遮盖或隐藏。使用 **`maxlength`** 和 **`minlength`** 属性指定可以输入的值的*最大长度*和*最小长度*。|
+| **`hidden`** | **不显示**，但其值会提交给服务器的输入控件。|
+| **`checkbox`** | **复选框**。|
 
-## `<label>` 属性
+```html
+<!-- 示例： 密码输入, maxlength 代表密码最长为32个字符，minlength 代表最短为8个字符 -->
+<input type="password">
+<input type="password" maxlength="32" minlength="8">
 
-此元素包括[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
+<!-- 示例： 隐藏输入，值为10 -->
+<input type="hidden" value="10">
 
-| 属性 | 描述 |
-| :-- | :-- |
-| **`for`** | 与关联元素（可标签化的元素，比如 *`<input>`*）的 **`id`** 属性相同。如果目标绑定元素不可标签化，则 `for` 属性无效。<br> **注意:** 一个`<label>`元素可以同时具有`for`属性和包含的控制元素， 只要 `for` 属性指向所包含的控制元素。|
-| **`form`** | 所关联的 **[`<form>`](/zh-hans/webfrontend/<form>)** 元素。如果指定，则属性的值是同一文档中[`<form>`](/zh-hans/webfrontend/<form>)元素的 **`id`**。 这使您可以将此元素放置在文档中的任何位置，而不仅仅是 `<form>` 元素的后代。|
+<!-- 示例： 复选框，提交的变量名为point，选项值分别为A1, A2 -->
+<input type="checkbox" name="point" value="A1">
+<input type="checkbox" name="point" value="A2">
+```
 
 ## 示例：简单表单 (POST请求)
 
 ```html
-<!-- 一个简单的表单，发送 POST 请求 -->
+<!-- 示例： 一个简单的表单，发送 POST 请求 -->
 <form action="" method="post">
   <input type="text" name="username">
   <input type="submit" value="保存">
 </form>
+```
+
+提交表单数据时，`name`的值作为变量名与控件的值一起提交。同时该 `name` 的值成为所属 `<form>` 元素属性 *`HTMLFormElement.elements`* 的属性。如下：
+
+```javascript
+let form = document.querySelector("form");
+let userName1 = form.elements.username;
+let userName2 = form.elements["username"];
 ```
 
 ## `<label>` 使用须知
@@ -110,6 +141,15 @@ TOPICS: <form>
 - `<label>` 正在标记的表单控件称为 `<label>` 元素的标签控件。一个 `<input>` 可以与多个 `<label>` 关联。
 - `<label>` 本身并不直接与表单关联。它们仅通过与之关联的控件与表单间接关联。
 - 当单击或点击 `<label>` 并将其与表单控件关联时，也会为关联的控件引发单击事件。
+
+### `<label>` 属性
+
+此元素包括[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
+
+| 属性 | 描述 |
+| :-- | :-- |
+| **`for`** | 与关联元素（可标签化的元素，比如 *`<input>`*）的 **`id`** 属性相同。如果目标绑定元素不可标签化，则 `for` 属性无效。<br> **注意:** 一个`<label>`元素可以同时具有`for`属性和包含的控制元素， 只要 `for` 属性指向所包含的控制元素。|
+| **`form`** | 所关联的 **[`<form>`](/zh-hans/webfrontend/<form>)** 元素。如果指定，则属性的值是同一文档中[`<form>`](/zh-hans/webfrontend/<form>)元素的 **`id`**。 这使您可以将此元素放置在文档中的任何位置，而不仅仅是 `<form>` 元素的后代。|
 
 ### 关联标签的表单输入
 
@@ -200,21 +240,14 @@ TOPICS: <form>
 ***
 
 - `button`: 没有默认行为的按钮。
-- `checkbox`: 一个复选框，允许选择/取消选择单个值。
 - `color`: 用于指定颜色的控件。 颜色选择器的UI除了接受简单的颜色作为文本（更多信息）外，没有其他必需的功能。
 - `date`: 输入日期（年，月，日，无时间）的控件。
 - `datetime-local`: 用于输入日期和时间（无时区）的控件。
 - `email`: 用于编辑电子邮件地址的字段。
 - `file`: 允许用户选择文件的控件。 使用**accept**属性定义控件可以选择的文件类型。
-- `hidden`: 不显示但其值已提交给服务器的控件。
 - `image`: 图形提交按钮。 您必须使用**src**属性定义图像的来源，并使用**alt**属性定义替代文本。 您可以使用**高度**和**宽度**属性来定义图像的大小（以像素为单位）。
 - `month`: 用于输入月份和年份（无时区）的控件。
 - `number`: 输入数字的控件。
-- `password`: 单行文本字段，其值被遮盖。 使用**maxlength**和**minlength**属性指定可以输入的值的最大长度。
-
-!!! warn "Don't try this at home"
-    注意：任何涉及敏感信息的表单（例如密码）（例如登录表单）都应通过HTTPS提供；Firefox现在实现了多种机制来警告不安全的登录表单-请参阅不安全的密码。其他浏览器也正在实现类似的机制。
-
 - `radio`: 单选按钮，允许从多个选项中选择一个值。
 - `range`: 用于输入其精确值不重要的数字的控件。
 - `reset`: 将表单内容重置为默认值的按钮。
@@ -235,91 +268,11 @@ TOPICS: <form>
 
 有关其他信息，请参见HTML自动完成属性。
 
-**`autofocus`**
-
-一个布尔属性，如果存在，则指示页面完成加载时（或显示包含元素的[`<dialog>`](/zh-hans/webfrontend/<dialog>)时）输入应自动具有焦点。
-
-!!! warn "Don't try this at home"
-    注意：在触发`DOMContentLoaded`事件之前，具有`autofocus`属性的元素可能会获得焦点。
-
-文档中最多只能有一个元素具有`autofocus`属性，并且`autofocus`不能用于`hidden`类型的输入，因为隐藏的输入不能被聚焦。
-
-!!! error ""
-    警告：自动聚焦表单控件会使使用屏幕阅读技术的视障人士感到困惑。 分配自动对焦后，屏幕阅读器会将用户“传送”到表单控件，而不会事先警告他们。
-
-**`disabled`**
-
-一个布尔属性，如果存在，则指示用户不应与输入进行交互。 禁用的输入通常使用较暗的颜色或使用某种其他形式的字段无法使用的指示来呈现。
-
-具体来说，禁用的输入不会收到click事件，并且禁用的输入不会与表单一起提交。
-
-!!! warn "Don't try this at home"
-    注意：尽管规范没有要求，但是Firefox默认会在页面加载过程中保持`<input>`的动态禁用状态。使用`autocomplete`(url)属性来控制此功能。
-
-**`form`**
-
-一个字符串，指定与输入关联的`<form>`元素（即其“表单所有者”）。该字符串的值（如果存在）必须与同一文档中的`<form>`元素的ID相匹配。如果未指定此属性，则将`<input>`元素与最近的包含形式相关联（如果有）。
-
-`form`属性使您可以将输入放置在文档中的任何位置，但将其包含在文档中其他位置的表单中。
-
 **`list`**
 
 位于同一文档中的`<datalist>`元素的`id`，该元素提供了一系列预定义值以向用户建议此输入。建议选项中不包含列表中与`type`不兼容的任何值。
 
 `hidden`, `password`, `checkbox`, `radio`, `file`或任何按钮类型均不支持`list`属性。
-
-**`name`**
-
-一个字符串，指定输入控件的名称。 提交表单数据时，此名称与控件的值一起提交，并与拥有的`<form>`元素的`elements`对象一起提交。
-
-给输入元素一个“名称”时，该名称成为拥有表单元素的`HTMLFormElement.elements`属性的属性。 这意味着，如果您有一个输入，其`name`设置为`guest`，而另一个输入的名称是`hat-size`，则可以使用以下代码：
-
-```javascript
-let form = document.querySelector("form");
-let guestName = form.elements.guest;
-let hatSize = form.elements"hat-size"];
-```
-
-运行此代码后，`guestName`将是`guest`字段的`HTMLInputElement`，而`hatSize`将是`hat-size`字段的对象。
-
-!!! error ""
-    警告：应避免给表单元素一个与表单的内置属性相对应的名称，因为您将使用对相应输入的引用覆盖预定义的属性或方法。
-
-名称`_charset_`具有特殊含义。 如果用作`hidden`类型的`<input>`元素的名称，则用户代理会自动将输入的`value`设置为用于提交表单的字符编码。
-
-如果未指定`name`或`name`为空，则输入的值不会与表单一起提交。
-
-!!! warn "Don't try this at home"
-    注意：由于历史原因，不允许使用名称`isindex`。 如果您真的想知道为什么，请参阅命名表单控件：HTML规范中的`name`属性。
-
-**`readonly`**
-
-一个布尔属性，如果存在，则指示用户不应编辑输入的值。
-
-`disabled`和`readonly`之间的区别在于，只读控件仍然可以起作用，而禁用的控件通常在启用前通常不充当控件。
-
-!!! warn "Don't try this at home"
-    注意：指定了`readonly`属性的输入不允许使用`required`属性。
-
-!!! warn "Don't try this at home"
-    注意：仅文本控件可以设置为只读，因为对于其他控件（例如复选框和按钮），在只读和禁用之间没有有用的区别，因此“ readonly”属性不适用。
-
-**`required`**
-
-`required`是一个布尔属性，如果存在，则指示用户必须先指定输入值，然后才能提交拥有表单。 除以下内容外，所有输入类型均支持`required`属性：
-
-- `color`
-- `hidden`
-- `range`
-- `submit`
-- `image`
-- `reset`
-- `button`
-
-如果输入具有`required`属性，则`:required`伪类也适用于它。相反，没有`required`属性的输入（除了不支持它的元素除外）具有`:optional`伪- 类已应用。...
-
-!!! warn "Don't try this at home"
-    注意：因为只读字段不能有值，所以`required`对也指定了`readonly`属性的输入没有任何影响。
 
 **`tabindex`**
 
@@ -331,15 +284,6 @@ let hatSize = form.elements"hat-size"];
 - `tabindex`为0意味着该元素应该是可聚焦的，并且应该可以通过顺序的键盘导航到达，但是该Tab的顺序由用户代理决定，后者应该应用用户的平台约定。 当您希望元素可聚焦并参与键盘导航而不是尝试自己管理选项卡顺序时，通常这是最佳使用值。
 - `tabindex`”的正值表示元素的制表顺序。 每次用户按下`<kbd>Tab</kbd>`键时，其标签索引依次高的元素都会被聚焦。大多数平台通常提供反向标签功能，通常结合使用
 `<kbd>Shift </kbd>`+`<kbd>Tab</kbd>`会反转制表顺序。如果`tabindex`被省略或不是有效的整数，则用户代理将遵循平台约定来确定要执行的操作。
-
-**`value`**
-
-输入控件的值。 当在HTML中指定时，这是初始值，此后可以使用JavaScript访问相应的`HTMLInputElement`对象的`value`属性随时对其进行更改或检索。`value`属性总是可选的。
-
-!!! warn "Don't try this at home"
-    注意：与其他输入控件不同，如果当前已选中“复选框”或“单选”按钮，则复选框和单选按钮仅包含在提交的数据中。 如果是，则将“值”属性报告为输入值。
-
-例如，如果一个名为`status`的复选框的`value`为`active`，并且选中了该复选框，则提交的表单数据将包括`status=active`。如果该复选框未激活，则它根本不会在表单数据中列出。复选框和单选按钮的默认`value`为`on`。
 
 ### 方法
 
