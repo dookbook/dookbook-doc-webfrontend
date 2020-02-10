@@ -171,7 +171,8 @@ TOPICS: <form>
 
 将标题元素放置在 `<label>` 中会干扰多种辅助技术，因为标题通常用作导航辅助。如果 `<label>` 的文本需要在视觉上进行调整，请使用应用于 `<label>` 元素的CSS。
 
-如果表单或表单的一部分需要标题，请使用放置在 *[`<fieldset>`](/zh-hans/webfrontend/<fieldset>)* 中的 *[`<legend>`](/zh-hans/webfrontend/<legend>)* 元素。
+如果表单或表单的一部分需要标题，请使用放置在 *[`<fieldset>`](/zh-hans/webfrontend/<fieldset>)* 中的
+*[`<legend>`](/zh-hans/webfrontend/<legend>)* 元素。
 
 错误
 
