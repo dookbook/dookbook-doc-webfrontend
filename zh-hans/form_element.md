@@ -3,8 +3,10 @@ TOPICS: <form>
         <form> action attribute
         <form> method attribute
         <input> type attribute
+        <input> name attribute
+        <input> value attribute
 
-# HTML 表单元素 `<form>`
+# HTML 表单 `<form>`/`<input>`
 
 **HTML 表单元素** (**`<form>`**) 标记了文档中一个包含**交互控制元件**，用来**向Web服务器提交表单信息**的区域。
 
@@ -14,22 +16,23 @@ TOPICS: <form>
 
 ## 技术摘要
 
-|  |  |
-| :-- | :-- |
-| **内容分类** | *流式内容*，*可触知内容* |
-| **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素 |
-| **标签省略** | 不允许，开始标签和结束标签都不能省略。|
-| **允许的父元素** | 任何接受 *流式内容* 的元素 |
-| **DOM 接口** | **`HTMLFormElement`** |
+| - | `<form>` | `<input>` |
+| :-- | :-- | :-- |
+| **内容分类** | *流式内容*，*可触知内容*。| *流式内容*，*列表型*，*可提交*，*可重置*，*与表单相关*的元素，*短语内容*。如果 *`type`* 属性不是 *`hidden`* 的，则为*可标记*元素，*可触知内容*。|
+| **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素。 | 无，这是一个 **[空元素](/zh-hans/webfrontend/Empty_Element)**。 |
+| **标签省略** | 不允许，开始标签和结束标签都不能省略。| 必须具有开始标签，不得具有结束标签。|
+| **允许的父元素** | 任何接受 *流式内容* 的元素。 | 任何接受 *短语内容* 的元素。 |
+| **允许的 ARIA 角色** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None |
+| **DOM 接口** | **`HTMLFormElement`** | **`HTMLInputElement`** |
 
-## 属性
+## `<form>` 属性
 
 这个元素包括一些[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
 
 | 属性 | 描述 |
 | :-- | :-- |
 | **`action`** | 指定处理这个表单信息的程序所在的URL。这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formaction`** 属性重载（覆盖）。 |
-| **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:<br><br>**`post`**: HTTP POST 方法; 表单数据会包含在表单体内然后发送给服务器。<br>**`get`**: HTTP GET 方法; 表单数据会附加在 `action` 属性的 URI 中，并以 `?` 作为分隔符, 然后将组装的 URI 再发送给服务器。这样做会使数据暴露在URI里面且仅包含ASCII字符。不推荐。<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
+| **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:<br><br>**`post`**: HTTP POST 方法; 表单数据会包含在表单体内然后发送给服务器。<br>**`get`**: (默认值) HTTP GET 方法; 表单数据会附加在 `action` 属性的 URI 中，并以 `?` 作为分隔符, 然后将组装的 URI 再发送给服务器。这样做会使数据暴露在URI里面且仅包含ASCII字符。不推荐。<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
 | `accept-charset` | 一个空格分隔或逗号分隔的列表，这个列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串“UNKNOWN”。这个字符串指的是，和包含这个form元素的文档相同的编码。在之前版本的HTML中，不同的字符编码可以用空格或逗号分隔。在HTML5中，只有空格可以允许作为分隔符。 |
 | `autocapitalize` | 这是一个被 iOS Safari Mobile 使用的非标准属性。当用户在一些form的文本后代控件中，输入/编辑一些文本值时，这个属性控制了这些文本值的首字母是否大写或者使用其他的大写样式。<br>如果 `autocapitalize` 属性在某个单独的form后代控件被指定的话，那么这个单独的设定会覆盖原来form范围内的 `autocapitalize` 设定. 这个非不推荐的值从 iOS 5 及其之后可用. 默认值为 `sentences`. 可以选择的值如下:<br><br>`none`: 完全禁用自动首字母大写.<br>`sentences`: 自动对每句话首字母大写.<br>`words`: 自动对每个单词首字母大写.<br>`characters`: 自动大写所有的字母. |
 | `autocomplete` | 用于指示 input 元素是否能够拥有一个默认值，这个默认值是由浏览器自动补全的。这个设定可以被属于这个form的子元素的 autocomplete 属性重载（覆盖）。 可能的值有:<br><br>`off`: 在每一个用到的输入域里，用户必须显式的输入一个值，或者document 以它自己的方式提供自动补全；浏览器不会自动补全输入。<br>`on`: 浏览器能够根据用户之前在form里输入的值自动补全。<br>**注意:**<br>如果你在一个表单里把 `autocomplete` 设置成 off 是因为 `document` 提供了它独有的自动补全，那么你也应该把这个表单里每一个 `input` 元素的 `autocomplete` 设成 off 来让 `document` 能够自动补全. 想要了解详细信息, 参见 Google Chrome notes. |
@@ -38,7 +41,31 @@ TOPICS: <form>
 | `novalidate` | 这个布尔类型的属性指示了，当提交时form是否没有被验证。 如果这个属性没有指定 (因此这个 form 是验证通过的)，这个默认设置可以被属于这个form的 [`<button>`](/zh-hans/webfrontend/<button>) 或者`<input>` 元素中的 formnovalidate 属性重载（覆盖）。 |
 | `target` | 一个名字或者说关键字，用来指示在提交表单之后，在哪里显示收到的回复. 在 HTML 4 里, 这是一个用于 frame 的名字/关键字. 在 HTML5 里, 这是一个用于browsing context 浏览器上下文  的名字/关键字 (举例来说, 标签页tab, 窗口window, or 或者行内 frame). 如下的关键字含有特别的含义:<br><br>`_self`: 在当前HTML4或HTML5文档页面重新加载返回值。这个是默认值。译注：也就是说如果这个文档在一个frame中的话，self是在当前frame（document）中重新加载的，而不是整个页面（window）。<br>`_blank`: 以新的HTML4或HTML5文档窗口加载返回值。<br>`_parent`: 在父级的frame中以HTML4或HTML5文档形式加载返回值，如果没有父级的frame，行为和_self一致。<br>`_top`: 如果是HTML 4文档: 清空当前文档，加载返回内容；HTML5: 在当前文档的最高级内加载返回值，如果没有父级，和_self的行为一致。iframename: 返回值在指定frame中加载。<br>HTML5: 这个值可以被 [`<button>`](/zh-hans/webfrontend/<button>) 或者 `<input>` 元素中的 formtarget 属性重载（覆盖）。 |
 
-## `<input>` 的类型
+## `<input>` 属性
+
+由于输入类型和属性的组合数量众多，因此 `<input>` 元素是所有 HTML 中功能最强大和最复杂的元素之一。
+由于每个 `<input>` 元素（无论类型如何）均基于 *`HTMLInputElement`* 接口，
+因此从技术上讲，它们都共享完全相同的一组属性。但是实际上，许多属性仅在特定的输入类型上起作用，并且某些输入类型仅支持这些属性中的很少。另外，某些输入类型以特殊方式处理某些属性。
+
+### `<input>` 共有属性
+
+除了[HTML 全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)，还包括以下共有属性：
+
+| 属性 | 描述 |
+| :-- | :-- |
+| **`type`** | **输入类型**。|
+| **`name`** | 提交输入的**变量名**。|
+| **`value`** | 输入的**当前值**。|
+| `autocomplete` | 一个字符串，指示要允许输入的自动完成功能的类型（如果有）|
+| `autofocus` | 一个布尔值，如果存在，则在呈现表单时使输入成为焦点 |
+| `disabled` | 如果应禁用输入，则存在一个布尔属性 |
+| `form` | 输入是其成员的`<form>`的ID； 如果不存在，则输入是包含最近的表单的成员，或者根本不是表单的成员 |
+| `list` | [`<datalist>`](/zh-hans/webfrontend/<datalist>)元素的ID，该元素提供输入建议值的列表 |
+| `readonly` | 布尔值属性，如果为true，则表示无法编辑输入 |
+| `required` | 一个布尔值，如果为true，则表示输入内容必须具有值才能提交表单 |
+| `tabindex` | 一个数字值，向用户代理提供有关用户按Tab键时控件获得焦点的顺序的指导 |
+
+## `<input>` 的类型 `type`
 
 `<input>`的工作方式根据其 **`type`** 属性的值而有很大不同。默认类型为 *`text`*。
 
@@ -48,6 +75,26 @@ TOPICS: <form>
 | :-- | :-- |
 | **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。|
 | **`submit`** | **提交表单的按钮**。|
+
+## 示例：简单表单 (POST请求)
+
+```html
+<!-- 一个简单的表单，发送 POST 请求 -->
+<form action="" method="post">
+  <input type="text" name="username">
+  <input type="submit" value="保存">
+</form>
+```
+
+## 示例：带标签标注的表单
+
+```html
+<form action="" method="post">
+  <label for="username">用户名:</label>
+  <input id="username" type="text" name="username">
+  <input type="submit" value="保存">
+</form>
+```
 
 - `button`: 没有默认行为的按钮。
 - `checkbox`: 一个复选框，允许选择/取消选择单个值。
@@ -75,32 +122,6 @@ TOPICS: <form>
 - `week`: 用于输入日期的控件，该日期由周年号和无时区的周号组成。
 
 属性
-
-由于输入类型和属性的组合数量众多，因此`<input>`元素是所有HTML中功能最强大和最复杂的元素之一。由于每个`<input>`元素（无论类型如何）均基于`HTMLInputElement`接口，
-因此从技术上讲，它们都共享完全相同的一组属性。 但是，实际上，许多属性仅在特定的输入类型上起作用，并且某些输入类型仅支持这些属性中的很少。 另外，某些输入类型以特殊方式处理某些属性。
-
-在这里，您将找到有关所有`<input>`元素类型共有的各个属性的信息，以及一些可能值得了解的非标准属性。
-
-**所有输入类型共有的属性**:
-
-本节列出了所有`<input>`形式的类型所使用的属性。 特定输入类型所独有的属性（或所有输入类型所共有的属性，但在给定输入类型上使用时具有特殊行为）则记录在这些类型的页面上。
-
-!!! warn "Don't try this at home"
-    注意：这包括全局HTML属性。
-
-| 属性 | 描述 |
-| :-- | :-- |
-| `autocomplete` | 一个字符串，指示要允许输入的自动完成功能的类型（如果有）|
-| `autofocus` | 一个布尔值，如果存在，则在呈现表单时使输入成为焦点 |
-| `disabled` | 如果应禁用输入，则存在一个布尔属性 |
-| `form` | 输入是其成员的`<form>`的ID； 如果不存在，则输入是包含最近的表单的成员，或者根本不是表单的成员 |
-| `list` | [`<datalist>`](/zh-hans/webfrontend/<datalist>)元素的ID，该元素提供输入建议值的列表 |
-| `name` | 输入的名称，以标识与表单数据一起提交的数据中的输入 |
-| `readonly` | 布尔值属性，如果为true，则表示无法编辑输入 |
-| `required` | 一个布尔值，如果为true，则表示输入内容必须具有值才能提交表单 |
-| `tabindex` | 一个数字值，向用户代理提供有关用户按Tab键时控件获得焦点的顺序的指导 |
-| `type` | 一个字符串，指示`<input>`元素代表哪种输入类型
-| `value` | 输入的当前值
 
 **`autocomplete`**
 
@@ -208,12 +229,6 @@ let hatSize = form.elements"hat-size"];
 - `tabindex`”的正值表示元素的制表顺序。 每次用户按下`<kbd>Tab</kbd>`键时，其标签索引依次高的元素都会被聚焦。大多数平台通常提供反向标签功能，通常结合使用
 `<kbd>Shift </kbd>`+`<kbd>Tab</kbd>`会反转制表顺序。如果`tabindex`被省略或不是有效的整数，则用户代理将遵循平台约定来确定要执行的操作。
 
-**`type`**
-
-一个字符串，指定要呈现的控件的类型。 例如，要创建一个复选框，则使用`checkbox`的值。 如果省略（或指定了未知值），则使用输入类型`text`，从而创建纯文本输入字段。
-
-允许的值以`<input>`形式列出。
-
 **`value`**
 
 输入控件的值。 当在HTML中指定时，这是初始值，此后可以使用JavaScript访问相应的`HTMLInputElement`对象的`value`属性随时对其进行更改或检索。`value`属性总是可选的。
@@ -304,34 +319,9 @@ TL;DR:为节省时间，这是关键点：如果可以避免，请勿使用`plac
 通过将[`<label>`](/zh-hans/webfrontend/<label>)和`<input>`配对， 如果您使用明文`label`您的输入，则不会发生。 将激活区域的提示部分用于输入对于有电机控制条件的人很有帮助。作为Web开发人员，重要的是，
 我们切勿以为人们会知道我们所知道的一切。 实际上，使用网络以及通过扩展您的网站而来的人们的多样性保证了您网站的某些访问者的思维过程和/或情况会有所不同，从而导致他们对您的表格的理解与您的理解大相径庭，显示标签。
 
-### `<input>` 技术摘要
-
-|  |  |
-| :-- | :-- |
-| **内容分类** | 流内容，列出，可提交，可重置，与表单相关的元素，措辞内容。 如果类型不是隐藏的，则为可标记元素，可显示内容. |
-| **允许的内容** | 无，这是一个空元素. |
-| **标签遗漏** | 必须具有开始标签，并且不得具有结束标签. |
-| **允许的父元素** | 任何接受短语内容的元素. |
-| **允许的 ARIA 角色** | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None |
-| **DOM 接口** | `HTMLInputElement`
-
 ## 示例
 
 ```html
-<!-- 一个简单的表单，这个表单会发送一个 GET 请求 -->
-<form action="">
-  <label for="GET-name">Name:</label>
-  <input id="GET-name" type="text" name="name">
-  <input type="submit" value="Save">
-</form>
-
-<!-- 一个简单的表单，发送 POST 请求 -->
-<form action="" method="post">
-  <label for="POST-name">Name:</label>
-  <input id="POST-name" type="text" name="name">
-  <input type="submit" value="Save">
-</form>
-
 <!-- 使用 fieldset, legend, and label 的表单 -->
 <form action="" method="post">
   <fieldset>
