@@ -71,7 +71,7 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 | **`type`** | A string indicating which **input type** the `<input>` element represents. |
 | **`name`** | The **input's name**, to identify the input in the data submitted with the form's data. |
 | **`value`** | The **input's current value**. |
-| **`required`** | A *Boolean* which, if `true`, indicates that the input **must have a value** before the form can be submitted. |
+| **`required`** | A *Boolean* which, if `true`, indicates that the input **must have a value** before the form can be submitted. `<input>` of `type`: *`submit`*, *`hidden`*, *`color`*, *`range`*, *`image`*, *`reset`*, *`button`* NOT support this attribute. |
 | `autocomplete` | A string indicating the type of autocomplete functionality, if any, to allow on the input
 | `autofocus` | A Boolean which, if present, makes the input take focus when the form is presented
 | `disabled` | A Boolean attribute which is present if the input should be disabled
@@ -93,11 +93,15 @@ The available types are as follows:
 | **`submit`** | **A button that submits the form**. |
 | **`password`** | A *single-line* text field whose value is **obscured**. Use the **`maxlength`** and
 **`minlength`** attributes to specify the *maximum* / *minimum* length of the value that can be entered. |
+| **`hidden`** | A control that is **not displayed** but whose value is submitted to the server. |
 
 ```html
-<!-- Password -->
+<!-- Example: Password -->
 <input type="password">
 <input type="password" maxlength="64" minlength="8">
+
+<!-- Example: Hidden Input with value of 10 -->
+<input type="hidden" value="10">
 ```
 
 ## Example: Simple Form
@@ -247,7 +251,6 @@ other than accepting simple colors as text (more info).
 - `email`: A field for editing an e-mail address.
 - `file`: A control that lets the user select a file. Use the **accept** attribute to define
 the types of files that the control can select.
-- `hidden`: A control that is not displayed but whose value is submitted to the server.
 - `image`: A graphical submit button. You must use the **src** attribute to define the
 source of the image and the **alt** attribute to define alternative text. You can use the **height**
 and **width** attributes to define the size of the image in pixels.
@@ -382,19 +385,7 @@ whereas disabled controls generally do not function as controls until they are e
 
 **`required`**
 
-`required` is a Boolean attribute which, if present, indicates that the user must specify a value
-for the input before the owning form can be submitted. The `required` attribute is supported by
-all input types except the following:
-
-- `color`
-- `hidden`
-- `range`
-- `submit`
-- `image`
-- `reset`
-- `button`
-
-hen an input has the `required` attribute, the `:required` pseudo-class also applies to it.
+When an input has the `required` attribute, the `:required` pseudo-class also applies to it.
 Conversely, inputs without the `required` attribute (except the elements that don't support it) have
 the `:optional` pseudo-class applied.
 

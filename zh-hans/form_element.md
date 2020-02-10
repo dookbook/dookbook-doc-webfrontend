@@ -64,7 +64,7 @@ TOPICS: <form>
 | **`type`** | **输入类型**。|
 | **`name`** | 提交输入的**变量名**。|
 | **`value`** | 输入的**当前值**。|
-| **`required`** | *布尔*值，指示输入字段的值是**必需的**。|
+| **`required`** | *布尔*值，指示输入字段的值是**必需的**。`type` 为 *`submit`*，*`color`*，*`hidden`*，*`range`*，*`image`*，*`reset`*，*`button`* 的输入框不支持该属性。|
 | `autocomplete` | 一个字符串，指示要允许输入的自动完成功能的类型（如果有）|
 | `autofocus` | 一个布尔值，如果存在，则在呈现表单时使输入成为焦点 |
 | `disabled` | 如果应禁用输入，则存在一个布尔属性 |
@@ -84,11 +84,15 @@ TOPICS: <form>
 | **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。|
 | **`submit`** | **提交表单的按钮**。|
 | **`password`** | *单行文本*字段，其值被遮盖或隐藏。使用 **`maxlength`** 和 **`minlength`** 属性指定可以输入的值的*最大长度*和*最小长度*。|
+| **`hidden`** | **不显示**，但其值会提交给服务器的输入控件。|
 
 ```html
 <!-- 示例： 密码输入, maxlength 代表密码最长为32个字符，minlength 代表最短为8个字符 -->
 <input type="password">
 <input type="password" maxlength="32" minlength="8">
+
+<!-- 示例： 隐藏输入，值为10 -->
+<input type="hidden" value="10">
 ```
 
 ## 示例：简单表单 (POST请求)
@@ -216,7 +220,6 @@ TOPICS: <form>
 - `datetime-local`: 用于输入日期和时间（无时区）的控件。
 - `email`: 用于编辑电子邮件地址的字段。
 - `file`: 允许用户选择文件的控件。 使用**accept**属性定义控件可以选择的文件类型。
-- `hidden`: 不显示但其值已提交给服务器的控件。
 - `image`: 图形提交按钮。 您必须使用**src**属性定义图像的来源，并使用**alt**属性定义替代文本。 您可以使用**高度**和**宽度**属性来定义图像的大小（以像素为单位）。
 - `month`: 用于输入月份和年份（无时区）的控件。
 - `number`: 输入数字的控件。
@@ -310,16 +313,6 @@ let hatSize = form.elements"hat-size"];
     注意：仅文本控件可以设置为只读，因为对于其他控件（例如复选框和按钮），在只读和禁用之间没有有用的区别，因此“ readonly”属性不适用。
 
 **`required`**
-
-`required`是一个布尔属性，如果存在，则指示用户必须先指定输入值，然后才能提交拥有表单。 除以下内容外，所有输入类型均支持`required`属性：
-
-- `color`
-- `hidden`
-- `range`
-- `submit`
-- `image`
-- `reset`
-- `button`
 
 如果输入具有`required`属性，则`:required`伪类也适用于它。相反，没有`required`属性的输入（除了不支持它的元素除外）具有`:optional`伪- 类已应用。...
 
