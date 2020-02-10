@@ -5,6 +5,9 @@ TOPICS: <form>
         <input> type attribute
         <input> name attribute
         <input> value attribute
+        <input> required attribute
+        <input> maxlength attribute
+        <input> minlength attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -68,14 +71,14 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 | **`type`** | A string indicating which **input type** the `<input>` element represents. |
 | **`name`** | The **input's name**, to identify the input in the data submitted with the form's data. |
 | **`value`** | The **input's current value**. |
+| **`required`** | A *Boolean* which, if `true`, indicates that the input **must have a value** before the form can be submitted. |
 | `autocomplete` | A string indicating the type of autocomplete functionality, if any, to allow on the input
 | `autofocus` | A Boolean which, if present, makes the input take focus when the form is presented
 | `disabled` | A Boolean attribute which is present if the input should be disabled
 | `form` | The id of the `<form>` of which the input is a member; if absent, the input is a member of the nearest containing form, or is not a member of a form at all
 | `list` | The id of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
-| `readonly` | A Boolean attribute which, if true, indicates that the input cannot be edited
-| `required` | A Boolean which, if true, indicates that the input must have a value before the form can be submitted
-| `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the Tab key
+| `readonly` | A Boolean attribute which, if true, indicates that the input cannot be edited. |
+| `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the Tab key. |
 
 ## Form `<input>` Types
 
@@ -88,15 +91,14 @@ The available types are as follows:
 | :-- | :-- |
 | **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. |
 | **`submit`** | **A button that submits the form**. |
+| **`password`** | A *single-line* text field whose value is **obscured**. Use the **`maxlength`** and
+**`minlength`** attributes to specify the *maximum* / *minimum* length of the value that can be entered. |
 
-## `<label>` Attributes
-
-This element includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
-
-| Attribute | Description |
-| :-- | :-- |
-| **`for`** | The **`id`** of a labelable form-related element in the same document as the `<label>` element. If it is not labelable then the `for` attribute has no effect.<br>**Note:** A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element. |
-| **`form`** | The [`<form>`](/en/webfrontend/<form>) element with which the label is associated (its form owner). If specified, the value of the attribute is the id of a [`<form>`](/en/webfrontend/<form>)  element in the same document. This lets you place label elements anywhere within a document, not just as descendants of their form elements. |
+```html
+<!-- Password -->
+<input type="password">
+<input type="password" maxlength="64" minlength="8">
+```
 
 ## Example: Simple Form
 
@@ -128,6 +130,15 @@ One `<input>` can be associated with multiple labels.
 with forms through the controls with which they're associated.
 - When a `<label>` is clicked or tapped and it is associated with a form control, the resulting
 click event is also raised for the associated control.
+
+### `<label>` Attributes
+
+This element includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
+
+| Attribute | Description |
+| :-- | :-- |
+| **`for`** | The **`id`** of a labelable form-related element in the same document as the `<label>` element. If it is not labelable then the `for` attribute has no effect.<br>**Note:** A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element. |
+| **`form`** | The [`<form>`](/en/webfrontend/<form>) element with which the label is associated (its form owner). If specified, the value of the attribute is the id of a [`<form>`](/en/webfrontend/<form>)  element in the same document. This lets you place label elements anywhere within a document, not just as descendants of their form elements. |
 
 ### Input with Associated Label
 
@@ -242,14 +253,6 @@ source of the image and the **alt** attribute to define alternative text. You ca
 and **width** attributes to define the size of the image in pixels.
 - `month`: A control for entering a month and year, with no time zone.
 - `number`: A control for entering a number.
-- `password`: A single-line text field whose value is obscured. Use the **maxlength** and
-**minlength** attributes to specify the maximum length of the value that can be entered.
-
-!!! warn "Don't try this at home"
-    Note: Any forms involving sensitive information like passwords (e.g. login forms) should be
-    served over HTTPS; Firefox now implements multiple mechanisms to warn against insecure login
-    forms — see Insecure passwords. Other browsers are also implementing similar mechanisms.
-
 - `radio`: A radio button, allowing a single value to be selected out of multiple choices.
 - `range`: A control for entering a number whose exact value is not important.
 - `reset`: A button that resets the contents of the form to default values.

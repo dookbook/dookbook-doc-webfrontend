@@ -5,6 +5,9 @@ TOPICS: <form>
         <input> type attribute
         <input> name attribute
         <input> value attribute
+        <input> required attribute
+        <input> maxlength attribute
+        <input> minlength attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -61,13 +64,13 @@ TOPICS: <form>
 | **`type`** | **输入类型**。|
 | **`name`** | 提交输入的**变量名**。|
 | **`value`** | 输入的**当前值**。|
+| **`required`** | *布尔*值，指示输入字段的值是**必需的**。|
 | `autocomplete` | 一个字符串，指示要允许输入的自动完成功能的类型（如果有）|
 | `autofocus` | 一个布尔值，如果存在，则在呈现表单时使输入成为焦点 |
 | `disabled` | 如果应禁用输入，则存在一个布尔属性 |
 | `form` | 输入是其成员的`<form>`的ID； 如果不存在，则输入是包含最近的表单的成员，或者根本不是表单的成员 |
 | `list` | [`<datalist>`](/zh-hans/webfrontend/<datalist>)元素的ID，该元素提供输入建议值的列表 |
 | `readonly` | 布尔值属性，如果为true，则表示无法编辑输入 |
-| `required` | 一个布尔值，如果为true，则表示输入内容必须具有值才能提交表单 |
 | `tabindex` | 一个数字值，向用户代理提供有关用户按Tab键时控件获得焦点的顺序的指导 |
 
 ## `<input>` 的类型 `type`
@@ -80,20 +83,18 @@ TOPICS: <form>
 | :-- | :-- |
 | **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。|
 | **`submit`** | **提交表单的按钮**。|
+| **`password`** | *单行文本*字段，其值被遮盖或隐藏。使用 **`maxlength`** 和 **`minlength`** 属性指定可以输入的值的*最大长度*和*最小长度*。|
 
-## `<label>` 属性
-
-此元素包括[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
-
-| 属性 | 描述 |
-| :-- | :-- |
-| **`for`** | 与关联元素（可标签化的元素，比如 *`<input>`*）的 **`id`** 属性相同。如果目标绑定元素不可标签化，则 `for` 属性无效。<br> **注意:** 一个`<label>`元素可以同时具有`for`属性和包含的控制元素， 只要 `for` 属性指向所包含的控制元素。|
-| **`form`** | 所关联的 **[`<form>`](/zh-hans/webfrontend/<form>)** 元素。如果指定，则属性的值是同一文档中[`<form>`](/zh-hans/webfrontend/<form>)元素的 **`id`**。 这使您可以将此元素放置在文档中的任何位置，而不仅仅是 `<form>` 元素的后代。|
+```html
+<!-- 示例： 密码输入, maxlength 代表密码最长为32个字符，minlength 代表最短为8个字符 -->
+<input type="password">
+<input type="password" maxlength="32" minlength="8">
+```
 
 ## 示例：简单表单 (POST请求)
 
 ```html
-<!-- 一个简单的表单，发送 POST 请求 -->
+<!-- 示例： 一个简单的表单，发送 POST 请求 -->
 <form action="" method="post">
   <input type="text" name="username">
   <input type="submit" value="保存">
@@ -110,6 +111,15 @@ TOPICS: <form>
 - `<label>` 正在标记的表单控件称为 `<label>` 元素的标签控件。一个 `<input>` 可以与多个 `<label>` 关联。
 - `<label>` 本身并不直接与表单关联。它们仅通过与之关联的控件与表单间接关联。
 - 当单击或点击 `<label>` 并将其与表单控件关联时，也会为关联的控件引发单击事件。
+
+### `<label>` 属性
+
+此元素包括[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
+
+| 属性 | 描述 |
+| :-- | :-- |
+| **`for`** | 与关联元素（可标签化的元素，比如 *`<input>`*）的 **`id`** 属性相同。如果目标绑定元素不可标签化，则 `for` 属性无效。<br> **注意:** 一个`<label>`元素可以同时具有`for`属性和包含的控制元素， 只要 `for` 属性指向所包含的控制元素。|
+| **`form`** | 所关联的 **[`<form>`](/zh-hans/webfrontend/<form>)** 元素。如果指定，则属性的值是同一文档中[`<form>`](/zh-hans/webfrontend/<form>)元素的 **`id`**。 这使您可以将此元素放置在文档中的任何位置，而不仅仅是 `<form>` 元素的后代。|
 
 ### 关联标签的表单输入
 
@@ -210,11 +220,6 @@ TOPICS: <form>
 - `image`: 图形提交按钮。 您必须使用**src**属性定义图像的来源，并使用**alt**属性定义替代文本。 您可以使用**高度**和**宽度**属性来定义图像的大小（以像素为单位）。
 - `month`: 用于输入月份和年份（无时区）的控件。
 - `number`: 输入数字的控件。
-- `password`: 单行文本字段，其值被遮盖。 使用**maxlength**和**minlength**属性指定可以输入的值的最大长度。
-
-!!! warn "Don't try this at home"
-    注意：任何涉及敏感信息的表单（例如密码）（例如登录表单）都应通过HTTPS提供；Firefox现在实现了多种机制来警告不安全的登录表单-请参阅不安全的密码。其他浏览器也正在实现类似的机制。
-
 - `radio`: 单选按钮，允许从多个选项中选择一个值。
 - `range`: 用于输入其精确值不重要的数字的控件。
 - `reset`: 将表单内容重置为默认值的按钮。
