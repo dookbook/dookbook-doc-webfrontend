@@ -5,25 +5,37 @@ TOPICS: <form>
         <input> type attribute
         <input> name attribute
         <input> value attribute
+        <input> required attribute
+        <input> maxlength attribute
+        <input> minlength attribute
+        <input> autofocus attribute
+        <input> disabled attribute
+        <input> readonly attribute
+        <input> form attribute
+        <label>
+        <label> for attribute
+        <label> form attribute
 
-# HTML 表单 `<form>`/`<input>`
+# HTML 表单 `<form>`/`<input>`/`<label>`
 
 **HTML 表单元素** (**`<form>`**) 标记了文档中一个包含**交互控制元件**，用来**向Web服务器提交表单信息**的区域。
 
 **`<input>`** 元素用于为基于Web的表单创建交互式控件，以便接受来自用户的数据；根据设备和用户代理的不同，可以使用多种类型的输入数据和控件。
 
+**`<label>`** 元素表示用户界面中某个项目(*`<input>`* 元素)的标题。
+
 可以用 *`:valid`* 和 *`:invalid`* CSS 伪类 来给表单内的元素指定样式。
 
 ## 技术摘要
 
-| - | `<form>` | `<input>` |
-| :-- | :-- | :-- |
-| **内容分类** | *流式内容*，*可触知内容*。| *流式内容*，*列表型*，*可提交*，*可重置*，*与表单相关*的元素，*短语内容*。如果 *`type`* 属性不是 *`hidden`* 的，则为*可标记*元素，*可触知内容*。|
-| **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素。 | 无，这是一个 **[空元素](/zh-hans/webfrontend/Empty_Element)**。 |
-| **标签省略** | 不允许，开始标签和结束标签都不能省略。| 必须具有开始标签，不得具有结束标签。|
-| **允许的父元素** | 任何接受 *流式内容* 的元素。 | 任何接受 *短语内容* 的元素。 |
-| **允许的 ARIA 角色** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None |
-| **DOM 接口** | **`HTMLFormElement`** | **`HTMLInputElement`** |
+| - | `<form>` | `<input>` | `<label>` |
+| :-- | :-- | :-- | :-- |
+| **内容分类** | *流式内容*，*可触知内容*。| *流式内容*，*列表型*，*可提交*，*可重置*，*表单相关元素*，*短语内容*。如果 *`type`* 属性不是 *`hidden`* 的，则为*可标记*元素，*可触知内容*。| *流式内容*，*短语内容*，*交互内容*，*表单相关元素*，*可触知内容*。|
+| **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素。 | 无，这是一个 **[空元素](/zh-hans/webfrontend/Empty_Element)**。 | *短语内容*，但不包括 `<label>` 元素。除带标签的控件外，不允许带其他 `<label>` 的元素。|
+| **标签省略** | 不允许，开始标签和结束标签都不能省略。| 必须具有开始标签，不得具有结束标签。| 不允许，开始标签和结束标签都是必需的。|
+| **允许的父元素** | 任何接受 *流式内容* 的元素。 | 任何接受 *短语内容* 的元素。 | 任何接受 *短语内容* 的元素。|
+| **允许的 ARIA 角色** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None | 无 |
+| **DOM 接口** | **`HTMLFormElement`** | **`HTMLInputElement`** | **`HTMLLabelElement`** |
 
 ## `<form>` 属性
 
@@ -32,7 +44,7 @@ TOPICS: <form>
 | 属性 | 描述 |
 | :-- | :-- |
 | **`action`** | 指定处理这个表单信息的程序所在的URL。这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formaction`** 属性重载（覆盖）。 |
-| **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:<br><br>**`post`**: HTTP POST 方法; 表单数据会包含在表单体内然后发送给服务器。<br>**`get`**: (默认值) HTTP GET 方法; 表单数据会附加在 `action` 属性的 URI 中，并以 `?` 作为分隔符, 然后将组装的 URI 再发送给服务器。这样做会使数据暴露在URI里面且仅包含ASCII字符。不推荐。<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
+| **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:<br><br>**`post`**: HTTP POST 方法; 表单数据会包含在表单体内然后发送给服务器。<br>**`get`**: (默认值) HTTP GET 方法; 表单数据会附加在 `action` 属性的 URI 中，并以 `?` 作为分隔符, 然后将组装的 URI 再发送给服务器。这样做会使数据暴露在 URI 里面且仅包含 ASCII 字符。不推荐。<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
 | `accept-charset` | 一个空格分隔或逗号分隔的列表，这个列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串“UNKNOWN”。这个字符串指的是，和包含这个form元素的文档相同的编码。在之前版本的HTML中，不同的字符编码可以用空格或逗号分隔。在HTML5中，只有空格可以允许作为分隔符。 |
 | `autocapitalize` | 这是一个被 iOS Safari Mobile 使用的非标准属性。当用户在一些form的文本后代控件中，输入/编辑一些文本值时，这个属性控制了这些文本值的首字母是否大写或者使用其他的大写样式。<br>如果 `autocapitalize` 属性在某个单独的form后代控件被指定的话，那么这个单独的设定会覆盖原来form范围内的 `autocapitalize` 设定. 这个非不推荐的值从 iOS 5 及其之后可用. 默认值为 `sentences`. 可以选择的值如下:<br><br>`none`: 完全禁用自动首字母大写.<br>`sentences`: 自动对每句话首字母大写.<br>`words`: 自动对每个单词首字母大写.<br>`characters`: 自动大写所有的字母. |
 | `autocomplete` | 用于指示 input 元素是否能够拥有一个默认值，这个默认值是由浏览器自动补全的。这个设定可以被属于这个form的子元素的 autocomplete 属性重载（覆盖）。 可能的值有:<br><br>`off`: 在每一个用到的输入域里，用户必须显式的输入一个值，或者document 以它自己的方式提供自动补全；浏览器不会自动补全输入。<br>`on`: 浏览器能够根据用户之前在form里输入的值自动补全。<br>**注意:**<br>如果你在一个表单里把 `autocomplete` 设置成 off 是因为 `document` 提供了它独有的自动补全，那么你也应该把这个表单里每一个 `input` 元素的 `autocomplete` 设成 off 来让 `document` 能够自动补全. 想要了解详细信息, 参见 Google Chrome notes. |
@@ -54,16 +66,25 @@ TOPICS: <form>
 | 属性 | 描述 |
 | :-- | :-- |
 | **`type`** | **输入类型**。|
-| **`name`** | 提交输入的**变量名**。|
+| **`name`** | 提交输入的**变量名**。如果未指定或为空，则输入字段的值不会与表单一起提交。|
 | **`value`** | 输入的**当前值**。|
+| **`required`** | *布尔*值，指示输入字段的值是**必需的**。如果指定该属性，则元素可应用 **`:required`** 伪类；否则可应用 **`:optional`** 伪类。不可用于 `type` 为 *`submit`*，*`color`*，*`hidden`*，*`range`*，*`image`*，*`reset`*，*`button`* 的输入框。|
+| **`autofocus`** | *布尔*值，指示在呈现表单时使该输入控件自动聚焦。在触发 *`DOMContentLoaded`* 事件之前，具有此属性的元素可以获得焦点。不可用于 `type="hidden"` 的输入框。|
+| **`disabled`** | *布尔*值，指示**禁用输入**。该输入不会收到 `click` 事件，并且禁用的输入不会与表单一起提交。|
+| **`readonly`** | *布尔*值，表示**无法编辑**输入。仅文本控件可以设置为只读，因为对于其他控件（例如复选框和按钮），在只读(`readonly`)和禁用(`disabled`)之间没有区别，因此`readonly`属性不适用。|
+| **`form`** | **所属 `<form>` 的 `id`**。如果不存在，则输入是包含*最近*的表单的成员，或者根本不是表单的成员。|
 | `autocomplete` | 一个字符串，指示要允许输入的自动完成功能的类型（如果有）|
-| `autofocus` | 一个布尔值，如果存在，则在呈现表单时使输入成为焦点 |
-| `disabled` | 如果应禁用输入，则存在一个布尔属性 |
-| `form` | 输入是其成员的`<form>`的ID； 如果不存在，则输入是包含最近的表单的成员，或者根本不是表单的成员 |
 | `list` | [`<datalist>`](/zh-hans/webfrontend/<datalist>)元素的ID，该元素提供输入建议值的列表 |
-| `readonly` | 布尔值属性，如果为true，则表示无法编辑输入 |
-| `required` | 一个布尔值，如果为true，则表示输入内容必须具有值才能提交表单 |
 | `tabindex` | 一个数字值，向用户代理提供有关用户按Tab键时控件获得焦点的顺序的指导 |
+
+!!! warn "**`autofocus`** 属性用法注意事项"
+    文档中最多**只能有一个**元素具有 `autofocus` 属性。警告：自动聚焦表单控件会使使用屏幕阅读技术的视障人士感到困惑。分配自动对焦后，屏幕阅读器会将用户“自动传送”到表单控件，而不会事先警告他们。
+
+!!! warn "`readonly` 和 `required` 属性不可同时使用"
+    注意：指定了 `readonly` 属性的 `<input>` 不允许使用 `required` 属性。
+
+!!! info "`disabled` vs `readonly`"
+    `disabled` 和 `readonly` 之间的区别在于，`readonly` 控件仍然可以起作用，而 `disabled` 的控件通常在启用前通常不充当控件。
 
 ## `<input>` 的类型 `type`
 
@@ -75,20 +96,71 @@ TOPICS: <form>
 | :-- | :-- |
 | **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。|
 | **`submit`** | **提交表单的按钮**。|
+| **`password`** | *单行文本*字段，其值被遮盖或隐藏。使用 **`maxlength`** 和 **`minlength`** 属性指定可以输入的值的*最大长度*和*最小长度*。|
+| **`hidden`** | **不显示**，但其值会提交给服务器的输入控件。|
+| **`checkbox`** | **复选框**。|
+
+```html
+<!-- 示例： 密码输入, maxlength 代表密码最长为32个字符，minlength 代表最短为8个字符 -->
+<input type="password">
+<input type="password" maxlength="32" minlength="8">
+
+<!-- 示例： 隐藏输入，值为10 -->
+<input type="hidden" value="10">
+
+<!-- 示例： 复选框，提交的变量名为point，选项值分别为A1, A2 -->
+<input type="checkbox" name="point" value="A1">
+<input type="checkbox" name="point" value="A2">
+```
 
 ## 示例：简单表单 (POST请求)
 
 ```html
-<!-- 一个简单的表单，发送 POST 请求 -->
+<!-- 示例： 一个简单的表单，发送 POST 请求 -->
 <form action="" method="post">
   <input type="text" name="username">
   <input type="submit" value="保存">
 </form>
 ```
 
-## 示例：带标签标注的表单
+提交表单数据时，`name`的值作为变量名与控件的值一起提交。同时该 `name` 的值成为所属 `<form>` 元素属性 *`HTMLFormElement.elements`* 的属性。如下：
+
+```javascript
+let form = document.querySelector("form");
+let userName1 = form.elements.username;
+let userName2 = form.elements["username"];
+```
+
+## `<label>` 使用须知
+
+- `<label>` 文本不仅在视觉上与其对应输入的文本相关联；它也以编程方式与之关联。这意味着，例如当用户专注于表单输入时，屏幕阅读器将读出标签，从而使辅助技术用户更容易理解应输入哪些数据。
+- 您可以单击关联的 `<label>` 来聚焦/激活输入以及输入本身。 这种增加的点击区域为尝试激活输入的任何人（包括使用触摸屏设备的用户）提供了优势。
+
+其他用法说明：
+
+- `<label>` 正在标记的表单控件称为 `<label>` 元素的标签控件。一个 `<input>` 可以与多个 `<label>` 关联。
+- `<label>` 本身并不直接与表单关联。它们仅通过与之关联的控件与表单间接关联。
+- 当单击或点击 `<label>` 并将其与表单控件关联时，也会为关联的控件引发单击事件。
+
+### `<label>` 属性
+
+此元素包括[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
+
+| 属性 | 描述 |
+| :-- | :-- |
+| **`for`** | 与关联元素（可标签化的元素，比如 *`<input>`*）的 **`id`** 属性相同。如果目标绑定元素不可标签化，则 `for` 属性无效。<br> **注意:** 一个`<label>`元素可以同时具有`for`属性和包含的控制元素， 只要 `for` 属性指向所包含的控制元素。|
+| **`form`** | 所关联的 **[`<form>`](/zh-hans/webfrontend/<form>)** 元素。如果指定，则属性的值是同一文档中[`<form>`](/zh-hans/webfrontend/<form>)元素的 **`id`**。 这使您可以将此元素放置在文档中的任何位置，而不仅仅是 `<form>` 元素的后代。|
+
+### 关联标签的表单输入
+
+要将 `<label>` 与一个 [`<input>`](/zh-hans/webfrontend/<input>) 元素相关联，
+您需要给该[`<input>`](/zh-hans/webfrontend/<input>)一个 **`id`** 属性。
+然后，`<label>` 元素需要一个 **`for`** 属性，其值与 `<input>` 的 `id` 相同。
+
+如果还有其他元素也与 `id` 值匹配，则仅匹配**第一个**，其余忽略。
 
 ```html
+<!-- 示例： 关联标签的表单输入 -->
 <form action="" method="post">
   <label for="username">用户名:</label>
   <input id="username" type="text" name="username">
@@ -96,22 +168,86 @@ TOPICS: <form>
 </form>
 ```
 
+### 嵌入到 `<label>` 中的输入框
+
+另外，您可以将 [`<input>`](/zh-hans/webfrontend/<input>) 直接**嵌套**在 `<label>` 中。
+在这种情况下，因为关联是隐式的，所以不需要 `for` 和 `id` 属性：
+
+```html
+<!-- 示例： 嵌入到 `<label>` 中的输入框 -->
+<label>用户名: <input type="text" name="username"></label>
+```
+
+## `<label>` 无障碍建议
+
+### `<label>` 中的互动内容
+
+请勿在 `<label>` 内放置诸如*锚点* (*[`<a>`](/zh-hans/webfrontend/<a>)*)
+或*按钮* (*[`<button>`](/zh-hans/webfrontend/<button>)*)之类的交互式元素。
+这样做使人们很难激活与 `<label>` 相关联的表单 `<input>`。
+
+错误
+
+```html
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
+  我同意 <a href="terms-and-conditions.html">《服务条款》</a>
+</label>
+```
+
+正确
+
+```html
+<label for="tac">
+  <input id="tac" type="checkbox" name="terms-and-conditions">
+  我同意《服务条款》
+</label>
+<p>
+  <a href="terms-and-conditions.html">阅读《服务条款》</a>
+</p>
+```
+
+### `<label>` 中的标题
+
+将标题元素放置在 `<label>` 中会干扰多种辅助技术，因为标题通常用作导航辅助。如果 `<label>` 的文本需要在视觉上进行调整，请使用应用于 `<label>` 元素的CSS。
+
+如果表单或表单的一部分需要标题，请使用放置在 *[`<fieldset>`](/zh-hans/webfrontend/<fieldset>)* 中的
+*[`<legend>`](/zh-hans/webfrontend/<legend>)* 元素。
+
+错误
+
+```html
+<label for="your-name">
+  <h3>你的名字</h3>
+  <input id="your-name" name="your-name" type="text">
+</label>
+```
+
+正确
+
+```html
+<label class="large-label" for="your-name">
+  你的名字
+  <input id="your-name" name="your-name" type="text">
+</label>
+```
+
+### `<label>` 关联按钮
+
+具有 **`type="button"`** 声明和有效的 `value` 属性的 *[`<input>`](/zh-hans/webfrontend/<input>)* 元素不需要与之关联的 `<label>`。
+这样做实际上可能会干扰辅助技术解析按钮输入的方式。同样的情况适用于 **[`<button>`](/zh-hans/webfrontend/<button>)** 元素。
+
+***
+
 - `button`: 没有默认行为的按钮。
-- `checkbox`: 一个复选框，允许选择/取消选择单个值。
 - `color`: 用于指定颜色的控件。 颜色选择器的UI除了接受简单的颜色作为文本（更多信息）外，没有其他必需的功能。
 - `date`: 输入日期（年，月，日，无时间）的控件。
 - `datetime-local`: 用于输入日期和时间（无时区）的控件。
 - `email`: 用于编辑电子邮件地址的字段。
 - `file`: 允许用户选择文件的控件。 使用**accept**属性定义控件可以选择的文件类型。
-- `hidden`: 不显示但其值已提交给服务器的控件。
 - `image`: 图形提交按钮。 您必须使用**src**属性定义图像的来源，并使用**alt**属性定义替代文本。 您可以使用**高度**和**宽度**属性来定义图像的大小（以像素为单位）。
 - `month`: 用于输入月份和年份（无时区）的控件。
 - `number`: 输入数字的控件。
-- `password`: 单行文本字段，其值被遮盖。 使用**maxlength**和**minlength**属性指定可以输入的值的最大长度。
-
-!!! warn "Don't try this at home"
-    注意：任何涉及敏感信息的表单（例如密码）（例如登录表单）都应通过HTTPS提供；Firefox现在实现了多种机制来警告不安全的登录表单-请参阅不安全的密码。其他浏览器也正在实现类似的机制。
-
 - `radio`: 单选按钮，允许从多个选项中选择一个值。
 - `range`: 用于输入其精确值不重要的数字的控件。
 - `reset`: 将表单内容重置为默认值的按钮。
@@ -132,91 +268,11 @@ TOPICS: <form>
 
 有关其他信息，请参见HTML自动完成属性。
 
-**`autofocus`**
-
-一个布尔属性，如果存在，则指示页面完成加载时（或显示包含元素的[`<dialog>`](/zh-hans/webfrontend/<dialog>)时）输入应自动具有焦点。
-
-!!! warn "Don't try this at home"
-    注意：在触发`DOMContentLoaded`事件之前，具有`autofocus`属性的元素可能会获得焦点。
-
-文档中最多只能有一个元素具有`autofocus`属性，并且`autofocus`不能用于`hidden`类型的输入，因为隐藏的输入不能被聚焦。
-
-!!! error ""
-    警告：自动聚焦表单控件会使使用屏幕阅读技术的视障人士感到困惑。 分配自动对焦后，屏幕阅读器会将用户“传送”到表单控件，而不会事先警告他们。
-
-**`disabled`**
-
-一个布尔属性，如果存在，则指示用户不应与输入进行交互。 禁用的输入通常使用较暗的颜色或使用某种其他形式的字段无法使用的指示来呈现。
-
-具体来说，禁用的输入不会收到click事件，并且禁用的输入不会与表单一起提交。
-
-!!! warn "Don't try this at home"
-    注意：尽管规范没有要求，但是Firefox默认会在页面加载过程中保持`<input>`的动态禁用状态。使用`autocomplete`(url)属性来控制此功能。
-
-**`form`**
-
-一个字符串，指定与输入关联的`<form>`元素（即其“表单所有者”）。该字符串的值（如果存在）必须与同一文档中的`<form>`元素的ID相匹配。如果未指定此属性，则将`<input>`元素与最近的包含形式相关联（如果有）。
-
-`form`属性使您可以将输入放置在文档中的任何位置，但将其包含在文档中其他位置的表单中。
-
 **`list`**
 
 位于同一文档中的`<datalist>`元素的`id`，该元素提供了一系列预定义值以向用户建议此输入。建议选项中不包含列表中与`type`不兼容的任何值。
 
 `hidden`, `password`, `checkbox`, `radio`, `file`或任何按钮类型均不支持`list`属性。
-
-**`name`**
-
-一个字符串，指定输入控件的名称。 提交表单数据时，此名称与控件的值一起提交，并与拥有的`<form>`元素的`elements`对象一起提交。
-
-给输入元素一个“名称”时，该名称成为拥有表单元素的`HTMLFormElement.elements`属性的属性。 这意味着，如果您有一个输入，其`name`设置为`guest`，而另一个输入的名称是`hat-size`，则可以使用以下代码：
-
-```javascript
-let form = document.querySelector("form");
-let guestName = form.elements.guest;
-let hatSize = form.elements"hat-size"];
-```
-
-运行此代码后，`guestName`将是`guest`字段的`HTMLInputElement`，而`hatSize`将是`hat-size`字段的对象。
-
-!!! error ""
-    警告：应避免给表单元素一个与表单的内置属性相对应的名称，因为您将使用对相应输入的引用覆盖预定义的属性或方法。
-
-名称`_charset_`具有特殊含义。 如果用作`hidden`类型的`<input>`元素的名称，则用户代理会自动将输入的`value`设置为用于提交表单的字符编码。
-
-如果未指定`name`或`name`为空，则输入的值不会与表单一起提交。
-
-!!! warn "Don't try this at home"
-    注意：由于历史原因，不允许使用名称`isindex`。 如果您真的想知道为什么，请参阅命名表单控件：HTML规范中的`name`属性。
-
-**`readonly`**
-
-一个布尔属性，如果存在，则指示用户不应编辑输入的值。
-
-`disabled`和`readonly`之间的区别在于，只读控件仍然可以起作用，而禁用的控件通常在启用前通常不充当控件。
-
-!!! warn "Don't try this at home"
-    注意：指定了`readonly`属性的输入不允许使用`required`属性。
-
-!!! warn "Don't try this at home"
-    注意：仅文本控件可以设置为只读，因为对于其他控件（例如复选框和按钮），在只读和禁用之间没有有用的区别，因此“ readonly”属性不适用。
-
-**`required`**
-
-`required`是一个布尔属性，如果存在，则指示用户必须先指定输入值，然后才能提交拥有表单。 除以下内容外，所有输入类型均支持`required`属性：
-
-- `color`
-- `hidden`
-- `range`
-- `submit`
-- `image`
-- `reset`
-- `button`
-
-如果输入具有`required`属性，则`:required`伪类也适用于它。相反，没有`required`属性的输入（除了不支持它的元素除外）具有`:optional`伪- 类已应用。...
-
-!!! warn "Don't try this at home"
-    注意：因为只读字段不能有值，所以`required`对也指定了`readonly`属性的输入没有任何影响。
 
 **`tabindex`**
 
@@ -228,15 +284,6 @@ let hatSize = form.elements"hat-size"];
 - `tabindex`为0意味着该元素应该是可聚焦的，并且应该可以通过顺序的键盘导航到达，但是该Tab的顺序由用户代理决定，后者应该应用用户的平台约定。 当您希望元素可聚焦并参与键盘导航而不是尝试自己管理选项卡顺序时，通常这是最佳使用值。
 - `tabindex`”的正值表示元素的制表顺序。 每次用户按下`<kbd>Tab</kbd>`键时，其标签索引依次高的元素都会被聚焦。大多数平台通常提供反向标签功能，通常结合使用
 `<kbd>Shift </kbd>`+`<kbd>Tab</kbd>`会反转制表顺序。如果`tabindex`被省略或不是有效的整数，则用户代理将遵循平台约定来确定要执行的操作。
-
-**`value`**
-
-输入控件的值。 当在HTML中指定时，这是初始值，此后可以使用JavaScript访问相应的`HTMLInputElement`对象的`value`属性随时对其进行更改或检索。`value`属性总是可选的。
-
-!!! warn "Don't try this at home"
-    注意：与其他输入控件不同，如果当前已选中“复选框”或“单选”按钮，则复选框和单选按钮仅包含在提交的数据中。 如果是，则将“值”属性报告为输入值。
-
-例如，如果一个名为`status`的复选框的`value`为`active`，并且选中了该复选框，则提交的表单数据将包括`status=active`。如果该复选框未激活，则它根本不会在表单数据中列出。复选框和单选按钮的默认`value`为`on`。
 
 ### 方法
 
