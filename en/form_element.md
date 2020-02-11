@@ -98,7 +98,7 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 | **`readonly`** | A *Boolean* attribute which, if `true`, indicates that the input **cannot be edited**. Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only (`readonly`) and being disabled (`disabled`), so the `readonly` attribute does not apply. |
 | **`form`** | The **`id` of the `<form>`** of which the input is a member; if absent, the input is a member of the *nearest* containing form, or is not a member of a form at all. |
 | `autocomplete` | A *string* indicating the type of **autocomplete functionality**, if any, to allow on the input. **`on`** for enabling autocomplete, **`off`** for disabling. Only support `<input>` elements with `type`: *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`*, and *`color`*. |
-| `list` | The id of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
+| `list` | The `id` of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
 | `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the Tab key. |
 
 !!! warn "**`autofocus`** Usage Notes"
@@ -399,7 +399,7 @@ of `<kbd>Shift</kbd>` + `<kbd>Tab</kbd>`, which reverses the tabbing order.
 If `tabindex` is omitted or is not a valid integer, the user agent follows
 platform conventions to determine what to do.
 
-### Methods
+## `HTMLInputElement` Methods
 
 The following methods are provided by the `HTMLInputElement` interface which represents
 `<input>` elements in the DOM. Also available are those methods specified by the parent interfaces,
@@ -416,7 +416,7 @@ The following methods are provided by the `HTMLInputElement` interface which rep
 | `stepDown()` | Decrements the value of a numeric input by one, by default, or by the specified number of units. |
 | `stepUp()` | Increments the value of a numeric input by one or by the specified number of units. |
 
-### Styling Input Elements
+## Styling Input Elements
 
 You can style `<input>` elements using various color-related attributes in particular. One unusual
 one that is specific to text entry-related elements is the CSS `caret-color` property,
@@ -437,7 +437,7 @@ input.custom {
 For more information about adding color to elements in HTML,
 see Applying color to HTML elements using CSS.
 
-### Labels and Placeholders
+## Labels and Placeholders
 
 TL;DR: To save you time, here's the key point: don't use the `placeholder` attribute if you can
 avoid it. If you need to label an `<input>` element, use the [`<label>`](/en/webfrontend/<label>) element.

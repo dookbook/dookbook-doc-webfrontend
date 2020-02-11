@@ -349,9 +349,10 @@ let userName2 = form.elements["username"];
 - `tabindex`”的正值表示元素的制表顺序。 每次用户按下`<kbd>Tab</kbd>`键时，其标签索引依次高的元素都会被聚焦。大多数平台通常提供反向标签功能，通常结合使用
 `<kbd>Shift </kbd>`+`<kbd>Tab</kbd>`会反转制表顺序。如果`tabindex`被省略或不是有效的整数，则用户代理将遵循平台约定来确定要执行的操作。
 
-### 方法
+### `HTMLInputElement` 方法
 
-`HTMLInputElement`接口提供了以下方法，该接口表示DOM中的`<input>`元素。 父接口指定的那些方法（`HTMLElement`，`HTML`，`Element`，`Node`和`EventTarget`）也可用。
+`HTMLInputElement`接口提供了以下方法，该接口表示DOM中的`<input>`元素。
+父接口指定的那些方法（`HTMLElement`，`HTML`，`Element`，`Node` 和 `EventTarget`）也可用。
 
 | 方法 | 描述 |
 | :-- | :-- |
@@ -364,7 +365,7 @@ let userName2 = form.elements["username"];
 | `stepDown()` | 默认情况下，将数字输入的值减一，或者按指定的单位数减一。|
 | `stepUp()` | 将数字输入的值增加一或以指定的单位数递增。|
 
-### 样式输入元素
+## 样式输入元素
 
 您可以特别使用各种与颜色相关的属性来设置`<input>`元素的样式。 CSS`caret-color`属性是特定于文本输入相关元素的一种不寻常的属性，它使您可以设置用于绘制文本输入插入符号的颜色：
 
@@ -382,7 +383,7 @@ input.custom {
 
 有关在HTML元素中添加颜色的更多信息，请参阅使用CSS将颜色应用于HTML元素。
 
-### 标签和占位符
+## 标签和占位符
 
 TL;DR:为节省时间，这是关键点：如果可以避免，请勿使用`placeholder`属性。 如果需要标记`<input>`元素，请使用[`<label>`](/zh-hans/webfrontend/<label>)元素。
 
