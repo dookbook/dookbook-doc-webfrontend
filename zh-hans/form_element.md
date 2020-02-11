@@ -6,6 +6,8 @@ TOPICS: <form>
         <form> novalidate attribute
         <form> target attribute
         <form> autocomplete attribute
+        <form> accept-charset attribute
+        <form> name attribute
         <input> type attribute
         <input> name attribute
         <input> value attribute
@@ -19,6 +21,7 @@ TOPICS: <form>
         <input> formaction attribute
         <input> formmethod attribute
         <input> formenctype attribute
+        <input> formnovalidate attribute
         <input> formtarget attribute
         <input> checked attribute
         <input> autocomplete attribute
@@ -64,8 +67,7 @@ TOPICS: <form>
 | `novalidate` | *布尔*类型的属性，指示当提交时表单是否没有被验证。如果这个属性没有指定，则这个表单是验证通过的。这个默认设置可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者*`<input>`* 元素中的 **`formnovalidate`** 属性重载（覆盖）。|
 | `target` | 表单提交之后的跳转。参见 **[`<a>` 的 `target` 属性](/en/webfrontend/<a>)**。<br><br>HTML5: 这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formtarget`** 属性重载（覆盖）。|
 | `autocomplete` | 用于指示 *`<input>`* 元素是否能够拥有一个默认值，这个默认值是由浏览器自动补全的。这个设置可以被属于这个 `<form>` 的子元素的 **`autocomplete`** 属性重载（覆盖）。可能的值有:<br><br>**`off`**: 浏览器不会自动补全。<br>**`on`**: 浏览器能够根据用户之前的输入自动补全。|
-| `accept-charset` | 一个空格分隔或逗号分隔的列表，这个列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串“UNKNOWN”。这个字符串指的是，和包含这个form元素的文档相同的编码。在之前版本的HTML中，不同的字符编码可以用空格或逗号分隔。在HTML5中，只有空格可以允许作为分隔符。 |
-| `autocapitalize` | 这是一个被 iOS Safari Mobile 使用的非标准属性。当用户在一些form的文本后代控件中，输入/编辑一些文本值时，这个属性控制了这些文本值的首字母是否大写或者使用其他的大写样式。<br>如果 `autocapitalize` 属性在某个单独的form后代控件被指定的话，那么这个单独的设定会覆盖原来form范围内的 `autocapitalize` 设定. 这个非不推荐的值从 iOS 5 及其之后可用. 默认值为 `sentences`. 可以选择的值如下:<br><br>`none`: 完全禁用自动首字母大写.<br>`sentences`: 自动对每句话首字母大写.<br>`words`: 自动对每个单词首字母大写.<br>`characters`: 自动大写所有的字母. |
+| `accept-charset` | 一个*空格*分隔或*逗号*分隔的列表，这个列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串 **`"UNKNOWN"`**。这个字符串指的是，和当前文档相同的编码。在之前版本的HTML中，不同的字符编码可以用空格或逗号分隔。**在HTML5中，只有*空格*可以允许作为分隔符**。 |
 | `name` | 表单名称。在HTML4中，这个用法不被推荐(作为替代，应该使用`id`). HTML5中，一个文档中的多个表单当中，name必须唯一而不仅仅是一个空字符串。|
 
 ## `<input>` 属性

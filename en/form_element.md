@@ -6,6 +6,8 @@ TOPICS: <form>
         <form> novalidate attribute
         <form> target attribute
         <form> autocomplete attribute
+        <form> accept-charset attribute
+        <form> name attribute
         <input> type attribute
         <input> name attribute
         <input> value attribute
@@ -19,6 +21,7 @@ TOPICS: <form>
         <input> formaction attribute
         <input> formmethod attribute
         <input> formenctype attribute
+        <input> formnovalidate attribute
         <input> formtarget attribute
         <input> checked attribute
         <input> autocomplete attribute
@@ -68,9 +71,8 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | `novalidate` | This *Boolean* attribute indicates that the form is **not to be validated** when submitted. If this attribute is not specified (and therefore the form is validated), this default setting can be overridden by a **`formnovalidate`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element belonging to the form. |
 | `target` | A **name or keyword** indicating where to display the response that is received after submitting the form. See **[the attribute `target` of `<a>` element](/en/webfrontend/<a>)**.<br><br>HTML5: This value can be overridden by a formtarget attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
 | `autocomplete` | Indicates whether input elements can by default have their values **automatically completed** by the browser. This setting can be overridden by an **`autocomplete`** attribute on an element belonging to the form. Possible values are:<br><br>**`off`**: The browser does not automatically complete entries.<br>**`on`**: The browser can automatically complete values based on values that the user has previously entered in the form. |
-| `accept-charset` | A space- or comma-delimited list of character encodings that the server accepts. The browser uses them in the order in which they are listed. The default value, the reserved string `"UNKNOWN"`, indicates the same encoding as that of the document containing the form element. <br>In previous versions of HTML, the different character encodings could be delimited by spaces or commas. In HTML5, only spaces are allowed as delimiters.
-| `autocapitalize` | This is a nonstandard attribute used by iOS Safari Mobile which controls whether and how the text value for textual form control descendants should be automatically capitalized as it is entered/edited by the user. If the `autocapitalize` attribute is specified on an individual form control descendant, it trumps the form-wide `autocapitalize` setting. The non-deprecated values are available in iOS 5 and later. The default value is `sentences`. Possible values are:<br>`none`: Completely disables automatic capitalization<br>`sentences`: Automatically capitalize the first letter of sentences.<br>`words`: Automatically capitalize the first letter of words.<br>`characters`: Automatically capitalize all characters.|
-| `name` | The name of the form. In HTML 4, its use is deprecated (id should be used instead). It must be unique among the forms in a document and not just an empty string in HTML 5. |
+| `accept-charset` | A *space*- or *comma*-delimited list of character encodings that the server accepts. The browser uses them in the order in which they are listed. The default value, the reserved string **`"UNKNOWN"`**, indicates the same encoding as that of the document containing the form element. <br>In previous versions of HTML, the different character encodings could be delimited by spaces or commas. **In HTML5, only *spaces* are allowed as delimiters**. |
+| `name` | The name of the form. In HTML 4, its use is deprecated (`id` should be used instead). It must be unique among the forms in a document and not just an empty string in HTML 5. |
 
 ## `<input>` Attributes
 
