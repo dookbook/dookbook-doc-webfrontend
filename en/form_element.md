@@ -2,7 +2,12 @@ TOPICS: <form>
         <input>
         <form> action attribute
         <form> method attribute
+        <form> enctype attribute
+        <form> novalidate attribute
+        <form> target attribute
         <form> autocomplete attribute
+        <form> accept-charset attribute
+        <form> name attribute
         <input> type attribute
         <input> name attribute
         <input> value attribute
@@ -13,6 +18,11 @@ TOPICS: <form>
         <input> disabled attribute
         <input> readonly attribute
         <input> form attribute
+        <input> formaction attribute
+        <input> formmethod attribute
+        <input> formenctype attribute
+        <input> formnovalidate attribute
+        <input> formtarget attribute
         <input> checked attribute
         <input> autocomplete attribute
         <input> accept attribute
@@ -42,12 +52,12 @@ element based on whether or not the individual elements within the form are vali
 
 | - | `<form>` | `<input>` | `<label>` |
 | :-- | :-- | :-- | :-- |
-| **Content categories** | *Flow content*, *palpable content*. | *Flow content*, *listed*, *submittable*, *resettable*, *form-associated element*, *phrasing content*. If the *`type`* is not *`hidden`*, then *labelable* element, *palpable content*. | *Flow content*, *phrasing content*, *interactive content*, *form-associated element*, *palpable content*. |
-| **Permitted content** | *Flow content*, but not containing `<form>` elements. | None, it is an **[empty element](/en/webfrontend/Empty_Element)**. | *Phrasing content*, but no descendant `<label>` elements. No labelable elements other than the labeled control are allowed. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. | Must have a start tag and must not have an end tag. | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts *flow content*. | Any element that accepts *phrasing content*. | Any element that accepts *phrasing content*. |
-| **Permitted ARIA roles** | `group`, `presentation` | **`type=button`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`,`tab`<br>**`checkbox`**: `button`,`menuitemcheckbox`,`option`,`switch`<br>**`image`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`<br>**`radio`**: `menuitemradio`<br>**`color`**,**`file`**: None<br>**`text`**,**`password`**,**`hidden`**,**`submit`**,**`reset`**,**`email`**,**`url`**,**`tel`**,**`search`**: None<br>**`number`**,**`range`**: None<br>**`time`**,**`date`**,**`datetime`**,**`datetime-local`**,**`month`**,**`week`**: None | None |
-| **DOM interface** | **`HTMLFormElement`** | **`HTMLInputElement`** | **`HTMLLabelElement`** |
+| **Content categories** | *Flow content*, *palpable content*. | *Flow content*, *listed*, *submittable*, *resettable*, *form-associated element*, *phrasing content*. If the *`type`* is not *`hidden`*, then *labelable* element, *palpable content*. |
+| **Permitted content** | *Flow content*, but not containing `<form>` elements. | None, it is an **[empty element](/en/webfrontend/Empty_Element)**. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. | Must have a start tag and must not have an end tag. |
+| **Permitted parents** | Any element that accepts *flow content*. | Any element that accepts *phrasing content*. |
+| **Permitted ARIA roles** | `group`, `presentation` | **`type=button`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`,`tab`<br>**`checkbox`**: `button`,`menuitemcheckbox`,`option`,`switch`<br>**`image`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`<br>**`radio`**: `menuitemradio`<br>**`color`**,**`file`**: None<br>**`text`**,**`password`**,**`hidden`**,**`submit`**,**`reset`**,**`email`**,**`url`**,**`tel`**,**`search`**: None<br>**`number`**,**`range`**: None<br>**`time`**,**`date`**,**`datetime`**,**`datetime-local`**,**`month`**,**`week`**: None |
+| **DOM interface** | **`HTMLFormElement`** | **`HTMLInputElement`** |
 
 ## `<form>` Attributes
 
@@ -57,13 +67,12 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | :-- | :-- |
 | **`action`** | **The URI of a program that processes the form information**. This value can be overridden by a **`formaction`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
 | **`method`** | The **[[HTTP]] method** that the browser uses to submit the form. Possible values are: **`post`** (*HTTP POST*), **`get`** (default. *HTTP GET*, not recommended), **`dialog`** (*[`<dialog>`](/en/webfrontend/<dialog>)*).<br><br>This value can be overridden by a **`formmethod`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
+| `enctype` | When the value of the *`method`* attribute is *`post`*, it is the [MIME type](/en/glossary/MIME) of content that is used to submit the form to the server. Possible values are:<br><br>**`application/x-www-form-urlencoded`**: The *default* value if the attribute is not specified.<br>**`multipart/form-data`**: The value used for an `<input>` element with the *`type`* attribute set to *`file`*.<br>**`text/plain`**: (HTML5) Plain text.<br><br>This value can be overridden by a **`formenctype`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
+| `novalidate` | This *Boolean* attribute indicates that the form is **not to be validated** when submitted. If this attribute is not specified (and therefore the form is validated), this default setting can be overridden by a **`formnovalidate`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element belonging to the form. |
+| `target` | A **name or keyword** indicating where to display the response that is received after submitting the form. See **[the attribute `target` of `<a>` element](/en/webfrontend/<a>)**.<br><br>HTML5: This value can be overridden by a formtarget attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
 | `autocomplete` | Indicates whether input elements can by default have their values **automatically completed** by the browser. This setting can be overridden by an **`autocomplete`** attribute on an element belonging to the form. Possible values are:<br><br>**`off`**: The browser does not automatically complete entries.<br>**`on`**: The browser can automatically complete values based on values that the user has previously entered in the form. |
-| `accept-charset` | A space- or comma-delimited list of character encodings that the server accepts. The browser uses them in the order in which they are listed. The default value, the reserved string `"UNKNOWN"`, indicates the same encoding as that of the document containing the form element. <br>In previous versions of HTML, the different character encodings could be delimited by spaces or commas. In HTML5, only spaces are allowed as delimiters.
-| `autocapitalize` | This is a nonstandard attribute used by iOS Safari Mobile which controls whether and how the text value for textual form control descendants should be automatically capitalized as it is entered/edited by the user. If the `autocapitalize` attribute is specified on an individual form control descendant, it trumps the form-wide `autocapitalize` setting. The non-deprecated values are available in iOS 5 and later. The default value is `sentences`. Possible values are:<br>`none`: Completely disables automatic capitalization<br>`sentences`: Automatically capitalize the first letter of sentences.<br>`words`: Automatically capitalize the first letter of words.<br>`characters`: Automatically capitalize all characters.
-| `enctype` | When the value of the `method` attribute is `post`, enctype is the [MIME type](https://en.wikipedia.org/wiki/Mime_type) of content that is used to submit the form to the server. Possible values are:<br>`application/x-www-form-urlencoded`: The default value if the attribute is not specified.<br>`multipart/form-data`: The value used for an `<input>` element with the `type` attribute set to "file".<br>`text/plain`: (HTML5) This value can be overridden by a formenctype attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element.
-| `name` | The name of the form. In HTML 4, its use is deprecated (id should be used instead). It must be unique among the forms in a document and not just an empty string in HTML 5.
-| `novalidate` | This Boolean attribute indicates that the form is not to be validated when submitted. If this attribute is not specified (and therefore the form is validated), this default setting can be overridden by a `formnovalidate` attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element belonging to the form.
-| `target` | A name or keyword indicating where to display the response that is received after submitting the form. In HTML 4, this is the name/keyword for a frame. In HTML5, it is a name/keyword for a browsing context (for example, tab, window, or inline frame). The following keywords have special meanings:<br>`_self`:  Load the response into the same HTML 4 frame (or HTML5 browsing context) as the current one. This value is the default if the attribute is not specified.<br>`_blank`: Load the response into a new unnamed HTML 4 window or HTML5 browsing context.<br>`_parent`: Load the response into the HTML 4 frameset parent of the current frame, or HTML5 parent browsing context of the current one. If there is no parent, this option behaves the same way as _self.<br>`_top`: HTML 4: Load the response into the full original window, and cancel all other frames. HTML5: Load the response into the top-level browsing context (i.e., the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as _self.<br>`iframename`: The response is displayed in a named [`<iframe>`](/en/webfrontend/<iframe>).<br><br>HTML5: This value can be overridden by a formtarget attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element.
+| `accept-charset` | A *space*- or *comma*-delimited list of character encodings that the server accepts. The browser uses them in the order in which they are listed. The default value, the reserved string **`"UNKNOWN"`**, indicates the same encoding as that of the document containing the form element. <br>In previous versions of HTML, the different character encodings could be delimited by spaces or commas. **In HTML5, only *spaces* are allowed as delimiters**. |
+| `name` | The name of the form. In HTML 4, its use is deprecated (`id` should be used instead). It must be unique among the forms in a document and not just an empty string in HTML 5. |
 
 ## `<input>` Attributes
 
@@ -89,7 +98,7 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 | **`readonly`** | A *Boolean* attribute which, if `true`, indicates that the input **cannot be edited**. Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only (`readonly`) and being disabled (`disabled`), so the `readonly` attribute does not apply. |
 | **`form`** | The **`id` of the `<form>`** of which the input is a member; if absent, the input is a member of the *nearest* containing form, or is not a member of a form at all. |
 | `autocomplete` | A *string* indicating the type of **autocomplete functionality**, if any, to allow on the input. **`on`** for enabling autocomplete, **`off`** for disabling. Only support `<input>` elements with `type`: *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`*, and *`color`*. |
-| `list` | The id of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
+| `list` | The `id` of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
 | `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the Tab key. |
 
 !!! warn "**`autofocus`** Usage Notes"
@@ -238,6 +247,17 @@ with forms through the controls with which they're associated.
 - When a `<label>` is clicked or tapped and it is associated with a form control, the resulting
 click event is also raised for the associated control.
 
+### `<label>` Technical Summary
+
+|  |  |
+| :-- | :-- |
+| **Content categories** | *Flow content*, *phrasing content*, *interactive content*, *form-associated element*, *palpable content*. |
+| **Permitted content** | *Phrasing content*, but no descendant `<label>` elements. No labelable elements other than the labeled control are allowed. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
+| **Permitted ARIA roles** | None |
+| **DOM interface** | **`HTMLLabelElement`** |
+
 ### `<label>` Attributes
 
 This element includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
@@ -379,7 +399,7 @@ of `<kbd>Shift</kbd>` + `<kbd>Tab</kbd>`, which reverses the tabbing order.
 If `tabindex` is omitted or is not a valid integer, the user agent follows
 platform conventions to determine what to do.
 
-### Methods
+## `HTMLInputElement` Methods
 
 The following methods are provided by the `HTMLInputElement` interface which represents
 `<input>` elements in the DOM. Also available are those methods specified by the parent interfaces,
@@ -396,7 +416,7 @@ The following methods are provided by the `HTMLInputElement` interface which rep
 | `stepDown()` | Decrements the value of a numeric input by one, by default, or by the specified number of units. |
 | `stepUp()` | Increments the value of a numeric input by one or by the specified number of units. |
 
-### Styling Input Elements
+## Styling Input Elements
 
 You can style `<input>` elements using various color-related attributes in particular. One unusual
 one that is specific to text entry-related elements is the CSS `caret-color` property,
@@ -417,7 +437,7 @@ input.custom {
 For more information about adding color to elements in HTML,
 see Applying color to HTML elements using CSS.
 
-### Labels and Placeholders
+## Labels and Placeholders
 
 TL;DR: To save you time, here's the key point: don't use the `placeholder` attribute if you can
 avoid it. If you need to label an `<input>` element, use the [`<label>`](/en/webfrontend/<label>) element.

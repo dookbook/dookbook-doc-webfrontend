@@ -2,7 +2,12 @@ TOPICS: <form>
         <input>
         <form> action attribute
         <form> method attribute
+        <form> enctype attribute
+        <form> novalidate attribute
+        <form> target attribute
         <form> autocomplete attribute
+        <form> accept-charset attribute
+        <form> name attribute
         <input> type attribute
         <input> name attribute
         <input> value attribute
@@ -13,6 +18,11 @@ TOPICS: <form>
         <input> disabled attribute
         <input> readonly attribute
         <input> form attribute
+        <input> formaction attribute
+        <input> formmethod attribute
+        <input> formenctype attribute
+        <input> formnovalidate attribute
+        <input> formtarget attribute
         <input> checked attribute
         <input> autocomplete attribute
         <input> accept attribute
@@ -53,13 +63,12 @@ TOPICS: <form>
 | :-- | :-- |
 | **`action`** | 指定处理这个表单信息的程序所在的URL。这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formaction`** 属性重载（覆盖）。 |
 | **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:**`post`**，**`get`**: (默认值，不推荐)，<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
+| `enctype` | 当 *`method`* 属性值为 *`post`* 时, 它是将提交数据的 [[MIME]] 类型。可能的取值有:<br><br>**`application/x-www-form-urlencoded`**: 未指定属性时的默认值。<br>**`multipart/form-data`**: 这个值用于一个 *`type`* 属性设置为 *`file`* 的 `<input>` 元素。<br>**`text/plain`** (HTML5) 纯文本。<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formenctype`** 属性重载（覆盖）。|
+| `novalidate` | *布尔*类型的属性，指示当提交时表单是否没有被验证。如果这个属性没有指定，则这个表单是验证通过的。这个默认设置可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者*`<input>`* 元素中的 **`formnovalidate`** 属性重载（覆盖）。|
+| `target` | 表单提交之后的跳转。参见 **[`<a>` 的 `target` 属性](/en/webfrontend/<a>)**。<br><br>HTML5: 这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formtarget`** 属性重载（覆盖）。|
 | `autocomplete` | 用于指示 *`<input>`* 元素是否能够拥有一个默认值，这个默认值是由浏览器自动补全的。这个设置可以被属于这个 `<form>` 的子元素的 **`autocomplete`** 属性重载（覆盖）。可能的值有:<br><br>**`off`**: 浏览器不会自动补全。<br>**`on`**: 浏览器能够根据用户之前的输入自动补全。|
-| `accept-charset` | 一个空格分隔或逗号分隔的列表，这个列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串“UNKNOWN”。这个字符串指的是，和包含这个form元素的文档相同的编码。在之前版本的HTML中，不同的字符编码可以用空格或逗号分隔。在HTML5中，只有空格可以允许作为分隔符。 |
-| `autocapitalize` | 这是一个被 iOS Safari Mobile 使用的非标准属性。当用户在一些form的文本后代控件中，输入/编辑一些文本值时，这个属性控制了这些文本值的首字母是否大写或者使用其他的大写样式。<br>如果 `autocapitalize` 属性在某个单独的form后代控件被指定的话，那么这个单独的设定会覆盖原来form范围内的 `autocapitalize` 设定. 这个非不推荐的值从 iOS 5 及其之后可用. 默认值为 `sentences`. 可以选择的值如下:<br><br>`none`: 完全禁用自动首字母大写.<br>`sentences`: 自动对每句话首字母大写.<br>`words`: 自动对每个单词首字母大写.<br>`characters`: 自动大写所有的字母. |
-| `enctype` | 当 `method` 属性值为 `post` 时, enctype 是将form的内容提交给服务器的 MIME 类型 。可能的取值有:<br><br>`application/x-www-form-urlencoded`: 未指定属性时的默认值。<br>`multipart/form-data`: 这个值用于一个 `type` 属性设置为 "file" 的 `<input>` 元素。<br>`text/plain (HTML5)`<br>这个值可以被 [`<button>`](/zh-hans/webfrontend/<button>) 或者 `<input>` 元素中的 formenctype 属性重载（覆盖）。 |
-| `name` | 这个form的名字。在HTML4中，这个用法不被推荐(作为替代，应该使用id). HTML5中，一个文档中的多个form当中，name必须唯一而不仅仅是一个空字符串。 |
-| `novalidate` | 这个布尔类型的属性指示了，当提交时form是否没有被验证。 如果这个属性没有指定 (因此这个 form 是验证通过的)，这个默认设置可以被属于这个form的 [`<button>`](/zh-hans/webfrontend/<button>) 或者`<input>` 元素中的 formnovalidate 属性重载（覆盖）。 |
-| `target` | 一个名字或者说关键字，用来指示在提交表单之后，在哪里显示收到的回复. 在 HTML 4 里, 这是一个用于 frame 的名字/关键字. 在 HTML5 里, 这是一个用于browsing context 浏览器上下文  的名字/关键字 (举例来说, 标签页tab, 窗口window, or 或者行内 frame). 如下的关键字含有特别的含义:<br><br>`_self`: 在当前HTML4或HTML5文档页面重新加载返回值。这个是默认值。译注：也就是说如果这个文档在一个frame中的话，self是在当前frame（document）中重新加载的，而不是整个页面（window）。<br>`_blank`: 以新的HTML4或HTML5文档窗口加载返回值。<br>`_parent`: 在父级的frame中以HTML4或HTML5文档形式加载返回值，如果没有父级的frame，行为和_self一致。<br>`_top`: 如果是HTML 4文档: 清空当前文档，加载返回内容；HTML5: 在当前文档的最高级内加载返回值，如果没有父级，和_self的行为一致。iframename: 返回值在指定frame中加载。<br>HTML5: 这个值可以被 [`<button>`](/zh-hans/webfrontend/<button>) 或者 `<input>` 元素中的 formtarget 属性重载（覆盖）。 |
+| `accept-charset` | 一个*空格*分隔或*逗号*分隔的列表，这个列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串 **`"UNKNOWN"`**。这个字符串指的是，和当前文档相同的编码。在之前版本的HTML中，不同的字符编码可以用空格或逗号分隔。**在HTML5中，只有*空格*可以允许作为分隔符**。 |
+| `name` | 表单名称。在HTML4中，这个用法不被推荐(作为替代，应该使用`id`). HTML5中，一个文档中的多个表单当中，name必须唯一而不仅仅是一个空字符串。|
 
 ## `<input>` 属性
 
@@ -213,6 +222,17 @@ let userName2 = form.elements["username"];
 - `<label>` 本身并不直接与表单关联。它们仅通过与之关联的控件与表单间接关联。
 - 当单击或点击 `<label>` 并将其与表单控件关联时，也会为关联的控件引发单击事件。
 
+### `<label>` 技术摘要
+
+| | |
+| :-- | :-- | :-- | :-- |
+| **内容分类** | *流式内容*，*短语内容*，*交互内容*，*表单相关元素*，*可触知内容*。|
+| **允许的内容** | *短语内容*，但不包括 `<label>` 元素。除带标签的控件外，不允许带其他 `<label>` 的元素。|
+| **标签省略** | 不允许，开始标签和结束标签都是必需的。|
+| **允许的父元素** | 任何接受 *短语内容* 的元素。|
+| **允许的 ARIA 角色** | 无 |
+| **DOM 接口** | **`HTMLLabelElement`** |
+
 ### `<label>` 属性
 
 此元素包括[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
@@ -329,9 +349,10 @@ let userName2 = form.elements["username"];
 - `tabindex`”的正值表示元素的制表顺序。 每次用户按下`<kbd>Tab</kbd>`键时，其标签索引依次高的元素都会被聚焦。大多数平台通常提供反向标签功能，通常结合使用
 `<kbd>Shift </kbd>`+`<kbd>Tab</kbd>`会反转制表顺序。如果`tabindex`被省略或不是有效的整数，则用户代理将遵循平台约定来确定要执行的操作。
 
-### 方法
+### `HTMLInputElement` 方法
 
-`HTMLInputElement`接口提供了以下方法，该接口表示DOM中的`<input>`元素。 父接口指定的那些方法（`HTMLElement`，`HTML`，`Element`，`Node`和`EventTarget`）也可用。
+`HTMLInputElement`接口提供了以下方法，该接口表示DOM中的`<input>`元素。
+父接口指定的那些方法（`HTMLElement`，`HTML`，`Element`，`Node` 和 `EventTarget`）也可用。
 
 | 方法 | 描述 |
 | :-- | :-- |
@@ -344,7 +365,7 @@ let userName2 = form.elements["username"];
 | `stepDown()` | 默认情况下，将数字输入的值减一，或者按指定的单位数减一。|
 | `stepUp()` | 将数字输入的值增加一或以指定的单位数递增。|
 
-### 样式输入元素
+## 样式输入元素
 
 您可以特别使用各种与颜色相关的属性来设置`<input>`元素的样式。 CSS`caret-color`属性是特定于文本输入相关元素的一种不寻常的属性，它使您可以设置用于绘制文本输入插入符号的颜色：
 
@@ -362,7 +383,7 @@ input.custom {
 
 有关在HTML元素中添加颜色的更多信息，请参阅使用CSS将颜色应用于HTML元素。
 
-### 标签和占位符
+## 标签和占位符
 
 TL;DR:为节省时间，这是关键点：如果可以避免，请勿使用`placeholder`属性。 如果需要标记`<input>`元素，请使用[`<label>`](/zh-hans/webfrontend/<label>)元素。
 
