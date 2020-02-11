@@ -3,12 +3,12 @@ TOPICS: <fieldset>
 
 # `<fieldset>`
 
-HTML的`<fieldset>`元素**用于将多个控件以及Web表单中的标签（[`<label>`](/zh-hans/webfrontend/<label>)）分组。
+**HTML的`<fieldset>`元素**用于将多个控件以及Web表单中的标签（[`<label>`](/zh-hans/webfrontend/<label>)）分组。
 
-如上面的示例所示，`<fieldset>`元素为HTML表单的一部分提供分组，而嵌套的`<legend>`元素为`<fieldset>`提供标题。
+`<fieldset>`元素为HTML表单的一部分提供分组，而嵌套的`<legend>`元素为`<fieldset>`提供标题。
 它具有很少的属性，其中最引人注目的是表单，
 它可以包含同一页面上的[`<form>`](/zh-hans/webfrontend/<form>)的ID，即使您将`<fieldset>`纳入该[`<form>`](/zh-hans/webfrontend/<form>)的一部分，
-即使 它没有嵌套在其中，而是被禁用了，这允许您一次性禁用`<fieldset>`及其所有内容。
+即使它没有嵌套在其中，而是被禁用了，这允许您一次性禁用`<fieldset>`及其所有内容。
 
 ## 属性
 
@@ -16,9 +16,9 @@ HTML的`<fieldset>`元素**用于将多个控件以及Web表单中的标签（[`
 
 | 属性 | 描述 |
 | :-- | :-- |
-| `disabled` | 如果设置了此布尔属性，则所有属于`<fieldset>`后代的表单控件都将被禁用，这意味着它们不可编辑，但与表单控件上的`disabled`属性一起将与[`<form>`](/zh-hans/webfrontend/<form>)一起提交。 他们不会收到任何浏览事件，例如鼠标单击或与焦点相关的事件。 默认情况下，浏览器将此类控件显示为灰色。 请注意，不会禁用`<legend>`元素内的[`<form>`](/zh-hans/webfrontend/<form>)元素。|
-| `form` | 该属性采用您希望`<fieldset>`属于的[`<form>`](/zh-hans/webfrontend/<form>)元素的id属性的值，即使它不在表单内部. |
-| `name` | 与组关联的名称. |
+| `disabled` | 如果设置了此布尔属性，则所有属于`<fieldset>`后代的表单控件都将被禁用，这意味着它们不可编辑，但与表单控件上的`disabled`属性一起将与[`<form>`](/zh-hans/webfrontend/<form>)一起提交。 他们不会收到任何浏览事件，例如鼠标单击或与焦点相关的事件。<br> 默认情况下，浏览器将此类控件显示为灰色。请注意，不会禁用`<legend>`元素内的[`<form>`](/zh-hans/webfrontend/<form>)元素。|
+| `form` | 此属性接受`<fieldset>`元素成为[`<form>`](/zh-hans/webfrontend/<form>)元素`id`属性的其一部分的值，即使它不在表单中。 |
+| `name` | 与组关联的名称。 |
 
 !!! warn "Don't try this at home"
     注意：字段集的标题由嵌套在其中的第一个`<legend>`元素给出.
@@ -45,12 +45,12 @@ HTML的`<fieldset>`元素**用于将多个控件以及Web表单中的标签（[`
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 没有. |
-| **允许的内容** | 短语内容. |
-| **标签遗漏** | 无，开始标签和结束标签都是必需的. |
-| **允许的父元素** | 一个`<fieldset>`的第一个孩子是这个`<legend>`元素 |
+| **内容分类** | 没有。 |
+| **允许的内容** | *短语内容*。 |
+| **标签遗漏** | 无，开始标签和结束标签都是必需的。 |
+| **允许的父元素** | 一个`<fieldset>`的第一个孩子是这个`<legend>`元素。 |
 | **允许的 ARIA 角色** | 没有 |
-| **DOM 接口** | `HTMLLegendElement` |
+| **DOM 接口** | **`HTMLLegendElement`** |
 
 ## 示例
 
@@ -92,9 +92,9 @@ HTML的`<fieldset>`元素**用于将多个控件以及Web表单中的标签（[`
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 流内容，切面根，列出的，与表单相关的元素，可触摸的内容. |
-| **允许的内容** | 可选的`<legend>`元素，后跟流内容。 |
-| **标签遗漏** | 无，开始标签和结束标签都是必需的. |
-| **允许的父元素** | 任何接受流程内容的元素. |
+| **内容分类** | *流式内容*，*章节根内容*，*列出的与表单相关的元素*，*可触摸的内容*。 |
+| **允许的内容** | 可选的`<legend>`元素，后跟*流式内容*。 |
+| **标签遗漏** | 无，开始标签和结束标签都是必需的。 |
+| **允许的父元素** | 任何接受*流式内容*的元素。 |
 | **允许的 ARIA 角色** | `group`, `presentation` |
-| **DOM 接口** | `HTMLFieldSetElement` |
+| **DOM 接口** | **`HTMLFieldSetElement`** |

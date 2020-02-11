@@ -16,12 +16,12 @@ on the average user's browser.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, embedded content, interactive content, palpable content. |
-| **Permitted content** | None, it is an empty element. |
+| **Content categories** | *Flow content*, *phrasing content*, *embedded content*, *interactive content*, *palpable content*. |
+| **Permitted content** | None, it is an *empty element*. |
 | **Tag omission** | Must have a start tag, and must not have an end tag. |
-| **Permitted parents** | Any element that accepts embedded content. |
+| **Permitted parents** | Any element that accepts *embedded content*. |
 | **Permitted ARIA roles** | `application`, `document`, `img`, `presentation`|
-| **DOM interface** | `HTMLEmbedElement` |
+| **DOM interface** | **`HTMLEmbedElement`** |
 
 ## Attributes
 
@@ -29,10 +29,10 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 | Attribute | Description |
 | :-- | :-- |
-| `height` | The displayed height of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are not allowed.
-| `src` | The URL of the resource being embedded.
-| `type` | The MIME type to use to select the plug-in to instantiate.
-| `width` | The displayed width of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are not allowed.
+| `height` | The displayed height of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are not allowed. |
+| `src` | The URL of the resource being embedded. |
+| `type` | The MIME type to use to select the plug-in to instantiate. |
+| `width` | The displayed width of the resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). This must be an absolute value; percentages are not allowed. |
 
 ## Usage Notes
 

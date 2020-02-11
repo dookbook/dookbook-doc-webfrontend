@@ -3,14 +3,16 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # HTML 全局属性: `dir`
 
+!!! warn "注意“
+    在 HTML 4.01 中，~~`<dir>`~~元素已废弃。 但在 HTML5 中,`dir`属性可用于任何的HTML元素(它会验证任何HTML元素。但不一定是有用)。
+
 [全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)**`dir`**是一个指示元素中文本方向的枚举属性。它的取值如下：
 
 - `ltr`, 指从左到右，用于那种从左向右书写的语言（比如英语）；
 - `rtl`, 指从右到左，用于那种从右向左书写的语言（比如阿拉伯语）；
 - `auto`, 指由用户代理决定方向。它在解析元素中字符时会运用一个基本算法，直到发现一个具有强方向性的字符，然后将这一方向应用于整个元素。
 
-!!! warn "Don't try this at home"
-    使用说明
+!!! warn "使用说明"
     这个属性对有不同语义的[`<bdo>`](/zh-hans/webfrontend/<bdo>)元素是必须的。
     这个属性在[`<bdi>`](/zh-hans/webfrontend/<bdi>)元素中不可继承。未赋值时，它的默认值是auto。
     这个属性可以被CSS属性[`direction`](/zh-hans/webfrontend/direction)和[`unicode-bidi`](/zh-hans/webfrontend/unicode-bidi)覆盖，如果CSS网页有效且该元素支持这些属性的话。
