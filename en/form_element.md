@@ -2,6 +2,7 @@ TOPICS: <form>
         <input>
         <form> action attribute
         <form> method attribute
+        <form> autocomplete attribute
         <input> type attribute
         <input> name attribute
         <input> value attribute
@@ -12,6 +13,13 @@ TOPICS: <form>
         <input> disabled attribute
         <input> readonly attribute
         <input> form attribute
+        <input> checked attribute
+        <input> autocomplete attribute
+        <input> accept attribute
+        <input> src attribute
+        <input> alt attribute
+        <input> width attribute
+        <input> height attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -38,7 +46,7 @@ element based on whether or not the individual elements within the form are vali
 | **Permitted content** | *Flow content*, but not containing `<form>` elements. | None, it is an **[empty element](/en/webfrontend/Empty_Element)**. | *Phrasing content*, but no descendant `<label>` elements. No labelable elements other than the labeled control are allowed. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. | Must have a start tag and must not have an end tag. | None, both the starting and ending tag are mandatory. |
 | **Permitted parents** | Any element that accepts *flow content*. | Any element that accepts *phrasing content*. | Any element that accepts *phrasing content*. |
-| **Permitted ARIA roles** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None | None |
+| **Permitted ARIA roles** | `group`, `presentation` | **`type=button`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`,`tab`<br>**`checkbox`**: `button`,`menuitemcheckbox`,`option`,`switch`<br>**`image`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`<br>**`radio`**: `menuitemradio`<br>**`color`**,**`file`**: None<br>**`text`**,**`password`**,**`hidden`**,**`submit`**,**`reset`**,**`email`**,**`url`**,**`tel`**,**`search`**: None<br>**`number`**,**`range`**: None<br>**`time`**,**`date`**,**`datetime`**,**`datetime-local`**,**`month`**,**`week`**: None | None |
 | **DOM interface** | **`HTMLFormElement`** | **`HTMLInputElement`** | **`HTMLLabelElement`** |
 
 ## `<form>` Attributes
@@ -48,10 +56,10 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | Attribute | Description |
 | :-- | :-- |
 | **`action`** | **The URI of a program that processes the form information**. This value can be overridden by a **`formaction`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
-| **`method`** | The **[[HTTP]] method** that the browser uses to submit the form. Possible values are:<br><br>**`post`**: Corresponds to the HTTP [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5); form data are included in the body of the form and sent to the server.<br>**`get`**: Corresponds to the HTTP [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); form data are appended to the action attribute URI with a '?' as separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.<br>**`dialog`**: Use when the form is inside a *[`<dialog>`](/en/webfrontend/<dialog>)* element to close the dialog when submitted.<br><br>This value can be overridden by a **`formmethod`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
+| **`method`** | The **[[HTTP]] method** that the browser uses to submit the form. Possible values are: **`post`** (*HTTP POST*), **`get`** (default. *HTTP GET*, not recommended), **`dialog`** (*[`<dialog>`](/en/webfrontend/<dialog>)*).<br><br>This value can be overridden by a **`formmethod`** attribute on a *[`<button>`](/en/webfrontend/<button>)* or *`<input>`* element. |
+| `autocomplete` | Indicates whether input elements can by default have their values **automatically completed** by the browser. This setting can be overridden by an **`autocomplete`** attribute on an element belonging to the form. Possible values are:<br><br>**`off`**: The browser does not automatically complete entries.<br>**`on`**: The browser can automatically complete values based on values that the user has previously entered in the form. |
 | `accept-charset` | A space- or comma-delimited list of character encodings that the server accepts. The browser uses them in the order in which they are listed. The default value, the reserved string `"UNKNOWN"`, indicates the same encoding as that of the document containing the form element. <br>In previous versions of HTML, the different character encodings could be delimited by spaces or commas. In HTML5, only spaces are allowed as delimiters.
 | `autocapitalize` | This is a nonstandard attribute used by iOS Safari Mobile which controls whether and how the text value for textual form control descendants should be automatically capitalized as it is entered/edited by the user. If the `autocapitalize` attribute is specified on an individual form control descendant, it trumps the form-wide `autocapitalize` setting. The non-deprecated values are available in iOS 5 and later. The default value is `sentences`. Possible values are:<br>`none`: Completely disables automatic capitalization<br>`sentences`: Automatically capitalize the first letter of sentences.<br>`words`: Automatically capitalize the first letter of words.<br>`characters`: Automatically capitalize all characters.
-| `autocomplete` |Indicates whether input elements can by default have their values automatically completed by the browser. This setting can be overridden by an `autocomplete` attribute on an element belonging to the form. Possible values are:<br>`off`: The user must explicitly enter a value into each field for every use, or the document provides its own auto-completion method; the browser does not automatically complete entries.<br>`on`: The browser can automatically complete values based on values that the user has previously entered in the form.<br><br>For most modern browsers (including Firefox 38+, Google Chrome 34+, IE 11+) setting the autocomplete attribute will not prevent a browser's password manager from asking the user if they want to store login fields (username and password), if the user permits the storage the browser will autofill the login the next time the user visits the page. See The autocomplete attribute and login fields.<br>**Note:** If you set `autocomplete` to `off` in a form because the document provides its own auto-completion, then you should also set `autocomplete` to `off` for each of the form's `input` elements that the document can auto-complete. For details, see the note regarding Google Chrome in the Browser Compatibility chart.
 | `enctype` | When the value of the `method` attribute is `post`, enctype is the [MIME type](https://en.wikipedia.org/wiki/Mime_type) of content that is used to submit the form to the server. Possible values are:<br>`application/x-www-form-urlencoded`: The default value if the attribute is not specified.<br>`multipart/form-data`: The value used for an `<input>` element with the `type` attribute set to "file".<br>`text/plain`: (HTML5) This value can be overridden by a formenctype attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element.
 | `name` | The name of the form. In HTML 4, its use is deprecated (id should be used instead). It must be unique among the forms in a document and not just an empty string in HTML 5.
 | `novalidate` | This Boolean attribute indicates that the form is not to be validated when submitted. If this attribute is not specified (and therefore the form is validated), this default setting can be overridden by a `formnovalidate` attribute on a [`<button>`](/en/webfrontend/<button>) or `<input>` element belonging to the form.
@@ -75,12 +83,12 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 | **`type`** | A string indicating which **input type** the `<input>` element represents. |
 | **`name`** | The **input's name**, to identify the input in the data submitted with the form's data. If not specified, or empty, the input's value is not submitted with the form. |
 | **`value`** | The **input's current value**. |
-| **`required`** | A *Boolean* which, if `true`, indicates that the input **must have a value** before the form can be submitted. If specified, **`:required`** pseudo-class applied, otherwise **`:optional`** pseudo-class. `<input>` of `type`: *`submit`*, *`hidden`*, *`color`*, *`range`*, *`image`*, *`reset`*, *`button`* NOT support it. |
+| **`required`** | A *Boolean* which, if `true`, indicates that the input **must have a value** before the form can be submitted. If specified, **`:required`** pseudo-class applied, otherwise **`:optional`** pseudo-class. `<input>` of `type`: *`submit`*, *`hidden`*, *`button`*, *`reset`*, *`color`*, *`range`*, *`image`* NOT support it. |
 | **`autofocus`** | A *Boolean* which, if present, makes the input **take focus** when the form is presented. An element with this attribute may gain focus before the *`DOMContentLoaded`* event is fired. `<input>` with `type="hidden"` NOT support it. |
 | **`disabled`** | A *Boolean* attribute which is present if the `<input>` should be disabled. It does not receive the `click` event, and is not submitted with the form. |
 | **`readonly`** | A *Boolean* attribute which, if `true`, indicates that the input **cannot be edited**. Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only (`readonly`) and being disabled (`disabled`), so the `readonly` attribute does not apply. |
 | **`form`** | The **`id` of the `<form>`** of which the input is a member; if absent, the input is a member of the *nearest* containing form, or is not a member of a form at all. |
-| `autocomplete` | A string indicating the type of autocomplete functionality, if any, to allow on the input
+| `autocomplete` | A *string* indicating the type of **autocomplete functionality**, if any, to allow on the input. **`on`** for enabling autocomplete, **`off`** for disabling. Only support `<input>` elements with `type`: *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`*, and *`color`*. |
 | `list` | The id of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
 | `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the Tab key. |
 
@@ -109,9 +117,27 @@ The available types are as follows:
 | **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. |
 | **`submit`** | **A button that submits the form**. |
 | **`password`** | A *single-line* text field whose value is **obscured**. Use the **`maxlength`** and
-**`minlength`** attributes to specify the *maximum* / *minimum* length of the value that can be entered. |
+**`minlength`** attributes (optional) to specify the *maximum* / *minimum* length of the value that can be entered. |
 | **`hidden`** | A control that is **not displayed** but whose value is submitted to the server. |
-| **`checkbox`** | A **check box** allowing single values to be selected/deselected. |
+| **`checkbox`** | A **check box** allowing single values to be selected/deselected. Use the **`checked`** attribute (optional) to specify the *default selected* item.  |
+| **`radio`** | A **radio button**, allowing a single value to be selected out of multiple choices. Use the **`checked`** attribute (optional) to specify the *default selected* item. |
+| **`button`** | A push **button** with no default behavior. |
+| **`reset`** | A *button* that **resets** the contents of the form to default values. |
+| **`email`** | A field for editing an **e-mail address**. |
+| **`url`** | A field for entering a **URL**. |
+| **`tel`** | A control for entering a **telephone number**. |
+| **`number`** | A control for entering a **number**. |
+| **`range`** | A control for entering a number whose exact value is not important (in a range). |
+| **`search`** | A *single-line text* field for entering **search** strings. Line-breaks are automatically removed from the input value. |
+| **`color`** | A control for specifying a **color**. A color picker's UI has no required features other than accepting simple colors as text. |
+| **`file`** | A control that lets the user **select a file**. Use the **`accept`** attribute to define the types of files that the control can select. |
+| **`image`** | A **graphical submit button**. You must use the **`src`** attribute to define the source of the image and the **`alt`** attribute to define alternative text. You can use the **`height`** and **`width`** attributes to define the size of the image in *pixels*. |
+| **`time`** | A control for entering a **time** value **with no time zone**. |
+| **`date`** | A control for entering a **date** (year, month, and day, with no time). |
+| **`datetime`** | A control for entering a **date and time**, **with time zone**. |
+| **`datetime-local`** | A control for entering a **date and time**, **with no time zone**. |
+| **`month`** | A control for entering a **month and year**, **with no time zone**. |
+| **`week`** | A control for entering a **date consisting of a week-year number and a week number with no time zone**. |
 
 ```html
 <!-- Example: Password -->
@@ -122,8 +148,53 @@ The available types are as follows:
 <input type="hidden" value="10">
 
 <!-- Example: Checkbox -->
-<input type="checkbox" name="point" value="A1">
+<input type="checkbox" name="point" value="A1" checked>
 <input type="checkbox" name="point" value="A2">
+
+<!-- Example: Radio Button  -->
+<input type="radio" name="sex" value="M" checked>
+<input type="radio" name="sex" value="F">
+
+<!-- Example: A button -->
+<input type="button">
+
+<!-- Example: A Reset button -->
+<input type="reset">
+
+<!-- Example: A email input -->
+<input type="email">
+
+<!-- Example: A URL input -->
+<input type="url">
+
+<!-- Example: A telephone number input -->
+<input type="tel">
+
+<!-- Example: A number input -->
+<input type="number">
+
+<!-- Example: A number within a range input -->
+<input type="range">
+
+<!-- Example: A search input -->
+<input type="search">
+
+<!-- Example: A color picker input -->
+<input type="color">
+
+<!-- Example: A file selector input -->
+<input type="file">
+
+<!-- Example: A image button -->
+<input type="image" src="..." alt="alternative text">
+
+<!-- Example: Time inputs -->
+<input type="time">
+<input type="date">
+<input type="datetime">
+<input type="datetime-local">
+<input type="month">
+<input type="week">
 ```
 
 ## Example: Simple Form
@@ -275,44 +346,7 @@ The same applies for the **[`<button>`](/en/webfrontend/<button>)** element.
 
 ***
 
-- `button`: A push button with no default behavior.
-- `color`: A control for specifying a color. A color picker's UI has no required features
-other than accepting simple colors as text (more info).
-- `date`: A control for entering a date (year, month, and day, with no time).
-- `datetime-local`: A control for entering a date and time, with no time zone.
-- `email`: A field for editing an e-mail address.
-- `file`: A control that lets the user select a file. Use the **accept** attribute to define
-the types of files that the control can select.
-- `image`: A graphical submit button. You must use the **src** attribute to define the
-source of the image and the **alt** attribute to define alternative text. You can use the **height**
-and **width** attributes to define the size of the image in pixels.
-- `month`: A control for entering a month and year, with no time zone.
-- `number`: A control for entering a number.
-- `radio`: A radio button, allowing a single value to be selected out of multiple choices.
-- `range`: A control for entering a number whose exact value is not important.
-- `reset`: A button that resets the contents of the form to default values.
-- `search`: A single-line text field for entering search strings.
-Line-breaks are automatically removed from the input value.
-- `tel`: A control for entering a telephone number.
-- `time`: A control for entering a time value with no time zone.
-- `url`: A field for entering a URL.
-- `week`: A control for entering a date consisting of a week-year number and a
-week number with no time zone.
-
 ### `<input>` Attributes2
-
-**`autocomplete`**
-
-A string that describes what if any type of autocomplete functionality the input should provide.
-A typical implementation of autocomplete simply recalls previous values entered in the same input
-field, but more complex forms of autocomplete can exist. For instance, a browser could integrate
-with a device's contacts list to autocomplete email addresses in an email input field. See
-Values in The HTML autocomplete attribute for permitted values.
-
-This attribute has no effect on input types that do not return numeric or text data,
-such as `checkbox` or `image`.
-
-See The HTML autocomplete attribute for additional information.
 
 **`list`**
 
