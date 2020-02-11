@@ -50,8 +50,8 @@ element based on whether or not the individual elements within the form are vali
 
 ## Technical Summary
 
-| - | `<form>` | `<input>` | `<label>` |
-| :-- | :-- | :-- | :-- |
+| - | `<form>` | `<input>` |
+| :-- | :-- | :-- |
 | **Content categories** | *Flow content*, *palpable content*. | *Flow content*, *listed*, *submittable*, *resettable*, *form-associated element*, *phrasing content*. If the *`type`* is not *`hidden`*, then *labelable* element, *palpable content*. |
 | **Permitted content** | *Flow content*, but not containing `<form>` elements. | None, it is an **[empty element](/en/webfrontend/Empty_Element)**. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. | Must have a start tag and must not have an end tag. |
