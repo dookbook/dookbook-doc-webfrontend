@@ -46,14 +46,14 @@ TOPICS: <form>
 
 ## 技术摘要
 
-| - | `<form>` | `<input>` | `<label>` |
-| :-- | :-- | :-- | :-- |
-| **内容分类** | *流式内容*，*可触知内容*。| *流式内容*，*列表型*，*可提交*，*可重置*，*表单相关元素*，*短语内容*。如果 *`type`* 属性不是 *`hidden`* 的，则为*可标记*元素，*可触知内容*。| *流式内容*，*短语内容*，*交互内容*，*表单相关元素*，*可触知内容*。|
-| **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素。 | 无，这是一个 **[空元素](/zh-hans/webfrontend/Empty_Element)**。 | *短语内容*，但不包括 `<label>` 元素。除带标签的控件外，不允许带其他 `<label>` 的元素。|
-| **标签省略** | 不允许，开始标签和结束标签都不能省略。| 必须具有开始标签，不得具有结束标签。| 不允许，开始标签和结束标签都是必需的。|
-| **允许的父元素** | 任何接受 *流式内容* 的元素。 | 任何接受 *短语内容* 的元素。 | 任何接受 *短语内容* 的元素。|
-| **允许的 ARIA 角色** | `group`, `presentation` | **`type=button`**: `link`, `menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`,`tab`<br>**`checkbox`**: `button`,`menuitemcheckbox`,`option`,`switch`<br>**`image`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`<br>**`radio`**: `menuitemradio`<br>**`color`**,**`file`**: None<br>**`text`**,**`password`**,**`hidden`**,**`submit`**,**`reset`**,**`email`**,**`url`**,**`tel`**,**`search`**: 无<br>**`number`**,**`range`**: 无<br>**`time`**,**`date`**,**`datetime`**,**`datetime-local`**,**`month`**,**`week`**: 无 | 无 |
-| **DOM 接口** | **`HTMLFormElement`** | **`HTMLInputElement`** | **`HTMLLabelElement`** |
+| - | `<form>` | `<input>` |
+| :-- | :-- | :-- |
+| **内容分类** | *流式内容*，*可触知内容*。| *流式内容*，*列表型*，*可提交*，*可重置*，*表单相关元素*，*短语内容*。如果 *`type`* 属性不是 *`hidden`* 的，则为*可标记*元素，*可触知内容*。|
+| **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素。 | 无，这是一个 **[空元素](/zh-hans/webfrontend/Empty_Element)**。 |
+| **标签省略** | 不允许，开始标签和结束标签都不能省略。| 必须具有开始标签，不得具有结束标签。|
+| **允许的父元素** | 任何接受 *流式内容* 的元素。| 任何接受 *短语内容* 的元素。|
+| **允许的 ARIA 角色** | `group`, `presentation` | **`type=button`**: `link`, `menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`,`tab`<br>**`checkbox`**: `button`,`menuitemcheckbox`,`option`,`switch`<br>**`image`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`<br>**`radio`**: `menuitemradio`<br>**`color`**,**`file`**: None<br>**`text`**,**`password`**,**`hidden`**,**`submit`**,**`reset`**,**`email`**,**`url`**,**`tel`**,**`search`**: 无<br>**`number`**,**`range`**: 无<br>**`time`**,**`date`**,**`datetime`**,**`datetime-local`**,**`month`**,**`week`**: 无 |
+| **DOM 接口** | **`HTMLFormElement`** | **`HTMLInputElement`** |
 
 ## `<form>` 属性
 
