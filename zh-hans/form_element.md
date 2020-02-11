@@ -16,6 +16,10 @@ TOPICS: <form>
         <input> disabled attribute
         <input> readonly attribute
         <input> form attribute
+        <input> formaction attribute
+        <input> formmethod attribute
+        <input> formenctype attribute
+        <input> formtarget attribute
         <input> checked attribute
         <input> autocomplete attribute
         <input> accept attribute
@@ -215,6 +219,17 @@ let userName2 = form.elements["username"];
 - `<label>` 正在标记的表单控件称为 `<label>` 元素的标签控件。一个 `<input>` 可以与多个 `<label>` 关联。
 - `<label>` 本身并不直接与表单关联。它们仅通过与之关联的控件与表单间接关联。
 - 当单击或点击 `<label>` 并将其与表单控件关联时，也会为关联的控件引发单击事件。
+
+### `<label>` 技术摘要
+
+| | |
+| :-- | :-- | :-- | :-- |
+| **内容分类** | *流式内容*，*短语内容*，*交互内容*，*表单相关元素*，*可触知内容*。|
+| **允许的内容** | *短语内容*，但不包括 `<label>` 元素。除带标签的控件外，不允许带其他 `<label>` 的元素。|
+| **标签省略** | 不允许，开始标签和结束标签都是必需的。|
+| **允许的父元素** | 任何接受 *短语内容* 的元素。|
+| **允许的 ARIA 角色** | 无 |
+| **DOM 接口** | **`HTMLLabelElement`** |
 
 ### `<label>` 属性
 

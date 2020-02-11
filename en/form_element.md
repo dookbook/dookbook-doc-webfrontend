@@ -16,6 +16,10 @@ TOPICS: <form>
         <input> disabled attribute
         <input> readonly attribute
         <input> form attribute
+        <input> formaction attribute
+        <input> formmethod attribute
+        <input> formenctype attribute
+        <input> formtarget attribute
         <input> checked attribute
         <input> autocomplete attribute
         <input> accept attribute
@@ -45,12 +49,12 @@ element based on whether or not the individual elements within the form are vali
 
 | - | `<form>` | `<input>` | `<label>` |
 | :-- | :-- | :-- | :-- |
-| **Content categories** | *Flow content*, *palpable content*. | *Flow content*, *listed*, *submittable*, *resettable*, *form-associated element*, *phrasing content*. If the *`type`* is not *`hidden`*, then *labelable* element, *palpable content*. | *Flow content*, *phrasing content*, *interactive content*, *form-associated element*, *palpable content*. |
-| **Permitted content** | *Flow content*, but not containing `<form>` elements. | None, it is an **[empty element](/en/webfrontend/Empty_Element)**. | *Phrasing content*, but no descendant `<label>` elements. No labelable elements other than the labeled control are allowed. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. | Must have a start tag and must not have an end tag. | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts *flow content*. | Any element that accepts *phrasing content*. | Any element that accepts *phrasing content*. |
-| **Permitted ARIA roles** | `group`, `presentation` | **`type=button`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`,`tab`<br>**`checkbox`**: `button`,`menuitemcheckbox`,`option`,`switch`<br>**`image`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`<br>**`radio`**: `menuitemradio`<br>**`color`**,**`file`**: None<br>**`text`**,**`password`**,**`hidden`**,**`submit`**,**`reset`**,**`email`**,**`url`**,**`tel`**,**`search`**: None<br>**`number`**,**`range`**: None<br>**`time`**,**`date`**,**`datetime`**,**`datetime-local`**,**`month`**,**`week`**: None | None |
-| **DOM interface** | **`HTMLFormElement`** | **`HTMLInputElement`** | **`HTMLLabelElement`** |
+| **Content categories** | *Flow content*, *palpable content*. | *Flow content*, *listed*, *submittable*, *resettable*, *form-associated element*, *phrasing content*. If the *`type`* is not *`hidden`*, then *labelable* element, *palpable content*. |
+| **Permitted content** | *Flow content*, but not containing `<form>` elements. | None, it is an **[empty element](/en/webfrontend/Empty_Element)**. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. | Must have a start tag and must not have an end tag. |
+| **Permitted parents** | Any element that accepts *flow content*. | Any element that accepts *phrasing content*. |
+| **Permitted ARIA roles** | `group`, `presentation` | **`type=button`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`,`tab`<br>**`checkbox`**: `button`,`menuitemcheckbox`,`option`,`switch`<br>**`image`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`<br>**`radio`**: `menuitemradio`<br>**`color`**,**`file`**: None<br>**`text`**,**`password`**,**`hidden`**,**`submit`**,**`reset`**,**`email`**,**`url`**,**`tel`**,**`search`**: None<br>**`number`**,**`range`**: None<br>**`time`**,**`date`**,**`datetime`**,**`datetime-local`**,**`month`**,**`week`**: None |
+| **DOM interface** | **`HTMLFormElement`** | **`HTMLInputElement`** |
 
 ## `<form>` Attributes
 
@@ -240,6 +244,17 @@ One `<input>` can be associated with multiple labels.
 with forms through the controls with which they're associated.
 - When a `<label>` is clicked or tapped and it is associated with a form control, the resulting
 click event is also raised for the associated control.
+
+### `<label>` Technical Summary
+
+|  |  |
+| :-- | :-- |
+| **Content categories** | *Flow content*, *phrasing content*, *interactive content*, *form-associated element*, *palpable content*. |
+| **Permitted content** | *Phrasing content*, but no descendant `<label>` elements. No labelable elements other than the labeled control are allowed. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
+| **Permitted ARIA roles** | None |
+| **DOM interface** | **`HTMLLabelElement`** |
 
 ### `<label>` Attributes
 
