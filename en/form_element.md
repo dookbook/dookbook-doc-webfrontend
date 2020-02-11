@@ -116,8 +116,7 @@ The available types are as follows:
 | :-- | :-- |
 | **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. |
 | **`submit`** | **A button that submits the form**. |
-| **`password`** | A *single-line* text field whose value is **obscured**. Use the **`maxlength`** and
-**`minlength`** attributes (optional) to specify the *maximum* / *minimum* length of the value that can be entered. |
+| **`password`** | A *single-line* text field whose value is **obscured**. Use the **`maxlength`** and **`minlength`** attributes (optional) to specify the *maximum* / *minimum* length of the value that can be entered. |
 | **`hidden`** | A control that is **not displayed** but whose value is submitted to the server. |
 | **`checkbox`** | A **check box** allowing single values to be selected/deselected. Use the **`checked`** attribute (optional) to specify the *default selected* item.  |
 | **`radio`** | A **radio button**, allowing a single value to be selected out of multiple choices. Use the **`checked`** attribute (optional) to specify the *default selected* item. |
