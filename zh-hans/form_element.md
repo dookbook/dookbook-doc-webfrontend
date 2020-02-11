@@ -2,6 +2,7 @@ TOPICS: <form>
         <input>
         <form> action attribute
         <form> method attribute
+        <form> autocomplete attribute
         <input> type attribute
         <input> name attribute
         <input> value attribute
@@ -12,6 +13,13 @@ TOPICS: <form>
         <input> disabled attribute
         <input> readonly attribute
         <input> form attribute
+        <input> checked attribute
+        <input> autocomplete attribute
+        <input> accept attribute
+        <input> src attribute
+        <input> alt attribute
+        <input> height attribute
+        <input> width attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -34,7 +42,7 @@ TOPICS: <form>
 | **允许的内容** | *流式内容*, 但是不包括 `<form>` 元素。 | 无，这是一个 **[空元素](/zh-hans/webfrontend/Empty_Element)**。 | *短语内容*，但不包括 `<label>` 元素。除带标签的控件外，不允许带其他 `<label>` 的元素。|
 | **标签省略** | 不允许，开始标签和结束标签都不能省略。| 必须具有开始标签，不得具有结束标签。| 不允许，开始标签和结束标签都是必需的。|
 | **允许的父元素** | 任何接受 *流式内容* 的元素。 | 任何接受 *短语内容* 的元素。 | 任何接受 *短语内容* 的元素。|
-| **允许的 ARIA 角色** | `group`, `presentation` | `type=button:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`, `tab`<br>`type=checkbox:` `button`, `menuitemcheckbox`, `option`, `switch`<br>`type=image:` `link`, `menuitem`, `menuitemcheckbox`, `menuitemradio`, `radio`, `switch`<br>`type=radio:` `menuitemradio`<br>`type=color`,`date`,`datetime`,`datetime-local`,`email`,`file`: None<br>`type=hidden`,`month`,`number`,`password`,`range`,`reset`: None<br>`type=search`,`submit`,`tel`,`text`,`url`,`week`: None | 无 |
+| **允许的 ARIA 角色** | `group`, `presentation` | **`type=button`**: `link`, `menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`,`tab`<br>**`checkbox`**: `button`,`menuitemcheckbox`,`option`,`switch`<br>**`image`**: `link`,`menuitem`,`menuitemcheckbox`,`menuitemradio`,`radio`,`switch`<br>**`radio`**: `menuitemradio`<br>**`color`**,**`file`**: None<br>**`text`**,**`password`**,**`hidden`**,**`submit`**,**`reset`**,**`email`**,**`url`**,**`tel`**,**`search`**: 无<br>**`number`**,**`range`**: 无<br>**`time`**,**`date`**,**`datetime`**,**`datetime-local`**,**`month`**,**`week`**: 无 | 无 |
 | **DOM 接口** | **`HTMLFormElement`** | **`HTMLInputElement`** | **`HTMLLabelElement`** |
 
 ## `<form>` 属性
@@ -44,10 +52,10 @@ TOPICS: <form>
 | 属性 | 描述 |
 | :-- | :-- |
 | **`action`** | 指定处理这个表单信息的程序所在的URL。这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formaction`** 属性重载（覆盖）。 |
-| **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:<br><br>**`post`**: HTTP POST 方法; 表单数据会包含在表单体内然后发送给服务器。<br>**`get`**: (默认值) HTTP GET 方法; 表单数据会附加在 `action` 属性的 URI 中，并以 `?` 作为分隔符, 然后将组装的 URI 再发送给服务器。这样做会使数据暴露在 URI 里面且仅包含 ASCII 字符。不推荐。<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
+| **`method`** | 指定提交表单的 **[[HTTP]] 请求方式**。可能的值有:**`post`**，**`get`**: (默认值，不推荐)，<br><br>这个值可以被 *[`<button>`](/zh-hans/webfrontend/<button>)* 或者 *`<input>`* 元素中的 **`formmethod`** 属性重载（覆盖）。 |
+| `autocomplete` | 用于指示 *`<input>`* 元素是否能够拥有一个默认值，这个默认值是由浏览器自动补全的。这个设置可以被属于这个 `<form>` 的子元素的 **`autocomplete`** 属性重载（覆盖）。可能的值有:<br><br>**`off`**: 浏览器不会自动补全。<br>**`on`**: 浏览器能够根据用户之前的输入自动补全。|
 | `accept-charset` | 一个空格分隔或逗号分隔的列表，这个列表包括了服务器支持的字符编码。浏览器以这些编码被列举的顺序使用它们。默认值是一个保留字符串“UNKNOWN”。这个字符串指的是，和包含这个form元素的文档相同的编码。在之前版本的HTML中，不同的字符编码可以用空格或逗号分隔。在HTML5中，只有空格可以允许作为分隔符。 |
 | `autocapitalize` | 这是一个被 iOS Safari Mobile 使用的非标准属性。当用户在一些form的文本后代控件中，输入/编辑一些文本值时，这个属性控制了这些文本值的首字母是否大写或者使用其他的大写样式。<br>如果 `autocapitalize` 属性在某个单独的form后代控件被指定的话，那么这个单独的设定会覆盖原来form范围内的 `autocapitalize` 设定. 这个非不推荐的值从 iOS 5 及其之后可用. 默认值为 `sentences`. 可以选择的值如下:<br><br>`none`: 完全禁用自动首字母大写.<br>`sentences`: 自动对每句话首字母大写.<br>`words`: 自动对每个单词首字母大写.<br>`characters`: 自动大写所有的字母. |
-| `autocomplete` | 用于指示 input 元素是否能够拥有一个默认值，这个默认值是由浏览器自动补全的。这个设定可以被属于这个form的子元素的 autocomplete 属性重载（覆盖）。 可能的值有:<br><br>`off`: 在每一个用到的输入域里，用户必须显式的输入一个值，或者document 以它自己的方式提供自动补全；浏览器不会自动补全输入。<br>`on`: 浏览器能够根据用户之前在form里输入的值自动补全。<br>**注意:**<br>如果你在一个表单里把 `autocomplete` 设置成 off 是因为 `document` 提供了它独有的自动补全，那么你也应该把这个表单里每一个 `input` 元素的 `autocomplete` 设成 off 来让 `document` 能够自动补全. 想要了解详细信息, 参见 Google Chrome notes. |
 | `enctype` | 当 `method` 属性值为 `post` 时, enctype 是将form的内容提交给服务器的 MIME 类型 。可能的取值有:<br><br>`application/x-www-form-urlencoded`: 未指定属性时的默认值。<br>`multipart/form-data`: 这个值用于一个 `type` 属性设置为 "file" 的 `<input>` 元素。<br>`text/plain (HTML5)`<br>这个值可以被 [`<button>`](/zh-hans/webfrontend/<button>) 或者 `<input>` 元素中的 formenctype 属性重载（覆盖）。 |
 | `name` | 这个form的名字。在HTML4中，这个用法不被推荐(作为替代，应该使用id). HTML5中，一个文档中的多个form当中，name必须唯一而不仅仅是一个空字符串。 |
 | `novalidate` | 这个布尔类型的属性指示了，当提交时form是否没有被验证。 如果这个属性没有指定 (因此这个 form 是验证通过的)，这个默认设置可以被属于这个form的 [`<button>`](/zh-hans/webfrontend/<button>) 或者`<input>` 元素中的 formnovalidate 属性重载（覆盖）。 |
@@ -73,7 +81,7 @@ TOPICS: <form>
 | **`disabled`** | *布尔*值，指示**禁用输入**。该输入不会收到 `click` 事件，并且禁用的输入不会与表单一起提交。|
 | **`readonly`** | *布尔*值，表示**无法编辑**输入。仅文本控件可以设置为只读，因为对于其他控件（例如复选框和按钮），在只读(`readonly`)和禁用(`disabled`)之间没有区别，因此`readonly`属性不适用。|
 | **`form`** | **所属 `<form>` 的 `id`**。如果不存在，则输入是包含*最近*的表单的成员，或者根本不是表单的成员。|
-| `autocomplete` | 一个字符串，指示要允许输入的自动完成功能的类型（如果有）|
+| `autocomplete` | **`on`**: (默认) 启用**自动补全**；**`off`**: 禁用自动补全。仅用于 `type` 为 *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`* 以及 *`color`* 的 `<input>`。|
 | `list` | [`<datalist>`](/zh-hans/webfrontend/<datalist>)元素的ID，该元素提供输入建议值的列表 |
 | `tabindex` | 一个数字值，向用户代理提供有关用户按Tab键时控件获得焦点的顺序的指导 |
 
@@ -96,9 +104,27 @@ TOPICS: <form>
 | :-- | :-- |
 | **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。|
 | **`submit`** | **提交表单的按钮**。|
-| **`password`** | *单行文本*字段，其值被遮盖或隐藏。使用 **`maxlength`** 和 **`minlength`** 属性指定可以输入的值的*最大长度*和*最小长度*。|
+| **`password`** | *单行文本*字段，其值被遮盖或隐藏。使用可选的 **`maxlength`** 和 **`minlength`** 属性指定可以输入的值的*最大长度*和*最小长度*。|
 | **`hidden`** | **不显示**，但其值会提交给服务器的输入控件。|
-| **`checkbox`** | **复选框**。|
+| **`checkbox`** | **复选框**。使用可选的 **`checked`** 属性可指定*预先选定*的项。|
+| **`radio`** | **单选框**。使用可选的 **`checked`** 属性可指定*预先选定*的项。|
+| **`button`** | 没有默认行为的**按钮**。|
+| **`reset`** | 将表单内容**重置**为默认值的按钮。|
+| **`email`** | 编辑**电子邮件地址**的字段。|
+| **`url`** | 输入**URL**的字段。|
+| **`tel`** | 输入**电话号码**的控件。|
+| **`number`** | 输入**数字**的控件。|
+| **`range`** | 用于输入**数字范围**的控件。|
+| **`search`** | 用于输入**搜索字符串**的*单行文本*字段。换行符会自动从输入值中删除。|
+| **`color`** | 用于指定**颜色**的控件。颜色选择器的UI除了接受简单的颜色作为文本外，没有其他必需的功能。|
+| **`file`** | 允许用户选择**文件**的控件。使用 **`accept`** 属性定义控件可以选择的文件类型。|
+| **`image`** | **图形**提交按钮。您必须使用 **`src`** 属性定义图像的来源，并使用 **`alt`** 属性定义替代文本。您可以使用 **`width`** 和 **`height`** 属性来定义图像的大小（以像素为单位）。可参考 *[`<img>`](/zh-hans/webfrontend/<img>)*。 |
+| **`time`** | 用于输入**没有时区的时间值**的控件。|
+| **`date`** | 输入**日期**（年，月，日，无时间）的控件。|
+| **`datetime`** | 用于输入**日期和时间**的控件。|
+| **`datetime-local`** | 用于输入**日期和时间**（**无时区**）的控件。|
+| **`month`** | 用于输入**月份和年份**（**无时区**）的控件。|
+| **`week`** | 用于输入**日期（由周年号和无时区的周号组成）**的控件。|
 
 ```html
 <!-- 示例： 密码输入, maxlength 代表密码最长为32个字符，minlength 代表最短为8个字符 -->
@@ -109,8 +135,53 @@ TOPICS: <form>
 <input type="hidden" value="10">
 
 <!-- 示例： 复选框，提交的变量名为point，选项值分别为A1, A2 -->
-<input type="checkbox" name="point" value="A1">
+<input type="checkbox" name="point" value="A1" checked>
 <input type="checkbox" name="point" value="A2">
+
+<!-- 示例： 单选框，提交的变量名为sex，选项值分别为M, F -->
+<input type="radio" name="sex" value="M" checked>
+<input type="radio" name="sex" value="F">
+
+<!-- 示例： 一个按钮 -->
+<input type="button">
+
+<!-- 示例： 一个重置按钮 -->
+<input type="reset">
+
+<!-- 示例： 邮箱地址输入框 -->
+<input type="email">
+
+<!-- 示例： URL输入框 -->
+<input type="url">
+
+<!-- 示例： 电话号码输入框 -->
+<input type="tel">
+
+<!-- 示例： 数字输入框 -->
+<input type="number">
+
+<!-- 示例： 带范围的数字输入框 -->
+<input type="range">
+
+<!-- 示例： 搜索字符串输入框 -->
+<input type="search">
+
+<!-- 示例： 颜色选择器输入框 -->
+<input type="color">
+
+<!-- 示例： 文件输入框 -->
+<input type="file">
+
+<!-- 示例： 图片按钮 -->
+<input type="img" src="..." alt="替换文字">
+
+<!-- 示例： 时间输入框 -->
+<input type="time">
+<input type="date">
+<input type="datetime">
+<input type="datetime-local">
+<input type="month">
+<input type="week">
 ```
 
 ## 示例：简单表单 (POST请求)
@@ -239,34 +310,7 @@ let userName2 = form.elements["username"];
 
 ***
 
-- `button`: 没有默认行为的按钮。
-- `color`: 用于指定颜色的控件。 颜色选择器的UI除了接受简单的颜色作为文本（更多信息）外，没有其他必需的功能。
-- `date`: 输入日期（年，月，日，无时间）的控件。
-- `datetime-local`: 用于输入日期和时间（无时区）的控件。
-- `email`: 用于编辑电子邮件地址的字段。
-- `file`: 允许用户选择文件的控件。 使用**accept**属性定义控件可以选择的文件类型。
-- `image`: 图形提交按钮。 您必须使用**src**属性定义图像的来源，并使用**alt**属性定义替代文本。 您可以使用**高度**和**宽度**属性来定义图像的大小（以像素为单位）。
-- `month`: 用于输入月份和年份（无时区）的控件。
-- `number`: 输入数字的控件。
-- `radio`: 单选按钮，允许从多个选项中选择一个值。
-- `range`: 用于输入其精确值不重要的数字的控件。
-- `reset`: 将表单内容重置为默认值的按钮。
-- `search`: 用于输入搜索字符串的单行文本字段。换行符会自动从输入值中删除。
-- `tel`: 输入电话号码的控件。
-- `time`: 用于输入没有时区的时间值的控件。
-- `url`: 输入URL的字段。
-- `week`: 用于输入日期的控件，该日期由周年号和无时区的周号组成。
-
 属性
-
-**`autocomplete`**
-
-一个字符串，描述输入应提供的自动完成功能的类型。 自动完成的一种典型实现方式是简单地调用在同一输入字段中输入的先前值，但是可以存在更复杂形式的自动完成。 例如，浏览器可以与设备的联系人列表集成，
-以在电子邮件输入字段中自动完成电子邮件地址。 有关允许的值，请参见HTML自动完成属性中的值。
-
-此属性对不返回数字或文本数据的输入类型无效，例如`checkbox`或`image`。
-
-有关其他信息，请参见HTML自动完成属性。
 
 **`list`**
 
