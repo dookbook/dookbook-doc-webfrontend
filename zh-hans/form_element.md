@@ -389,7 +389,7 @@ let userName2 = form.elements["username"];
 
 作为Web开发人员，重要的是，我们切勿以为人们会知道我们所知道的一切。实际上，您网站的某些访问者的思维过程和/或情况会有所不同，从而导致他们对您的表格的理解与您的理解大相径庭，而显示统一的标签则可以最大限度避免这样的误解。
 
-### `HTMLInputElement` 方法
+## `HTMLInputElement` 方法
 
 `HTMLInputElement`接口提供了以下方法，该接口表示DOM中的`<input>`元素。
 父接口指定的那些方法（`HTMLElement`，`HTML`，`Element`，`Node` 和 `EventTarget`）也可用。
