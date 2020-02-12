@@ -33,6 +33,7 @@ TOPICS: <form>
         <input> width attribute
         <input> placeholder attribute
         <input> size attribute
+        <input> tabindex attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -95,7 +96,7 @@ TOPICS: <form>
 | **`list`** | *[`<datalist>`](/zh-hans/webfrontend/<datalist>)* 元素的 **`id`**，该元素提供输入建议值的列表。|
 | **`form`** | **所属 `<form>` 的 `id`**。如果不存在，则输入是包含*最近*的表单的成员，或者根本不是表单的成员。|
 | `autocomplete` | **`on`**: (默认) 启用**自动补全**；**`off`**: 禁用自动补全。仅用于 `type` 为 *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`* 以及 *`color`* 的 `<input>`。|
-| `tabindex` | 一个数字值，向用户代理提供有关用户按Tab键时控件获得焦点的顺序的指导 |
+| `tabindex` | 一个数字值，向用户代理提供有关用户按 !!!Tab!!! 键时控件获得焦点的顺序的指导。|
 
 !!! warn "**`autofocus`** 属性用法注意事项"
     文档中最多**只能有一个**元素具有 `autofocus` 属性。警告：自动聚焦表单控件会使使用屏幕阅读技术的视障人士感到困惑。分配自动对焦后，屏幕阅读器会将用户“自动传送”到表单控件，而不会事先警告他们。
@@ -331,20 +332,17 @@ let userName2 = form.elements["username"];
 具有 **`type="button"`** 声明和有效的 `value` 属性的 *[`<input>`](/zh-hans/webfrontend/<input>)* 元素不需要与之关联的 `<label>`。
 这样做实际上可能会干扰辅助技术解析按钮输入的方式。同样的情况适用于 **[`<button>`](/zh-hans/webfrontend/<button>)** 元素。
 
-***
+## `tabindex` Attribute of `<input>`
 
-属性
+一个可选的数值，它定义通过使用 !!!Tab!!! 键是否可以使输入聚焦以及该元素是否参与顺序焦点导航。该值还确定使用 !!!Tab!!! 键访问元素的顺序。
 
-**`tabindex`**
+**`tabindex`** 的值根据符号具有特殊含义：
 
-一个可选的数值，它定义通过使用`<kbd>Tab</kbd>`键是否可以使输入聚焦以及该元素是否参与顺序焦点导航。 该值还确定使用`<kbd>Tab</kbd>`键访问元素的顺序。
-
-`tabindex`的值根据符号具有特殊含义：
-
-- `tabindex`的负值表示该元素应可由用户聚焦，但不能使用顺序键盘导航。 建议始终使用值-1，因为使用其他值可能会很复杂。
-- `tabindex`为0意味着该元素应该是可聚焦的，并且应该可以通过顺序的键盘导航到达，但是该Tab的顺序由用户代理决定，后者应该应用用户的平台约定。 当您希望元素可聚焦并参与键盘导航而不是尝试自己管理选项卡顺序时，通常这是最佳使用值。
-- `tabindex`”的正值表示元素的制表顺序。 每次用户按下`<kbd>Tab</kbd>`键时，其标签索引依次高的元素都会被聚焦。大多数平台通常提供反向标签功能，通常结合使用
-`<kbd>Shift </kbd>`+`<kbd>Tab</kbd>`会反转制表顺序。如果`tabindex`被省略或不是有效的整数，则用户代理将遵循平台约定来确定要执行的操作。
+- **负值** 表示该元素应可由用户聚焦，但不能使用顺序键盘导航。建议始终使用值 *`-1`*，因为使用其他值可能会很复杂。
+- **`0`** 意味着该元素应该是可聚焦的，并且应该可以通过顺序的键盘导航到达，但是该 !!!Tab!!! 的顺序由用户代理决定，后者应该应用用户的平台约定。当您希望元素可聚焦并参与键盘导航而不是尝试自己管理选项卡顺序时，通常这是最佳使用值。
+- **正值** 表示元素的制表顺序。每次用户按下 !!!Tab!!! 键时，其标签索引依次高的元素都会被聚焦。
+大多数平台通常提供反向标签功能，通常结合使用 !!!Shift!!! + !!!Tab!!! 会反转制表顺序。
+如果 `tabindex` 被省略或不是有效的整数，则用户代理将遵循平台约定来确定要执行的操作。
 
 ## 标记 `<label>` vs. 占位符 `placeholder`
 
@@ -400,9 +398,9 @@ let userName2 = form.elements["username"];
 | `stepDown()` | 默认情况下，将数字输入的值减一，或者按指定的单位数减一。|
 | `stepUp()` | 将数字输入的值增加一或以指定的单位数递增。|
 
-## 样式输入元素
+## 输入元素的样式
 
-您可以特别使用各种与颜色相关的属性来设置`<input>`元素的样式。 CSS`caret-color`属性是特定于文本输入相关元素的一种不寻常的属性，它使您可以设置用于绘制文本输入插入符号的颜色：
+您可以特别使用各种与颜色相关的属性来设置 `<input>` 元素的样式。 CSS **`caret-color`** 属性是特定于文本输入相关元素的一种不寻常的属性，它使您可以设置用于绘制文本输入插入符号的颜色：
 
 ```html
 <label for="textInput">Note the red caret:</label>
@@ -415,8 +413,6 @@ input.custom {
   font: 16px "Helvetica", "Arial", "sans-serif";
 }
 ```
-
-有关在HTML元素中添加颜色的更多信息，请参阅使用CSS将颜色应用于HTML元素。
 
 ## 示例
 
