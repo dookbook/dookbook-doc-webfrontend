@@ -72,11 +72,6 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | **`label`** | The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used. |
 | **`disabled`** | If this *Boolean* attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones. |
 
-## `<datalist>` Attributes
-
-This element has no other attributes than the [global attributes](/en/webfrontend/HTML_Global_Attributes),
-common to all elements.
-
 ## Basic Usage of `<select>`
 
 ```html
@@ -179,6 +174,24 @@ The `<datalist>` tag is used to provide "**autocomplete**" features
 for *[`<input>`](/en/webfrontend/<input>)* elements.
 The user can
 see a *drop-down list*. The options in it are **predefined** and will be used as the user's input data.
+
+### `<datalist>` Technical Summary
+
+| - | `<datalist>` |
+| :-- | :-- |
+| **Content categories** | *Flow content*, *phrasing content*. |
+| **Permitted content** | Either *phrasing content*, or zero or more *`<option>`* elements. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
+| **Permitted ARIA roles** | None |
+| **DOM interface** | **`HTMLDataListElement`** |
+
+### `<datalist>` Attributes
+
+This element has no other attributes than the [global attributes](/en/webfrontend/HTML_Global_Attributes),
+common to all elements.
+
+### Binding `<input>`
 
 Use the **`list`** attribute of the *[`<input>`](/en/webfrontend/<input>)* element
 to bind the `<datalist>` element.
