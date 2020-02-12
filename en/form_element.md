@@ -115,6 +115,29 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
     The difference between `disabled` and `readonly` is that read-only controls can still function,
     whereas disabled controls generally do not function as controls until they are enabled.
 
+### `tabindex` Attribute of `<input>`
+
+An optional numeric value that defines both whether or not the `<input>` should be focusable
+through use of the !!!Tab!!! key as well as whether or not the element participates in sequential focus
+navigation. This value also establishes the order in which the element is
+reached using the !!!Tab!!! key.
+
+The values of **`tabindex`** have special meanings depending on sign:
+
+- A **negative value** of `tabindex` indicates that the element should be focusable by the user,
+but not using sequential keyboard navigation.
+It's recommended to always use a value of *`-1`* as using other values can be complicated.
+- A `tabindex` of **`0`** means that the element should be focusable and should be reachable by sequential
+keyboard navigation, but that the tab order is left up to the user agent, which should apply the
+user's platform conventions. This is usually the best value to use when you want an element to be
+focusable and to participate in keyboard navigation rather than trying to manage the tab order yourself.
+- A **positive value** of `tabindex` indicates the tabbing order of the element. Each time the user
+presses the !!!Tab!!! key, the element with the next sequentially higher `tabindex` is focused.
+Most platforms provide a reverse-tab feature, typically using the combination
+of !!!Shift!!! + !!!Tab!!!, which reverses the tabbing order.
+If `tabindex` is omitted or is not a valid integer, the user agent follows
+platform conventions to determine what to do.
+
 ## Form `<input>` Types
 
 How an `<input>` works varies considerably depending on the value of its **`type`** attribute.
@@ -364,31 +387,6 @@ Doing so may actually interfere with how assistive
 technology parses the button input.
 The same applies for the **[`<button>`](/en/webfrontend/<button>)** element.
 
-***
-
-## `tabindex` Attribute of `<input>`
-
-An optional numeric value that defines both whether or not the `<input>` should be focusable
-through use of the !!!Tab!!! key as well as whether or not the element participates in sequential focus
-navigation. This value also establishes the order in which the element is
-reached using the !!!Tab!!! key.
-
-The values of **`tabindex`** have special meanings depending on sign:
-
-- A **negative value** of `tabindex` indicates that the element should be focusable by the user,
-but not using sequential keyboard navigation.
-It's recommended to always use a value of *`-1`* as using other values can be complicated.
-- A `tabindex` of **`0`** means that the element should be focusable and should be reachable by sequential
-keyboard navigation, but that the tab order is left up to the user agent, which should apply the
-user's platform conventions. This is usually the best value to use when you want an element to be
-focusable and to participate in keyboard navigation rather than trying to manage the tab order yourself.
-- A **positive value** of `tabindex` indicates the tabbing order of the element. Each time the user
-presses the !!!Tab!!! key, the element with the next sequentially higher `tabindex` is focused.
-Most platforms provide a reverse-tab feature, typically using the combination
-of !!!Shift!!! + !!!Tab!!!, which reverses the tabbing order.
-If `tabindex` is omitted or is not a valid integer, the user agent follows
-platform conventions to determine what to do.
-
 ## Labels and Placeholders
 
 To save you time, here's the *key point*: don't use the **`placeholder`** attribute if you can
@@ -450,23 +448,6 @@ that some of your site's visitors will have some variation in thought processes 
 that leads them to interpret your forms very differently from you without
 clear and properly-presented labels.
 
-## `HTMLInputElement` Methods
-
-The following methods are provided by the **`HTMLInputElement`** interface which represents
-`<input>` elements in the DOM. Also available are those methods specified by the parent interfaces,
-`HTMLElement`, `Element`, `Node`, and `EventTarget`.
-
-| method | Description |
-| :-- | :-- |
-| `checkValidity()` | Immediately runs the validity check on the element, triggering the document to fire the `invalid` event at the element if the value isn't valid. |
-| `reportValidity()` | Returns `true` if the element's value passes validity checks; otherwise, returns `false`.
-| `select()` | Selects the entire content of the `<input>` element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing. |
-| `setCustomValidity()` | Sets a custom message to display if the input element's value isn't valid. |
-| `setRangeText()` | Sets the contents of the specified range of characters in the input element to a given string. A `selectMode` parameter is available to allow controlling how the existing content is affected. |
-| `setSelectionRange()` | Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields. |
-| `stepDown()` | Decrements the value of a numeric input by one, by default, or by the specified number of units. |
-| `stepUp()` | Increments the value of a numeric input by one or by the specified number of units. |
-
 ## Styling Input Elements
 
 It is possible to use the **`:valid`** and **`:invalid`** CSS pseudo-classes to style a form
@@ -487,6 +468,23 @@ input.custom {
   font: 16px "Helvetica", "Arial", "sans-serif";
 }
 ```
+
+## `HTMLInputElement` Methods
+
+The following methods are provided by the **`HTMLInputElement`** interface which represents
+`<input>` elements in the DOM. Also available are those methods specified by the parent interfaces,
+`HTMLElement`, `Element`, `Node`, and `EventTarget`.
+
+| method | Description |
+| :-- | :-- |
+| `checkValidity()` | Immediately runs the validity check on the element, triggering the document to fire the `invalid` event at the element if the value isn't valid. |
+| `reportValidity()` | Returns `true` if the element's value passes validity checks; otherwise, returns `false`.
+| `select()` | Selects the entire content of the `<input>` element, if the element's content is selectable. For elements with no selectable text content (such as a visual color picker or calendar date input), this method does nothing. |
+| `setCustomValidity()` | Sets a custom message to display if the input element's value isn't valid. |
+| `setRangeText()` | Sets the contents of the specified range of characters in the input element to a given string. A `selectMode` parameter is available to allow controlling how the existing content is affected. |
+| `setSelectionRange()` | Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields. |
+| `stepDown()` | Decrements the value of a numeric input by one, by default, or by the specified number of units. |
+| `stepUp()` | Increments the value of a numeric input by one or by the specified number of units. |
 
 ## Examples
 
