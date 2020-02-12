@@ -46,8 +46,6 @@ TOPICS: <form>
 
 **`<label>`** 元素表示用户界面中某个项目(*`<input>`* 元素)的标题。
 
-可以用 *`:valid`* 和 *`:invalid`* CSS 伪类 来给表单内的元素指定样式。
-
 ## 技术摘要
 
 | - | `<form>` | `<input>` |
@@ -400,7 +398,9 @@ let userName2 = form.elements["username"];
 
 ## 输入元素的样式
 
-您可以特别使用各种与颜色相关的属性来设置 `<input>` 元素的样式。 CSS **`caret-color`** 属性是特定于文本输入相关元素的一种不寻常的属性，它使您可以设置用于绘制文本输入插入符号的颜色：
+您可以特别使用各种与颜色相关的属性来设置 `<input>` 元素的样式。
+
+可以用 **`:valid`** 和 **`:invalid`** CSS 伪类 来给表单内的元素指定样式。CSS **`caret-color`** 属性是特定于文本输入相关元素的一种不寻常的属性，它使您可以设置用于绘制文本输入插入符号的颜色：
 
 ```html
 <label for="textInput">Note the red caret:</label>

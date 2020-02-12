@@ -49,9 +49,6 @@ depending on the device and user agent.
 
 The **`<label>`** element represents **a caption for an item** (*`<input>`* element) in a user interface.
 
-It is possible to use the *`:valid`* and *`:invalid`* CSS pseudo-classes to style a `<form>`
-element based on whether or not the individual elements within the form are valid.
-
 ## Technical Summary
 
 | - | `<form>` | `<input>` |
@@ -471,6 +468,9 @@ The following methods are provided by the **`HTMLInputElement`** interface which
 | `stepUp()` | Increments the value of a numeric input by one or by the specified number of units. |
 
 ## Styling Input Elements
+
+It is possible to use the **`:valid`** and **`:invalid`** CSS pseudo-classes to style a form
+element based on whether or not the individual elements within the form are valid.
 
 You can style `<input>` elements using various color-related attributes in particular. One unusual
 one that is specific to text entry-related elements is the CSS **`caret-color`** property,
