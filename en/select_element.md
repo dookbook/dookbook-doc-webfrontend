@@ -177,7 +177,7 @@ see a *drop-down list*. The options in it are **predefined** and will be used as
 
 ### `<datalist>` Technical Summary
 
-| - | `<datalist>` |
+| | |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *phrasing content*. |
 | **Permitted content** | Either *phrasing content*, or zero or more *`<option>`* elements. |
@@ -198,7 +198,7 @@ to bind the `<datalist>` element.
 
 ```html
 <label for="myBrowser">Choose a browser from this list:</label>
-<input list="browsers" id="myBrowser" name="myBrowser" />
+<input list="browsers" id="myBrowser" name="myBrowser">
 <datalist id="browsers">
   <option value="Chrome">
   <option value="Firefox">

@@ -17,6 +17,7 @@ TOPICS: <form>
         <input> autofocus attribute
         <input> disabled attribute
         <input> readonly attribute
+        <input> list attribute
         <input> form attribute
         <input> formaction attribute
         <input> formmethod attribute
@@ -32,6 +33,7 @@ TOPICS: <form>
         <input> height attribute
         <input> placeholder attribute
         <input> size attribute
+        <input> tabindex attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -46,9 +48,6 @@ to accept data from the user; a wide variety of types of input data and control 
 depending on the device and user agent.
 
 The **`<label>`** element represents **a caption for an item** (*`<input>`* element) in a user interface.
-
-It is possible to use the *`:valid`* and *`:invalid`* CSS pseudo-classes to style a `<form>`
-element based on whether or not the individual elements within the form are valid.
 
 ## Technical Summary
 
@@ -98,10 +97,10 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 | **`autofocus`** | A *Boolean* which, if present, makes the input **take focus** when the form is presented. An element with this attribute may gain focus before the *`DOMContentLoaded`* event is fired. `<input>` with `type="hidden"` NOT support it. |
 | **`disabled`** | A *Boolean* attribute which is present if the `<input>` should be disabled. It does not receive the `click` event, and is not submitted with the form. |
 | **`readonly`** | A *Boolean* attribute which, if `true`, indicates that the input **cannot be edited**. Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only (`readonly`) and being disabled (`disabled`), so the `readonly` attribute does not apply. |
+| **`list`** | The **`id`** of a *[`<datalist>`](/en/webfrontend/<datalist>)* element that provides a list of suggested values for the input. |
 | **`form`** | The **`id` of the `<form>`** of which the input is a member; if absent, the input is a member of the *nearest* containing form, or is not a member of a form at all. |
 | `autocomplete` | A *string* indicating the type of **autocomplete functionality**, if any, to allow on the input. **`on`** for enabling autocomplete, **`off`** for disabling. Only support `<input>` elements with `type`: *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`*, and *`color`*. |
-| `list` | The `id` of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
-| `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the Tab key. |
+| `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the !!!Tab!!! key. |
 
 !!! warn "**`autofocus`** Usage Notes"
     **No more than one** element in the document may have the `autofocus` attribute.
@@ -367,37 +366,26 @@ The same applies for the **[`<button>`](/en/webfrontend/<button>)** element.
 
 ***
 
-### `<input>` Attributes2
+## `tabindex` Attribute of `<input>`
 
-**`list`**
-
-The `id` of a [`<datalist>`](/en/webfrontend/<datalist>) element located in the same document which
-provides a list of predefined values to suggest to the user for this input. Any values in the list
-that are not compatible with the `type` are not included in the suggested options.
-
-The `list` attribute is not supported by the `hidden`, `password`, `checkbox`, `radio`, `file`,
-or any of the button types.
-
-**`tabindex`**
-
-An optional numeric value that defines both whether or not the input should be focusable through use
-of the `<kbd>Tab</kbd>` key as well as whether or not the element participates in sequential focus
+An optional numeric value that defines both whether or not the `<input>` should be focusable
+through use of the !!!Tab!!! key as well as whether or not the element participates in sequential focus
 navigation. This value also establishes the order in which the element is
-reached using the `<kbd>Tab</kbd>` key.
+reached using the !!!Tab!!! key.
 
-The values of `tabindex` have special meanings depending on sign:
+The values of **`tabindex`** have special meanings depending on sign:
 
-- A negative value of `tabindex` indicates that the element should be focusable by the user, but not
-using sequential keyboard navigation. It's recommended to always use a value
-of -1 as using other values can be complicated.
-- A `tabindex` of 0 means that the element should be focusable and should be reachable by sequential
+- A **negative value** of `tabindex` indicates that the element should be focusable by the user,
+but not using sequential keyboard navigation.
+It's recommended to always use a value of *`-1`* as using other values can be complicated.
+- A `tabindex` of **`0`** means that the element should be focusable and should be reachable by sequential
 keyboard navigation, but that the tab order is left up to the user agent, which should apply the
 user's platform conventions. This is usually the best value to use when you want an element to be
 focusable and to participate in keyboard navigation rather than trying to manage the tab order yourself.
-- A positive value of `tabindex` indicates the tabbing order of the element. Each time the user
-presses the `<kbd>Tab</kbd>` key, the element with the next sequentially higher `tabindex` is focused.
+- A **positive value** of `tabindex` indicates the tabbing order of the element. Each time the user
+presses the !!!Tab!!! key, the element with the next sequentially higher `tabindex` is focused.
 Most platforms provide a reverse-tab feature, typically using the combination
-of `<kbd>Shift</kbd>` + `<kbd>Tab</kbd>`, which reverses the tabbing order.
+of !!!Shift!!! + !!!Tab!!!, which reverses the tabbing order.
 If `tabindex` is omitted or is not a valid integer, the user agent follows
 platform conventions to determine what to do.
 
@@ -464,7 +452,7 @@ clear and properly-presented labels.
 
 ## `HTMLInputElement` Methods
 
-The following methods are provided by the `HTMLInputElement` interface which represents
+The following methods are provided by the **`HTMLInputElement`** interface which represents
 `<input>` elements in the DOM. Also available are those methods specified by the parent interfaces,
 `HTMLElement`, `Element`, `Node`, and `EventTarget`.
 
@@ -481,8 +469,11 @@ The following methods are provided by the `HTMLInputElement` interface which rep
 
 ## Styling Input Elements
 
+It is possible to use the **`:valid`** and **`:invalid`** CSS pseudo-classes to style a form
+element based on whether or not the individual elements within the form are valid.
+
 You can style `<input>` elements using various color-related attributes in particular. One unusual
-one that is specific to text entry-related elements is the CSS `caret-color` property,
+one that is specific to text entry-related elements is the CSS **`caret-color`** property,
 which lets you set the color used to draw the text input caret:
 
 ```html
@@ -496,9 +487,6 @@ input.custom {
   font: 16px "Helvetica", "Arial", "sans-serif";
 }
 ```
-
-For more information about adding color to elements in HTML,
-see Applying color to HTML elements using CSS.
 
 ## Examples
 

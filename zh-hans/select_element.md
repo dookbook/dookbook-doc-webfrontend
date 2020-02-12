@@ -110,7 +110,7 @@ TOPICS: <select>
 
 ### `<datalist>` 技术摘要
 
-| - | |
+| | |
 | :-- | :-- |
 | **内容分类** | *流式内容*，*段落内容*。|
 | **允许的内容** | 要么*段落内容*， 要么0个或多个 *`<option>`* 元素。|
@@ -128,8 +128,8 @@ TOPICS: <select>
 请使用 `<input>` 元素的 **`list`** 属性来绑定 `<datalist>` 元素。
 
 ```html
-<label>Choose a browser from this list:
-<input list="browsers" name="myBrowser" /></label>
+<label for="myBrowser">Choose a browser from this list:</label>
+<input list="browsers" id="myBrowser" name="myBrowser">
 <datalist id="browsers">
   <option value="Chrome">
   <option value="Firefox">
