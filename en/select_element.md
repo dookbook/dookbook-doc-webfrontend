@@ -177,7 +177,7 @@ see a *drop-down list*. The options in it are **predefined** and will be used as
 
 ### `<datalist>` Technical Summary
 
-| - | `<datalist>` |
+| | |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *phrasing content*. |
 | **Permitted content** | Either *phrasing content*, or zero or more *`<option>`* elements. |
