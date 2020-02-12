@@ -17,6 +17,7 @@ TOPICS: <form>
         <input> autofocus attribute
         <input> disabled attribute
         <input> readonly attribute
+        <input> list attribute
         <input> form attribute
         <input> formaction attribute
         <input> formmethod attribute
@@ -98,9 +99,9 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 | **`autofocus`** | A *Boolean* which, if present, makes the input **take focus** when the form is presented. An element with this attribute may gain focus before the *`DOMContentLoaded`* event is fired. `<input>` with `type="hidden"` NOT support it. |
 | **`disabled`** | A *Boolean* attribute which is present if the `<input>` should be disabled. It does not receive the `click` event, and is not submitted with the form. |
 | **`readonly`** | A *Boolean* attribute which, if `true`, indicates that the input **cannot be edited**. Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only (`readonly`) and being disabled (`disabled`), so the `readonly` attribute does not apply. |
+| **`list`** | The **`id`** of a *[`<datalist>`](/en/webfrontend/<datalist>)* element that provides a list of suggested values for the input. |
 | **`form`** | The **`id` of the `<form>`** of which the input is a member; if absent, the input is a member of the *nearest* containing form, or is not a member of a form at all. |
 | `autocomplete` | A *string* indicating the type of **autocomplete functionality**, if any, to allow on the input. **`on`** for enabling autocomplete, **`off`** for disabling. Only support `<input>` elements with `type`: *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`*, and *`color`*. |
-| `list` | The `id` of a [`<datalist>`](/en/webfrontend/<datalist>) element that provides a list of suggested values for the input
 | `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the Tab key. |
 
 !!! warn "**`autofocus`** Usage Notes"
@@ -368,15 +369,6 @@ The same applies for the **[`<button>`](/en/webfrontend/<button>)** element.
 ***
 
 ### `<input>` Attributes2
-
-**`list`**
-
-The `id` of a [`<datalist>`](/en/webfrontend/<datalist>) element located in the same document which
-provides a list of predefined values to suggest to the user for this input. Any values in the list
-that are not compatible with the `type` are not included in the suggested options.
-
-The `list` attribute is not supported by the `hidden`, `password`, `checkbox`, `radio`, `file`,
-or any of the button types.
 
 **`tabindex`**
 

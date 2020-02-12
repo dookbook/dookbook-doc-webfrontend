@@ -17,6 +17,7 @@ TOPICS: <form>
         <input> autofocus attribute
         <input> disabled attribute
         <input> readonly attribute
+        <input> list attribute
         <input> form attribute
         <input> formaction attribute
         <input> formmethod attribute
@@ -91,9 +92,9 @@ TOPICS: <form>
 | **`autofocus`** | *布尔*值，指示在呈现表单时使该输入控件自动聚焦。在触发 *`DOMContentLoaded`* 事件之前，具有此属性的元素可以获得焦点。不可用于 `type="hidden"` 的输入框。|
 | **`disabled`** | *布尔*值，指示**禁用输入**。该输入不会收到 `click` 事件，并且禁用的输入不会与表单一起提交。|
 | **`readonly`** | *布尔*值，表示**无法编辑**输入。仅文本控件可以设置为只读，因为对于其他控件（例如复选框和按钮），在只读(`readonly`)和禁用(`disabled`)之间没有区别，因此`readonly`属性不适用。|
+| **`list`** | *[`<datalist>`](/zh-hans/webfrontend/<datalist>)* 元素的 **`id`**，该元素提供输入建议值的列表。|
 | **`form`** | **所属 `<form>` 的 `id`**。如果不存在，则输入是包含*最近*的表单的成员，或者根本不是表单的成员。|
 | `autocomplete` | **`on`**: (默认) 启用**自动补全**；**`off`**: 禁用自动补全。仅用于 `type` 为 *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`* 以及 *`color`* 的 `<input>`。|
-| `list` | [`<datalist>`](/zh-hans/webfrontend/<datalist>)元素的ID，该元素提供输入建议值的列表 |
 | `tabindex` | 一个数字值，向用户代理提供有关用户按Tab键时控件获得焦点的顺序的指导 |
 
 !!! warn "**`autofocus`** 属性用法注意事项"
@@ -333,12 +334,6 @@ let userName2 = form.elements["username"];
 ***
 
 属性
-
-**`list`**
-
-位于同一文档中的`<datalist>`元素的`id`，该元素提供了一系列预定义值以向用户建议此输入。建议选项中不包含列表中与`type`不兼容的任何值。
-
-`hidden`, `password`, `checkbox`, `radio`, `file`或任何按钮类型均不支持`list`属性。
 
 **`tabindex`**
 
