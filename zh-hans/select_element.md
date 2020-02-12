@@ -17,12 +17,12 @@ TOPICS: <select>
         <optgroup> disabled attribute
         <datalist>
 
-# HTML 下拉列表 `<select>`/`<option>`/`<optgroup>`/`<datalist>`
+# HTML 选项列表 `<select>`/`<option>`/`<optgroup>`/`<datalist>`
 
 **HTML `<select>` 元素**提供一个**选项菜单的控件**。
 
 **HTML `<option>` 元素**用于定义在 *`<select>`*, *`<optgroup>`* 或
-*[`<datalist>`](/zh-hans/webfrontend/<datalist>)*元素中包含的项。
+*`<datalist>`* 元素中包含的项。
 `<option>` 可以在弹出窗口和 HTML 文档中的其他项目列表中表示菜单项。
 
 **HTML `<optgroup>` 元素**会把相关的选项 *`<option>`* 组合在一起。

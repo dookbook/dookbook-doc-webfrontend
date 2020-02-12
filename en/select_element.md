@@ -22,7 +22,8 @@ TOPICS: <select>
 The **HTML `<select>` element** represents **a control that provides a menu of options**.
 
 The **HTML `<option`> element** is used to define an item contained in a *`<select>`*, an *`<optgroup>`*,
-or a [`<datalist>`](/en/webfrontend/<datalist>) element. As such, `<option>` can represent menu items
+or a *`<datalist>`* element.
+As such, `<option>` can represent menu items
 in popups and other lists of items in an HTML document.
 
 The **HTML `<optgroup>` element** creates a grouping of options (*`<option>`*) within a `<select>` element.
@@ -37,7 +38,7 @@ that represent the values available for other controls.
 | **Content categories** | *flow content*, *phrasing content*, *interactive content*, *listed, labelable, resettable, and submittable form-associated element*. | None. | None. | *Flow content*, *phrasing content*. |
 | **Permitted content** | Zero or more *`<option>`* or *`<optgroup>`* elements. | *Text*, possibly with escaped characters (like *`&eacute;`*). | Zero or more *`<option>`* elements. | Either *phrasing content*, or zero or more *`<option>`* elements. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<option>`* element or an *`<optgroup>`*, or if the parent element has no more content. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<optgroup>`* element, or if the parent element has no more content. | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | any element that accepts *phrasing content*. | A *`<select>`*, an *`<optgroup>`* or a *[`<datalist>`](/en/webfrontend/<datalist>)* element. | A *`<select>`* element. | Any element that accepts *phrasing content*. |
+| **Permitted parents** | any element that accepts *phrasing content*. | A *`<select>`*, an *`<optgroup>`* or a *`<datalist>`* element. | A *`<select>`* element. | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | `menu` | None | None | None |
 | **DOM interface** | **`HTMLSelectElement`** | **`HTMLOptionElement`** | **`HTMLOptGroupElement`** | **`HTMLDataListElement`** |
 
