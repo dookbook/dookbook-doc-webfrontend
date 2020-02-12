@@ -30,6 +30,8 @@ TOPICS: <form>
         <input> alt attribute
         <input> width attribute
         <input> height attribute
+        <input> placeholder attribute
+        <input> size attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -123,7 +125,7 @@ The available types are as follows:
 
 | `type` | Description |
 | :-- | :-- |
-| **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. |
+| **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. Use the **`placeholder`** attribute to specify the placeholder text within blank input content area and **`size`** attribute to specify the *maximum* length of the value that can be entered. |
 | **`submit`** | **A button that submits the form**. |
 | **`password`** | A *single-line* text field whose value is **obscured**. Use the **`maxlength`** and **`minlength`** attributes (optional) to specify the *maximum* / *minimum* length of the value that can be entered. |
 | **`hidden`** | A control that is **not displayed** but whose value is submitted to the server. |
@@ -399,6 +401,67 @@ of `<kbd>Shift</kbd>` + `<kbd>Tab</kbd>`, which reverses the tabbing order.
 If `tabindex` is omitted or is not a valid integer, the user agent follows
 platform conventions to determine what to do.
 
+## Labels and Placeholders
+
+To save you time, here's the *key point*: don't use the **`placeholder`** attribute if you can
+avoid it. If you need to label an `<input>` element, use the **`<label>`** element.
+
+There are three seemingly similar ways to associate assistive text with an `<input>`. However,
+they are actually quite different, and only one of them is always a good choice. Here we will look
+at each of them and learn best practices for providing the user with guidance
+when entering data into a form.
+
+### The `<label>` Element
+
+The **`<label>`** element is the only way to provide explanatory information
+about a *`form`* field that is always appropriate (aside from any layout concerns you have). It's never
+a bad idea to use a `<label>` to explain what should be entered into an
+`<input>` or [`<textarea>`](/en/webfrontend/<textarea>).
+
+### The `placeholder` Attribute
+
+The **`placeholder`** attribute lets you specify a text that appears within the `<input>`
+element's content area itself when empty. It's intended to be used to show an example input,
+rather than an explanation or prompt, but tends to be badly misused.
+
+In addition, browsers with automatic page translation features may skip over attributes when
+translating. That means the content of `placeholder` may not get translated,
+resulting in important information not being translated.
+
+If you feel like you need to use a `placeholder`, it's possible to use both a `placeholder` and a `<label>`:
+
+### Unadorned Text Adjacent to The `<input>` Element
+
+You can also just have plain text adjacent to the `<input>` element, like this:
+
+```html
+<p>Enter your name: <input id="name" type="text" size="30"></p>
+```
+
+Please don't do this. This doesn't create a relationship between the prompt and the `<input>` element,
+which is important for reasons we'll get into in the next section.
+
+### Why You Should Use Labels
+
+In addition to the information provided above, there are a number of other reasons
+why **`<label>`** is the best way to explain `<input>`s:
+
+The semantic pairing of `<input>` and `<label>` elements is useful for
+assistive technologies such as screen readers. By pairing them using the
+`<label>`'s *`for`* attribute, you bond the `<label>` to the `<input>` in a way that
+lets screen readers describe inputs to users more precisely.
+
+By pairing a
+`<label>` with an `<input>`, clicking on either one will focus the `<input>`.
+If you use plaintext to "label" your input, this won't happen. Having the prompt part of the
+activation area for the input is helpful for people with motor control conditions.
+
+As Web developers, it's important that we never assume that people will know all the things that we
+know. The diversity of people using the Web — and by extension your web site — practically guarantees
+that some of your site's visitors will have some variation in thought processes and/or circumstances
+that leads them to interpret your forms very differently from you without
+clear and properly-presented labels.
+
 ## `HTMLInputElement` Methods
 
 The following methods are provided by the `HTMLInputElement` interface which represents
@@ -436,83 +499,6 @@ input.custom {
 
 For more information about adding color to elements in HTML,
 see Applying color to HTML elements using CSS.
-
-## Labels and Placeholders
-
-TL;DR: To save you time, here's the key point: don't use the `placeholder` attribute if you can
-avoid it. If you need to label an `<input>` element, use the [`<label>`](/en/webfrontend/<label>) element.
-
-There are three seemingly similar ways to associate assistive text with an `<input>`. However,
-they are actually quite different, and only one of them is always a good choice. Here we will look
-at each of them and learn best practices for providing the user with guidance
-when entering data into a form.
-
-**The [`<label>`](/en/webfrontend/<label>) element**:
-
-The [`<label>`](/en/webfrontend/<label>) element is the only way to provide explanatory information
-about a form field that is always appropriate (aside from any layout concerns you have). It's never
-a bad idea to use a [`<label>`](/en/webfrontend/<label>) to explain what should be entered into an
-`<input>` or [`<textarea>`](/en/webfrontend/<textarea>).
-
-**The placeholder attribute**:
-
-The `placeholder` attribute lets you specify a text that appears within the `<input>`
-element's content area itself when empty. It's intended to be used to show an example input,
-rather than an explanation or prompt, but tends to be badly misused.
-
-Here are two inputs that take a password, each with a placeholder:
-
-Example of correct and incorrect placeholder usage
-
-The first one uses a placeholder string `MyGr8P@sswrd`, demonstrating what a password might look like.
-And no, that's not really a great password.
-
-The second one uses a prompt string, `Enter your password` as a placeholder. The first, and most
-obvious, problem with doing this is that as soon as the user types their first character, they no
-longer have a prompt explaining what that field is for.
-
-That's why, instead, you should use the [`<label>`](/en/webfrontend/<label>) element. The placeholder
-should never be required in order to understand your forms. While some people are able to remember
-what a given empty box is meant for after its only identifying text vanishes, others cannot.
-
-If the user can't understand your form if the placeholders are missing (say, in a browser that
-doesn't support placeholder, or in the case above where the user starts typing then gets confused),
-you're not using placeholders properly.
-
-In addition, browsers with automatic page translation features may skip over attributes when
-translating. That means the `placeholder` may not get translated,
-resulting in important information not being translated.
-
-If you feel like you need to use a placeholder, it's possible to use both a placeholder and a label:
-
-**Unadorned text adjacent to the `<input>` element**
-
-You can also just have plain text adjacent to the `<input>` element, like this:
-
-```html
-<p>Enter your name: <input id="name" type="text" size="30"></p>
-```
-
-Please don't do this. This doesn't create a relationship between the prompt and the `<input>` element,
-which is important for reasons we'll get into in the next section.
-
-**Why you should use labels**:
-
-In addition to the information provided above, there are a number of other reasons why
-[`<label>`](/en/webfrontend/<label>) is the best way to explain `<input>`s:
-
-The semantic pairing of `<input>` and [`<label>`](/en/webfrontend/<label>) elements is useful for
-assistive technologies such as screen readers. By pairing them using the
-[`<label>`](/en/webfrontend/<label>)'s for attribute, you bond the label to the input in a way that
-lets screen readers describe inputs to users more precisely. By pairing a
-[`<label>`](/en/webfrontend/<label>) with an `<input>`, clicking on either one will focus the `<input>`.
-If you use plaintext to "label" your input, this won't happen. Having the prompt part of the
-activation area for the input is helpful for people with motor control conditions.
-As web developers, it's important that we never assume that people will know all the things that we
-know. The diversity of people using the web—and by extension your web site—practically guarantees
-that some of your site's visitors will have some variation in thought processes and/or circumstances
-that leads them to interpret your forms very differently from you without
-clear and properly-presented labels.
 
 ## Examples
 
