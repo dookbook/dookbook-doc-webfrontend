@@ -33,14 +33,14 @@ that represent the values available for other controls.
 
 ## Technical Summary
 
-| - | `<select>` | `<option>` | `<optgroup>` | `<datalist>` |
-| :-- | :-- | :-- | :-- | :-- |
+| - | `<select>` | `<option>` | `<optgroup>` |
+| :-- | :-- | :-- | :-- |
 | **Content categories** | *flow content*, *phrasing content*, *interactive content*, *listed, labelable, resettable, and submittable form-associated element*. | None. | None. | *Flow content*, *phrasing content*. |
-| **Permitted content** | Zero or more *`<option>`* or *`<optgroup>`* elements. | *Text*, possibly with escaped characters (like *`&eacute;`*). | Zero or more *`<option>`* elements. | Either *phrasing content*, or zero or more *`<option>`* elements. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<option>`* element or an *`<optgroup>`*, or if the parent element has no more content. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<optgroup>`* element, or if the parent element has no more content. | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | any element that accepts *phrasing content*. | A *`<select>`*, an *`<optgroup>`* or a *`<datalist>`* element. | A *`<select>`* element. | Any element that accepts *phrasing content*. |
-| **Permitted ARIA roles** | `menu` | None | None | None |
-| **DOM interface** | **`HTMLSelectElement`** | **`HTMLOptionElement`** | **`HTMLOptGroupElement`** | **`HTMLDataListElement`** |
+| **Permitted content** | Zero or more *`<option>`* or *`<optgroup>`* elements. | *Text*, possibly with escaped characters (like *`&eacute;`*). | Zero or more *`<option>`* elements. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<option>`* element or an *`<optgroup>`*, or if the parent element has no more content. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<optgroup>`* element, or if the parent element has no more content. |
+| **Permitted parents** | Any element that accepts *phrasing content*. | A *`<select>`*, an *`<optgroup>`* or a *`<datalist>`* element. | A *`<select>`* element. |
+| **Permitted ARIA roles** | `menu` | None | None |
+| **DOM interface** | **`HTMLSelectElement`** | **`HTMLOptionElement`** | **`HTMLOptGroupElement`** |
 
 ## `<select>` Attributes
 
