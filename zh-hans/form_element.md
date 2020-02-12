@@ -31,6 +31,7 @@ TOPICS: <form>
         <input> height attribute
         <input> width attribute
         <input> placeholder attribute
+        <input> size attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -112,7 +113,7 @@ TOPICS: <form>
 
 | `type` | 描述 |
 | :-- | :-- |
-| **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。|
+| **`text`** | **单行文本字段**。换行符会自动从输入值中*删除*。可以使用 **`placeholder`** 属性来标记占位符，显示在空白的输入框中。可以使用 **`size`** 属性来标记可接受的最大文本字符数量。|
 | **`submit`** | **提交表单的按钮**。|
 | **`password`** | *单行文本*字段，其值被遮盖或隐藏。使用可选的 **`maxlength`** 和 **`minlength`** 属性指定可以输入的值的*最大长度*和*最小长度*。|
 | **`hidden`** | **不显示**，但其值会提交给服务器的输入控件。|

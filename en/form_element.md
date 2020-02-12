@@ -31,6 +31,7 @@ TOPICS: <form>
         <input> width attribute
         <input> height attribute
         <input> placeholder attribute
+        <input> size attribute
         <label>
         <label> for attribute
         <label> form attribute
@@ -124,7 +125,7 @@ The available types are as follows:
 
 | `type` | Description |
 | :-- | :-- |
-| **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. |
+| **`text`** | (*Default*) A **single-line text field**. Line-breaks are automatically *removed* from the input value. Use the **`placeholder`** attribute to specify the placeholder text within blank input content area and **`size`** attribute to specify the *maximum* length of the value that can be entered. |
 | **`submit`** | **A button that submits the form**. |
 | **`password`** | A *single-line* text field whose value is **obscured**. Use the **`maxlength`** and **`minlength`** attributes (optional) to specify the *maximum* / *minimum* length of the value that can be entered. |
 | **`hidden`** | A control that is **not displayed** but whose value is submitted to the server. |
