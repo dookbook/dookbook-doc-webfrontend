@@ -15,8 +15,9 @@ TOPICS: <select>
         <option> label attribute
         <optgroup> label attribute
         <optgroup> disabled attribute
+        <datalist>
 
-# HTML Selection List: `<select>`/`<option>`/`<optgroup>`
+# HTML Selection List: `<select>`/`<option>`/`<optgroup>`/`<datalist>`
 
 The **HTML `<select>` element** represents **a control that provides a menu of options**.
 
@@ -26,16 +27,19 @@ in popups and other lists of items in an HTML document.
 
 The **HTML `<optgroup>` element** creates a grouping of options (*`<option>`*) within a `<select>` element.
 
+The **HTML `<datalist>` element** contains a set of *`<option>`* elements
+that represent the values available for other controls.
+
 ## Technical Summary
 
-| - | `<select>` | `<option>` | `<optgroup>` |
-| :-- | :-- | :-- | :-- |
-| **Content categories** | *flow content*, *phrasing content*, *interactive content*, *listed, labelable, resettable, and submittable form-associated element*. | None. | None. |
-| **Permitted content** | Zero or more *`<option>`* or *`<optgroup>`* elements. | *Text*, possibly with escaped characters (like *`&eacute;`*). | Zero or more *`<option>`* elements. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<option>`* element or an *`<optgroup>`*, or if the parent element has no more content. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<optgroup>`* element, or if the parent element has no more content. |
-| **Permitted parents** | any element that accepts *phrasing content*. | A *`<select>`*, an *`<optgroup>`* or a *[`<datalist>`](/en/webfrontend/<datalist>)* element. | A *`<select>`* element. |
-| **Permitted ARIA roles** | `menu` | None | None |
-| **DOM interface** | **`HTMLSelectElement`** | **`HTMLOptionElement`** | **`HTMLOptGroupElement`** |
+| - | `<select>` | `<option>` | `<optgroup>` | `<datalist>` |
+| :-- | :-- | :-- | :-- | :-- |
+| **Content categories** | *flow content*, *phrasing content*, *interactive content*, *listed, labelable, resettable, and submittable form-associated element*. | None. | None. | *Flow content*, *phrasing content*. |
+| **Permitted content** | Zero or more *`<option>`* or *`<optgroup>`* elements. | *Text*, possibly with escaped characters (like *`&eacute;`*). | Zero or more *`<option>`* elements. | Either *phrasing content*, or zero or more *`<option>`* elements. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<option>`* element or an *`<optgroup>`*, or if the parent element has no more content. | The start tag is mandatory. The end tag is optional if this element is immediately followed by another *`<optgroup>`* element, or if the parent element has no more content. | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | any element that accepts *phrasing content*. | A *`<select>`*, an *`<optgroup>`* or a *[`<datalist>`](/en/webfrontend/<datalist>)* element. | A *`<select>`* element. | Any element that accepts *phrasing content*. |
+| **Permitted ARIA roles** | `menu` | None | None | None |
+| **DOM interface** | **`HTMLSelectElement`** | **`HTMLOptionElement`** | **`HTMLOptGroupElement`** | **`HTMLDataListElement`** |
 
 ## `<select>` Attributes
 
@@ -68,7 +72,12 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | **`label`** | The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used. |
 | **`disabled`** | If this *Boolean* attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones. |
 
-## Basic Usage
+## `<datalist>` Attributes
+
+This element has no other attributes than the [global attributes](/en/webfrontend/HTML_Global_Attributes),
+common to all elements.
+
+## Basic Usage of `<select>`
 
 ```html
 <!-- The second value will be selected initially -->
@@ -163,6 +172,29 @@ Keyboard users can select multiple non-contiguous items by:
 change the "focused" select option, i.e. the one that will be selected if you choose to do so. The
 "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
 - Pressing !!!Space!!! to select/deselect "focused" select options.
+
+## `<datalist>` Usage
+
+The `<datalist>` tag is used to provide "**autocomplete**" features
+for *[`<input>`](/en/webfrontend/<input>)* elements.
+The user can
+see a *drop-down list*. The options in it are **predefined** and will be used as the user's input data.
+
+Use the **`list`** attribute of the *[`<input>`](/en/webfrontend/<input>)* element
+to bind the `<datalist>` element.
+
+```html
+<label for="myBrowser">Choose a browser from this list:</label>
+<input list="browsers" id="myBrowser" name="myBrowser" />
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>
+```
 
 ## Styling With CSS
 

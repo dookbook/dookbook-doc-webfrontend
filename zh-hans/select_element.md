@@ -15,8 +15,9 @@ TOPICS: <select>
         <option> label attribute
         <optgroup> label attribute
         <optgroup> disabled attribute
+        <datalist>
 
-# HTML 下拉列表 `<select>`/`<option>`/`<optgroup>`
+# HTML 下拉列表 `<select>`/`<option>`/`<optgroup>`/`<datalist>`
 
 **HTML `<select>` 元素**提供一个**选项菜单的控件**。
 
@@ -26,16 +27,18 @@ TOPICS: <select>
 
 **HTML `<optgroup>` 元素**会把相关的选项 *`<option>`* 组合在一起。
 
+**HTML `<datalist>` 元素**包含了一组 *`<option>`* 元素，定义了选项列表。
+
 ## 技术摘要
 
-| - | `<select>` | `<option>` | `<optgroup>` |
-| :-- | :-- | :-- | :-- |
-| **内容分类** | *流式内容*, *短语内容*, *交互内容*, *列表型、可标签化的、可重置的、可提交的表单元素相关的元素*。| 无。| 无。|
-| **允许的内容** | 零或多个 *`<option>`* 或 *`<optgroup>`* 元素。| 文本。| 零或多个 *`<option>`* 元素。|
-| **标签省略** | 不允许，开始和结束标签都不能省略。| 不允许。| 不允许。|
-| **允许的父元素** | 任何可接受 *短语内容* 的元素。| *`<select>`*，*`<optgroup>`* 和 *`<datalist>`* 元素。| *`<select>`* 元素。|
-| **允许的 ARIA 角色** | `menu` | 无 | 无 |
-| **DOM 接口** | **`HTMLSelectElement`** | **`HTMLOptionElement`** | **`HTMLOptGroupElement`** |
+| - | `<select>` | `<option>` | `<optgroup>` | `<datalist>` |
+| :-- | :-- | :-- | :-- | :-- |
+| **内容分类** | *流式内容*, *短语内容*, *交互内容*, *列表型、可标签化的、可重置的、可提交的表单元素相关的元素*。| 无。| 无。| *流式内容*，*段落内容*。|
+| **允许的内容** | 零或多个 *`<option>`* 或 *`<optgroup>`* 元素。| 文本。| 零或多个 *`<option>`* 元素。| 要么*段落内容*， 要么0个或多个 *`<option>`* 元素。|
+| **标签省略** | 不允许，开始和结束标签都不能省略。| 不允许。| 不允许。| 不允许。|
+| **允许的父元素** | 任何可接受 *短语内容* 的元素。| *`<select>`*，*`<optgroup>`* 和 *`<datalist>`* 元素。| *`<select>`* 元素。| 任何接受*段落内容*的元素。 |
+| **允许的 ARIA 角色** | `menu` | 无 | 无 | 无 |
+| **DOM 接口** | **`HTMLSelectElement`** | **`HTMLOptionElement`** | **`HTMLOptGroupElement`** | **`HTMLDataListElement`** |
 
 ## `<select>` 属性
 
@@ -57,8 +60,7 @@ TOPICS: <select>
 | 属性 | 描述 |
 | :-- | :-- |
 | **`value`** | 这个属性的内容代表这个选项选中的话，提交给表单的值。如果省略了这个属性，值就从选项元素的文本内容中获取。|
-| **`selected`** | *布尔*属性，如果存在, 则表明该选项**初始被选中**。如果 `<option>` 元素是`<select>` 元素的后继，并且它的 `multiple` 属性没有设置，则这个 `<select>`
-元素只有一个 `<option>` 元素可以拥有 `selected` 属性。|
+| **`selected`** | *布尔*属性，如果存在, 则表明该选项**初始被选中**。如果 `<option>` 元素是`<select>` 元素的后继，并且它的 `multiple` 属性没有设置，则这个 `<select>` 元素只有一个 `<option>` 元素可以拥有 `selected` 属性。|
 | **`disabled`** | *布尔*属性，如果设置了，则这个选项就不是可选的。浏览器通常会将这种控件显示为灰色，并且不再接受任何浏览器事件，例如鼠标点击或者焦点相关的事件。如果这个属性没有设置，如果元素的祖先是禁用的 `<optgroup>` 元素，该元素仍然是禁用的 。|
 | `label` | 这个属性是用于表示选项含义的文本。如果 `label` 属性没有定义，它的值就是元素文本内容。|
 
@@ -69,7 +71,11 @@ TOPICS: <select>
 | **`label`** | 选项组的名字，当在用户界面标记(`label`)选项的时候可以被浏览器使用。使用这个元素时必须加上这个属性。|
 | **`disabled`** | 如果设置了这个布尔值，那么这个选项组中将没有选项是可以被选择的。通常浏览器会置灰这样的控件，它不会再接受任何浏览器事件，例如鼠标点击或者焦点相关的事件。|
 
-## 基本用法
+## `<datalist>` 属性
+
+该元素除了公用的[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)之外，没有其他属性。
+
+## `<select>` 基本用法
 
 ```html
 <!-- 示例： 选择列表，第二项默认选中 -->
@@ -80,7 +86,7 @@ TOPICS: <select>
 </select>
 ```
 
-## 多选项用法
+## `<select>` 多选项用法
 
 !!! warn ""
     注意: `<optgroup>` 元素不能嵌套。
@@ -102,9 +108,27 @@ TOPICS: <select>
 </select>
 ```
 
+## `<datalist>` 用法
+
+`<datalist>` 标签被用来在为 *[`<input>`](/zh-hans/webfrontend/<input>)* 元素提供"**自动完成**"的特性。用户能看到一个下拉列表，里边的选项是预先定义好的，将作为用户的输入数据。
+
+请使用 `<input>` 元素的 **`list`** 属性来绑定 `<datalist>` 元素。
+
+```html
+<label>Choose a browser from this list:
+<input list="browsers" name="myBrowser" /></label>
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+```
+
 ## 用 CSS 美化
 
-众所周知，`<select>` 元素很难用 CSS 进行高效的设计。你可以影响任何元素的某些方面 - 例如，操纵框模型，显示的字体等，你可以使用 **appearance** 属性来删除默认的系统外观。
+众所周知，`<select>` 元素很难用 CSS 进行高效的设计。你可以影响任何元素的某些方面 - 例如，操纵框模型，显示的字体等，你可以使用 **`appearance`** 属性来删除默认的系统外观。
 
 但是，这些属性不会在浏览器之间产生一致的结果，并且很难在列中将不同类型的表单元素相互排列。 `<select>` 元素的内部结构复杂，难以控制。 如果你想获得完全控制，你应该考虑使用一个具有良好设施的库
 来构建窗体小部件（例如jQuery UI），或者尝试使用非语义元素，[[JavaScript]] 和WAI-ARIA滚动自己的下拉菜单来提供语义。
