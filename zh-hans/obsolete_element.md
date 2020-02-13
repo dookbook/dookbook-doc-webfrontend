@@ -64,7 +64,7 @@ TOPICS: <acronym>
 | `<noframes>` | **`<noframes>`** 是个 HTML 元素，用于支持不支持 `<frame>` 元素的浏览器，或者这样配置的浏览器。 |
 | **`<plaintext>`** | HTML 纯文本元素。将从标签开始以后的所有文本渲染为**纯文本**，不会解释为 HTML。它没有闭合标签，因为任何后面的东西都会看做纯文本。可使用 **[`<pre>`](/zh-hans/webfrontend/<pre>)** 替代。|
 | `<shadow>` | **HTML `<shadow>` 元素** — Web 组件技术套件的废弃部分 — 目的是用作 Shadow DOM insertion point。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。在正常的 HTML 没有任何用处。 |
-| `<spacer>` | **`<spacer>`** 是过时的 HTML 元素，它可以向页面插入间隔。它由 Netscape 设计，用于实现单像素布局图像的相同效果，Web 设计师用它来向页面添加空白，而不需要实际使用图片。 但是，`<spacer>` 不再受任何主流浏览器支持，并且相同效果可以简单由 CSS 实现。 |
-| **`<strike>`** | HTML 删除线元素。如果是标记删除文本，推荐使用 **[`<del>`](/zh-hans/webfrontend/<del>)** 代替；如果是在文本上放置删除线的样式，推荐使用CSS属性 **`text-decoration: line-through`** 代替；如果是标记不再准确或不再相关的文本，推荐使用 **[`<s>`](/zh-hans/webfrontend/<s>)** 代替。 |
+| **`<spacer>`** | HTML 空格元素。可以向页面插入空格。推荐使用 HTML **`&nbsp;`** 或 [[CSS]] 属性。 |
+| **`<strike>`** | HTML 删除线元素。如果是标记删除文本，推荐使用 **[`<del>`](/zh-hans/webfrontend/<del>)** 代替；如果是在文本上放置删除线的样式，推荐使用 CSS 属性 **`text-decoration: line-through`** 代替；如果是标记不再准确或不再相关的文本，推荐使用 **[`<s>`](/zh-hans/webfrontend/<s>)** 代替。 |
 | **`<tt>`** | HTML 电报文本或打字机文本元素。创建一个使用浏览器内置的 *`monotype`* 等宽字体展示的内联元素。这个元素用于给文本**排版**，就像电报那样。请使用 [[CSS]]代替。 |
 | **`<xmp>`** | HTML 示例元素。 开始和结束标签之间的内容**不会被当作 HTML 文档内容解析**，而会被用等宽字体 *`monotype`* 直接呈现。*HTML 2* 规范建议，本标签中的内容应该具有足够容纳每行 *80* 个字母的宽度。请使用 **[`<pre>`](/zh-hans/webfrontend/<pre>)** 代替。 |

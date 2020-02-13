@@ -177,7 +177,6 @@ textarea:valid {
 - [`<fieldset>`, `<legend>`](/en/webfrontend/<fieldset>)
 - [`<button>`](/en/webfrontend/<button>)
 - [`<select>`, `<datalist>`, `<option>`, `<optgroup>`](/en/webfrontend/<select>)
-- [`<keygen>`](/en/webfrontend/<keygen>)
 - [`<output>`](/en/webfrontend/<output>)
 - [`<progress>`](/en/webfrontend/<progress>)
 - [`<meter>`](/en/webfrontend/<meter>)
