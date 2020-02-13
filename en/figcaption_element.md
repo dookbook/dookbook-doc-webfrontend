@@ -9,11 +9,11 @@ rest of the contents of its parent `<figure>` element.
 |  |  |
 | :-- | :-- |
 | **Content categories** | None. |
-| **Permitted content** | `Flow content`. |
+| **Permitted content** | *`Flow content`*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
 | **Permitted parents** | A `<figure>` element; the `<figcaption>` element must be its first or last child. |
 | **Permitted ARIA roles** | `group`, `presentation` |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Attributes
 
@@ -27,12 +27,12 @@ its caption, and its contents are referenced as a single unit.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, sectioning root, palpable content. |
-| **Permitted content** | A `<figcaption>` element, followed by flow content; or flow content followed by a `<figcaption>` element; or flow content. |
+| **Content categories** | *Flow content*, *sectioning root*, *palpable content*. |
+| **Permitted content** | A `<figcaption>` element, followed by *flow content*; or *flow content* followed by a `<figcaption>` element; or *flow content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts Flow content. |
+| **Permitted parents** | Any element that accepts *Flow content*. |
 | **Permitted ARIA roles** | `group`, `presentation` |
-| **DOM interface** | `HTMLElement` |
+| **DOM interface** | **`HTMLElement`** |
 
 ## Usage Notes
 
