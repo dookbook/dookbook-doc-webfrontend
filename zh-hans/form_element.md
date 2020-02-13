@@ -252,15 +252,3 @@ input.custom {
 | `setSelectionRange()` | 在文本输入元素中选择指定的字符范围。 对于未显示为文本输入字段的输入不执行任何操作。|
 | `stepDown()` | 默认情况下，将数字输入的值减一，或者按指定的单位数减一。|
 | `stepUp()` | 将数字输入的值增加一或以指定的单位数递增。|
-
-## 示例
-
-```html
-<!-- 使用 fieldset, legend, and label 的表单 -->
-<form action="" method="post">
-  <fieldset>
-    <legend>Title</legend>
-    <input type="radio" name="radio" id="radio"> <label for="radio">Click me</label>
-  </fieldset>
-</form>
-```

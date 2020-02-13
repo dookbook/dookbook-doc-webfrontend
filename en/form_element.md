@@ -281,16 +281,3 @@ The following methods are provided by the **`HTMLInputElement`** interface which
 | `setSelectionRange()` | Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields. |
 | `stepDown()` | Decrements the value of a numeric input by one, by default, or by the specified number of units. |
 | `stepUp()` | Increments the value of a numeric input by one or by the specified number of units. |
-
-## Examples
-
-```html
-<!-- Form with fieldset, legend, and label -->
-<form action="" method="post">
-  <fieldset>
-    <legend>Title</legend>
-    <input type="radio" name="radio" id="radio">
-    <label for="radio">Click me</label>
-  </fieldset>
-</form>
-```
