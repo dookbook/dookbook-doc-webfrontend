@@ -10,9 +10,9 @@ TOPICS: <div>
 |  |  |
 | :-- | :-- |
 | **内容分类** | *流式内容*，*可触知内容*。 |
-| **允许的内容** | *流式内容*。 <br><br>或 (在 *[[WHATWG]]* HTML 中): 如果父元素是 **[`<dl>`](/en/webfrontend/<dl>)** 元素：一个或多个 **[`<dt>`](/en/webfrontend/<dt>)** 元素接着一个或多个 **[`<dd>`](/en/webfrontend/<dd>)** 元素，ye 也可以穿插 *[`<script>`](/en/webfrontend/<script>)* 和 *[`<template>`](/en/webfrontend/<template>)* 元素。 |
+| **允许的内容** | *流式内容*。 <br>或 (在 *[[WHATWG]]* HTML 中): 如果父元素是 **[`<dl>`](/en/webfrontend/<dl>)** 元素：一个或多个 **[`<dt>`](/en/webfrontend/<dt>)** 元素接着一个或多个 **[`<dd>`](/en/webfrontend/<dd>)** 元素，ye 也可以穿插 *[`<script>`](/en/webfrontend/<script>)* 和 *[`<template>`](/en/webfrontend/<template>)* 元素。 |
 | **标签省略** | 不允许，开始和结束标签都是必需的。 |
-| **允许的父元素** | 任何接受*流式内容*的元素。<br><br>或 (在 *[[WHATWG]]* HTML 中): **[`<dl>`](/en/webfrontend/<dl>)** 元素。 |
+| **允许的父元素** | 任何接受*流式内容*的元素。<br>或 (在 *[[WHATWG]]* HTML 中): **[`<dl>`](/en/webfrontend/<dl>)** 元素。 |
 | **允许的 ARIA 角色** | 任意 |
 | **DOM 接口** | **`HTMLDivElement`** |
 
