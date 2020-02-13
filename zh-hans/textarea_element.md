@@ -155,7 +155,6 @@ textarea:valid {
 - [`<fieldset>`, `<legend>`](/zh-hans/webfrontend/<fieldset>)
 - [`<button>`](/zh-hans/webfrontend/<button>)
 - [`<select>`, `<datalist>`, `<option>`, `<optgroup>`](/zh-hans/webfrontend/<select>)
-- [`<keygen>`](/zh-hans/webfrontend/<keygen>)
 - [`<output>`](/zh-hans/webfrontend/<output>)
 - [`<progress>`](/zh-hans/webfrontend/<progress>)
 - [`<meter>`](/zh-hans/webfrontend/<meter>)
