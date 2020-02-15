@@ -11,6 +11,8 @@ TOPICS: <textarea>
         <textarea> disabled attribute
         <textarea> readonly attribute
         <textarea> placeholder attribute
+        <textarea> spellcheck attribute
+        <textarea> form attribute
 
 # HTML `<textarea>` 元素
 
@@ -88,6 +90,14 @@ TOPICS: <textarea>
 <textarea name="textarea"
    rows="5" cols="30"
    placeholder="Comment text."></textarea>
+```
+
+!!! warn "提示"
+    如若 `placeholder` 属性里的提示文字需要两行或者多行显示，请用换行符（`&#10;`）来换行
+
+```html
+<textarea name="textarea"
+   placeholder="hello you&#10;Second line&#10;Third line"></textarea>
 ```
 
 !!! warn "注意"
