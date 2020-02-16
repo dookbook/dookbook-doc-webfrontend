@@ -158,7 +158,7 @@ HTML **`<label>`** 元素表示用户界面中某个项目(*[`<input>`](/zh-hans
 
 除了上面提供的信息外，还有其他许多原因使 **`<label>`** 是解释 [`<input>`](/zh-hans/webfrontend/<input>) 的最佳方法：
 
-*[`<input>`](/zh-hans/webfrontend/<input>)* 和 `<label>` 元素的语义配对对于诸如屏幕阅读器之类的辅助技术很有用。
+*[`<input>`](/zh-hans/webfrontend/<input>)* 和 `<label>` 元素的语义对于匹配诸如屏幕阅读器之类的辅助技术很有用。
 通过使用 `<label>` 的 **`for`** 属性将其绑定到 [`<input>`](/zh-hans/webfrontend/<input>)，使屏幕阅读器可以更准确地向用户描述输入。
 
 通过将 `<label>` 和 [`<input>`](/zh-hans/webfrontend/<input>) 配对，点击标签文本即可触发

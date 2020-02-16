@@ -11,6 +11,7 @@ TOPICS: <textarea>
         <textarea> disabled attribute
         <textarea> readonly attribute
         <textarea> placeholder attribute
+        <textarea> spellcheck attribute
         <textarea> form attribute
 
 # HTML `<textarea>` Element
