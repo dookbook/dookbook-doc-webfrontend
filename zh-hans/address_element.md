@@ -14,7 +14,7 @@ TOPICS: <address>
 | **内容分类** | *流式内容*, *可触知内容*. |
 | **允许的内容** | 流式内容, 不能嵌套`<address>`元素, 不能是标题内容 ([`<hgroup>`](/zh-hans/webfrontend/<hgroup>), [`<h1>`](/zh-hans/webfrontend/<h1>), [`<h2>`](/zh-hans/webfrontend/<h2>), [`<h3>`](/zh-hans/webfrontend/<h3>), [`<h4>`](/zh-hans/webfrontend/<h4>), [`<h5>`](/zh-hans/webfrontend/<h5>), [`<h6>`]((/zh-hans/webfrontend/<h6>))), 不能是区块内容 ([`<article>`](/zh-hans/webfrontend/<article>), [`<aside>`](/zh-hans/webfrontend/<aside>), [`<section>`](/zh-hans/webfrontend/<section>), [`<nav>`](/zh-hans/webfrontend/<nav>)), 不能是[`<header>`](/zh-hans/webfrontend/<header>) 或 [`<footer>`](/zh-hans/webfrontend/<footer>)元素. |
 | **标签省略** | 不允许，开始标签和结束标签都不能省略。|
-| **允许的父级元素** | 父级元素可以是任何接受*流式内容*的元素，但除了 `<address>` 元素(根据对称性的逻辑原理，如果`<address>`元素作为父级元素，则不能有嵌套元素；如果有`<address>`元素,则不能用`<address>`元素作为其父级元素）。|
+| **允许的父元素** | 父级元素可以是任何接受*流式内容*的元素，但除了 `<address>` 元素(根据对称性的逻辑原理，如果`<address>`元素作为父级元素，则不能有嵌套元素；如果有`<address>`元素,则不能用`<address>`元素作为其父级元素）。|
 | **允许的 ARIA 角色** | 无 |
 | **DOM 接口** | **`HTMLElement`** |
 

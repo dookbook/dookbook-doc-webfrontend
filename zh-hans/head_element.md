@@ -11,5 +11,5 @@ HTML `<head>`元素**规定文档相关的配置信息**（**元数据**)，包�
 | :-- | :-- |
 | **内容类别** | 无 |
 | **允许内容** | 至少包含一个[`<title>`](/zh-hans/webfrontend/<title>/)元素来指定文档的标题信息，除非标题已经从更高等级协议中指定（[`<iframe>`](/zh-hans/webfrontend/<iframe>)）。|
-| **允许父元素** | [`<html>`](/zh-hans/webfrontend/<html>)元素，并作为其第一个子元素 |
+| **允许的父元素** | [`<html>`](/zh-hans/webfrontend/<html>)元素，并作为其第一个子元素 |
 | **DOM接口** | `HTMLHeadElement` |
