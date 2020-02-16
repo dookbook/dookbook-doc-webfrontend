@@ -1,17 +1,20 @@
 TOPICS: <data>
+        <data> value attribute
 
-# `<data>`
+# HTML `<data>` Element
 
-The **HTML `<data>` element** links a given content with a machine-readable translation. If the
-content is time- or date-related, the [`<time>`](/en/webfrontend/<time>) element must be used.
+The **HTML `<data>` element** links a given content with a machine-readable translation.
+
+!!! warn "Note"
+    If the content is time- or date-related, the [`<time>`](/en/webfrontend/<time>) element must be used.
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, palpable content.
-| **Permitted content** | Phrasing content.
-| **Tag omission** | None, both the starting and ending tag are mandatory.
-| **Permitted parents** | Any element that accepts phrasing content.
-| **DOM interface** | `HTMLDataElement`
+| **Content categories** | *Flow content*, *phrasing content*, *palpable content*. |
+| **Permitted content** | *Phrasing content*. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
+| **DOM interface** | **`HTMLDataElement`** |
 
 ## Attributes
 
@@ -19,7 +22,7 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 | Attribute | Description |
 | :-- | :-- |
-| `value` | This attribute specifies the machine-readable translation of the content of the element.
+| **`value`** | This attribute specifies the machine-readable translation of the content of the element.
 
 ## Example
 
