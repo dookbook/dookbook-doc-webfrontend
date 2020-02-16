@@ -16,7 +16,7 @@ HTML `<main>` 元素标记了文档 *[`<body>`](/zh-hans/webfrontend/<body>/)* �
 | **内容类别** | *流式内容*, *可触知内容* |
 | **允许内容** | *流式内容* |
 | **标签省略** | 不允许，开始与结束标签都是必需的。|
-| **被允许的父级元素** | 任何支持*流式内容*除了 ~~[`<article>`](/zh-hans/webfrontend/<article>)~~, ~~[`<aside>`](/zh-hans/webfrontend/<aside>)~~, ~~[`<footer>`](/zh-hans/webfrontend/<footer>)~~, ~~[`<header>`](/zh-hans/webfrontend/<header>)~~, 或 ~~[`<nav>`](/zh-hans/webfrontend/<nav>)~~ |
+| **允许的父元素** | 任何支持*流式内容*除了 ~~[`<article>`](/zh-hans/webfrontend/<article>)~~, ~~[`<aside>`](/zh-hans/webfrontend/<aside>)~~, ~~[`<footer>`](/zh-hans/webfrontend/<footer>)~~, ~~[`<header>`](/zh-hans/webfrontend/<header>)~~, 或 ~~[`<nav>`](/zh-hans/webfrontend/<nav>)~~ |
 | **DOM 接口** | **`HTMLElement`** |
 
 ## 属性

@@ -26,7 +26,7 @@ Adding captions and subtitles to HTML5 video。
 | :-- | :-- |
 | **允许内容** | 流式内容, 包含任一 src 属性或是一个或多个 [`<source>`](/zh-hans/webfrontend/<source>) 元素，其后紧跟流式内容 或 段落内容 ， 不包括 `<video>` 或者 [`<audio>`](/zh-hans/webfrontend/<audio>) 元素。|
 | **标记省略** | 无，开始标签和结束标签都必须有 |
-| **允许的父级元素** | 任何接受流式内容，或者段落内容的元素。|
+| **允许的父元素** | 任何接受流式内容，或者段落内容的元素。|
 | **规范文档** | HTML5, 4.8.6节 |
 
 ## 属性
