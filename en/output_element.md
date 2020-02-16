@@ -8,6 +8,8 @@ TOPICS: <output>
 The **HTML Output element (`<output>`)** is a container element into which a site or app can inject
 the results of a calculation or the outcome of a user action.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *phrasing content*, *listed*, *labelable*, *resettable form-associated element, palpable content*.|
