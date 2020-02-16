@@ -15,6 +15,8 @@ person, people, or organization to which the contact information refers.
 in the page header, or indicating the author of an article by including an `<address>`
 element within the *[`<article>`](/en/webfrontend/<article>)*.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *palpable content*. |
