@@ -1,4 +1,5 @@
 TOPICS: <data>
+        <data> value attribute
 
 # HTML `<data>` 元素
 
@@ -24,7 +25,7 @@ TOPICS: <data>
 
 | 属性 | 描述 |
 | :-- | :-- |
-| `value` | 该属性指定元素内容对应的机器可读的翻译。 |
+| **`value`** | 该属性指定元素内容对应的机器可读的翻译。 |
 
 ## 示例
 
