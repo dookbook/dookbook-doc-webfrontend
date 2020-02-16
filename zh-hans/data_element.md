@@ -16,7 +16,7 @@ TOPICS: <data>
 | **标签省略** | 不允许，开始标签和结束标签都是必需的. |
 | **允许的父元素** | 接受 *短语内容* 的任何元素。 |
 | **允许的 ARIA 角色** | 无 |
-| **DOM 接口** | **`HTMLTextAreaElement`** |
+| **DOM 接口** | **`HTMLDataElement`** |
 
 ## 属性
 
