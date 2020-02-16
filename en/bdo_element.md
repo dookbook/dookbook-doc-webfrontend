@@ -1,13 +1,16 @@
 TOPICS: <bdo>
+        <bdo> dir attribute
 
-# `<bdo>`
+# HTML Bidirectional Overlay Element: `<bdo>`
 
-The **`<bdo>`** element (HTML bidirectional overlay element) is used to cover the current text orientation,
+**HTML `<bdo>` bidirectional overlay element** is used to cover the current text orientation,
 which causes the characters to line up in a given direction.
 
 !!! warn "Note"
     The text's characters are drawn from the starting point in the given direction; the individual
     characters' orientation is not affected (so characters don't get drawn backward, for example).
+
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
