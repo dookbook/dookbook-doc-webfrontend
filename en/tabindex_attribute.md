@@ -9,96 +9,44 @@ element can be focused, and where it participates in sequential keyboard navigat
 
 It accepts an integer as a value, with different results depending on the integer's value:
 
-- A negative value (usually `tabindex="-1"`) means that the element is not reachable via sequential
+- A **negative value** (usually `tabindex="-1"`) means that the element is not reachable via sequential
 keyboard navigation, but could be focused with JavaScript or visually. It's mostly useful to create
 accessible widgets with JavaScript. You can observe the Tabindex Accessibility example below to
 clear confusion.
-
-!!! warn "Don't try this at home"
-    A negative value is useful when you have off-screen content that appears on a specific event. The
-    user won't be able to focus any element with a negative `tabindex` using the keyboard, but a script
-    can do so by calling the `focus()` method.
-
-- `tabindex="0"` means that the element should be focusable in sequential keyboard navigation, but
-its order is defined by the document's source order.
-
-- A positive value means the element should be focusable in sequential keyboard navigation, with its
-order defined by the value of the number. That is, `tabindex="4"` is focused before `tabindex="5"`,
-but after `tabindex="3"`. If multiple elements share the same positive `tabindex` value, their order
-relative to each other follows their position in the document source. The maximum value for `tabindex`
-is 32767. If not specified, it takes the default value 0.
-
-!!! error ""
-    Avoid using `tabindex` values greater than 0. Doing so makes it difficult for people who rely on
-    assistive technology to navigate and operate page content. Instead, write the document with the
-    elements in a logical sequence.
+- A `tabindex` of **`0`** means that the element should be focusable in sequential keyboard navigation,
+but its order is defined by the document's source order.
+- A **positive value** means that the element should be focusable, And can be accessed by keyboard navigation;
+Each time the user presses the !!!Tab!!! key, Its relative order is increased according to the value
+of **`tabindex`** and the focus is delayed. Most platforms provide a reverse-tab feature, typically
+using the combination of !!!Shift!!! + !!!Tab!!!, which reverses the tabbing order. If multiple elements
+have the same **`tabindex`**, their relative order is determined by their order in the current DOM.
 
 If you set the `tabindex` attribute on a [`<div>`](/en/webfrontend/<div>), then its child content
-cannot be scrolled with the arrow keys unless you set `tabindex` on the content, too.
-[Check out this fiddle to understand the scrolling effects of `tabindex`](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
+cannot be scrolled with the arrow keys unless you set `tabindex` on the content.
 
-## Tabindex Accessibility
+!!! warn "Note"
+    The maximum value of `tabindex` should not exceed **32767**. If not specified,
+    its default value is `-1`.
+
+## Example
 
 ```html
-<input type="file"
-       id="f-upload"
-       tabindex="-1"
-       aria-role="button"
-       aria-label="Click here to upload a file and view its content" />
-<button role="presentation none"><label for="f-upload">Click here to view a file's text content</label></button>
-<br />
-<textarea id="f-contents" role="textbox" rows="8"></textarea>
+<a href="https://dookbook.info/" tabindex="2">DookBook</a><br/>
+<a href="https://github.com/" tabindex="1">GitHub</a><br/>
+<a href="http://www.google.com/" tabindex="3">Google</a>
+<!--
+    Click to 1, press Tab, and jump to 2 and 3
+    Click 3 to jump to somewhere else
+    Click 2 to jump to 3
+
+    Tabindex jumps from small to large. If you click directly on the option with the largest tabindex ordinal in the module, jump to somewhere else, or not.
+-->
+<p><b>注释：</b>请尝试使用键盘上的 "Tab" 键在链接之间进行导航。</p>
 ```
-
-```css
-#f-upload {
-    position: fixed;
-    visibility: hidden;
-}
-#f-contents {
-    box-sizing: border-box;
-    width: 100%;
-}
-```
-
-```javascript
-var fReader = new FileReader(); // used to asynchronously convert blobs into text
-
-var fUploadNode = document.getElementById("f-upload");
-fUploadNode.onchange=function(){ fReader.readAsText( fUploadNode.files[0] ); };
-
-var fContentsNode = document.getElementById("f-contents");
-fReader.onload=function(){ fContentsNode.value = fReader.result; };
-```
-
-([equivalent JSFiddle can be found here if MDN is down](https://jsfiddle.net/7gk4pqwf/3/))
-
-In the above example, you might use a label whose `for` attribute points to a file upload dialog.
-You can use `tabindex` to mark the label as focusable so that visual readers can see the selected button,
-but use WAI-ARIA to ignore the label and only present the visually-hidden upload button so that the
-assistive software can more simply understand that it is a file upload and thus be less prone to
-errors or mistakes that might impede the end user.
-
-### Accessibility concerns
-
-Avoid using the `tabindex` attribute in conjunction with non-interactive content to make something
-intended to be interactive focusable by keyboard input. An example of this would be using a
-[`<div>`](/en/webfrontend/<div>) element to describe a button, instead of the
-[`<button>`](/en/webfrontend/<button>) element.
-
-Interactive components authored using non-interactive elements are not be listed in the accessibility
-tree. This prevents assistive technology from being able to navigate to and manipulate those components.
-The content should be semantically described using interactive elements ([`<a>`](/en/webfrontend/<a>),
-[`<button>`](/en/webfrontend/<button>), [`<details>`](/en/webfrontend/<details>),
-[`<input>`](/en/webfrontend/<input>), [`<select>`](/en/webfrontend/<select>),
-[`<textarea>`](/en/webfrontend/<textarea>), etc.) instead. These elements have built-in roles and
-states that communicate status to the accessibility that would otherwise have to be managed by [[ARIA]].
-
-- [Using the tabindex attribute | The Paciello Group](https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/)
 
 ## See also
 
 - All HTML [global attributes](/en/webfrontend/HTML_Global_Attributes).
 - [`HTMLElement.tabIndex`](/en/webfrontend/HTMLElement.tabIndex) that reflects this attribute
-- Accessibility problems with tabindex: see [Don’t Use Tabindex Greater than 0](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
+- Accessibility problems with `tabindex`: see [Don’t Use Tabindex Greater than 0](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
 by Adrian Roselli

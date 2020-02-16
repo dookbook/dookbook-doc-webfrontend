@@ -8,6 +8,8 @@ The **HTML `<data>` element** links a given content with a machine-readable tran
 !!! warn "Note"
     If the content is time- or date-related, the [`<time>`](/en/webfrontend/<time>) element must be used.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *phrasing content*, *palpable content*. |
