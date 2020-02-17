@@ -48,7 +48,7 @@ TOPICS: <acronym>
 | `<center>` | The obsolete **HTML Center Element (`<center>`)** is a block-level element that displays its block-level or inline contents centered horizontally within its containing element. |
 | `<command>` | The **HTML Command element (`<command>`)** represents a command which the user can invoke. Commands are often used as part of a context menu or toolbar. |
 | `<content>` | The **HTML `<content>` element**—an obsolete part of the Web Components suite of technologies—was used inside of Shadow DOM as an insertion point, and wasn't meant to be used in ordinary HTML. |
-| ~~`<dir>`~~ | HTML directory element. Used as a **container for a directory** of files and/or folders, potentially with styles and icons applied by the user agent. Use **[`<ul>`](/en/webfrontend/<ul>)** instead. |
+| **`<dir>`** | HTML directory element. Used as a **container for a directory** of files and/or folders, potentially with styles and icons applied by the user agent. Use **[`<ul>`](/en/webfrontend/<ul>)** instead. |
 | `<element>` | The obsolete **HTML `<element>` element** was part of the Web Components specification; it was intended to be used to define new custom DOM elements. |
 | `<font>` | The **HTML Font Element (`<font>`)** defines the font size, color and face for its content. |
 | `<frame>` | `<frame>` is an HTML element which defines a particular area in which another HTML document can be displayed. A frame should be used within a `<frameset>`. |
@@ -56,7 +56,7 @@ TOPICS: <acronym>
 | **`<image>`** | HTML image element. An obsolete remnant of an ancient version of HTML lost in the mists of time; use the standard **[`<img>`](/en/webfrontend/<img>)** element instead. |
 | `<isindex>` | `<isindex>` is an obsolete HTML element that puts a text field in a page for querying the document. |
 | **`<keygen>`** | HTML key generation element. Facilitate **generation of key** material, and **submission of the public key** as part of an *HTML form*. This mechanism is designed for use with Web-based certificate management systems. It is expected that it will be used in an HTML form along with other information needed to construct a certificate request, and that the result of the process will be a signed certificate. |
-| `<listing>` | The HTML Listing Element (`<listing>`) renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML 2 standard recommended that lines shouldn't be broken when not greater than 132 characters. |
+| **`<listing>`** | HTML listing element. Render text between the start and end tags without interpreting the HTML in between and using a *`monospaced`* font. The HTML 2 standard recommended that lines shouldn't be broken when not greater than 132 characters. Use **[`<pre>`](/en/webfrontend/<pre>)** or **[`<samp>`](/en/webfrontend/<samp>)** element instead. |
 | `<marquee>` | The HTML `<marquee>` element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes. |
 | **`<menuitem>`** | HTML menu item element. Represent a command that a user is able to invoke through a **popup menu**. More details to refer to **[`<menu>`](/en/webfrontend/<menu>)**. |
 | `<multicol>` | The HTML Multi-Column Layout element (`<multicol>`) was an experimental element designed to allow multi-column layouts and must not be used. |
@@ -69,4 +69,4 @@ TOPICS: <acronym>
 | **`<spacer>`** | HTML space element. Allow insertion of **empty spaces** on pages. Use HTML **`&nbsp;`** or [[CSS]] instead. |
 | **`<strike>`** | HTML strike-through element. For deleted text, use **[`<del>`](/en/webfrontend/<del>)** instead; For style (horizontal line) over text, use CSS property **`text-decoration: line-through`** instead; For text that are no longer relevant or no longer accurate, use **[`<s>`](/en/webfrontend/<s>)** instead. |
 | **`<tt>`** | HTML Teletype Text element. Create inline text which is presented using the user agent's default *`monospace`* font face. Use [[CSS]] instead. |
-| **`<xmp>`** | HTML Example Element. Render text between the start and end tags **without interpreting the HTML** in between and using a *`monospaced`* font. The *HTML 2* specification recommended that it should be rendered wide enough to allow *80* characters per line. Use **[`<pre>`](/en/webfrontend/<pre>)** instead. |
+| **`<xmp>`** | HTML Example Element. Render text between the start and end tags **without interpreting the HTML** in between and using a *`monospaced`* font. The *HTML 2* specification recommended that it should be rendered wide enough to allow *80* characters per line. Use **[`<pre>`](/en/webfrontend/<pre>)** or **[`<samp>`](/en/webfrontend/<samp>)** instead. |
