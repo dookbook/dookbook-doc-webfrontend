@@ -1,7 +1,7 @@
 TOPICS: <figure>
         <figcaption>
 
-# HTML 图片说明/标题元素： `<figure>` / `<figcaption>`
+# HTML `<figure>` / `<figcaption>` 元素
 
 **HTML `<figure>` 元素** 代表一段独立的内容, 经常与说明 `<figcaption>` 配合使用, 并且作为一个独立的引用单元。当它属于主内容流时，它的位置独立于主体。这个标签经常是在主文中引用的图片、插图、表格、代码段等等，当这部分转移到附录中或者其他页面时不会影响到主体。
 

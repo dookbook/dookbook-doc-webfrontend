@@ -1,7 +1,7 @@
 TOPICS: <figure>
         <figcaption>
 
-# HTML Picture Caption/Title Element： `<figure>` / `<figcaption>`
+# HTML Figure Element: `<figure>` / `<figcaption>`
 
 The **HTML `<figure>` element** represents self-contained content, potentially with an optional caption,
 which is specified using the (`<figcaption>`) element. The figure, its caption, and its contents are
