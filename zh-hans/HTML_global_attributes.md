@@ -16,7 +16,7 @@ TOPICS: HTML Global Attributes
 | [**`title`**](/zh-hans/webfrontend/title_attribute) | 包含表示与其所属元素相关信息的**建议文本**。 这些信息通常可以作为提示呈现给用户，但不是必须的。 | 可用 |
 | [**`hidden`**](/zh-hans/webfrontend/hidden_attribute) | *布尔属性*表示该元素尚未或不再相关。例如，它可用于隐藏在登录过程完成之前无法使用的页面元素。浏览器不会呈现此类元素。不得使用此属性隐藏可合法显示的内容。 | 可用 |
 | [**`lang`**](/zh-hans/webfrontend/lang_attribute) | 帮助定义元素的**语言**：不可编辑元素所在的语言，或者应该由用户编写的可编辑元素的语言。该属性包含一个“语言标记”(由用连字符分隔的“语言子标记”组成)，格式在 [Tags for Identifying Languages (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt) 中定义。`xml:lang` 优先于它。 | 可用 |
-| [**`tabindex`**](/zh-hans/webfrontend/tabindex_attribute) | *整数属性*，指示元素是否可以获取输入焦点（可聚焦），是否应该参与顺序键盘导航，如果是，则表示哪个位置。它可能需要几个值： <br> &nbsp;- *负值* 表示该元素应该是可聚焦的，但不应通过顺序键盘导航到达 <br> &nbsp;- `0` 表示元素应通过顺序键盘导航可聚焦和可到达，但其相对顺序由平台约定定义 <br> &nbsp;- *正值* 意味着元素应该可以通过顺序键盘导航进行聚焦和访问；元素聚焦的顺序是`tabindex`的增加值。如果多个元素共享相同的`tabindex`，则它们的相对顺序遵循它们在文档中的相对位置 | 可用 |
+| [**`tabindex`**](/zh-hans/webfrontend/tabindex_attribute) | *整数属性*，指示元素是否可以获取输入焦点（可聚焦），是否应该参与顺序键盘导航，如果是，则表示哪个位置。| 可用 |
 | [**`style`**](/zh-hans/webfrontend/style_attribute) | 含要应用于元素的[[CSS]]样式声明。 请注意，建议在单独的文件中定义样式。 该属性和[`<style>`](/zh-hans/webfrontend/<style>)元素主要用于快速样式化，例如用于测试目的。 | 可用 |
 | [**`data-`**](/zh-hans/webfrontend/data-_attribute) | 一类**自定义数据属性**，它赋予我们在所有 HTML 元素上嵌入自定义数据属性的能力，并可以通过脚本(一般指JavaScript)与HTML之间进行专有*数据的交换*。所有这些自定义数据属性都可以通过所属元素的 `HTMLElement` 接口来访问。 `HTMLElement.dataset` 属性可以访问它们。 | 可用 |
 | [`contenteditable`](/zh-hans/webfrontend/contenteditable_attribute) | 一个*枚举属性*（*enumerated attribute*），表示元素是否**可被用户编辑**。 如果可以，浏览器会调整元素的部件（widget）以允许编辑。<br> &nbsp;- `true` 或者*空字符串*，表明元素是**可被编辑的** <br> &nbsp;- `false`，表明元素**不能被编辑** | 可用 |

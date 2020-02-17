@@ -94,7 +94,7 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 | **`readonly`** | A *Boolean* attribute which, if `true`, indicates that the input **cannot be edited**. Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only (`readonly`) and being disabled (`disabled`), so the `readonly` attribute does not apply. |
 | **`list`** | The **`id`** of a *[`<datalist>`](/en/webfrontend/<datalist>)* element that provides a list of suggested values for the input. |
 | **`form`** | The **`id` of the `<form>`** of which the input is a member; if absent, the input is a member of the *nearest* containing form, or is not a member of a form at all. |
-| `pattern` | The `pattern` attribute specifies the regular expression used to validate the value of the `<input>` element。Applies to `type`: *`text`*, *`search`*, *`url`*, *`tel`*, *`email`* and *`password`*。|
+| `pattern` | Specifies the regular expression used to validate the value of the `<input>` element。Applies to `type`: *`text`*, *`search`*, *`url`*, *`tel`*, *`email`* and *`password`*。|
 | `autocomplete` | A *string* indicating the type of **autocomplete functionality**, if any, to allow on the input. **`on`** for enabling autocomplete, **`off`** for disabling. Only support `<input>` elements with `type`: *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`*, and *`color`*. |
 
 !!! warn "**`autofocus`** Usage Notes"
