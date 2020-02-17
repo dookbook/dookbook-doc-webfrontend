@@ -1,5 +1,4 @@
 TOPICS: tabindex attribute
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # HTML Global Attribute: `tabindex`
 
