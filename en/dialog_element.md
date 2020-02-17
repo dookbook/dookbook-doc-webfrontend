@@ -1,9 +1,9 @@
 TOPICS: <dialog>
+        <dialog> open attribute
 
 # HTML Dialog Element: `<dialog>`
 
-The **HTML `<dialog>` element** represents a **dialog box** or other **interactive component**,
-such as an *inspector* or *window*.
+The **HTML `<dialog>` element** represents a **dialog box**, such as an *inspector* or *window*.
 
 ## Technical Summary
 
@@ -13,7 +13,7 @@ such as an *inspector* or *window*.
 | **Permitted content** | *Flow content* |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
 | **Permitted parents** | Any element that accepts *flow content* |
-| **Permitted ARIA roles** | `alertdialog` |
+| **Permitted ARIA roles** | **`alertdialog`** |
 | **DOM interface** | **`HTMLDialogElement`** |
 
 ## Attributes
@@ -23,7 +23,7 @@ The *`tabindex`* attribute **must not** be used on the `<dialog>` element.
 
 | Attribute | Description |
 | :-- | :-- |
-| **`open`** | Indicates that the dialog is **active** and **available for interaction**. When this attribute is not set, the dialog shouldn't be shown to the user.
+| **`open`** | Indicates that the dialog is **active** and **available for interaction**. When this attribute is not set, the dialog shouldn't be shown to the user. |
 
 ## Usage Notes
 
@@ -35,9 +35,7 @@ attribute set to the value of the form's *`submit`* button that was used.
 for example to dim inaccessible content whilst a modal dialog is active. The backdrop is only drawn
 when the dialog element is displayed with `HTMLDialogElement.showModal()`.
 
-## Examples
-
-### Simple example
+## Simple example
 
 ```html
 <dialog open>
@@ -45,7 +43,7 @@ when the dialog element is displayed with `HTMLDialogElement.showModal()`.
 </dialog>
 ```
 
-### Advanced example
+## Advanced example
 
 This example opens a pop-up dialog box containing a form when the "Update details" button is clicked.
 
