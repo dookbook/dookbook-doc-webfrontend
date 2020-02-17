@@ -33,6 +33,7 @@ TOPICS: <form>
         <input> width attribute
         <input> placeholder attribute
         <input> size attribute
+        <input> pattern attribute
 
 # HTML 表单 `<form>` / `<input>`
 
@@ -87,6 +88,7 @@ TOPICS: <form>
 | **`readonly`** | *布尔*值，表示**无法编辑**输入。仅文本控件可以设置为只读，因为对于其他控件（例如复选框和按钮），在只读(`readonly`)和禁用(`disabled`)之间没有区别，因此`readonly`属性不适用。|
 | **`list`** | *[`<datalist>`](/zh-hans/webfrontend/<datalist>)* 元素的 **`id`**，该元素提供输入建议值的列表。|
 | **`form`** | **所属 `<form>` 的 `id`**。如果不存在，则输入是包含*最近*的表单的成员，或者根本不是表单的成员。|
+| `pattern` | `pattern` 属性规定用于验证 `<input>` 元素的值的正则表达式。适用于 `type` 类型为: *`text`*, *`search`*, *`url`*, *`tel`*, *`email`* 和 *`password`*。|
 | `autocomplete` | **`on`**: (默认) 启用**自动补全**；**`off`**: 禁用自动补全。仅用于 `type` 为 *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`* 以及 *`color`* 的 `<input>`。|
 
 !!! warn "**`autofocus`** 属性用法注意事项"
