@@ -1,42 +1,35 @@
-TOPICS: <figcaption>
-        <figure>
+TOPICS: <figure>
+        <figcaption>
 
-# `<figcaption>`
+# HTML Picture Caption/Title Element： `<figure>` / `<figcaption>`
 
-The **HTML `<figcaption>` or Figure Caption element** represents a caption or legend describing the
-rest of the contents of its parent `<figure>` element.
+The **HTML `<figure>` element** represents self-contained content, potentially with an optional caption,
+which is specified using the (`<figcaption>`) element. The figure, its caption, and its contents are
+referenced as a single unit.
 
-|  |  |
-| :-- | :-- |
-| **Content categories** | None. |
-| **Permitted content** | `Flow content`. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | A `<figure>` element; the `<figcaption>` element must be its first or last child. |
-| **Permitted ARIA roles** | `group`, `presentation` |
-| **DOM interface** | `HTMLElement` |
+The **HTML `<figcaption>` element** is the caption/title of the image associated with it, and is
+used to describe other data in its parent node `<figure>` element. This means that `<figcaption>`
+must be the first or last in the `<figure>` block. At the same time, the HTML `<figcaption>` element
+is optional; without this element, the picture of this parent node will just have no caption/caption.
+
+## Technical Summary
+
+| - | `<figure>` | `<figcaption>` |
+| :-- | :-- | :-- |
+| **Content categories** | *Flow content*, *sectioning root*, *palpable content*. | None. |
+| **Permitted content** | A `<figcaption>` element, followed by *flow content*; or *flow content* followed by a `<figcaption>` element; or *flow content*. | *Flow content*. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. | None |
+| **Permitted parents** | Any element that accepts **Flow content**. | A `<figure>` element; the `<figcaption>` element must be its first or last child. |
+| **Permitted ARIA roles** | **`group`**, **`presentation`** | **`group`**, **`presentation`** |
+| **DOM interface** | **`HTMLElement`** | **`HTMLElement`** |
 
 ## Attributes
 
 This element only includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
-## `<figure>`
-
-The HTML `<figure>` (Figure With Optional Caption) element represents self-contained content,
-potentially with an optional caption, which is specified using the (`<figcaption>`) element. The figure,
-its caption, and its contents are referenced as a single unit.
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | Flow content, sectioning root, palpable content. |
-| **Permitted content** | A `<figcaption>` element, followed by flow content; or flow content followed by a `<figcaption>` element; or flow content. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts Flow content. |
-| **Permitted ARIA roles** | `group`, `presentation` |
-| **DOM interface** | `HTMLElement` |
-
 ## Usage Notes
 
-- Usually a `<figure>` is an image, illustration, diagram, code snippet, etc., that is referenced
+- Usually a `<figure>` is an image、illustration、diagram、code snippet, etc., that is referenced
 in the main flow of a document, but that can be moved to another part of the document or to an
 appendix without affecting the main flow.
 - Being a sectioning root, the outline of the content of the `<figure>` element is excluded
@@ -45,9 +38,7 @@ from the main outline of the document.
 (as the first or the last child). The first `<figcaption>` element found
 in the figure is presented as the figure's caption.
 
-## Examples
-
-### Images
+## Example: Images
 
 ```html
 <!-- Just an image -->
@@ -66,7 +57,7 @@ in the figure is presented as the figure's caption.
 </figure>
 ```
 
-### Code snippets
+## Example: Code snippets
 
 ```html
 <figure>
@@ -86,7 +77,7 @@ function NavigatorExample() {
 </figure>
 ```
 
-### Quotations
+## Example: Quotations
 
 ```html
 <figure>
@@ -96,7 +87,7 @@ function NavigatorExample() {
 </figure>
 ```
 
-### Poems
+## Example: Poems
 
 ```html
 <figure>
