@@ -53,4 +53,3 @@ p.important {
 - All HTML [global attributes](/en/webfrontend/HTML_Global_Attributes).
 - [`element.className`](/en/webfrontend/Element.className)
 - [`element.classList`](/en/webfrontend/Element.classList)
-- [Introduction to CSS](https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/)
