@@ -11,6 +11,8 @@ TOPICS: <textarea>
         <textarea> disabled attribute
         <textarea> readonly attribute
         <textarea> placeholder attribute
+        <textarea> spellcheck attribute
+        <textarea> form attribute
 
 # HTML `<textarea>` 元素
 
@@ -38,8 +40,8 @@ TOPICS: <textarea>
 | **`name`** | 控件的**名称**。|
 | **`maxlength`** | 用户可以输入的**最大字符数**（*UTF-16* 编码单元）。如果未指定此值，则用户可以输入*不限数量*的字符。|
 | **`minlength`** | 用户应输入的**最小字符数**（*UTF-16* 编码单元）。|
-| **`wrap`** | 指示控件如何环绕文本。可能的值为：<br><br>**`hard`:** 浏览器会自动插入换行符（CR + LF），以使每行的宽度不超过控件的宽度； <br>**`soft`:** 浏览器确保值中的所有换行符均由CR + LF对组成，但不会插入任何其他字符 <br>**`off`:** 类似于 `soft`，但将外观更改为空白：之前，不要环绕超过 `cols` 的线段，并且 `<textarea>` 可以水平滚动。<br><br>如果未指定此属性，则 *`soft`* 为其默认值。|
-| **`placeholder`** | 向用户**提示**可以在控件中输入的内容。呈现提示时，占位符文本内的回车符或换行符必须视为换行符。|
+| **`wrap`** | 指示控件如何环绕文本。可能的值为：<br><br>**`hard`:** 浏览器会自动插入换行符（CR + LF），以使每行的宽度不超过控件的宽度； <br>**`soft`:** 浏览器确保值中的所有换行符均由CR + LF对组成，但不会插入任何其他字符 <br>**`off`:** 类似于 `soft`，但将外观更改为空白之前，不要环绕超过 `cols` 的线段，并且 `<textarea>` 可以水平滚动。<br><br>如果未指定此属性，则 *`soft`* 为其默认值。|
+| **`placeholder`** | 描述文本区域预期值的**简短提示**。呈现提示时，占位符文本内的回车符或换行符必须视为换行符。|
 | `spellcheck` | 指定`<textarea>`是否受基础浏览器/OS的拼写检查。 值可以是：<br> **`true`:** 表示该元素需要检查其拼写和语法。<br> **`default`:** 表示该元素将按照 默认行为，可能基于父元素自己的`spellcheck`值。<br> **`false`:** 指示不应对元素进行拼写检查。|
 
 `<textarea>`元素还支持用于 *[`<input>`](/zh-hans/webfrontend/<input>)* 的几种常见属性:
@@ -77,8 +79,8 @@ TOPICS: <textarea>
    minlength="10" maxlength="20">Write something here</textarea>
 ```
 
-请注意，*`minlength`* 不会阻止用户删除字符，从而使输入的数字超过最小值，但确实会使输入 `<textarea>` 的值无效。还要注意，即使您设置了 `minlength` 值（例如3），
-除非您也设置了 *`required`* 属性，否则空的 `<textarea>` 仍然被认为是有效的。
+**请注意**，*`minlength`* 不会阻止用户删除字符，从而使输入的数字超过最小值，但确实会使输入 `<textarea>` 的值无效。**还要注意**，即使您设置了 `minlength`
+值（例如3），除非您也设置了 *`required`* 属性，否则空的 `<textarea>` 仍然被认为是有效的。
 
 ## 用法： 占位符 `placeholder`
 
@@ -90,8 +92,16 @@ TOPICS: <textarea>
    placeholder="Comment text."></textarea>
 ```
 
-!!! warn ""
-    注意：占位符 **`placeholder`** 仅用于显示应输入表单的数据示例；
+!!! warn "提示"
+    如若 `placeholder` 属性里的提示文字需要两行或者多行显示，请用换行符（`&#10;`）来换行
+
+```html
+<textarea name="textarea"
+   placeholder="hello you&#10;Second line&#10;Third line"></textarea>
+```
+
+!!! warn "注意"
+    占位符 **`placeholder`** 仅用于显示应输入表单的数据示例；
     但不能替代绑定输入的 *[`<label>`](/zh-hans/webfrontend/<label>)* 元素。
 
 ## 用法：禁用和只读
@@ -139,11 +149,11 @@ textarea {
 例如，根据文本区域的有效或无效来为其设置不同的边框：
 
 ```css
-textarea:invalid {
+textarea:invalid { /*无效时显示的样式*/
   border: 2px dashed red;
 }
 
-textarea:valid {
+textarea:valid { /*有效时显示的样式*/
    border: 2px solid lime;
 }
 ```

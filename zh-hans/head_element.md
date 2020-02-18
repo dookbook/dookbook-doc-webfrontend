@@ -5,7 +5,7 @@ TOPICS: <head>
 HTML `<head>`元素**规定文档相关的配置信息**（**元数据**)，包括文档的*标题* ([`<title>`](/zh-hans/webfrontend/<title>))、*作者*、*描述*、
 以及引用的*文档样式（[[CSS]]）* ([`<link>`](/zh-hans/webfrontend/<link>))和*脚本（JavaScript）* ([`<script>`](/zh-hans/webfrontend/<script>))等。
 
-!!! warn"注意"
+!!! warn "注意"
     `<head>`主要保存用于机器处理的信息，而不是可读性。有关可视的信息，如顶级标题和列出的作者，请参见[`<header>`](/zh-hans/webfrontend/<header>)元素。
 
 如果在文档中忽略了`<head>`标签，则大部分浏览器会自动创建一个`<head>`元素。当然, 在旧版浏览器中无法保证自动创建。

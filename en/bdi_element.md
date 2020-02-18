@@ -1,8 +1,9 @@
 TOPICS: <bdi>
+        <bdi> dir attribute
 
-# `<bdi>`
+# HTML Bidirectional Isolate Element: `<bdi>`
 
-The **HTML Bidirectional Isolate element (`<bdi>`)**  tells the browser's bidirectional algorithm to
+The **HTML Bidirectional Isolate element `<bdi>`** tells the browser's bidirectional algorithm to
 treat the text it contains in isolation from its surrounding text. This tag is useful when you don't
 know from which direction to embed text, such as text from a database (especially the text direction
 of the database); for example, when posting user reviews or other content that you don't have full
@@ -21,12 +22,14 @@ Usually, the bidirectional algorithm will do the right thing without the author 
 any special markup but, occasionally, the algorithm needs help.
 That's where `<bdi>` comes in.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
 | **Content categories** | *Flow content*, *phrasing content*, *palpable content*. |
 | **Permitted content** | *Phrasing content*. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts phrasing content. |
+| **Permitted parents** | Any element that accepts *phrasing content*. |
 | **Permitted ARIA roles** | Any |
 | **DOM interface** | **`HTMLElement`** |
 
@@ -50,9 +53,7 @@ Although the `<span>` and `<bdi>` elements can achieve the same visual effects o
 does not recommend this method in HTML because it does not conform to semantics and allows browsers
 to ignore CSS styles.
 
-## Examples
-
-### No `<bdi>` with only LTR
+## No `<bdi>` with only LTR
 
 This example lists the winners of a competition using [`<span>`](/en/webfrontend/<span>) elements only.
 When the names only contain LTR text the results look fine:
@@ -64,7 +65,7 @@ When the names only contain LTR text the results look fine:
 </ul>
 ```
 
-### No `<bdi>` with RTL text
+## No `<bdi>` with RTL text
 
 This example lists the winners of a competition using [`<span>`](/en/webfrontend/<span>) elements
 only, and one of the winners has a name consisting of RTL text. In this case the "- 1", which
@@ -78,7 +79,7 @@ RTL text, and the result will be garbled:
 </ul>
 ```
 
-### Using `<bdi>` with LTR and RTL text
+## Using `<bdi>` with LTR and RTL text
 
 This example lists the winners of a competition using `<bdi>` elements. These elements instruct the
 browser to treat the name in isolation from its embedding context,
@@ -91,7 +92,7 @@ so the example output is properly ordered:
 </ul>
 ```
 
-### Other examples
+## Other examples
 
 ```html
 <p dir="ltr">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>

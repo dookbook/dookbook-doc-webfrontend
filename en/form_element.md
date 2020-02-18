@@ -33,7 +33,7 @@ TOPICS: <form>
         <input> height attribute
         <input> placeholder attribute
         <input> size attribute
-        <input> tabindex attribute
+        <input> pattern attribute
 
 # HTML Form: `<form>` / `<input>`
 
@@ -94,8 +94,8 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 | **`readonly`** | A *Boolean* attribute which, if `true`, indicates that the input **cannot be edited**. Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only (`readonly`) and being disabled (`disabled`), so the `readonly` attribute does not apply. |
 | **`list`** | The **`id`** of a *[`<datalist>`](/en/webfrontend/<datalist>)* element that provides a list of suggested values for the input. |
 | **`form`** | The **`id` of the `<form>`** of which the input is a member; if absent, the input is a member of the *nearest* containing form, or is not a member of a form at all. |
+| `pattern` | Specifies the regular expression used to validate the value of the `<input>` element。Applies to `type`: *`text`*, *`search`*, *`url`*, *`tel`*, *`email`* and *`password`*。|
 | `autocomplete` | A *string* indicating the type of **autocomplete functionality**, if any, to allow on the input. **`on`** for enabling autocomplete, **`off`** for disabling. Only support `<input>` elements with `type`: *`text`*, *`password`*, *`email`*, *`search`*, *`url`*, *`tel`*, *`date`*, *`datetime`*, *`datetime-local`*, *`range`*, and *`color`*. |
-| `tabindex` | A numeric value providing guidance to the user agent as to the order in which controls receive focus when the user presses the !!!Tab!!! key. |
 
 !!! warn "**`autofocus`** Usage Notes"
     **No more than one** element in the document may have the `autofocus` attribute.
@@ -109,29 +109,6 @@ This includes the [global HTML attributes](/en/webfrontend/HTML_Global_Attribute
 !!! info "`disabled` vs `readonly`"
     The difference between `disabled` and `readonly` is that read-only controls can still function,
     whereas disabled controls generally do not function as controls until they are enabled.
-
-### `tabindex` Attribute of `<input>`
-
-An optional numeric value that defines both whether or not the `<input>` should be focusable
-through use of the !!!Tab!!! key as well as whether or not the element participates in sequential focus
-navigation. This value also establishes the order in which the element is
-reached using the !!!Tab!!! key.
-
-The values of **`tabindex`** have special meanings depending on sign:
-
-- A **negative value** of `tabindex` indicates that the element should be focusable by the user,
-but not using sequential keyboard navigation.
-It's recommended to always use a value of *`-1`* as using other values can be complicated.
-- A `tabindex` of **`0`** means that the element should be focusable and should be reachable by sequential
-keyboard navigation, but that the tab order is left up to the user agent, which should apply the
-user's platform conventions. This is usually the best value to use when you want an element to be
-focusable and to participate in keyboard navigation rather than trying to manage the tab order yourself.
-- A **positive value** of `tabindex` indicates the tabbing order of the element. Each time the user
-presses the !!!Tab!!! key, the element with the next sequentially higher `tabindex` is focused.
-Most platforms provide a reverse-tab feature, typically using the combination
-of !!!Shift!!! + !!!Tab!!!, which reverses the tabbing order.
-If `tabindex` is omitted or is not a valid integer, the user agent follows
-platform conventions to determine what to do.
 
 ## Form `<input>` Types
 
