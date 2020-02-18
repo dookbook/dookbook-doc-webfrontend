@@ -9,12 +9,12 @@ bar* or a *page's tab*. It only contains text and TOPICS within the element are 
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Metadata content. |
+| **Content categories** | *Metadata content*. |
 | **Permitted content** | Text that is not inter-element whitespace. |
 | **Tag omission** | Both opening and closing TOPICS are required. Note that leaving off `</title>` should cause the browser to ignore the rest of the page. |
 | **Permitted parents** | A [`<head>`](/en/webfrontend/<head>/) element that contains no other `<title>` element. |
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLTitleElement` |
+| **DOM interface** | **`HTMLTitleElement`** |
 
 ## Usage Notes
 
