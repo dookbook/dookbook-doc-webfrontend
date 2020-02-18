@@ -44,50 +44,61 @@ Adding captions and subtitles to HTML5 video for more information.
 A good general source of information on using HTML `<video>` is the
 Video and audio content beginner's tutorial.
 
+## Technical Summary
+
+|  |  |
+| :-- | :-- |
+| **Content categories** | *Flow content*, *phrasing content*, *embedded content*. <br>If it has a `controls` attribute: *interactive content* and *palpable content*. |
+| **Permitted content** | If the element has a src attribute: zero or more [`<track>`](/en/webfrontend/<track>) elements, followed by *transparent content* that contains no media elements–that is no [`<audio>`](/en/webfrontend/<audio>) or `<video>`<br>Else: zero or more [`<source>`](/en/webfrontend/<source>) elements, followed by zero or more [`<track>`](/en/webfrontend/<track>) elements, followed by transparent content that contains no media elements–that is no [`<audio>`](/en/webfrontend/<audio>) or `<video>`. |
+| **Tag omission** | None, both the starting and ending tag are mandatory. |
+| **Permitted parents** | Any element that accepts *embedded content*. |
+| **Permitted ARIA roles** | `application` |
+| **DOM interface** | **`HTMLVideoElement`** |
+
 ## Attributes
 
 Like all other HTML elements, this element supports the [global attributes](/en/webfrontend/HTML_Global_Attributes).
 
 | Attribute | Description |
 | :-- | :-- |
-| `autoplay` | A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.<br>**Note:** Sites that automatically play audio (or video with an audio track) can be an unpleasant experience for users, so it should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control.<br>**Note:** To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay the attribute needs to be removed altogether.<br>**Note:** In some browsers (e.g. Chrome 70.0) autoplay is not working if no `muted` attribute is present.
-| `buffered` | An attribute you can read to determine the time ranges of the buffered media. This attribute contains a TimeRanges object.
-| `controls` | If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
-| `crossorigin` | This enumerated attribute indicates whether to use CORS to fetch the related image. CORS-enabled resources can be reused in the [`<canvas>`](/en/webfrontend/<canvas>) element without being tainted. The allowed values are:<br>**`anonymous`**<br>Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header<br>without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be tainted, and its usage restricted.<br>**`use-credentials`**<br>Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be tainted and its usage restricted.<br>When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in [`<canvas>`](/en/webfrontend/<canvas>) elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See CORS settings attributes for additional information.
-| `height` | The height of the video's display area, in CSS pixels (absolute values only; no percentages.)
-| `intrinsicsize` | This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and naturalWidth/naturalHeight on images would return the values specified in this attribute. `Explainer`, `examples`
-| `loop` | A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video.
-| `muted` | A Boolean attribute that indicates the default setting of the audio contained in the video. If set, the audio will be initially silenced. Its default value is false, meaning that the audio will be played when the video is played.
-| `preload` | This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience with regards to what content is loaded before the video is played. It may have one of the following values:<br>**`none`:** Indicates that the video should not be preloaded. metadata: Indicates that only video metadata (e.g. length) is fetched.<br>**`auto`:** Indicates that the whole video file can be downloaded, even if the user is not expected to use it.<br>**empty string:** Synonym of the `auto` value. The default value is different for each browser. The spec advises it to be set to `metadata`.<br>**Notes:**<br>The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.<br>The specification does not force the browser to follow the value of this attribute; it is a mere hint.
-| `playsinline` | A Boolean attribute indicating that the video is to be played "inline", that is within the element's playback area. Note that the absence of this attribute does not imply that the video will always be played in fullscreen.
-| `poster` | A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame.
-| `src` | The URL of the video to embed. This is optional; you may instead use the [`<source>`](/en/webfrontend/<source>) element within the video block to specify the video to embed.
-| `width` | The width of the video's display area, in CSS pixels (absolute values only; no percentages).
+| `autoplay` | A Boolean attribute; if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data.<br>**Note:** Sites that automatically play audio (or video with an audio track) can be an unpleasant experience for users, so it should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control.<br>**Note:** To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay the attribute needs to be removed altogether.<br>**Note:** In some browsers (e.g. Chrome 70.0) autoplay is not working if no `muted` attribute is present. |
+| `buffered` | An attribute you can read to determine the time ranges of the buffered media. This attribute contains a TimeRanges object. |
+| `controls` | If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback. |
+| `crossorigin` | This enumerated attribute indicates whether to use CORS to fetch the related image. CORS-enabled resources can be reused in the [`<canvas>`](/en/webfrontend/<canvas>) element without being tainted. The allowed values are:<br>**`anonymous`**<br>Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header<br>without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be tainted, and its usage restricted.<br>**`use-credentials`**<br>Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be tainted and its usage restricted.<br>When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in [`<canvas>`](/en/webfrontend/<canvas>) elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See CORS settings attributes for additional information. |
+| `height` | The height of the video's display area, in CSS pixels (absolute values only; no percentages.) |
+| `intrinsicsize` | This attribute tells the browser to ignore the actual intrinsic size of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and naturalWidth/naturalHeight on images would return the values specified in this attribute. `Explainer`, `examples`. |
+| `loop` | A Boolean attribute; if specified, the browser will automatically seek back to the start upon reaching the end of the video. |
+| `muted` | A Boolean attribute that indicates the default setting of the audio contained in the video. If set, the audio will be initially silenced. Its default value is false, meaning that the audio will be played when the video is played. |
+| `preload` | This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience with regards to what content is loaded before the video is played. It may have one of the following values:<br>**`none`:** Indicates that the video should not be preloaded. metadata: Indicates that only video metadata (e.g. length) is fetched.<br>**`auto`:** Indicates that the whole video file can be downloaded, even if the user is not expected to use it.<br>**empty string:** Synonym of the `auto` value. The default value is different for each browser. The spec advises it to be set to `metadata`.<br>**Notes:**<br>The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.<br>The specification does not force the browser to follow the value of this attribute; it is a mere hint. |
+| `playsinline` | A Boolean attribute indicating that the video is to be played "inline", that is within the element's playback area. Note that the absence of this attribute does not imply that the video will always be played in fullscreen. |
+| `poster` | A URL for an image to be shown while the video is downloading. If this attribute isn't specified, nothing is displayed until the first frame is available, then the first frame is shown as the poster frame. |
+| `src` | The URL of the video to embed. This is optional; you may instead use the [`<source>`](/en/webfrontend/<source>) element within the video block to specify the video to embed. |
+| `width` | The width of the video's display area, in CSS pixels (absolute values only; no percentages). |
 
 ## Events
 
 | Event Name | Fired When |
 | :-- | :-- |
-| `audioprocess` | The input buffer of a ScriptProcessorNode is ready to be processed.
-| `canplay` | The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.
-| `canplaythrough` | The browser estimates it can play the media up to its end without stopping for content buffering.
-| `complete` | The rendering of an OfflineAudioContext is terminated.
-| `durationchange` | The duration attribute has been updated.
-| `emptied` | The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the load() method is called to reload it.
-| `ended` | Playback has stopped because the end of the media was reached.
-| `loadeddata` | The first frame of the media has finished loading.
-| `loadedmetadata` | The metadata has been loaded.
-| `pause` | Playback has been paused.
-| `play` | Playback has begun.
-| `playing` | Playback is ready to start after having been paused or delayed due to lack of data.
-| `ratechange` | The playback rate has changed.
-| `seeked` | A seek operation completed.
-| `seeking` | A seek operation began.
-| `stalled` | The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.
-| `suspend` | Media data loading has been suspended.
-| `timeupdate` | The time indicated by the currentTime attribute has been updated.
-| `volumechange` | The volume has changed.
-| `waiting` | Playback has stopped because of a temporary lack of data
+| `audioprocess` | The input buffer of a ScriptProcessorNode is ready to be processed. |
+| `canplay` | The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content. |
+| `canplaythrough` | The browser estimates it can play the media up to its end without stopping for content buffering. |
+| `complete` | The rendering of an OfflineAudioContext is terminated. |
+| `durationchange` | The duration attribute has been updated. |
+| `emptied` | The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the load() method is called to reload it. |
+| `ended` | Playback has stopped because the end of the media was reached. |
+| `loadeddata` | The first frame of the media has finished loading. |
+| `loadedmetadata` | The metadata has been loaded. |
+| `pause` | Playback has been paused. |
+| `play` | Playback has begun. |
+| `playing` | Playback is ready to start after having been paused or delayed due to lack of data. |
+| `ratechange` | The playback rate has changed. |
+| `seeked` | A seek operation completed. |
+| `seeking` | A seek operation began. |
+| `stalled` | The user agent is trying to fetch media data, but data is unexpectedly not forthcoming. |
+| `suspend` | Media data loading has been suspended. |
+| `timeupdate` | The time indicated by the currentTime attribute has been updated. |
+| `volumechange` | The volume has changed. |
+| `waiting` | Playback has stopped because of a temporary lack of data. |
 
 ## Usage Notes
 
@@ -266,14 +277,3 @@ using the `align` VTT cue setting.
 - MDN Understanding WCAG, Guideline 1.2 explanations
 - Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0
 - Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0
-
-## Technical Summary
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | Flow content, phrasing content, embedded content. If it has a `controls` attribute: interactive content and palpable content.|
-| **Permitted content** | If the element has a src attribute: zero or more [`<track>`](/en/webfrontend/<track>) elements, followed by transparent content that contains no media elements–that is no [`<audio>`](/en/webfrontend/<audio>) or `<video>`<br>Else: zero or more [`<source>`](/en/webfrontend/<source>) elements, followed by zero or more [`<track>`](/en/webfrontend/<track>) elements, followed by transparent content that contains no media elements–that is no [`<audio>`](/en/webfrontend/<audio>) or `<video>`. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts embedded content. |
-| **Permitted ARIA roles** | `application` |
-| **DOM interface** | `HTMLVideoElement` |
