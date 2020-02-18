@@ -51,10 +51,10 @@ TOPICS: <acronym>
 | **`<dir>`** | HTML directory element. Used as a **container for a directory** of files and/or folders, potentially with styles and icons applied by the user agent. Use **[`<ul>`](/en/webfrontend/<ul>)** instead. |
 | `<element>` | The obsolete **HTML `<element>` element** was part of the Web Components specification; it was intended to be used to define new custom DOM elements. |
 | `<font>` | The **HTML Font Element (`<font>`)** defines the font size, color and face for its content. |
-| `<frame>` | `<frame>` is an HTML element which defines a particular area in which another HTML document can be displayed. A frame should be used within a `<frameset>`. |
-| `<frameset>` | The **HTML `<frameset>` element** is used to contain `<frame>` elements. |
+| `<frame>` | Define child windows (frames) in **`<frameset>`**. In HTML5, use **[`<iframe>`](/en/webfrontend/<iframe>)** instead. |
+| `<frameset>` | Define a frameset. The **`<frameset>`** element is used to organize one or more **`<frame>`** elements. In HTML5, use **[`<iframe>`](/en/webfrontend/<iframe>)** instead. |
 | **`<image>`** | HTML image element. An obsolete remnant of an ancient version of HTML lost in the mists of time; use the standard **[`<img>`](/en/webfrontend/<img>)** element instead. |
-| `<isindex>` | `<isindex>` is an obsolete HTML element that puts a text field in a page for querying the document. |
+| `<isindex>` | The **`<isindex>` element** is used to make the browser display a **dialog**, prompting the user to enter **single line of text**. In HTML5, use **[`<input>`](/en/webfrontend/<input>)** instead. |
 | **`<keygen>`** | HTML key generation element. Facilitate **generation of key** material, and **submission of the public key** as part of an *HTML form*. This mechanism is designed for use with Web-based certificate management systems. It is expected that it will be used in an HTML form along with other information needed to construct a certificate request, and that the result of the process will be a signed certificate. |
 | **`<listing>`** | HTML listing element. Render text between the start and end tags without interpreting the HTML in between and using a *`monospaced`* font. The HTML 2 standard recommended that lines shouldn't be broken when not greater than 132 characters. Use **[`<pre>`](/en/webfrontend/<pre>)** or **[`<samp>`](/en/webfrontend/<samp>)** element instead. |
 | `<marquee>` | The HTML `<marquee>` element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes. |
