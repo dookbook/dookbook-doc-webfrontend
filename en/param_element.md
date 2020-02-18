@@ -4,14 +4,16 @@ TOPICS: <param>
 
 The **HTML `<param>` element** defines parameters for an [`<object>`](/en/webfrontend/<object>) element.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
 | **Content categories** | None. |
 | **Permitted content** | None, it is an empty element. |
 | **Tag omission** | As it is a void element, the start tag must be present and the end tag must not be present.|
-| **Permitted parents** | An [`<object>`](/en/webfrontend/<object>) before any flow content. |
+| **Permitted parents** | An [`<object>`](/en/webfrontend/<object>) before any *flow content*. |
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLParamElement` |
+| **DOM interface** | **`HTMLParamElement`** |
 
 ## Attributes
 
@@ -19,8 +21,8 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| `name` | Name of the parameter.
-| `value` | Specifies the value of the parameter.
+| `name` | Name of the parameter. |
+| `value` | Specifies the value of the parameter. |
 
 ## Examples
 
