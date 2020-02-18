@@ -13,12 +13,12 @@ block-level element is parsed before the closing `</p>` tag. See “**Tag omissi
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, palpable content. |
-| **Permitted content** | Phrasing content. |
+| **Content categories** | *Flow content*, *palpable content*. |
+| **Permitted content** | *Phrasing content*. |
 | **Tag omission** | The start tag is required. The end tag may be omitted if the `<p>` element is immediately followed by an [`<address>`](/en/webfrontend/<address>), [`<article>`](/en/webfrontend/<article>), [`<aside>`](/en/webfrontend/<aside>), [`<blockquote>`](/en/webfrontend/<blockquote>), [`<div>`](/en/webfrontend/<div>), [`<dl>`](/en/webfrontend/<dl>), [`<fieldset>`](/en/webfrontend/<fieldset>), [`<footer>`](/en/webfrontend/<footer>), [`<form>`](/en/webfrontend/<form>), [`<h1>`](/en/webfrontend/<h1>), [`<h2>`](/en/webfrontend/<h2>), [`<h3>`](/en/webfrontend/<h3>), [`<h4>`](/en/webfrontend/<h4>), [`<h5>`](/en/webfrontend/<h5>), [`<h6>`](/en/webfrontend/<h6>), [`<header>`](/en/webfrontend/<header>), [`<hr>`](/en/webfrontend/<hr>), [`<menu>`](/en/webfrontend/<menu>), [`<nav>`](/en/webfrontend/<nav>), [`<ol>`](/en/webfrontend/<ol>), [`<pre>`](/en/webfrontend/<pre>), [`<section>`](/en/webfrontend/<section>), [`<table>`](/en/webfrontend/<table>), [`<ul>`](/en/webfrontend/<ul>) or another `<p>` element, or if there is no more content in the parent element and the parent element is not an [`<a>`](/en/webfrontend/<a>) element. |
-| **Permitted parents** | Any element that accepts flow content. |
+| **Permitted parents** | Any element that accepts *flow content*. |
 | **Permitted ARIA roles** | Any |
-| **DOM interface** | `HTMLParagraphElement` |
+| **DOM interface** | **`HTMLParagraphElement`** |
 
 ## Attributes
 
