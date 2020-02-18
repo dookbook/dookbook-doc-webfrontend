@@ -28,7 +28,7 @@ can be included into the `<footer>` element.
 - The `<footer>` element is not *sectioning content* and therefore doesn't introduce a new section
 in the outline.
 
-!!! warn"Prompt"
+!!! warn "Prompt"
     If you use the `<footer>` element to insert contact information, you should use the [`<address>`](/en/webfrontend/<address>)
     tag inside the `<footer>` element.
 

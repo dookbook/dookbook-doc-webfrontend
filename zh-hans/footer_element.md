@@ -23,7 +23,7 @@ TOPICS: <footer>
 - [`<address>`](/zh-hans/webfrontend/<address>) 元素中的作者信息可以包含在 `<footer>` 元素内。
 - `<footer>` 元素不是*段落内容*，因此在大纲中不能包含新的章节。
 
-!!! warn"提示"
+!!! warn "提示"
     假如您使用`<footer>`元素来插入联系信息，应该在`<footer>`元素内使用[`<address>`](/zh-hans/webfrontend/<address>)标签。
 
 ## 示例
