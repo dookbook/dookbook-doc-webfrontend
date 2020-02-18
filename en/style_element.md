@@ -19,6 +19,17 @@ In the same manner as [`<link>`](/en/webfrontend/<link>) elements, `<style>` ele
 media attributes that contain media queries, allowing you to selectively apply internal stylesheets
 to your document depending on media features such as viewport width.
 
+## Technical Summary
+
+|  |  |
+| :-- | :-- |
+| **Content categories** | *Metadata content*, and if the `scoped` attribute is present: *flow content*. |
+| **Permitted content** | Text content matching the `type` attribute, that is `text/css`. |
+| **Tag omission** | Neither tag is omissible. |
+| **Permitted parents** | Any element that accepts *metadata content*. |
+| **Permitted ARIA roles** | None |
+| **DOM interface** | **`HTMLStyleElement`** |
+
 ## Attributes
 
 This element includes the [global attributes](/en/webfrontend/HTML_Global_Attributes).
@@ -115,14 +126,3 @@ element so it is only applied when the viewport is less than 500px in width.
 </body>
 </html>
 ```
-
-## Technical Summary
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | Metadata content, and if the `scoped` attribute is present: flow content. |
-| **Permitted content** | Text content matching the `type` attribute, that is `text/css`. |
-| **Tag omission** | Neither tag is omissible. |
-| **Permitted parents** | Any element that accepts metadata content. |
-| **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLStyleElement` |
