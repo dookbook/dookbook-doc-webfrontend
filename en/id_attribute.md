@@ -1,24 +1,52 @@
 TOPICS: id attribute
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # HTML Global Attribute: `id`
 
-The **`id`** [global attribute](/en/webfrontend/HTML_Global_Attributes) defines an identifier (ID)
-which must be unique in the whole document. Its purpose is to identify the element when linking
-(using a fragment identifier), scripting, or styling (with CSS).
+The **`id`** [global attribute](/en/webfrontend/HTML_Global_Attributes) defines a unique identifier
+(ID) for an HTML element. Can be used as a link anchor to change or style elements with the
+specified `id` via JavaScript (HTML DOM) or via CSS.
 
 !!! error ""
     This attribute's value is an opaque string: this means that web authors must not use it to convey
     human-readable information.
 
-`id`'s value must not contain [[whitespace]] (spaces, tabs etc.). Browsers treat non-conforming IDs that
-contain whitespace as if the whitespace is part of the ID. In contrast to the `class` attribute,
-which allows space-separated values, elements can only have one single ID value.
+`id`'s value must not contain whitespace (spaces, tabs etc.). Browsers treat non-conforming IDs that
+contain whitespace as if the whitespace is part of the `id`. In contrast to the `class` attribute,
+which allows space-separated values, elements can only have one single `id` value.
 
-!!! warn "Don't try this at home"
-    **Note**: Using characters except [[ASCII]] letters, digits, `'_'`, `'-'` and `'.'` may cause compatibility
-    problems, as they weren't allowed in HTML 4. Though this restriction has been lifted in [[HTML5]],
-    an ID should start with a letter for compatibility.
+!!! warn "Note"
+    Using characters except [[ASCII]] letters, digits, `'_'`, `'-'` and `'.'` may cause compatibility
+    problems, as they weren't allowed in HTML 4. Though this restriction has been lifted in HTML5,
+    But for compatibility, the `id` should start with the letters `A-Z` or `a-z`.
+
+## Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simple example</title>
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML="Have a nice day!";
+}
+</script>
+<style>
+#myHeader {
+  font-size: 28px;
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<h1 id="myHeader">Hello World!</h1>
+<button onclick="displayResult()">Edit text</button>
+
+</body>
+</html>
+```
 
 ## See also
 

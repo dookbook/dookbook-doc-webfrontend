@@ -1,6 +1,10 @@
 TOPICS: <style>
+        <style> type attribute
+        <style> scoped attribute
+        <style> title attribute
+        <style> media attribute
 
-# `<style>`
+# HTML Style Information Element: `<style>`
 
 The **HTML `<style>` element** contains style information for a document, or part of a document.
 It contains CSS, which is applied to the contents of the document containing the `<style>` element.
@@ -36,18 +40,12 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| `type` | This attribute defines the styling language as a MIME type (charset should not be specified). This attribute is optional and defaults to `text/css` if it is not specified — there is very little reason to include this in modern web documents.
-| `media` | This attribute defines which media the style should be applied to. Its value is a media query, which defaults to `all` if the attribute is missing.
-| `nonce` | A cryptographic nonce (number used once) used to whitelist inline styles in a style-src Content-Security-Policy. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource’s policy is otherwise trivial.
-| `title` | This attribute specifies alternative style sheet sets.
+| `type` | This attribute defines the styling language as a [[MIME]] type (charset should not be specified). This attribute is optional and defaults to `text/css` if it is not specified — there is very little reason to include this in modern web documents. |
+| `scoped` | If the attribute is present, the style is applied to its parent element; if it is not present, it is applied to the entire document. |
+| `title` | This attribute specifies alternative style sheet sets. |
+| `media` | This attribute defines which media the style should be applied to. Its value is a media query, which defaults to `all` if the attribute is missing. |
 
-## Styling with CSS
-
-The `<style>` element itself has no visual representation, therefore it has no styling considerations.
-
-## Examples
-
-### A simple stylesheet
+## A simple stylesheet
 
 In the following example, we apply a very simple stylesheet to a document:
 
@@ -67,7 +65,7 @@ p {
 </html>
 ```
 
-### Multiple style elements
+## Multiple style elements
 
 In this example we've included two `<style>` elements — notice how the conflicting declarations
 in the later `<style>` element override those in the earlier one, if they have equal specificity.
@@ -97,7 +95,7 @@ in the later `<style>` element override those in the earlier one, if they have e
 </html>
 ```
 
-### Including a media query
+## Including a media query
 
 In this example we build on the previous one, including a media attribute on the second `<style>`
 element so it is only applied when the viewport is less than 500px in width.
