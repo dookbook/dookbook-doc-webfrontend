@@ -53,7 +53,7 @@ TOPICS: <acronym>
 | `<font>` | The **HTML Font Element (`<font>`)** defines the font size, color and face for its content. |
 | **`<frameset>`** | Define a frameset. It is used to organize one or more **`<frame>`** elements. In HTML5, use **[`<iframe>`](/en/webfrontend/<iframe>)** instead. |
 | **`<frame>`** | Define child windows (frames) in **`<frameset>`**. In HTML5, use **[`<iframe>`](/en/webfrontend/<iframe>)** instead. |
-| **`<noframes>`** | The obsolete HTML No Frames or frame fallback element, **`<noframes>`**, provides content to be presented in browsers that don't support (or have disabled support for) the **`<frame>`** element. Completely outdated in HTML5 |
+| **`<noframes>`** | The obsolete HTML No Frames or frame fallback element, provides content to be presented in browsers that don't support (or have disabled support for) the **`<frame>`** element. Completely outdated in HTML5 |
 | **`<image>`** | HTML image element. An obsolete remnant of an ancient version of HTML lost in the mists of time; use the standard **[`<img>`](/en/webfrontend/<img>)** element instead. |
 | **`<isindex>`** | It is used to make the browser display a **dialog**, prompting the user to enter **single line of text**. In HTML5, use **[`<input>`](/en/webfrontend/<input>)** instead. |
 | **`<keygen>`** | HTML key generation element. Facilitate **generation of key** material, and **submission of the public key** as part of an *HTML form*. This mechanism is designed for use with Web-based certificate management systems. It is expected that it will be used in an HTML form along with other information needed to construct a certificate request, and that the result of the process will be a signed certificate. |

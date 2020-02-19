@@ -51,7 +51,7 @@ TOPICS: <acronym>
 | `<font>` | **HTML字形元素（`<font>`）** 定义了该内容的字体大小、顏色与表现。. |
 | **`<frameset>`** | 定义一个框架集。它用来组织一个或者多个 **`<frame>`** 元素。HTML5 请使用 **[`<iframe>`](/zh-hans/webfrontend/<iframe>)** 代替。 |
 | **`<frame>`** | 定义 **`<frameset>`** 中的子窗口（框架）。HTML5 请使用 **[`<iframe>`](/zh-hans/webfrontend/<iframe>)** 代替。 |
-| **`<noframes>`** | **`<noframes>`** 是个 HTML 元素，用于支持不支持 **`<frame>`** 元素的浏览器，或者这样配置的浏览器。在 HTML5 中完全过时 |
+| **`<noframes>`** | 用于支持不支持 **`<frame>`** 元素的浏览器，或者这样配置的浏览器。在 HTML5 中完全过时 |
 | **`<image>`** | HTML 图片元素。曾经是一个试验性的元素，用来显示图片。它从未被实现过，请使用标准的 **[`<img>`](/zh-hans/webfrontend/<img>)** 元素。 |
 | **`<isindex>`** | **`<isindex>`元素** 的作用是使浏览器显示一个**对话框**，提示用户输入**单行文本**。HTML5 请使用 **[`<input>`](/zh-hans/webfrontend/<input>)** 代替。 |
 | **`<keygen>`** | HTML 密钥生成元素。为了方便**生成密钥**和作为 *HTML 表单*中**公钥的提交**。这种机制被用于设计基于Web的证书管理系统。按照预想，它将用于 HTML 表单与其他的所需信息一起构造一个证书请求，该处理的结果将是一个带有签名的证书。 |
