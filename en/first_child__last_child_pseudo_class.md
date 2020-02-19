@@ -1,14 +1,13 @@
 TOPICS: :first-child
         :last-child
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:first-child`、`:last-child`
 
-The **`:first-child`** CSS pseudo-class represents the first element among a group of sibling elements.
+The **`:first-child`** CSS pseudo-class represents the **first element** among a group of sibling elements.
 As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4,
 this is no longer required.
 
-The **`:last-child`** CSS pseudo-class represents the last element among a group of sibling elements.
+The **`:last-child`** CSS pseudo-class represents the **last element** among a group of sibling elements.
 As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4,
 this is no longer required.
 

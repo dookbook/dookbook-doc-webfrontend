@@ -1,12 +1,11 @@
 TOPICS: :first-child
         :last-child
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS 伪类: `:first-child`、`:last-child`
 
-**`:first-child`** CSS 伪类表示在一组兄弟元素中的第一个元素。按照最初定义时，所选元素必须有一个父元素。从选择器 Level 4 开始，这不再是必需的。
+**`:first-child`** CSS 伪类表示在一组兄弟元素中的**第一个**元素。按照最初定义时，所选元素必须有一个父元素。从选择器 Level 4 开始，这不再是必需的。
 
-**`:last-child`** CSS 伪类代表父元素的最后一个子元素。按照最初的定义，所选元素必须具有一个父元素。从选择器 Level 4 开始，这不再是必需的。
+**`:last-child`** CSS 伪类代表父元素的**最后一个**子元素。按照最初的定义，所选元素必须具有一个父元素。从选择器 Level 4 开始，这不再是必需的。
 
 ## 基本示例
 
