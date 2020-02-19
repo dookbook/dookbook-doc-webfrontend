@@ -1,14 +1,13 @@
 TOPICS: :in-range
         :out-of-range
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:in-range`、`:out-of-range`
 
-The **`:in-range`** CSS pseudo-class represents an [`<input>`](/en/webfrontend/<input>) element
-whose current value is within the range limits specified by the `min` and `max` attributes.
+The **`:in-range`** CSS pseudo-class represents an [*`<input>`*](/en/webfrontend/<input>) element
+whose current value is **within the range limits** specified by the **`min`** and **`max`** attributes.
 
-The **`:out-of-range`** CSS pseudo-class represents an [`<input>`](/en/webfrontend/<input>) element
-whose current value is outside the range limits specified by the `min` and `max` attributes.
+The **`:out-of-range`** CSS pseudo-class represents an [*`<input>`*](/en/webfrontend/<input>) element
+whose current value is **outside the range limits** specified by the **`min`** and **`max`** attributes.
 
 ## Example
 

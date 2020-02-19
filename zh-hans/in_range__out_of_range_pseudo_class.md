@@ -1,13 +1,11 @@
 TOPICS: :in-range
         :out-of-range
-AUTHORS: 石博文; http_wenwen@live.com; github:Ritr
-         ShirelyGong; ShirelyGong@github.com; github:ShirelyGong
 
 # CSS 伪类: `:in-range`、`:out-of-range`
 
-**`:in-range`** CSS 伪类代表一个 [`<input>`](/zh-hans/webfrontend/<input>) 元素其值处于属性 `min` 和 `max` 限定的范围之内的样式.
+**`:in-range`** CSS 伪类代表一个 [*`<input>`*](/zh-hans/webfrontend/<input>) 元素其值处于属性 **`min`** 和 **`max`**限定的**范围之内**的样式.
 
-**`:out-of-range`** CSS 伪类表示一个 [`<input>`](/zh-hans/webfrontend/<input>) 元素其值处于属性 `min` 和 `max` 限定的范围之外的样式。
+**`:out-of-range`** CSS 伪类表示一个 [*`<input>`*](/zh-hans/webfrontend/<input>) 元素其值处于属性 **`min`** 和 **`max`**限定的**范围之外**的样式。
 
 ## 示例
 
