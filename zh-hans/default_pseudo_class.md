@@ -1,13 +1,12 @@
 TOPICS: :default
-AUTHORS: nDos; yokees@vip.qq.com; github:yokees
-         YU Cong; faremax@mozilla.net; mdn:faremax
 
 # CSS 伪类: `:default`
 
 **`:default`** CSS `pseudo-class` 表示一组相关元素中的默认表单元素。
 
-该选择器可以在 [`<button>`](/zh-hans/webfrontend/<button>), `<input type="checkbox">`, `<input type="radio">`,
-以及 [`<option>`](/zh-hans/webfrontend/<button>) 上使用。
+该选择器可以在 [**`<button>`**](/zh-hans/webfrontend/<button>), [**`<input type="checkbox">`**](/zh-hans/webfrontend/<input>),
+[**`<input type="radio">`**](/zh-hans/webfrontend/<input>),
+以及 [**`<option>`**](/zh-hans/webfrontend/<button>) 上使用。
 
 允许多个选择的分组元素也可以具有多个默认值，即，它们可以具有最初选择的多个项目。在这种情况下，所有默认值都使用 `:default` 伪类表示。例如，您可以在一组复选框之间设置默认复选框。
 

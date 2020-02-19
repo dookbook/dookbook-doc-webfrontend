@@ -1,5 +1,4 @@
 TOPICS: :default
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:default`
 
@@ -10,10 +9,10 @@ What this selector matches is defined in HTML Standard §4.16.3 Pseudo-classes �
 [`<button>`](/en/webfrontend/<button>), `<input type="checkbox">`, `<input type="radio">`, and
 [`<option>`](/en/webfrontend/<option>) elements:
 
-- A default option element is the first one with the `selected` attribute, or the first enabled
-option in DOM order. `multiple` [`<select>`](/en/webfrontend/<select>)s can have more than one
+- A default `<option>` element is the **first one** with the *`selected`* attribute, or the first enabled
+option in DOM order. *`multiple`* [`<select>`](/en/webfrontend/<select>)s can have more than one
 `selected` option, so all will match `:default`.
-- `<input type="checkbox">` and `<input type="radio">` match if they have the `checked` attribute.
+- `<input type="checkbox">` and `<input type="radio">` match if they have the *`checked`* attribute.
 - [`<button>`](/en/webfrontend/<button>) matches if it is a [`<form>`](/en/webfrontend/<form>)’s
 default submission button: the first [`<button>`](/en/webfrontend/<button>) in DOM order that belongs
 to the form. (This also applies to [`<input>`](/en/webfrontend/<input>) types that submit forms,
