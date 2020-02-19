@@ -4,10 +4,10 @@ AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:invalid`
 
-The **`:invalid`** CSS pseudo-class represents any [`<input>`](/en/webfrontend/<input>) or other
-[`<form>`](/en/webfrontend/<form>) element whose contents fail to validate.
+The **`:invalid`** CSS pseudo-class represents any [*`<input>`*](/en/webfrontend/<input>) or other
+[*`<form>`*](/en/webfrontend/<form>) element whose contents fail to validate.
 
-The **`:valid`** CSS pseudo-class represents any [`<input>`](/en/webfrontend/<input>) or other [`<form>`](/en/webfrontend/<form>)
+The **`:valid`** CSS pseudo-class represents any [*`<input>`*](/en/webfrontend/<input>) or other [*`<form>`*](/en/webfrontend/<form>)
 element whose contents validate successfully. This allows to easily make valid fields adopt an
 appearance that helps the user confirm that their data is formatted properly.
 

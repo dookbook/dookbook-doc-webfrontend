@@ -3,9 +3,9 @@ TOPICS: :invalid
 
 # CSS 伪类: `:invalid`、`:valid`
 
-**`:invalid`** CSS伪类表示任意内容未通过验证的[`<input>`](/zh-hans/webfrontend/<input>)或其他[`<form>`](/zh-hans/webfrontend/<form>)元素.
+**`:invalid`** CSS伪类表示任意内容未通过验证的[*`<input>`*](/zh-hans/webfrontend/<input>)或其他[*`<form>`*](/zh-hans/webfrontend/<form>)元素.
 
-**`:valid`** CSS伪类表示内容验证正确的[`<input>`](/zh-hans/webfrontend/<input>)或其他[`<form>`](/zh-hans/webfrontend/<form>)元素。这能简单地将校验字段展示为一种能让用户辨别出其输入数据的正确性的样式。
+**`:valid`** CSS伪类表示内容验证正确的[*`<input>`*](/zh-hans/webfrontend/<input>)或其他[*`<form>`*](/zh-hans/webfrontend/<form>)元素。这能简单地将校验字段展示为一种能让用户辨别出其输入数据的正确性的样式。
 
 ## 示例
 
