@@ -1,6 +1,5 @@
 TOPICS: :invalid
         :valid
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:invalid`
 
