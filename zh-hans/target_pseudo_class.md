@@ -1,7 +1,4 @@
 TOPICS: :target
-AUTHORS: Lasy; 1255352506@qq.com; github:LasyIsLazy
-         ShirelyGong; ShirelyGong@github.com; github:ShirelyGong
-         Dong WEI; FredWe@mozilla.net; mdn:FredWe
 
 # CSS 伪类: `:target`
 
@@ -15,12 +12,6 @@ AUTHORS: Lasy; 1255352506@qq.com; github:LasyIsLazy
 
 ```html
 <section id="section2">Example</section>
-```
-
-## 语法
-
-```css
-element:target { 样式 }
 ```
 
 ## 一个内容列表示例
