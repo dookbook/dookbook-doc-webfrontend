@@ -14,7 +14,7 @@ is also referred to as the **root element**. All other elements must be descenda
 | **Tag omission** | The start tag may be omitted if the first thing inside the `<html>` element is not a comment. The end tag may be omitted if the `<html>` element is not immediately followed by a comment. |
 | **Permitted parents** | None. This is the root element of a document. |
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLHtmlElement` |
+| **DOM interface** | **`HTMLHtmlElement`** |
 
 ## HTML5 Bone
 

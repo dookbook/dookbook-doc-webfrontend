@@ -4,14 +4,16 @@ TOPICS: <hgroup>
 
 **HTML`<hgroup>`元素** 代表文档部分的多级标题。 它对一组[`<h1>`](/zh-hans/webfrontend/<h1>)~[`<h6>`](/zh-hans/webfrontend/<h6>)元素进行分组。
 
+## 技术摘要
+
 |  |  |
 | :-- | :-- |
-| **内容类别** | 流内容，标题内容，可触知的内容。|
+| **内容类别** | *流式内容*，*标题内容*，*可触知的内容*。|
 | **允许的内容** | 一个或多个[`<h1>`](/zh-hans/webfrontend/<h1>)、[`<h2>`](/zh-hans/webfrontend/<h2>)、[`<h3>`](/zh-hans/webfrontend/<h3>)、[`<h4>`](/zh-hans/webfrontend/<h4>)、[`<h5>`](/zh-hans/webfrontend/<h5>)和或[`<h6>`](/zh-hans/webfrontend/<h6>)。|
 | **标签遗漏** | 没有，开始标签和结束标签都是必需的。|
-| **允许的父元素** | 接受流内容的任何元素。|
+| **允许的父元素** | 接受*流式内容*的任何元素。|
 | **允许的ARIA角色** | `tab`, `presentation` |
-| **DOM 接口** | `HTMLElement` |
+| **DOM 接口** | **`HTMLElement`** |
 
 ## 属性
 

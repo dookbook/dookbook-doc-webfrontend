@@ -10,12 +10,12 @@ elements, like [`<base>`](/en/webfrontend/<base>), [`<link>`](/en/webfrontend/<l
 
 |  |  |
 | :-- | :-- |
-| **Content categories** | Metadata content. If the `itemprop` attribute is present: flow content, phrasing content.
-| **Permitted content** | None, it is an empty element.
-| **Tag omission** | As it is a void element, the start tag must be present and the end tag must not be present.
-| **Permitted parents** | [`<meta charset>`](/en/webfrontend/<meta>_charset_attribute), [`<meta http-equiv>`](/en/webfrontend/<meta>_http-equiv_attribute): a [`<head>`](/en/webfrontend/<head>) element. If the `http-equiv` is not an encoding declaration, it can also be inside a [`<noscript>`](/en/webfrontend/<noscript>) element, itself inside a [`<head>`](/en/webfrontend/<head>) element.
-| **Permitted ARIA roles** | None
-| **DOM interface** | `HTMLMetaElement`
+| **Content categories** | Metadata content. If the `itemprop` attribute is present: *flow content*, *phrasing content*. |
+| **Permitted content** | None, it is an empty element. |
+| **Tag omission** | As it is a void element, the start tag must be present and the end tag must not be present. |
+| **Permitted parents** | [`<meta charset>`](/en/webfrontend/<meta>_charset_attribute), [`<meta http-equiv>`](/en/webfrontend/<meta>_http-equiv_attribute): a [`<head>`](/en/webfrontend/<head>) element. If the `http-equiv` is not an encoding declaration, it can also be inside a [`<noscript>`](/en/webfrontend/<noscript>) element, itself inside a [`<head>`](/en/webfrontend/<head>) element. |
+| **Permitted ARIA roles** | None |
+| **DOM interface** | **`HTMLMetaElement`** |
 
 ## Attributes
 
@@ -30,9 +30,9 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | Attribute | Description |
 | :-- | :-- |
 | **[`charset`](/en/webfrontend/<meta>_charset_attribute)** | This attribute declares the page's **[[character encoding]]**. |
-| **[`http-equiv`](/en/webfrontend/<meta>_http-equiv_attribute)** | Defines a **HTTP pragma directive**. The attribute is named *"`http-equiv`(alent)"* because all the allowed values are names of particular **HTTP headers**.
-| **[`name`](/en/webfrontend/<meta>_name_attribute)** | This attribute defines the **name of a piece of document-level metadata**. It should not be set if one of the attributes `itemprop`, [`http-equiv`](/en/webfrontend/<meta>_http-equiv_attribute) or [`charset`](/en/webfrontend/<meta>_charset_attribute) is also set.
-| **`content`** | This attribute contains the value for the [`http-equiv`](/en/webfrontend/<meta>_http-equiv_attribute) or [`name`](/en/webfrontend/<meta>_name_attribute) attribute, depending on which is used.
+| **[`http-equiv`](/en/webfrontend/<meta>_http-equiv_attribute)** | Defines a **HTTP pragma directive**. The attribute is named *"`http-equiv`(alent)"* because all the allowed values are names of particular **HTTP headers**. |
+| **[`name`](/en/webfrontend/<meta>_name_attribute)** | This attribute defines the **name of a piece of document-level metadata**. It should not be set if one of the attributes `itemprop`, [`http-equiv`](/en/webfrontend/<meta>_http-equiv_attribute) or [`charset`](/en/webfrontend/<meta>_charset_attribute) is also set. |
+| **`content`** | This attribute contains the value for the [`http-equiv`](/en/webfrontend/<meta>_http-equiv_attribute) or [`name`](/en/webfrontend/<meta>_name_attribute) attribute, depending on which is used. |
 
 ## Notes
 

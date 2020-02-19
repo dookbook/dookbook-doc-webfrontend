@@ -7,14 +7,16 @@ and [`<video>`](/en/webfrontend/<video>). It lets you specify timed text tracks 
 for example to automatically handle subtitles. The tracks are formatted in WebVTT format
 (.vtt files) — Web Video Text Tracks or Timed Text Markup Language (TTML).
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
 | **Content categories** | None |
-| **Permitted content** | None, it is an empty element.|
-| **Tag omission** | As it is a void element, the start tag must be present and the end tag must not be present.|
-| **Permitted parents** | A media element, before any flow content.|
+| **Permitted content** | None, it is an empty element. |
+| **Tag omission** | As it is a void element, the start tag must be present and the end tag must not be present. |
+| **Permitted parents** | A media element, before any *flow content*. |
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLTrackElement` |
+| **DOM interface** | **`HTMLTrackElement`** |
 
 ## Attributes
 
@@ -22,11 +24,11 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| `default` | This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one `track` element per media element.
-| `kind` | How the text track is meant to be used. If omitted the default kind is `subtitles`. If the attribute is not present, it will use the `subtitles`. If the attribute contains an invalid value, it will use `metadata`. (Versions of Chrome earlier than 52 treated an invalid value as `subtitles`.) The following keywords are allowed:<br>**`subtitles`**<br>1. Subtitles provide translation of content that cannot be understood by the viewer. For example dialogue or text that is not English in an English language film.<br>2. Subtitles may contain additional content, usually extra background information. For example the text at the beginning of the Star Wars films, or the date, time, and location of a scene.<br>**`captions`**<br>1. Closed captions provide a transcription and possibly a translation of audio.<br>2. It may include important non-verbal information such as music cues or sound effects. It may indicate the cue's source (e.g. music, text, character).<br>3. Suitable for users who are deaf or when the sound is muted.<br>**`descriptions`**<br>1. Textual description of the video content.<br>2. Suitable for users who are blind or where the video cannot be seen.<br>**`chapters`**<br>1. Chapter titles are intended to be used when the user is navigating the media resource.<br>**`metadata`**<br>1. Tracks used by scripts. Not visible to the user.
-| `label` | A user-readable title of the text track which is used by the browser when listing available text tracks.
-| `src` | Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the [`<audio>`](/en/webfrontend/<audio>) or [`<video>`](/en/webfrontend/<video>) parent element of the `track` element has a `crossorigin` attribute.
-| `srclang` | Language of the track text data. It must be a valid BCP 47 language tag. If the `kind` attribute is set to `subtitles`, then `srclang` must be defined.
+| `default` | This attribute indicates that the track should be enabled unless the user's preferences indicate that another track is more appropriate. This may only be used on one `track` element per media element. |
+| `kind` | How the text track is meant to be used. If omitted the default kind is `subtitles`. If the attribute is not present, it will use the `subtitles`. If the attribute contains an invalid value, it will use `metadata`. (Versions of Chrome earlier than 52 treated an invalid value as `subtitles`.) The following keywords are allowed:<br>**`subtitles`**<br>1. Subtitles provide translation of content that cannot be understood by the viewer. For example dialogue or text that is not English in an English language film.<br>2. Subtitles may contain additional content, usually extra background information. For example the text at the beginning of the Star Wars films, or the date, time, and location of a scene.<br>**`captions`**<br>1. Closed captions provide a transcription and possibly a translation of audio.<br>2. It may include important non-verbal information such as music cues or sound effects. It may indicate the cue's source (e.g. music, text, character).<br>3. Suitable for users who are deaf or when the sound is muted.<br>**`descriptions`**<br>1. Textual description of the video content.<br>2. Suitable for users who are blind or where the video cannot be seen.<br>**`chapters`**<br>1. Chapter titles are intended to be used when the user is navigating the media resource.<br>**`metadata`**<br>1. Tracks used by scripts. Not visible to the user. |
+| `label` | A user-readable title of the text track which is used by the browser when listing available text tracks. |
+| `src` | Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the [`<audio>`](/en/webfrontend/<audio>) or [`<video>`](/en/webfrontend/<video>) parent element of the `track` element has a `crossorigin` attribute. |
+| `srclang` | Language of the track text data. It must be a valid BCP 47 language tag. If the `kind` attribute is set to `subtitles`, then `srclang` must be defined. |
 
 ## Usage Notes
 

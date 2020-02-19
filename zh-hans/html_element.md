@@ -10,8 +10,10 @@ HTML`<html>`元素表示一个[[HTML]]文档的*根*（*顶级元素*），所�
 | :-- | :-- |
 | **内容类别** | 无 |
 | **允许内容** | 一个[`<head>`](/zh-hans/webfrontend/<head>)元素，后跟一个[`<body>`](/zh-hans/webfrontend/<body>/)元素。|
+| **标签遗漏** | 如果`<html>`元素中的前不是注释，则可以省略开始标签。 如果`<html>`元素后没有立即加上注释，则可以省略end标记。 |
 | **允许的父元素** | 作为文档的根元素，或是在复合文档中任意允许的子文档片段。|
-| **DOM接口** | `HTMLHtmlElement` |
+| **允许的ARIA角色** | 无 |
+| **DOM接口** | **`HTMLHtmlElement`** |
 
 ## HTML5骨架
 
