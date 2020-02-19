@@ -1,6 +1,5 @@
 TOPICS: :read-only
         :read-write
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:read-only`、`:read-write`
 
@@ -9,7 +8,7 @@ editable by the user.
 
 !!! warn "Note"
     This selector doesn't just select [`<input>`](/en/webfrontend/<input>)/[`<textarea>`](/en/webfrontend/<textarea>)
-    with `readonly` set on them; it will select any element that cannot be edited by the user.
+    with **`readonly`** set on them; it will select any element that cannot be edited by the user.
 
 The **`:read-write`** CSS pseudo-class represents an element (such as `input` or `textarea`) that
 is editable by the user.
@@ -17,7 +16,7 @@ is editable by the user.
 !!! warn "Note"
      This selector doesn't just select [`<input>`](/en/webfrontend/<input>)/[`<textarea>`](/en/webfrontend/<textarea>)
      it will select any element that can be edited by the user, such as a [`<p>`](/en/webfrontend/<p>)
-     element with `contenteditable` set on it.
+     element with **`contenteditable`** set on it.
 
 ## 示例: `:read-only`
 
