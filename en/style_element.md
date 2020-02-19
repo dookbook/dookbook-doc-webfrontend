@@ -40,7 +40,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| `type` | This attribute defines the styling language as a MIME type (charset should not be specified). This attribute is optional and defaults to `text/css` if it is not specified — there is very little reason to include this in modern web documents. |
+| `type` | This attribute defines the styling language as a [[MIME]] type (charset should not be specified). This attribute is optional and defaults to `text/css` if it is not specified — there is very little reason to include this in modern web documents. |
 | `scoped` | If the attribute is present, the style is applied to its parent element; if it is not present, it is applied to the entire document. |
 | `title` | This attribute specifies alternative style sheet sets. |
 | `media` | This attribute defines which media the style should be applied to. Its value is a media query, which defaults to `all` if the attribute is missing. |
