@@ -1,15 +1,14 @@
 TOPICS: :required
         :optional
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:required`、`:optional`
 
 The **`:required`** CSS pseudo-class represents any [`<input>`](/en/webfrontend/<input>), [`<select>`](/en/webfrontend/<select>),
-or [`<textarea>`](/en/webfrontend/<textarea>) element that has the `required` attribute set on it.
+or [`<textarea>`](/en/webfrontend/<textarea>) element that has the **`required`** attribute set on it.
 
 The **`:optional`** CSS pseudo-class represents any [`<input>`](/en/webfrontend/<input>),
 [`<select>`](/en/webfrontend/<select>), or [`<textarea>`](/en/webfrontend/<textarea>) element that
-does not have the required attribute set on it.
+does not have the *`required`* attribute set on it.
 
 ## Example
 
