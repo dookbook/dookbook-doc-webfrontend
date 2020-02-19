@@ -1,13 +1,12 @@
 TOPICS: :left
         :right
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:left`
 
-The **`:left`** CSS pseudo-class, used with the `@page` at-rule, represents all left-hand pages of
+The **`:left`** CSS pseudo-class, used with the **`@page`** at-rule, represents all left-hand pages of
 a printed document.
 
-The **`:right`** CSS pseudo-class, used with the `@page` at-rule, represents all right-hand pages of
+The **`:right`** CSS pseudo-class, used with the **`@page`** at-rule, represents all right-hand pages of
 a printed document.
 
 Whether a given page is "left" or "right" is determined by the major writing direction of the

@@ -1,12 +1,11 @@
 TOPICS: :left
         :right
-AUTHORS: LoveofRedMoon; LoveofRedMoon@github.com; github:LoveofRedMoon
 
 # CSS 伪类: `:left`、`:right`
 
-**`:left`** CSS 伪类需要和@规则 `@page` 配套使用, 对打印文档的左侧页设置CSS样式.
+**`:left`** CSS 伪类需要和@规则 **`@page`** 配套使用, 对打印文档的左侧页设置CSS样式.
 
-**`:right`** CSS 伪类必须与@规则 `@page` 一起配套使用，表示打印文档的所有右页。
+**`:right`** CSS 伪类必须与@规则 **`@page`** 一起配套使用，表示打印文档的所有右页。
 
 打印文档的"左"或"右"是由书写方向相关的. 举个栗子, "从左到右"的书写方向中第一页应当使用 `:right` 配置; "从右至左"的书写方向中第一页应当使用 `:left` 配置.
 
