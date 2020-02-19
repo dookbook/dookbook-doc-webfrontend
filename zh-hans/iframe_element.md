@@ -37,7 +37,7 @@ TOPICS: <iframe>
 | **`width`** | 框架的宽度，默认值为300。|
 | **`height`** | 框架的高度，默认值为150. |
 | `name` | 规定 `<iframe>` 的名称。用于在 JavaScript 中引用元素，或者作为 [`<a>`](/zh-hans/webfrontend/<a>) 或 [`<form>`](/zh-hans/webfrontend/<form>) 元素的 `target` 属性的值，或者作为 [`<input>`](/zh-hans/webfrontend/<input>) 或 [`<button>`](/zh-hans/webfrontend/<button>) 的 `formtarget` 属性的值。 |
-| `srcdoc` |规定要显示在内联框架中的页面的 HTML 内容，以覆盖`src`属性的内容。如果浏览器不支持`srcdoc`属性，它将退回到`src`属性中的URL。 |
+| `srcdoc` | 规定要显示在内联框架中的页面的 HTML 内容，以覆盖`src`属性的内容。如果浏览器不支持`srcdoc`属性，它将退回到`src`属性中的URL。 |
 | `sandbox` | 该属性对呈现在 `<iframe>` 框架中的内容启用一些额外的限制条件。 |
 | `seamless` | 规定 `<iframe>` 看起来像是父文档中的一部分。 |
 
@@ -72,7 +72,7 @@ TOPICS: <iframe>
 
 作为替换元素，可以使用`object-position`和`object-fit`属性调整`<iframe>`元素框中嵌入文档的位置，对齐方式和缩放比例。
 
-## 一个简单的`<iframe>`
+## 示例：一个简单的`<iframe>`
 
 动作中的`<iframe>`。创建框架后，当用户单击按钮时，其标题将显示在警报中。
 
@@ -84,7 +84,7 @@ TOPICS: <iframe>
 </iframe>
 ```
 
-## 在另一个标签中的`<iframe>`中打开链接
+## 示例：在另一个标签中的`<iframe>`中打开链接
 
 在此示例中，Google地图显示在框架中；
 

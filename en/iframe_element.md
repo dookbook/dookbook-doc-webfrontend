@@ -42,7 +42,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | **`width`** | The width of the frame. The default value is 300.|
 | **`height`** | The height of the frame. The default value is 150. |
 | `name` | Specifies the name of `<iframe>`. Used to reference an element in JavaScript, either as the value of the `target` attribute of an [`<a>`](/en/webfrontend/<a>) or [`<form>`](/en/webfrontend/<form>) element, or as the value of the `formtarget` attribute of an [`<input>`](/en/webfrontend/<input>) or [`<button>`](/en/webfrontend/<button>). |
-| `srcdoc` | Specifies the HTML content of the page to be displayed in the iframe to override the content of the `src` attribute. If the browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute. |
+| `srcdoc` | Specifies the HTML content of the page to be displayed in the `<iframe>` to override the content of the `src` attribute. If the browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute. |
 | `sandbox` | This attribute enables some additional restrictions on the content rendered in the `<iframe>` frame. |
 | `seamless` | Specifies that `<iframe>` looks like part of the parent document. |
 
@@ -86,7 +86,7 @@ As a replaced element, the position, alignment, and scaling of the embedded docu
 the `<iframe>` element's box, can be adjusted with the `object-position`
 and `object-fit` properties.
 
-## A simple `<iframe>`
+## Example: A simple `<iframe>`
 
 An `<iframe>` in action. After creating the frame, when the user clicks a button,
 its title is displayed in an alert.
@@ -99,7 +99,7 @@ its title is displayed in an alert.
 </iframe>
 ```
 
-## Open a link in an `<iframe>` in another tab
+## Example: Open a link in an `<iframe>` in another tab
 
 In this example, a Google map is displayed in a frame;
 
