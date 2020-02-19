@@ -1,16 +1,15 @@
 TOPICS: :checked
-AUTHORS: 石博文; http_wenwen@live.com; github:Ritr
 
 # CSS 伪类: `:checked`
 
-**`:checked`** CSS伪类选择器代表任何 **`radio`** (`<input type =“ radio”>`), **`checkbox`** (`<input type =“ checkbox”>`)
-或 **`option`** ([`<select>`](/zh-hans/webfrontend/<select>)中的[`<option>`](/zh-hans/webfrontend/<option>)
+**`:checked`** CSS伪类选择器代表任何 **单选框** (**`<input type="radio">`**), **复选框** (**`<input type="checkbox">`**)
+或 **`选项`** ([**`<select>`**](/zh-hans/webfrontend/<select>)中的[**`<option>`**](/zh-hans/webfrontend/<option>)
 元素被选中或切换为开启状态。
 
 用户通过勾选/选中元素或取消勾选/取消选中，来改变该元素的 `:checked` 状态。
 
 !!! warn "注意"
-    因为浏览器经常将`<option>`视为可替换元素,因此不同的浏览器通过`:checked`伪类渲染出来的效果也不尽相同.
+    因为浏览器经常将[`<option>`](/zh-hans/webfrontend/<option>)视为可替换元素,因此不同的浏览器通过`:checked`伪类渲染出来的效果也不尽相同.
 
 ## 示例
 

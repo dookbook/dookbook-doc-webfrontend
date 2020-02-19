@@ -1,18 +1,17 @@
 TOPICS: :checked
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:checked`
 
-The **`:checked`** CSS pseudo-class selector represents any **`radio`** (`<input type="radio">`),
-**`checkbox`** (`<input type="checkbox">`), or **`option`** ([`<option>`](/en/webfrontend/<option>)
-in a [`<select>`](/en/webfrontend/<select>)) element that is checked or toggled to an `on` state.
+The **`:checked`** CSS pseudo-class selector represents any **radio** (**`<input type="radio">`**),
+**checkbox** (**`<input type="checkbox">`**), or **option** ([**`<option>`**](/en/webfrontend/<option>)
+in a [**`<select>`**](/en/webfrontend/<select>)) element that is checked or toggled to an `on` state.
 
 The user can engage this state by checking/selecting an element, or disengage it by
 unchecking/deselecting the element.
 
 !!! warn "Note"
-    Because browsers often treat `<option>`s as replaced elements, the extent to which they can be
-    styled with the `:checked` pseudo-class varies from browser to browser.
+    Because browsers often treat [`<option>`](/en/webfrontend/<option>)s as replaced elements, the
+    extent to which they can be styled with the `:checked` pseudo-class varies from browser to browser.
 
 ## Basic example
 
