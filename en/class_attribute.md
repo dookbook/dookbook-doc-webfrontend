@@ -3,9 +3,9 @@ TOPICS: class attribute
 # HTML Global Attribute: `class`
 
 The **`class`** [global attribute](/en/webfrontend/HTML_Global_Attributes)
-is a space-separated list of the case-sensitive classes of the element. Classes allow [[CSS]] and
-[[JavaScript]] to select and access specific elements via the class selectors
-or functions like the DOM method [`document.getElementsByClassName`](/en/webfrontend/Document.getElementsByClassName).
+is a space-separated list of the case-sensitive classes of the element. Classes allow *[[CSS]]* and
+*[[JavaScript]]* to select and access specific elements via the class selectors
+or functions like the DOM method [*`document.getElementsByClassName`*](/en/webfrontend/Document.getElementsByClassName).
 
 Though the specification doesn't put requirements on the name of `class`es, web developers are
 encouraged to use names that describe the semantic purpose of the element, rather than the
