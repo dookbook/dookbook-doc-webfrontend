@@ -6,14 +6,16 @@ HTML HTML `<source>`元素为[`<picture>`](/zh-hans/webfrontend/<picture>)，
 [`<audio>`](/zh-hans/webfrontend/<audio>)或[`<video>`](/zh-hans/webfrontend/<video>)元素指定了多种媒体资源。
 它是一个空元素，表示它没有内容且没有结束标记。 它通常用于提供不同浏览器支持的多种格式的相同媒体内容。
 
+## 技术摘要
+
 |  |  |
 | :-- | :-- |
-| **内容分类** | 没有. |
-| **允许的内容** | 无，这是一个空元素. |
-| **标签遗漏** | 它必须具有开始标签，但不能具有结束标签. |
-| **允许的父元素** | 媒体元素-[`<audio>`](/zh-hans/webfrontend/<audio>)或[`<video>`](/zh-hans/webfrontend/<video>),并且必须放置在任何流内容或[`<track>`](/zh-hans/webfrontend/<track>)元素之前.<br>[`<picture>`](/zh-hans/webfrontend/<picture>)元素,必须将其放在[`<img>`](/zh-hans/webfrontend/<img>)元素之前 |
+| **内容分类** | 没有。 |
+| **允许的内容** | 无，这是一个空元素。 |
+| **标签遗漏** | 它必须具有开始标签，但不能具有结束标签。 |
+| **允许的父元素** | 媒体元素-[`<audio>`](/zh-hans/webfrontend/<audio>)或[`<video>`](/zh-hans/webfrontend/<video>),并且必须放置在任何*流式内容*或[`<track>`](/zh-hans/webfrontend/<track>)元素之前.<br>[`<picture>`](/zh-hans/webfrontend/<picture>)元素,必须将其放在[`<img>`](/zh-hans/webfrontend/<img>)元素之前。 |
 | **允许的 ARIA 角色** | 没有 |
-| **DOM 接口** | `HTMLSourceElement` |
+| **DOM 接口** | **`HTMLSourceElement`** |
 
 ## 属性
 

@@ -22,14 +22,16 @@ If providing higher-density versions of an image for high-DPI (Retina) display, 
 `srcset` on the [`<img>`](/en/webfrontend/<img>) element instead. This lets browsers opt for lower-density
 versions in data-saving modes, and you don't have to write explicit media conditions.
 
+## Technical Summary
+
 |  |  |
 | :-- | :-- |
-| **Content categories** | Flow content, phrasing content, embedded content |
+| **Content categories** | *Flow content*, *phrasing content*, *embedded content*. |
 | **Permitted content** | Zero or more [`<source>`](/en/webfrontend/<source>) elements, followed by one [`<img>`](/en/webfrontend/<img>) element, optionally intermixed with script-supporting elements. |
 | **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that allows embedded content. |
+| **Permitted parents** | Any element that allows *embedded content*. |
 | **Permitted ARIA roles** | None |
-| **DOM interface** | `HTMLPictureElement` |
+| **DOM interface** | **`HTMLPictureElement`** |
 
 ## Attributes
 

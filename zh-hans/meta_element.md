@@ -8,12 +8,12 @@ HTML的`<meta>`元素表示**元数据**，而其他HTML的与元相关的元素
 
 |  |  |
 | :-- | :-- |
-| **内容分类** | 元数据内容。 如果存在`itemprop`属性：流程内容，短语内容. |
-| **允许的内容** | 无，这是一个空元素. |
-| **标签遗漏** | 由于它是一个void元素，因此必须存在开始标签，而不能存在结束标签. |
-| **允许的父元素** | [`<meta charset>`](/zh-hans/webfrontend/<meta>_charset_attribute)，[`<meta http-equiv>`](/zh-hans/webfrontend/<meta>_http-equiv_attribute)：一个[`<head>`](/zh-hans/webfrontend/<head>)元素。 如果[`http-equiv`](/zh-hans/webfrontend/<meta>_http-equiv_attribute)不是编码声明，则它也可以位于[`<noscript>`](/zh-hans/webfrontend/<noscript>)元素内部，本身也位于[`<head>`](/zh-hans/webfrontend/<head>)元素内部. |
+| **内容分类** | *元数据内容*。 如果存在`itemprop`属性：*流式内容*，*短语内容*。|
+| **允许的内容** | 无，这是一个空元素。 |
+| **标签遗漏** | 由于它是一个void元素，因此必须存在开始标签，而不能存在结束标签。 |
+| **允许的父元素** | [`<meta charset>`](/zh-hans/webfrontend/<meta>_charset_attribute)，[`<meta http-equiv>`](/zh-hans/webfrontend/<meta>_http-equiv_attribute)：一个[`<head>`](/zh-hans/webfrontend/<head>)元素。 如果[`http-equiv`](/zh-hans/webfrontend/<meta>_http-equiv_attribute)不是编码声明，则它也可以位于[`<noscript>`](/zh-hans/webfrontend/<noscript>)元素内部，本身也位于[`<head>`](/zh-hans/webfrontend/<head>)元素内部。|
 | **允许的 ARIA 角色** | 没有 |
-| **DOM 接口** | `HTMLMetaElement` |
+| **DOM 接口** | **`HTMLMetaElement`** |
 
 ## 属性
 
