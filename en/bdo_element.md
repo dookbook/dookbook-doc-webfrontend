@@ -1,5 +1,4 @@
 TOPICS: <bdo>
-        <bdo> dir attribute
 
 # HTML Bidirectional Overlay Element: `<bdo>`
 
@@ -24,10 +23,6 @@ which causes the characters to line up in a given direction.
 ## Attributes
 
 This element's attributes include the [global attributes](/en/webfrontend/HTML_Global_Attributes).
-
-| Attribute | Description |
-| :-- | :-- |
-| `dir` | The direction in which text should be rendered in this element's contents. Possible values are:<br>`ltr`: Indicates that the text should go in a left-to-right direction.<br>`rtl`: Indicates that the text should go in a right-to-left direction. |
 
 ## Examples
 

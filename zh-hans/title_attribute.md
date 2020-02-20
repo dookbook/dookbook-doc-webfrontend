@@ -1,30 +1,44 @@
 TOPICS: title attribute
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # HTML 全局属性: `title`
 
-**`title`** [全局属性](/zh-hans/webfrontend/HTML_Global_Attributes) 包含了表示咨询信息文本，和它属于的元素相关。这个信息通常存在，但绝不必要，作为提示信息展示给用户。一些典型用例：
+[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes) **`title`** 规定关于元素的额外信息。这些信息通常会在鼠标移到元素上时显示一段工具提示文本。
+
+一些典型的用途：
 
 - **链接**：被链接文档的标题或描述
 - **媒体元素**，例如图像：描述或关联信息
 - **段落**：脚注或者相关的评论
 - **引用**：作者信息，以及其他
 
-如果省略了这个属性，就意味着这个元素的最近祖先的标题仍然是相关的（并且可以用作元素的提示信息）。如果这个属性设为空字符串，它就明确意味着，它的最近祖先的标题是不相关的（并且不应用于这个元素的提示信息）。
-
 额外的语义可以附加到 [`<link>`](/zh-hans/webfrontend/<link>)、[`<abbr>`](/zh-hans/webfrontend/<abbr>)、
-[`<input>`](/zh-hans/webfrontend/<input>) 和 { HTMLElement("menuitem") }} 元素的 **`title`** 属性。
+[`<input>`](/zh-hans/webfrontend/<input>) 和 [`<menuitem>`](/zh-hans/webfrontend/<menuitem>)
+元素的 **`title`** 属性。
 
-**`title`** 属性可以包含多行。每个插入的`U+000A LINE FEED` (`LF`) 代表这样的新航。有一些需要注意的东西，因为这意味着：
+## 多行标题
+
+`title`属性可以包含几行。每个`U+000A换行` (`LF`)字符代表一个换行符。一些谨慎必须采取，因为这意味着以下呈现跨两行:
 
 ```html
-<p>Newlines in title should be taken into account,like this <abbr title="This is a
+<p>Newlines in <code>title</code> should be taken into account,
+like <abbr title="This is a
 multiline title">example</abbr>.</p>
 ```
 
-这个示例定义了两行的标题
+## 标题属性继承
+
+如果一个元素没有`title`属性，那么它将从父节点继承该属性，而父节点又可能从父节点继承该属性，依此类推。
+
+如果这个属性被设置为空字符串，这意味着它的父节点`title`是不相关的，不应该在这个元素的工具提示中使用。
+
+```html
+<div title="CoolTip">
+  <p>Hovering here will show “CoolTip”.</p>
+  <p title="">Hovering here will show nothing.</p>
+</div>
+```
 
 ## 参见
 
 - 所有HTML[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
-- 反映这个属性的 [HTMLElement.title](/zh-hans/webfrontend/HTMLElement.title)
+- 反映这个属性的 `HTMLElement.title`
