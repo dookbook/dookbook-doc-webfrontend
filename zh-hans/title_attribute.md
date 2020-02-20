@@ -12,7 +12,8 @@ TOPICS: title attribute
 - **引用**：作者信息，以及其他
 
 额外的语义可以附加到 [`<link>`](/zh-hans/webfrontend/<link>)、[`<abbr>`](/zh-hans/webfrontend/<abbr>)、
-[`<input>`](/zh-hans/webfrontend/<input>) 和 { HTMLElement("menuitem") }} 元素的 **`title`** 属性。
+[`<input>`](/zh-hans/webfrontend/<input>) 和 [`<menuitem>`](/zh-hans/webfrontend/<menuitem>)
+元素的 **`title`** 属性。
 
 ## 多行标题
 
