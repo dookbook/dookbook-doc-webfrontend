@@ -1,15 +1,12 @@
 TOPICS: :lang()
-AUTHORS: 石博文; http_wenwen@live.com; github:Ritr
-         ShirelyGong; ShirelyGong@github.com; github:ShirelyGong
-         King; King.@mozilla.net; mdn:King.
-         DongyaGe; DongyaGe@github.com; github:DongyaGe
 
 # CSS 伪类: `:lang()`
 
-**`:lang()`** CSS 伪类基于元素语言来匹配页面元素。
+**`:lang()`** CSS 伪类**基于元素语言**来匹配页面元素。
 
 !!! warn "注意"
-    在HTML中, 语言是通过 `lang` 属性，和[`<meta>`](/zh-hans/webfrontend/<meta>) 元素的组合来决定的，也可能是通过协议的信息来确定（例如HTTP头）。对于其他文档类型，也可能存在其他用于确定语言的方法。
+    在HTML中, 语言是通过 [*`lang`*](/zh-hans/webfrontend/lang_attribute) 属性，和[*`<meta>`*](/zh-hans/webfrontend/<meta>)
+    元素的组合来决定的，也可能是通过协议的信息来确定（例如HTTP头）。对于其他文档类型，也可能存在其他用于确定语言的方法。
 
 ## 示例
 

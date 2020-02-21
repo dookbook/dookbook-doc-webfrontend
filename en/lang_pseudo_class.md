@@ -1,14 +1,15 @@
 TOPICS: :lang()
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:lang()`
 
-The **`:lang()`** CSS pseudo-class matches elements based on the language they are determined to be in.
+The **`:lang()`** CSS pseudo-class matches elements based on the **language** they are determined
+to be in.
 
 !!! warn "Note"
-    In HTML, the language is determined by a combination of the `lang` attribute, the [`<meta>`](/en/webfrontend/<meta>)
+    In HTML, the **language** is determined by a combination of the [`lang`](/en/webfrontend/lang_attribute)
+    attribute, the [`<meta>`](/en/webfrontend/<meta>)
     element, and possibly by information from the protocol (such as HTTP headers). For other document
-    types there may be other document methods for determining the language.
+    types there may be other document methods for determining the **language**.
 
 ## Example
 
