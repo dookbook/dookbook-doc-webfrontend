@@ -1,15 +1,14 @@
 TOPICS: :focus-within
         :focus
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS 伪类: `:focus-within`、`:focus`
 
-CSS **`:focus-within`** 伪类表示一个元素获得焦点，或，该元素的后代元素获得焦点。换句话说，元素自身或者它的某个后代匹配`:focus`伪类。
+CSS **`:focus-within`** 伪类表示**一个元素获得焦点**，或，**该元素的后代元素获得焦点**。换句话说，元素自身或者它的某个后代匹配`:focus`伪类。
 
 该选择器非常实用。举个通俗的例子：表单中的某个 [`<input>`](/zh-hans/webfrontend/<input>) 字段获得焦点时，整个表单的
 [`<form>`](/zh-hans/webfrontend/<form>) 元素都可被高亮。
 
-CSS **`:focus`** 伪类表示获得焦点的元素（如表单输入）。当用户点击或触摸元素或通过键盘的 !!!tab!!! 键选择它时会被触发。
+CSS **`:focus`** 伪类表示**获得焦点的元素**（如表单输入）。当用户 *点击* 或 *触摸* 元素或通过 *键盘* 的 !!!tab!!! 键选择它时会被触发。
 
 ## 示例: `:focus-within`
 

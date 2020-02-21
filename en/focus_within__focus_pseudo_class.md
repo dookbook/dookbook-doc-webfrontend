@@ -1,12 +1,11 @@
 TOPICS: :focus-within
         :focus
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:focus-within`、`:focus`
 
 The **`:focus-within`** CSS pseudo-class represents an element that has received focus or contains
 an element that has received focus. In other words, it represents an element that is itself matched
-by the :focus pseudo-class or has a descendant that is matched by `:focus`. (This includes descendants
+by the `:focus` pseudo-class or has a descendant that is matched by `:focus`. (This includes descendants
 in shadow trees.)
 
 This selector is useful, to take a common example, for highlighting an entire
