@@ -1,13 +1,12 @@
 TOPICS: :nth-child()
         :nth-last-child()
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:nth-child()`、`:nth-last-child()`
 
-The **`:nth-child()`** CSS pseudo-class matches elements based on their position in a group of siblings.
+The **`:nth-child()`** CSS pseudo-class matches elements based on their position in a group of *siblings*.
 
 The **`:nth-last-child()`** CSS pseudo-class matches elements based on their position among a group
-of siblings, counting from the end.
+of *siblings*, counting from the end.
 
 ## parameter
 
