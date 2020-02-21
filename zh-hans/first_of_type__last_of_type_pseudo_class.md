@@ -1,12 +1,11 @@
 TOPICS: :first-of-type
         :last-of-type
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS 伪类: `:first-of-type`、`:last-of-type`
 
-**`:first-of-type`** CSS 伪类表示一组兄弟元素中其类型的第一个元素。
+**`:first-of-type`** CSS 伪类表示**一组兄弟元素中其类型的第一个元素**。
 
-**`:last-of-type`** CSS 伪类 表示了在（它父元素的）子元素列表中，最后一个给定类型的元素。当代码类似父标签名称`:last-of-type`的作用区域包含父元素的所有子元素中的最后一个选定元素，也包括子元素的最后一个子元素并以此类推。
+**`:last-of-type`** CSS 伪类 表示了在（它父元素的）子元素列表中，**最后一个给定类型的元素**。当代码类似父标签名称`:last-of-type`的作用区域包含父元素的所有子元素中的最后一个选定元素，也包括子元素的最后一个子元素并以此类推。
 
 ## 示例: 装饰第一个段落和最后一个段落
 
