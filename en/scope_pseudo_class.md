@@ -1,13 +1,12 @@
 TOPICS: :scope
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:scope`
 
-The **`:scope`** CSS pseudo-class represents elements that are a reference point for selectors
+The **`:scope`** CSS pseudo-class represents elements that are **a reference point for selectors**
 to match against.
 
-Currently, when used in a stylesheet, `:scope` is the same as `:root`, since there is not at this
-time a way to explicitly establish a scoped element. When used from a DOM API such as
+Currently, when used in a stylesheet, `:scope` is the same as *`:root`*, since there is not at this
+time a way to explicitly establish a `<scoped>` element. When used from a DOM API such as
 `querySelector()`, `querySelectorAll()`, `matches()`, or `Element.closest()`, `:scope` matches the
 element you called the method on.
 
