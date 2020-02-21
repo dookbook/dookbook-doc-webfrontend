@@ -1,11 +1,10 @@
 TOPICS: :host()
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:host()`
 
-The **`:host()`** CSS pseudo-class function selects the shadow host of the shadow DOM containing
-the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only
-if the selector given as the function's parameter matches the shadow host.
+The **`:host()`** CSS pseudo-class function selects the **shadow host** of the *shadow DOM* containing
+the CSS it is used inside (so you can select a custom element from inside its *shadow DOM*) — but only
+if the selector given as the function's parameter matches the **shadow host**.
 
 The most obvious use of this is to put a class name only on certain custom element instances, and
 then include the relevant class selector as the function argument. You can't use this with a descendant
@@ -13,7 +12,7 @@ selector expression to select only instances of the custom element that are insi
 That's the job of `:host-context()`.
 
 !!! warn "Note"
-    This has no effect when used outside a shadow DOM.
+    This has no effect when used outside a *shadow DOM*.
 
 ## Syntax
 
