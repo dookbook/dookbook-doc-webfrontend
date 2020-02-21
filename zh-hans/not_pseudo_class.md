@@ -1,12 +1,8 @@
 TOPICS: :not()
-AUTHORS: 石博文; http_wenwen@live.com; github:Ritr
-         Crystal-RainSlide; Crystal-RainSlide@github.com; github:Crystal-RainSlide
-         小小鲁班; lantern.done@gmail.com; github:ly525
-         Dong WEI; FredWe@mozilla.net; mdn:FredWe
 
 # CSS 伪类: `:not()`
 
-CSS 否定伪类，**`:not(X)`**，是以一个简单的以选择器 *X* 为参数的功能性标记函数。它匹配不符合参数选择器 *X* 描述的元素。*X* 不能包含另外一个否定选择器。
+CSS 否定伪类，**`:not(X)`**，是以一个简单的以选择器 *X* 为参数的功能性标记函数。它匹配**不符合参数选择器 X 描述的元素**。*X* 不能包含另外一个否定选择器。
 
 `:not()`伪类的优先级即为它参数选择器的优先级。`:not()`伪类不像其它伪类，它不会增加选择器的优先级。
 
@@ -16,7 +12,7 @@ CSS 否定伪类，**`:not(X)`**，是以一个简单的以选择器 *X* 为参�
 - 这个选择器只会应用在一个元素上，你无法用它排除所有父元素。比如，`body :not(table) a` 将依旧会应用在`table`内部的`<a>` 上, 因为 [`<tr>`](/zh-hans/webfrontend/<tr>)
 将会被 `:not()` 这部分选择器匹配。
 
-`:not()` 伪类可以将一个或多个以逗号分隔的选择器作为其参数。选择器中不得包含另一个否定选择符或伪元素。
+`:not()` 伪类可以将一个或多个以 *逗号* 分隔的选择器作为其参数。选择器中不得包含另一个否定选择符或伪元素。
 
 ## 示例
 

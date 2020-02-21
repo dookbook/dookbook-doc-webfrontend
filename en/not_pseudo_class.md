@@ -1,9 +1,8 @@
 TOPICS: :not()
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:not()`
 
-The **`:not()`** CSS pseudo-class represents elements that do not match a list of selectors. Since
+The **`:not()`** CSS pseudo-class represents elements that **do not match** a list of selectors. Since
 it prevents specific items from being selected, it is known as the negation pseudo-class.
 
 - `:not` pseudo-class may not be nested, which means that `:not(:not(...))` is invalid.
