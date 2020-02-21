@@ -1,9 +1,8 @@
 TOPICS: :only-of-type
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:only-of-type`
 
-The **`:only-of-type`** CSS pseudo-class represents an element that has no siblings of the same type.
+The **`:only-of-type`** CSS pseudo-class represents an element that **has no siblings of the same type**.
 
 ## Example
 
