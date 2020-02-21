@@ -2,7 +2,7 @@ TOPICS: :first-line
 
 # CSS Pseudo-Class: `:first-line`
 
-The **`:first-line`** CSS pseudo-class is used to specify the style of the first line of the selector.
+The **`:first-line`** CSS pseudo-class is used to specify the style of the **first line** of the selector.
 
 !!! warn "Note"
     The `first-line` selector applies to block-level elements.

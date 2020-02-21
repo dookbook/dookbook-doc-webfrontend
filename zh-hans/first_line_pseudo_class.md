@@ -2,10 +2,10 @@ TOPICS: :first-line
 
 # CSS 伪类: `:first-line`
 
-**`:first-line`** CSS 伪类用来指定选择器第一行的样式。
+**`:first-line`** CSS 伪类用来指定选择器**第一行**的样式。
 
 !!! warn "注意"
-    `first-line` 选择器适用于块级元素中。
+    `first-line` 选择器适用于*块级元素*中。
 
 ## 示例
 
