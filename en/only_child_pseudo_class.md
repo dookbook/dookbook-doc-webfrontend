@@ -1,9 +1,8 @@
 TOPICS: :only-child
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:only-child`
 
-CSS pseudo-class ** `: only-child` ** matches elements without any sibling elements, for example:
+CSS pseudo-class **`:only-child`** matches elements **without any sibling element**s, for example:
 an element that contains only one element
 
 ## Basic example
