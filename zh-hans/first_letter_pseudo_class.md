@@ -2,10 +2,10 @@ TOPICS: :first-letter
 
 # CSS 伪类: `:first-letter`
 
-**`:first-letter`** CSS 伪类用来指定元素第一个字母的样式。
+**`:first-letter`** CSS 伪类用来指定元素**第一个字母**的样式。
 
 !!! warn "注意"
-    `first-letter` 选择器仅适用于在块级元素中.
+    `first-letter` 选择器仅适用于在*块级元素*中.
 
 ## 示例
 

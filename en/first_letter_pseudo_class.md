@@ -2,7 +2,7 @@ TOPICS: :first-letter
 
 # CSS Pseudo-Class: `:first-letter`
 
-The **`:first-letter`** CSS pseudo-class is used to specify the style of the first letter of an element.
+The **`:first-letter`** CSS pseudo-class is used to specify the style of the **first letter** of an element.
 
 !!! warn "Note"
     The `first-letter` selector is only available in block-level elements.
