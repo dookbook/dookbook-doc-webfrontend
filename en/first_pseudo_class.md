@@ -1,9 +1,8 @@
 TOPICS: :first
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:first`
 
-The **`:first`** CSS pseudo-class, used with the  `@page` at-rule, represents the first page of a
+The **`:first`** CSS pseudo-class, used with the *`@page`* at-rule, represents the first page of a
 printed document.
 
 !!! warn "Note"

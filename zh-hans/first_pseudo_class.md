@@ -1,10 +1,8 @@
 TOPICS: :first
-AUTHORS: Florian Scholz; fscholz@mozilla.net; mdn:fscholz
-         Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
 
 # CSS 伪类: `:first`
 
-**`:first`** `@page` CSS 伪类选择器描述的是：打印文档的时候，第一页的样式。
+**`:first`** **`@page`** CSS 伪类选择器描述的是：打印文档的时候，**第一页的样式**。
 
 !!! warn "提示"
     你不能改变所有的CSS属性. 你只能改变 `margins`、 `orphans`、 `widows`、文档什么时候换页。别的所有CSS样式都会被忽略。
