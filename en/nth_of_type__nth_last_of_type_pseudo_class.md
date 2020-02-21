@@ -1,14 +1,13 @@
 TOPICS: :nth-of-type()
         :nth-last-of-type()
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Pseudo-Class: `:nth-of-type()`、`:nth-last-of-type()`
 
 The **`:nth-of-type(n)`** CSS pseudo-class matches elements of a given type, based on their position
-among a group of siblings.
+among a group of *siblings*.
 
 The **`:nth-last-of-type(n)`** CSS pseudo-class matches elements of a given type, based on their
-position among a group of siblings, counting from the end.
+position among a group of *siblings*, counting from the end.
 
 ## parameter
 
