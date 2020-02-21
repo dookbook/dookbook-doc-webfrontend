@@ -2,8 +2,9 @@ TOPICS: <title>
 
 # HTML Title Element: `<title>`
 
-The HTML `<title>` element defines the document's **title** that is shown in a browser's *title
-bar* or a *page's tab*. It only contains text and TOPICS within the element are ignored.
+TThe **HTML `<title>`element** defines the **title** of the document, which is **required** in all
+HTML documents and is displayed on the browser's *title bar* or *tab*. It can only contain text. If
+it contains tags, any tags it contains will not be interpreted.
 
 ## `<title>` Meta
 
@@ -35,10 +36,30 @@ or reference-style pages.
 - Search engines will typically display somewhere around the first *55-60* characters of a page title.
 Text beyond that may be lost, so try not to have titles longer than that. If you must use a longer title,
 make sure the important parts come earlier and that nothing critical is in the part of the title
-that is likely to be dropped.
+that is likely to be dropped.Generally recommended 35 Chinese (70KB) in Google; 28 Chinese (56KB) in
+Baidu;
 - Avoid special characters when possible; not all browsers will display them the same way.
 For example, "`<`" often winds up displayed in the window title bar as "`&lt;`" (the HTML less-than entity).
 - **Don't use "keyword blobs."** If your title is just a list of words, algorithms will
 often artificially reduce your page's position in the search results.
 - Try to make sure your titles are as unique as possible within your own site. Duplicate—or
 near-duplicate—titles can contribute to inaccurate search results.
+- Keyword distribution: The words that appear earlier are given higher weight.
+
+!!! warn "NOTE"
+    You cannot have more than one `<title>` element in an HTML document.
+    If you omit the `<title>` element, the document is not valid as HTML.
+
+## Simple Example
+
+```html
+<html>
+<head>
+<title>Website name-website introduction, description</title>
+</head>
+<body>
+<p>The content of the body element is displayed in the browser.</p>
+<p>The content of the title element is displayed in the browser's title bar.</p>
+</body>
+</html>
+```
