@@ -63,7 +63,7 @@ TOPICS: <acronym>
 | `<multicol>` | The HTML Multi-Column Layout element (`<multicol>`) was an experimental element designed to allow multi-column layouts and must not be used. |
 | `<nextid>` | `<nextid>` is an obsolete HTML element that served to enable the NeXT web designing tool to generate automatic NAME labels for its anchors. |
 | `<nobr>` | The non-standard, obsolete HTML `<nobr>` element prevents the text it contains from automatically wrapping across multiple lines, potentially resulting in the user having to scroll horizontally to see the entire width of the text. |
-| `<noembed>` | The `<noembed>` element is an obsolete, non-standard way to provide alternative, or "fallback", content for browsers that do not support the [`<embed>`](/en/webfrontend/<embed>) element or do not support the type of embedded content an author wishes to use. |
+| `<noembed>` | The `<noembed>` element is an obsolete, non-standard way to provide alternative, or "fallback", content for browsers that do not support the [`<embed>`](/en/webfrontend/<embed>) element or do not support the type of embedded content an author wishes to use.HTML 4.01 has been abolished. For HTML5, please use [`<object>`](/en/ webfrontend/<object>) instead. |
 | **`<plaintext>`** | HTML plaintext element. Render everything following the start tag as **raw text** (**plaintext**), ignoring any following HTML. Use **[`<pre>`](/en/webfrontend/<pre>)** instead. |
 | `<shadow>` | The **HTML `<shadow>` element**—an obsolete part of the Web Components technology suite—was intended to be used as a shadow DOM insertion point. |
 | **`<spacer>`** | HTML space element. Allow insertion of **empty spaces** on pages. Use HTML **`&nbsp;`** or [[CSS]] instead. |

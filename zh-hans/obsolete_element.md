@@ -61,7 +61,7 @@ TOPICS: <acronym>
 | `<multicol>` | **HTML`<multicol>` 元素** 是一个实验元素，旨在允许多列布局。它从来没有任何显着的牵引力，并没有在任何主流浏览器中实现。|
 | `<nextid>` | **`<nextid>`** 是一个过时的HTML元素，用于使NeXT Web设计工具为其锚点生成自动的NAME标签。 |
 | `<nobr>` | **HTML`<nobr>`元素** 阻止文本自动拆分成新行，所以它展示为长的一行，可能还需要滚动。这个标签不是标准的 HTML，并且不应该使用。反之应该使用 CSS 属性。 |
-| `<noembed>` | **`<noembed>`** 元素是个废除的和不标准的方式，用于向不支持 [`<embed>`](/zh-hans/webfrontend/<embed>) ，或者不支持作者希望的 嵌入式内容 的浏览器提供替代（或者“后备”）内容。这个元素在 HTML 4.01 起废除。 |
+| `<noembed>` | **`<noembed>`** 元素是个废除的和不标准的方式，用于向不支持 [`<embed>`](/zh-hans/webfrontend/<embed>) ，或者不支持作者希望的 嵌入式内容 的浏览器提供替代（或者“后备”）内容。这个元素在 HTML 4.01 起废除,在HTML5中请使用 [`<object>`](/zh-hans/webfrontend/<object>) 来替代。 |
 | **`<plaintext>`** | HTML 纯文本元素。将从标签开始以后的所有文本渲染为**纯文本**，不会解释为 HTML。它没有闭合标签，因为任何后面的东西都会看做纯文本。请使用 **[`<pre>`](/zh-hans/webfrontend/<pre>)** 替代。|
 | `<shadow>` | **HTML `<shadow>` 元素** — Web 组件技术套件的废弃部分 — 目的是用作 Shadow DOM insertion point。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。在正常的 HTML 没有任何用处。 |
 | **`<spacer>`** | **HTML 空格元素**。可以向页面插入空格。推荐使用 HTML **`&nbsp;`** 或 [[CSS]] 属性。 |
