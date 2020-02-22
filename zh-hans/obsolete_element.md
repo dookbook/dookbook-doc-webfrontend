@@ -41,7 +41,7 @@ TOPICS: <acronym>
 | **`<applet>`** | HTML Applet 元素。标记文档中内嵌 **[[Java]] applet**。 HTML 5 请使用 **[`<object>`](/zh-hans/webfrontend<object>)** 代替。|
 | `<basefont>` | **HTML标签`<basefont></basefont>`** 用来设置文档的默认字体大小。使用`<font>`可以相对于默认字体大小进行变化。 |
 | `<bgsound>` | **`<bgsound></bgsound>`** 是IE浏览器中设置网页背景音乐的元素。 |
-| `<big>` | **HTML 大元素 (`<big>`)** 会使字体加大一号（例如从小号(small)到中号(medium)，从大号(large)到加大(x-large)），最大不超过浏览器的最大字体。对于那些不支持`<big>`标签的浏览器来说，它经常被解释成粗体。在HTML5中不支持。|
+| `<big>` | **HTML 大元素 (`<big>`)** 会使字体加大一号（例如从小号(`small`)到中号(`medium`)，从大号(`large`)到加大(`x-large`)），最大不超过浏览器的最大字体。对于那些不支持`<big>`标签的浏览器来说，它经常被解释成粗体。在HTML5中不支持。|
 | `<blink>` | **HTML 闪烁元素(`<blink>`)** 不是标准元素，它会使包含其中的文本闪烁。 |
 | `<center>` | **HTML 居中元素 (`<center>`)** 是个块级元素，可以包含段落，以及其它块级和内联元素。这个元素的整个内容在它的上级元素中水平居中(通常是 [`<body>`](/zh-hans/webfrontend/<body>))。 |
 | `<command>` | **`command`元素**用来表示一个用户可以调用的命令（比如单选按钮、复选框或按钮）。 |
@@ -61,7 +61,7 @@ TOPICS: <acronym>
 | `<multicol>` | **HTML`<multicol>` 元素** 是一个实验元素，旨在允许多列布局。它从来没有任何显着的牵引力，并没有在任何主流浏览器中实现。|
 | `<nextid>` | **`<nextid>`** 是一个过时的HTML元素，用于使NeXT Web设计工具为其锚点生成自动的NAME标签。 |
 | `<nobr>` | **HTML`<nobr>`元素** 阻止文本自动拆分成新行，所以它展示为长的一行，可能还需要滚动。这个标签不是标准的 HTML，并且不应该使用。反之应该使用 CSS 属性。 |
-| `<noembed>` | **`<noembed>`** 元素是个废除的和不标准的方式，用于向不支持 [`<embed>`](/zh-hans/webfrontend/<embed>) ，或者不支持作者希望的 嵌入式内容 的浏览器提供替代（或者“后备”）内容。这个元素在 HTML 4.01 起废除，以支持 `<object>`。后备内容应该插在 `<object>` 的开始和结束标签之间。 |
+| `<noembed>` | **`<noembed>`** 元素是个废除的和不标准的方式，用于向不支持 [`<embed>`](/zh-hans/webfrontend/<embed>) ，或者不支持作者希望的 嵌入式内容 的浏览器提供替代（或者“后备”）内容。这个元素在 HTML 4.01 起废除。 |
 | **`<plaintext>`** | HTML 纯文本元素。将从标签开始以后的所有文本渲染为**纯文本**，不会解释为 HTML。它没有闭合标签，因为任何后面的东西都会看做纯文本。请使用 **[`<pre>`](/zh-hans/webfrontend/<pre>)** 替代。|
 | `<shadow>` | **HTML `<shadow>` 元素** — Web 组件技术套件的废弃部分 — 目的是用作 Shadow DOM insertion point。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。在正常的 HTML 没有任何用处。 |
 | **`<spacer>`** | **HTML 空格元素**。可以向页面插入空格。推荐使用 HTML **`&nbsp;`** 或 [[CSS]] 属性。 |
