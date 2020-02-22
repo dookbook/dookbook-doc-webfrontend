@@ -6,7 +6,7 @@ TThe **HTML `<title>`element** defines the **title** of the document, which is *
 HTML documents and is displayed on the browser's *title bar* or *tab*. It can only contain text. If
 it contains tags, any tags it contains will not be interpreted.
 
-## `<title>` Meta
+## Technical Summary
 
 |  |  |
 | :-- | :-- |
