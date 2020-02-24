@@ -8,7 +8,7 @@ be clipped, display an ellipsis (`'…'`), or display a custom string.
 The `text-overflow` property doesn't force an overflow to occur. To make text overflow its container
 you have to set other CSS properties: `overflow` and `white-space`.
 
-The text-overflow property only affects content that is overflowing a block container element in
+The `text-overflow` property only affects content that is overflowing a block container element in
 its inline progression direction (not text overflowing at the bottom of a box, for example).
 
 ## Property Value
