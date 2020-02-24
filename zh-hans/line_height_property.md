@@ -2,7 +2,7 @@ TOPICS: line-height property
 
 # CSS 属性: `line-height`
 
-CSS **`line-height`** 属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非替代的 `inline` 元素，
+CSS **`line-height`** 属性用于设置多行元素的空间量，如**多行文本的间距**。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非替代的 `inline` 元素，
 它用于计算行盒（line box）的高度。
 
 ## 属性值
@@ -25,12 +25,12 @@ div { line-height: 120%;  font-size: 10pt; }   /* 百分比 percentage */
 div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font 简写属性 font shorthand */
 ```
 
-为了简便，可以通过 **`font`** 简写来设置 `line-height`，但这要求在使用该简写属性时同时设置 **`font-family`** 属性。
+为了简便，可以通过 [**`font`**](/zh-hans/webfrontend/font_property) 简写来设置 `line-height`，但这要求在使用该简写属性时同时设置 **`font-family`** 属性。
 
 ## 推荐在设置 `line-height` 时使用无单位数值
 
-这个示例说明了为什么给 `line-height` 赋值时使用 `<number>` 值比使用 `<length>` 更好。我们会到用两个 [`<div>`](/zh-hans/webfrontend/<div>)
-元素。第一个 `div` 为绿色边框，使用无单位的 `line-height`值。第二个 `div` 带红色边框，使用 `em` 定义 `line-height` 的值。
+这个示例说明了为什么给 `line-height` 赋值时使用 `number` 值比使用 `length` 更好。我们会到用两个 [`<div>`](/zh-hans/webfrontend/<div>)
+元素。第一个 `div` 为绿色边框，使用无单位的 `line-height`值。第二个 `<div>` 带红色边框，使用 `em` 定义 `line-height` 的值。
 
 ```css
 .green {
