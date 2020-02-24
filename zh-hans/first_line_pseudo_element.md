@@ -1,13 +1,13 @@
-TOPICS: :first-line
+TOPICS: ::first-line
 
-# CSS Pseudo-Class: `:first-line`
+# CSS 伪元素: `::first-line`
 
-The **`:first-line`** CSS pseudo-class is used to specify the style of the **first line** of the selector.
+**`::first-line`** CSS 伪元素用来指定选择器**第一行**的样式。
 
-!!! warn "Note"
-    The `first-line` selector applies to block-level elements.
+!!! warn "注意"
+    `::first-line` 选择器适用于*块级元素*中。
 
-## Example
+## 示例
 
 ```html
 <h1>WWF's Mission Statement</h1>
@@ -15,7 +15,7 @@ The **`:first-line`** CSS pseudo-class is used to specify the style of the **fir
 ```
 
 ```css
-p:first-line {
+p::first-line {
   background-color:yellow;
 }
 ```

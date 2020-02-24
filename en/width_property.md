@@ -1,5 +1,4 @@
 TOPICS: width property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Property: `width`
 
@@ -8,38 +7,16 @@ but if `box-sizing` is set to `border-box`, it sets the width of the border area
 
 The `min-width` and `max-width` properties override `width`.
 
-## Syntax
+## Property Value
 
-```css
-/* <length> values */
-width: 300px;
-width: 25em;
+| Property Value | Description |
+| :--- | :--- |
+| length | Use **`px`**, **`rem`**, **`em`** and other units to define the width |
+| **`%` **| Defines the percentage width based on the width of the containing block (parent element) |
+| **`auto`** | The browser will calculate and select a width for the specified element. |
+| **`inherit`** | Specifies that the value of the `width` property should be inherited from the parent element |
 
-/* <percentage> value */
-width: 75%;
-
-/* Keyword values */
-width: max-content;
-width: min-content;
-width: fit-content(20em);
-width: auto;
-
-/* Global values */
-width: inherit;
-width: initial;
-width: unset;
-```
-
-## Attribute Value
-
-| Attribute Value | Description |
-| `length` | Defines the width as an absolute value. |
-| `percentage` | Defines the width as a percentage of the containing block's width. |
-| `auto` | The browser will calculate and select a width for the specified element. |
-| `max-content` | The intrinsic preferred width. |
-| `min-content` | The intrinsic minimum width. |
-
-## Default width
+## Example: Default width
 
 ```css
 p.goldie {
@@ -51,7 +28,7 @@ p.goldie {
 <p class="goldie">The Mozilla community produces a lot of great software.</p>
 ```
 
-## `px` and `em`
+## Example: `px` and `em`
 
 ```css
 .px_length {
@@ -74,7 +51,7 @@ p.goldie {
 <div class="em_length">Width measured in em</div>
 ```
 
-## PercentageSection
+## Example: Percentage
 
 ```css
 .percent {
@@ -88,7 +65,7 @@ p.goldie {
 <div class="percent">Width in percentage</div>
 ```
 
-## `max-content`
+## Example: `max-content`
 
 ```css
 p.maxgreen {
@@ -103,7 +80,7 @@ p.maxgreen {
 <p class="maxgreen">The Mozilla community produces a lot of great software.</p>
 ```
 
-## `min-content`
+## Example: `min-content`
 
 ```css
 p.minblue {

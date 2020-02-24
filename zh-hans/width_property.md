@@ -1,11 +1,4 @@
 TOPICS: width property
-AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
-         Jingli Chang; jingli.chang01@gmail.com; github:changjingli
-         Safeer Rana; Prinz_Rana@mozilla.net; mdn:Prinz_Rana
-         John Cido; johncido@mozilla.net; mdn:johncido
-         Sphinx; SphinxKnight@github.com; github:SphinxKnight
-         Teoli; teoli@mozilla.net; mdn:teoli
-         evantre; evantre@qq.com; github:evantre
 
 # CSS 属性: `width`
 
@@ -13,36 +6,16 @@ AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
 
 `min-width` 和 `max-width` 属性覆盖 `width`.
 
-## 语法
-
-```css
-width: 300px;        /* <length> values */
-width: 25em;
-
-width: 75% ;         /* <percentage> values */
-
-width: border-box;   /* Keyword values */
-width: content-box;
-width: max-content;
-width: min-content;
-width: available;
-width: fit-content;
-width: auto;
-
-width: inherit;
-```
-
 ## 属性值
 
 | 属性值 | 说明 |
 | :--- | :--- |
-| `length` | 可能的长度单位见 `<length>` |
-| `percentage` | 指定为包含块宽度的 `<percentage>` |
-| `auto` | 浏览器将会为指定的元素计算并选择一个宽度. |
-| `max-content` | 固有的首选宽度. |
-| `min-content` | 固有的最小宽度. |
+| length | 使用 **`px`**、**`rem`**、**`em`** 等单位定义宽度 |
+| **`%`** | 定义基于包含块（父元素）宽度的百分比宽度 |
+| **`auto`** | 默认值。浏览器可计算出实际的宽度 |
+| **`inherit`** | 规定应该从父元素继承 width 属性的值 |
 
-## 默认宽度
+## 示例：默认宽度
 
 ```css
 p.goldie {
@@ -54,7 +27,7 @@ p.goldie {
 <p class="goldie">The Mozilla community produces a lot of great software.</p>
 ```
 
-## `px` 和 `em`
+## 示例：`px` 和 `em`
 
 ```css
 .px_length {
@@ -77,7 +50,7 @@ p.goldie {
 <div class="em_length">以 em 度量的宽度</div>
 ```
 
-## 百分比
+## 示例：百分比
 
 ```css
 .percent {
@@ -91,7 +64,7 @@ p.goldie {
 <div class="percent">按照百分比度量的宽度</div>
 ```
 
-## `max-content`
+## 示例：`max-content`
 
 ```css
 p.maxgreen {
@@ -106,7 +79,7 @@ p.maxgreen {
 <p class="maxgreen">The Mozilla community produces a lot of great software.</p>
 ```
 
-## `min-content`
+## 示例：`min-content`
 
 ```css
 p.minblue {
