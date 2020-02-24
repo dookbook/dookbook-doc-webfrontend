@@ -11,6 +11,11 @@ TOPICS: <img>
 
 The **HTML `<img>` element** embeds an **image** into the document. It is a *replaced element*.
 
+!!! warn "Prompt"
+    Technically, images are not inserted into HTML pages, but instead are linked to HTML pages. The
+    `<img>` tag is used to create placeholders for the referenced image.
+    Add an image to a link to another document by nesting `<img>` tags within the [`<a>`](/en/webfrontend/<a>) tag.
+
 ## Technical Summary
 
 |  |  |
@@ -35,7 +40,19 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_attrib
 | **`srcset`** | A list of one or more strings *separated by commas* indicating **a set of possible image sources** for the user agent to use. |
 | **`sizes`** | A list of one or more strings *separated by commas* indicating **a set of source sizes**. If the `srcset` attribute is absent, or contains no values with a width (`w`) descriptor, then the `sizes` attribute has no effect. |
 | **`usemap`** | The partial URL (starting with `'#'`) of an **image map** associated with the element.<br>Note: **You cannot use this attribute if the `<img>` element is a descendant of an [`<a>`](/en/webfrontend/<a>) or [`<button>`](/en/webfrontend/<button>) element.** See [`<map>` and `<area>`](/en/webfrontend/<map>) elements. |
-| `crossorigin` |This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. CORS-enabled images can be reused in the [`<canvas>`](/en/webfrontend/<canvas>) element without being "tainted." The allowed values are:
+| `crossorigin` |This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. CORS-enabled images can be reused in the [`<canvas>`](/en/webfrontend/<canvas>) element without being "tainted." The allowed values are: |
+| `ismap` | This Boolean attribute indicates whether the image is part of a server-side `map`.If so, the exact coordinates of the click will be sent to the server.<br>**Note:**<br>Instructions for use: This attribute is only allowed if the `<img>` element is a descendant of a `<a>` element with a valid `href` attribute. |
+
+### Deprecated attribute
+
+| Attribute | Description |
+| :-- | :-- |
+| ~~`align`~~ |（**Obsolete**）Aligns the image with its surrounding context. Use the **`float` and/or `vertical-align`** CSS properties instead of this attribute.|
+| ~~`border`~~ |（**Obsolete**）The width of a border around the image. Use the **`border`** CSS property instead.|
+| ~~`hspace`~~ |（**Obsolete**）The number of pixels of white space on the left and right of the image. Use the **`margin`** CSS property instead.|
+| ~~`longdesc`~~ |（**Obsolete**）A link to a more detailed description of the image. Possible values are a URL or an element `id`.<br> *Note: This attribute is mentioned in the latest W3C version, HTML 5.2, but has been removed from the WHATWG’s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) . It has an uncertain future; authors should use a WAI-ARIA alternative such as `aria-describedby` or `aria-details`. |
+| ~~`name`~~ |（**Obsolete**）A name for the element. Use the **`id` attribute** instead.|
+| ~~`vspace`~~ |（**Obsolete**）The number of pixels of white space above and below the image. Use the `margin` CSS property instead.|
 
 ### Anonymous
 
@@ -123,10 +140,7 @@ dimensions, and no dimensions were specified in the `<img>` element's attributes
 
 ## Image Link
 
-This example shows how to turn the image into a link. It is very
-simple to do so — you just nest the `<img>` tag inside the [`<a>`](/en/webfrontend/<a>). One
-consideration is that you should made the alternative text describe the resource the link is
-pointing to.
+This example shows how to turn the image into a link.
 
 ```html
 <a href="https://dookbook.info">
@@ -136,8 +150,7 @@ pointing to.
 
 ## Image with Specified Height and Width
 
-Setting of an intrinsic size using **`width`** and **`height`** attribute, which is useful when you
-want to set the space taken up by an image to ensure the page layout is stable before it loads.
+Use the **`height`** and **`width`** properties to specify the image height and width.
 
 ```html
 <img src="https://dookbook.info/static/img/logo-tail.svg" alt="Dookbook Logo" height="128" width="256">
@@ -232,6 +245,14 @@ Doing so may cause some screen readers to announce the description twice, creati
 The `title` attribute should also not be used as supplemental captioning information to
 accompany an image's `alt` description. If an image needs a caption, use a combination of the
 *[`<figure>`](/en/webfrontend/<figure>)* and *[`<figcaption>`](/en/webfrontend/<figcaption>)* elements.
+
+### Difference between `alt` and `title` attributes
+
+The ** `alt` attribute ** in the picture is a text prompt that appears when the picture is not
+displayed properly.
+
+The **[`title`](/en/webfrontend/title_attribute)**  property in the image is a text hint when the
+mouse is moved over the element.
 
 ## Styling With CSS
 
