@@ -1,12 +1,4 @@
 TOPICS: z-index property
-AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
-         Cici Hu; Huooo@mozilla.net; mdn:Huooo
-         Student Main; studentmain@github.com; github:studentmain
-         年糕小豆汤; yuuko@mozilla.net; mdn:yuuko
-         clearaki; aki@mozilla.net; mdn:aki
-         Dong WEI; FredWe@mozilla.net; mdn:FredWe
-         Teoli; teoli@mozilla.net; mdn:teoli
-         ZoomZhao; zoom.zhao@gmail.com; github:ZoomZhao
 
 # CSS 属性: `z-index`
 
@@ -16,24 +8,6 @@ AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
 
 1. 盒子在当前堆叠上下文中的堆叠层级。
 1. 盒子是否创建一个本地堆叠上下文。
-
-## 语法
-
-```css
-/* 字符值 */
-z-index: auto;
-
-/* 整数值 */
-z-index: 0;
-z-index: 3;
-z-index: 289;
-z-index: -1;/* 使用负值降低优先级 */
-
-/* 全局值 */
-z-index: inherit;
-z-index: initial;
-z-index: unset;
-```
 
 `z-index` 属性可以被设定为关键词 `auto` 或 `<integer>`。
 
