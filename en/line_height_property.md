@@ -7,9 +7,9 @@ distance between lines of text. On block-level elements, it specifies the minimu
 boxes within the element. On non-replaced inline elements, it specifies the height that is used to
 calculate line box height.
 
-## Attribute Value
+## Property Value
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `normal` | Default. Set reasonable line spacing |
 | `number` | Set a number, this number will be multiplied by the current font size to set the line spacing |

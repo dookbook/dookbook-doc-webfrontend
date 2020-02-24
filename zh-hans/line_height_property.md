@@ -1,14 +1,8 @@
 TOPICS: line-height property
-AUTHORS: Crystal-RainSlide; Crystal-RainSlide@github.com; github:Crystal-RainSlide
-         yinzhiyizhi; yinzhiyizhi@gmail.com; github:yinzhiyizhi
-         庄引; zhuangyin8@gmail.com; github:zhuangyin8
-         mozhs; mozhs@github.com; github:mozhs
-         Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
-         Dong WEI; FredWe@mozilla.net; mdn:FredWe
 
 # CSS 属性: `line-height`
 
-CSS `line-height`  属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非替代的 `inline` 元素，
+CSS **`line-height`** 属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非替代的 `inline` 元素，
 它用于计算行盒（line box）的高度。
 
 ## 属性值
