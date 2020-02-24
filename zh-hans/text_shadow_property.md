@@ -2,7 +2,7 @@ TOPICS: text-shadow property
 
 # CSS 属性: `text-shadow`
 
-**`text-shadow`** 为文字添加阴影。可以为文字与 `text-decorations` 添加多个阴影，阴影值之间用逗号隔开。
+**`text-shadow`** **为文字添加阴影**。可以为文字与 `text-decorations` 添加多个阴影，阴影值之间用逗号隔开。
 
 当阴影大于一个时要用逗号区别开阴影之间的参数
 
@@ -11,7 +11,8 @@ TOPICS: text-shadow property
 
 当所给的阴影大于一个时，阴影应用的顺序为从前到后, 第一个指定的阴影在顶部.
 
-这个属性同时适用于 `::first-line` 以及 `::first-letter` 伪元素.
+这个属性同时适用于 [`::first-line`](/zh-hans/webfrontend/::first-line) 以及
+[`::first-letter`](/zh-hans/webfrontend/::first-letter) 伪元素.
 
 ## 属性值
 

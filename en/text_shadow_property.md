@@ -15,7 +15,8 @@ length value is the blur-radius. The color value is the shadow's color.
 When more than one shadow is given, shadows are applied front-to-back, with the first-specified
 shadow on top.
 
-This property applies to both `::first-line` and `::first-letter` pseudo-elements.
+This property applies to both [`::first-line`](/en/webfrontend/::first-line) and [`::first-letter`](/en/webfrontend/::first-letter)
+pseudo-elements.
 
 ## Property Value
 
