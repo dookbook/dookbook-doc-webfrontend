@@ -9,10 +9,10 @@ The **`text-justify`** CSS property sets what type of justification should be ap
 
 | Property Value | Description |
 | :--- | :--- |
-| `none` | The text justification is turned off. This has the same effect as not setting text-align at all, although it is useful if you need to turn justification on and off for some reason. |
-| `auto` | The browser chooses the best type of justification for the current situation based on a balance between performance and quality, but also on what is most appropriate for the language of the text (e.g., English, CJK languages, etc.). This is the default justification used if text-justify is not set at all. |
-| `inter-word` | The text is justified by adding space between words (effectively varying word-spacing), which is most appropriate for languages that separate words using spaces, like English or Korean. |
-| `inter-character` | The text is justified by adding space between characters (effectively varying letter-spacing), which is most appropriate for languages like Japanese. |
+| **`none`** | The text justification is turned off. This has the same effect as not setting text-align at all, although it is useful if you need to turn justification on and off for some reason. |
+| **`auto`** | The browser chooses the best type of justification for the current situation based on a balance between performance and quality, but also on what is most appropriate for the language of the text (e.g., English, CJK languages, etc.). This is the default justification used if text-justify is not set at all. |
+| **`inter-word`** | The text is justified by adding space between words (effectively varying word-spacing), which is most appropriate for languages that separate words using spaces, like English or Korean. |
+| **`inter-character`** | The text is justified by adding space between characters (effectively varying letter-spacing), which is most appropriate for languages like Japanese. |
 
 ## Examples
 

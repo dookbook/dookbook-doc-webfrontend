@@ -10,11 +10,11 @@ The `min-width` and `max-width` properties override `width`.
 ## Property Value
 
 | Property Value | Description |
-| `length` | Defines the width as an absolute value. |
-| `percentage` | Defines the width as a percentage of the containing block's width. |
-| `auto` | The browser will calculate and select a width for the specified element. |
-| `max-content` | The intrinsic preferred width. |
-| `min-content` | The intrinsic minimum width. |
+| :--- | :--- |
+| length | Use **`px`**, **`rem`**, **`em`** and other units to define the width |
+| **`%` **| Defines the percentage width based on the width of the containing block (parent element) |
+| **`auto`** | The browser will calculate and select a width for the specified element. |
+| **`inherit`** | Specifies that the value of the `width` property should be inherited from the parent element |
 
 ## Example: Default width
 

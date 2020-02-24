@@ -1,5 +1,4 @@
 TOPICS: text-indent property
-AUTHORS: Sebastian Zartner; SebastianZ@git
 
 # CSS 属性: `text-indent`
 
@@ -9,8 +8,8 @@ AUTHORS: Sebastian Zartner; SebastianZ@git
 
 | 属性值 | 描述 |
 | :--- | :--- |
-| `length` | 定义固定的缩进。默认值：`0`。|
-| `%` | 定义基于父元素宽度的百分比的缩进。|
+| length | 定义固定的缩进。默认值：`0`。|
+| **`%`** | 定义基于父元素宽度的百分比的缩进。|
 
 ## 示例
 

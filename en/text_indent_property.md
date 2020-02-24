@@ -10,8 +10,8 @@ right-to-left layout) edge of the containing block-level element's content box.
 
 | Property Value | Description |
 | :--- | :--- |
-| `length` | Defines a fixed indentation. Default: `0`. |
-| `%` | Defines the indentation based on a percentage of the width of the parent element. |
+| length | Defines a fixed indentation. Default: `0`. |
+| **`%`** | Defines the indentation based on a percentage of the width of the parent element. |
 
 ## Examples
 

@@ -18,9 +18,9 @@ oblique face from its `font-family`.
 
 | Property Value | Description |
 | :--- | :--- |
-| `normal` | Select the regular font of `font-family`.|
-| `italic` | Select italic. If no italic version is available for the current font, oblique will be used instead. |
-| `oblique` | Select italic. If no italic version is available for the current font, italic will be used instead. |
+| **`normal`** | Select the regular font of `font-family`.|
+| **`italic`** | Select italic. If no italic version is available for the current font, oblique will be used instead. |
+| **`oblique`** | Select italic. If no italic version is available for the current font, italic will be used instead. |
 
 ## CSS Property: `font-variant`
 
@@ -30,9 +30,9 @@ will be compared to the rest of the text With a smaller font size
 
 | Property Value | Description |
 | :--- | :--- |
-| `normal` | Defaults. The browser displays a standard font. |
-| `small-caps` | The browser displays the font of small capital letters. |
-| `inherit` | Specifies that the value of the `font-variant` attribute should be inherited from the parent element |
+| **`normal`** | Defaults. The browser displays a standard font. |
+| **`small-caps`** | The browser displays the font of small capital letters. |
+| **`inherit`** | Specifies that the value of the `font-variant` attribute should be inherited from the parent element |
 
 ## CSS Property: `font-weight`
 
@@ -41,11 +41,11 @@ depend on the `font-family` you are using.
 
 | Property Value | Description |
 | :--- | :--- |
-| `bold` | Bold. Equivalent to `700`. |
-| `normal` | Normal thickness. Equivalent to `400`.|
-| `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900` | A numerical way to specify the font thickness provides more values than `normal` and `bold`.|
-| `lighter` | Define finer characters. |
-| `bolder` | Defines thicker characters. |
+| **`bold`** | Bold. Equivalent to **`700`**. |
+| **`normal`** | Normal thickness. Equivalent to **`400`**.|
+| **`100`**, **`200`**, **`300`**, **`400`**, **`500`**, **`600`**, **`700`**, **`800`**, **`900`** | A numerical way to specify the font thickness provides more values than **`normal`** and **`bold`**.|
+| **`lighter`** | Define finer characters. |
+| **`bolder`** | Defines thicker characters. |
 
 ## CSS Property: `font-size`
 
@@ -54,12 +54,12 @@ the size of `em`, `ex`, and other relative `<length>` units.
 
 | Property Value | Description |
 | :--- | :--- |
-| `xx-small`,`x-small`,`small`,`medium`,`large`,`x-large`,`xx-large` | Set the font size to different sizes, from `xx-small` to `xx-large`. <br> Default: `medium`.|
-| `smaller` | Set to a smaller size than the parent element.|
-| `larger` | Set to a larger size than the parent element. |
-| `length` | Set to a fixed value. |
-| `%` | Set to a percentage value based on the parent element. |
-| `inherit` | Specifies that the font size should be inherited from the parent element.|
+| **`xx-small`**,**`x-small`**,**`small`**,**`medium`**,**`large`**,**`x-large`**,**`xx-large`** | Set the font size to different sizes, from **`xx-small`** to **`xx-large`**. <br> Default: **`medium`**.|
+| **`smaller`** | Set to a smaller size than the parent element.|
+| **`larger`** | Set to a larger size than the parent element. |
+| length | Set to a fixed value. |
+| **`%`** | Set to a percentage value based on the parent element. |
+| **`inherit`** | Specifies that the font size should be inherited from the parent element.|
 
 ## CSS Property: `font-family`
 
@@ -68,8 +68,8 @@ and/or **generic family names** for the selected element.
 
 | Property Value | Description |
 | :--- | :--- |
-| `family-name`,`generic-family` | A prioritized list of font family names and / or class family names for an element. <br> Default: Browser-dependent |
-| `inherit` | Specifies that the font family should be inherited from the parent element |
+| family-name, generic-family | A prioritized list of font family names and / or class family names for an element. <br> Default: Browser-dependent |
+| **`inherit`** | Specifies that the font family should be inherited from the parent element |
 
 ## Examples: Use `font` property
 

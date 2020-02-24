@@ -15,8 +15,8 @@ its inline progression direction (not text overflowing at the bottom of a box, f
 
 | Property Value | Description |
 | :--- | :--- |
-| `clip` | The default for this property. This keyword value will truncate the text at the limit of the content area, therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify `text-overflow` as an empty string, if that is supported in your target browsers: `text-overflow: '';`. |
-| `ellipsis` | This keyword value will display an ellipsis (`'…'`, U+2026 HORIZONTAL ELLIPSIS) to represent clipped text. The ellipsis is displayed inside the content area, decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped. |
+| **`clip`** | The default for this property. This keyword value will truncate the text at the limit of the content area, therefore the truncation can happen in the middle of a character. To clip at the transition between characters you can specify `text-overflow` as an empty string, if that is supported in your target browsers: `text-overflow: '';`. |
+| **`ellipsis`** | This keyword value will display an ellipsis (`'…'`, U+2026 HORIZONTAL ELLIPSIS) to represent clipped text. The ellipsis is displayed inside the content area, decreasing the amount of text displayed. If there is not enough space to display the ellipsis, it is clipped. |
 
 ## Examples
 

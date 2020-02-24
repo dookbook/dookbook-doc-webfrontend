@@ -11,10 +11,10 @@ calculate line box height.
 
 | Property Value | Description |
 | :--- | :--- |
-| `normal` | Default. Set reasonable line spacing |
-| `number` | Set a number, this number will be multiplied by the current font size to set the line spacing |
-| `length` | Set a fixed line spacing |
-| `%` | Percent line spacing based on the current font size |
+| **`normal`** | Default. Set reasonable line spacing |
+| number | Set a number, this number will be multiplied by the current font size to set the line spacing |
+| length | Set a fixed line spacing |
+| **`%`** | Percent line spacing based on the current font size |
 
 ## Basic example
 

@@ -16,8 +16,8 @@ The `z-index` property is specified as either the keyword `auto` or an `<integer
 
 | Property Value | Description |
 | :--- | :--- |
-| `auto` | The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is the same as its parent's box. |
-| `inherit` | This `<integer>` is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context in which its stack level is `0`. This means that the `z-indexes` of descendants are not compared to the `z-indexes` of elements outside this element. |
+| **`auto`** | The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is the same as its parent's box. |
+| **`inherit`** | This `<integer>` is the stack level of the generated box in the current stacking context. The box also establishes a local stacking context in which its stack level is `0`. This means that the `z-indexes` of descendants are not compared to the `z-indexes` of elements outside this element. |
 
 ## Examples
 

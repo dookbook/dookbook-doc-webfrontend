@@ -8,9 +8,9 @@ The **`letter-spacing`** CSS property sets the spacing behavior between text cha
 
 | Property Value | Description |
 | :--- | :--- |
-| `normal` | Default. Provides no extra space between characters.|
-| `length` | Defines a fixed space between characters (allows negative values). |
-| `inherit` | Specifies the value that should be inherited from the parent element |
+| **`normal`** | Default. Provides no extra space between characters.|
+| length | Defines a fixed space between characters (allows negative values). |
+| **`inherit`** | Specifies the value that should be inherited from the parent element |
 
 ## Examples
 

@@ -9,13 +9,13 @@ forced line break, is aligned.
 
 | Property Value | Description |
 | :--- | :--- |
-| `left` | The inline contents are aligned to the left edge of the line box. |
-| `right` | The inline contents are aligned to the right edge of the line box. |
-| `center` | The inline contents are centered within the line box. |
-| `auto` | The affected line is aligned per the value of text-align, unless text-align is justify, in which case the effect is the same as setting text-align-last to start. |
-| `justify` | The text is justified. Text should line up their left and right edges to the left and right content edges of the paragraph. |
-| `start` | The same as left if direction is left-to-right and right if direction is right-to-left. |
-| `end` | The same as right if direction is left-to-right and left if direction is right-to-left. |
+| **`left`** | The inline contents are aligned to the left edge of the line box. |
+| **`right`** | The inline contents are aligned to the right edge of the line box. |
+| **`center`** | The inline contents are centered within the line box. |
+| **`auto`** | The affected line is aligned per the value of text-align, unless text-align is justify, in which case the effect is the same as setting text-align-last to start. |
+| **`justify`** | The text is justified. Text should line up their left and right edges to the left and right content edges of the paragraph. |
+| **`start`** | The same as left if direction is left-to-right and right if direction is right-to-left. |
+| **`end`** | The same as right if direction is left-to-right and left if direction is right-to-left. |
 
 ## Examples
 
