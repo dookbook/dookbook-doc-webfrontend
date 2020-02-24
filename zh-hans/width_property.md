@@ -1,36 +1,10 @@
 TOPICS: width property
-AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
-         Jingli Chang; jingli.chang01@gmail.com; github:changjingli
-         Safeer Rana; Prinz_Rana@mozilla.net; mdn:Prinz_Rana
-         John Cido; johncido@mozilla.net; mdn:johncido
-         Sphinx; SphinxKnight@github.com; github:SphinxKnight
-         Teoli; teoli@mozilla.net; mdn:teoli
-         evantre; evantre@qq.com; github:evantre
 
 # CSS 属性: `width`
 
 **`width`** 属性指定了元素内容区的宽度. 内容区在元素`padding`，`border`和`margin`里面。
 
 `min-width` 和 `max-width` 属性覆盖 `width`.
-
-## 语法
-
-```css
-width: 300px;        /* <length> values */
-width: 25em;
-
-width: 75% ;         /* <percentage> values */
-
-width: border-box;   /* Keyword values */
-width: content-box;
-width: max-content;
-width: min-content;
-width: available;
-width: fit-content;
-width: auto;
-
-width: inherit;
-```
 
 ## 属性值
 
@@ -42,7 +16,7 @@ width: inherit;
 | `max-content` | 固有的首选宽度. |
 | `min-content` | 固有的最小宽度. |
 
-## 默认宽度
+## 示例：默认宽度
 
 ```css
 p.goldie {
@@ -54,7 +28,7 @@ p.goldie {
 <p class="goldie">The Mozilla community produces a lot of great software.</p>
 ```
 
-## `px` 和 `em`
+## 示例：`px` 和 `em`
 
 ```css
 .px_length {
@@ -77,7 +51,7 @@ p.goldie {
 <div class="em_length">以 em 度量的宽度</div>
 ```
 
-## 百分比
+## 示例：百分比
 
 ```css
 .percent {
@@ -91,7 +65,7 @@ p.goldie {
 <div class="percent">按照百分比度量的宽度</div>
 ```
 
-## `max-content`
+## 示例：`max-content`
 
 ```css
 p.maxgreen {
@@ -106,7 +80,7 @@ p.maxgreen {
 <p class="maxgreen">The Mozilla community produces a lot of great software.</p>
 ```
 
-## `min-content`
+## 示例：`min-content`
 
 ```css
 p.minblue {
