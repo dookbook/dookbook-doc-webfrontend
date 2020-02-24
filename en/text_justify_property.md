@@ -2,7 +2,7 @@ TOPICS: text-justify property
 
 # CSS Property: `text-justify`
 
-The **`text-justify`** CSS property sets what type of justification should be applied to text when
+The **`text-justify`** CSS property sets **what type of justification should be applied to text** when
 **`text-align: justify;`** is set on an element.
 
 ## Property Value
