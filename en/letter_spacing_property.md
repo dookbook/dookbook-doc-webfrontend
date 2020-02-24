@@ -2,7 +2,7 @@ TOPICS: letter-spacing property
 
 # CSS Property: `letter-spacing`
 
-The **`letter-spacing`** CSS property sets the spacing behavior between text characters.
+The **`letter-spacing`** CSS property sets **the spacing behavior between text characters**.
 
 ## Property Value
 
