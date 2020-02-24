@@ -1,13 +1,12 @@
 TOPICS: letter-spacing property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Property: `letter-spacing`
 
 The **`letter-spacing`** CSS property sets the spacing behavior between text characters.
 
-## Attribute Value
+## Property Value
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `normal` | Default. Provides no extra space between characters.|
 | `length` | Defines a fixed space between characters (allows negative values). |

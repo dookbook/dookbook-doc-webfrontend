@@ -2,7 +2,7 @@ TOPICS: letter-spacing property
 
 # CSS 属性: `letter-spacing`
 
-CSS 的 `letter-spacing` 属性明确了**文字的间距**行为。
+CSS 的 **`letter-spacing`** 属性明确了**文字的间距**行为。
 
 ## 属性值
 
