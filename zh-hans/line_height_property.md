@@ -25,7 +25,8 @@ div { line-height: 120%;  font-size: 10pt; }   /* 百分比 percentage */
 div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font 简写属性 font shorthand */
 ```
 
-为了简便，可以通过 [**`font`**](/zh-hans/webfrontend/font_property) 简写来设置 `line-height`，但这要求在使用该简写属性时同时设置 **`font-family`** 属性。
+为了简便，可以通过 [**`font`**](/zh-hans/webfrontend/font_property) 简写来设置 `line-height`，但这要求在使用该简写属性时同时设置
+**`font-family`** 属性。
 
 ## 推荐在设置 `line-height` 时使用无单位数值
 
