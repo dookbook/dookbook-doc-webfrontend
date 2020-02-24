@@ -3,8 +3,7 @@ TOPICS: direction property
 # CSS Property: `direction`
 
 The **`direction`** CSS property sets the direction of text, table columns, and horizontal
-overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for
-those written from left to right (like English and most other languages).
+overflow.
 
 Note that text direction is usually defined within a document (e.g., with HTML's **`dir`** attribute)
 rather than through direct use of the `direction` property.
