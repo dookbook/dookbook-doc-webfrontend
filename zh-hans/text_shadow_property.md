@@ -1,13 +1,8 @@
 TOPICS: text-shadow property
-AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
-         Dong WEI; FredWe@mozilla.net; mdn:FredWe
-         Teoli; teoli@mozilla.net; mdn:teoli
-         天赋创新; tonghao_xjtu@qq.com; github:tfcx-th
-         Ivan Yan; yanxyz@github.com; github:yanxyz
 
 # CSS 属性: `text-shadow`
 
-`text-shadow`为文字添加阴影。可以为文字与 `text-decorations` 添加多个阴影，阴影值之间用逗号隔开。
+**`text-shadow`** 为文字添加阴影。可以为文字与 `text-decorations` 添加多个阴影，阴影值之间用逗号隔开。
 
 当阴影大于一个时要用逗号区别开阴影之间的参数
 
