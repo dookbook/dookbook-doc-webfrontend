@@ -1,5 +1,4 @@
 TOPICS: direction property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Property: `direction`
 
@@ -7,7 +6,7 @@ The **`direction`** CSS property sets the direction of text, table columns, and 
 overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for
 those written from left to right (like English and most other languages).
 
-Note that text direction is usually defined within a document (e.g., `with` HTML's `dir` attribute)
+Note that text direction is usually defined within a document (e.g., with HTML's **`dir`** attribute)
 rather than through direct use of the `direction` property.
 
 The property sets the base text direction of block-level elements and the direction of embeddings
@@ -21,12 +20,12 @@ but not inside of columns.
 The `direction` and `unicode-bidi` properties are the two only properties which are not affected by
 the `all` shorthand property.
 
-## Attribute Value
+## Property Value
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
-| `ltr` | Text and other elements go from left to right. This is the default value. |
-| `rtl` | Text and other elements go from right to left. |
+| **`ltr`** | Text and other elements go **from left to right**. This is the default value. |
+| **`rtl`** | Text and other elements go **from right to left**. |
 
 ## Examples
 
