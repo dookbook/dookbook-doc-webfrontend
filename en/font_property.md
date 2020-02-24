@@ -4,7 +4,6 @@ TOPICS: font property
         font-weight property
         font-size property
         font-family property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Property: `font`
 
@@ -17,7 +16,7 @@ Alternatively, it sets an element's font to a system font.
 The **`font-style`** CSS property sets whether a font should be styled with a normal, italic, or
 oblique face from its `font-family`.
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `normal` | Select the regular font of `font-family`.|
 | `italic` | Select italic. If no italic version is available for the current font, oblique will be used instead. |
@@ -29,7 +28,7 @@ oblique face from its `font-family`.
 lower case letters will be converted to upper case, but all letters using small capital letters
 will be compared to the rest of the text With a smaller font size
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `normal` | Defaults. The browser displays a standard font. |
 | `small-caps` | The browser displays the font of small capital letters. |
@@ -40,7 +39,7 @@ will be compared to the rest of the text With a smaller font size
 The **`font-weight`** CSS property sets the **weight (or boldness) of the font**. The weights available
 depend on the `font-family` you are using.
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `bold` | Bold. Equivalent to `700`. |
 | `normal` | Normal thickness. Equivalent to `400`.|
@@ -53,7 +52,7 @@ depend on the `font-family` you are using.
 The **`font-size`** CSS property sets the **size of the font**. This property is also used to compute
 the size of `em`, `ex`, and other relative `<length>` units.
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `xx-small`,`x-small`,`small`,`medium`,`large`,`x-large`,`xx-large` | Set the font size to different sizes, from `xx-small` to `xx-large`. <br> Default: `medium`.|
 | `smaller` | Set to a smaller size than the parent element.|
@@ -67,7 +66,7 @@ the size of `em`, `ex`, and other relative `<length>` units.
 The **`font-family`** CSS property specifies a prioritized list of one or more **font family names**
 and/or **generic family names** for the selected element.
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `family-name`,`generic-family` | A prioritized list of font family names and / or class family names for an element. <br> Default: Browser-dependent |
 | `inherit` | Specifies that the font family should be inherited from the parent element |
