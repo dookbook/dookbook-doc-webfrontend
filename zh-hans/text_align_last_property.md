@@ -1,9 +1,8 @@
 TOPICS: text-align-last property
-AUTHORS: 7orz; i@7orz.me; github:AchooLuv
 
 # CSS 属性: `text-align-last`
 
-CSS 属性 `text-align-last` 描述的是一段文本中最后一行在被强制换行之前的对齐规则。
+CSS 属性 **`text-align-last`** 描述的是一段文本中最后一行在被强制换行之前的对齐规则。
 
 ## 属性值
 

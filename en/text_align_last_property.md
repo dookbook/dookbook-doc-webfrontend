@@ -5,9 +5,9 @@ TOPICS: text-align-last property
 The **`text-align-last`** CSS property sets how the last line of a block or a line, right before a
 forced line break, is aligned.
 
-## Attribute Value
+## Property Value
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `left` | The inline contents are aligned to the left edge of the line box. |
 | `right` | The inline contents are aligned to the right edge of the line box. |
