@@ -1,15 +1,8 @@
 TOPICS: text-align property
-AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
-         Dong WEI; FredWe@mozilla.net; mdn:FredWe
-         庄引; zhuangyin8@gmail.com; github:zhuangyin8
-         Guillaume Heras; Guillaume-Heras@mozilla.net; mdn:Guillaume-Heras
-         Florian Scholz; fscholz@mozilla.net; mdn:fscholz
-         Fan Sai Kuok; fskuok@mozilla.net; mdn:fskuok
-         紫云飞; ziyunfei@mozilla.net; mdn:ziyunfei
 
 # CSS 属性: `text-align`
 
-`text-align` CSS属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己的对齐，只控制它的行内内容的对齐。
+**`text-align`** CSS属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己的对齐，只控制它的行内内容的对齐。
 
 ## 属性值
 

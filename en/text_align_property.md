@@ -1,5 +1,4 @@
 TOPICS: text-align property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Property: `text-align`
 
@@ -7,9 +6,9 @@ The **`text-align`** CSS property sets the horizontal alignment of a block eleme
 This means it works like [`vertical-align`](/en/webfrontend/vertical-align_property) but in the
 horizontal direction.
 
-## Attribute Value
+## Property Value
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `left` | The inline contents are aligned to the left edge of the line box. |
 | `right` | The inline contents are aligned to the right edge of the line box. |
