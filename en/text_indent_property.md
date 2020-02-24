@@ -1,5 +1,4 @@
 TOPICS: text-indent property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Property: `text-indent`
 
@@ -7,9 +6,9 @@ The **`text-indent`** CSS property sets the **length of empty space (indentation
 lines of text in a block**. Horizontal spacing is with respect to the left (or right, for
 right-to-left layout) edge of the containing block-level element's content box.
 
-## Attribute Value
+## Property Value
 
-| Attribute Value | Description |
+| Property Value | Description |
 | :--- | :--- |
 | `length` | Defines a fixed indentation. Default: `0`. |
 | `%` | Defines the indentation based on a percentage of the width of the parent element. |
