@@ -132,7 +132,7 @@ If an error occurs while trying to load or render an image, and an `onerror` eve
 been configured to handle the `error` event, that event handler will get called. This can happen
 in a number of situations, including:
 
-- The `src` attribute is empty or [null](/en/glossary/null/).
+- The `src` attribute is empty or [[null]].
 - The specified `src` URL is the same as the URL of the page the user is currently on.
 - The specified image is corrupted in some way that prevents it from being loaded.
 - The specified image's metadata is corrupted in such a way that it's impossible to retrieve its
