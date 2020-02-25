@@ -42,7 +42,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_attrib
 | **`sizes`** | A list of one or more strings *separated by commas* indicating **a set of source sizes**. If the `srcset` attribute is absent, or contains no values with a width (`w`) descriptor, then the `sizes` attribute has no effect. |
 | **`usemap`** | The partial URL (starting with `'#'`) of an **image map** associated with the element.<br>Note: **You cannot use this attribute if the `<img>` element is a descendant of an [`<a>`](/en/webfrontend/<a>) or [`<button>`](/en/webfrontend/<button>) element.** See [`<map>` and `<area>`](/en/webfrontend/<map>) elements. |
 | `crossorigin` |This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. CORS-enabled images can be reused in the [`<canvas>`](/en/webfrontend/<canvas>) element without being "tainted." The allowed values are: |
-| `ismap` | This Boolean attribute indicates whether the image is part of a server-side `map`.If so, the exact coordinates of the click will be sent to the server.<br><br>Note:This attribute is only allowed if the `<img>` element is a descendant of a `<a>` element with a valid `href` attribute. |
+| `ismap` | This Boolean attribute indicates whether the image is part of a server-side `map`.If so, the exact coordinates of the click will be sent to the server.<br><br>**Note:** This attribute is only allowed if the `<img>` element is a descendant of a `<a>` element with a valid `href` attribute. |
 
 ### Deprecated attribute
 
