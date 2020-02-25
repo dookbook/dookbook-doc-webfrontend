@@ -1,8 +1,4 @@
 TOPICS: white-space property
-AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
-         Jingli Chang; jingli.chang01@gmail.com; github:changjingli
-         Florian Scholz; fscholz@mozilla.net; mdn:fscholz
-         Dong WEI; FredWe@mozilla.net; mdn:FredWe
 
 # CSS 属性: `white-space`
 
@@ -20,7 +16,7 @@ AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
 
 下面的表格总结了各种 `white-space` 值的行为：
 
-| - | **换行符** | **空格和制表符** | **文字转行** | **行尾空格** |
+| - | 换行符 | 空格和制表符 | 文字转行 | 行尾空格 |
 | :--- | --- | --- | --- | --- |
 | `normal` | 合并 | 合并 | 转行 | 去掉 |
 | `nowrap` | 合并 | 合并 | 不转行 | 去掉 |

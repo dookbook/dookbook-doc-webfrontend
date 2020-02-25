@@ -1,5 +1,4 @@
 TOPICS: white-space property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS Property: `white-space`
 
@@ -17,7 +16,7 @@ The **`white-space`** CSS property sets **how white space inside an element is h
 
 The following table summarizes the behavior of the various `white-space` values:
 
-| - | **New lines** | **Spaces and tabs** | **Text wrapping** | **End-of-line spaces** |
+| - | New lines | Spaces and tabs | Text wrapping | End-of-line spaces |
 | :--- | --- | --- | --- | --- |
 | `normal` | Collapse | Collapse | Wrap | Remove |
 | `nowrap` | Collapse | Collapse | No wrap | Remove |
