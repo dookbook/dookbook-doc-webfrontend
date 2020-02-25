@@ -14,7 +14,8 @@ The **HTML `<img>` element** embeds an **image** into the document. It is a *rep
 !!! warn "Prompt"
     Technically, images are not inserted into HTML pages, but instead are linked to HTML pages. The
     `<img>` tag is used to create placeholders for the referenced image.
-    Add an image to a link to another document by nesting `<img>` tags within the [`<a>`](/en/webfrontend/<a>) tag.
+    Add an image to a link to another document by nesting `<img>` tags within the [`<a>`](/en/webfrontend/<a>)
+    tag.
 
 ## Technical Summary
 
