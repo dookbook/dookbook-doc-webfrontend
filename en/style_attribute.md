@@ -4,7 +4,7 @@ TOPICS: style attribute
 
 The **`style`** [global attribute](/en/webfrontend/HTML_Global_Attributes) contains **CSS styling
 declarations to be applied to the element**. Note that it is recommended for styles to be defined in
-a separate file or files. This attribute and the [`<style>`](/en/webfrontend/<style>) element have
+a separate file or files. This attribute and the [*`<style>`*](/en/webfrontend/<style>) element have
 mainly the purpose of allowing for quick styling, for example for testing purposes.
 
 !!! warn "Usage note"
@@ -16,7 +16,7 @@ mainly the purpose of allowing for quick styling, for example for testing purpos
 ## Example
 
 The following shows that the inline style of the `style` attribute overrides the style of the
-[`<style>`](/en/webfrontend/<style>) tag.
+[*`<style>`*](/en/webfrontend/<style>) tag.
 
 ```html
 <style>
