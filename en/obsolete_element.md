@@ -41,16 +41,16 @@ TOPICS: <acronym>
 | :------ | :---------- |
 | **`<acronym>`** | HTML acronym element. Indicate a sequence of characters that compose an **acronym** or **abbreviation** for a word. In HTML 5, use **[`<abbr>`](/en/webfrontend/<abbr>)** instead. |
 | **`<applet>`** | HTML Applet element. Embeds a **Java applet** into the document; this element has been deprecated in favor of **[`<object>`](/en/webfrontend/<object>)**. |
-| `<basefont>` | The obsolete HTML Base Font element (`<basefont>`) sets a default font face, size, and color for the other elements which are descended from its parent element. |
+| **`<basefont>`** | The obsolete **HTML Base Font element (`<basefont>`) sets a default font face**, size, and color for the other elements which are descended from its parent element. Please use CSS **[`font`](/en/webfrontend/font_property)** property instead |
 | `<bgsound>` | The Internet Explorer only HTML Background Sound element (`<bgsound>`) sets up a sound file to play in the background while the page is used; use [`<audio>`](/en/webfrontend/<audio>) instead. |
 | `<big>` | The obsolete **HTML Big Element (`<big>`)** renders the enclosed text at a font size one level larger than the surrounding text (`medium` becomes `large`, for example).|
 | `<blink>` | The **HTML Blink Element (`<blink>`)** is a non-standard element which causes the enclosed text to flash slowly. |
 | `<center>` | The obsolete **HTML Center Element (`<center>`)** is a block-level element that displays its block-level or inline contents centered horizontally within its containing element. |
-| `<command>` | The **HTML Command element (`<command>`)** represents a command which the user can invoke. Commands are often used as part of a context menu or toolbar. |
+| **`<command>`** | The **HTML Command element (`<command>`)** represents a command which the user can invoke. Commands are often used as part of a context menu or toolbar. In HTML5, use **[`<menu>`](/en/webfrontend/<menu>)** instead. |
 | `<content>` | The **HTML `<content>` element**—an obsolete part of the Web Components suite of technologies—was used inside of Shadow DOM as an insertion point, and wasn't meant to be used in ordinary HTML. |
 | **`<dir>`** | HTML directory element. Used as a **container for a directory** of files and/or folders, potentially with styles and icons applied by the user agent. Use **[`<ul>`](/en/webfrontend/<ul>)** instead. |
 | `<element>` | The obsolete **HTML `<element>` element** was part of the Web Components specification; it was intended to be used to define new custom DOM elements. |
-| `<font>` | The **HTML Font Element (`<font>`)** defines the font size, color and face for its content. |
+| **`<font>`** | The **HTML Font Element (`<font>`)** defines **the font size**, **color and face for its content**. Please use CSS **[`font`](/en/webfrontend/font_property)** property instead |
 | **`<frameset>`** | Define a frameset. It is used to organize one or more **`<frame>`** elements. In HTML5, use **[`<iframe>`](/en/webfrontend/<iframe>)** instead. |
 | **`<frame>`** | Define child windows (frames) in **`<frameset>`**. In HTML5, use **[`<iframe>`](/en/webfrontend/<iframe>)** instead. |
 | **`<noframes>`** | The obsolete HTML No Frames or frame fallback element, provides content to be presented in browsers that don't support (or have disabled support for) the **`<frame>`** element. Completely outdated in HTML5 |
