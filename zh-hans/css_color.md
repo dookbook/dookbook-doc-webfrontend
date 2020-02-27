@@ -1,4 +1,25 @@
 TOPICS: CSS color
+        rgb()
+        rgba()
+        hsl()
+        hsla()
+        aqua
+        black
+        blue
+        fuchsia
+        gray
+        green
+        lime
+        maroon
+        navy
+        olive
+        orange
+        purple
+        red
+        silver
+        teal
+        white
+        yellow
 
 # CSS 颜色
 
@@ -23,7 +44,7 @@ p {
 }
 ```
 
-## RGB 颜色
+## RGB 颜色: `rgb()`
 
 **RGB 颜色** 是通过 **红(R)**、**绿(G)**、**蓝(B)** 来定义颜色的强度。
 
@@ -47,7 +68,7 @@ p {
 }
 ```
 
-## RGBA 颜色
+## RGBA 颜色: `rgba()`
 
 **RGBA 颜色值** 是 **RGB 颜色值** 的扩展，带有一个 **alpha** 通道 - 它规定了对象的不透明度。
 
@@ -59,9 +80,9 @@ p {
 }
 ```
 
-## HSL 颜色
+## HSL 颜色: `hsl()`
 
-**HSL** 是一种将 **RGB** 色彩模型中的点在柱面坐标表示法。指的是 **hue（色调**）、**saturation（饱和度）**、**lightness（亮度）**
+**HSL** 是一种将 **RGB** 色彩模型中的点在柱面坐标表示法。指的是 **hue（色调）**、**saturation（饱和度）**、**lightness（亮度）**
 
 **HSL 颜色值**的三个参数
 
@@ -77,7 +98,7 @@ p {
 }
 ```
 
-## HSLA 颜色
+## HSLA 颜色: `hsla()`
 
 **HSLA 颜色值** 是 **HSL 颜色值**的扩展，带有一个 **alpha** 通道 - 它规定了对象的不透明度。
 
