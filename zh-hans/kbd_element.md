@@ -31,9 +31,7 @@ TOPICS: <kbd>
 `<kbd>`标签是短语标签。提示：**不推荐使用**此标记，但可以使用[[CSS]]实现更丰富的效果。
 所有短语标签：**[`<em>`](/zh-hans/webfrontend/<em>)**、**[<strong>](/zh-hans/webfrontend/<strong>)**、**[`<dfn>`](/zh-hans/webfrontend/<dfn>)**、**[`<code>`](/zh-hans/webfrontend/<code>)**、**[`<samp>`](/zh-hans/webfrontend/<samp>)**、**[`<var>`](/zh-hans/webfrontend/<var>)**、**[`<cite>`](/zh-hans/webfrontend/<cite>)**。
 
-## 示例
-
-### 基本示例
+## 基本示例
 
 ```html
 <p>Type the following in the Run dialog: <kbd>cmd</kbd><br>Then click the <kbd>OK</kbd> button.</p>
@@ -41,7 +39,7 @@ TOPICS: <kbd>
 <p>Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
 ```
 
-### 自定义样式
+## 自定义样式示例
 
 通过在CSS为`<kbd>`元素添加一种新样式“ `key`”，可以在渲染键盘按键时应用：
 
@@ -59,7 +57,7 @@ kbd.key {
 <p>您还可以通过按 <kbd><kbd class="key">Ctrl</kbd>+<kbd class="key">N</kbd></kbd>.</p>
 ```
 
-### 回应输入
+## `<samp>`元素示例
 
 当 `<kbd>` 元素处于 *[`<samp>`](/zh-hans/webfrontend/<samp>)* 元素之中，代表着被系统回显的输入时。
 
