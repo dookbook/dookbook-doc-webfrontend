@@ -42,6 +42,10 @@ input options below.
 You can define a custom style to override the browser's default font selection for the `<kbd>` element,
 although the user's preferences may potentially override your [[CSS]].
 
+The `<kbd>` tag is a phrase tag.Tip: This tag is not recommended, but you can use [[CSS]] for richer
+effects.
+All phrase tags：**[`<em>`](/zh-hans/webfrontend/<em>)**,**[<strong>](/zh-hans/webfrontend/<strong>)**,**[`<dfn>`](/zh-hans/webfrontend/<dfn>)**,**[`<code>`](/zh-hans/webfrontend/<code>)**,**[`<samp>`](/zh-hans/webfrontend/<samp>)**,**[`<var>`](/zh-hans/webfrontend/<var>)**,**[`<cite>`](/zh-hans/webfrontend/<cite>)**.
+
 ## Examples
 
 ### Basic example
