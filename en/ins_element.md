@@ -46,7 +46,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 The presence of the `<ins>` element is not announced by most screen reading technology in its default
 configuration. It can be made to be announced by using the CSS **`content`** property, along with
-the **`::before`** and **`::after`** pseudo-elements.
+the **[`::before`](en/webfrontend/::before)** and **[`::after`](en/webfrontend/::after)** pseudo-elements.
 
 ```css
 ins::before,

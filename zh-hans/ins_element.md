@@ -7,7 +7,7 @@ TOPICS: <ins>
 **HTML `<ins>` 元素**标记已经被**插入文档中的文本**。
 
 !!! warn "提示"
-   [`<del>`](/zh-hans/webfrontend/<del>)和`<ins>`一起使用，描述文档中的删除和更新。浏览器通常会在已删除文本上添加一条删除线，在新插入文本下添加一条下划线。
+   *[`<del>`](/zh-hans/webfrontend/<del>)*和`<ins>`一起使用，描述文档中的删除和更新。浏览器通常会在已删除文本上添加一条删除线，在新插入文本下添加一条下划线。
 
 ## 技术摘要
 
@@ -41,9 +41,10 @@ TOPICS: <ins>
   这一段文本是新插入至文档的。</ins>
 ```
 
-### 无障碍关注
+## 可访问性问题
 
-`<ins>`在大多数屏幕阅读技术均未宣布该元素在默认配置中存在。可以通过使用CSS **`content`** 属性以及 **`::before`** 和 **`::after`**伪元素来宣布它。
+`<ins>`在大多数屏幕阅读技术均未宣布该元素在默认配置中存在。可以通过使用CSS **`content`** 属性以及
+**[`::before`](zh-hans/webfrontend/::before)** 和 **[`::after`](zh-hans/webfrontend/::after)**伪元素来宣布它。
 
 ```css
 ins::before,
