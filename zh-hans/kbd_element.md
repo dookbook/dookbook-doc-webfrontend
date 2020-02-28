@@ -28,9 +28,6 @@ TOPICS: <kbd>
 
 通过自定义 [[CSS]] 可以改变 `<kbd>` 的默认样式，但用户浏览器设置优先级更高，可以覆盖CSS样式。
 
-`<kbd>`标签是短语标签。提示：**不推荐使用**此标记，但可以使用[[CSS]]实现更丰富的效果。
-所有短语标签：**[`<em>`](/zh-hans/webfrontend/<em>)**、**[<strong>](/zh-hans/webfrontend/<strong>)**、**[`<dfn>`](/zh-hans/webfrontend/<dfn>)**、**[`<code>`](/zh-hans/webfrontend/<code>)**、**[`<samp>`](/zh-hans/webfrontend/<samp>)**、**[`<var>`](/zh-hans/webfrontend/<var>)**、**[`<cite>`](/zh-hans/webfrontend/<cite>)**。
-
 ## 基本示例
 
 ```html
