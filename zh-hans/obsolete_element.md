@@ -38,17 +38,17 @@ TOPICS: <acronym>
 | 元素 | 描述 |
 | :--- | :--- |
 | **`<acronym>`** | HTML 缩写元素。定义**首字母缩写**或**简略语**。HTML 5 请使用 **[`<abbr>`](/zh-hans/webfrontend/<abbr>)** 代替。|
-| **`<applet>`** | HTML Applet 元素。标记文档中内嵌 **[[Java]] applet**。 HTML 5 请使用 **[`<object>`](/zh-hans/webfrontend<object>)** 代替。|
-| `<basefont>` | **HTML标签`<basefont></basefont>`** 用来设置文档的默认字体大小。使用`<font>`可以相对于默认字体大小进行变化。 |
+| **`<applet>`** | HTML Applet 元素。标记文档中内嵌 **[[Java]] applet**。 HTML 5 请使用 **[`<object>`](/zh-hans/webfrontend/<object>)** 代替。|
+| **`<basefont>`** | HTML 基本字体元素。定义**文档的默认字体大小**。HTML 5 请用 CSS **[`font`](/zh-hans/webfrontend/font_property)** 属性代替 |
+| **`<font>`** | HTML 字形元素。定义**该内容的字体大小**、**顏色与表现**。HTML 5 请用 CSS **[`font`](/zh-hans/webfrontend/font_property)** 属性代替 |
 | `<bgsound>` | **`<bgsound></bgsound>`** 是IE浏览器中设置网页背景音乐的元素。 |
 | `<big>` | **HTML 大元素 (`<big>`)** 会使字体加大一号（例如从小号(`small`)到中号(`medium`)，从大号(`large`)到加大(`x-large`)），最大不超过浏览器的最大字体。|
 | `<blink>` | **HTML 闪烁元素(`<blink>`)** 不是标准元素，它会使包含其中的文本闪烁。 |
 | `<center>` | **HTML 居中元素 (`<center>`)** 是个块级元素，可以包含段落，以及其它块级和内联元素。这个元素的整个内容在它的上级元素中水平居中(通常是 [`<body>`](/zh-hans/webfrontend/<body>))。 |
-| `<command>` | **`command`元素**用来表示一个用户可以调用的命令（比如单选按钮、复选框或按钮）。 |
+| **`<command>`** | HTML 命令元素。定义**命令按钮**（比如**单选按钮**、**复选框**或**按钮**）。 HTML 5 请使用 **[`<menu>`](/zh-hans/webfrontend/<menu>)** 代替。|
 | `<content>` | **HTML `<content>` 元素**— Web 组件技术套件的废弃部分 — 用于 Shadow DOM 内部作为insertion point，并且不可用于任何正常的HTML，现在已被 [`<slot>`](/zh-hans/webfrontend/<slot>) 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。 |
 | **`<dir>`** | HTML 目录元素。被作为一个文件和/或文件夹的**目录的容器**，可能还有用户代理设置的样式与图标。请使用 **[`<ul>`](/zh-hans/webfrontend/<ul>)** 代替。 |
 | `<element>` | **`<element>`元素** 被定义在最新的 HTML DOM 元素中。 |
-| `<font>` | **HTML 字形元素（`<font>`）** 定义该内容的字体大小、顏色与表现。 |
 | **`<frameset>`** | 定义一个**框架集**。它用来组织一个或者多个 **`<frame>`** 元素。HTML5 请使用 **[`<iframe>`](/zh-hans/webfrontend/<iframe>)** 代替。 |
 | **`<frame>`** | 定义 **`<frameset>`** 中的子窗口（框架）。HTML5 请使用 **[`<iframe>`](/zh-hans/webfrontend/<iframe>)** 代替。 |
 | **`<noframes>`** | 用于支持不支持 **`<frame>`** 元素的浏览器，或者这样配置的浏览器。在 HTML5 中完全过时。 |
