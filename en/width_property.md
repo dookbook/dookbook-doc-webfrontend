@@ -2,17 +2,15 @@ TOPICS: width property
 
 # CSS Property: `width`
 
-The **`width`** CSS property sets an element's width. By default, it sets the width of the content area,
-but if `box-sizing` is set to `border-box`, it sets the width of the border area.
-
-The `min-width` and `max-width` properties override `width`.
+The **`width`** CSS property sets **an element's width**. By default, it sets the width of the
+content area, but if **`box-sizing`** is set to **`border-box`**, it sets **the width of the border area**.
 
 ## Property Value
 
 | Property Value | Description |
 | :--- | :--- |
 | length | Use **`px`**, **`rem`**, **`em`** and other units to define the width |
-| **`%` **| Defines the percentage width based on the width of the containing block (parent element) |
+| **`%`** | Defines the percentage width based on the width of the containing block (parent element) |
 | **`auto`** | The browser will calculate and select a width for the specified element. |
 | **`inherit`** | Specifies that the value of the `width` property should be inherited from the parent element |
 

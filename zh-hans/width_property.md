@@ -2,9 +2,7 @@ TOPICS: width property
 
 # CSS 属性: `width`
 
-**`width`** 属性指定了元素内容区的宽度. 内容区在元素`padding`，`border`和`margin`里面。
-
-`min-width` 和 `max-width` 属性覆盖 `width`.
+**`width`** 属性设置**元素的宽度**。 默认情况下，它设置**内容区域的宽度**，但是如果 **`box-sizing`** 设置为 **`border-box`**，它则是**边框区域的宽度**。
 
 ## 属性值
 
@@ -13,7 +11,7 @@ TOPICS: width property
 | length | 使用 **`px`**、**`rem`**、**`em`** 等单位定义宽度 |
 | **`%`** | 定义基于包含块（父元素）宽度的百分比宽度 |
 | **`auto`** | 默认值。浏览器可计算出实际的宽度 |
-| **`inherit`** | 规定应该从父元素继承 width 属性的值 |
+| **`inherit`** | 规定应该从父元素继承 `width` 属性的值 |
 
 ## 示例：默认宽度
 
