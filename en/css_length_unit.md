@@ -45,15 +45,15 @@ There must be no spaces between **number** and **unit**. If the length value is 
 
 | Unit | Description |
 | :--- | :--- |
-| **`ch`** | (Infrequently used) Relative to **number *`0`* width**. |
-| **`ex`** | (Infrequently used) Height relative to **character *`x`***. Usually half the font height. |
+| **`ch`** | (Infrequently used) Relative to **width** of number **`0`** (`ZERO`, `U+0030`) glyph in the element’s font. |
+| **`ex`** | (Infrequently used) Relative to character **`x`** **height** of the element's font. |
 | **`%`** | **Percentage** is generally used to inherit the width and height of the parent element, or to adapt based on the browser's width and height. |
-| **`em`** | Relative to the font size of the *parent element*. The default browser font size is *`16px`*, then `1em == 16px` |
+| **`em`** | Relative to the font size of the *parent element*. The default value of browsers' font size is *`16px`*, then `1em == 16px` |
 | **`rem`** | Relative to the font size of the [*`<html>`*](/en/webfrontend/<html>) root element. If the root element is not set, relative to the browser's default font size, the default browser font size is *`16px`*, then `1rem == 16px`.|
-| **`vw`** | Relative to **View Width**. The window is evenly divided into `vw` of `100` units |
-| **`vh`** | Relative to **view height**. The window is evenly divided into `vh` of `100` units |
-| **`vmin`** | Is the smaller of *`vw`* and *`vh`*.|
-| **`vmax`** | Is the larger of *`vw`* and *`vh`*.|
+| **`vw`** | Relative to **1%** of **viewport’s width**. |
+| **`vh`** | Relative to **1%** of **viewport's height**. |
+| **`vmin`** | The smaller one between of *`vw`* and *`vh`*. |
+| **`vmax`** | The larger one between of *`vw`* and *`vh`*. |
 
 ### Examples of relative length units
 
