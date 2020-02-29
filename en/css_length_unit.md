@@ -15,7 +15,7 @@ TOPICS: CSS length unit
         pt
         pc
 
-# CSS Length Usnit
+# CSS Length Unit
 
 There are two types of CSS length units: **relative length** and **absolute length**.
 **Absolute Length Unit** is a fixed value that reflects a real physical size. The absolute length
@@ -96,7 +96,7 @@ p {  /* Child elements use relative length units, relative to the parent element
 }
 ```
 
-## Example window unit
+### Example window unit
 
 ```html
 <h1>Hello</h1>
