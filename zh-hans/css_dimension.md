@@ -19,27 +19,14 @@ TOPICS: CSS Dimension
 | **`min-height`** | 指定**元素的最小高度**。这个属性 `min-height` 不允许一个元素的高度 **`height`** 小于这个元素指定的最小高度 `min-height`。|
 | **`max-height`** | 指定**元素的最大高度**。如果 **`height`** 属性的值比 `max-height` 属性的值还大, 则 **`height`** 属性会失效.
 
-## `width` 属性值
-
-**`min-width`** 和 **`max-width`** 也拥有同样的属性值
+## CSS 尺寸属性值
 
 | 属性值 | 说明 |
 | :--- | :--- |
-| length | 使用 [**`px`**](/zh-hans/webfrontend/px)、[**`rem`**](/zh-hans/webfrontend/rem)、[**`em`**](/zh-hans/webfrontend/em) 等单位定义宽度 |
-| **`%`** | 定义基于包含块（父元素）宽度的百分比宽度 |
-| **`auto`** | 默认值。浏览器可计算出实际的宽度 |
-| **`inherit`** | 规定应该从父元素继承 `width` 属性的值 |
-
-## `height` 属性值
-
-**`min-height`** 和 **`max-height`** 也拥有同样的属性值
-
-| 属性值 | 说明 |
-| :--- | :--- |
-| length | 使用 [**`px`**](/zh-hans/webfrontend/px)、[**`rem`**](/zh-hans/webfrontend/rem)、[**`em`**](/zh-hans/webfrontend/em) 等单位定义高度。|
-| **`%`** | 基于包含它的块级对象的百分比高度。|
-| **`auto`** | 默认。浏览器会计算出实际的高度。|
-| **`inherit`** | 规定应该从父元素继承 `height` 属性的值 |
+| length | 使用 **`px`**、**`rem`**、**`em`** 等单位定义高度或宽度，详见[CSS 长度单位](/zh-hans/webfrontend/css_length_unit) |
+| **`%`** | 基于**父元素**高度或宽度的百分比 |
+| **`auto`** | 默认值。浏览器自动计算 |
+| **`inherit`** | 继承自父元素 |
 
 ## 示例
 

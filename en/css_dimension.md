@@ -19,23 +19,14 @@ The **CSS Dimension** property allows you to control the **height** and **width*
 | **`min-height`** | sets **the minimum height of an element**. It prevents the used value of the **`height`** property from becoming smaller than the value specified for `min-height`. |
 | **`max-height`** | sets **the maximum height of an element**. It prevents the used value of the **`height`** property from becoming larger than the value specified for `max-height`. |
 
-## `width` Property Value
+## CSS Dimension Property Value
 
 | Property Value | Description |
 | :--- | :--- |
-| length | Use **`px`**, **`rem`**, **`em`** and other units to define the width |
-| **`%`** | Defines the percentage width based on the width of the containing block (parent element) |
-| **`auto`** | The browser will calculate and select a width for the specified element. |
-| **`inherit`** | Specifies that the value of the `width` property should be inherited from the parent element |
-
-## `height` Property Value
-
-| Property Value | Description |
-| :--- | :--- |
-| length | Defines the height as an absolute value. |
-| **`%`** | Defines the height as a percentage of the containing block's height. |
-| **`auto`** | The browser will calculate and select a height for the specified element. |
-| **`inherit`** | Specifies that the value of the `height` property should be inherited from the parent element |
+| length | Use **`px`**, **`rem`**, **`em`** and other units to define the width or height, See details[CSS length unit](/zh-hans/webfrontend/css_length_unit) |
+| **`%`** | Percentage based on **parent element** height or width |
+| **`auto`** | Defaults. Browser calculates automatically |
+| **`inherit`** | Inherited from parent element |
 
 ## Example
 
