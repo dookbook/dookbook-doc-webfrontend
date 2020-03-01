@@ -23,7 +23,7 @@ The **CSS Dimension** property allows you to control the **height** and **width*
 
 | Property Value | Description |
 | :--- | :--- |
-| length | Use **`px`**, **`rem`**, **`em`** and other units to define the width or height, See details[CSS length unit](/zh-hans/webfrontend/css_length_unit) |
+| length | Use **`px`**, **`rem`**, **`em`** and other units to define the width or height, See details[CSS length unit](/en/webfrontend/css_length_unit) |
 | **`%`** | Percentage based on **parent element** height or width |
 | **`auto`** | Defaults. Browser calculates automatically |
 | **`inherit`** | Inherited from parent element |
