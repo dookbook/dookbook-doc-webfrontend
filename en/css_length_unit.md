@@ -119,3 +119,7 @@ For example: browser width is 1100px, height is 700px, 1vmin = 700px / 100 = 7px
 h3 { font-size: 15vmin; } /* Try reducing or enlarging the browser (height and width) to see how h3's font size changes. */
 h4 { font-size: 15vmax; } /* Try reducing or enlarging your browser (height and width) to see how h4's font size changes. */
 ```
+
+## More
+
+- [Pixel on Wikipedia](https://en.wikipedia.org/wiki/Pixel)
