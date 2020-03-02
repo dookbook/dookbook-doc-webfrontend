@@ -22,6 +22,48 @@ TOPICS: CSS Box Model
 
 **CSS 盒模型**本质上是一个盒子，封装周围的HTML元素，它包括：**边距**，**边框**，**填充**，和**实际内容**。
 
+盒模型允许我们在其它元素和周围元素边框之间的空间放置元素
+
+下面的图片说明了盒子模型(Box Model)：
+
+![盒模型](/media/webfrontend__box-model.gif)
+
+不同部分的说明：
+
+- **Margin（外边距）** - 清除边框区域。Margin没有背景颜色，它是完全透明
+- **Border（边框）** - 边框周围的填充和内容。边框是受到盒子的背景颜色影响
+- **Padding（内边距）** - 清除内容周围的区域。会受到框中填充的背景颜色影响
+- **Content（内容）** - 盒子的内容，显示文本和图像
+
+为了在所有浏览器中的元素的宽度和高度设置正确的话，你需要知道的盒模型是如何工作的。
+
+例如：当您指定一个CSS元素的宽度和高度属性时，你只是设置内容区域的宽度和高度。要知道，完全大小的元素，你还必须添加填充，边框和边距。
+
+下面的例子中的元素的宽实际大小为280px, 实际占据的尺寸为300px
+
+```css
+div {
+  width:250px;
+  padding:10px;
+  border:5px solid gray;
+  margin:10px;
+}
+```
+
+## 盒子的实际大小为
+
+- 宽度 = content.width + padding.left + padding.right + border.left + border.right
+
+- 高度 = content.height + padding.top + padding.bottom + border.top + border.bottom
+
+## 而盒子需要占据的尺寸为
+
+- 宽度 = content.width + padding.left + padding.right + border.left + border.right + margin.left + margin.right
+
+- 高度 = content.height + padding.top + padding.bottom + border.top + border.bottom + margin.top + margin.bottom
+
+# CSS 盒模型属性列表
+
 | 属性 | 描述 |
 | :--- | :--- |
 | **`margin`** | 所有四个（**上下左右**）方向的**元素的外边距**。这是四个外边距属性的简写。可以为负值 |
