@@ -26,7 +26,7 @@ TOPICS: CSS Box Model
 
 下面的图片说明了盒子模型(Box Model)：
 
-![盒模型](/media/webfrontend__box-model.gif)
+![盒模型](/media/webfrontend__css-box-model.png)
 
 不同部分的说明：
 
