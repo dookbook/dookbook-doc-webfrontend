@@ -32,8 +32,8 @@ TOPICS: <ol>
 ## 使用说明
 
 - HTML 并没有对 `<ol>` 和 [`<ul>`](/zh-hans/webfrontend/<ul>) 元素的深度和反复使用次数（overlap）作出限制。
-- `<ol>`和 [`<ul>`](/zh-hans/webfrontend/<ul>) 都是列表项。它们的不同点在于 `<ol>` 元素里条目的顺序是有意义的。 对于该选择哪一个去使用下面有个建议：尝试去更改列表项的顺序，如果其含义改变了，
-那么应该使用 `<ol>` 元素，否则使用 *[`<ul>`](/zh-hans/webfrontend/<ul>)* 更合适。
+- `<ol>`和 [`<ul>`](/zh-hans/webfrontend/<ul>) 都是列表项。它们的不同点在于 `<ol>` 元素里条目的顺序是有意义的。 如果尝试更改列表项的顺序，其含义改
+变了，那么应该使用 `<ol>` 元素，否则使用 *[`<ul>`](/zh-hans/webfrontend/<ul>)* 更合适。
 
 ## HTML 列表条目元素 `<li>`
 
