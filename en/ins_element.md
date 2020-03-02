@@ -26,8 +26,12 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| **`cite`** | This attribute defines the **URI of a resource that explains the change**, such as a link to meeting minutes or a ticket in a troubleshooting system.
-| **`datetime`** | This attribute indicates **the time and date of the change** and must be a valid date with an optional time string. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp. For the format of the string without a time, see Format of a valid date string in Date and time formats used in HTML.
+| **`cite`** | This attribute defines the **URI of a resource that explains the change**, such as a link to meeting minutes or a ticket in a troubleshooting system. |
+| **`datetime`** | This attribute indicates **the time and date of the change** and must be a valid date with an optional time string. If the value cannot be parsed as a date with an optional time string, the element does not have an associated time stamp. For the format of the string without a time, see Format of a valid date string in Date and time formats used in HTML. |
+
+!!! warn "Note"
+    Currently no major browsers can correctly display the `cite` or `datetime` attributes of the `<ins>`
+    tag.
 
 ## Examples
 
@@ -42,7 +46,7 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 The presence of the `<ins>` element is not announced by most screen reading technology in its default
 configuration. It can be made to be announced by using the CSS **`content`** property, along with
-the **`::before`** and **`::after`** pseudo-elements.
+the **[`::before`](en/webfrontend/::before)** and **[`::after`](en/webfrontend/::after)** pseudo-elements.
 
 ```css
 ins::before,
