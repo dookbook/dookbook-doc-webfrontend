@@ -14,9 +14,21 @@ TOPICS: CSS Box Model
         border-style property
         border-color property
         border-top property
+        border-top-color property
+        border-top-style property
+        border-top-width property
         border-right property
+        border-right-color property
+        border-right-style property
+        border-right-width property
         border-bottom property
+        border-bottom-color property
+        border-bottom-style property
+        border-bottom-width property
         border-left property
+        border-left-color property
+        border-left-style property
+        border-left-width property
 
 # CSS 盒模型
 
@@ -26,7 +38,7 @@ TOPICS: CSS Box Model
 
 下面的图片说明了盒子模型(Box Model)：
 
-![盒模型](/media/webfrontend__css-box-model.png)
+![CSS 盒模型](/media/webfrontend__css-box-model.png)
 
 不同部分的说明：
 
@@ -75,7 +87,7 @@ div {
 | **`padding-top`** | 元素的**上方内边距** |
 | **`padding-right`** | 元素的**右内边距** |
 | **`padding-bottom`** | 元素的**下方内边距** |
-| **`padding-left`** | 元素的**左内边距区** |
+| **`padding-left`** | 元素的**左内边距** |
 | **`border`** | 设置各种**单独的边界**的简写属性 |
 | **`border-width`** | 设置盒子模型的**边框宽度**。 |
 | **`border-style`** | 用来设定元素所有**边框样式** |
