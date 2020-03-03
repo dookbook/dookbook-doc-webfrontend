@@ -4,7 +4,9 @@ TOPICS: <label>
 
 # HTML `<label>` 元素
 
-HTML **`<label>`** 元素表示用户界面中某个项目(*[`<input>`](/zh-hans/webfrontend/<input>)* 元素)的标题。
+HTML **`<label>`** 元素表示用户界面中某个项目(*[`<input>`](/zh-hans/webfrontend/<input>)* 元素)的标题/标注（标记）。
+
+`<label>` 元素不会向用户呈现任何特殊效果。不过，它为鼠标用户改进了可用性。如果您在`<label>` 元素内点击文本，就会触发此控件。就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。
 
 ## 技术摘要
 
@@ -63,6 +65,25 @@ HTML **`<label>`** 元素表示用户界面中某个项目(*[`<input>`](/zh-hans
 ```html
 <!-- 示例： 嵌入到 `<label>` 中的输入框 -->
 <label>用户名: <input type="text" name="username"></label>
+```
+
+如果没有将 `<label>`嵌入 *[`<input>`](/zh-hans/webfrontend/<input>)* 中，如下所示：
+
+```html
+<form>
+  <input type="text" name="yes-no">是
+  <input type="text" name="yes-no">否
+</form>
+```
+
+这时当我把鼠标移动到 "是" 或 "否" 时，鼠标变为了 "工" 形，是不可以点击的。如果在 *[`<input>`](/zh-hans/webfrontend/<input>)* 前加 `<label>`
+则鼠标移动到 "是" 或 "否" 时，不改变样式，可以点击。
+
+```html
+<form>
+  <label><input type="text" name="yes-no">是</label>
+  <label><input type="text" name="yes-no">否</label>
+</form>
 ```
 
 ## 无障碍问题
@@ -165,4 +186,4 @@ HTML **`<label>`** 元素表示用户界面中某个项目(*[`<input>`](/zh-hans
 [`<input>`](/zh-hans/webfrontend/<input>) 聚焦。
 如果您使用明文标记输入，则不会发生这样的效果。 将激活区域的提示部分用于输入对于有电机控制条件的人很有帮助。
 
-作为Web开发人员，重要的是，我们切勿以为人们会知道我们所知道的一切。实际上，您网站的某些访问者的思维过程和/或情况会有所不同，从而导致他们对您的表格的理解与您的理解大相径庭，而显示统一的标签则可以最大限度避免这样的误解。
+作为Web开发人员，重要的是，我们切勿以为人们会知道我们所知道的一切。实际上，您网站的某些访问者的思维过程和情况会有所不同，从而导致他们对您的表格的理解与您的理解大相径庭，而显示统一的标签则可以最大限度避免这样的误解。
