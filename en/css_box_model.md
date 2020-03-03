@@ -32,11 +32,8 @@ TOPICS: CSS Box Model
 
 # CSS Box Model
 
-**CSS box model** is essentially a box that encapsulates surrounding HTML elements. It includes:
-**margin**, **border**, **fill**, and **actual content**.
-
-The box model allows us to place elements in the space between other elements and
-surrounding element borders
+**CSS box model** (a design and *layout* glossary) is essentially a box that encapsulates surrounding
+HTML elements. It includes: **margin**, **border**, **padding**, and actual **content**.
 
 The following picture illustrates the Box Model:
 
@@ -44,58 +41,67 @@ The following picture illustrates the Box Model:
 
 Explanation of different parts:
 
-- **Margin** -Clear the border area. Margin has no background color, it is completely transparent
-- **Border** -The padding and content around the border. The border is affected by the background
-color of the box
-- **Padding** -Clear the area around the content. Will be affected by the background color of the
-box fill
-- **Content** -The content of the box, displaying text and images
+| Part | Comment | CSS Properties Involved |
+| :--: | :-- | :-- |
+| **Margin** | Outside the border area. Margin has no background color, it is completely transparent. | *`margin`* etc. |
+| **Border** | The padding and content around the border. The border is affected by the background color of the box. | *`border`* etc. |
+| **Padding** | Clear the area around the content. Will be affected by the background color of the box fill. | *`padding`* etc. |
+| **Content** | The content of the box, displaying text or images | *`width`*, *`height`*。More details please refer to [CSS Dimension](/en/webfrontend/CSS_dimension) |
 
-In order to set the width and height of the element correctly in all browsers, you need to know
-how the box model works.
+## Size of Box Model
 
-For example: When you specify the width and height properties of a CSS element, you just set the
-width and height of the content area. To know that for full-size elements, you must also add padding,
-borders, and margins.
+When you specify the `width` and `height` properties of a CSS element, you just set the
+width and height of the content area.
+To know that for full-size elements, you must also add *padding*,
+*borders*, and *margins*.
 
-In the example below, the actual width of the element is 280px, and the actual size is 300px.
+In the example below, the actual width of the element is `280px`, and the actual width of box is `300px`.
 
 ```css
 div {
-  width:250px;
-  padding:10px;
-  border:5px solid gray;
-  margin:10px;
+  width: 250px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 10px;
 }
 ```
 
-## The actual size of the box is
+The actual size of the element is
 
-- width = content.width + padding.left + padding.right + border.left + border.right
+- element width = `width` + `padding-left` + `padding-right` + `border-left` + `border-right`
+- element height = `height` + `padding-top` + `padding-bottom` + `border-top` + `border-bottom`
 
-- height = content.height + padding.top + padding.bottom + border.top + border.bottom
+And the size the box needs to be
 
-## And the size the box needs to be
+- box width = element width + `margin-left` + `margin-right`
+- box height = element height + `margin-top` + `margin-bottom`
 
-- width = content.width + padding.left + padding.right + border.left + border.right + margin.left + margin.right
+## CSS Box Model Property List
 
-- height = content.height + padding.top + padding.bottom + border.top + border.bottom + margin.top +
-margin.bottom
-
-# CSS box model property list
+### Margin Properties
 
 | Attributes | Description |
-| :--- | :--- |
+| :--: | :--- |
 | **`margin`** | Margins for all four (**up**, **down**, **left** and **right**) elements. This is shorthand for the four margin properties. Can be negative |
 | **`margin-top`** | Element's **top margin** |
 | **`margin-right`** | Element's **right margin** |
 | **`margin-bottom`** | Element's **bottom margin** |
 | **`margin-left`** | Element's **left margin** |
+
+### Padding Properties
+
+| Attributes | Description |
+| :--: | :--- |
 | **`padding`** | The padding of all four (**up**, **down**, **left** and **right**) elements. The padding area refers to one **the content of the element** and **the space between its boundaries**. This attribute **cannot be negative** |
 | **`padding-top`** | Element's **top padding** |
 | **`padding-right`** | Element's **right padding** |
 | **`padding-bottom`** | Element's **bottom padding** |
 | **`padding-left`** | Element's **left padding** |
+
+### Border Properties
+
+| Attributes | Description |
+| :--: | :--- |
 | **`border`** | Set shorthand properties for various **separate boundaries** |
 | **`border-width`** | Set the **border width** of the box model |
 | **`border-style`** | Used to set all element border styles |
