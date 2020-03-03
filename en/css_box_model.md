@@ -43,10 +43,10 @@ Explanation of different parts:
 
 | Part | Comment | CSS Properties Involved |
 | :--: | :-- | :-- |
-| **Margin** | Outside the border area. Margin has no background color, it is completely transparent. | *`margin`* etc. |
-| **Border** | The padding and content around the border. The border is affected by the background color of the box. | *`border`* etc. |
-| **Padding** | Clear the area around the content. Will be affected by the background color of the box fill. | *`padding`* etc. |
-| **Content** | The content of the box, displaying text or images | *`width`*, *`height`*。More details please refer to [CSS Dimension](/en/webfrontend/CSS_dimension) |
+| **Margin** | Outside the border area. Margin has no background color, it is completely transparent. | [*`margin`*](#margin-properties) etc. |
+| **Border** | The padding and content around the border. The border is affected by the background color of the box. | [*`border`*](#border-properties) etc. |
+| **Padding** | Clear the area around the content. Will be affected by the background color of the box fill. | [*`padding`*](#padding-properties) etc. |
+| **Content** | The content of the box, displaying text or images | *`width`*, *`height`*. More details of [CSS Dimension](/en/webfrontend/CSS_dimension) |
 
 ## Size of Box Model
 
@@ -82,7 +82,7 @@ And the size the box needs to be
 
 | Attributes | Description |
 | :--: | :--- |
-| **`margin`** | Margins for all four (**up**, **down**, **left** and **right**) elements. This is shorthand for the four margin properties. Can be negative |
+| **`margin`** | Shorthand for the four direction (**up/top**, **down/bottom**, **left** and **right**) margin properties. Can be negative value. |
 | **`margin-top`** | Element's **top margin** |
 | **`margin-right`** | Element's **right margin** |
 | **`margin-bottom`** | Element's **bottom margin** |
@@ -92,7 +92,7 @@ And the size the box needs to be
 
 | Attributes | Description |
 | :--: | :--- |
-| **`padding`** | The padding of all four (**up**, **down**, **left** and **right**) elements. The padding area refers to one **the content of the element** and **the space between its boundaries**. This attribute **cannot be negative** |
+| **`padding`** | Shorthand for the four direction (**up/top**, **down/bottom**, **left** and **right**) padding properties. This attribute **cannot be negative**. |
 | **`padding-top`** | Element's **top padding** |
 | **`padding-right`** | Element's **right padding** |
 | **`padding-bottom`** | Element's **bottom padding** |
@@ -111,17 +111,37 @@ And the size the box needs to be
 | **`border-bottom`** | Describes the element's **bottom border style**, which is an abbreviation of the three attributes of `border-bottom-color`, `border-bottom-style`, and `border-bottom-width` |
 | **`border-left`** | The **left border** describing an element is an abbreviation of three attributes: `border-left-color`, `border-left-style`, and `border-left-width` |
 
+## Shorthand Properties for `margin` and `padding`
+
+`margin`, `padding` accept 1 ~ 4 optional parameters.
+
+`margin` for example:
+
+```css
+/* 4 parameters: top right bottom left (clockwise order) */
+/* margin-top: 10px, margin-right: 5px, margin-bottom: 15px, margin-left: 20px */
+margin: 10px 5px 15px 20px;
+```
+
+```css
+/* 3 parameters: top left-right bottom */
+/* margin-top: 10px, margin-left=margin-right: 5px, margin-bottom: 15px */
+margin: 10px 5px 15px;
+```
+
+```css
+/* 2 parameters: top-bottom left-right */
+/* margin-top=margin-bottom: 10px, margin-left=margin-right: 5px */
+margin: 10px 5px;
+```
+
+```css
+/* 1 parameter: top=bottom=left=right */
+/* margins of top, bottom, left and right are all 10px */
+margin: 10px;
+```
+
 ## `margin` and `padding` Attribute value
-
-Accept 1 ~ 4 optional parameters, each parameter takes the following values:
-
-- When **one** value is specified, it applies the same margin to **all four sides**.
-- When **two** values are specified, the first margin applies to the **top and bottom**, the second
-to the **left and right**.
-- When **three** values are specified, the first margin applies to the **top**, the second to the
-**right and left**, the third to the **bottom**.
-- When **four** values are specified, the margins apply to the **top**, **right**, **bottom**, and
-**left** in that order (clockwise).
 
 ### Common Attribute Value
 
@@ -212,3 +232,7 @@ div p.b {
   padding: 10px 20px 5px; /* Define the padding to be 10px on the top, 20px on the left and 5px on the bottom */
 }
 ```
+
+## References
+
+- [W3C CSS 2.2 Specification - Box Model](https://www.w3.org/TR/CSS22/box.html)

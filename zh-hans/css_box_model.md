@@ -42,9 +42,9 @@ TOPICS: CSS Box Model
 
 | 部分 | 说明 | 涉及的CSS属性 |
 | :--: | :-- | :-- |
-| **Margin** （**外边距**）| 边框外的区域。外边距没有背景颜色，它是完全透明的。 | *`margin`* 等相关属性。 |
-| **Border**（**边框**）| 边框。可有颜色填充。| *`border`* 等相关属性。 |
-| **Padding**（**内边距**）| 边框内、内容外的区域。有颜色填充。| *`padding`* 等相关属性。|
+| **Margin** （**外边距**）| 边框外的区域。外边距没有背景颜色，它是完全透明的。 | [*`margin`*](#margin) 等相关属性。 |
+| **Border**（**边框**）| 边框。可有颜色填充。| [*`border`*](#border) 等相关属性。 |
+| **Padding**（**内边距**）| 边框内、内容外的区域。有颜色填充。| [*`padding`*](#padding) 等相关属性。|
 | **Content**（**内容**）| 盒子的内容，显示文本或图像。| *`width`*, *`height`*。详见 [CSS 尺寸](/zh-hans/webfrontend/CSS_dimension) |
 
 ## 盒模型的尺寸计算
@@ -64,12 +64,12 @@ div {
 
 元素的实际宽度为`280px`，尺寸计算如下：
 
-- 宽度 = `width`(`250px`) + `padding-left`(`10px`) + `padding-right`(`10px`) + `border-left`(`5px`) + `border-right`(`5px`)
+- 宽度 = `width`(`250px`) + `padding-left`(`10px`)+`padding-right` (`10px`) + `border-left`(`5px`) + `border-right`(`5px`)
 - 高度 = `height` + `padding-top` + `padding-bottom` + `border-top` + `border-bottom`
 
 而盒子需要占据的区域宽度为`300px`，尺寸计算如下：
 
-- 盒子宽度 = 元素宽度(`280px`) + `margin-left`(`10px`) + `margin-right`(`10px`)
+- 盒子宽度 = 元素宽度 (`280px`) + `margin-left` (`10px`) + `margin-right` (`10px`)
 - 盒子高度 = 元素高度 + `margin-top` + `margin-bottom`
 
 ## CSS 盒模型属性列表
@@ -78,28 +78,28 @@ div {
 
 | 属性 | 描述 |
 | :--: | :--- |
-| **`margin`** | 所有四个（**上下左右**）方向的**元素的外边距**。这是四个外边距属性的简写。可以为负值 |
-| **`margin-top`** | 元素的**顶部外边距** |
-| **`margin-right`** | 元素的**右外边距** |
-| **`margin-bottom`** | 元素的**底部外边距** |
-| **`margin-left`** | 元素的**左侧区域** |
+| **`margin`** | 元素**上下左右**四个方向的*外边距*的**简写**。可以为负值。|
+| **`margin-top`** | 元素的**上或顶部**外边距。 |
+| **`margin-right`** | 元素的**右**外边距。 |
+| **`margin-bottom`** | 元素的**下或底部**外边距。 |
+| **`margin-left`** | 元素的**左**外边距。 |
 
 ### 内边距属性 (Padding)
 
 | 属性 | 描述 |
 | :--: | :--- |
-| **`padding`** | 所有四个（**上下左右**）方向的**元素的内边距**，内边距区域指一个**元素的内容**和**其边界之间的空间**，该属性**不能为负值** |
-| **`padding-top`** | 元素的**上方内边距** |
-| **`padding-right`** | 元素的**右内边距** |
-| **`padding-bottom`** | 元素的**下方内边距** |
-| **`padding-left`** | 元素的**左内边距** |
+| **`padding`** | 元素**上下左右**四个方向的*内边距*的简写。**不能为负值**。 |
+| **`padding-top`** | 元素的**上或顶部**内边距。 |
+| **`padding-right`** | 元素的**右**内边距。 |
+| **`padding-bottom`** | 元素的**下或底部**内边距。 |
+| **`padding-left`** | 元素的**左**内边距。 |
 
 ### 边框属性 (Border)
 
 | 属性 | 描述 |
 | :--: | :--- |
-| **`border`** | 设置各种**单独的边界**的简写属性 |
-| **`border-width`** | 设置盒子模型的**边框宽度**。 |
+| **`border`** | 元素*边框*属性的**简写**。 |
+| **`border-width`** | 元素的边框**宽度**。 |
 | **`border-style`** | 用来设定元素所有**边框样式** |
 | **`border-color`** | 是一个用于设置元素**四个边框颜色** |
 | **`border-top`** | 描述一个元素的**上方的边框**，是 `border-top-color`, `border-top-style`, 和 `border-top-width` 的三个属性的缩写 |
@@ -107,21 +107,44 @@ div {
 | **`border-bottom`** | 描述了元素的**下边框样式**，是`border-bottom-color`，`border-bottom-style` 和 `border-bottom-width` 的三个属性的缩写 |
 | **`border-left`** | 描述一个元素的**左边的边框**，是 `border-left-color`, `border-left-style`, 和`border-left-width`的三个属性的缩写 |
 
+## `margin`和`padding`属性简写形式
+
+`margin`, `padding` 简写属性在一个声明中设置四个方向的属性。该属性可以有1到4个值。
+
+以`margin`为例：
+
+```css
+/* 四个值: 上 右 下 左 (顺时针顺序) */
+/* 上边距 10px, 右边距 5px, 下边距 15px, 左边距 20px */
+margin: 10px 5px 15px 20px;
+```
+
+```css
+/* 三个值：上 左右 下 */
+/* 上边距 10px, 左右边距 5px, 下边距 15px */
+margin: 10px 5px 15px;
+```
+
+```css
+/* 两个值：上下 左右 */
+/* 上下边距 10px, 左右边距 5px */
+margin: 10px 5px;
+```
+
+```css
+/* 一个值: 上下左右 */
+/* 上、下、左、右边距均为 10px */
+margin: 10px;
+```
+
 ## `margin` 和 `padding` 属性值
-
-接受1~4个可选属性值，每个属性值取值如下：
-
-- **只有一个** 值时，这个值会被指定给全部的 **四个边**.
-- **两个** 值时，第一个值被匹配给 **上和下**, 第二个值被匹配给 **左和右**.
-- **三个** 值时，第一个值被匹配给 **上**, 第二个值被匹配给 **左和右**, 第三个值被匹配给 **下**.
-- **四个** 值时，会依次按 **上、右、下、左** 的顺序匹配 (即顺时针顺序).
 
 ### 共有属性值
 
 | 属性值 | 说明 |
 | :--- | :--- |
-| length | 指定一个固定的填充值。|
-| **`%`** | 基于父元素值的百分比填充。|
+| **length** | 指定一个固定的长度单位。参见 [CSS 长度单位](/zh-hans/webfrontend/CSS_length_unit) |
+| **`%`** | 基于父元素的百分比。|
 
 !!! warn "`margin` 和 `padding` 属性值的不同"
     **`margin`** 的 **length** 和 **`%`** 属性值可以为负值; **`padding`** 的 **length** 和 **`%`** 不能为负值。
@@ -204,3 +227,7 @@ div p.b {
   padding: 10px 20px 5px; /* 定义内边距上为10px，左右各为20px、下为5px */
 }
 ```
+
+## 参考
+
+- [W3C CSS 2.2规范 - 盒模型](https://www.w3.org/TR/CSS22/box.html)
