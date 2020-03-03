@@ -30,7 +30,7 @@ TOPICS: CSS Box Model
         border-left-style property
         border-left-width property
 
-# CSS Box Model
+# CSS Box Model (`margin`, `border`, `padding`)
 
 **CSS box model** (a design and *layout* glossary) is essentially a box that encapsulates surrounding
 HTML elements. It includes: **margin**, **border**, **padding**, and actual **content**.
@@ -80,9 +80,9 @@ And the size the box needs to be
 
 ### Margin Properties
 
-| Attributes | Description |
+| Property | Description |
 | :--: | :--- |
-| **`margin`** | Shorthand for the four direction (**up/top**, **down/bottom**, **left** and **right**) margin properties. Can be negative value. |
+| **`margin`** | *Shorthand* property to set values the thickness of the margin area. **Negative values** for margin properties are allowed, but there may be implementation-specific limits. |
 | **`margin-top`** | Element's **top margin** |
 | **`margin-right`** | Element's **right margin** |
 | **`margin-bottom`** | Element's **bottom margin** |
@@ -90,20 +90,20 @@ And the size the box needs to be
 
 ### Padding Properties
 
-| Attributes | Description |
+| Property | Description |
 | :--: | :--- |
-| **`padding`** | Shorthand for the four direction (**up/top**, **down/bottom**, **left** and **right**) padding properties. This attribute **cannot be negative**. |
+| **`padding`** | Shorthand property to set values the thickness of the padding area. The value **may not** be negative. |
 | **`padding-top`** | Element's **top padding** |
 | **`padding-right`** | Element's **right padding** |
 | **`padding-bottom`** | Element's **bottom padding** |
 | **`padding-left`** | Element's **left padding** |
 
-### Attribute Values of `margin` and `padding`
+### Property Values of `margin` and `padding`
 
-They both have attribute values as follows:
+They both have property values as follows:
 
-| Attribute Value | Description |
-| :--- | :--- |
+| Property Value | Description |
+| :--: | :--- |
 | **length** | a length unit. See [CSS Length Unit](/en/webfrontend/CSS_length_unit) |
 | **`%`** | Percentage value based on parent element. |
 
@@ -121,83 +121,249 @@ which lets the browser automatically select a suitable value to apply.
 
 ```css
 /* 4 parameters: top right bottom left (clockwise order) */
-/* margin-top: 10px, margin-right: 5px, margin-bottom: 15px, margin-left: 20px */
 margin: 10px 5px 15px 20px;
+
+/* same with */
+margin-top: 10px;
+margin-right: 5px;
+margin-bottom: 15px;
+margin-left: 20px;
 ```
 
 ```css
-/* 3 parameters: top left-right bottom */
-/* margin-top: 10px, margin-left=margin-right: 5px, margin-bottom: 15px */
+/* 3 parameters: top left=right bottom */
 margin: 10px 5px 15px;
+
+/* same with */
+margin-top: 10px;
+margin-left: 5px;
+margin-right: 5px;
+margin-bottom: 15px;
 ```
 
 ```css
-/* 2 parameters: top-bottom left-right */
-/* margin-top=margin-bottom: 10px, margin-left=margin-right: 5px */
+/* 2 parameters: top=bottom left=right */
 margin: 10px 5px;
+
+/* same with */
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 5px;
+margin-right: 5px;
 ```
 
 ```css
 /* 1 parameter: top=bottom=left=right */
 /* margins of top, bottom, left and right are all 10px */
 margin: 10px;
+
+/* same with */
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
+margin-right: 10px;
 ```
 
-## Border Properties
+## Border
 
-| Attributes | Description |
+| Property | Description |
 | :--: | :--- |
-| **`border`** | Set shorthand properties for various **separate boundaries** |
-| **`border-width`** | Set the **border width** of the box model |
-| **`border-style`** | Used to set all element border styles |
-| **`border-color`** | Is one for setting elements **four border colors** |
-| **`border-top`** | The **above border** describing an element is an abbreviation of the three attributes `border-top-color`, `border-top-style`, and `border-top-width` |
-| **`border-right`** | An element's **right border** is an abbreviation of three attributes: `border-right-color`, `border-right-style`, and `border-right-width` |
-| **`border-bottom`** | Describes the element's **bottom border style**, which is an abbreviation of the three attributes of `border-bottom-color`, `border-bottom-style`, and `border-bottom-width` |
-| **`border-left`** | The **left border** describing an element is an abbreviation of three attributes: `border-left-color`, `border-left-style`, and `border-left-width` |
+| **`border`** | Shorthand properties. |
+| **`border-width`** | Set the **width** of the border. Having four extended properties: *`border-top-width`*, *`border-right-width`*, *`border-bottom-width`*, *`border-left-width`*. |
+| **`border-style`** | Set the **style** of the border. Having four extended properties: *`border-top-style`*, *`border-right-style`*, *`border-bottom-style`*, *`border-left-style`*. |
+| **`border-color`** | Set the **color** of the border. Having four extended properties: *`border-top-color`*, *`border-right-color`*, *`border-bottom-color`*, *`border-left-color`*. |
+| **`border-top`** | Set the **top** of the border. An abbreviation of the three properties *`border-top-color`*, *`border-top-style`*, and *`border-top-width`*. |
+| **`border-right`** | Set the **right** of the border. An abbreviation of three properties: *`border-right-color`*, *`border-right-style`*, and *`border-right-width`*. |
+| **`border-bottom`** | Set the **bottom** of the border. An abbreviation of the three properties of *`border-bottom-color`*, *`border-bottom-style`*, and *`border-bottom-width`*. |
+| **`border-left`** | Set the **left** of the border. An abbreviation of three properties: *`border-left-color`*, *`border-left-style`*, and *`border-left-width`*. |
 
-## `border` Attribute value
+### Border Width `border-width`
 
-| Attribute Value | Description |
-| :--- | :--- |
-| *border-width* | Specify the **width of the border** |
-| *border-style* | Specify the border's **style** |
-| *border-color* | Specify the **color of the border** |
-| **`inherit`** | Specifies that the `border` attribute value should be inherited from the parent element |
+| `border-width` Value | Description |
+| :--: | :--- |
+| **`thin`** | border's width is **thin**. |
+| **`medium`** | (*Default*) border's width is **medium**. |
+| **`thick`** | border's width is **thick**. |
+| **length** | border's width is **custom**, using [CSS Length Unit](/en/webfrontend/CSS_Length_Unit) |
+| **`inherit`** | inherited from the parent element |
 
-### `border-width` Attribute value
+The `border-width` property sets widths of borders with four directions.
 
-| Attribute Value | Description |
-| :--- | :--- |
-| **`thin`** | **Thin border** |
-| **`medium`** | Default. **Medium border** |
-| **`thick`** | **Thick border** |
-| length | **Custom** border width |
-| **`inherit`** | Specifies that the border width should be inherited from the parent element |
+```css
+/* 4 parameters: top right bottom left (clockwise order) */
+border-width: thin medium thick 10px;
 
-### `border-style` Attribute value
+/* same with */
+border-top-width: thin;
+border-right-width: medium;
+border-bottom-width: thick;
+border-left-width: 10px;
+```
 
-| Attribute Value | Description |
-| :--- | :--- |
-| **`none`** | Define borderless |
-| **`hidden`** | Same as **`none`**. Except when applied to tables, for tables, `hidden` is used to resolve border conflicts. |
-| **`dotted`** | **Dotted border** |
-| **`dashed`** | **Dotted line** |
-| **`solid`** | **Solid line** |
-| **`double`** | **Double line** |
-| **`groove`** | Show as **sculpted border** |
-| **`ridge`** | Show as **embossed border** |
-| **`inset`** | Show as **immersed border** |
-| **`outset`** | Show as **highlighting border** |
-| **`inherit`** | Specifies that the border style should be inherited from the parent element |
+```css
+/* 3 parameters: top left=right bottom */
+border-width: thin medium thick;
 
-### `border-color` Attribute value
+/* same with */
+border-top-width: thin;
+border-right-width: medium;
+border-left-width: medium;
+border-bottom-width: thick;
+```
 
-| Attribute Value | Description |
-| :--- | :--- |
-| color | Border color, find full list of color values in [CSS color](/en/webfrontend/css_color) |
-| **`transparent`** | The color of the specified border is **transparent**. This is the default |
+```css
+/* 2 parameters: top=bottom left=right */
+border-width: thin thick;
+
+/* same with */
+border-top-width: thin;
+border-bottom-width: thin;
+border-left-width: thick;
+border-right-width: thick;
+```
+
+```css
+/* 1 parameter: top=bottom=left=right */
+/* border width of top, bottom, left and right are all thin */
+border-width: thin;
+
+/* same with */
+border-top-width: thin;
+border-bottom-width: thin;
+border-left-width: thin;
+border-right-width: thin;
+```
+
+### Border Style `border-style`
+
+| Property Value | Description |
+| :--: | :--- |
+| **`none`** | Define borderless. |
+| **`hidden`** | Same as *`none`*, except for tables: `hidden` is used to resolve border conflicts. |
+| **`dotted`** | **dotted line** |
+| **`dashed`** | **dashed line** |
+| **`solid`** | **solid line** |
+| **`double`** | **double line** |
+| **`groove`** | **sculpted** border |
+| **`ridge`** | **embossed** border |
+| **`inset`** | **immersed** border |
+| **`outset`** | **outset** border |
+| **`inherit`** | inherited from the parent element |
+
+The `border-style` property sets styles of borders with four directions.
+
+```css
+/* 4 parameters: top right bottom left (clockwise order) */
+border-style: dotted solid double dashed;
+
+/* same with */
+border-top-style: dotted;
+border-right-style: solid;
+border-bottom-style: double;
+border-left-style: dashed;
+```
+
+```css
+/* 3 parameters: top left=right bottom */
+border-style: dotted solid double;
+
+/* same with */
+border-top-style: dotted;
+border-right-style: solid;
+border-left-style: solid;
+border-bottom-style: double;
+```
+
+```css
+/* 2 parameters: top=bottom left=right */
+border-style: dotted solid;
+
+/* same with */
+border-top-style: dotted;
+border-bottom-style: dotted;
+border-left-style: solid;
+border-right-style: solid;
+```
+
+```css
+/* 1 parameter: top=bottom=left=right */
+/* border style of top, bottom, left and right are all solid */
+border-style: solid;
+
+/* same with */
+border-top-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-right-style: solid;
+```
+
+### Border Color `border-color`
+
+| Property Value | Description |
+| :--: | :--- |
+| **color** | Border color, full list of color values is in [CSS color](/en/webfrontend/css_color) |
+| **`transparent`** | The color of the specified border is **transparent**. This is the *default*. |
 | **`inherit`** | Inherit from parent element |
+
+The `border-color` property sets colors of borders with four directions.
+
+```css
+/* 4 parameters: top right bottom left (clockwise order) */
+border-color: #111 #222 #333 #444;
+
+/* same with */
+border-top-color: #111;
+border-right-color: #222;
+border-bottom-color: #333;
+border-left-color: #444;
+```
+
+```css
+/* 3 parameters: top left=right bottom */
+border-color: #111 #222 #333;
+
+/* same with */
+border-top-color: #111;
+border-left-color: #222;
+border-right-color: #222;
+border-bottom-color: #333;
+```
+
+```css
+/* 2 parameters: top=bottom left=right */
+border-color: #111 #222;
+
+/* same with */
+border-top-color: #111;
+border-bottom-color: #111;
+border-left-color: #222;
+border-right-color: #222;
+```
+
+```css
+/* 1 parameter: top=bottom=left=right */
+/* border color of top, bottom, left and right are all #111 */
+border-color: #111;
+
+/* same with */
+border-top-color: #111;
+border-bottom-color: #111;
+border-left-color: #111;
+border-right-color: #111;
+```
+
+### `border` Shorthand Property
+
+| Property Value | Description |
+| :--: | :--- |
+| **border-width** | Specify the **width** of the border. |
+| **border-style** | Specify the **style** of the border. |
+| **border-color** | Specify the **color** of the border. |
+| **`inherit`** | Inherited from the parent element. |
+
+```css
+border: 10px solid #111;
+```
 
 ## Example
 

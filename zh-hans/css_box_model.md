@@ -30,9 +30,9 @@ TOPICS: CSS Box Model
         border-left-style property
         border-left-width property
 
-# CSS 盒模型 (Box Model)
+# CSS 盒模型 (`margin`, `padding`, `border`)
 
-**CSS 盒模型**是一个用来设计和*布局*时使用的术语。本质上将HTML元素封装在一个盒子里，它包括：**外边距**，**边框**，**填充**（**内边距**），和**实际内容**。
+**CSS 盒模型** (**Box Model**) 是一个用来设计和*布局*时使用的术语。本质上将HTML元素封装在一个盒子里，它包括：**外边距**，**边框**，**填充**（**内边距**），和**实际内容**。
 
 下图说明了盒子模型(Box Model)：
 
@@ -99,7 +99,7 @@ div {
 它们都共同含有如下属性值
 
 | 属性值 | 说明 |
-| :--- | :--- |
+| :--: | :--- |
 | **length** | 指定一个固定的长度单位。参见 [CSS 长度单位](/zh-hans/webfrontend/CSS_length_unit) |
 | **`%`** | 基于父元素的百分比。|
 
@@ -116,83 +116,250 @@ div {
 
 ```css
 /* 四个值: 上 右 下 左 (顺时针顺序) */
-/* 上边距 10px, 右边距 5px, 下边距 15px, 左边距 20px */
 margin: 10px 5px 15px 20px;
+
+/* 以上等同于 */
+margin-top: 10px;     /* 上边距 */
+margin-right: 5px;    /* 右边距 */
+margin-bottom: 15px;  /* 下边距 */
+margin-left: 20px;    /* 左边距 */
 ```
 
 ```css
 /* 三个值：上 左右 下 */
-/* 上边距 10px, 左右边距 5px, 下边距 15px */
 margin: 10px 5px 15px;
+
+/* 以上等同于 */
+margin-top: 10px;     /* 上边距 */
+margin-left: 5px;     /* 左边距 */
+margin-right: 5px;    /* 右边距 */
+margin-bottom: 15px;  /* 下边距 */
 ```
 
 ```css
 /* 两个值：上下 左右 */
 /* 上下边距 10px, 左右边距 5px */
 margin: 10px 5px;
+
+/* 以上等同于 */
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 5px;
+margin-right: 5px;
 ```
 
 ```css
 /* 一个值: 上下左右 */
 /* 上、下、左、右边距均为 10px */
 margin: 10px;
+
+/* 以上等同于 */
+margin-top: 10px;
+margin-bottom: 10px;
+margin-left: 10px;
+margin-right: 10px;
 ```
 
-## 边框属性 (Border)
+## 边框 (Border)
 
 | 属性 | 描述 |
 | :--: | :--- |
-| **`border`** | 元素*边框*属性的**简写**。 |
-| **`border-width`** | 元素的边框**宽度**。 |
-| **`border-style`** | 用来设定元素所有**边框样式** |
-| **`border-color`** | 是一个用于设置元素**四个边框颜色** |
-| **`border-top`** | 描述一个元素的**上方的边框**，是 `border-top-color`, `border-top-style`, 和 `border-top-width` 的三个属性的缩写 |
-| **`border-right`** | 描述一个元素的**右边的边框**，是 `border-right-color`, `border-right-style`, 和 `border-right-width`的三个属性的缩写 |
-| **`border-bottom`** | 描述了元素的**下边框样式**，是`border-bottom-color`，`border-bottom-style` 和 `border-bottom-width` 的三个属性的缩写 |
-| **`border-left`** | 描述一个元素的**左边的边框**，是 `border-left-color`, `border-left-style`, 和`border-left-width`的三个属性的缩写 |
+| **`border`** | 元素*边框*属性的**简写**。|
+| **`border-width`** | 元素边框的**宽度**。四个方向可有 *`border-top-width`*, *`border-right-width`*, *`border-bottom-width`*, *`border-left-width`*。|
+| **`border-style`** | 元素边框的**样式**。四个方向可有 *`border-top-style`*, *`border-right-style`*, *`border-bottom-style`*, *`border-left-style`*。|
+| **`border-color`** | 元素边框的**颜色**。四个方向可有 *`border-top-color`*, *`border-right-color`*, *`border-bottom-color`*, *`border-left-color`*。|
+| **`border-top`** | 元素的**上边框**或**顶部边框**，是 *`border-top-color`*, *`border-top-style`*, 和 *`border-top-width`* 三个属性的缩写。|
+| **`border-right`** | 元素的**右边框**，是 *`border-right-color`*, *`border-right-style`*, 和 *`border-right-width`* 三个属性的缩写。 |
+| **`border-bottom`** | 元素的**下边框**，是 *`border-bottom-color`*，*`border-bottom-style`* 和 *`border-bottom-width`* 三个属性的缩写。 |
+| **`border-left`** | 元素的**左边框**，是 *`border-left-color`*, *`border-left-style`*, 和 *`border-left-width`* 三个属性的缩写。 |
 
-## `border` 属性值
+### 边框宽度 `border-width`
 
-| 属性值 | 说明 |
-| :--- | :--- |
-| *border-width* | 指定边框的**宽度** |
-| *border-style* | 指定边框的**样式** |
-| *border-color* | 指定边框的**颜色** |
-| **`inherit`** | 指定应该从父元素继承`border`属性值 |
+| `border-width`属性值 | 说明 |
+| :--: | :--- |
+| **`thin`** | **细**的边框。|
+| **`medium`** | *默认*。**中等粗细**的边框。|
+| **`thick`** | **粗**的边框。|
+| **length** | **自定义**边框的宽度。可使用[CSS 长度单位](/zh-hans/webfrontend/CSS_length_unit) |
+| **`inherit`** | 从父元素继承边框宽度。|
 
-### `border-width` 属性值
+`border-width`属性设置一个元素的四个边框的宽度。此属性可以有一到四个值。
 
-| 属性值 | 说明 |
-| :--- | :--- |
-| **`thin`** | **细的边框** |
-| **`medium`** | 默认。**中等的边框** |
-| **`thick`** | **粗的边框** |
-| length | **自定义**边框的宽度 |
-| **`inherit`** | 规定应该从父元素继承边框宽度 |
+```css
+/* 四个值: 上 右 下 左 (顺时针顺序) */
+border-width: thin medium thick 10px;
 
-### `border-style` 属性值
+/* 以上等同于 */
+border-top-width: thin;      /* 上边框 */
+border-right-width: medium;  /* 右边框 */
+border-bottom-width: thick;  /* 下边框 */
+border-left-width: 10px;     /* 左边框 */
+```
 
-| 属性值 | 说明 |
-| :--- | :--- |
+```css
+/* 三个值：上 左右 下 */
+border-width: thin medium thick;
+
+/* 以上等同于 */
+border-top-width: thin;
+border-left-width: medium;
+border-right-width: medium;
+border-bottom-width: thick;
+```
+
+```css
+/* 两个值：上下 左右 */
+border-width: thin thick;
+
+/* 以上等同于 */
+border-top-width: thin;
+border-bottom-width: thin;
+border-left-width: thick;
+border-right-width: thick;
+```
+
+```css
+/* 一个值: 上下左右 */
+/* 上、下、左、右边框宽度均为 thin */
+border-width: thin;
+
+/* 以上等同于 */
+border-top-width: thin;
+border-bottom-width: thin;
+border-left-width: thin;
+border-right-width: thin;
+```
+
+### 边框样式 `border-style`
+
+| `border-style`属性值 | 说明 |
+| :--: | :--- |
 | **`none`** | 定义无边框 |
-| **`hidden`** | 与 **`none`** 相同。不过应用于表时除外，对于表，`hidden` 用于解决边框冲突。|
-| **`dotted`** | **点状边框** |
+| **`hidden`** | 与 **`none`** 相同。但是，当应用于表格时，`hidden`用于解决边框冲突。|
+| **`dotted`** | **点状** |
 | **`dashed`** | **虚线** |
 | **`solid`** | **实线** |
 | **`double`** | **双线** |
-| **`groove`** | 显示为有**雕刻效果的边框** |
-| **`ridge`** | 显示为有**浮雕效果的边框** |
-| **`inset`** | 显示为有**陷入效果的边框** |
-| **`outset`** | 显示为有**突出效果的边框** |
-| **`inherit`** | 规定应该从父元素继承边框样式。|
+| **`groove`** | **雕刻效果** |
+| **`ridge`** | **浮雕效果** |
+| **`inset`** | **内嵌效果** |
+| **`outset`** | **外凸效果** |
+| **`inherit`** | 从父元素继承边框样式。|
 
-### `border-color` 属性值
+`border-style`属性设置一个元素的四个边框的样式。此属性可以有一到四个值。
+
+```css
+/* 四个值: 上 右 下 左 (顺时针顺序) */
+border-style: dotted solid double dashed;
+
+/* 以上等同于 */
+border-top-style: dotted;     /* 上边框 */
+border-right-style: solid;    /* 右边框 */
+border-bottom-style: double;  /* 下边框 */
+border-left-style: dashed;    /* 左边框 */
+```
+
+```css
+/* 三个值：上 左右 下 */
+border-style: dotted solid double;
+
+/* 以上等同于 */
+border-top-style: dotted;
+border-left-style: solid;
+border-right-style: solid;
+border-bottom-style: double;
+```
+
+```css
+/* 两个值：上下 左右 */
+border-style: dotted solid;
+
+/* 以上等同于 */
+border-top-style: dotted;
+border-bottom-style: dotted;
+border-left-style: solid;
+border-right-style: solid;
+```
+
+```css
+/* 一个值: 上下左右 */
+/* 上、下、左、右边框样式均为 dotted */
+border-style: dotted;
+
+/* 以上等同于 */
+border-top-style: dotted;
+border-bottom-style: dotted;
+border-left-style: dotted;
+border-right-style: dotted;
+```
+
+### 边框颜色 `border-color`
+
+| `border-color`属性值 | 说明 |
+| :--: | :--- |
+| **color** | 边框的颜色, 在 [CSS 颜色](/zh-hans/webfrontend/css_color) 查找颜色值的完整列表 |
+| **`transparent`** | 指定边框的颜色是**透明的**。这是*默认*的。|
+| **`inherit`** | 从父元素继承。|
+
+`border-color`属性设置一个元素的四个边框的颜色。此属性可以有一到四个值。
+
+```css
+/* 四个值: 上 右 下 左 (顺时针顺序) */
+border-color: #111 #222 #333 #444;
+
+/* 以上等同于 */
+border-top-color: #111;     /* 上边框 */
+border-right-color: #222;   /* 右边框 */
+border-bottom-color: #333;  /* 下边框 */
+border-left-color: #444;    /* 左边框 */
+```
+
+```css
+/* 三个值：上 左右 下 */
+border-color: #111 #222 #333;
+
+/* 以上等同于 */
+border-top-color: #111;
+border-left-color: #222;
+border-right-color: #222;
+border-bottom-color: #333;
+```
+
+```css
+/* 两个值：上下 左右 */
+border-color: #111 #222;
+
+/* 以上等同于 */
+border-top-color: #111;
+border-bottom-color: #111;
+border-left-color: #222;
+border-right-color: #222;
+```
+
+```css
+/* 一个值: 上下左右 */
+/* 上、下、左、右边框颜色均为 #111 */
+border-color: #111;
+
+/* 以上等同于 */
+border-top-color: #111;
+border-bottom-color: #111;
+border-left-color: #111;
+border-right-color: #111;
+```
+
+### `border` 属性简写
 
 | 属性值 | 说明 |
-| :--- | :--- |
-| color | 边框的颜色, 在 [CSS 颜色](/zh-hans/webfrontend/css_color) 查找颜色值的完整列表 |
-| **`transparent`** | 指定边框的颜色是**透明的**。这是默认 |
-| **`inherit`** | 从父元素继承 |
+| :--: | :--- |
+| **border-width** | 指定边框的**宽度** |
+| **border-style** | 指定边框的**样式** |
+| **border-color** | 指定边框的**颜色** |
+| **`inherit`** | 指定从父元素继承`border`属性值 |
+
+```css
+border: 10px solid #111;
+```
 
 ## 示例
 
