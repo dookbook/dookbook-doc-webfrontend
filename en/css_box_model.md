@@ -76,7 +76,7 @@ And the size the box needs to be
 - box width = element width + `margin-left` + `margin-right`
 - box height = element height + `margin-top` + `margin-bottom`
 
-## CSS Box Model Property List
+## Margin and Padding
 
 ### Margin Properties
 
@@ -98,20 +98,22 @@ And the size the box needs to be
 | **`padding-bottom`** | Element's **bottom padding** |
 | **`padding-left`** | Element's **left padding** |
 
-### Border Properties
+### Attribute Values of `margin` and `padding`
 
-| Attributes | Description |
-| :--: | :--- |
-| **`border`** | Set shorthand properties for various **separate boundaries** |
-| **`border-width`** | Set the **border width** of the box model |
-| **`border-style`** | Used to set all element border styles |
-| **`border-color`** | Is one for setting elements **four border colors** |
-| **`border-top`** | The **above border** describing an element is an abbreviation of the three attributes `border-top-color`, `border-top-style`, and `border-top-width` |
-| **`border-right`** | An element's **right border** is an abbreviation of three attributes: `border-right-color`, `border-right-style`, and `border-right-width` |
-| **`border-bottom`** | Describes the element's **bottom border style**, which is an abbreviation of the three attributes of `border-bottom-color`, `border-bottom-style`, and `border-bottom-width` |
-| **`border-left`** | The **left border** describing an element is an abbreviation of three attributes: `border-left-color`, `border-left-style`, and `border-left-width` |
+They both have attribute values as follows:
 
-## Shorthand Properties for `margin` and `padding`
+| Attribute Value | Description |
+| :--- | :--- |
+| **length** | a length unit. See [CSS Length Unit](/en/webfrontend/CSS_length_unit) |
+| **`%`** | Percentage value based on parent element. |
+
+!!! warn ""
+    The *length* and *`%`* of `margin` value can be **negative**; however, the *`padding`* **cannot be**.
+
+`margin` has another value **`auto`**,
+which lets the browser automatically select a suitable value to apply.
+
+### Shorthand Properties for `margin` and `padding`
 
 `margin`, `padding` accept 1 ~ 4 optional parameters.
 
@@ -141,24 +143,18 @@ margin: 10px 5px;
 margin: 10px;
 ```
 
-## `margin` and `padding` Attribute value
+## Border Properties
 
-### Common Attribute Value
-
-| Attribute Value | Description |
-| :--- | :--- |
-| length | Specify a fixed fill value. |
-| **`%`** | Percentage based on parent element value.|
-
-!!! warn "Difference between `margin` and `padding` property values"
-    The **length** and **`%`** properties of **`margin`** can be negative; the **length** and **`%`**
-    of **`padding`** cannot be negative.
-
-### `margin` Attribute value
-
-| Attribute Value | Description |
-| :--- | :--- |
-| **`auto`** | The browser will automatically select a suitable `margin` to apply. It can be used to center a block. |
+| Attributes | Description |
+| :--: | :--- |
+| **`border`** | Set shorthand properties for various **separate boundaries** |
+| **`border-width`** | Set the **border width** of the box model |
+| **`border-style`** | Used to set all element border styles |
+| **`border-color`** | Is one for setting elements **four border colors** |
+| **`border-top`** | The **above border** describing an element is an abbreviation of the three attributes `border-top-color`, `border-top-style`, and `border-top-width` |
+| **`border-right`** | An element's **right border** is an abbreviation of three attributes: `border-right-color`, `border-right-style`, and `border-right-width` |
+| **`border-bottom`** | Describes the element's **bottom border style**, which is an abbreviation of the three attributes of `border-bottom-color`, `border-bottom-style`, and `border-bottom-width` |
+| **`border-left`** | The **left border** describing an element is an abbreviation of three attributes: `border-left-color`, `border-left-style`, and `border-left-width` |
 
 ## `border` Attribute value
 

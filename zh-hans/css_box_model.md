@@ -72,7 +72,7 @@ div {
 - 盒子宽度 = 元素宽度 (`280px`) + `margin-left` (`10px`) + `margin-right` (`10px`)
 - 盒子高度 = 元素高度 + `margin-top` + `margin-bottom`
 
-## CSS 盒模型属性列表
+## 外边距 (Margin) 和内边距 (Padding)
 
 ### 外边距属性 (Margin)
 
@@ -94,20 +94,21 @@ div {
 | **`padding-bottom`** | 元素的**下或底部**内边距。 |
 | **`padding-left`** | 元素的**左**内边距。 |
 
-### 边框属性 (Border)
+### `margin` 和 `padding` 属性值
 
-| 属性 | 描述 |
-| :--: | :--- |
-| **`border`** | 元素*边框*属性的**简写**。 |
-| **`border-width`** | 元素的边框**宽度**。 |
-| **`border-style`** | 用来设定元素所有**边框样式** |
-| **`border-color`** | 是一个用于设置元素**四个边框颜色** |
-| **`border-top`** | 描述一个元素的**上方的边框**，是 `border-top-color`, `border-top-style`, 和 `border-top-width` 的三个属性的缩写 |
-| **`border-right`** | 描述一个元素的**右边的边框**，是 `border-right-color`, `border-right-style`, 和 `border-right-width`的三个属性的缩写 |
-| **`border-bottom`** | 描述了元素的**下边框样式**，是`border-bottom-color`，`border-bottom-style` 和 `border-bottom-width` 的三个属性的缩写 |
-| **`border-left`** | 描述一个元素的**左边的边框**，是 `border-left-color`, `border-left-style`, 和`border-left-width`的三个属性的缩写 |
+它们都共同含有如下属性值
 
-## `margin`和`padding`属性简写形式
+| 属性值 | 说明 |
+| :--- | :--- |
+| **length** | 指定一个固定的长度单位。参见 [CSS 长度单位](/zh-hans/webfrontend/CSS_length_unit) |
+| **`%`** | 基于父元素的百分比。|
+
+!!! warn ""
+    `margin`的 *length* 和 *`%`* 属性值可以为**负值**; 而`padding`的 *length* 和 *`%`* **不能为负值**。
+
+而 `margin` 另有属性值 **`auto`** 让浏览器自动选择。
+
+### `margin`和`padding`属性简写形式
 
 `margin`, `padding` 简写属性在一个声明中设置四个方向的属性。该属性可以有1到4个值。
 
@@ -137,23 +138,18 @@ margin: 10px 5px;
 margin: 10px;
 ```
 
-## `margin` 和 `padding` 属性值
+## 边框属性 (Border)
 
-### 共有属性值
-
-| 属性值 | 说明 |
-| :--- | :--- |
-| **length** | 指定一个固定的长度单位。参见 [CSS 长度单位](/zh-hans/webfrontend/CSS_length_unit) |
-| **`%`** | 基于父元素的百分比。|
-
-!!! warn "`margin` 和 `padding` 属性值的不同"
-    **`margin`** 的 **length** 和 **`%`** 属性值可以为负值; **`padding`** 的 **length** 和 **`%`** 不能为负值。
-
-### `margin` 属性值
-
-| 属性值 | 说明 |
-| :--- | :--- |
-| **`auto`** | 浏览器会自动选择一个合适的`margin`来应用。它可以用于将一个块居中。|
+| 属性 | 描述 |
+| :--: | :--- |
+| **`border`** | 元素*边框*属性的**简写**。 |
+| **`border-width`** | 元素的边框**宽度**。 |
+| **`border-style`** | 用来设定元素所有**边框样式** |
+| **`border-color`** | 是一个用于设置元素**四个边框颜色** |
+| **`border-top`** | 描述一个元素的**上方的边框**，是 `border-top-color`, `border-top-style`, 和 `border-top-width` 的三个属性的缩写 |
+| **`border-right`** | 描述一个元素的**右边的边框**，是 `border-right-color`, `border-right-style`, 和 `border-right-width`的三个属性的缩写 |
+| **`border-bottom`** | 描述了元素的**下边框样式**，是`border-bottom-color`，`border-bottom-style` 和 `border-bottom-width` 的三个属性的缩写 |
+| **`border-left`** | 描述一个元素的**左边的边框**，是 `border-left-color`, `border-left-style`, 和`border-left-width`的三个属性的缩写 |
 
 ## `border` 属性值
 
