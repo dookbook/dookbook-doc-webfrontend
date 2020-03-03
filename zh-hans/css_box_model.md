@@ -30,64 +30,74 @@ TOPICS: CSS Box Model
         border-left-style property
         border-left-width property
 
-# CSS 盒模型
+# CSS 盒模型 (Box Model)
 
-**CSS 盒模型**本质上是一个盒子，封装周围的HTML元素，它包括：**边距**，**边框**，**填充**，和**实际内容**。
+**CSS 盒模型**是一个用来设计和*布局*时使用的术语。本质上将HTML元素封装在一个盒子里，它包括：**外边距**，**边框**，**填充**（**内边距**），和**实际内容**。
 
-盒模型允许我们在其它元素和周围元素边框之间的空间放置元素
-
-下面的图片说明了盒子模型(Box Model)：
+下图说明了盒子模型(Box Model)：
 
 ![CSS 盒模型](/media/webfrontend__css-box-model.png)
 
 不同部分的说明：
 
-- **Margin（外边距）** - 清除边框区域。Margin没有背景颜色，它是完全透明
-- **Border（边框）** - 边框周围的填充和内容。边框是受到盒子的背景颜色影响
-- **Padding（内边距）** - 清除内容周围的区域。会受到框中填充的背景颜色影响
-- **Content（内容）** - 盒子的内容，显示文本和图像
+| 部分 | 说明 | 涉及的CSS属性 |
+| :--: | :-- | :-- |
+| **Margin** （**外边距**）| 边框外的区域。外边距没有背景颜色，它是完全透明的。 | *`margin`* 等相关属性。 |
+| **Border**（**边框**）| 边框。可有颜色填充。| *`border`* 等相关属性。 |
+| **Padding**（**内边距**）| 边框内、内容外的区域。有颜色填充。| *`padding`* 等相关属性。|
+| **Content**（**内容**）| 盒子的内容，显示文本或图像。| *`width`*, *`height`*。详见 [CSS 尺寸](/zh-hans/webfrontend/CSS_dimension) |
 
-为了在所有浏览器中的元素的宽度和高度设置正确的话，你需要知道的盒模型是如何工作的。
+## 盒模型的尺寸计算
 
-例如：当您指定一个CSS元素的宽度和高度属性时，你只是设置内容区域的宽度和高度。要知道，完全大小的元素，你还必须添加填充，边框和边距。
+当您指定一个元素的`width`和`height`属性时，你只是设置内容区域的宽度和高度。要知道整个元素的盒模型尺寸大小，你还必须添加*填充*，*边框*和*外边距*。
 
-下面的例子中的元素的宽实际大小为280px, 实际占据的尺寸为300px
+下面的例子中的元素的宽实际大小为`280px`, 实际占据的尺寸为`300px`。
 
 ```css
 div {
-  width:250px;
-  padding:10px;
-  border:5px solid gray;
-  margin:10px;
+  width: 250px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 10px;
 }
 ```
 
-## 盒子的实际大小为
+元素的实际宽度为`280px`，尺寸计算如下：
 
-- 宽度 = content.width + padding.left + padding.right + border.left + border.right
+- 宽度 = `width`(`250px`) + `padding-left`(`10px`) + `padding-right`(`10px`) + `border-left`(`5px`) + `border-right`(`5px`)
+- 高度 = `height` + `padding-top` + `padding-bottom` + `border-top` + `border-bottom`
 
-- 高度 = content.height + padding.top + padding.bottom + border.top + border.bottom
+而盒子需要占据的区域宽度为`300px`，尺寸计算如下：
 
-## 而盒子需要占据的尺寸为
+- 盒子宽度 = 元素宽度(`280px`) + `margin-left`(`10px`) + `margin-right`(`10px`)
+- 盒子高度 = 元素高度 + `margin-top` + `margin-bottom`
 
-- 宽度 = content.width + padding.left + padding.right + border.left + border.right + margin.left + margin.right
+## CSS 盒模型属性列表
 
-- 高度 = content.height + padding.top + padding.bottom + border.top + border.bottom + margin.top + margin.bottom
-
-# CSS 盒模型属性列表
+### 外边距属性 (Margin)
 
 | 属性 | 描述 |
-| :--- | :--- |
+| :--: | :--- |
 | **`margin`** | 所有四个（**上下左右**）方向的**元素的外边距**。这是四个外边距属性的简写。可以为负值 |
 | **`margin-top`** | 元素的**顶部外边距** |
 | **`margin-right`** | 元素的**右外边距** |
 | **`margin-bottom`** | 元素的**底部外边距** |
 | **`margin-left`** | 元素的**左侧区域** |
+
+### 内边距属性 (Padding)
+
+| 属性 | 描述 |
+| :--: | :--- |
 | **`padding`** | 所有四个（**上下左右**）方向的**元素的内边距**，内边距区域指一个**元素的内容**和**其边界之间的空间**，该属性**不能为负值** |
 | **`padding-top`** | 元素的**上方内边距** |
 | **`padding-right`** | 元素的**右内边距** |
 | **`padding-bottom`** | 元素的**下方内边距** |
 | **`padding-left`** | 元素的**左内边距** |
+
+### 边框属性 (Border)
+
+| 属性 | 描述 |
+| :--: | :--- |
 | **`border`** | 设置各种**单独的边界**的简写属性 |
 | **`border-width`** | 设置盒子模型的**边框宽度**。 |
 | **`border-style`** | 用来设定元素所有**边框样式** |
