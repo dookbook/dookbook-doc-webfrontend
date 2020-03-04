@@ -8,9 +8,9 @@ The HTML **`<label>`** element represents **a caption for an item**
 (*[`<input>`](/en/webfrontend/<input>)* element) in a user interface.
 
 The `<label>` element does not present any special effects to the user. However, it improves
-usability for mouse users. This control is triggered if you click on the text within the `<label>`
-element. That is, when the user selects the tab, the browser will automatically focus on the form
-control associated with the tab.
+usability for mouse users. That is, when you use the label, just click the text area inside the
+`<label>` element, this control will be triggered, and the browser will automatically focus on the
+form control related to the label.
 
 ## Technical Summary
 
@@ -85,26 +85,6 @@ in which case the *`for`* and *`id`* attributes are not needed because the assoc
 <label>Name:
   <input type="text" name="username">
 </label>
-```
-
-If `<label>` is not embedded in *[`<input>`](/en/webfrontend/<input>)*, it looks like this:
-
-```html
-<form>
-  <input type="text" name="yes-no">yes
-  <input type="text" name="yes-no">no
-</form>
-```
-
-At this time, when I move the mouse to "Yes" or "No", the mouse changes to a "Work" shape and it is
-not clickable.If you add `<label>` before *[`<input>`](/en/webfrontend/<input>)* and move the mouse
-to "Yes" or "No", you can click without changing the style.
-
-```html
-<form>
-  <label><input type="text" name="yes-no">yes</label>
-  <label><input type="text" name="yes-no">no</label>
-</form>
 ```
 
 ## Accessibility Concerns
