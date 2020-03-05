@@ -55,9 +55,9 @@ TOPICS: <link>
 
 | 属性 | 描述 |
 | :-- | :-- |
-| `charset` | **HTML5不支持。** 定义被链接文档的字符编码方式。|
-| `rev` | **HTML5不支持。** 定义被链接文档与当前文档之间的关系。|
-| `target` | **HTML5不支持。**定义在何处加载被链接文档。|
+| `charset` | **HTML5不支持** 。定义被链接文档的字符编码方式。|
+| `rev` | **HTML5不支持** 。定义被链接文档与当前文档之间的关系。|
+| `target` | **HTML5不支持** 。定义在何处加载被链接文档。|
 
 ## `<link>` 的 `rel` 的值
 
@@ -187,8 +187,8 @@ myStylesheet.onerror = function() {
 
 以上值都可使用 "`min-`" 和 "`max-`" 前缀。如：`media="screen and (min-width:500px)"`或`media="screen and (max-color-index:256)"`。
 
-| 值 | 描述 |
-| :-- | :-- |
-| `orientation` | 规定目标显示器/纸张的方向。可能的值："`portrait`" 或 "`landscape`"。</br>如：`media="all and (orientation: landscape)"`。|
-| `scan` | 规定 `tv` 显示器的扫描方式。可能的值："`progressive`" 和 "`interlace`"。</br>如：`media="tv and (scan:interlace)"`。|
-| `grid` | 规定输出设备是否是网格或位图。可能的值："1" 为网格，否则为 "0"。</br>如：`media="handheld and (grid:1)"`|
+| 值 | 描述 | 用法 |
+| :-- | :-- | :-- |
+| `orientation` | 规定目标显示器/纸张的方向。可能的值："`portrait`" 或 "`landscape`"。|`media="all and (orientation: landscape)"`|
+| `scan` | 规定 `tv` 显示器的扫描方式。可能的值："`progressive`" 和 "`interlace`"。|`media="tv and (scan:interlace)"`|
+| `grid` | 规定输出设备是否是网格或位图。可能的值："1" 为网格，否则为 "0"。|`media="handheld and (grid:1)"` |

@@ -58,9 +58,9 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 
 | Attribute | Description |
 | :-- | :-- |
-| `charset` | **HTML5 is not supported.** Defines the character encoding of the linked document.|
-| `rev` | **HTML5 is not supported.** Defines the relationship between the linked document and the current document.|
-| `target` | **HTML5 is not supported.** Defines where to load the linked document.|
+| `charset` | **HTML5 is not supported** .Defines the character encoding of the linked document.|
+| `rev` | **HTML5 is not supported** . Defines the relationship between the linked document and the current document.|
+| `target` | **HTML5 is not supported** . Defines where to load the linked document.|
 
 ## The value of `rel` of `<link>`
 
@@ -202,8 +202,8 @@ myStylesheet.onerror = function() {
 The above values can be prefixed with "`min-`" and "`max-`".
 Such as:`media="screen and (min-width:500px)"`或`media="screen and (max-color-index:256)"`.
 
-| Value | Description |
-| :-- | :-- |
-| `orientation` | Specifies the orientation of the target display/paper. Possible values: "`portrait`" or "`landscape`".</br>Such as:`media="all and (orientation: landscape)"`.|
-| `scan` | Specifies the scanning method for `tv` displays. Possible values: "`progressive`" and "`interlace`".</br>Such as:`media="tv and (scan:interlace)"`.|
-| `grid` | 规Specifies whether the output device is a grid or a bitmap. Possible values: "1" is the grid, otherwise "0".</br>Such as:`media="handheld and (grid:1)"`.|
+| Value | Description | Usage |
+| :-- | :-- |  :-- |
+| `orientation` | Specifies the orientation of the target display/paper. Possible values: "`portrait`" or "`landscape`".| `media="all and (orientation: landscape)"`.|
+| `scan` | Specifies the scanning method for `tv` displays. Possible values: "`progressive`" and "`interlace`".| `media="tv and (scan:interlace)"`.|
+| `grid` | Specifies whether the output device is a grid or a bitmap. Possible values: "1" is the grid, otherwise "0".| `media="handheld and (grid:1)"`.|
