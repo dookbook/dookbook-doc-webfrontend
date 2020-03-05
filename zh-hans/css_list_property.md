@@ -31,8 +31,8 @@ TOPICS: list-style property
 | **`decimal-leading-zero`** | **0开头的数字标记**。(01, 02, 03, 等。) |
 | **`lower-roman`** | **小写罗马数字**(i, ii, iii, iv, v, 等。) |
 | **`upper-roman`** | **大写罗马数字**(I, II, III, IV, V, 等。) |
-| **`lower-alpha`** | **小写英文字母**The marker is lower-alpha (a, b, c, d, e, 等。) |
-| **`upper-alpha`** | **大写英文字母**The marker is upper-alpha (A, B, C, D, E, 等。) |
+| **`lower-alpha`** | **小写英文字母** (a, b, c, d, e, 等。) |
+| **`upper-alpha`** | **大写英文字母** (A, B, C, D, E, 等。) |
 | **`lower-greek`** | **小写希腊字母**(alpha, beta, gamma, 等。) |
 | **`lower-latin`** | **小写拉丁字母**(a, b, c, d, e, 等。) |
 | **`upper-latin`** | **大写拉丁字母**(A, B, C, D, E, 等。) |
@@ -49,7 +49,7 @@ TOPICS: list-style property
 
 | 属性值 | 说明 |
 | :--- | :--- |
-| **`URL`** | 图像的路径。|
+| **URL** | 图像的路径。|
 | **`none`** | 默认。无图形被显示。|
 
 ## `list-style-position` 属性值
