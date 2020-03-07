@@ -7,6 +7,11 @@ TOPICS: <label>
 The HTML **`<label>`** element represents **a caption for an item**
 (*[`<input>`](/en/webfrontend/<input>)* element) in a user interface.
 
+The `<label>` element does not present any special effects to the user. However, it improves
+usability for mouse users. That is, when you use the label, just click the text area inside the
+`<label>` element, this control will be triggered, and the browser will automatically focus on the
+form control related to the label.
+
 ## Technical Summary
 
 |  |  |
