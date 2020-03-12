@@ -58,3 +58,12 @@ p {
   margin-bottom: 2em; /* increase white space after a paragraph */
 }
 ```
+
+## `<p>`Extended
+
+In general, paragraphs `<p>` can appear anywhere in a suitable text flow, such as in the body of a
+document, in an element of a list, and so on.
+
+However, from a technical point of view, paragraphs **cannot appear** in *heads*, *anchors*, or
+*other places where the content must only be text*. In practice, most browsers ignore this
+limitation, and they format paragraphs as the content of the contained elements.
