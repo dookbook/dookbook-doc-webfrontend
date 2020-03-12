@@ -4,6 +4,9 @@ TOPICS: <param>
 
 The **HTML `<param>` element** defines parameters for an [`<object>`](/en/webfrontend/<object>) element.
 
+The `<param>`  tag supports most major browsers. But the file format defined by [`<object>`](/en/webfrontend/<object>)
+is not supported by all browsers.
+
 ## Technical Summary
 
 |  |  |
@@ -23,6 +26,8 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | :-- | :-- |
 | `name` | Name of the parameter. |
 | `value` | Specifies the value of the parameter. |
+| `type` | **HTML5 is not supported** .Defines MIME type parameters.|
+| `valuetype` | **HTML5 is not supported** .Describes the type of value.|
 
 ## Examples
 
