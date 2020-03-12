@@ -189,8 +189,9 @@ see a *drop-down list*. The options in it are **predefined** and will be used as
 
 ### `<datalist>` Attributes
 
-This element has no other attributes than the [global attributes](/en/webfrontend/HTML_Global_Attributes),
-common to all elements.
+!!! warn""
+    This element has no other attributes than the [global attributes](/en/webfrontend/HTML_Global_Attributes),
+    common to all elements.
 
 ### Binding `<input>`
 
