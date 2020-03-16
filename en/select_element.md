@@ -189,7 +189,7 @@ see a *drop-down list*. The options in it are **predefined** and will be used as
 
 ### `<datalist>` Attributes
 
-!!! warn""
+!!! warn ""
     This element has no other attributes than the [global attributes](/en/webfrontend/HTML_Global_Attributes),
     common to all elements.
 
