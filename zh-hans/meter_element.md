@@ -11,7 +11,7 @@ TOPICS: <meter>
 
 **HTML 度量（尺度）元素** (**`<meter>`**)用来显示**已知范围的标量值或者分数值**。比如：磁盘使用情况，查询结果的相关性等。
 
-!!! warn""
+!!! warn ""
     `<meter>` 不能作为一个进度条来使用,进度条[`<progress>`](/zh-hans/webfrontend/<progress>)标签。
 
 ## 技术摘要
