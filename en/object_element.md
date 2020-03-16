@@ -13,7 +13,7 @@ vulnerabilities and lack of browser support.
 Browser object support depends on *the object type*. Unfortunately, mainstream browsers all use
 different code to load the same object type.
 Fortunately, the `object` object provides the solution. If the `object` element is not displayed,
-the code between `<object>` and `</ object>` is executed. In this way, we can *nest multiple `object`
+the code between `<object>` and `</object>` is executed. In this way, we can *nest multiple `object`
 elements (one for each browser)*.
 |  |  |
 | :-- | :-- |
