@@ -1,7 +1,4 @@
 TOPICS: clip-path property
-AUTHORS: 笨笨哥; LOLZSXZXM@163.COM; github:ZSX-JOJO
-         Crystal-RainSlide; Crystal-RainSlide@github.com; github:Crystal-RainSlide
-         苍崎橙子; AozakiOrenji@mozilla.net; mdn:AozakiOrenji
 
 # CSS 剪切属性: `clip-path`
 
@@ -12,14 +9,14 @@ AUTHORS: 笨笨哥; LOLZSXZXM@163.COM; github:ZSX-JOJO
 
 | 属性值 | 说明 |
 | :--- | :--- |
-| **margin-box** | 使用 `margin` box 作为引用框。|
-| **border-box** | 使用 `border` box 作为引用框。|
-| **padding-box** | 使用 `padding` box 作为引用框。|
-| **content-box** |使用 `content` box 作为引用框。|
-| **fill-box** | 利用对象边界框作为引用框。|
+| **margin-box** | 使用 `margin` box 作为引用框 |
+| **border-box** | 使用 `border` box 作为引用框 |
+| **padding-box** | 使用 `padding` box 作为引用框 |
+| **content-box** | 使用 `content` box 作为引用框 |
+| **fill-box** | 利用对象边界框作为引用框 |
 | **stroke-box** | 使用笔触边界框（stroke bounding box）作为引用框 |
-| **view-box** | 使用最近的 SVG 视口（viewport）作为引用框。如果 `viewBox` 属性被指定来为元素创建 SVG 视口，引用框将会被定位在坐标系的原点，引用框位于由 `viewBox` 属性建立的坐标系的原点，引用框的尺寸用来设置 `viewBox` 属性的宽高值。|
-| **`none`** | 不创建的剪切路径。|
+| **view-box** | 使用最近的 SVG 视口（viewport）作为引用框。如果 `viewBox` 属性被指定来为元素创建 SVG 视口，引用框将会被定位在坐标系的原点，引用框位于由 `viewBox` 属性建立的坐标系的原点，引用框的尺寸用来设置 `viewBox` 属性的宽高值 |
+| **`none`** | 不创建的剪切路径 |
 
 ## 示例
 
