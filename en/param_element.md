@@ -4,7 +4,7 @@ TOPICS: <param>
 
 The **HTML `<param>` element** defines parameters for an [`<object>`](/en/webfrontend/<object>) element.
 
-The `<param>`  tag supports most major browsers. But the file format defined by [`<object>`](/en/webfrontend/<object>)
+The `<param>` tag supports most major browsers. But the file format defined by [`<object>`](/en/webfrontend/<object>)
 is not supported by all browsers.
 
 ## Technical Summary
