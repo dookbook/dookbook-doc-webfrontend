@@ -1,17 +1,6 @@
 TOPICS: overflow property
         overflow-x property
         overflow-y property
-AUTHORS: Sebastian Zartner; SebastianZ@github.com; github:SebastianZ
-         Dong WEI; FredWe@mozilla.net; mdn:FredWe
-         ntnyq; ntnyq13@gmail.com; github:ntnyq
-         weiqinl; 772863869@qq.com; github:LiuwqGit
-         庄引; zhuangyin8@gmail.com; github:zhuangyin8
-         杜维康; VictorDu@mozilla.net; mdn:VictorDu
-         xgqfrms; xgqfrms@github.com; github:xgqfrms
-         YF; yfdyh000@mozilla.net; mdn:yfdyh000
-         Florian Scholz; fscholz@mozilla.net; mdn:fscholz
-         Teoli; teoli@mozilla.net; mdn:teoli
-         Jimmie Felidae; evolution.jimmy@gmail.com; github:evojimmy
 
 # CSS 控制内容溢出属性: `overflow`
 
@@ -24,24 +13,15 @@ CSS属性 **`overflow`** 定义当一个元素的内容太大而无法适应块�
 为使 `overflow` 有效果，块级容器必须有一个指定的高度（`height`或者`max-height`）或者将`white-space`设置为`nowrap`。
 
 !!! warn "注意"
-    设置一个轴为`visible`（默认值），同时设置另一个轴为不同的值，会导致设置`visible`的轴的行为会变成`auto`。 注意:
+    设置一个轴为`visible`（默认值），同时设置另一个轴为不同的值，会导致设置`visible`的轴的行为会变成`auto`。
 
 !!! warn "注意"
     即使将`overflow`设置为`hidden`，也可以使用JavaScript `Element.scrollTop` 属性来滚动HTML元素。
 
 从下面列表中选出一个或两个关键字来指定`overflow` 属性。如果指定了两个关键字，第一个关键字应用于`overflow-y`，第二个关键字应用于`overflow-x`。否则，`overflow-x`和`overflow-y`都设置为相同的值。
 
-!!! warn ""
-    注意: 在Firefox 63之前，这些值是反向的，第一个值应用于`overflow-x`，第二个值应用于`overflow-`y。Firefox 63更新了这个顺序，以匹配对规范的更改。此更改是为了匹配使用新逻辑属性`overflow-block`和`overflow-inline`时的顺序。
-
-## 属性值
-
-| 属性值 | 说明 |
-| :--- | :--- |
-| **`visible`** | 默认值。内容不会被修剪，可以呈现在元素框之外。|
-| **`hidden`** | 如果需要，内容将被剪裁以适合填充框。不提供滚动条。|
-| **`scroll`** | 如果需要，内容将被剪裁以适合填充框。浏览器显示滚动条，无论是否实际剪切了任何内容。 （这可以防止滚动条在内容更改时出现或消失。）打印机仍可能打印溢出的内容。|
-| **`auto`** | 取决于用户代理。 如果内容适合填充框内部，则它看起来与可见内容相同，但仍会建立新的块格式化上下文。 如果内容溢出，桌面浏览器会提供滚动条。|
+!!! warn "注意"
+    在Firefox 63之前，这些值是反向的，第一个值应用于`overflow-x`，第二个值应用于`overflow-y`。Firefox 63更新了这个顺序，以匹配对规范的更改。此更改是为了匹配使用新逻辑属性`overflow-block`和`overflow-inline`时的顺序。
 
 ## CSS 属性 `overflow-x`
 
@@ -51,9 +31,16 @@ CSS属性 **`overflow`** 定义当一个元素的内容太大而无法适应块�
 
 当一个块级元素的内容在**垂直方向发生溢出时**，CSS属性 **`overflow-y`** 决定应该截断溢出内容，或者显示滚动条，或者直接显示溢出内容
 
-## 示例
+## 共有属性值
 
-### 简单示例
+| 属性值 | 说明 |
+| :--- | :--- |
+| **`visible`** | 默认值。**内容不会被修剪**，可以呈现在元素框之外 |
+| **`hidden`** | 如果需要，内容将被剪裁以适合填充框。**不提供滚动条** |
+| **`scroll`** | 如果需要，内容将被剪裁以适合填充框。**浏览器显示滚动条**，无论是否实际剪切了任何内容。这可以防止滚动条在内容更改时出现或消失。打印机仍可能打印溢出的内容。|
+| **`auto`** | 取决于用户代理。如果内容适合填充框内部，则它看起来与可见内容相同，但仍会建立新的块格式化上下文。如果内容溢出，桌面浏览器会提供滚动条。|
+
+## 简写示例
 
 ```css
 p {  
@@ -75,7 +62,50 @@ p { overflow: auto; /* 必要时显示滚动条 */  }
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 ```
 
-### overflow-y
+## 示例: `overflow-x`
+
+```css
+#div1, #div2, #div3, #div4 {
+  border: 1px solid black;
+  width:  250px;
+  margin-bottom: 12px;
+}
+
+#div1 { overflow-x: hidden;}
+#div2 { overflow-x: scroll;}
+#div3 { overflow-x: visible;}
+#div4 { overflow-x: auto;}
+```
+
+```html
+<ul>
+  <li><code>overflow-x:hidden</code> — hides the text outside the box
+    <div id="div1">
+      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
+    </div>
+  </li>
+
+  <li><code>overflow-x:scroll</code> — always adds a scrollbar
+    <div id="div2">
+      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
+    </div>
+  </li>
+
+  <li><code>overflow-x:visible</code> — displays the text outside the box if needed
+    <div id="div3">
+      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
+    </div>
+  </li>
+
+  <li><code>overflow-x:auto</code> — on most browsers, equivalent to <code>scroll</code>
+    <div id="div4">
+      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
+    </div>
+  </li>
+</ul>
+```
+
+## 示例: `overflow-y`
 
 ```css
 #div1,
