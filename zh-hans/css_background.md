@@ -65,7 +65,7 @@ CSS 在这方面的能力远远在 HTML 之上。
 | 属性值 | 说明 |
 | :--- | :--- |
 | **`left`**,**`top`**<br>**`left`**,**`center`**<br>**`left`**,**`bottom`**<br>**`right`**, **`top`**<br>**`right`**,**`center`**<br>**`right`**,**`bottom`**<br>**`center`**,**`top`**<br>**`center`**,**`center`**<br>**`center`**,**`bottom`** | 如果仅指定一个关键字，其他值将会是 **`center`**; <br>比如: `background-position:top;` 将等同于 `background-position:top center;`|
-| `x%`,`y%` | 第一个值是**水平**位置，第二个值是**垂直**。左上角是`0％ 0％。`右下角是`100％ 100％`。如果仅指定了一个值，其他值将是`50％`。默认值为：`0％ 0％` |
+| `x%`,`y%` | 第一个值是**水平**位置，第二个值是**垂直**。左上角是`0％ 0％`。右下角是`100％ 100％`。如果仅指定了一个值，其他值将是`50％`。默认值为：`0％ 0％` |
 | `xpos`,`ypos` | 第一个值是**水平**位置，第二个值是**垂直**。左上角是`0`。单位可以是像素（`0px 0px`）或任何其他[CSS单位](/zh-hans/webfrontend/css_length_unit)。如果仅指定了一个值，其他值将是`50％`。你可以混合使用`％`和`positions` |
 | **`inherit`** | 从父元素继承 |
 
