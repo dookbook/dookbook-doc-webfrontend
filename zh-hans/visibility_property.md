@@ -1,7 +1,4 @@
 TOPICS: visibility property
-AUTHORS: 庄引; zhuangyin8@gmail.com; github:zhuangyin8
-         紫云飞; ziyunfei@mozilla.net; mdn:ziyunfei
-         Teoli; teoli@mozilla.net; mdn:teoli
 
 # CSS 显示或隐藏元素属性: `visibility`
 
@@ -11,9 +8,9 @@ CSS属性 **`visibility`** **显示**或**隐藏**元素而**不更改文档的�
 
 | 属性值 | 说明 |
 | :--- | :--- |
-| **`visible`** | 元素正常显示。|
-| **`hidden`** | 隐藏元素，但是其他元素的布局不改变，相当于此元素变成透明。要注意若将其子元素设为 `visibility: visible`，则该子元素依然可见。|
-| **`collapse`** | 隐藏表格的行或列，并且不占用任何空间（与将 `display: none` 用于表格的行/列上的效果相当）。**但是**，如果将`<table>`设置一个高度，仍然会占何空间 |
+| **`visible`** | 元素正常显示 |
+| **`hidden`** | **隐藏元素**，但是其他元素的布局不改变，相当于此元素变成透明。要注意若将其子元素设为 `visibility: visible`，则该子元素依然可见 |
+| **`collapse`** | 隐藏表格的**行**或**列**，**并且不占用任何空间**（与将 *`display: none`* 用于表格的行/列上的效果相当）。但是，如果将[*`<table>`*](/zh-hans/webfrontend/<table>)设置一个高度，**仍然会占何空间** |
 
 ## 示例
 
