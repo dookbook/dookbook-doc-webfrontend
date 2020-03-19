@@ -106,3 +106,9 @@ arguably done more to advance science than any device ever built.</p>
 
 注意嵌套在`<dfn>`内部的[`<abbr>`](/zh-hans/webfrontend/<abbr>)元素。前者确定该术语为缩写（"HST"），并在其`title`属性中指定完整术语
 （"Hubble Space Telescope"）。后者表示缩写术语代表正在定义的术语。
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<dfn>` | 支持 | 支持 | 支持 |

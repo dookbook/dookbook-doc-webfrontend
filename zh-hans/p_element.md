@@ -39,3 +39,9 @@ p {
   margin-bottom: 2em; /* increase white space after a paragraph */
 }
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<p>` | 支持 | 支持 | 支持 |

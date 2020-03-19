@@ -36,3 +36,9 @@ TOPICS: <q>
     Firefox 1.0 was released in 2004 and became a big success.</q>
 </p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<q>` | 支持 | 支持 | 支持 |

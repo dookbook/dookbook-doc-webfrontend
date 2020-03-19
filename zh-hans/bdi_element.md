@@ -60,3 +60,9 @@ TOPICS: <bdi>
 ```html
 <p dir="ltr">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<bdi>` | 支持 | 支持 | 支持 |

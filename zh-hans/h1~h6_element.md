@@ -154,3 +154,9 @@ TOPICS: <h1>
 
 - [使用`aria-labelledby`属性](https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
 - [标签区域 • 页面结构 • W3C WAI 无障碍教程](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<h1>~<h6>` | 支持 | 支持 | 支持 |

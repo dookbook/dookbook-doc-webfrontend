@@ -86,3 +86,10 @@ HTML4中，*`coords`*值可能是像素值或者百分比, 区别是不是有`%`
   <area shape="circle" coords="center-x2,center-y2,radius2">
 </map>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<map>` | 支持 | 支持 | 支持 |
+| `<area>` | 支持 | 支持 | 支持 |

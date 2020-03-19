@@ -28,3 +28,9 @@ TOPICS: <s>
 <span style="text-decoration: line-through;">Today's Special:
   Salmon</span> SOLD OUT
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<s>` | 支持 | 支持 | 支持 |

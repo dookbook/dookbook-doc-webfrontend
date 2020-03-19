@@ -38,3 +38,9 @@ HTML的`<meta>`元素表示**元数据**，而其他HTML的与元相关的元素
 - 如果设置了[`http-equiv`](/zh-hans/webfrontend/<meta>_http-equiv_attribute)，则它是一个编译指示，即Web服务器通常提供的有关如何提供网页的信息。
 - 如果设置了[`charset`](/zh-hans/webfrontend/<meta>_charset_attribute)，则它是一个字符集声明-网页使用的字符编码。
 - 如果设置了`itemprop`，则它是用户定义的元数据-对用户代理而言是透明的，因为元数据的语义是特定于用户的。
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<meta>` | 支持 | 支持 | 支持 |

@@ -42,3 +42,9 @@ TOPICS: <output>
   =<output name="x" for="a b"></output>
 </form>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<output>` | 支持 | 支持 | 支持 |

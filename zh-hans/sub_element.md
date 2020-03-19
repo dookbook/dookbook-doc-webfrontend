@@ -53,3 +53,9 @@ represented as <var>x<sub>1</sub></var> ... <var>x<sub>n</sub></var>.</p>
 ```html
 <p>The chemical formula of water: H<sub>2</sub>O</p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<sub>` | 支持 | 支持 | 支持 |
