@@ -197,3 +197,9 @@ myStylesheet.onerror = function() {
 | `orientation` | 规定目标显示器/纸张的方向。可能的值："`portrait`" 或 "`landscape`"。|`media="all and (orientation: landscape)"`|
 | `scan` | 规定 `tv` 显示器的扫描方式。可能的值："`progressive`" 和 "`interlace`"。|`media="tv and (scan:interlace)"`|
 | `grid` | 规定输出设备是否是网格或位图。可能的值："1" 为网格，否则为 "0"。|`media="handheld and (grid:1)"` |
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<link>` | 支持 | 支持 | 支持 |

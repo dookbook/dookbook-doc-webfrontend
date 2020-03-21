@@ -112,3 +112,9 @@ TOPICS: <button>
 | :-- | :-- | :-- |
 | Safari Mobile | 否（即使使用 `tabindex`）| 不适用 |
 | Chrome 35 | 否（即使使用 `tabindex`）| 是 |
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<button>` | 支持 | 支持 | 支持 |

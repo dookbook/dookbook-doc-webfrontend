@@ -161,3 +161,10 @@ details.addEventListener("toggle", event => {
   }
 });
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<details>` | 支持 | 支持 | 支持 |
+| `<summary>` | 支持 | 支持 | 支持 |

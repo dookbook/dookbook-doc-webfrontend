@@ -96,3 +96,9 @@ mark::after {
 
 - [关于制作商标的简短说明（更易于访问）| Paciello集团](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
 - [调整文本级别样式| 阿德里安·罗塞利（Adrian Roselli）](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<mark>` | 支持 | 支持 | 支持 |

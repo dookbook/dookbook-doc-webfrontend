@@ -48,3 +48,9 @@ TOPICS: <hr>
   This is the second paragraph of text.
 </p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<hr>` | 支持 | 支持 | 支持 |

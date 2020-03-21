@@ -64,3 +64,9 @@ TOPICS: <section>
   </section>
 </article>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<section>` | 支持 | 支持 | 支持 |

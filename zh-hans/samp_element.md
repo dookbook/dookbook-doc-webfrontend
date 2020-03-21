@@ -28,3 +28,9 @@ TOPICS: <samp>
 ```html
 <p>Regular text. <samp>This is sample text.</samp> Regular text.</p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<samp>` | 支持 | 支持 | 支持 |

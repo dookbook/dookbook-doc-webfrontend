@@ -52,3 +52,9 @@ TOPICS: <time>
 
 <p>The concert took place on <time datetime="2020-01-01 19:00">May 15</time>.</p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<time>` | 支持 | 支持 | 支持 |

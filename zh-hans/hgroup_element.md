@@ -80,3 +80,9 @@ TOPICS: <hgroup>
   <h2>Living Standard — Last Updated 12 August 2016</h2>
 </hgroup>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<hgroup>` | 支持 | 支持 | 支持 |

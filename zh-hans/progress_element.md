@@ -38,3 +38,9 @@ CSS伪类 **`:indeterminate`** 可以用来匹配那些不确定的进度条。
 ```html
 <progress value="70" max="100">70%</progress>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<progress>` | 支持 | 支持 | 支持 |

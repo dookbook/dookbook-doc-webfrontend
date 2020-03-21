@@ -40,3 +40,9 @@ TOPICS: <em>
 例如，[`<i>`](/zh-hans/webfrontend/<i>)可能是: "The Queen Mary sailed last night".
 在这里没有必要对这个词"Queen Mary"添加强调或重要性. 它只是表明，谈论问题的对象不是一个名叫玛丽女王, 而是一艘名字叫玛丽的船.
 另一个例子[`<i>`](/zh-hans/webfrontend/<i>)可能是: "The word the is an article".
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<em>` | 支持 | 支持 | 支持 |

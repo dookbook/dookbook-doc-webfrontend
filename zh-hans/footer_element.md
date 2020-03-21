@@ -37,3 +37,9 @@ TOPICS: <footer>
     <address>由某某撰写。</address>
   </footer>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<footer>` | 支持 | 支持 | 支持 |
