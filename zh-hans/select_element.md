@@ -141,7 +141,7 @@ TOPICS: <select>
 
 ## `<select>` 对比 `<datalist>`
 
-!!! warn""
+!!! warn ""
     `<datalist>` 和 `<select>` 下拉列表很像，但它只是提示作用，并不限制用户在 `<input>` 输入框里输入什么。而 `<select>` 只能在其设定的选项中选择。
 
 ## 用 CSS 美化
