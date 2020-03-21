@@ -1,4 +1,4 @@
-TOPICS: CSS3 动画
+TOPICS: CSS Animation
         animation property
         animation-name property
         animation-duration property
@@ -10,7 +10,7 @@ TOPICS: CSS3 动画
         animation-play-state property
         @keyframes property
 
-# CSS3 动画 （`animation`）
+# CSS 动画 （`animation`）
 
 CSS3 可以创建**动画**，它可以取代许多**网页动画图像**、Flash 动画和 JavaScript 实现的效果。
 
@@ -89,8 +89,8 @@ CSS3 可以创建**动画**，它可以取代许多**网页动画图像**、Flas
 | 属性值 | 说明 |
 | :--- | :--- |
 | **`none`** | 默认值。动画在动画执行之前和之后不会应用任何样式到目标元素 |
-| **`forwards`** | 目标将保留由执行期间遇到的最后一个关键帧计算值。 最后一个关键帧取决于 *`animation-direction`* 和 *`animation-iteration-count`* 的值： |
-| **`backwards`** | 动画将在应用于目标时立即应用第一个关键帧中定义的值，并在 *`animation-delay`* 期间保留此值。 第一个关键帧取决于 *`animation-direction`* 的值： |
+| **`forwards`** | 目标将保留由执行期间遇到的最后一个关键帧计算值。 最后一个关键帧取决于 *`animation-direction`* 和 *`animation-iteration-count`* 的值 |
+| **`backwards`** | 动画将在应用于目标时立即应用第一个关键帧中定义的值，并在 *`animation-delay`* 期间保留此值。 第一个关键帧取决于 *`animation-direction`* 的值 |
 | **`both`** | 动画遵循 *`forwards`* 和 *`backwards`* 的规则。也就是说，动画会在两个方向上扩展动画属性 |
 
 ## `animation-play-state` 属性值
