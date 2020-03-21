@@ -35,3 +35,9 @@ TOPICS: <del>
 <p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
 <del ><p >This paragraph has been deleted.</p ></del >
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<del>` | 支持 | 支持 | 支持 |

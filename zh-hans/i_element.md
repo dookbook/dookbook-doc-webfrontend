@@ -40,3 +40,9 @@ TOPICS: <i>
 <p>The Latin phrase <i class="latin">Veni, vidi, vici</i> is often
 mentioned in music, art, and literature</p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<i>` | 支持 | 支持 | 支持 |

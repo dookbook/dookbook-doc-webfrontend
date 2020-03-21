@@ -168,3 +168,9 @@ textarea:valid { /*有效时显示的样式*/
 - [`<output>`](/zh-hans/webfrontend/<output>)
 - [`<progress>`](/zh-hans/webfrontend/<progress>)
 - [`<meter>`](/zh-hans/webfrontend/<meter>)
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<textarea>` | 支持 | 支持 | 支持 |

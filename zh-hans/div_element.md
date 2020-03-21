@@ -57,3 +57,9 @@ TOPICS: <div>
   background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
 }
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<div>` | 支持 | 支持 | 支持 |

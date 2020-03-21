@@ -252,3 +252,18 @@ Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
 - [MDN Tables for visually impaired users](https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<table>` | 支持 | 支持 | 支持 |
+| `<tr>` | 支持 | 支持 | 支持 |
+| `<td>` | 支持 | 支持 | 支持 |
+| `<th>` | 支持 | 支持 | 支持 |
+| `<caption>` | 支持 | 支持 | 支持 |
+| `<thead>` | 支持 | 支持 | 支持 |
+| `<tbody>` | 支持 | 支持 | 支持 |
+| `<tfoot>` | 支持 | 支持 | 支持 |
+| `<col>` | 支持 | 支持 | 支持 |
+| `<colgroup>` | 支持 | 支持 | 支持 |

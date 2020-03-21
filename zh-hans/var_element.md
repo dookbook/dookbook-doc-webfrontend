@@ -49,3 +49,9 @@ var {
    the minimum and maximum speed of the apparatus in revolutions
    per minute (RPM).</p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<var>` | 支持 | 支持 | 支持 |

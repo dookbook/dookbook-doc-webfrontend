@@ -42,3 +42,9 @@ TOPICS: <b>
 </p>
 Keywords are displayed with the default style of the <b> element, likely in bold.
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<b>` | 支持 | 支持 | 支持 |

@@ -51,3 +51,9 @@ TOPICS: <blockquote>
   increases availability.</p>
 </blockquote>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<blockquote>` | 支持 | 支持 | 支持 |

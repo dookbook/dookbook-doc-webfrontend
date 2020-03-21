@@ -91,3 +91,10 @@ Love is a spirit all compact of fire,
     by William Shakespeare</figcaption>
 </figure>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<figure>` | 支持 | 支持 | 支持 |
+| `<figcaption>` | 支持 | 支持 | 支持 |

@@ -63,3 +63,9 @@ languages as follows:</p>
   <li>French: 5<sup>ème</sup></li>
 </ul>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<sup>` | 支持 | 支持 | 支持 |

@@ -60,3 +60,9 @@ TOPICS: <cite>
 ```html
 <p>More information can be found in <cite>ISO-0000]</cite>.</p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<cite>` | 支持 | 支持 | 支持 |
