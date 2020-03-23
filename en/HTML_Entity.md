@@ -1,4 +1,4 @@
-TOPICS: HTML_Entity
+TOPICS: HTML Entity
 
 # HTML Entity
 
