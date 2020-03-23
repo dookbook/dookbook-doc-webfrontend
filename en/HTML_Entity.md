@@ -1,6 +1,6 @@
 TOPICS: HTML_Entity
 
-# HTML_Entity
+# HTML Entity
 
 HTML symbols are not rendered on standard keyboards, such as *mathematical operators*, *arrow
 symbols*, *technical symbols*, and *shapes*.
