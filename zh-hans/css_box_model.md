@@ -183,8 +183,6 @@ margin-right: 10px;
 | **`border-right`** | 元素的**右边框**，是 *`border-right-color`*, *`border-right-style`*, 和 *`border-right-width`* 三个属性的缩写。 |
 | **`border-bottom`** | 元素的**下边框**，是 *`border-bottom-color`*，*`border-bottom-style`* 和 *`border-bottom-width`* 三个属性的缩写。 |
 | **`border-left`** | 元素的**左边框**，是 *`border-left-color`*, *`border-left-style`*, 和 *`border-left-width`* 三个属性的缩写。 |
-| **`border-image`** | 在元素的**边框周围绘制图像**。它替换了元素的**常规边框**。是 **`border-image-source`**，**`border-image-slice`**，**`border-image-width`**，**`border-image-outset`** 和 **`border-image-repeat`** 属性的缩写。 |
-| **`border-radius`** | 设置元素的**外边框圆角**。是 **`border-top-left-radius`**、**`border-top-right-radius`**、**`border-bottom-right-radius`**，和 **`border-bottom-left-radius`** 属性的缩写 |
 
 ### 边框宽度 `border-width`
 
@@ -374,7 +372,12 @@ border-right-color: #111;
 border: 10px solid #111;
 ```
 
-### 边框图片资源 `border-image-source`
+## CSS 边框图像属性 `border-image`
+
+CSS **`border-image`** 属性在给定元素的**边框周围绘制图像**。它替换了元素的**常规边框**。是 **`border-image-source`**,**`border-image-slice`**
+**`border-image-width`**，**`border-image-outset`** 和 **`border-image-repeat`** 属性的缩写。
+
+### 边框图像资源 `border-image-source`
 
 CSS 属性 **`border-image-source`**  用于声明元素的边框图片的资源
 
@@ -383,7 +386,7 @@ CSS 属性 **`border-image-source`**  用于声明元素的边框图片的资源
 | **`none`** | 没有图像被使用 |
 | **image** | 边框使用图像的路径 |
 
-### 边框图片分割 `border-image-slice`
+### 边框图像分割 `border-image-slice`
 
 通过 **`border-image-source`** 引用边框图片后，**`border-image-slice`** 属性会将图片**分割为9个区域**：四个角，四个边（edges）以及中心区域。四条切片线，从它们各自的侧面设置给定距离，控制区域的大小。
 
@@ -403,7 +406,7 @@ CSS 属性 **`border-image-source`**  用于声明元素的边框图片的资源
 | **`%`** | 百分比图像的大小是相对的：水平偏移图像的宽度，垂直偏移图像的高度 |
 | **`fill`** | 保留图像的中间部分 |
 
-### 边框图片宽度 `border-image-width`
+### 边框图像宽度 `border-image-width`
 
 **`border-image-width`** 定义图像**边框宽度**。假如`border-image-width`大于已指定的*`border-width`*，那么它将向内部(`padding`/`content`)扩展.
 
@@ -422,7 +425,7 @@ CSS 属性 **`border-image-source`**  用于声明元素的边框图片的资源
 | **length** | 边框图像的大小从一个维度开始，即一个带单位的数字 |
 | **number** | 边框图像的大小开始时是元素相应边框宽度的倍数。例如，如果元素的边框宽度为：`1em 2px 0 1.5rem`，而 `border-image-outset：2`，则最终的`border-image-outset` 将计算为 `2em 4px 0 3rem` |
 
-## 填充边框图像 `border-image-repeat`
+### 填充边框图像 `border-image-repeat`
 
 **`border-image-repeat`** 定义**图片如何填充边框**。或为单个值，设置所有的边框；或为两个值，分别设置水平与垂直的边框。
 
@@ -433,7 +436,10 @@ CSS 属性 **`border-image-source`**  用于声明元素的边框图片的资源
 | **`round`** | 平铺图像。当不能整数次平铺时，根据情况放大或缩小图像 |
 | **`space`** | 平铺图像。当不能整数次平铺时，会用空白间隙填充在图像周围（不会放大或缩小图像）|
 
-### `border-radius` 属性简写
+## CSS 圆角属性 `border-radius`
+
+CSS **`border-radius`** 属性设置元素的**外边框圆角**。是 **`border-top-left-radius`**，**`border-top-right-radius`**，
+**`border-bottom-right-radius`**，和 **`border-bottom-left-radius`** 属性的缩写
 
 | 属性 | 说明 |
 | :--- | :--- |
@@ -441,8 +447,6 @@ CSS 属性 **`border-image-source`**  用于声明元素的边框图片的资源
 | **`border-top-right-radius`** | 定义了右上角的边框形状 |
 | **`border-bottom-right-radius`** | 定义右下角边框的形状 |
 | **`border-bottom-left-radius`** | 定义左下角边框的形状 |
-
-### `border-radius` 属性值
 
 | 属性值 | 说明 |
 | :--- | :--- |
