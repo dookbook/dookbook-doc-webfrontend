@@ -7,7 +7,7 @@ SYNONYM: 阅读模式 = Reader Mode
 # HTML 主体元素: `<main>`
 
 HTML `<main>` 元素标记了文档 *[`<body>`](/zh-hans/webfrontend/<body>/)* 中的**主体部分**。
-主体部分包含由与文档中心主题直接相关或其延伸的内容、或者应用的主要功能。
+主体部分包含由与文档中心主题直接相关或其延伸的内容、或应用的主要功能。
 
 ## 技术摘要
 
@@ -16,7 +16,7 @@ HTML `<main>` 元素标记了文档 *[`<body>`](/zh-hans/webfrontend/<body>/)* �
 | **内容类别** | *流式内容*, *可触知内容* |
 | **允许内容** | *流式内容* |
 | **标签省略** | 不允许，开始与结束标签都是必需的。|
-| **允许的父元素** | 任何支持*流式内容*除了 ~~[`<article>`](/zh-hans/webfrontend/<article>)~~, ~~[`<aside>`](/zh-hans/webfrontend/<aside>)~~, ~~[`<footer>`](/zh-hans/webfrontend/<footer>)~~, ~~[`<header>`](/zh-hans/webfrontend/<header>)~~, 或 ~~[`<nav>`](/zh-hans/webfrontend/<nav>)~~ |
+| **允许的父元素** | 任何支持*流式内容*除了 [`<article>`](/zh-hans/webfrontend/<article>), [`<aside>`](/zh-hans/webfrontend/<aside>), [`<footer>`](/zh-hans/webfrontend/<footer>), [`<header>`](/zh-hans/webfrontend/<header>), 或 [`<nav>`](/zh-hans/webfrontend/<nav>)。 |
 | **DOM 接口** | **`HTMLElement`** |
 
 ## 属性
@@ -25,7 +25,7 @@ HTML `<main>` 元素标记了文档 *[`<body>`](/zh-hans/webfrontend/<body>/)* �
 
 ## 使用说明
 
-这部分内容在文档中应当是**唯一**的，不包含在任何一系列文档中重复的内容，比如侧边栏，导航栏链接，版权信息，网站 Logo，搜索框（除非搜索框为文档的主要功能）。
+`<main>` 标签中的内容在文档中应当是**唯一**的，不包含在任何一系列文档中重复的内容，比如侧边栏，导航栏链接，版权信息，网站 Logo，搜索框（除非搜索框为文档的主要功能）。
 
 `<main>`对文档的大纲没有贡献; 也就是说，与[`<body>`](/zh-hans/webfrontend/<body>/)，
 诸如 [`<h2>`](/zh-hans/webfrontend/<h2>/) 等标题元素等元素不同，`<main>`不会影响 DOM 的页面结构概念。这只是严格意义上的信息而已。

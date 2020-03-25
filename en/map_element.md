@@ -19,27 +19,16 @@ The **HTML `<map>` element** is used with **`<area>`** elements to define an
 The **HTML `<area>` element** defines a **hot-spot region** on an image, and optionally associates it
 with a **hypertext link**. This element is used only within a *`<map>`* element.
 
-## Technical Summary for `<map>`
+## Technical Summary
 
-|  |  |
-| :-- | :-- |
-| **Content Categories** | *Flow content*, *phrasing content*, *palpable content*. |
-| **Permitted content** | Any *transparent* element. |
-| **Tag omission** | None, both the starting and ending tag are mandatory. |
-| **Permitted parents** | Any element that accepts *phrasing content*. |
-| **Permitted ARIA roles** | None |
-| **DOM interface** | **`HTMLMapElement`** |
-
-## Technical Summary for `<area>`
-
-|  |  |
-| :-- | :-- |
-| **Content categories** | *Flow content*, *phrasing content*.|
-| **Permitted content** | None, it is an **[empty element](/en/webfrontend/empty_element)**.|
-| **Tag omission** | Must have a start tag and must not have an end tag.|
-| **Permitted parents** | Any element that accepts *phrasing content*. The `<area>` element must have an ancestor `<map>`, but it need not be a direct parent. |
-| **Permitted ARIA roles** | None |
-| **DOM interface** | **`HTMLAreaElement`** |
+|  | `<map>` | `<area>` |
+| :-- | :-- | :-- |
+| **Content Categories** | *Flow content*, *phrasing content*, *palpable content*. |*Flow content*, *phrasing content*.|
+| **Permitted content** | Any *transparent* element. |None, it is an **[empty element](/en/webfrontend/empty_element)**.|
+| **Tag omission** | None, both the starting and ending tag are mandatory. |Must have a start tag and must not have an end tag.|
+| **Permitted parents** | Any element that accepts *phrasing content*. | Any element that accepts *phrasing content*. The `<area>` element must have an ancestor `<map>`, but it need not be a direct parent. |
+| **Permitted ARIA roles** | None | None |
+| **DOM interface** | **`HTMLMapElement`** | **`HTMLMapElement`** |
 
 ## Attributes of `<map>`
 
@@ -63,7 +52,10 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 | `type` | Specifies **the media type in the form of a [[MIME]] type** for the linked URL. *It is purely advisory, with no built-in functionality*. |
 | `hreflang` | Indicates the **language of the linked resource**. See *[`<a>`](/en/webfrontend/<a>)* for a full description of the `hreflang` attribute. |
 | `ping` | Contains a *space-separated* list of URLs to which, when the hyperlink is **followed**, `POST` requests with the body PING will be sent by the browser (in the background). Typically used for **tracking**. Same with the `ping` attribute of [`<a>`](/en/webfrontend/<a>) |
-| `referrerpolicy` | A string indicating which referrer to use when fetching the resource:<br>`"no-referrer"` meaning that the Referer: header will not be sent.<br>`"no-referrer-when-downgrade"` meaning that no `Referer:` header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.<br>`"origin"` meaning that the referrer will be the origin of the page, that is roughly the scheme, the host and the port.<br>`"origin-when-cross-origin"` meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.<br>`"unsafe-url"` meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
+| `referrerpolicy` | A string indicating which `referrer` to use when fetching the resource:<br>`"no-referrer"` meaning that the Referer: header will not be sent.<br>`"no-referrer-when-downgrade"` meaning that no `Referer:` header will be sent when navigating to an origin without TLS (HTTPS). This is a user agent’s default behavior, if no policy is otherwise specified.<br>`"origin"` meaning that the referrer will be the origin of the page, that is roughly the scheme, the host and the port.<br>`"origin-when-cross-origin"` meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.<br>`"unsafe-url"` meaning that the referrer will include the origin and the path (but not the fragment, password, or username). This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins. |
+| ~~`name`~~ | **Obsolete** .Define a names for the clickable area so that it can be scripted by older browsers. |
+| ~~`nohref`~~ | **Obsolete** .Indicates that no hyperlink exists for the associated area. |
+| ~~`tabindex`~~ | **Obsolete** .A numeric value specifying the position of the defined area in the browser tabbing order. This attribute is global in HTML5. |
 
 ## Values of `shape` and `coords` Attributes
 

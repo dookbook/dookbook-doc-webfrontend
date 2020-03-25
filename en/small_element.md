@@ -4,9 +4,10 @@ TOPICS: <small>
 
 The **HTML `<small>` element** makes the text **font size one size smaller** (for example, from large
 to medium, or from small to x-small) down to the browser's minimum font size.  In HTML5, this
-element is repurposed to represent *side-comments* and *small print*,
-including *copyright* and *legal text*,
-independent of its styled presentation.
+element is repurposed to represent *side-comments* and *small print*, including *copyright* and
+*legal text*,independent of its styled presentation.
+If the enclosed font is already the smallest size supported by the font model, the `<small>` tag will
+have no effect.
 
 ## Technical Summary
 

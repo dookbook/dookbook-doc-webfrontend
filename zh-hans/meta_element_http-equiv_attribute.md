@@ -26,6 +26,9 @@ TOPICS: <meta> http-equiv attribute  <!-- markdownlint-disable proper-names -->
 1. **重新加载当前页面的间隔时间（单位：秒）** - 仅在`content`属性包含*正整数*的情况下。
 2. **重定向到另一页面的时间间隔**（单位：秒) - 仅在`content`属性包含*正整数*后跟字符串 `;url=`和有效URL的情况下。
 
+"`refresh`" 应该慎重使用，因为它会使得页面不受用户控制。在 [W3C's Web 内容可访问性指南中](http://www.w3.org/WAI/intro/wcag.php) 使用
+"`refresh`" 会到导致失败。
+
 ### 刷新内容示例
 
 ```html
@@ -43,6 +46,16 @@ TOPICS: <meta> http-equiv attribute  <!-- markdownlint-disable proper-names -->
 - [了解成功标准2.2.1 | W3C了解WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
 - [了解成功标准2.2.4 | W3C了解WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
 - [了解成功标准3.2.5 | W3C了解WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
+
+## `default-style`
+
+规定要使用的预定义的样式表。
+
+```html
+<meta http-equiv="default-style" content="the document's preferred stylesheet">
+```
+
+**注意**：示例中`content`属性的值必须匹配同一文档中的一个[`link`](/zh-hans/webfrontend/<link>)元素上的 `title`属性的值，或者必须匹配同一文档中的一个[`style`](/zh-hans/webfrontend/<style>)元素上的`title`属性的值。
 
 ## `set-cookie`
 

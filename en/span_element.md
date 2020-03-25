@@ -26,7 +26,8 @@ This element only includes the [global attributes](/en/webfrontend/HTML_Global_A
 It should be
 used only when no other semantic element is appropriate. `<span>` is very much like a *[`<div>`](/en/webfrontend/<div>)*
 element, but [`<div>`](/en/webfrontend/<div>) is a block-level element whereas a `<span>`
-is an inline element.
+is an inline element.Generally,[`<div>`](/zh-hans/webfrontend/<div>) is used for large layout frames,
+and `<span>` is used for small parts or places where small retouching is required.
 
 ## Examples
 

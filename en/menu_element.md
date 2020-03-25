@@ -3,11 +3,6 @@ TOPICS: <menu>
 
 # HTML Menu Element: `<menu>`
 
-!!! warn "Experimental Technology"
-    This is an **experimental technology**.
-    Check the browser compatibility carefully before using this in production.
-    Currently, no browser support it!
-
 The **HTML `<menu>` element** represents **a group of commands** that a user can perform or activate.
 This includes both *list menus*, which might appear across the top of a screen, as well as *context menus*,
 such as those that might appear underneath a button after it has been clicked.
