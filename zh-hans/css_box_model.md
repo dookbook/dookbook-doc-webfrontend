@@ -40,6 +40,8 @@ TOPICS: CSS Box Model
         border-top-right-radius property
         border-bottom-right-radius property
         border-bottom-left-radius property
+        box-shadow property
+        box-sizing property
 
 # CSS 盒模型 (`margin`, `padding`, `border`)
 
@@ -453,6 +455,30 @@ CSS **`border-radius`** 属性设置元素的**外边框圆角**。是 **`border
 | length | 定义弯道的形状 |
 | **`%`** | 使用%定义角落的形状 |
 
+## CSS 阴影属性: `box-shadow`
+
+CSS **`box-shadow`** 属性用于在元素的框架上**添加阴影效果**，该属性可设置的值包括**X轴偏移**、**Y轴偏移**、**阴影模糊半径**、**阴影扩散半径**，和**阴影颜色**，并以多个逗号分隔。
+
+`box-shadow` 以由逗号分隔的列表来描述一个或多个阴影效果。该属性可以让几乎所有元素的边框产生阴影。如果元素同时设置了 *`border-radius`*，阴影也会有圆角效果。
+
+| 属性值 | 说明 |
+| :--- | :--- |
+| **h-shadow** | 必需的。水平阴影的位置。允许负值 |
+| **v-shadow** | 必需的。垂直阴影的位置。允许负值 |
+| **blur** | 可选。模糊距离 |
+| **spread** | 可选。阴影的大小 |
+| **color** | 可选。阴影的颜色 |
+| **inset** | 可选。从外层的阴影（开始时）改变阴影内侧阴影 |
+
+## CSS 属性: `box-sizing`
+
+CSS 中的 **`box-sizing`** 属性设置**如何计算一个元素**的**总宽度**和**总高度**。
+
+| 属性值 | 说明 |
+| :--- | :--- |
+| **`content-box`** | 默认值，标准盒子模型。`width` 与 `height` 只包括内容的宽和高， 不包括边框（`border`），内边距（`padding`），外边距（`margin`） |
+| **`border-box`** | `width` 和 `height` 属性包括内容，内边距和边框，但不包括外边距 |
+
 ## 示例
 
 ```html
@@ -487,6 +513,41 @@ div p.b {
   background: red;
   padding: 10px 20px 5px; /* 定义内边距上为10px，左右各为20px、下为5px */
 }
+```
+
+### 示例：使用 `box-sizing` 和 `box-shadow` 属性
+
+```css
+div {
+  width: 160px;
+  height: 80px;
+  padding: 20px;
+  border: 8px solid red;
+  background: yellow;
+  box-shadow: 10px 10px 5px #888; /* 给元素添加阴影 距离元素左边10px 上边5px 阴影大小5px 阴影颜色#888 */
+}
+
+.content-box {
+  box-sizing: content-box;
+  /* 总宽: 160px + (2 * 20px) + (2 * 8px) = 216px
+  总高: 80px + (2 * 20px) + (2 * 8px) = 136px
+  内容框宽度: 160px
+  内容框高度: 80px */
+}
+
+.border-box {
+  box-sizing: border-box;
+  /* 总宽: 160px
+  总高: 80px
+  内容框宽度: 160px - (2 * 20px) - (2 * 8px) = 104px
+  内容框高度: 80px - (2 * 20px) - (2 * 8px) = 24px */
+}
+```
+
+```html
+<div class="content-box">Content box</div>
+<br>
+<div class="border-box">Border box</div>
 ```
 
 ## 参考
