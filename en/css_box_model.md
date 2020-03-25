@@ -29,6 +29,17 @@ TOPICS: CSS Box Model
         border-left-color property
         border-left-style property
         border-left-width property
+        border-image property
+        border-image-source property
+        border-image-slice property
+        border-image-width property
+        border-image-outset property
+        border-image-repeat property
+        border-radius property
+        border-top-left-radius property
+        border-top-right-radius property
+        border-bottom-right-radius property
+        border-bottom-left-radius property
 
 # CSS Box Model (`margin`, `border`, `padding`)
 
