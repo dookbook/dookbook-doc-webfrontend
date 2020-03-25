@@ -374,7 +374,7 @@ border: 10px solid #111;
 
 ## CSS 边框图像属性 `border-image`
 
-CSS **`border-image`** 属性在给定元素的**边框周围绘制图像**。它替换了元素的**常规边框**。是 **`border-image-source`**,**`border-image-slice`**
+CSS **`border-image`** 属性在给定元素的**边框周围绘制图像**。它替换了元素的**常规边框**。是 **`border-image-source`**，**`border-image-slice`**，
 **`border-image-width`**，**`border-image-outset`** 和 **`border-image-repeat`** 属性的缩写。
 
 ### 边框图像资源 `border-image-source`
