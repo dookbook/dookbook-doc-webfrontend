@@ -40,6 +40,8 @@ TOPICS: CSS Box Model
         border-top-right-radius property
         border-bottom-right-radius property
         border-bottom-left-radius property
+        box-shadow property
+        box-sizing property
 
 # CSS Box Model (`margin`, `border`, `padding`)
 
@@ -450,7 +452,7 @@ set all borders; or for two values, set horizontal and vertical borders, respect
 | **`round`** | Tile the image. When you can't tile an integer number of times, enlarge or reduce the image according to the situation |
 | **`space`** | Tile the image. When tiling cannot be performed an integer number of times, a blank gap is used to fill the image around (the image will not be enlarged or reduced) |
 
-## CSS 圆角属性 `border-radius`
+## CSS Fillet Property `border-radius`
 
 The CSS **`border-radius`** property sets the element's **outer border rounded corners**. Are
 **`border-top-left-radius`**, **`border-top-right-radius`**, **`border-bottom-right-radius`**,
@@ -467,6 +469,35 @@ and **`border-bottom -left-radius`** Abbreviation for attribute
 | :--- | :--- |
 | length | Define the shape of the curve |
 | **`%`** | Use `%` to define the shape of the corner |
+
+## CSS Shadow Property `box-shadow`
+
+CSS **`box-shadow`** property is used on the element's frame **add a shadow effect**, this property
+can set values including **X-axis offset**, **Y-axis offset**, **Shadow Blur Radius**,
+**Shadow Diffusion Radius**, and **Shadow Color**, separated by multiple commas.
+
+`box-shadow` describes one or more shadow effects as a comma-separated list. This property can shade
+the borders of almost all elements. If the element also has *`border-radius`* set, the shadow will
+also have rounded corners.
+
+| Property Value | Description |
+| :--- | :--- |
+| **h-shadow** | Required. The position of the horizontal shadow. Allow negative values |
+| **v-shadow** | Required. The position of the vertical shadow. Allow negative values |
+| **blur** | Optional. Fuzzy distance |
+| **spread** | Optional. The size of the shadow |
+| **color** | Optional. Color of shadow |
+| **inset** | Optional. Change the inner shadow from the outer shadow (at the beginning) |
+
+## CSS Box Size Property `box-sizing`
+
+**`box-sizing`** property setting **how to calculate an element** in CSS **total width** and
+**total height**.
+
+| Property Value | Description |
+| :--- | :--- |
+| **`content-box`** | Default, standard box model. `width` and `height` only include the width and height of the content, excluding `border`, `padding`, and `margin` |
+| **`border-box`** | `width` and `height` properties include content, padding, and borders, but not padding |
 
 ## Example
 
@@ -502,6 +533,41 @@ div p.b {
   background: red;
   padding: 10px 20px 5px; /* Define the padding to be 10px on the top, 20px on the left and 5px on the bottom */
 }
+```
+
+### Example: Use `box-sizing` And `box-shadow` Property
+
+```css
+div {
+  width: 160px;
+  height: 80px;
+  padding: 20px;
+  border: 8px solid red;
+  background: yellow;
+  box-shadow: 10px 10px 5px #888; /* Add a shadow to the element, 10px to the left of the element, 5px to the top, shadow size 5px, shadow color # 888 */
+}
+
+.content-box {
+  box-sizing: content-box;
+  /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
+  Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
+  Content box width: 160px
+  Content box height: 80px */
+}
+
+.border-box {
+  box-sizing: border-box;
+  /* Total width: 160px
+  Total height: 80px
+  Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px
+  Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */
+}
+```
+
+```html
+<div class="content-box">Content box</div>
+<br>
+<div class="border-box">Border box</div>
 ```
 
 ## References
