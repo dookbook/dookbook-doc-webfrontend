@@ -43,7 +43,7 @@ TOPICS: CSS Box Model
         box-shadow property
         box-sizing property
 
-# CSS 盒模型 (`margin`, `padding`, `border`)
+# CSS 盒模型 (`margin`, `padding`, `border`, `box-shadow`, `box-sizing`)
 
 **CSS 盒模型** (**Box Model**) 是一个用来设计和*布局*时使用的术语。本质上将HTML元素封装在一个盒子里，它包括：**外边距**，**边框**，**填充**（**内边距**），和**实际内容**。
 
@@ -438,7 +438,7 @@ CSS 属性 **`border-image-source`**  用于声明元素的边框图片的资源
 | **`round`** | 平铺图像。当不能整数次平铺时，根据情况放大或缩小图像 |
 | **`space`** | 平铺图像。当不能整数次平铺时，会用空白间隙填充在图像周围（不会放大或缩小图像）|
 
-## CSS 圆角属性 `border-radius`
+## CSS 边框圆角属性 `border-radius`
 
 CSS **`border-radius`** 属性设置元素的**外边框圆角**。是 **`border-top-left-radius`**，**`border-top-right-radius`**，
 **`border-bottom-right-radius`**，和 **`border-bottom-left-radius`** 属性的缩写
@@ -455,7 +455,7 @@ CSS **`border-radius`** 属性设置元素的**外边框圆角**。是 **`border
 | length | 定义弯道的形状 |
 | **`%`** | 使用%定义角落的形状 |
 
-## CSS 阴影属性: `box-shadow`
+## CSS 阴影属性 `box-shadow`
 
 CSS **`box-shadow`** 属性用于在元素的框架上**添加阴影效果**，该属性可设置的值包括**X轴偏移**、**Y轴偏移**、**阴影模糊半径**、**阴影扩散半径**，和**阴影颜色**，并以多个逗号分隔。
 
@@ -470,7 +470,7 @@ CSS **`box-shadow`** 属性用于在元素的框架上**添加阴影效果**，�
 | **color** | 可选。阴影的颜色 |
 | **inset** | 可选。从外层的阴影（开始时）改变阴影内侧阴影 |
 
-## CSS 属性: `box-sizing`
+## CSS 盒大小属性 `box-sizing`
 
 CSS 中的 **`box-sizing`** 属性设置**如何计算一个元素**的**总宽度**和**总高度**。
 
