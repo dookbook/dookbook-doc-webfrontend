@@ -25,7 +25,7 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 | Attribute | Description |
 | :-- | :-- |
-| **`cite`** | A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.
+| **`cite`** | A URL that designates a source document or message for the information quoted. This attribute is intended to point to information explaining the context or the reference for the quote.If the `cite` attribute is present, it must be a `valid URL potentially surrounded by spaces`. To obtain the corresponding citation link, the value of the attribute must be `parsed` relative to the element's `node document`. User agents may allow users to follow such citation links, but they are primarily intended for private use (e.g., by server-side scripts collecting statistics about a site's use of quotations), not for readers.|
 
 ## Usage Notes
 
