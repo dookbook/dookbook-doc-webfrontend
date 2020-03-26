@@ -31,6 +31,9 @@ This instruction specifies:
 2. The **number of seconds until the page should redirect to another** - only if the `content`
    attribute contains a *positive integer* followed by the string '`;url=`', and a valid URL.
 
+"`refresh`" should be used sparingly because it leaves the page out of user control. Using "`refresh`"
+in the [W3C's Web Content Accessibility Guide](http://www.w3.org/WAI/intro/wcag.php) will fail.
+
 ### Refreshing Content Examples
 
 ```html
@@ -51,6 +54,18 @@ updating of the page content may also be disorienting for people experiencing lo
 - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
 - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
 - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
+
+## `default-style`
+
+Specifies a predefined style sheet to be used.
+
+```html
+<meta http-equiv="default-style" content="the document's preferred stylesheet">
+```
+
+**Note**: The value of the `content` attribute in the example must match the value of the `title`
+attribute on a [`link`](/en/webfrontend/<link>) element in the same document, or the value of the
+ `title` attribute on a [`style`](/en/webfrontend/<style>) element in the same document.
 
 ## `set-cookie`
 

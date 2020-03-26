@@ -39,6 +39,26 @@ HTML的`<meta>`元素表示**元数据**，而其他HTML的与元相关的元素
 - 如果设置了[`charset`](/zh-hans/webfrontend/<meta>_charset_attribute)，则它是一个字符集声明-网页使用的字符编码。
 - 如果设置了`itemprop`，则它是用户定义的元数据-对用户代理而言是透明的，因为元数据的语义是特定于用户的。
 
+## 示例
+
+```html
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dookbook</title>
+<!--定义web页面描述：-->
+<meta name="description" content="开发者的日常菜谱">
+<!--定义文档关键词，用于搜索引擎：-->
+<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+<!--定义页面作者：-->
+<meta name="author" content="dookbook">
+</head>
+<body>
+<p>所有 meta 标签显示在 head 部分</p>
+</body>
+
+```
+
 ## 浏览器兼容性
 
 | - | 谷歌 | 火狐 | Safari |

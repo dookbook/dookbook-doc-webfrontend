@@ -47,3 +47,23 @@ server about how the web page is served.
   character encoding used by the webpage.
 - If `itemprop` is set, it is user-defined metadata — transparent for the user-agent as the
 semantics of the metadata is user-specific.
+
+## Example
+
+```html
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dookbook</title>
+<!--Define web page description:-->
+<meta name="description" content="Developers' Cookbook ">
+<!--Define document keywords for search engines:-->
+<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+<!--Define page author:-->
+<meta name="author" content="dookbook">
+</head>
+<body>
+<p>All meta tags are displayed in the head section</p>
+</body>
+
+```
