@@ -65,22 +65,22 @@ CSS 属性 **`transform-style`** 设置元素的子元素是位于**3D空间中*
 如果定义了两个或更多值并且没有值的关键字，或者唯一使用的关键字是`center`，则第一个值表示**水平偏移量**，第二个值表示**垂直偏移量**。
 
 - 一个值：
-    - 必须是长度，百分百或 `left`, `center`, `right`, `top`, `bottom`关键字中的一个。
+    - 必须是长度，百分比或 `left`, `center`, `right`, `top`, `bottom`关键字中的一个。
 - 两个值：
-    - 其中一个必须是长度，百分百或`left`, `center`, `right`关键字中的一个。
-    - 另一个必须是长度，百分百或`top`, `center`, `bottom`关键字中的一个。
+    - 其中一个必须是长度，百分比或`left`, `center`, `right`关键字中的一个。
+    - 另一个必须是长度，百分比或`top`, `center`, `bottom`关键字中的一个。
 - 三个值：
     - 前两个值和只有两个值时的用法相同。
     - 第三个值必须是长度。它始终代表Z轴偏移量。
 
 | 属性值 | 描述 |
 | :--- | :--- |
-| **x-offset** | 定义变形中心距离盒模型的左侧的`<length>`或`<percentage>`偏移值 |
+| **x-offset** | 定义变形中心距离盒模型的左侧的长度或百分比偏移值 |
 | **offset-keyword** | `left`，`right`，`top`，`bottom`或`center`中之一，定义相对应的变形中心偏移 |
-| **y-offset** | 定义变形中心距离盒模型的顶的`<length>`或`<percentage>`偏移值 |
+| **y-offset** | 定义变形中心距离盒模型的顶的长度或百分比偏移值 |
 | **x-offset-keyword** | `left`，`right`或`center`中之一，定义相对应的变形中心偏移 |
 | **y-offset-keyword** | `top`，`bottom`或`center`中之一，定义相对应的变形中心偏移 |
-| **z-offset** | 定义变形中心距离用户视线（z=0处）的`<length>`（不能是`<percentage>`）偏移值 |
+| **z-offset** | 定义变形中心距离用户视线（`z=0`处）的长度（不能是百分比）偏移值 |
 
 关键字是方便的简写方法，等同于以下百分比值：
 
@@ -98,9 +98,9 @@ CSS 属性 **`transform-style`** 设置元素的子元素是位于**3D空间中*
 
 | 属性值 | 描述 |
 | :--- | :--- |
-| `border-box` | `border box`是用作引用框,一个表格（table）的`border-box`是table包装盒的边框，而不是表的边框 |
+| `border-box` | 边框是用作引用框，一个表格的`border-box`是表格包装盒的边框，而不是表的边框 |
 | `fill-box` | 使用对象包围框作为引用框 |
-| `view-box` | 使用最近的SVG视图作为参考框。如果为SVG `viewport`创建元素指定了`viewBox`属性，则将引用框定位在`viewBox`属性建立的坐标系的原点，并将引用框的维数设置为`viewBox`属性的宽度和高度值 |
+| `view-box` | 使用最近的SVG视图作为参考框。如果为SVG视口创建元素指定了`viewBox`属性，则将引用框定位在`viewBox`属性建立的坐标系的原点，并将引用框的维数设置为`viewBox`属性的宽度和高度值 |
 
 ## CSS 属性: `perspective`
 
@@ -226,7 +226,7 @@ CSS 属性 **`translate`** 允许你单独指定 *`transforms`* 中的平移，�
 </div>
 ```
 
-### 使用 `translate` 属性
+### 示例: 使用 `translate` 属性
 
 ```css
 div {
