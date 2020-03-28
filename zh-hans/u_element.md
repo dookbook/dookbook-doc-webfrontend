@@ -1,8 +1,8 @@
 TOPICS: <u>
 
-# HTML 下划线元素 `<u>`
+# HTML 非文本注释 `<u>`
 
-**HTML `<u>` 元素**使文本在其内容的基线下的一行呈现**下划线**。在HTML 5中, 此元素标记**非文本注释**。例如(一个正确的中文标记)，或拼写错误。
+`<u>` 在 HTML 4 中废弃，但是在 HTML 5 中重新被定义，意思是：将文本标记为 **非文本注释**。例如：汉语中的专有名词或拼写错误。样式呈现为 **下划线**。
 
 ## 技术摘要
 
@@ -20,8 +20,6 @@ TOPICS: <u>
 这个元素仅包含[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)。
 
 ## 使用说明
-
-就像所有排版元素那样， `<u>` 在 HTML 4 中废弃，但是在 HTML 5 中恢复了一个新的语义，意思是：将文本标记为非文本注释。
 
 !!! warn "注意"
     在可能和超链接混淆的地方，避免使用 `<u>`。因为超链接的默认样式，也是下划线。
@@ -92,11 +90,12 @@ cite {
 
 在大多数情况下，您应该使用`<u>`以外的元素，例如：
 
-- *[`<em>`](/zh-hans/webfrontend/<em>)* 表示强调重点
-- *[`<b>`](/zh-hans/webfrontend/<b>)* 提示注意文字
-- *[`<mark>`](/zh-hans/webfrontend/<mark>)* 标记关键词或短语
-- *[`<strong>`](/zh-hans/webfrontend/<strong>)* 表明文本具有重要意义
-- *[`<i>`](/zh-hans/webfrontend/<i>)* 表示西方文本中的技术术语，音译，思想或船名
+- *[`<em>`](/zh-hans/webfrontend/<em>)* 表示强调重点。
+- *[`<b>`](/zh-hans/webfrontend/<b>)* 提示注意文字。
+- *[`<mark>`](/zh-hans/webfrontend/<mark>)* 标记关键词或短语。
+- *[`<strong>`](/zh-hans/webfrontend/<strong>)* 表明文本具有重要意义。
+- *[`<i>`](/zh-hans/webfrontend/<i>)* 表示西方文本中的技术术语，音译，思想或船名。
+- *[`<cite>`](/zh-hans/webfrontend/<cite>)* 标记书名时或创意作品引用元素。
 
 要提供文本注释（与使用`<u>`创建的非文本注释相对），请使用 [`<ruby>`](/zh-hans/webfrontend/<ruby>) 元素。
 
