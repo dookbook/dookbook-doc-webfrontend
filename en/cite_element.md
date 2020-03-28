@@ -59,6 +59,11 @@ within a `<cite>` element, may include the name of the work’s author. However,
 the [[WHATWG]] specification for `<cite>` says the opposite: that a person’s name must never be included,
 under any circumstances.
 
+In some cases, the [`<b>`](/en/webfrontend/<b>) element might be appropriate for names; e.g. in a
+gossip article where the names of famous people are keywords rendered with a different style to draw
+attention to them. In other cases, if an element is really needed, the
+[`<span>`](/en/webfrontend/<span>) element can be used.
+
 Typically, browsers style the contents of a `<cite>` element in italics by default. To avoid this,
 apply the CSS *`font-style`* property to the `<cite>` element.
 
