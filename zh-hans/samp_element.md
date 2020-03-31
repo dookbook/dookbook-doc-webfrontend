@@ -21,14 +21,44 @@ TOPICS: <samp>
 ## 使用须知
 
 !!! warn ""
-    如果你需要显示由网站服务器端或者网页App计算结果的容器元素，请使用 **[`<output>`](/zh-hans/webfrontend/<output>)** 元素。也可将
-    `<samp>` ，[`<output>`](/zh-hans/webfrontend/<output>)用于即时输出的元素形成对比。
+    如果你需要显示由网站服务器端或者网页App计算结果的容器元素，请使用 **[`<output>`](/zh-hans/webfrontend/<output>)** 元素。
 
 ## 示例
 
 ```html
 <p>Regular text. <samp>This is sample text.</samp> Regular text.</p>
 ```
+
+### 样本输出包括用户输入
+
+您可以将[`<kbd>`](/zh-hans/webfrontend/<kbd>) 元素嵌套在 `<samp>` 中显示，其中包含用户输入文本。 如文本呈现Linux（或macOS）控制台会话的记录：
+
+```html
+<pre>
+<samp><span class="prompt">mike@interwebz:~$</span><kbd>md5 -s "Hello world"</kbd>
+MD5 ("Hello world") = 3e25960a79dbc69b674cd4ec67a72c62
+
+<span class="prompt">mike@interwebz:~$</span> <span class="cursor">█</span></samp></pre>
+```
+
+[`<span>`](/zh-hans/webfrontend/<span>)可以自定义示例文本的特定部分（如外壳提示和光标）的外观。
+[`<kbd>`](/zh-hans/webfrontend/<kbd>) 代表用户在示例文本中的提示符下输入的命令。
+
+```css
+.prompt {
+  color: #b00;
+}
+
+samp > kbd {
+  font-weight: bold;
+}
+
+.cursor {
+  color: #00b;
+}
+```
+
+上述CSS样式仅使提示和光标具有相当细微的色彩，使输入文本增强了字体效果。
 
 ## 浏览器兼容性
 
