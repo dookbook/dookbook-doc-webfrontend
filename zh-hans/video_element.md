@@ -64,15 +64,14 @@ Adding captions and subtitles to HTML5 video。
 不加这个属性时，抓取资源不会走CORS请求(即，不会发送 `Origin:` HTTP 头)，保证其在 [`<canvas>`](/zh-hans/webfrontend/<canvas>) 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举
 关键字 **anonymous** 一样使用。 查看 CORS 设置属性 获取更多信息。
 
-!!! warn ""
-    使用备注：
+!!! warn "使用备注"
     - `autoplay` 属性优先于 `preload`。 假如用户想自动播放视频，那么很明显浏览器需要下载视频。同时设置 `autoplay` 和 `preload` 属性在规范里是允许的。
     - 但规范也没有强制浏览器去遵循该属性的值；这仅仅只是个提示。
 
 时间偏移量目前是指定为float类型的值，表示偏移的秒数。
 
-!!! warn ""
-    备注： HTML 5 规范中，时间偏移量值的定义还没有完成，有可能会变更。
+!!! warn "备注"
+   HTML 5 规范中，时间偏移量值的定义还没有完成，有可能会变更。
 
 ## 事件
 
