@@ -1,7 +1,6 @@
 TOPICS: caret-color property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
-# CSS 属性: `caret-color`
+# CSS 插入光标颜色属性: `caret-color`
 
 **`caret-color`** 属性用来定义 **插入光标**（caret）的颜色，这里说的插入光标，就是那个在网页的可编辑器区域内，用来指示用户的输入具体会插入到哪里的那个一闪一闪的形似竖杠`|`的东西。
 
