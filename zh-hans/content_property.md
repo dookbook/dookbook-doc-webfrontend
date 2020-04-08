@@ -2,7 +2,7 @@ TOPICS: content property
         counter-increment property
         counter-reset property
 
-# CSS 属性: `content`
+# CSS 插入内容属性: `content`
 
 CSS的 **`content`** CSS 属性用于在元素的 [`::before`](/zh-hans/webfrontend/::before) 和 [`::after`](/zh-hans/webfrontend/::after)
 伪元素中**插入内容**。使用 `content` 属性插入的内容都是匿名的可替换元素。
@@ -12,7 +12,7 @@ CSS的 **`content`** CSS 属性用于在元素的 [`::before`](/zh-hans/webfront
 | 属性值 | 说明 |
 | :--- | :--- |
 | **`none`** | 空 |
-| **`normal`** | 正常，默认是`none`|
+| **`normal`** | 正常，默认是`none` |
 | **`counter`** | 设定计数器内容 |
 | **`attr(attribute)`** | 作为选择器的属性之一 |
 | **`string`** | 设置Content到你指定的文本 |
@@ -25,7 +25,7 @@ CSS的 **`content`** CSS 属性用于在元素的 [`::before`](/zh-hans/webfront
 
 ## CSS 属性: `counter-increment`
 
-**`counter-increment`** 属性递增**一个**或**多个计数器值**。通常用于 *`counter-reset`* 属性和 *`content`* 属性。
+**`counter-increment`** 属性**递增一个**或**多个计数器值**。通常用于 *`counter-reset`* 属性和 *`content`* 属性。
 
 | 属性值 | 说明 |
 | :--- | :--- |
@@ -35,13 +35,13 @@ CSS的 **`content`** CSS 属性用于在元素的 [`::before`](/zh-hans/webfront
 
 ## CSS 属性: `counter-reset`
 
-**`counter-reset`** 属性创建或重置一个或多个计数器。通常是和 *`counter-increment`* 属性，*`content`* 属性一起使用。
+**`counter-reset`** 属性**创建**或**重置一个**或**多个计数器**。通常是和 *`counter-increment`* 属性，*`content`* 属性一起使用。
 
 | 属性值 | 说明 |
 | :--- | :--- |
 | **`none`** | 默认。不能对选择器的计数器进行重置 |
 | **custom-ident** | 要重置的计数器名称 |
-| **integer** | 每次出现元素时将计数器重置为的值。如果未指定，则默认为`0`。 |
+| **integer** | 每次出现元素时将计数器重置为的值。如果未指定，则默认为`0` |
 
 ## 简单示例
 
@@ -71,7 +71,7 @@ q::after { content: close-quote; }
 h1::before { content: "Chapter "; }
 ```
 
-## 使用 `counter-increment` 和 `counter-reset` 属性
+## 示例: 使用 `counter-increment` 和 `counter-reset` 属性
 
 ```html
 <body>
