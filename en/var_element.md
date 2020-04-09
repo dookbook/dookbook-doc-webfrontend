@@ -4,8 +4,10 @@ TOPICS: <var>
 
 The **HTML Variable element** (**`<var>`**) represents
 the **name of a variable in a mathematical expression or a programming context**.
-It's typically presented using an *italicized* version of the
-current typeface, although that behavior is browser-dependent.
+Such as *an identifier representing a constant*, *a symbol identifying a physical quantity*,
+*a function parameter*, or just be *a term* used as *a placeholder in prose*.
+It's typically presented using an *italicized* version of
+the current typeface, although that behavior is browser-dependent.
 
 ## Technical Summary
 

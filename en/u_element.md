@@ -1,6 +1,6 @@
 TOPICS: <u>
 
-# HTML Unarticulated Annotation Element: `<u>`
+# HTML Non-textual Annotation`<u>`
 
 The **HTML unarticulated annotation element** (**`<u>`**) represents a span of inline text which should
 be rendered in a way that indicates that it has a **non-textual annotation**. This is rendered by
@@ -106,12 +106,13 @@ cite {
 
 In most cases, you should use an element other than `<u>`, such as:
 
-- *[`<em>`](/en/webfrontend/<em>)* to denote stress emphasis
-- *[`<b>`](/en/webfrontend/<b>)* to draw attention to text
-- *[`<mark>`](/en/webfrontend/<mark>)* to mark key words or phrases
+- *[`<em>`](/en/webfrontend/<em>)* to denote stress emphasis.
+- *[`<b>`](/en/webfrontend/<b>)* to draw attention to text.
+- *[`<mark>`](/en/webfrontend/<mark>)* to mark key words or phrases.
 - *[`<strong>`](/en/webfrontend/<strong>)*  to indicate that text has strong importance
 - *[`<i>`](/en/webfrontend/<i>)* to denote technical terms, transliterations, thoughts,
-or names of vessels in Western texts
+or names of vessels in Western texts.
+- *[`<cite>`](/en/webfrontend/<cite>)* When tagging a book title or creative work reference element.
 
 To provide textual annotations (as opposed to the non-textual annotations created with `<u>`),
 use the [`<ruby>`](/en/webfrontend/<ruby>) element.

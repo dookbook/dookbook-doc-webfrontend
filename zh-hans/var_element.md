@@ -2,7 +2,7 @@ TOPICS: <var>
 
 # HTML 变量元素 `<var>`
 
-**HTML 变量元素** (**`<var>`**) 表示**数学公式或计算机编程里的变量名称**。经常被渲染成*斜体*(*`italic`*)字。
+**HTML 变量元素** (**`<var>`**) 表示**数学公式或计算机编程里的变量名称**。如：*常数的标识符*，*物理量的符号*，*功能参数*，或者仅仅是在散文中用作*占位符*的术语。经常被渲染成*斜体*(*`italic`*)字。
 
 ## 技术摘要
 
@@ -21,8 +21,8 @@ TOPICS: <var>
 ## 相关元素
 
 - **[`<code>`](/zh-hans/webfrontend/<code>)**: HTML 代码元素
-- **[`<kbd>`](/en/webfrontend/<kbd>)**: HTML 键盘输入元素
-- **[`<samp>`](/en/webfrontend/<samp>)**: HTML 样本输出元素
+- **[`<kbd>`](/zh-hans/webfrontend/<kbd>)**: HTML 键盘输入元素
+- **[`<samp>`](/zh-hans/webfrontend/<samp>)**: HTML 样本输出元素
 
 ## 样式
 

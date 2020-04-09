@@ -33,7 +33,7 @@ for details.
 
 | Attribute | Description |
 | :-- | :-- |
-| `autoplay` | A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.<br>**Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant<br>experience for users, so should be avoided when possible. If you must offer autoplay functionality,<br>you should make it opt-in (requiring a user to specifically enable it). However, this can be useful<br>when creating media elements whose source will be set at a later time, under user control. |
+| `autoplay` | A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.<br>**Note:** Websites that automatically play audio (or videos with audio tracks) may give users an unpleasant experience, so you should avoid using them as much as possible (Google Chrome follows this, even if you set autoplay Autoplay). If autoplay must be provided, users are required to specifically enable it. However, this is useful when creating a media element whose source will be controlled by the user at a later time.|
 | `buffered` | You can use this property to get the time period information of the buffered resource. This property contains a `TimeRanges` object.|
 | `controls` | If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback. |
 | `loop` | Boolean property: If specified, the loop audio. |
