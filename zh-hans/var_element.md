@@ -21,8 +21,8 @@ TOPICS: <var>
 ## 相关元素
 
 - **[`<code>`](/zh-hans/webfrontend/<code>)**: HTML 代码元素
-- **[`<kbd>`](/en/webfrontend/<kbd>)**: HTML 键盘输入元素
-- **[`<samp>`](/en/webfrontend/<samp>)**: HTML 样本输出元素
+- **[`<kbd>`](/zh-hans/webfrontend/<kbd>)**: HTML 键盘输入元素
+- **[`<samp>`](/zh-hans/webfrontend/<samp>)**: HTML 样本输出元素
 
 ## 样式
 
