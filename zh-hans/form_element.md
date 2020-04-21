@@ -84,7 +84,7 @@ TOPICS: <form>
 | **`value`** | 输入的**当前值**。|
 | **`required`** | *布尔*值，指示输入字段的值是**必需的**。如果指定该属性，则元素可应用 **`:required`** 伪类；否则可应用 **`:optional`** 伪类。不可用于 `type` 为 *`submit`*，*`color`*，*`hidden`*，*`range`*，*`image`*，*`reset`*，*`button`* 的输入框。|
 | **`autofocus`** | *布尔*值，指示在呈现表单时使该输入控件自动聚焦。在触发 *`DOMContentLoaded`* 事件之前，具有此属性的元素可以获得焦点。不可用于 `type="hidden"` 的输入框。|
-| **`disabled`** | *布尔*值，指示**禁用输入**。该输入不会收到 `click` 事件，并且禁用的输入不会与表单一起提交。|
+| **`disabled`** | *布尔*值，指示**禁用输入**。该输入不会收到 `click` 事件，并且禁用的输入不会与表单一起提交。<br>注意：`disabled` 属性不适用于 `<input type="hidden">`。|
 | **`readonly`** | *布尔*值，表示**无法编辑**输入。仅文本控件可以设置为只读，因为对于其他控件（例如复选框和按钮），在只读(`readonly`)和禁用(`disabled`)之间没有区别，因此`readonly`属性不适用。|
 | **`list`** | *[`<datalist>`](/zh-hans/webfrontend/<datalist>)* 元素的 **`id`**，该元素提供输入建议值的列表。|
 | **`form`** | **所属 `<form>` 的 `id`**。如果不存在，则输入是包含*最近*的表单的成员，或者根本不是表单的成员。|
@@ -188,7 +188,37 @@ TOPICS: <form>
 <input type="datetime-local">
 <input type="month">
 <input type="week">
+
+<!-- 示例： 必填项 -->
+<form action="demo-form.php">
+  Username: <input type="text" name="usrname" required>
+  <input type="submit">
+</form>
+
 ```
+
+### `<input>` 其他属性
+
+| 属性 | 描述 |
+| :-- | :-- |
+| `accept` | 规定通过文件上传来提交的文件的类型。 (只针对 `type="file"`)<br>允许的值：[`<audio>`](/zh-hans/webfrontend/<audio>),[`<video>`](/zh-hans/webfrontend/<video>),[`<image>`](/zh-hans/webfrontend/<image>),MIME_type。 |
+| ~~`align`~~| **HTML5已废弃**。规定图像输入的对齐方式。 (只针对 `type="image"` 。)|
+| `alt` | 定义图像输入的 *替代文本*。所以允许的值为 `text`。 (只针对 `type="image"`)|
+| `checked` | *布尔属性*,该属性规定在页面加载时会被 *预先选定*。 (只针对 `type="checkbox"` 或者 `type="radio"` 。) |
+| `formaction` |属性规定当表单提交时 *处理输入控件的文件的URL*。(只针对 `type="submit"` 和 `type="image"`。)|
+|`formenctype` |属性规定当表单数据 *提交到服务器时如何编码*(只适合 `type="submit"`和 `type="image"`)。|
+|`formmethod` |定义发送表单数据到 `action URL` 的 HTTP 方法。 (只适合 `type="submit"` 和 `type="image"`。)|
+| `formnovalidate`|该属性覆盖 `<form>`元素的 `novalidate`属性。*布尔属性*，且可通过下面的方式进行设置：<br>`<input formnovalidate>`<br>`<input formnovalidate="formnovalidate">`<br>`<input formnovalidate="">`|
+|`formtarget` |规定表示提交表单后 *在哪里显示接收到响应的名称或关键词*。(只适合 `type="submit"` 和 `type="image"`。)|
+| `height` |规定 `<input>`元素的高度。(只针对`type="image"`)|
+| `max` |规定 `<input>` 元素的最大值。|
+| `maxlength`|规定 `<input>` 元素中允许的最大字符数。|
+| `min` | 属性规定 `<input>`元素的最小值。|
+|`multiple` |属性规定允许用户输入到 `<input>`元素的多个值。|
+| *`placeholder`* |属性可显示*简短提示信息*（比如：一个样本值或者预期格式的短描述。<br>该属性适用于下面的 `input`类型：`text`、`search`、`url`、`tel`、`email` 和 `password`。|
+| `size` | 规定以字符数计的 `<input>` 元素的宽度。默认值是20。|
+|`src`| 该属性规定显示为 *提交按钮的图像的 URL*。 (只针对 `type="image"`。)|
+| `step`|规定输入字段的合法数字间隔。|
 
 ## 示例：简单表单 (POST请求)
 
