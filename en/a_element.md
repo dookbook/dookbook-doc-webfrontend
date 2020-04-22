@@ -14,6 +14,12 @@ The **HTML `<a>` element** (or **anchor element**), along with it's `href` attri
 **hyperlink** to other web pages, files, locations within the same page, email addresses, or any
 other URL.
 
+In all browsers, the default appearance of the link is as follows:
+
+- **Unvisited** links are underlined and *blue*.
+- **Has been visited** links are underlined and *purple*.
+- **Activity Link** is underlined and *red*.
+
 ## Technical Summary
 
 |  |  |
@@ -29,16 +35,20 @@ other URL.
 
 This element's attributes include the [global attributes](/en/webfrontend/HTML_Global_attributes).
 
+!!! warn ""
+    In HTML5, the `<a>` tag is a hyperlink, but if there is no `href` attribute, it is just a
+    *placeholder* of the hyperlink, and `hreflang`, `media`,`rel`, `target` and`type`attributes.
+
 | Attribute | Description |
 | :-- | :-- |
 | **`href`** | Contains a URL or a URL fragment that the **hyperlink** points to. URLs are not restricted to HTTP-based documents (*`http:`*), but can use any protocol supported by the browser. For example, *[`file:`](https://en.wikipedia.org/wiki/File_URI_scheme)*, *`ftp:`*, *`tel:`* and *`mailto:`*. |
-| **`target`** | Specifies **where to display** the linked URL. It is a name of, or keyword for, a browsing context: a tab, window, or [`<iframe>`](/en/webfrontend/<iframe>). The following keywords have special meanings: *`_self`* (*default*), *`_blank`*, *`_parent`*, *`_top`*.
-| **`rel`** | Specifies the **relationship of the target object** to the link object. The value is a *space-separated* list of link types.
+| **`target`** | Specifies **where to display** the linked URL. It is a name of, or keyword for, a browsing context: a tab, window, or [`<iframe>`](/en/webfrontend/<iframe>). The following keywords have special meanings: *`_self`* (*default*), *`_blank`*, *`_parent`*, *`_top`*.|
+| **`rel`** | Specifies the **relationship of the target object** to the link object. The value is a *space-separated* list of link types.|
 | **`download`** | This attribute instructs browsers to **download** a URL instead of navigating to it, so the user will be prompted to save it as a local file. If the attribute has a value, it is used as the pre-filled file name in the Save prompt (the user can still change the file name if they want). There are no restrictions on allowed values, though *`/`* and *`\`* are converted to *underscores* (*`_`*). Most file systems limit some punctuation in file names, and browsers will adjust the suggested name accordingly. |
 | `type` | Specifies the **media type** in the form of a *[[MIME]] type* for the linked URL. *It is purely advisory, with no built-in functionality.* |
 | `hreflang` | This attribute indicates the **human language of the linked resource**. It is purely advisory, with no built-in functionality. Allowed values are determined by *[BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt)*. |
 | `ping` | Contains a *space-separated list* of URLs to which, when the hyperlink is **followed**, `POST` requests with the body PING will be sent by the browser (in the background). Typically used for **tracking**. |
-| `referrerpolicy` | Indicates which referrer to send when fetching the URL:<br>`"no-referrer"` means the `Referer:` header will not be sent.<br>`"no-referrer-when-downgrade"` means no `Referer:` header will be sent when navigating to an origin without HTTPS. This is the default behavior.<br>`"origin"` means the referrer will be the origin of the page, not including information after the domain.<br>`"origin-when-cross-origin"` meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.<br>`'strict-origin-when-cross-origin'`<br>`"unsafe-url"` means the referrer will include the origin and path, but not the fragment, password, or username. This is unsafe because it can leak data from secure URLs to insecure ones. |
+| `referrerpolicy` | Indicates which referrer to send when fetching the URL:<br>`"no-referrer"` means the `Referer:` header will not be sent.<br>`"no-referrer-when-downgrade"` means no `Referer:` header will be sent when navigating to an origin without HTTPS. This is the default behavior.<br>`"origin"` means the referrer will be the origin of the page, not including information after the domain.<br>`"origin-when-cross-origin"` meaning that navigations to other origins will be limited to the scheme, the host and the port, while navigations on the same origin will include the referrer's path.<br>`'strict-origin-when-cross-origin'` Send the origin, path, and querystring when performing a same-origin request, only send the origin when the protocol security level stays the same while performing a cross-origin request (HTTPS→HTTPS), and send no header to any less-secure destinations (HTTPS→HTTP).<br>`"unsafe-url"` means the referrer will include the origin and path, but not the fragment, password, or username. This is unsafe because it can leak data from secure URLs to insecure ones. |
 
 ### `target` Attribute
 

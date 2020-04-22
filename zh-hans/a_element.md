@@ -12,6 +12,12 @@ TOPICS: <a>
 
 **HTML `<a>` 元素**（或称**锚元素**）它与`href`属性一起，可以创建通向其他网页、文件、同一页面内的不同位置、电子邮件地址或任何其他URL的**超链接**。
 
+在所有浏览器中，链接的默认外观如下：
+
+- **未被访问**的链接带有下划线而且是 *蓝色的*。
+- **已被访问**的链接带有下划线而且是 *紫色的*。
+- **活动链接**带有下划线而且是 *红色的*。
+
 ## 技术摘要
 
 |  |  |
@@ -27,6 +33,9 @@ TOPICS: <a>
 
 该元素的属性包含[HTML全局属性](/zh-hans/webfrontend/HTML_Global_attributes)。
 
+!!! warn ""
+    在HTML5中，`<a>` 标签是超链接，但是假如没有 `href`属性，它仅仅是超链接的一个*占位符*，也不能使用 `hreflang`、`media`、`rel`、`target`以及`type`属性。
+
 | 属性 | 描述 |
 | :-- | :-- |
 | **`href`** | 包含**超链接**指向的URL或URL片段(fragment)。URL不限于基于HTTP的文档 (*`http:`*)，也可以使用浏览器支持的任何协议。例如，*[`file:`](https://en.wikipedia.org/wiki/File_URI_scheme)*、*`ftp:`*、*`tel:`* 和 *`mailto:`*。|
@@ -35,8 +44,8 @@ TOPICS: <a>
 | **`download`** | 此属性指示浏览器**下载**URL而不是导航到它，因此将提示用户将其保存为本地文件。如果属性有一个值，那么此值将在下载保存过程中作为预填充的文件名（如果用户需要，仍然可以更改文件名）。此属性对允许的值没有限制，但是 *`/`* 和 *`\`*会被转换为 *下划线* (*`_`*)。大多数文件系统限制了文件名中的标点符号，因此浏览器将相应地调整建议的文件名。 |
 | `type` | 该属性指定目标URL链接的**媒体类型** (**[[MIME]]类型**)。其仅提供建议，并没有内置的功能。|
 | `hreflang` | 该属性用于指定**链接文档的人类语言**。其仅提供建议，并没有内置的功能。允许的值取决于*[BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt)* |
-| `ping` | 包含一个以*空格分隔*的URL列表，当**跟随**超链接时，将由浏览器(在后台)发送带有正文PING的`POST`请求。通常用于**跟踪** |
-| `referrerpolicy` | 表明在获取URL时发送哪个提交者（referrer）:<br>`"no-referrer"` 表示 `Referer:` 头将不会被发送。<br>`"no-referrer-when-downgrade"` 表示当从使用HTTPS的页面导航到不使用 TLS(HTTPS)的来源 时不会发送 `Referer:` 头。如果没有指定策略，这将是用户代理的默认行为。<br>`"origin"` 表示 referrer将会是页面的来源，大致为这样的组合：主机和端口（不包含具体的路径和参数的信息）。<br>`"origin-when-cross-origin"` 表示导航到其它源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer的路径。<br>`'strict-origin-when-cross-origin'`<br>`"unsafe-url"` 表示 referrer将会包含源和路径（domain + path）（但是不包含密码或用户名的片段）。这种情况是不安全的，因为它可能会将安全的URL数据泄露给不安全的源。 |
+| `ping` | 包含一个以*空格分隔*的URL列表，当**跟随**超链接时，将由浏览器(在后台)发送带有正文PING的`POST`请求。通常用于**跟踪**。 |
+| `referrerpolicy` | 表明在获取URL时发送哪个提交者（referrer）:<br>`"no-referrer"` 表示 `Referer:` 头将不会被发送。<br>`"no-referrer-when-downgrade"` 表示当从使用HTTPS的页面导航到不使用 TLS(HTTPS)的来源 时不会发送 `Referer:` 头。如果没有指定策略，这将是用户代理的默认行为。<br>`"origin"` 表示 referrer将会是页面的来源，大致为这样的组合：主机和端口（不包含具体的路径和参数的信息）。<br>`"origin-when-cross-origin"` 表示导航到其它源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer的路径。<br>`'strict-origin-when-cross-origin'` 对于同源的请求，会发送完整的URL作为引用地址；在同等安全级别的情况下，发送文件的源作为引用地址(HTTPS->HTTPS)；在降级的情况下不发送此首部 (HTTPS->HTTP)。<br>`"unsafe-url"` 表示 referrer将会包含源和路径（domain + path）（但是不包含密码或用户名的片段）。这种情况是不安全的，因为它可能会将安全的URL数据泄露给不安全的源。 |
 
 ### `target`属性
 
