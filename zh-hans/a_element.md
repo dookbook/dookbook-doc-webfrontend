@@ -40,26 +40,38 @@ TOPICS: <a>
 | :-- | :-- |
 | **`href`** | 包含**超链接**指向的URL或URL片段(fragment)。URL不限于基于HTTP的文档 (*`http:`*)，也可以使用浏览器支持的任何协议。例如，*[`file:`](https://en.wikipedia.org/wiki/File_URI_scheme)*、*`ftp:`*、*`tel:`* 和 *`mailto:`*。|
 | **`target`** | 该属性指定在**何处显示**链接的资源。取值为标签页(tab)、窗口(window)、或[`<iframe>`](/en/webfrontend/<iframe>)等浏览上下文的名称或关键词。以下关键字具有特殊的意义：*`_self`* (*默认*)，*`_blank`*，*`_parent`*，*`_top`*。 |
-| **`rel`** | 该属性指定了目标对象到链接对象的**关系**。该值是*空格分隔*的列表类型值。 |
-| **`download`** | 此属性指示浏览器**下载**URL而不是导航到它，因此将提示用户将其保存为本地文件。如果属性有一个值，那么此值将在下载保存过程中作为预填充的文件名（如果用户需要，仍然可以更改文件名）。此属性对允许的值没有限制，但是 *`/`* 和 *`\`*会被转换为 *下划线* (*`_`*)。大多数文件系统限制了文件名中的标点符号，因此浏览器将相应地调整建议的文件名。 |
+| **`rel`** | 该属性指定目标对象到链接对象的**关系**。该值是*空格分隔*的列表类型值。 |
+| **`download`** | 此属性指浏览器 **下载** URL而不是导航到它，因此提示用户将其保存为本地文件很重要。如果属性有一个值，那么此值将在下载保存过程中作为预填充的文件名（如果用户需要，仍然可以更改文件名）。此属性对允许的值没有限制，但是 *`/`* 和 *`\`*会被转换为 *下划线* (*`_`*)。大多数文件系统限制了文件名中的标点符号，因此浏览器将相应地调整建议的文件名。 |
 | `type` | 该属性指定目标URL链接的**媒体类型** (**[[MIME]]类型**)。其仅提供建议，并没有内置的功能。|
 | `hreflang` | 该属性用于指定**链接文档的人类语言**。其仅提供建议，并没有内置的功能。允许的值取决于*[BCP47](http://www.ietf.org/rfc/bcp/bcp47.txt)* |
 | `ping` | 包含一个以*空格分隔*的URL列表，当**跟随**超链接时，将由浏览器(在后台)发送带有正文PING的`POST`请求。通常用于**跟踪**。 |
 | `referrerpolicy` | 表明在获取URL时发送哪个提交者（referrer）:<br>`"no-referrer"` 表示 `Referer:` 头将不会被发送。<br>`"no-referrer-when-downgrade"` 表示当从使用HTTPS的页面导航到不使用 TLS(HTTPS)的来源 时不会发送 `Referer:` 头。如果没有指定策略，这将是用户代理的默认行为。<br>`"origin"` 表示 referrer将会是页面的来源，大致为这样的组合：主机和端口（不包含具体的路径和参数的信息）。<br>`"origin-when-cross-origin"` 表示导航到其它源将会限制为这种组合：主机 + 端口，而导航到相同的源将会只包含 referrer的路径。<br>`'strict-origin-when-cross-origin'` 对于同源的请求，会发送完整的URL作为引用地址；在同等安全级别的情况下，发送文件的源作为引用地址(HTTPS->HTTPS)；在降级的情况下不发送此首部 (HTTPS->HTTP)。<br>`"unsafe-url"` 表示 referrer将会包含源和路径（domain + path）（但是不包含密码或用户名的片段）。这种情况是不安全的，因为它可能会将安全的URL数据泄露给不安全的源。 |
 
-### `target`属性
+## `target`属性
 
 !!! warn "Note"
-    使用`target`时，考虑添加**`rel="noopener"`**以防止针对*`window.opener`* API的恶意行为。
+    使用`target`时，考虑添加 **`rel="noopener"`** 以防止针对 *`window.opener`* API的恶意行为。
 
-| 属性值 | 描述 |
+| `target` | 描述 |
 | :-- | :-- |
 | **`_self`** | (*默认*) 在**当前页面**加载，即跳转到当前浏览上下文中。|
 | **`_blank`** | 在**新窗口或标签页**加载，即跳转到一个新的未命名的浏览器上下文。|
 | **`_parent`** | 在**当前的父级浏览器上下文**加载。如果没有父级浏览上下文，此选项的行为方式与`_self`相同。|
 | **`_top`** | 在**顶级浏览器上下文**加载。(即最高级浏览器上下文)。如果没有顶级浏览上下文，此选项的行为方式与`_self`相同。|
+| `framename` |在指定的框架中打开被链接文档。|
 
-### `download`属性
+### 在新的浏览环境打开链接
+
+!!! warn "安全和隐私问题"
+    使用 **`target="_blank"`**链接到另一个页面将在与页面相同的进程上运行新页面。
+    如果新页面执行昂贵的JavaScript，那么页面的性能可能会受到影响。要避免这种情况，请使用`rel=noopener`。
+
+```html
+<!-- _blank 在新的标签页或浏览器窗口打开链接 -->
+<a href="https://dookbook.info/" target="_blank" rel="noreferrer noopener">External Link</a>
+```
+
+## `download`下载属性
 
 !!! warn "注意"
     此 *`download`*属性仅适用于**同源**URL，但是*`file:`*除外。
@@ -68,6 +80,12 @@ TOPICS: <a>
 
 如果HTTP头部中的 **`Content-Disposition`**赋予了一个不同于此属性的文件名，HTTP头属性优先于此属性。如果`Content-Disposition`被设置为 **`inline`**，
 那么Firefox浏览器优先考虑HTTP头部`Content-Disposition`，而Chrome浏览器优先考虑`download`属性。
+
+### 下载链接
+
+```html
+<a href="<下载地址>" download="<默认文件名>" title="<文本提示>">下载链接文本</a>
+```
 
 ## 链接到外部地址
 
@@ -102,17 +120,6 @@ TOPICS: <a>
 
 关于`tel:`更详细的语法请参考[RFC 3966](https://tools.ietf.org/html/rfc3966)。
 
-## 在新的浏览环境打开链接
-
-!!! warn "安全和隐私问题"
-    使用**`target="_blank"`**链接到另一个页面将在与页面相同的进程上运行新页面。
-    如果新页面执行昂贵的JavaScript，那么页面的性能可能会受到影响。要避免这种情况，请使用`rel=noopener`。
-
-```html
-<!-- 在新的标签页或浏览器窗口打开链接 -->
-<a href="https://dookbook.info/" target="_blank" rel="noreferrer noopener">External Link</a>
-```
-
 ## 图片链接
 
 ```html
@@ -120,12 +127,6 @@ TOPICS: <a>
 <a href="https://dookbook.info">
   <img src="https://dookbook.info/static/img/logo-tail.svg" alt="Dookbook logo" />
 </a>
-```
-
-## 下载链接
-
-```html
-<a href="<下载地址>" download="<默认文件名>" title="<文本提示>">下载链接文本</a>
 ```
 
 ## 保存`<canvas>`为PNG格式
