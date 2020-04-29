@@ -15,6 +15,7 @@ TOPICS: text-align property
 | **`right`** | 文本右对齐。|
 | **`center`** | 文本居中对齐。|
 | **`justify`** | 文本两端对齐。|
+| `inherit`| 规定应该从父元素继承 `text-align` 属性的值。|
 
 ## `text-align-last` 属性值
 
@@ -27,6 +28,10 @@ TOPICS: text-align property
 | **`justify`** | 最后一行被调整为两端对齐。|
 | **`start`** | 最后一行在行开头对齐（如果 `text-direction` 是从左到右，则向左对齐；如果 `text-direction` 是从右到左，则向右对齐）。|
 | **`end`** | 最后一行在行末尾对齐（如果 `text-direction` 是从左到右，则向右对齐；如果 `text-direction` 是从右到左，则向左对齐）。|
+| `inherit`| 规定应该从父元素继承 `text-align-last` 属性的值。|
+
+!!! warn "`justify`"
+    最后一个水平对齐属性是`justify`，它有时会出现一些问题。例：最后一行只有较少单词时，文本行的左右两端都会放在父元素的内边界上。会是的字符间距看上去太大。此时可以调整单词和字母间的间隔，使各行的长度恰好相等。
 
 ## 示例: `text-align`
 

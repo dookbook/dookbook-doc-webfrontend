@@ -18,6 +18,7 @@ forced line break, is aligned.
 | **`right`** | The inline contents are aligned to **the right edge of the line box**. |
 | **`center`** | The inline contents are **centered within the line box**. |
 | **`justify`** | The inline contents are **justified**. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line. |
+| `inherit`| Specifies that the value of the `text-align` attribute should be inherited from the parent element.|
 
 ## `text-align-last` property Value
 
@@ -30,6 +31,14 @@ forced line break, is aligned.
 | **`justify`** | The text is **justified**. Text should line up their left and right edges to the left and right content edges of the paragraph. |
 | **`start`** | The same as left if direction is left-to-right and right if direction is right-to-left. |
 | **`end`** | The same as right if direction is left-to-right and left if direction is right-to-left. |
+| `inherit`| Specifies that the value of the `text-align-last` attribute should be inherited from the parent element.|
+
+!!! warn "`justify`"
+    The last horizontal alignment attribute is`justify`, which sometimes has some problems. Example:
+    When there are fewer words in the last line, the left and right ends of the text line will be
+    placed on the inner boundary of the parent element. The character spacing would be too large. At
+    this time, the interval between words and letters can be adjusted so that the length of each
+    line is exactly equal.
 
 ## Example: `text-align`
 
