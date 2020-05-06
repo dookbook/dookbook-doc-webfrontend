@@ -3,7 +3,7 @@ TOPICS: <p>
 # HTML 段落元素：`<p>`
 
 **HTML `<p>` 元素**（或者说 **HTML段落元素**）表示文本的一个**段落**。该元素通常表现为一整块与相邻文本分离的文本，或以垂直的空白隔离或以首行缩进
-（[``text-indent``](/zh-hans/webfrontend/text-indent)）。另外，`<p>` 是*块级*元素。
+（[`text-indent`](/zh-hans/webfrontend/text-indent)）。另外，`<p>` 是*块级*元素。
 
 ## 技术摘要
 
