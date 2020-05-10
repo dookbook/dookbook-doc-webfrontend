@@ -81,7 +81,7 @@ same as **0%** to **100%**.
 
 ## `animation-direction` Property Value
 
-!! warn "Note"
+!!! warn "Note"
     If the animation is set to play only once, this property will have no effect.
 
 | Property Value | Description |
