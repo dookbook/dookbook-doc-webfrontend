@@ -231,3 +231,9 @@ content while navigating.
 Spacing may be created using CSS properties such as `margin`.
 
 - [`Hand tremors and the giant-button-problem - Axess Lab`](https://axesslab.com/hand-tremors/)
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<a>` | support | support | support |
