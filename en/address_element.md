@@ -57,3 +57,9 @@ information for an article's author.
     USA
 </address>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<address>` | support | support | support |
