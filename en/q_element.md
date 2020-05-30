@@ -40,3 +40,9 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
     Firefox 1.0 was released in 2004 and became a big success.</q>
 </p>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<q>`| support | support | support |
