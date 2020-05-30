@@ -57,3 +57,9 @@ property with the value `"bold"` instead in order to make text bold.
 Keywords are displayed with the default style of the <b>
 element, likely in bold.
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<b>`  | support | support | support |
