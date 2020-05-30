@@ -171,6 +171,12 @@ textarea:valid {
 }
 ```
 
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<textarea>`| support | support | support |
+
 ## Other Form-Related Elements
 
 - [`<form>`, `<input>`](/en/webfrontend/<form>)
