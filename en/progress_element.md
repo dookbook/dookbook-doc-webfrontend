@@ -43,3 +43,9 @@ remove the `value` attribute with **`element.removeAttribute("value")`**.
 ```html
 <progress value="70" max="100">70%</progress>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<progress>` | support | support | support |
