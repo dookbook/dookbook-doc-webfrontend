@@ -64,3 +64,9 @@ This element only includes the [global attributes](/en/webfrontend/HTML_Global_A
   <p><a href="https://dookbook.info/">Continue reading....</a></p>
 </article>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<header>` | support | support | support |
