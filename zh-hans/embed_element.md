@@ -34,3 +34,9 @@ HTML `<embed>` 元素将外部内容嵌入文档中的指定位置。此内容�
 ```html
 <embed type="video/quicktime" src="movie.mov" width="640" height="480">
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<embed>` | 支持 | 支持 | 支持 |
