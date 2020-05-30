@@ -122,3 +122,9 @@ Note the [`<abbr>`](/en/webfrontend/<abbr>) element nested inside the `<dfn>`. T
 establishes that the term is an abbreviation ("HST") and specifies the full term
 ("Hubble Space Telescope") in its `title` attribute. The latter indicates that the abbreviated term
 represents a term being defined.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<dfn>` | support | support | support |
