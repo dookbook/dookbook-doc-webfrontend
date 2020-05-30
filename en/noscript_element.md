@@ -37,3 +37,9 @@ This element only includes the [global attributes](/en/webfrontend/HTML_Global_A
 </noscript>
 <p>Rocks!</p>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<noscript>`| support | support | support |
