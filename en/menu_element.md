@@ -131,3 +131,9 @@ either as an unordered list of items represented by *[`<li>`](/en/webfrontend/<l
   </li>
 </menu>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<menu>`| support | support | support |
