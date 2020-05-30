@@ -63,3 +63,9 @@ near-duplicate—titles can contribute to inaccurate search results.
 </body>
 </html>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<title>`| support | support | support |
