@@ -65,3 +65,9 @@ TOPICS: <meter>
 
 <meter form="form_id" name="x1" min="0" low="40" high="90" max="100" value="95"></meter>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<meter>` | 支持 | 支持 | 支持 |
