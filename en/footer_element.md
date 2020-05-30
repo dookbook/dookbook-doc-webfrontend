@@ -43,3 +43,9 @@ in the outline.
     <address>Written by Li Yun.</address>
   </footer>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<footer>` | support | support | support |
