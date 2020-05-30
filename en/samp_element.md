@@ -88,3 +88,9 @@ samp > kbd {
 
 This simply gives the prompt and cursor fairly subtle colorization and emboldens the
 keyboard input within the sample text.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<samp>`| support | support | support |
