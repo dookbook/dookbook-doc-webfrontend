@@ -50,3 +50,9 @@ li span {
   background: gold;
 }
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<span>`| support | support | support |
