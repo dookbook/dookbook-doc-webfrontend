@@ -47,7 +47,7 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
 
 `<button>` elements are much easier to style than *[`<input>`](/en/webfrontend/<input>)* elements.
 You can add inner HTML content (think *[`<em>`](/en/webfrontend/<em>)*, *[`<strong>`](/en/webfrontend/<strong>)*
-or even *[`<img>`](/en/webfrontend/<img>)*), and make use of *`::after`* and *`::before`* pseudo-element
+or even *[`<img>`](/en/webfrontend/<img>)*), and make use of*`::after`*and*`::before`* pseudo-element
 to achieve complex rendering while [`<input>`](/en/webfrontend/<input>) only accepts a text value attribute.
 
 If your buttons are not to submit form data to a server, be sure to set their `type` attribute to **`button`**.
@@ -129,3 +129,9 @@ the same.
 | :-- | :-- | :-- |
 | Safari Mobile | No (even with a `tabindex`) | N/A |
 | Chrome 35+ | No (even with a `tabindex`) | Yes |
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<button>`  | support | support | support |
