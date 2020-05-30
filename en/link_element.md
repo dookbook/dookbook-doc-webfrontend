@@ -214,3 +214,9 @@ Such as:`media="screen and (min-width:500px)"`或`media="screen and (max-color-i
 | `orientation` | Specifies the orientation of the target display/paper. Possible values: "`portrait`" or "`landscape`".| `media="all and (orientation: landscape)"`.|
 | `scan` | Specifies the scanning method for `tv` displays. Possible values: "`progressive`" and "`interlace`".| `media="tv and (scan:interlace)"`.|
 | `grid` | Specifies whether the output device is a grid or a bitmap. Possible values: "1" is the grid, otherwise "0".| `media="handheld and (grid:1)"`.|
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<link>`| support | support | support |
