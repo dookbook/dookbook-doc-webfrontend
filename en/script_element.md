@@ -83,3 +83,9 @@ scripts for non-supporting browsers.
 <script type="module" src="main.js"></script>
 <script nomodule src="fallback.js"></script>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<script>`| support | support | support |
