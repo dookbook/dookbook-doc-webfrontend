@@ -50,3 +50,9 @@ This example demonstrates using the `<i>` element to mark text that is in anothe
 <p>The Latin phrase <i class="latin">Veni, vidi, vici</i> is often
 mentioned in music, art, and literature.</p>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<i>`| support | support | support |
