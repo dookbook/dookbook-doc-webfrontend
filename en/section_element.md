@@ -77,4 +77,4 @@ After
 
 | - | Google | Firefox | Safari |
 | :--- | :--- | :--- | :--- |
-|  `<section>` | support | support | support |
+| `<section>` | support | support | support |
