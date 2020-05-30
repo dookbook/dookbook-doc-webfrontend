@@ -49,3 +49,9 @@ related to the main article content:
   </p>
 </article>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<aside>`   | support | support | support |
