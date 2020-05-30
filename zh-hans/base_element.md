@@ -74,3 +74,9 @@ Open Graph meta-TOPICS不认可基本URL，并且应始终具有完整URL。例�
 <base href="http://www.example.com/">
 <base target="_blank" href="http://www.example.com/">
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<base>` | 支持 | 支持 | 支持 |

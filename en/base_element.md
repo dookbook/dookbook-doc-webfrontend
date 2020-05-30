@@ -74,3 +74,9 @@ Open Graph meta-TOPICS do not acknowledge the base URL and should always have fu
 <base href="http://www.example.com/">
 <base target="_blank" href="http://www.example.com/">
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<base>`  | support | support | support |
