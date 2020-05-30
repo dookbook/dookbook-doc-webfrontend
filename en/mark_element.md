@@ -25,7 +25,7 @@ This element only includes the [global attributes](/en/webfrontend/HTML_Global_A
 
 Typical use cases for `<mark>` include:
 
-- When used in a *quotation* (*[`<q>`](/en/webfrontend/<q>)*) or *block quote* (*[`<blockquote>`](/en/webfrontend/<blockquote>)*),
+- When used in a *quotation* (*[`<q>`](/en/webfrontend/<q>)*) or*block quote*(*[`<blockquote>`](/en/webfrontend/<blockquote>)*),
 it generally indicates text which is of special interest but is not marked in the original source material,
 or material which needs special scrutiny even though the original author didn't think it was of
 particular importance. Think of this like using a highlighter pen in a book to
@@ -111,3 +111,9 @@ situations where not knowing content has been highlighted would adversely affect
 
 - [Short note on making your mark (more accessible) | The Paciello Group](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](http://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<mark>` | support | support | support |
