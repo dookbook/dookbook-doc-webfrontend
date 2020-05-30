@@ -103,3 +103,10 @@ Otherwise it establishes a block formatting context.
 
 You can feel free to style the `<fieldset>` and `<legend>`
 in any way you want to suit your page design.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<fieldset>` | support | support | support |
+| `<legend>`  | support | support | support |
