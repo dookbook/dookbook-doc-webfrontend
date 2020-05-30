@@ -37,3 +37,9 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
   <param name="foo" value="bar">
 </object>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<param>` | support | support | support |
