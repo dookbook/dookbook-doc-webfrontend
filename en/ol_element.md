@@ -116,5 +116,5 @@ For more detailed examples, see the `<ol>` and [`<ul>`](/en/webfrontend/<ul>) pa
 
 | - | Google | Firefox | Safari |
 | :--- | :--- | :--- | :--- |
-|  `<ol>`| support | support | support |
+| `<ol>`| support | support | support |
 | `<li>`| support | support | support |
