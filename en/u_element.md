@@ -102,6 +102,12 @@ cite {
 }
 ```
 
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<u>`| support | support | support |
+
 ### Other Elements to Consider Using
 
 In most cases, you should use an element other than `<u>`, such as:
