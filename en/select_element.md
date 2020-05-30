@@ -233,4 +233,4 @@ and WAI-ARIA to provide semantics.
 |  `<select>`| support | support | support |
 |  `<option>` | support | support | support |
 |  `<optgroup>` | support | support | support |
-|   `<datalist>`| support | support | support |
+|  `<datalist>`| support | support | support |
