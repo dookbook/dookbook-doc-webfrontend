@@ -277,3 +277,9 @@ using the `align` VTT cue setting.
 - MDN Understanding WCAG, Guideline 1.2 explanations
 - Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0
 - Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<video>`| support | support | support |
