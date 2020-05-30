@@ -78,4 +78,4 @@ situations where not knowing content has been deleted would adversely affect und
 
 | - | Google | Firefox | Safari |
 | :--- | :--- | :--- | :--- |
-| `<data>`  | support | support | support |
+| `<del>`  | support | support | support |
