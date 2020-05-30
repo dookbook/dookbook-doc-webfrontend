@@ -83,3 +83,10 @@ in HTML5, the values are numbers of *CSS pixels*.
   <area shape="circle" coords="center-x2,center-y2,radius2">
 </map>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<map>`| support | support | support |
+| `<area>` | support | support | support |
