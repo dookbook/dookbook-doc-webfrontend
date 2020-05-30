@@ -56,3 +56,9 @@ IP Datagrams on Avian Carriers.
   increases availability.</p>
 </blockquote>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<blockquote>`  | support | support | support |
