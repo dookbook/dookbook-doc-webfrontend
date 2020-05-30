@@ -63,3 +63,9 @@ Creating separate paragraphs of text using `<br>` is not only bad practice, it i
 people who navigate with the aid of screen reading technology. Screen readers may announce the
 presence of the element, but not any content contained within `<br>`s. This can be a confusing and
 frustrating experience for the person using the screen reader.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<br>`  | support | support | support |
