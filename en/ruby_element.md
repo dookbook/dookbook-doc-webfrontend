@@ -91,6 +91,6 @@ can then fill in the full element in the rendered version.
 | :--- | :--- | :--- | :--- |
 | `<ruby>`| support | support | support |
 | `<rp>` | support | support | support |
-|  `<rt>` | support | support | support |
+| `<rt>` | support | support | support |
 | `<rb>` | support | support | support |
 | `<rtc>`| support | support | support |
