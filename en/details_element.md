@@ -185,3 +185,10 @@ details.addEventListener("toggle", event => {
   }
 });
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<details>`  | support | support | support |
+| `<summary>`  | support | support | support |
