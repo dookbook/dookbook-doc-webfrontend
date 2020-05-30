@@ -65,3 +65,9 @@ the `class` attribute on the `<div>` to apply the style named `"shadowbox"` to t
   background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
 }
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<div>`  | support | support | support |
