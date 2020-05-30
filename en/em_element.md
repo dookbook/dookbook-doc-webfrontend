@@ -67,3 +67,9 @@ An example for [`<i>`](/en/webfrontend/<i>) could be: "The Queen Mary sailed las
 Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated
 that the object in question is not a queen named Mary, but a ship named Queen Mary. Another example
 for [`<i>`](/en/webfrontend/<i>) could be: "The word the is an article".
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<em>` | support | support | support |
