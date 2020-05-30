@@ -111,3 +111,10 @@ For more detailed examples, see the `<ol>` and [`<ul>`](/en/webfrontend/<ul>) pa
   <li>third item</li>
 </ol>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+|  `<ol>`| support | support | support |
+| `<li>`| support | support | support |
