@@ -91,3 +91,10 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
   <li>third item</li>
 </ul>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<ul>`| support | support | support |
+| `<li>`| support | support | support |
