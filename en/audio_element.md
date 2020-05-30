@@ -276,6 +276,20 @@ for viewers who use a browser in which the `<audio>` element is not supported:
 </audio>
 ```
 
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<audio>`  | support | support | support |
+
+Three file formats supported by the `<audio>` element: MP3, Wav, Ogg.
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| MP3 | support | support | support |
+| Wav | support | support | support |
+| Ogg| support | support | Not support |
+
 - [MDN Subtitles and closed caption — Plugins](https://wiki.developer.mozilla.org/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
