@@ -67,3 +67,9 @@ semantics of the metadata is user-specific.
 </body>
 
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<meta>`| support | support | support |
