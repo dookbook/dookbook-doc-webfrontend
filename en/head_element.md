@@ -40,4 +40,4 @@ markup. [This auto-creation is not guaranteed in ancient browsers](https://www.s
 
 | - | Google | Firefox | Safari |
 | :--- | :--- | :--- | :--- |
-| `<heade>` | support | support | support |
+| `<head>` | support | support | support |
