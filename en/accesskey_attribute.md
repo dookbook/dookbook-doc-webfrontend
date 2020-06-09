@@ -55,7 +55,7 @@ websites and web apps.
   </p>
 ```
 
-带js案例：
+js case:
 
 ```html
 <script>
