@@ -67,3 +67,9 @@ document, in an element of a list, and so on.
 However, from a technical point of view, paragraphs **cannot appear** in *heads*, *anchors*, or
 *other places where the content must only be text*. In practice, most browsers ignore this
 limitation, and they format paragraphs as the content of the contained elements.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<p>`| support | support | support |

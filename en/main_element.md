@@ -100,3 +100,9 @@ Browser reader mode functionality looks for the presence of the `<main>` element
 heading and content sectioning elements when converting content into a specialized reader view.
 
 - [Building websites for Safari Reader Mode and other reading apps](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<main>`| support | support | support |

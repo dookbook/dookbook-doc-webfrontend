@@ -45,3 +45,9 @@ adjusted to fit within the frame.
 ```html
 <embed type="video/quicktime" src="movie.mov" width="640" height="480">
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<embed>` | support | support | support |

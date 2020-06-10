@@ -199,7 +199,36 @@ The available types are as follows:
 <input type="datetime-local">
 <input type="month">
 <input type="week">
+
+<!-- Example: required field-->
+<form action="demo-form.php">
+  Username: <input type="text" name="usrname" required>
+  <input type="submit">
+</form>
 ```
+
+### `<input>` Other attributes
+
+| Attribute | Description |
+| :-- | :-- |
+| `accept` | Specify the type of file submitted through file upload. (Only for `type="file"`)<br>Allowed values:[`<audio>`](/zh-hans/webfrontend/<audio>),[`<video>`](/zh-hans/webfrontend/<video>),[`<image>`](/zh-hans/webfrontend/<image>),MIME_type。 |
+| ~~`align`~~| **HTML5 is obsolete**. Specifies the alignment of the image input. (Only for `type="image"` 。)|
+| `alt` | Define *alternative text* for image input. So the allowed values are`text`。 (Only for`type="image"`)|
+| `checked` | *Boolean attribute*, which specifies that it will be *preselected* when the page loads. (Only for `type="checkbox"` or `type="radio"` 。) |
+| `formaction` |The property specifies that when the form is submitted *the URL of the file that handles the input control*.(Only for `type="submit"` and `type="image"`。)|
+|`formenctype` |The property specifies how to encode the form data when it is submitted to the server *(Only for  `type="submit"` and `type="image"`)。|
+|`formmethod` |Define the HTTP method for sending form data to `action URL`. (Only for  `type="submit"` and `type="image"`。)|
+| `formnovalidate`|This attribute overrides the `novalidate` attribute of the  `<form>`element. *Boolean attribute*, and can be set in the following ways:<br>`<input formnovalidate>`<br>`<input formnovalidate="formnovalidate">`<br>`<input formnovalidate="">`|
+|`formtarget` |The regulation indicates that after submitting the form *where to display the name or keyword of the received response*.(Only for  `type="submit"` and `type="image"`。)|
+| `height` |Specifies the height of the `<input>` element.(Only for `type="image"`)|
+| `max` |Specifies the maximum value of `<input>` elements.|
+| `maxlength`|Specifies the maximum number of characters allowed in the `<input>` element.|
+| `min` | The attribute specifies the minimum value of the `<input>` element.|
+|`multiple` The attribute specifies that the user is allowed to enter multiple values into the `<input>` element.|
+| *`placeholder`* |The attribute can display *short reminder information* (for example: a sample value or a short description in the expected format. <br> This attribute applies to the following `input` types:`text`、`search`、`url`、`tel`、`email` 和 `password`。|
+| `size` |Specifies the width of the `<input>` element in characters. The default value is 20.|
+|`src`| This attribute specifies the URL of the image displayed as *Submit button*. (Only for  `type="image"`。)|
+| `step`|Specifies the legal numeric interval of the input field.|
 
 ## Example: Simple Form
 
@@ -258,3 +287,10 @@ The following methods are provided by the **`HTMLInputElement`** interface which
 | `setSelectionRange()` | Selects the specified range of characters within a textual input element. Does nothing for inputs which aren't presented as text input fields. |
 | `stepDown()` | Decrements the value of a numeric input by one, by default, or by the specified number of units. |
 | `stepUp()` | Increments the value of a numeric input by one or by the specified number of units. |
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<form>` | support | support | support |
+| `<input>`  | support | support | support |

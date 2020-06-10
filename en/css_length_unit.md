@@ -123,3 +123,16 @@ h4 { font-size: 15vmax; } /* Try reducing or enlarging your browser (height and 
 ## More
 
 - [Pixel on Wikipedia](https://en.wikipedia.org/wiki/Pixel)
+
+## Browser compatibility
+
+The numbers in the table below indicate the minimum browser version that supports this length unit.
+
+| ULength unit | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `em`, `ex`, %, `px`, `cm`, `mm`, `in`, `pt`, `pc` | 1.0 | 1.0 | 1.0 |
+| `ch`| 27.0| 1.0 | 7.0 |
+| `rem` | 4.0 | 3.6 | 4.1 |
+| `vh`, `vw` | 20.0 | 19.0 | 6.0 |
+| `vmin` | 20.0 | 19.0 | 6.0 |
+| `vmax` | 26.0 | 19.0 | Not support |

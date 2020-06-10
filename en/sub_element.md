@@ -81,3 +81,9 @@ the subscripted "2" indicates that there are two atoms of hydrogen in the molecu
 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, which is
 commonly known as "caffeine."</p>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<sub>` | support | support | support |

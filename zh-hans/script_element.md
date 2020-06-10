@@ -64,3 +64,9 @@ TOPICS: <script>
 <script type="module" src="main.js"></script>
 <script nomodule src="fallback.js"></script>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<script>` | 支持 | 支持 | 支持 |

@@ -100,3 +100,9 @@ shown in parentheses: (Living Standard — Last Updated 12 August 2016).
   <h2>Living Standard — Last Updated 12 August 2016</h2>
 </hgroup>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<hgroup>` | support | support | support |

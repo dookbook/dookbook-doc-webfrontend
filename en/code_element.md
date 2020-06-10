@@ -37,3 +37,9 @@ element. The `<code>` element by itself only represents a *single phrase of code
 
 A [[CSS]] rule can be defined for the code selector to override the browser's default font face.
 Preferences set by the user might take precedence over the specified [[CSS]].
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<code>`  | support | support | support |

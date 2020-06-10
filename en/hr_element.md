@@ -51,3 +51,9 @@ This element's attributes include the [global attributes](/en/webfrontend/HTML_G
   This is the second paragraph of text.
 </p>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<hr>` | support | support | support |

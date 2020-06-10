@@ -247,6 +247,21 @@ associations the table layout is describing.
 If the table cannot be broken apart, use a combination of the `id` and `headers`
 attributes to programmatically associate each table cell with the header(s) the cell is associated with.
 
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<table>`| support | support | support |
+| `<tr>` | support | support | support |
+| `<td>`| support | support | support |
+| `<th>`| support | support | support |
+| `<caption>`| support | support | support |
+| `<thead>`| support | support | support |
+| `<tbody>`| support | support | support |
+| `<tfoot>`| support | support | support |
+| `<col>`| support | support | support |
+| `<colgroup>` | support | support | support |
+
 - [MDN Tables for visually impaired users](https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)

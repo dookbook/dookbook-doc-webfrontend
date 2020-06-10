@@ -67,3 +67,9 @@ Note that in this example the `min` attribute is omitted; this is allowed, as it
 
 <meter form="form_id" name="x1" min="0" low="40" high="90" max="100" value="95"></meter>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<meter>`| support | support | support |

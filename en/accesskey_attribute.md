@@ -44,6 +44,36 @@ websites and web apps.
 
 - [WebAIM: Keyboard Accessibility - Accesskey](https://webaim.org/techniques/keyboard/accesskey#spec)
 
+## Examples
+
+```html
+<a href="https://dookbook.info" accesskey="h">Dookbook</a><br />
+<a href="//www.google.com/" accesskey="c">Google</a>
+<p>
+<b>Notes:</b>
+  Please use Alt + <i> accessKey </i> (or Shift + Alt + <i> accessKey </i>) to access the element with the specified shortcut key.
+  </p>
+```
+
+js case:
+
+```html
+<script>
+function accesskey(){
+  document.getElementById('runoob').accessKey="r"
+  document.getElementById('g').accessKey="g"
+}
+</script>
+</head>
+<body onload="accesskey()">
+<a id="runoob" href="https://dookbook.info">Dookbook</a><br>
+<a id="g" href="//www.google.com/">Google</a>
+<p>
+<b>Notes:</b>
+Use Alt + <i> accesskey </i> to access the element with the specified shortcut key.
+</p>
+```
+
 ## See also
 
 - [`Element.accessKey`](/en/webfrontend/Element.accessKey)

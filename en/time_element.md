@@ -67,3 +67,9 @@ element’s child text content.
 <p>The concert took place on <time
   datetime="2001-05-15T19:00">May 15</time>.</p>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<time>`| support | support | support |

@@ -2,7 +2,7 @@ TOPICS: <source>
 
 # `<source>`
 
-HTML HTML `<source>`元素为[`<picture>`](/zh-hans/webfrontend/<picture>)，
+HTML `<source>`元素为[`<picture>`](/zh-hans/webfrontend/<picture>)，
 [`<audio>`](/zh-hans/webfrontend/<audio>)或[`<video>`](/zh-hans/webfrontend/<video>)元素指定了多种媒体资源。
 它是一个 **空元素**，这意味着它不仅没有内容，而且没有结束标记。 它通常用于提供不同浏览器支持的多种格式的相同媒体内容。
 
@@ -58,3 +58,9 @@ HTML HTML `<source>`元素为[`<picture>`](/zh-hans/webfrontend/<picture>)，
 ```
 
 使用[`<picture>`](/zh-hans/webfrontend/<picture>)元素时，必须始终包括带有后备图像的[`<img>`](/zh-hans/webfrontend/<img>)，并带有`alt`属性以确保可访问性。
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<source>` | 支持 | 支持 | 支持 |

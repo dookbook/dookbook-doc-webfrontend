@@ -276,3 +276,9 @@ whether the image should fit the box or fill it even if clipping is required).
 Depending on its *type*, an image may have an intrinsic *width* and *height*. For some image types, however,
 intrinsic dimensions are not necessary. SVG images, for instance, may have no intrinsic dimensions if
 their root [`<svg>`](/en/webfrontend/<svg>) element doesn't have a `width` or `height` set on it.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<img>`| support | support | support |

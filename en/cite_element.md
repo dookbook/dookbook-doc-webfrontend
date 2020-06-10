@@ -72,3 +72,9 @@ apply the CSS *`font-style`* property to the `<cite>` element.
 ```html
 <p>More information can be found in <cite>ISO-0000]</cite>.</p>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<cite>`  | support | support | support |

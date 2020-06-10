@@ -35,3 +35,9 @@ HTML `<param>`元素为[`<object>`](/zh-hans/webfrontend/<object>)元素定义�
   <param name="foo" value="bar">
 </object>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<param>`  | 支持 | 支持 | 支持 |

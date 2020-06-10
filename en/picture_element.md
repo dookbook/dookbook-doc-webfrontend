@@ -15,8 +15,8 @@ layout of the page, the characteristics of the display device, etc.
 
 Common use cases for `<picture>`:
 
-- Art direction — cropping or modifying images for different media conditions
-- Offering different image formats when certain formats are not supported by all browsers
+- Art direction — cropping or modifying images for different media conditions.
+- Offering different image formats when certain formats are not supported by all browsers.
 
 If providing higher-density versions of an image for high-DPI (Retina) display, use
 `srcset` on the [`<img>`](/en/webfrontend/<img>) element instead. This lets browsers opt for lower-density
@@ -77,3 +77,9 @@ support the given type, the [`<source>`](/en/webfrontend/<source>) element is sk
   <img src="mdn-logo.png" alt="MDN">
 </picture>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<picture>`| support | support | support |

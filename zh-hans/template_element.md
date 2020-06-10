@@ -69,3 +69,9 @@ if ('content' in document.createElement('template')) {
 ```
 
 结果是原始的HTML表格，通过JavaScript添加了两行新内容：
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<template>` | 支持 | 支持 | 支持 |

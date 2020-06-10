@@ -216,3 +216,9 @@ know. The diversity of people using the Web â€” and by extension your web site â
 that some of your site's visitors will have some variation in thought processes and/or circumstances
 that leads them to interpret your forms very differently from you without
 clear and properly-presented labels.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<label>`| support | support | support |

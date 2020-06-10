@@ -64,3 +64,9 @@ For more examples, see Using audio and video in Firefox.
 
 With the [`<picture>`](/en/webfrontend/<picture>) element, you must always include an
 [`<img>`](/en/webfrontend/<img>) with a fallback image, with an `alt` attribute to ensure accessibility.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<source>`| support | support | support |

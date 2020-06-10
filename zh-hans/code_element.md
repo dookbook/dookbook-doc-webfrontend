@@ -2,7 +2,7 @@ TOPICS: <code>
 
 # HTML 代码元素 `<code>`
 
-**HTML `<code>` 元素**呈现一段**计算机代码**。 默认情况下, 它以浏览器的默认*等宽字体* *`monospace`* 显示.
+**HTML `<code>` 元素**呈现一段**计算机代码**。 默认情况下, 它以浏览器的默认*等宽字体* *`monospace`* 显示。
 
 ## 技术摘要
 
@@ -17,7 +17,7 @@ TOPICS: <code>
 
 ## 属性
 
-此元素仅包含[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes).
+此元素仅包含[全局属性](/zh-hans/webfrontend/HTML_Global_Attributes)。
 
 ## 示例
 

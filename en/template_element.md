@@ -87,3 +87,9 @@ if ('content' in document.createElement('template')) {
 ```
 
 The result is the original HTML table, with two new rows appended to it via JavaScript:
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<template>`| support | support | support |

@@ -40,3 +40,9 @@ one** `<body>` element in a document.
 | `onstorage` | Function to call when the storage area has changed. |
 | `onundo` | Function to call when the user has moved backward in undo transaction history. |
 | `onunload` | Function to call when the document is going away. |
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<body>`  | support | support | support |

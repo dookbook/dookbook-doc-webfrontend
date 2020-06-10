@@ -182,3 +182,9 @@ apply to a whole group, or for styling purposes.
   </div>
 </dl>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<dl>` | support | support | support |

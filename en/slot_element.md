@@ -75,3 +75,9 @@ This element includes the [global attributes](/en/webfrontend/HTML_Global_Attrib
 !!! warn "Don't try this at home"
     Note: You can see this complete example in action at element-details (see it
     running live). In addition, you can find an explanation at Using templates and slots.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<slot>`| support | support | support |

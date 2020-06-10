@@ -75,3 +75,9 @@ languages as follows:</p>
   <li>French: 5<sup>ème</sup></li>
 </ul>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<sup>`| support | support | support |

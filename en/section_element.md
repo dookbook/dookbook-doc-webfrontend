@@ -72,3 +72,9 @@ After
   </section>
 </article>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<section>` | support | support | support |

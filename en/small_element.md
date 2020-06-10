@@ -48,3 +48,9 @@ Although the `<small>` element, like the [`<b>`](/en/webfrontend/<b>) and
 [`<i>`](/en/webfrontend/<i>) elements, may be perceived to violate the principle of separation
 between structure and presentation, all three are valid in HTML5. Authors are encouraged to use
 their best judgement when determining whether to use `<small>` or [[CSS]].
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<small>` | support | support | support |

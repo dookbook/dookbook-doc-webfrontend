@@ -27,3 +27,9 @@ TOPICS: <noscript>
 </noscript>
 <p>Rocks!</p>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<noscript>` | 支持 | 支持 | 支持 |

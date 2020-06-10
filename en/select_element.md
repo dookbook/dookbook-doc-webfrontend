@@ -225,3 +225,12 @@ element's internal structure is complex, and hard to control. If you want to get
 you should consider using a library with good facilities for styling form widgets (such as jQuery UI),
 or try rolling your own dropdown menu using non-semantic elements, [[JavaScript]],
 and WAI-ARIA to provide semantics.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+|  `<select>`| support | support | support |
+|  `<option>` | support | support | support |
+|  `<optgroup>` | support | support | support |
+|  `<datalist>`| support | support | support |

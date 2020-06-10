@@ -124,3 +124,9 @@ element so it is only applied when the viewport is less than 500px in width.
 </body>
 </html>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<style>`| support | support | support |

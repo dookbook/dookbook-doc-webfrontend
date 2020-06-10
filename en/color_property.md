@@ -2,7 +2,7 @@ TOPICS: color property
 
 # CSS Property: `color`
 
-**`color`** property specifies **the color of the text**
+**`color`** property specifies **the color of the text**.
 
 ## Property Value
 
@@ -28,3 +28,5 @@ p { color: #ff000080; }
 p { color: rgba(255, 0, 0, 0.5); }
 p { color: hsla(0, 100%, 50%, 0.5); }
 ```
+
+**More knowledge about `color`**：[CSS Color](/en/webfrontend/css_color).

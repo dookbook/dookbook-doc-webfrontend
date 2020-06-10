@@ -65,3 +65,9 @@ This HTML uses `<var>` to enclose the names of two variables.
    the minimum and maximum speed of the apparatus in revolutions
    per minute (RPM).</p>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<var>`| support | support | support |

@@ -37,3 +37,9 @@ to left.</bdo></p>
 
 The HTML 4 specification did not specify events for this element; they were added in XHTML.
 This is most likely an oversight.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<bdo>`  | support | support | support |

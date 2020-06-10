@@ -168,3 +168,9 @@ to investigate each nav element's contents to determine their purpose.
 
 - [Using the `aria-labelledby` attribute](https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<h1>~<h6>` | support | support | support |

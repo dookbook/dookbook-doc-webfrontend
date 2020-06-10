@@ -48,3 +48,9 @@ TOPICS: <object>
   <param name="foo" value="bar">
 </object>
 ```
+
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<object>` | 支持 | 支持 | 支持 |

@@ -125,3 +125,9 @@ The title's value should concisely describe the embedded content:
 Without this title, they have to navigate into the `iframe` to determine what its embedded content is.
 This context shift can be confusing and time-consuming, especially for pages with multiple
 `<iframe>`s and/or if embeds contain interactive content like video or audio.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<iframe>`| support | support | support |

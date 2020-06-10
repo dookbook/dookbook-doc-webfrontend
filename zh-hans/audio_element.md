@@ -168,6 +168,20 @@ Laughing] Sorry! I mean, which wristwatch is a Swiss wristwatch?
 </audio>
 ```
 
+## 浏览器兼容性
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| `<audio>` | 支持 | 支持 | 支持 |
+
+`<audio>` 元素支持的3种文件格式：MP3、Wav、Ogg。
+
+| - | 谷歌 | 火狐 | Safari |
+| :--- | :--- | :--- | :--- |
+| MP3 | 支持 | 支持 | 支持 |
+| Wav | 支持 | 支持 | 支持 |
+| Ogg| 支持 | 支持 | 不支持 |
+
 - [MDN Subtitles and closed caption — Plugins](https://wiki.developer.mozilla.org/en-US/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
 - [Web Video Text Tracks Format (WebVTT)](https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)

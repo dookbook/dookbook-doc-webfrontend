@@ -96,3 +96,9 @@ This example opens a pop-up dialog box containing a form when the "Update detail
   });
 })();
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<dialog>` | support | support | support |

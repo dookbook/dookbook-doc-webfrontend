@@ -82,3 +82,9 @@ is no longer a part of the W3C HTML5 standard**.
   </footer>
 </article>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<article>`  | support | support | support |

@@ -58,3 +58,9 @@ A `media` element cannot have more than one `track` with the same `kind`, `srcla
    ...
 </video>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+|  `<track>` | support | support | support |

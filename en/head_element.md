@@ -35,3 +35,9 @@ markup. [This auto-creation is not guaranteed in ancient browsers](https://www.s
   </head>
 </html>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<head>` | support | support | support |

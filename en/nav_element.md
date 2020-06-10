@@ -46,3 +46,9 @@ With appropriate CSS, this can be presented as a sidebar, navigation bar, or dro
   </ul>
 </nav>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<nav>`| support | support | support |

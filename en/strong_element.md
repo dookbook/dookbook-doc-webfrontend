@@ -80,3 +80,9 @@ does ("I love carrots" vs. "I love carrots"), `<strong>` is used to give portion
 importance (e.g., "**Warning!** This is **very dangerous**.") Both `<strong>` and
 [`<em>`](/en/webfrontend/<em>) can be nested to increase the relative degree of importance or
 stress emphasis, respectively.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<strong>`| support | support | support |

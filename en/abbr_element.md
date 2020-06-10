@@ -124,3 +124,9 @@ Example
 
 This is especially helpful for people who are unfamiliar with the terminology or concepts discussed
 in the content, people who are new to the language, and people with cognitive concerns.
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<abbr>` | support | support | support |

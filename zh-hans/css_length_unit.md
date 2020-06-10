@@ -33,6 +33,8 @@ CSS 长度单位有两种类型：**相对长度**和**绝对长度**。**绝对
 | **`pc`** | **点** (**Picas**) 相当于我国新四号铅字的尺寸。 |
 | **`px`** | **像素**是根据屏幕显示器的分辨率决定的（因此不同的设备显示相同的像素值也可能会有不同的结果）|
 
+像素或许被认为是最好的"设备像素"，而这种像素长度和你在显示器上看到的文字屏幕像素无关。`px`实际上是一个按角度度量的单位。
+
 ### CSS绝对长度单位换算
 
 1in = 2.54cm = 25.4mm = 72pt = 6pc = 96px
@@ -115,3 +117,16 @@ h2 { font-size: 20vh; } /* 20vh 等于20/100的视窗高度 */
 h3 { font-size: 15vmin; } /* 试着缩小或放大浏览器（高度和宽度）来查看 h3 的字体大小如何改变。 */
 h4 { font-size: 15vmax; } /* 试着缩小或放大浏览器（高度和宽度）来查看 h4 的字体大小如何改变。 */
 ```
+
+## Browser compatibility
+
+The numbers in the table below indicate the minimum browser version that supports this length unit.
+
+| Unit of length | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `em`, `ex`, %, `px`, `cm`, `mm`, `in`, `pt`, `pc` | 1.0 | 1.0 | 1.0 |
+| `ch`| 27.0| 1.0 | 7.0 |
+| `rem` | 4.0 | 3.6 | 4.1 |
+| `vh`, `vw` | 20.0 | 19.0 | 6.0 |
+| `vmin` | 20.0 | 19.0 | 6.0 |
+| `vmax` | 26.0 | 19.0 | 不支持 |

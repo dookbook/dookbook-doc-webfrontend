@@ -74,3 +74,9 @@ so the example output is properly ordered:
 ```html
 <p dir="ltr">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>
 ```
+
+## Browser compatibility
+
+| - | Google | Firefox | Safari |
+| :--- | :--- | :--- | :--- |
+| `<bdi>`  | support | support | support |
