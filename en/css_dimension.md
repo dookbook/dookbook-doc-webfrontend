@@ -31,9 +31,11 @@ The **CSS Dimension** property allows you to control the **height** and **width*
 ## Example
 
 ```html
+<div>
 <p id="a">This is a paragraph</p>
 <p id="b">This is a paragraph</p>
 <p id="c">This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph</p>
+<p id="d">This is a paragraphThis is a paragraph</p>
 </div>
 ```
 
@@ -46,4 +48,8 @@ The **CSS Dimension** property allows you to control the **height** and **width*
 
 /* Defines the element's maximum width and height of 200px */
 #c { max-width: 200px; max-height: 200px; background: #f00; }
+
+/* Define that when the parent element has size, auto, center the parent element; if no parent box width is centered with the browser width, the height is automatically. */
+div{width:300px;height:300px;}
+#d { width: auto; height: atuo; background: #f00; }
 ```
