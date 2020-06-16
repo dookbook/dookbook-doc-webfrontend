@@ -1,5 +1,4 @@
 TOPICS: outline-offset property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS 属性: `outline-offset`
 
@@ -11,7 +10,7 @@ CSS **`outline-offset`** 属性用于设置 [**`outline`**](/zh-hans/webfrontend
 
 | 属性值 | 说明 |
 | :--- | :--- |
-| **length** | 元素和轮廓间的宽度. 负值将轮廓绘制在元素之内。|
+| **length** | 元素和轮廓间的宽度。负值将轮廓绘制在元素之内。|
 
 ## 示例
 

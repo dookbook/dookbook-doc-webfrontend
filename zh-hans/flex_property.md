@@ -2,7 +2,6 @@ TOPICS: flex property
         flex-grow property
         flex-shrink property
         flex-basis property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS 属性: `flex`
 
@@ -19,7 +18,7 @@ CSS属性 **`flex`** 规定了弹性元素如何**伸长**或**缩短**以适应
 
 - 一个无单位数(**number**): 它会被当作**flex-grow**的值。
 - 一个有效的宽度(**width**)值: 它会被当作**flex-basis**的值。
-- 关键字 **`none`**，**`auto`**或 **`initial`**.
+- 关键字 **`none`**，**`auto`**或 **`initial`**。
 
 **双值语法**: 第一个值必须为一个**无单位数**，并且它会被当作 **flex-grow** 的值。第二个值必须为以下之一：
 
