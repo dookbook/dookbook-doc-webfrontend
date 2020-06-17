@@ -17,7 +17,7 @@ CSS **`outline-offset`** 属性用于设置 [**`outline`**](/zh-hans/webfrontend
 ```css
 p {
   outline: dashed thin;
-  /* Move the outline 10px away from the border */
+  /* 将轮廓线从边框移开10px */
   outline-offset: 10px;
   border:1px solid black;
 }

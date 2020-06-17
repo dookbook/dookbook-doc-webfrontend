@@ -5,7 +5,8 @@ TOPICS: font-feature-settings property
 CSS属性 **`font-feature-settings`** 可让您控制OpenType字体中的高级印刷功能。
 
 !!! warn ""
-    Web开发者应该尽可能的使用类似 [**`font-variant`**](/zh-hans/webfrontend/) 这样的短标记属性或者相关的速记标识属性等，类似 `font-variant-ligatures`，
+    Web开发者应该尽可能的使用类似 [**`font-variant`**](/zh-hans/webfrontend/font-variant_property)
+    这样的短标记属性或者相关的速记标识属性等，类似 `font-variant-ligatures`，
     `font-variant-caps`，`font-variant-east-asian`，`font-variant-alternates`，
     `font-variant-numeric` 或 `font-variant-position`。
     该属性是一个比较偏底层的功能接口，用于解决由于没有其他方法去访问和设置OpenType字体某些特性而无法解决一些特殊功能需求。

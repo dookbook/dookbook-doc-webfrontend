@@ -1,5 +1,4 @@
 TOPICS: opacity property
-AUTHORS: mdn; mdn@mozilla-community.org; github:mdn
 
 # CSS 透明度属性: `opacity`
 
@@ -41,7 +40,7 @@ div { background-color: yellow; }
 <div class="heavy">This is very easy to see.</div>
 ```
 
-### `:hover` 时 `opacity` 的不同
+## `:hover` 时 `opacity` 的不同
 
 ```css
 img.opacity {

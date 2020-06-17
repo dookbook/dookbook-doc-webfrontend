@@ -19,8 +19,8 @@ CSS属性 **`grid-auto-rows`** 用于指定隐式创建的行**轨道大小**。
 | **`auto`** | 关键字，当用来指定最大值时与最大内容一致，当用来指定最小值时，它表示轨道中所有网格元素最小尺寸中的最大值（由[`min-width`](/zh-hans/webfrontend/min-width_property)/[`min-height`](/zh-hans/webfrontend/min-height_property)指定）。|
 
 !!! warn "注意"
-    **`auto`** 轨道尺寸（且仅有 **`auto`** 轨道尺寸）可配合 [**`align-content`**](/zh-hans/webfrontend/align-content)
-    和 [**`justify-content`**](/zh-hans/webfrontend/justify-content) 属性使用。
+    **`auto`** 轨道尺寸（且仅有 **`auto`** 轨道尺寸）可配合 [**`align-content`**](/zh-hans/webfrontend/align-content_property)
+    和 [**`justify-content`**](/zh-hans/webfrontend/justify-content_property) 属性使用。
 
 ## 示例
 

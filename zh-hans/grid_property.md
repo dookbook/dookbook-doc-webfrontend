@@ -4,13 +4,13 @@ TOPICS: grid property
 
 **`grid`** 是一个CSS简写属性，可以用来设置以下属性：
 
-**显式网格**属性 [**`grid-template-rows`**](/zh-hans/webfrontend/grid-template-rows)、
-[**`grid-template-columns`**](/zh-hans/webfrontend/grid-template-columns) 和 [**`grid-template-areas`**](/zh-hans/webfrontend/grid-template-areas)。
+**显式网格**属性 [**`grid-template-rows`**](/zh-hans/webfrontend/grid-template-rows_property)、
+[**`grid-template-columns`**](/zh-hans/webfrontend/grid-template-columns_property) 和 [**`grid-template-areas`**](/zh-hans/webfrontend/grid-template-areas_property)。
 
-**隐式网格**属性 [**`grid-auto-rows`**](/zh-hans/webfrontend/grid-auto-rows)、[**`grid-auto-columns`**](/zh-hans/webfrontend/grid-auto-columns)
-和 [**`grid-auto-flow`**](/zh-hans/webfrontend/grid-auto-flow)。
+**隐式网格**属性 [**`grid-auto-rows`**](/zh-hans/webfrontend/grid-auto-rows_property)、[**`grid-auto-columns`**](/zh-hans/webfrontend/grid-auto-columns_property)
+和 [**`grid-auto-flow`**](/zh-hans/webfrontend/grid-auto-flow_property)。
 
-**间距**属性 [**`grid-column-gap`**](/zh-hans/webfrontend/grid-column-gap) 和 [**`grid-row-gap`**](/zh-hans/webfrontend/grid-row-gap)。
+**间距**属性 [**`grid-column-gap`**](/zh-hans/webfrontend/grid-column-gap_property) 和 [**`grid-row-gap`**](/zh-hans/webfrontend/grid-row-gap_property)。
 
 !!! warn "注意"
     您仅可在一个 **`grid`** 属性中声明**显式**或**隐式网格**。与其他简写属性同样，若有次级属性未被声明，其将使用初始值。另外，尽管此简写声明无法设置网格的槽（**gutter**），槽会被该声明重置。

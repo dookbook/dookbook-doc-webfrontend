@@ -10,7 +10,7 @@ CSS属性 **`flex`** 规定了弹性元素如何**伸长**或**缩短**以适应
 
 大多数情况下，开发者需要将 **`flex`** 设置为 **`auto`**，**`initial`**，**`none`**或一个无单位正数。
 
-默认情况下，元素不会缩短至小于内容框尺寸，若想改变这一状况，请设置元素的 [**`min-width`**](/zh-hans/webfrontend/min-width) 与 [**`min-height`**](/zh-hans/webfrontend/min-height)属性。
+默认情况下，元素不会缩短至小于内容框尺寸，若想改变这一状况，请设置元素的 [**`min-width`**](/zh-hans/webfrontend/min-width_property) 与 [**`min-height`**](/zh-hans/webfrontend/min-height_property)属性。
 
 `flex` 属性可以指定1个，2个或3个值。
 
