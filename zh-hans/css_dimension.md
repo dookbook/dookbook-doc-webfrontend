@@ -49,7 +49,6 @@ TOPICS: CSS Dimension
 /* 定义该元素最大宽高各200px */
 #c { max-width: 200px; max-height: 200px; background: #f00; }
 
-/* 定义当父元素有大小时auto，以父元素居中；如果无父盒子宽度以浏览器宽度居中，高度自动。 */
-div{width:300px;height:300px;}
+/* 浏览器自动计算 */
 #d { width: auto; height: atuo; background: #f00; }
 ```
