@@ -33,9 +33,19 @@ range is **`00`** - **`FF`** Between, starting with the **`#`** symbol.
 
 | Parameter | Description |
 | :--- | :--- |
-| **RR** | Red value. Hexadecimal positive integer |
-| **GG** | Green value. Hexadecimal positive integer |
-| **BB** | Blue value. Hexadecimal positive integer |
+| **RR** | Red value. Hexadecimal positive integer. |
+| **GG** | Green value. Hexadecimal positive integer. |
+| **BB** | Blue value. Hexadecimal positive integer.|
+
+When the highest value of the range of values `FF` appears in the RR area, it is standard red:
+`#FF0000`. Similarly, green is `#00FF00`, and blue is `##0000FF`.
+Red plus green turns yellow so it is `#FFFF00` , green plus blue is sky blue
+`#00FFFF`, red plus blue is purple both`#FF00FF`, white is `#FFFFFF`. Taking red as an example, we
+only need to ensure that the value of the RR area is FF, and after adjusting the values of other
+parts, we will get various reds.
+
+The RGB color value law of the complaint is the same. When the other values are 0, the R, G, and B
+positions where the highest value 255 appears are my corresponding standard colors.
 
 If each parameter is on its own **the numbers in both digits are the same**, the unit can also be
 abbreviated as **#RGB**. For example: **`#FF8800`** can be abbreviated to **`#F80`**.
@@ -58,7 +68,9 @@ Three parameters for **RGB color values**
 | **G** | Green value. **Positive integer** or **percentage** |
 | **B** | Blue value. **Positive integer** or **percentage** |
 
-- Positive integer values can range from **`0`** to **`255`**.
+- Positive integer values can range from **`0`** to **`255`**.The combination of red, green, and blue
+  values from 0 to 255 gives a total of more than 16 million different colors (256 × 256 ×256).
+  Most modern monitors are capable of displaying *at least 16,384 colors*.
 - The percentage value ranges from **`0.0%`** to **`100.0%`**.
 
 !!! info ""
