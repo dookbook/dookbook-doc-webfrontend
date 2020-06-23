@@ -23,17 +23,19 @@ The **CSS Dimension** property allows you to control the **height** and **width*
 
 | Property Value | Description |
 | :--- | :--- |
-| length | Use **`px`**, **`rem`**, **`em`** and other units to define the width or height, See details[CSS length unit](/en/webfrontend/css_length_unit) |
-| **`%`** | Percentage based on **parent element** height or width |
-| **`auto`** | Defaults. Browser calculates automatically |
-| **`inherit`** | Inherited from parent element |
+| length | Use **`px`**, **`rem`**, **`em`** and other units to define the width or height, See details[CSS length unit](/en/webfrontend/css_length_unit). |
+| **`%`** | Percentage based on **parent element** height or width. |
+| **`auto`** | Defaults. Browser calculates automatically. |
+| **`inherit`** | Inherited from parent element. |
 
 ## Example
 
 ```html
+<div>
 <p id="a">This is a paragraph</p>
 <p id="b">This is a paragraph</p>
 <p id="c">This is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraphThis is a paragraph</p>
+<p id="d">This is a paragraphThis is a paragraph</p>
 </div>
 ```
 
@@ -46,4 +48,7 @@ The **CSS Dimension** property allows you to control the **height** and **width*
 
 /* Defines the element's maximum width and height of 200px */
 #c { max-width: 200px; max-height: 200px; background: #f00; }
+
+/* Browser calculates automatically. */
+#d { width: auto; height: atuo; background: #f00; }
 ```
